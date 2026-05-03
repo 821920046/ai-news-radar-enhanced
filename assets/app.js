@@ -19,15 +19,14 @@ const state = {
   generatedAt: null,
 };
 
-const statsEl = document.getElementById("stats");
+const statsEl = document.getElementById("stat-total-count"); // 对准仪表盘总数
 const siteSelectEl = document.getElementById("siteSelect");
 const sitePillsEl = document.getElementById("sitePills");
-const newsListEl = document.getElementById("newsList");
-const updatedAtEl = document.getElementById("updatedAt");
+const newsListEl = document.getElementById("news-container"); // 对准新版情报流容器
+const updatedAtEl = document.getElementById("last-update-time"); // 对准新版更新时间
 const searchInputEl = document.getElementById("searchInput");
-const resultCountEl = document.getElementById("resultCount");
+const resultCountEl = document.getElementById("stat-total-count"); // 复用总数 ID
 const listTitleEl = document.getElementById("listTitle");
-const itemTpl = document.getElementById("itemTpl");
 const modeAiBtnEl = document.getElementById("modeAiBtn");
 const modeAllBtnEl = document.getElementById("modeAllBtn");
 const modeHintEl = document.getElementById("modeHint");
@@ -35,14 +34,14 @@ const allDedupeWrapEl = document.getElementById("allDedupeWrap");
 const allDedupeToggleEl = document.getElementById("allDedupeToggle");
 const allDedupeLabelEl = document.getElementById("allDedupeLabel");
 const advancedSummaryEl = document.getElementById("advancedSummary");
-const sourceHealthEl = document.getElementById("sourceHealth");
+const sourceHealthEl = document.getElementById("source-coverage-list"); // 对准新版源列表
 
 const waytoagiUpdatedAtEl = document.getElementById("waytoagiUpdatedAt");
 const waytoagiMetaEl = document.getElementById("waytoagiMeta");
-const waytoagiListEl = document.getElementById("waytoagiList");
+const waytoagiListEl = document.getElementById("waytoagi-list"); // 对准新版里程碑
 const waytoagiTodayBtnEl = document.getElementById("waytoagiTodayBtn");
 const waytoagi7dBtnEl = document.getElementById("waytoagi7dBtn");
-const coverageStripEl = document.getElementById("coverageStrip");
+const coverageStripEl = document.getElementById("source-coverage-list"); // 对准新版源列表
 
 const SOURCE_KINDS = {
   official_ai: { label: "官方", tone: "official" },
@@ -58,6 +57,28 @@ const SOURCE_KINDS = {
   aibase: { label: "AI站点", tone: "aihub" },
   newsnow: { label: "聚合", tone: "aggregate" },
 };
+
+function renderItemNode(item) {
+    const kind = SOURCE_KINDS[item.kind] || { label: "情报", tone: "default" };
+    const node = document.createElement("article");
+    node.className = "data-card glass-panel rounded-2xl p-5 border-l-4 border-cyan-400 group transition-all duration-300";
+    if (kind.tone === 'official') node.classList.replace('border-cyan-400', 'border-purple-500');
+    
+    node.innerHTML = `
+        <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/5 text-[9px] mono-font text-white/50 uppercase tracking-wider border border-white/5">${item.site_name}</span>
+                <span class="px-2 py-0.5 rounded bg-cyan-400/10 text-[9px] mono-font text-cyan-400 uppercase tracking-wider border border-cyan-400/20">${kind.label}</span>
+            </div>
+            <time class="text-[10px] mono-font text-white/20 uppercase tracking-tighter">${fmtTime(item.time_iso)}</time>
+        </div>
+        <a href="${item.url}" target="_blank" class="block">
+            <h4 class="text-sm font-semibold text-white/80 group-hover:text-cyan-400 transition-colors leading-relaxed mb-1">${item.title_zh || item.title}</h4>
+            ${item.title_zh ? `<p class="text-[11px] text-white/30 line-clamp-1 italic">${item.title}</p>` : ''}
+        </a>
+    `;
+    return node;
+}
 
 function fmtNumber(n) {
   return new Intl.NumberFormat("zh-CN").format(n || 0);
@@ -388,24 +409,21 @@ function renderGroupedBySiteAndSource(items) {
 
 function renderList() {
   const filtered = getFilteredItems();
-  resultCountEl.textContent = `${fmtNumber(filtered.length)} 条`;
+  if (resultCountEl) resultCountEl.textContent = fmtNumber(filtered.length);
 
+  if (!newsListEl) return;
   newsListEl.innerHTML = "";
 
   if (!filtered.length) {
-    const empty = document.createElement("div");
-    empty.className = "empty";
-    empty.textContent = "当前筛选条件下没有结果。";
-    newsListEl.appendChild(empty);
+    newsListEl.innerHTML = `<div class="p-20 text-center text-white/10 uppercase tracking-[0.2em] text-xs">No Matching Signals Found</div>`;
     return;
   }
 
-  if (state.siteFilter) {
-    renderGroupedBySource(filtered);
-    return;
-  }
-
-  renderGroupedBySiteAndSource(filtered);
+  const frag = document.createDocumentFragment();
+  filtered.forEach(item => {
+    frag.appendChild(renderItemNode(item));
+  });
+  newsListEl.appendChild(frag);
 }
 
 function waytoagiViews(waytoagi) {
