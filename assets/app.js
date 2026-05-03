@@ -425,14 +425,22 @@ function renderWaytoagi(waytoagi) {
   container.innerHTML = "";
 
   if (waytoagi.has_error) {
-    const dateEl = document.createElement("span");
-    dateEl.className = "d";
-    dateEl.textContent = fmtDate(u.date);
-    const titleEl = document.createElement("span");
-    titleEl.className = "t";
-    titleEl.textContent = u.title;
-    row.append(dateEl, titleEl);
-    waytoagiListEl.appendChild(row);
+    container.innerHTML = `<div class="p-4 text-xs text-red-400 bg-red-400/10 rounded-lg border border-red-400/20 uppercase mono-font">Signal Error: ${waytoagi.error}</div>`;
+    return;
+  }
+
+  const updates = updates7d.slice(0, 10);
+  updates.forEach((u) => {
+    const node = document.createElement("div");
+    node.className = "relative pl-6 pb-6 border-l border-white/5 last:pb-0 group";
+    node.innerHTML = `
+        <div class="absolute -left-[5px] top-1 w-2 h-2 rounded-full bg-white/10 group-hover:bg-cyan-500 transition-colors shadow-[0_0_10px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]"></div>
+        <div class="text-[10px] text-white/30 mono-font mb-1 uppercase tracking-tighter">${fmtDate(u.date)}</div>
+        <a href="${u.url || '#'}" target="_blank" class="text-xs font-medium text-white/60 hover:text-cyan-400 transition-colors line-clamp-2 leading-relaxed">
+            ${u.title}
+        </a>
+    `;
+    container.appendChild(node);
   });
 }
 
