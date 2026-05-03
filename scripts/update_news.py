@@ -1832,27 +1832,33 @@ def collect_all(session: requests.Session, now: datetime) -> tuple[list[RawItem]
     raw_items: list[RawItem] = []
     statuses: list[dict[str, Any]] = []
 
-    for site_id, site_name, fn in tasks:
+    def run_task(site_id: str, site_name: str, fn: Any) -> tuple[list[RawItem], dict[str, Any]]:
         start = time.perf_counter()
         error = None
         count = 0
+        items: list[RawItem] = []
         try:
             items = fn(session, now)
             count = len(items)
-            raw_items.extend(items)
         except Exception as exc:
             error = str(exc)
         elapsed_ms = int((time.perf_counter() - start) * 1000)
-        statuses.append(
-            {
-                "site_id": site_id,
-                "site_name": site_name,
-                "ok": error is None,
-                "item_count": count,
-                "duration_ms": elapsed_ms,
-                "error": error,
-            }
-        )
+        status = {
+            "site_id": site_id,
+            "site_name": site_name,
+            "ok": error is None,
+            "item_count": count,
+            "duration_ms": elapsed_ms,
+            "error": error,
+        }
+        return items, status
+
+    with ThreadPoolExecutor(max_workers=len(tasks)) as executor:
+        futures = [executor.submit(run_task, site_id, site_name, fn) for site_id, site_name, fn in tasks]
+        for future in as_completed(futures):
+            items, status = future.result()
+            raw_items.extend(items)
+            statuses.append(status)
 
     return raw_items, statuses
 
