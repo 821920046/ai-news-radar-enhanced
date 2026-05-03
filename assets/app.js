@@ -236,21 +236,19 @@ function renderSiteFilters() {
 }
 
 function renderModeSwitch() {
-  modeAiBtnEl.classList.toggle("active", state.mode === "ai");
-  modeAllBtnEl.classList.toggle("active", state.mode === "all");
+  if (modeAiBtnEl) modeAiBtnEl.classList.toggle("active", state.mode === "ai");
+  if (modeAllBtnEl) modeAllBtnEl.classList.toggle("active", state.mode === "all");
   if (allDedupeWrapEl) allDedupeWrapEl.classList.toggle("show", state.mode === "all");
   if (allDedupeToggleEl) allDedupeToggleEl.checked = state.allDedup;
   if (allDedupeLabelEl) allDedupeLabelEl.textContent = state.allDedup ? "去重开" : "去重关";
-  if (state.mode === "ai") {
-    modeHintEl.textContent = `AI强相关 · ${fmtNumber(state.totalAi)} 条`;
-    if (listTitleEl) listTitleEl.textContent = "AI 信号流";
-  } else {
-    const allCount = state.allDedup
-      ? (state.totalAllMode || state.itemsAll.length)
-      : (state.totalRaw || state.itemsAllRaw.length);
-    modeHintEl.textContent = `全量 · ${state.allDedup ? "去重开" : "去重关"} · ${fmtNumber(allCount)} 条`;
-    if (listTitleEl) listTitleEl.textContent = "全量更新";
-  }
+  
+  const hintText = state.mode === "ai" 
+    ? `AI强相关 · ${fmtNumber(state.totalAi)} 条`
+    : `全量 · ${state.allDedup ? "去重开" : "去重关"} · ${fmtNumber(state.allDedup ? (state.totalAllMode || state.itemsAll.length) : (state.totalRaw || state.itemsAllRaw.length))} 条`;
+
+  if (modeHintEl) modeHintEl.textContent = hintText;
+  if (listTitleEl) listTitleEl.textContent = state.mode === "ai" ? "AI 信号流" : "全量更新";
+  
   renderAdvancedSummary();
 }
 
