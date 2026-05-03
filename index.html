@@ -56,10 +56,18 @@
         .stat .k { @apply text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest; }
         .stat .v { @apply mt-2 text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight; }
         
-        .coverage-strip { @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 col-span-full mt-4; }
-        .coverage-card { @apply flex flex-col gap-1 p-4 bg-white/50 dark:bg-slate-800/50 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 rounded-2xl shadow-sm transition-all duration-300; }
-        .coverage-card strong { @apply text-[17px] font-bold text-slate-900 dark:text-white leading-tight; }
-        .coverage-label, .coverage-meta { @apply text-[11px] text-slate-500 dark:text-slate-400 leading-snug; }
+        .coverage-strip { @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[1px] col-span-full mt-6 bg-slate-200/60 dark:bg-slate-700/60 border border-slate-200/70 dark:border-slate-700/70 rounded-3xl shadow-sm overflow-hidden; }
+        .coverage-card { @apply relative flex flex-col p-5 bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl hover:bg-white/95 dark:hover:bg-slate-800/95 transition-all duration-300; }
+        .coverage-card::before { content: ''; @apply absolute top-0 left-0 w-1 h-full bg-transparent transition-colors duration-300; }
+        .coverage-card.ok:hover::before { @apply bg-good; }
+        .coverage-card.warn:hover::before { @apply bg-warn; }
+        .coverage-card.signal:hover::before { @apply bg-accent; }
+        .coverage-card.official:hover::before { @apply bg-good; }
+        .coverage-card.builders:hover::before { @apply bg-accent-warm; }
+        .coverage-card.private:hover::before { @apply bg-amber-500; }
+        .coverage-card strong { @apply text-[18px] font-bold text-slate-900 dark:text-white leading-tight mt-1.5; }
+        .coverage-label { @apply text-[12px] font-semibold text-slate-500 dark:text-slate-400 leading-snug; }
+        .coverage-meta { @apply text-[11px] font-medium text-slate-400 dark:text-slate-500 mt-1.5 leading-snug; }
         .coverage-card.ok strong { @apply text-good; }
         .coverage-card.warn strong { @apply text-warn; }
         
