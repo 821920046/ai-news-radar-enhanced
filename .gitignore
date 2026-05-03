@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+
+# Local/private source inputs
+feeds/*.opml
+!feeds/*.example.opml
+
+# Secrets and local credentials
+.env
+.env.*
+*.pem
+*.key
+*.cookie
+*cookies*.json
+cookies.json
+
+# Local caches / generated previews
+.pytest_cache/
+playwright-report/
+test-results/
