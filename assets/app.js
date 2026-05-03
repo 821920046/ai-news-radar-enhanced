@@ -86,20 +86,15 @@ function fmtDate(iso) {
 }
 
 function setStats(payload) {
-  const cards = [
-    ["AI 信号", fmtNumber(payload.total_items)],
-    ["站点数", fmtNumber(payload.site_count)],
-    ["来源分组", fmtNumber(payload.source_count)],
-    ["归档", fmtNumber(payload.archive_total || 0)]
-  ];
-
-  statsEl.innerHTML = "";
-  cards.forEach(([k, v]) => {
-    const node = document.createElement("div");
-    node.className = "stat";
-    node.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
-    statsEl.appendChild(node);
-  });
+  const totalEl = document.getElementById("stat-total-count");
+  const sourceEl = document.getElementById("stat-source-count");
+  if (totalEl) totalEl.textContent = fmtNumber(payload.total_items).padStart(3, '0');
+  if (sourceEl) sourceEl.textContent = fmtNumber(payload.site_count).padStart(2, '0');
+  
+  if (statsEl) {
+    statsEl.innerHTML = "";
+    // 保留隐藏的统计，或者用于其他 HUD 元素
+  }
 }
 
 function sourceKind(siteId) {
@@ -116,16 +111,24 @@ function siteRow(siteId) {
 
 function renderCoverageCard(label, value, meta, tone = "") {
   const node = document.createElement("div");
-  node.className = `coverage-card ${tone}`.trim();
-  const labelEl = document.createElement("span");
-  labelEl.className = "coverage-label";
-  labelEl.textContent = label;
-  const valueEl = document.createElement("strong");
-  valueEl.textContent = value;
-  const metaEl = document.createElement("span");
-  metaEl.className = "coverage-meta";
-  metaEl.textContent = meta;
-  node.append(labelEl, valueEl, metaEl);
+  node.className = `group p-4 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-all relative overflow-hidden`;
+  
+  // 背景装饰
+  const decor = document.createElement("div");
+  decor.className = `absolute top-0 left-0 w-1 h-full ${tone === 'warn' ? 'bg-amber-500' : 'bg-cyan-500'} opacity-40 group-hover:opacity-100 transition-opacity`;
+  
+  node.innerHTML = `
+    <div class="flex justify-between items-start mb-2">
+        <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">${label}</span>
+        <span class="text-[10px] mono-font text-white/20">${tone.toUpperCase()}</span>
+    </div>
+    <div class="text-lg font-bold text-white mb-1 mono-font">${value}</div>
+    <div class="text-[10px] text-white/40 leading-tight">${meta}</div>
+    <div class="mt-3 h-1 w-full bg-white/5 rounded-full overflow-hidden">
+        <div class="h-full ${tone === 'warn' ? 'bg-amber-500/40' : 'bg-cyan-500/40'} w-full"></div>
+    </div>
+  `;
+  node.prepend(decor);
   return node;
 }
 
@@ -270,31 +273,33 @@ function getFilteredItems() {
 }
 
 function renderItemNode(item) {
-  const node = itemTpl.content.firstElementChild.cloneNode(true);
-  node.querySelector(".site").textContent = item.site_name;
+  const node = document.createElement("div");
+  node.className = "data-card glass-panel rounded-xl p-5 border-l-2 transition-all cursor-pointer relative group";
+  node.classList.add(item.site_id === 'official_ai' ? 'border-l-cyan-500/50' : 'border-l-white/10');
+  
   const kind = sourceKind(item.site_id);
-  const categoryEl = node.querySelector(".category");
-  categoryEl.textContent = kind.label;
-  categoryEl.classList.add(`kind-${kind.tone}`);
-  node.querySelector(".source").textContent = `分区: ${item.source}`;
-  node.querySelector(".time").textContent = fmtTime(item.published_at || item.first_seen_at);
-
-  const titleEl = node.querySelector(".title");
   const zh = (item.title_zh || "").trim();
   const en = (item.title_en || "").trim();
-  titleEl.textContent = "";
-  if (zh && en && zh !== en) {
-    const primary = document.createElement("span");
-    primary.textContent = zh;
-    const sub = document.createElement("span");
-    sub.className = "title-sub";
-    sub.textContent = en;
-    titleEl.appendChild(primary);
-    titleEl.appendChild(sub);
-  } else {
-    titleEl.textContent = item.title || zh || en;
-  }
-  titleEl.href = item.url;
+  const titleText = (zh && en && zh !== en) ? `${zh} <span class="text-white/40 font-normal block mt-1 text-xs mono-font">${en}</span>` : (item.title || zh || en);
+
+  node.innerHTML = `
+    <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-3">
+            <span class="px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-widest bg-white/5 text-white/60 border border-white/5">
+                ${item.site_name}
+            </span>
+            <span class="text-[10px] text-cyan-400/60 mono-font uppercase">
+                ${item.source || 'ROOT'}
+            </span>
+        </div>
+        <span class="text-[10px] text-white/20 mono-font">${fmtTime(item.published_at || item.first_seen_at)}</span>
+    </div>
+    <a href="${item.url}" target="_blank" class="block text-md font-semibold text-white/90 group-hover:text-cyan-400 transition-colors leading-snug">
+        ${titleText}
+    </a>
+    <div class="absolute top-0 right-0 w-16 h-16 bg-white/[0.01] rounded-bl-full pointer-events-none"></div>
+  `;
+  
   return node;
 }
 
@@ -415,61 +420,11 @@ function waytoagiViews(waytoagi) {
 
 function renderWaytoagi(waytoagi) {
   const { updates7d, updatesToday, latestDate } = waytoagiViews(waytoagi);
-  if (waytoagiTodayBtnEl) waytoagiTodayBtnEl.classList.toggle("active", state.waytoagiMode === "today");
-  if (waytoagi7dBtnEl) waytoagi7dBtnEl.classList.toggle("active", state.waytoagiMode === "7d");
-  waytoagiUpdatedAtEl.textContent = `更新时间：${fmtTime(waytoagi.generated_at)}`;
+  const container = waytoagiListEl;
+  if (!container) return;
+  container.innerHTML = "";
 
-  waytoagiMetaEl.innerHTML = "";
-  const rootLink = document.createElement("a");
-  rootLink.href = waytoagi.root_url || "#";
-  rootLink.target = "_blank";
-  rootLink.rel = "noopener noreferrer";
-  rootLink.textContent = "主页面";
-  const historyLink = document.createElement("a");
-  historyLink.href = waytoagi.history_url || "#";
-  historyLink.target = "_blank";
-  historyLink.rel = "noopener noreferrer";
-  historyLink.textContent = "历史更新页";
-  const todayCount = document.createElement("span");
-  todayCount.textContent = `最近更新日(${latestDate || "--"})：${fmtNumber(waytoagi.count_today || updatesToday.length)} 条`;
-  const weekCount = document.createElement("span");
-  weekCount.textContent = `近 7 日：${fmtNumber(waytoagi.count_7d || updates7d.length)} 条`;
-  [rootLink, "·", historyLink, "·", todayCount, "·", weekCount].forEach((part) => {
-    if (typeof part === "string") {
-      const sep = document.createElement("span");
-      sep.textContent = part;
-      waytoagiMetaEl.appendChild(sep);
-    } else {
-      waytoagiMetaEl.appendChild(part);
-    }
-  });
-
-  waytoagiListEl.innerHTML = "";
   if (waytoagi.has_error) {
-    const div = document.createElement("div");
-    div.className = "waytoagi-error";
-    div.textContent = waytoagi.error || "WaytoAGI 数据加载失败";
-    waytoagiListEl.appendChild(div);
-    return;
-  }
-
-  const updates = state.waytoagiMode === "today" ? updatesToday : updates7d;
-  if (!updates.length) {
-    const div = document.createElement("div");
-    div.className = "waytoagi-empty";
-    div.textContent = state.waytoagiMode === "today"
-      ? "最近更新日没有更新，可切换到近7日查看。"
-      : (waytoagi.warning || "近 7 日没有更新");
-    waytoagiListEl.appendChild(div);
-    return;
-  }
-
-  updates.forEach((u) => {
-    const row = document.createElement("a");
-    row.className = "waytoagi-item";
-    row.href = u.url || "#";
-    row.target = "_blank";
-    row.rel = "noopener noreferrer";
     const dateEl = document.createElement("span");
     dateEl.className = "d";
     dateEl.textContent = fmtDate(u.date);
