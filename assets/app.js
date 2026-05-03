@@ -620,65 +620,52 @@ async function init() {
   }
 }
 
-searchInputEl.addEventListener("input", (e) => {
-  state.query = e.target.value;
-  renderList();
-});
+if (searchInputEl) {
+  searchInputEl.addEventListener("input", (e) => {
+    state.query = e.target.value;
+    renderList();
+  });
+}
 
-siteSelectEl.addEventListener("change", (e) => {
-  state.siteFilter = e.target.value;
-  renderSiteFilters();
-  renderList();
-});
-
-modeAiBtnEl.addEventListener("click", () => {
-  state.mode = "ai";
-  renderModeSwitch();
-  renderSiteFilters();
-  renderList();
-});
-
-modeAllBtnEl.addEventListener("click", async () => {
-  state.mode = "all";
-  renderModeSwitch();
-  newsListEl.innerHTML = "";
-  const loading = document.createElement("div");
-  loading.className = "empty";
-  loading.textContent = "正在加载全量更新...";
-  newsListEl.appendChild(loading);
-  try {
-    await loadAllModeData();
+if (siteSelectEl) {
+  siteSelectEl.addEventListener("change", (e) => {
+    state.siteFilter = e.target.value;
     renderSiteFilters();
     renderList();
-  } catch (err) {
-    newsListEl.innerHTML = "";
-    const failed = document.createElement("div");
-    failed.className = "empty";
-    failed.textContent = err.message;
-    newsListEl.appendChild(failed);
-  }
-});
+  });
+}
+
+// 适配新仪表盘的全量模式切换按钮
+const toggleAllBtn = document.getElementById("toggle-all-mode");
+if (toggleAllBtn) {
+  toggleAllBtn.addEventListener("click", async () => {
+    if (state.mode === "ai") {
+      state.mode = "all";
+      toggleAllBtn.textContent = "SWITCH TO AI SIGNALS";
+      toggleAllBtn.classList.add("bg-cyan-500/10", "text-cyan-400");
+      
+      const container = document.getElementById("news-container");
+      if (container) container.innerHTML = `<div class="p-20 text-center animate-pulse text-cyan-400/40 mono-font tracking-widest text-xs">INITIATING FULL-STREAM ACQUISITION...</div>`;
+      
+      try {
+        await loadAllModeData();
+        renderList();
+      } catch (err) {
+        if (container) container.innerHTML = `<div class="p-20 text-center text-red-400/40 mono-font text-xs">UPLINK FAILED: ${err.message}</div>`;
+      }
+    } else {
+      state.mode = "ai";
+      toggleAllBtn.textContent = "VERBOSE MODE";
+      toggleAllBtn.classList.remove("bg-cyan-500/10", "text-cyan-400");
+      renderList();
+    }
+  });
+}
 
 if (allDedupeToggleEl) {
   allDedupeToggleEl.addEventListener("change", (e) => {
     state.allDedup = Boolean(e.target.checked);
-    renderModeSwitch();
-    renderSiteFilters();
     renderList();
-  });
-}
-
-if (waytoagiTodayBtnEl) {
-  waytoagiTodayBtnEl.addEventListener("click", () => {
-    state.waytoagiMode = "today";
-    if (state.waytoagiData) renderWaytoagi(state.waytoagiData);
-  });
-}
-
-if (waytoagi7dBtnEl) {
-  waytoagi7dBtnEl.addEventListener("click", () => {
-    state.waytoagiMode = "7d";
-    if (state.waytoagiData) renderWaytoagi(state.waytoagiData);
   });
 }
 
