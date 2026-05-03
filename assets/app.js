@@ -198,6 +198,7 @@ function currentSiteStats() {
 }
 
 function renderSiteFilters() {
+  if (!siteSelectEl || !sitePillsEl) return;
   const stats = currentSiteStats();
 
   siteSelectEl.innerHTML = '<option value="">全部站点</option>';
