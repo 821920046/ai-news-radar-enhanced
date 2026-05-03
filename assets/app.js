@@ -67,14 +67,14 @@ function renderItemNode(item) {
     node.innerHTML = `
         <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-white/5 text-[9px] mono-font text-white/50 uppercase tracking-wider border border-white/5">${item.site_name}</span>
+                <span class="px-2 py-0.5 rounded bg-white/5 text-[9px] mono-font text-white/60 uppercase tracking-wider border border-white/10">${item.site_name}</span>
                 <span class="px-2 py-0.5 rounded bg-cyan-400/10 text-[9px] mono-font text-cyan-400 uppercase tracking-wider border border-cyan-400/20">${kind.label}</span>
             </div>
-            <time class="text-[10px] mono-font text-white/20 uppercase tracking-tighter">${fmtTime(item.time_iso)}</time>
+            <time class="text-[10px] mono-font text-white/40 uppercase tracking-tighter">${fmtTime(item.time_iso)}</time>
         </div>
         <a href="${item.url}" target="_blank" class="block">
-            <h4 class="text-sm font-semibold text-white/80 group-hover:text-cyan-400 transition-colors leading-relaxed mb-1">${item.title_zh || item.title}</h4>
-            ${item.title_zh ? `<p class="text-[11px] text-white/30 line-clamp-1 italic">${item.title}</p>` : ''}
+            <h4 class="text-sm font-semibold text-white/95 group-hover:text-cyan-400 transition-colors leading-relaxed mb-1">${item.title_zh || item.title}</h4>
+            ${item.title_zh ? `<p class="text-[11px] text-white/50 line-clamp-1 italic">${item.title}</p>` : ''}
         </a>
     `;
     return node;
