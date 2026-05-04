@@ -20,6 +20,7 @@ const state = {
   siteFilter: "",
   query: "",
   mode: "ai",
+  sortBy: "time",  // "time" or "hot"
   waytoagiMode: "today",
   waytoagiData: null,
   sourceStatus: null,
@@ -51,6 +52,8 @@ const waytoagiTodayBtnEl   = document.getElementById("waytoagiTodayBtn");
 const waytoagi7dBtnEl      = document.getElementById("waytoagi7dBtn");
 const coverageStripEl      = document.getElementById("coverageStrip");
 const backToTopEl          = document.getElementById("backToTop");
+const sortTimeBtnEl        = document.getElementById("sortTimeBtn");
+const sortHotBtnEl         = document.getElementById("sortHotBtn");
 
 // ---- Source kind registry ---------------------------------------------------
 // tone → CSS class suffix; label → badge text
@@ -283,6 +286,8 @@ function renderSiteFilters() {
 function renderModeSwitch() {
   modeAiBtnEl.classList.toggle("active", state.mode === "ai");
   modeAllBtnEl.classList.toggle("active", state.mode === "all");
+  if (sortTimeBtnEl) sortTimeBtnEl.classList.toggle("active", state.sortBy === "time");
+  if (sortHotBtnEl)  sortHotBtnEl.classList.toggle("active", state.sortBy === "hot");
   if (allDedupeWrapEl)   allDedupeWrapEl.classList.toggle("show", state.mode === "all");
   if (allDedupeToggleEl) allDedupeToggleEl.checked = state.allDedup;
   if (allDedupeLabelEl)  allDedupeLabelEl.textContent = state.allDedup ? "去重开" : "去重关";
@@ -312,12 +317,25 @@ function modeItems() {
 
 function getFilteredItems() {
   const q = state.query.trim().toLowerCase();
-  return modeItems().filter((item) => {
+  let items = modeItems().filter((item) => {
     if (state.siteFilter && item.site_id !== state.siteFilter) return false;
     if (!q) return true;
     const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""}`.toLowerCase();
     return hay.includes(q);
   });
+
+  // Sort by hotness if toggled
+  if (state.sortBy === "hot") {
+    items = [...items].sort((a, b) => {
+      const sa = a.hotness_score || 0;
+      const sb = b.hotness_score || 0;
+      if (sb !== sa) return sb - sa;
+      // Fallback: newest first
+      return (b.published_at || "").localeCompare(a.published_at || "");
+    });
+  }
+
+  return items;
 }
 
 // ---- Item rendering ---------------------------------------------------------
@@ -337,6 +355,15 @@ function renderItemNode(item) {
 
   node.querySelector(".source").textContent = `分区: ${item.source}`;
   node.querySelector(".time").textContent = fmtTime(item.published_at || item.first_seen_at);
+
+  // 热度标签
+  if (item.hotness_score > 0 && item.hotness_raw) {
+    const badge = document.createElement("span");
+    badge.className = "hotness-badge";
+    badge.textContent = `🔥 ${item.hotness_raw}`;
+    const metaRow = node.querySelector(".meta-row");
+    metaRow.appendChild(badge);
+  }
 
   const titleEl = node.querySelector(".title");
   const zh = (item.title_zh || "").trim();
@@ -796,6 +823,22 @@ if (allDedupeToggleEl) {
     state.allDedup = Boolean(e.target.checked);
     renderModeSwitch();
     renderSiteFilters();
+    renderList();
+  });
+}
+
+if (sortTimeBtnEl) {
+  sortTimeBtnEl.addEventListener("click", () => {
+    state.sortBy = "time";
+    renderModeSwitch();
+    renderList();
+  });
+}
+
+if (sortHotBtnEl) {
+  sortHotBtnEl.addEventListener("click", () => {
+    state.sortBy = "hot";
+    renderModeSwitch();
     renderList();
   });
 }

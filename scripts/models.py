@@ -84,6 +84,64 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "html_url": "https://github.com/openai/skills",
         "include_keywords": "hatch,pet,migrate-to-codex",
     },
+    {
+        "title": "Hugging Face Papers",
+        "xml_url": "https://huggingface.co/papers/feed.xml",
+        "html_url": "https://huggingface.co/papers",
+    },
+    {
+        "title": "Microsoft AI Blog",
+        "xml_url": "https://blogs.microsoft.com/ai/feed/",
+        "html_url": "https://blogs.microsoft.com/ai/",
+    },
+    {
+        "title": "Meta AI Blog",
+        "xml_url": "https://ai.meta.com/blog/rss/",
+        "html_url": "https://ai.meta.com/blog/",
+    },
+    {
+        "title": "NVIDIA AI Blog",
+        "xml_url": "https://blogs.nvidia.com/ai/feed/",
+        "html_url": "https://blogs.nvidia.com/ai/",
+    },
+    {
+        "title": "MIT Technology Review",
+        "xml_url": "https://www.technologyreview.com/feed/",
+        "html_url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+        "include_keywords": "ai,artificial intelligence,llm,gpt,openai,anthropic,deepseek,ml,machine learning,robot,agent",
+    },
+    {
+        "title": "The Verge AI",
+        "xml_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+        "html_url": "https://www.theverge.com/ai-artificial-intelligence",
+    },
+    {
+        "title": "TechCrunch AI",
+        "xml_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "html_url": "https://techcrunch.com/category/artificial-intelligence/",
+    },
+    {
+        "title": "VentureBeat AI",
+        "xml_url": "https://venturebeat.com/category/ai/feed/",
+        "html_url": "https://venturebeat.com/category/ai/",
+    },
+    {
+        "title": "Ars Technica",
+        "xml_url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+        "html_url": "https://arstechnica.com",
+        "include_keywords": "ai,artificial intelligence,llm,gpt,openai,anthropic,deepseek,ml,machine learning,robot,agent,neural,transformer",
+    },
+    {
+        "title": "机器之心",
+        "xml_url": "https://www.jiqizhixin.com/rss",
+        "html_url": "https://www.jiqizhixin.com/",
+    },
+    {
+        "title": "NVIDIA Technical Blog",
+        "xml_url": "https://developer.nvidia.com/blog/feed/",
+        "html_url": "https://developer.nvidia.com/blog",
+        "include_keywords": "ai,ml,llm,inference,training,cuda,tensorrt,neural,transformer,generative",
+    },
 )
 OFFICIAL_AI_MAX_AGE_DAYS = 45
 AIBREAKFAST_JINA_URL = "https://r.jina.ai/https://aibreakfast.beehiiv.com/"

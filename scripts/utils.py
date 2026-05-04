@@ -323,3 +323,86 @@ def create_session() -> requests.Session:
     session.mount("https://", adapter)
     session.headers.update({"User-Agent": BROWSER_UA, "Accept-Language": "zh-CN,zh;q=0.9"})
     return session
+
+
+# ---------------------------------------------------------------------------
+# Hotness scoring
+# ---------------------------------------------------------------------------
+
+def _parse_metric_number(raw: str) -> float:
+    """Parse a human-readable metric like '1.2万', '3,456', '12k' into a number."""
+    s = (raw or "").strip().replace(",", "").replace(" ", "")
+    if not s:
+        return 0
+    multiplier = 1
+    if s.endswith("万"):
+        s = s[:-1]
+        multiplier = 10_000
+    elif s.endswith("k") or s.endswith("K"):
+        s = s[:-1]
+        multiplier = 1_000
+    try:
+        return float(s) * multiplier
+    except ValueError:
+        return 0
+
+
+def compute_hotness(record: dict[str, Any]) -> tuple[float, str]:
+    """Return (score, raw_display) for an archived/latest record.
+
+    Score is 0-1000 normalized.  Higher = hotter.
+    raw_display is a human-readable string like "1.2万" or "" if no metric.
+    """
+    site_id = str(record.get("site_id") or "")
+    meta = record.get("meta") or {}
+    if not isinstance(meta, dict):
+        meta = {}
+
+    # TopHub: has explicit view/like count in meta.metric
+    if site_id == "tophub":
+        raw = str(meta.get("metric") or "")
+        n = _parse_metric_number(raw)
+        if n > 0:
+            # TopHub numbers range from ~100 to ~10M; map to 0-1000 on log scale
+            import math
+            score = min(1000, max(0, math.log10(max(1, n)) * 200))
+            return (score, raw)
+
+    # Zeli (HN): position-based (earlier in list = hotter)
+    if site_id == "zeli":
+        hn_id = meta.get("hn_id")
+        if hn_id:
+            # Items from Zeli are already sorted by hotness; use a default high score
+            return (600, "HN热门")
+
+    # Buzzing: items are in hotness order
+    if site_id == "buzzing":
+        return (500, "热榜")
+
+    # NewsNow: aggregated from multiple hot sources
+    if site_id == "newsnow":
+        return (400, "聚合热榜")
+
+    # Official sources: high signal by default
+    if site_id == "official_ai":
+        return (350, "")
+
+    # AI Breakfast: curated newsletter
+    if site_id == "aibreakfast":
+        return (300, "")
+
+    # Follow Builders: curated builder feed
+    if site_id == "followbuilders":
+        return (250, "")
+
+    # Everything else
+    return (0, "")
+
+
+def add_hotness_scores(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Add hotness_score and hotness_raw fields to each item in-place."""
+    for item in items:
+        score, raw = compute_hotness(item)
+        item["hotness_score"] = round(score)
+        item["hotness_raw"] = raw
+    return items

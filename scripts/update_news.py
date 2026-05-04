@@ -32,6 +32,7 @@ from pathlib import Path
 from scripts.models import SH_TZ, UTC, WAYTOAGI_DEFAULT
 from scripts.logging_config import setup_logging
 from scripts.utils import (
+    add_hotness_scores,
     create_session,
     event_time,
     iso,
@@ -203,6 +204,10 @@ def main() -> int:
     )
     latest_items_ai_dedup = dedupe_items_by_title_url(latest_items)
     latest_items_all_dedup = dedupe_items_by_title_url(latest_items_all)
+
+    # Add hotness scores for trending sort
+    add_hotness_scores(latest_items_ai_dedup)
+    add_hotness_scores(latest_items_all_dedup)
 
     # Data quality check
     if len(latest_items_ai_dedup) < 3:
