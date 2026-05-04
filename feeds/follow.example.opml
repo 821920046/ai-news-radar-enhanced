@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <head>
-    <title>AI Signal Board RSS Example</title>
+    <title>AI Signal Board RSS Subscriptions</title>
   </head>
   <body>
-    <outline text="RSS Example">
-      <outline
-        text="OpenAI News"
-        title="OpenAI News"
-        type="rss"
-        xmlUrl="https://openai.com/news/rss.xml"
-        htmlUrl="https://openai.com/news"
-      />
-      <outline
-        text="Hugging Face Blog"
-        title="Hugging Face Blog"
-        type="rss"
-        xmlUrl="https://huggingface.co/blog/feed.xml"
-        htmlUrl="https://huggingface.co/blog"
-      />
-      <outline
-        text="InfoQ CN"
-        title="InfoQ CN"
-        type="rss"
-        xmlUrl="https://www.infoq.cn/feed"
-        htmlUrl="https://www.infoq.cn/"
-      />
+    <!-- AI & Cutting Edge Tech -->
+    <outline text="AI &amp; Cutting Edge Tech">
+      <outline text="OpenAI News" title="OpenAI News" type="rss" xmlUrl="https://openai.com/news/rss.xml" htmlUrl="https://openai.com/news" />
+      <outline text="The Verge - AI" title="The Verge - AI" type="rss" xmlUrl="https://www.theverge.com/ai-artificial-intelligence/rss/index.xml" htmlUrl="https://www.theverge.com/ai-artificial-intelligence" />
+      <outline text="Hugging Face Blog" title="Hugging Face Blog" type="rss" xmlUrl="https://huggingface.co/blog/feed.xml" htmlUrl="https://huggingface.co/blog" />
+      <outline text="a16z AI" title="a16z AI" type="rss" xmlUrl="https://a16z.com/category/ai-data/feed/" htmlUrl="https://a16z.com/category/ai-data/" />
+      <outline text="Google AI Blog" title="Google AI Blog" type="rss" xmlUrl="https://blog.google/technology/ai/rss/" htmlUrl="https://blog.google/technology/ai/" />
+    </outline>
+
+    <!-- Hardware & Infrastructure -->
+    <outline text="Hardware &amp; Infrastructure">
+      <outline text="AnandTech" title="AnandTech" type="rss" xmlUrl="https://www.anandtech.com/rss" htmlUrl="https://www.anandtech.com/" />
+      <outline text="Tom's Hardware" title="Tom's Hardware" type="rss" xmlUrl="https://www.tomshardware.com/rss.xml" htmlUrl="https://www.tomshardware.com/" />
+      <outline text="Ars Technica" title="Ars Technica" type="rss" xmlUrl="https://feeds.arstechnica.com/arstechnica/index" htmlUrl="https://arstechnica.com/" />
+      <outline text="ServeTheHome" title="ServeTheHome" type="rss" xmlUrl="https://www.servethehome.com/feed/" htmlUrl="https://www.servethehome.com/" />
+    </outline>
+
+    <!-- Cybersecurity -->
+    <outline text="Cybersecurity">
+      <outline text="The Hacker News" title="The Hacker News" type="rss" xmlUrl="https://feeds.feedburner.com/TheHackersNews" htmlUrl="https://thehackernews.com/" />
+      <outline text="Dark Reading" title="Dark Reading" type="rss" xmlUrl="https://www.darkreading.com/rss.xml" htmlUrl="https://www.darkreading.com/" />
+      <outline text="Krebs on Security" title="Krebs on Security" type="rss" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com/" />
+      <outline text="BleepingComputer" title="BleepingComputer" type="rss" xmlUrl="https://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/" />
     </outline>
   </body>
 </opml>
