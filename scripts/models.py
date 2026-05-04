@@ -142,6 +142,42 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "html_url": "https://developer.nvidia.com/blog",
         "include_keywords": "ai,ml,llm,inference,training,cuda,tensorrt,neural,transformer,generative",
     },
+    {
+        "title": "PyTorch Blog",
+        "xml_url": "https://pytorch.org/blog/feed.xml",
+        "html_url": "https://pytorch.org/blog",
+    },
+    {
+        "title": "TensorFlow Blog",
+        "xml_url": "https://blog.tensorflow.org/feeds/posts/default?alt=rss",
+        "html_url": "https://blog.tensorflow.org",
+    },
+    {
+        "title": "Ollama Blog",
+        "xml_url": "https://ollama.com/blog/rss.xml",
+        "html_url": "https://ollama.com/blog",
+    },
+    {
+        "title": "Papers With Code",
+        "xml_url": "https://paperswithcode.com/latest.rss",
+        "html_url": "https://paperswithcode.com",
+        "include_keywords": "ai,artificial intelligence,llm,gpt,ml,machine learning,neural,transformer,deep learning,nlp,computer vision,agent",
+    },
+    {
+        "title": "Lilianweng's Blog",
+        "xml_url": "https://lilianweng.github.io/index.xml",
+        "html_url": "https://lilianweng.github.io",
+    },
+    {
+        "title": "Together AI Blog",
+        "xml_url": "https://www.together.ai/blog/rss.xml",
+        "html_url": "https://www.together.ai/blog",
+    },
+    {
+        "title": "fast.ai",
+        "xml_url": "https://www.fast.ai/index.xml",
+        "html_url": "https://www.fast.ai",
+    },
 )
 OFFICIAL_AI_MAX_AGE_DAYS = 45
 AIBREAKFAST_JINA_URL = "https://r.jina.ai/https://aibreakfast.beehiiv.com/"
