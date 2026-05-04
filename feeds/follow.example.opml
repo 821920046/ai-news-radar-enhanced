@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <head>
-    <title>AI Signal Board RSS Subscriptions</title>
+    <title>AI Signal Board RSS Subscriptions - Ultimate Collection</title>
   </head>
   <body>
-    <!-- AI & Cutting Edge Tech -->
+    <!-- 1. AI & Cutting Edge Tech -->
     <outline text="AI &amp; Cutting Edge Tech">
       <outline text="OpenAI News" title="OpenAI News" type="rss" xmlUrl="https://openai.com/news/rss.xml" htmlUrl="https://openai.com/news" />
       <outline text="The Verge - AI" title="The Verge - AI" type="rss" xmlUrl="https://www.theverge.com/ai-artificial-intelligence/rss/index.xml" htmlUrl="https://www.theverge.com/ai-artificial-intelligence" />
       <outline text="Hugging Face Blog" title="Hugging Face Blog" type="rss" xmlUrl="https://huggingface.co/blog/feed.xml" htmlUrl="https://huggingface.co/blog" />
       <outline text="a16z AI" title="a16z AI" type="rss" xmlUrl="https://a16z.com/category/ai-data/feed/" htmlUrl="https://a16z.com/category/ai-data/" />
       <outline text="Google AI Blog" title="Google AI Blog" type="rss" xmlUrl="https://blog.google/technology/ai/rss/" htmlUrl="https://blog.google/technology/ai/" />
+      <outline text="Anthropic News" title="Anthropic News" type="rss" xmlUrl="https://www.anthropic.com/news.rss" htmlUrl="https://www.anthropic.com/news" />
     </outline>
 
-    <!-- Hardware & Infrastructure -->
+    <!-- 2. Hardware & Infrastructure -->
     <outline text="Hardware &amp; Infrastructure">
       <outline text="AnandTech" title="AnandTech" type="rss" xmlUrl="https://www.anandtech.com/rss" htmlUrl="https://www.anandtech.com/" />
       <outline text="Tom's Hardware" title="Tom's Hardware" type="rss" xmlUrl="https://www.tomshardware.com/rss.xml" htmlUrl="https://www.tomshardware.com/" />
@@ -21,12 +22,29 @@
       <outline text="ServeTheHome" title="ServeTheHome" type="rss" xmlUrl="https://www.servethehome.com/feed/" htmlUrl="https://www.servethehome.com/" />
     </outline>
 
-    <!-- Cybersecurity -->
-    <outline text="Cybersecurity">
+    <!-- 3. Cybersecurity & Privacy -->
+    <outline text="Cybersecurity &amp; Privacy">
       <outline text="The Hacker News" title="The Hacker News" type="rss" xmlUrl="https://feeds.feedburner.com/TheHackersNews" htmlUrl="https://thehackernews.com/" />
       <outline text="Dark Reading" title="Dark Reading" type="rss" xmlUrl="https://www.darkreading.com/rss.xml" htmlUrl="https://www.darkreading.com/" />
       <outline text="Krebs on Security" title="Krebs on Security" type="rss" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com/" />
       <outline text="BleepingComputer" title="BleepingComputer" type="rss" xmlUrl="https://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/" />
+      <outline text="Schneier on Security" title="Schneier on Security" type="rss" xmlUrl="https://www.schneier.com/blog/index.rdf" htmlUrl="https://www.schneier.com/blog/" />
+    </outline>
+
+    <!-- 4. Thought Leaders & Strategic Analysis -->
+    <outline text="Thought Leaders &amp; Analysis">
+      <outline text="Benedict Evans" title="Benedict Evans" type="rss" xmlUrl="https://www.ben-evans.com/benedictevans?format=rss" htmlUrl="https://www.ben-evans.com/" />
+      <outline text="Simon Willison's Weblog" title="Simon Willison's Weblog" type="rss" xmlUrl="https://simonwillison.net/atom/entries/" htmlUrl="https://simonwillison.net/" />
+      <outline text="Stratechery by Ben Thompson" title="Stratechery by Ben Thompson" type="rss" xmlUrl="https://stratechery.com/feed/" htmlUrl="https://stratechery.com/" />
+      <outline text="Quanta Magazine - Computer Science" title="Quanta Magazine - CS" type="rss" xmlUrl="https://api.quantamagazine.org/feed/" htmlUrl="https://www.quantamagazine.org/computer-science/" />
+    </outline>
+
+    <!-- 5. Engineering & Development -->
+    <outline text="Engineering &amp; Dev">
+      <outline text="GitHub Changelog" title="GitHub Changelog" type="rss" xmlUrl="https://github.blog/changelog/feed/" htmlUrl="https://github.blog/changelog/" />
+      <outline text="Vercel Blog" title="Vercel Blog" type="rss" xmlUrl="https://vercel.com/blog/feed" htmlUrl="https://vercel.com/blog" />
+      <outline text="InfoQ - Software Development" title="InfoQ" type="rss" xmlUrl="https://feed.infoq.com/" htmlUrl="https://www.infoq.com/" />
+      <outline text="Hackaday" title="Hackaday" type="rss" xmlUrl="https://hackaday.com/blog/feed/" htmlUrl="https://hackaday.com/" />
     </outline>
   </body>
 </opml>
