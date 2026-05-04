@@ -34,6 +34,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run tests
+        run: python -m pytest tests/ -v --tb=short
+
       - name: Prepare OPML (optional)
         env:
           FOLLOW_OPML_B64: ${{ secrets.FOLLOW_OPML_B64 }}
@@ -54,6 +57,19 @@ jobs:
             python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3
           fi
 
+      - name: Validate output
+        run: |
+          python -c "
+          import json, sys
+          d = json.load(open('data/latest-24h.json', encoding='utf-8'))
+          n = d.get('total_items', 0)
+          print(f'AI items: {n}')
+          if n < 3:
+              print('ERROR: Too few items, possible source failure')
+              sys.exit(1)
+          print('Data quality check passed')
+          "
+
       - name: Commit and push changes
         run: |
           if git diff --quiet; then
@@ -65,3 +81,11 @@ jobs:
           git add data/latest-24h.json data/latest-24h-all.json data/archive.json data/source-status.json data/waytoagi-7d.json data/title-zh-cache.json
           git commit -m "chore: update ai news snapshot"
           git push
+
+      # Uncomment and configure to receive failure notifications
+      # - name: Notify on failure
+      #   if: failure()
+      #   run: |
+      #     curl -X POST "${{ secrets.WEBHOOK_URL }}" \
+      #       -H "Content-Type: application/json" \
+      #       -d '{"text": "AI News Radar update failed! Check: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}'
