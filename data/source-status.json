@@ -1,109 +1,122 @@
 {
-  "generated_at": "2026-05-04T13:46:39.745265Z",
+  "generated_at": "2026-05-04T14:48:14.499732Z",
   "sites": [
     {
-      "site_id": "techurls",
-      "site_name": "TechURLs",
-      "ok": true,
-      "item_count": 405,
-      "duration_ms": 421,
-      "error": null
-    },
-    {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
-      "ok": true,
-      "item_count": 25,
-      "duration_ms": 445,
-      "error": null
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 2,
+      "error": "Missing dependencies for SOCKS support."
     },
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
-      "ok": true,
-      "item_count": 9,
-      "duration_ms": 853,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 6,
+      "error": "Missing dependencies for SOCKS support."
+    },
+    {
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 8,
+      "error": "Missing dependencies for SOCKS support."
     },
     {
       "site_id": "bestblogs",
       "site_name": "BestBlogs",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 1669,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 7,
+      "error": "Missing dependencies for SOCKS support."
     },
     {
-      "site_id": "aibase",
-      "site_name": "AIbase",
-      "ok": true,
-      "item_count": 20,
-      "duration_ms": 1799,
-      "error": null
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 3039,
-      "duration_ms": 2233,
-      "error": null
-    },
-    {
-      "site_id": "aihubtoday",
-      "site_name": "AI HubToday",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 3776,
-      "error": null
+      "site_id": "techurls",
+      "site_name": "TechURLs",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 9,
+      "error": "Missing dependencies for SOCKS support."
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
-      "ok": true,
-      "item_count": 58,
-      "duration_ms": 4011,
-      "error": null
-    },
-    {
-      "site_id": "official_ai",
-      "site_name": "Official AI Updates",
-      "ok": true,
-      "item_count": 173,
-      "duration_ms": 5302,
-      "error": null
-    },
-    {
-      "site_id": "iris",
-      "site_name": "Info Flow",
-      "ok": true,
-      "item_count": 411,
-      "duration_ms": 26157,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 3,
+      "error": "Missing dependencies for SOCKS support."
     },
     {
       "site_id": "buzzing",
       "site_name": "Buzzing",
-      "ok": true,
-      "item_count": 744,
-      "duration_ms": 66646,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 9,
+      "error": "Missing dependencies for SOCKS support."
+    },
+    {
+      "site_id": "iris",
+      "site_name": "Info Flow",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 9,
+      "error": "Missing dependencies for SOCKS support."
+    },
+    {
+      "site_id": "aibase",
+      "site_name": "AIbase",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 2,
+      "error": "Missing dependencies for SOCKS support."
+    },
+    {
+      "site_id": "aihubtoday",
+      "site_name": "AI HubToday",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 2,
+      "error": "Missing dependencies for SOCKS support."
     },
     {
       "site_id": "newsnow",
       "site_name": "NewsNow",
-      "ok": true,
-      "item_count": 145,
-      "duration_ms": 77548,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 2,
+      "error": "Missing dependencies for SOCKS support."
+    },
+    {
+      "site_id": "official_ai",
+      "site_name": "Official AI Updates",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 14,
+      "error": "No official AI update sources returned items"
     }
   ],
-  "successful_sites": 12,
-  "failed_sites": [],
+  "successful_sites": 0,
+  "failed_sites": [
+    "tophub",
+    "aibreakfast",
+    "followbuilders",
+    "bestblogs",
+    "techurls",
+    "zeli",
+    "buzzing",
+    "iris",
+    "aibase",
+    "aihubtoday",
+    "newsnow",
+    "official_ai"
+  ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5031,
-  "items_before_topic_filter": 4457,
-  "items_in_24h": 335,
+  "fetched_raw_items": 0,
+  "items_before_topic_filter": 3558,
+  "items_in_24h": 269,
   "rss_opml": {
     "enabled": false,
     "path": null,
