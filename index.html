@@ -1,15 +1,10 @@
 <!doctype html>
-<html lang="zh-CN" class="antialiased">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Signal Board</title>
+    <title>AI Signal Board — 24 小时 AI 更新雷达</title>
     <link rel="icon" href="./assets/log.png" type="image/png" />
-
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,326 +13,723 @@
         darkMode: 'media',
         theme: {
           extend: {
-            fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
             colors: {
-              accent: '#0066cc',
-              'accent-warm': '#ff3b30',
-              good: '#34c759',
-              warn: '#ff9500',
-              bad: '#ff3b30'
+              surface:  '#faf9f6',
+              card:     '#ffffff',
+              ink:      '#1a1a2e',
+              muted:    '#64748b',
+              primary:  '#126a73',
+              'primary-light': '#e6f3f4',
+              'cat-ai':       '#2563eb',
+              'cat-ai-bg':    '#eff6ff',
+              'cat-tech':     '#0d9488',
+              'cat-tech-bg':  '#f0fdfa',
+              'cat-digital':  '#7c3aed',
+              'cat-digital-bg':'#f5f3ff',
+              'cat-hardware': '#ea580c',
+              'cat-hardware-bg':'#fff7ed',
             }
           }
         }
       }
     </script>
 
-    <style type="text/tailwindcss">
-      @layer base {
-        body { @apply bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300; }
-        ::-webkit-scrollbar { @apply w-2 h-2; }
-        ::-webkit-scrollbar-track { @apply bg-transparent; }
-        ::-webkit-scrollbar-thumb { @apply bg-slate-300/50 dark:bg-slate-600/50 rounded-full hover:bg-slate-400/50 dark:hover:bg-slate-500/50; }
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #faf9f6;
+        color: #1a1a2e;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; text-decoration: none; }
+
+      /* ---- Shell ---- */
+      .shell { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
+
+      /* ---- Hero ---- */
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: end;
+        padding: 32px 0 24px;
+      }
+      .hero-logo { width: 48px; height: 48px; border-radius: 14px; object-fit: contain; }
+      .hero-title {
+        font-size: 1.65rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1.3;
+        margin: 0;
+      }
+      .hero-subtitle { color: #64748b; font-size: 0.82rem; margin-top: 4px; }
+      .hero-card {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 14px 20px;
+        text-align: right;
+        min-width: 180px;
+      }
+      .hero-card-label { font-size: 0.65rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; }
+      .hero-card-value { font-size: 0.92rem; font-weight: 700; color: #1a1a2e; margin-top: 2px; }
+
+      /* ---- Stats Grid ---- */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        padding-bottom: 20px;
+      }
+      .stat-card {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 14px 16px;
+        border-top: 3px solid #126a73;
+      }
+      .stat-label { font-size: 0.7rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+      .stat-value { font-size: 1.3rem; font-weight: 700; color: #1a1a2e; margin-top: 4px; }
+
+      /* ---- Category Nav (sticky) ---- */
+      .cat-nav {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: #faf9f6;
+        padding: 12px 0;
+        border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .cat-nav::-webkit-scrollbar { display: none; }
+      .cat-btn {
+        flex-shrink: 0;
+        padding: 7px 18px;
+        border-radius: 9999px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        border: 1.5px solid #d1d5db;
+        background: #ffffff;
+        color: #64748b;
+        cursor: pointer;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      .cat-btn:hover { border-color: #126a73; color: #126a73; }
+      .cat-btn.active {
+        background: #126a73;
+        color: #ffffff;
+        border-color: #126a73;
+      }
+      .cat-btn[data-cat="ai"].active       { background: #2563eb; border-color: #2563eb; }
+      .cat-btn[data-cat="科技"].active      { background: #0d9488; border-color: #0d9488; }
+      .cat-btn[data-cat="数码"].active      { background: #7c3aed; border-color: #7c3aed; }
+      .cat-btn[data-cat="电脑硬件"].active  { background: #ea580c; border-color: #ea580c; }
+
+      .cat-count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 20px;
+        height: 18px;
+        padding: 0 5px;
+        border-radius: 9999px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        margin-left: 6px;
+        background: #f1f5f9;
+        color: #64748b;
+      }
+      .cat-btn.active .cat-count { background: rgba(255,255,255,0.25); color: #ffffff; }
+
+      /* ---- Controls Row ---- */
+      .controls-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 0 12px;
+      }
+      .search-box {
+        flex: 1;
+        min-width: 200px;
+        position: relative;
+      }
+      .search-box input {
+        width: 100%;
+        padding: 10px 14px 10px 38px;
+        border: 1.5px solid #d1d5db;
+        border-radius: 10px;
+        font-size: 0.85rem;
+        background: #ffffff;
+        color: #1a1a2e;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .search-box input:focus { border-color: #126a73; }
+      .search-box input::placeholder { color: #9ca3af; }
+      .search-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        color: #9ca3af;
+        pointer-events: none;
       }
 
-      /* ---- skeleton loading animation ---- */
-      .skeleton {
-        background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
-        background-size: 200% 100%;
-        animation: skeleton-shimmer 1.5s ease-in-out infinite;
-        border-radius: 0.5rem;
+      .pill-group {
+        display: inline-flex;
+        background: #f1f5f9;
+        padding: 3px;
+        border-radius: 10px;
       }
-      @keyframes skeleton-shimmer {
+      .pill-btn {
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #64748b;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .pill-btn.active {
+        background: #ffffff;
+        color: #1a1a2e;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      }
+
+      .mode-hint {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #64748b;
+        white-space: nowrap;
+      }
+
+      /* Dedup toggle */
+      .dedup-toggle {
+        display: none;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        background: #f1f5f9;
+        border-radius: 10px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #64748b;
+        cursor: pointer;
+      }
+      .dedup-toggle.show { display: inline-flex; }
+      .dedup-dot {
+        width: 14px; height: 14px;
+        border-radius: 50%;
+        border: 2px solid #d1d5db;
+        background: #ffffff;
+        transition: all 0.15s;
+      }
+      .dedup-toggle input:checked + .dedup-dot {
+        border-color: #126a73;
+        background: #126a73;
+      }
+
+      /* ---- News List ---- */
+      .list-section {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-top: 4px;
+      }
+      .list-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      .list-head h2 { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; margin: 0; }
+      .list-count { font-size: 0.82rem; font-weight: 600; color: #64748b; }
+
+      /* Time group header */
+      .time-group-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 24px;
+        background: #faf9f6;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      .time-group-head h3 { font-size: 0.82rem; font-weight: 700; color: #64748b; margin: 0; }
+      .time-group-head span { font-size: 0.75rem; font-weight: 600; color: #9ca3af; }
+
+      /* Source group header */
+      .source-group-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 24px;
+        background: #faf9f6;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      .source-group-head h3 { font-size: 0.82rem; font-weight: 600; color: #64748b; margin: 0; }
+      .source-group-head span { font-size: 0.75rem; font-weight: 600; color: #9ca3af; }
+
+      /* ---- News Card ---- */
+      .news-card {
+        display: flex;
+        flex-direction: column;
+        padding: 14px 24px;
+        border-bottom: 1px solid #f1f5f9;
+        border-left: 3px solid transparent;
+        transition: background 0.15s, transform 0.1s;
+        cursor: default;
+      }
+      .news-card:last-child { border-bottom: none; }
+      .news-card:hover { background: #faf9f6; transform: translateX(2px); }
+
+      /* Category-based left border */
+      .news-card[data-category="AI"]       { border-left-color: #2563eb; }
+      .news-card[data-category="科技"]     { border-left-color: #0d9488; }
+      .news-card[data-category="数码"]     { border-left-color: #7c3aed; }
+      .news-card[data-category="电脑硬件"] { border-left-color: #ea580c; }
+
+      .card-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #64748b;
+        margin-bottom: 6px;
+      }
+      .card-site { font-weight: 700; color: #374151; }
+
+      .card-cat-badge {
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 9999px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+      .card-cat-badge[data-cat="AI"]       { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+      .card-cat-badge[data-cat="科技"]     { background: #f0fdfa; color: #0d9488; border: 1px solid #99f6e4; }
+      .card-cat-badge[data-cat="数码"]     { background: #f5f3ff; color: #7c3aed; border: 1px solid #c4b5fd; }
+      .card-cat-badge[data-cat="电脑硬件"] { background: #fff7ed; color: #ea580c; border: 1px solid #fdba74; }
+
+      .card-source {
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 9999px;
+        font-size: 0.65rem;
+        font-weight: 600;
+        color: #64748b;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+      }
+      .card-time { margin-left: auto; font-size: 0.72rem; font-weight: 600; color: #9ca3af; }
+
+      .card-title {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        line-height: 1.5;
+        transition: color 0.15s;
+      }
+      .card-title:hover { color: #126a73; }
+      .card-title-sub {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: #64748b;
+        margin-top: 3px;
+        line-height: 1.4;
+      }
+
+      /* Hotness badge */
+      .hotness-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        padding: 1px 7px;
+        border-radius: 9999px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #ff6b35, #ff3b30);
+        color: #ffffff;
+        box-shadow: 0 1px 2px rgba(255,59,48,0.25);
+      }
+
+      /* Empty state */
+      .empty-state {
+        padding: 40px 24px;
+        text-align: center;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #64748b;
+      }
+
+      /* Skeleton */
+      .skeleton {
+        background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s ease-in-out infinite;
+        border-radius: 6px;
+      }
+      @keyframes shimmer {
         0%   { background-position: 200% 0; }
         100% { background-position: -200% 0; }
       }
-      @media (prefers-color-scheme: dark) {
-        .skeleton {
-          background: linear-gradient(90deg, #334155 25%, #475569 50%, #334155 75%);
-          background-size: 200% 100%;
-        }
+      .skeleton-card { padding: 14px 24px; border-bottom: 1px solid #f1f5f9; }
+      .skeleton-card:last-child { border-bottom: none; }
+
+      /* ---- WaytoAGI ---- */
+      .waytoagi-section {
+        margin-top: 20px;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .waytoagi-section summary {
+        display: flex;
+        align-items: center;
+        padding: 14px 20px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+        position: relative;
+        transition: background 0.15s;
+      }
+      .waytoagi-section summary:hover { background: #faf9f6; }
+      .waytoagi-section summary::-webkit-details-marker { display: none; }
+      .waytoagi-section summary::before {
+        content: "+";
+        position: absolute;
+        left: 20px;
+        width: 20px; height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1.5px solid #d1d5db;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #64748b;
+      }
+      .waytoagi-section[open] summary::before { content: "\2212"; }
+      .waytoagi-section summary span { padding-left: 32px; }
+
+      .waytoagi-head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        border-top: 1px solid #f1f5f9;
+        background: #faf9f6;
+      }
+      .waytoagi-head h2 { font-size: 0.92rem; font-weight: 700; color: #1a1a2e; margin: 0; }
+      .waytoagi-tools { display: flex; align-items: center; gap: 10px; }
+      #waytoagiUpdatedAt { font-size: 0.72rem; font-weight: 600; color: #9ca3af; }
+
+      .waytoagi-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        padding: 12px 20px 0;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #64748b;
+      }
+      .waytoagi-meta a { color: #126a73; }
+      .waytoagi-meta a:hover { color: #0e555c; }
+
+      .waytoagi-list { display: flex; flex-direction: column; gap: 8px; padding: 12px 20px 16px; }
+      .waytoagi-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        background: #faf9f6;
+        border: 1px solid #f1f5f9;
+        border-radius: 10px;
+        transition: all 0.15s;
+      }
+      .waytoagi-item:hover { background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+      .waytoagi-item .d { font-size: 0.72rem; font-weight: 700; color: #64748b; min-width: 48px; }
+      .waytoagi-item .t { font-size: 0.82rem; font-weight: 600; color: #1a1a2e; line-height: 1.45; }
+
+      .waytoagi-error, .waytoagi-empty {
+        padding: 20px;
+        text-align: center;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #64748b;
       }
 
-      /* ---- back-to-top button ---- */
+      /* ---- Advanced Panel ---- */
+      .advanced-section {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .advanced-section summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+        position: relative;
+        transition: background 0.15s;
+      }
+      .advanced-section summary:hover { background: #faf9f6; }
+      .advanced-section summary::-webkit-details-marker { display: none; }
+      .advanced-section summary::before {
+        content: "+";
+        position: absolute;
+        left: 20px;
+        width: 20px; height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1.5px solid #d1d5db;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #64748b;
+      }
+      .advanced-section[open] summary::before { content: "\2212"; }
+      .advanced-section summary > span:first-child { padding-left: 32px; }
+      .advanced-summary { font-size: 0.75rem; font-weight: 600; color: #9ca3af; white-space: nowrap; }
+
+      .advanced-content {
+        display: grid;
+        gap: 14px;
+        padding: 0 20px 20px;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 16px;
+      }
+      .advanced-controls {
+        display: grid;
+        grid-template-columns: minmax(160px, 0.8fr) auto auto;
+        gap: 12px;
+        align-items: end;
+      }
+      .field { display: flex; flex-direction: column; gap: 4px; font-size: 0.75rem; font-weight: 600; color: #64748b; }
+      .advanced-section select, .advanced-section input[type="text"] {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1.5px solid #d1d5db;
+        border-radius: 10px;
+        font-size: 0.82rem;
+        background: #ffffff;
+        color: #1a1a2e;
+        outline: none;
+        transition: border-color 0.15s;
+      }
+      .advanced-section select:focus, .advanced-section input:focus { border-color: #126a73; }
+
+      .site-pills {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+      .site-pills::-webkit-scrollbar { display: none; }
+      .site-pill {
+        flex-shrink: 0;
+        padding: 5px 12px;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border: 1.5px solid #d1d5db;
+        background: #ffffff;
+        color: #64748b;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .site-pill:hover { border-color: #126a73; color: #126a73; }
+      .site-pill.active { background: #126a73; color: #ffffff; border-color: #126a73; }
+
+      /* Source health */
+      .health-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+      .health-card {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 12px 14px;
+        background: #faf9f6;
+        border: 1px solid #f1f5f9;
+        border-radius: 10px;
+      }
+      .health-card strong { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; }
+      .health-label { font-size: 0.7rem; font-weight: 600; color: #64748b; }
+      .health-card.ok strong { color: #16a34a; }
+      .health-card.warn strong { color: #ca8a04; }
+      .health-card.bad strong { color: #dc2626; }
+
+      .health-issues { display: grid; gap: 10px; margin-top: 10px; }
+      .health-issue {
+        padding: 10px 14px;
+        border: 1px solid #fecaca;
+        background: #fef2f2;
+        border-radius: 10px;
+      }
+      .health-issue-title { font-size: 0.75rem; font-weight: 700; color: #dc2626; margin-bottom: 6px; }
+      .health-issue ul { margin: 0; padding-left: 18px; font-size: 0.75rem; font-weight: 600; color: #64748b; }
+      .health-issue li { margin-bottom: 2px; }
+      .health-ok {
+        padding: 10px 14px;
+        border: 1.5px solid #bbf7d0;
+        background: #f0fdf4;
+        border-radius: 10px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #16a34a;
+      }
+      .health-empty {
+        padding: 10px 14px;
+        border: 1.5px dashed #d1d5db;
+        border-radius: 10px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #64748b;
+      }
+
+      /* ---- Back to top ---- */
       .back-to-top {
         position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        width: 44px;
-        height: 44px;
+        bottom: 24px;
+        right: 24px;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        background: rgba(0, 102, 204, 0.9);
-        color: white;
+        background: #126a73;
+        color: #ffffff;
         border: none;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.2rem;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        font-size: 1.1rem;
+        box-shadow: 0 4px 12px rgba(18,106,115,0.3);
         transition: opacity 0.3s, transform 0.3s;
         z-index: 50;
       }
       .back-to-top.hidden { opacity: 0; pointer-events: none; transform: translateY(10px); }
+      .back-to-top:hover { background: #0e555c; }
 
-      @layer components {
-        /* ---- compact header ---- */
-        .compact-header {
-          @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-slate-200/70 dark:border-slate-800/70;
-        }
-        .header-left { @apply flex items-center gap-3; }
-        .header-left h1 { @apply text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white; }
-        .hero-logo { @apply w-10 h-10 sm:w-12 sm:h-12 rounded-2xl object-contain overflow-hidden; }
-        .header-right { @apply flex flex-wrap items-center gap-3; }
-        .updated-label { @apply text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest; }
-        .updated { @apply text-xs font-bold text-slate-900 dark:text-slate-100; }
-
-        .shell { @apply max-w-[1024px] mx-auto px-4 sm:px-6 py-6 sm:py-10; }
-
-        /* ---- search bar ---- */
-        .search-bar {
-          @apply relative mt-6;
-        }
-        .search-bar input {
-          @apply w-full pl-11 pr-4 py-3 bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/80 text-slate-900 dark:text-white rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all shadow-sm;
-        }
-        .search-bar .search-icon {
-          @apply absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] text-slate-400 dark:text-slate-500 pointer-events-none;
-        }
-
-        /* ---- mode row ---- */
-        .mode-row { @apply flex items-center gap-3 mt-4; }
-        .mode-hint { @apply text-sm font-medium text-slate-500 dark:text-slate-400 whitespace-nowrap px-1; }
-
-        .mode-switch { @apply inline-flex bg-slate-100 dark:bg-slate-900 p-1 rounded-xl shadow-inner; }
-        .mode-btn { @apply px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 transition-all duration-200; }
-        .mode-btn.active { @apply bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm; }
-
-        /* ---- sort toggle ---- */
-        .sort-switch { @apply inline-flex bg-slate-100 dark:bg-slate-900 p-1 rounded-xl shadow-inner; }
-        .sort-btn { @apply px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500 dark:text-slate-400 transition-all duration-200; }
-        .sort-btn:hover { @apply text-slate-700 dark:text-slate-200; }
-        .sort-btn.active { @apply bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm; }
-
-        .all-dedupe { @apply hidden items-center gap-2 px-3 py-2 bg-slate-100 dark:bg-slate-900 rounded-xl text-xs font-medium text-slate-600 dark:text-slate-400 cursor-pointer select-none transition-all; }
-        .all-dedupe.show { @apply inline-flex; }
-        .all-dedupe-dot { @apply w-3.5 h-3.5 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 transition-colors flex items-center justify-center; }
-        .all-dedupe input:checked + .all-dedupe-dot { @apply border-accent bg-accent; }
-
-        /* ---- list area ---- */
-        .list-wrap { @apply mt-6 bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 rounded-3xl shadow-sm overflow-hidden; }
-        .list-head { @apply flex justify-between items-center px-5 sm:px-8 py-4 border-b border-slate-200/50 dark:border-slate-700/50 bg-white/40 dark:bg-slate-800/40; }
-        .list-head h2 { @apply text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white; }
-        #resultCount { @apply text-sm font-medium text-slate-500 dark:text-slate-400; }
-
-        /* ---- time-group header ---- */
-        .time-group-head {
-          @apply flex justify-between items-center px-5 sm:px-8 py-3 border-b border-slate-100 dark:border-slate-800/60 bg-slate-50/70 dark:bg-slate-800/30;
-        }
-        .time-group-head h3 { @apply text-sm font-bold text-slate-700 dark:text-slate-300; }
-        .time-group-head span  { @apply text-xs font-medium text-slate-500 dark:text-slate-400; }
-        @media (max-width: 639px) {
-          .time-group-head { position: sticky; top: 0; z-index: 10; }
-        }
-
-        /* ---- site / source group headers ---- */
-        .site-group-head, .source-group-head { @apply flex justify-between items-center px-5 sm:px-8 py-3 border-b border-slate-100 dark:border-slate-800/60 bg-slate-50/50 dark:bg-slate-800/30; }
-        .site-group-head h3 { @apply text-base font-bold text-slate-800 dark:text-slate-200; }
-        .source-group-head h3 { @apply text-sm font-semibold text-slate-600 dark:text-slate-300; }
-        .site-group-head span, .source-group-head span { @apply text-xs font-medium text-slate-500 dark:text-slate-400; }
-
-        /* ---- news cards ---- */
-        .news-card {
-          @apply flex flex-col px-4 py-4 sm:px-8 sm:py-5 border-b border-slate-100 dark:border-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-700/40;
-          transition: background-color 0.2s, transform 0.15s, box-shadow 0.15s;
-        }
-        .news-card:hover { transform: translateX(2px); }
-        .news-card:last-child { @apply border-b-0; }
-        .meta-row { @apply flex flex-wrap items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400 mb-2; }
-        .site { @apply font-bold text-slate-700 dark:text-slate-300; }
-        .category, .source { @apply px-2 py-0.5 rounded-full border border-slate-200/80 dark:border-slate-700/80 bg-white/50 dark:bg-slate-800/50 text-[10px] tracking-wider uppercase; }
-        .time { @apply ml-auto font-semibold; }
-
-        /* hotness badge */
-        .hotness-badge {
-          @apply inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase;
-          background: linear-gradient(135deg, #ff6b35 0%, #ff3b30 100%);
-          color: white;
-          box-shadow: 0 1px 3px rgba(255, 59, 48, 0.3);
-        }
-
-        /* kind badges */
-        .category.kind-official  { @apply border-good/40 text-good bg-good/5; }
-        .category.kind-newsletter { @apply border-warn/40 text-warn bg-warn/5; }
-        .category.kind-builders  { @apply border-accent-warm/40 text-accent-warm bg-accent-warm/5; }
-        .category.kind-aihub     { @apply border-purple-500/40 text-purple-500 bg-purple-500/5; }
-        .category.kind-aggregate { @apply border-slate-300/60 text-slate-400 bg-slate-100/50 dark:border-slate-600/60 dark:text-slate-500 dark:bg-slate-800/50; }
-
-        /* colored left border on cards */
-        .news-card.border-official  { border-left: 3px solid #0066cc; }
-        .news-card.border-newsletter { border-left: 3px solid #ff9500; }
-        .news-card.border-builders  { border-left: 3px solid #ff3b30; }
-        .news-card.border-aihub     { border-left: 3px solid #8b5cf6; }
-        .news-card.border-aggregate { border-left: 3px solid #94a3b8; }
-        .news-card.border-default   { border-left: 3px solid transparent; }
-        /* hover shadow on left for cards without left border (default) */
-        .news-card:hover { box-shadow: -3px 0 0 0 currentColor; }
-        .news-card.border-official:hover  { box-shadow: -3px 0 0 0 #0066cc; }
-        .news-card.border-newsletter:hover { box-shadow: -3px 0 0 0 #ff9500; }
-        .news-card.border-builders:hover  { box-shadow: -3px 0 0 0 #ff3b30; }
-        .news-card.border-aihub:hover     { box-shadow: -3px 0 0 0 #8b5cf6; }
-        .news-card.border-aggregate:hover { box-shadow: -3px 0 0 0 #94a3b8; }
-
-        .title { @apply text-[15px] sm:text-[16px] font-semibold text-slate-900 dark:text-slate-100 leading-snug hover:text-accent dark:hover:text-blue-400 transition-colors; }
-        .title-sub { @apply text-[12px] sm:text-[13px] font-medium text-slate-500 dark:text-slate-400 mt-1 block; }
-
-        .empty { @apply p-10 text-center font-medium text-slate-500 dark:text-slate-400 text-sm; }
-
-        /* ---- skeleton cards ---- */
-        .skeleton-card {
-          @apply px-4 py-4 sm:px-8 sm:py-5 border-b border-slate-100 dark:border-slate-800/60;
-        }
-        .skeleton-card:last-child { @apply border-b-0; }
-
-        /* ---- waytoagi ---- */
-        .waytoagi-wrap { @apply mt-6 bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 rounded-3xl shadow-sm overflow-hidden transition-all duration-300; }
-        .waytoagi-wrap summary { @apply flex justify-between items-center py-4 px-5 sm:px-6 text-sm font-semibold text-slate-900 dark:text-white cursor-pointer select-none list-none relative transition-colors hover:bg-slate-50 dark:hover:bg-slate-700/50; }
-        .waytoagi-wrap summary::-webkit-details-marker { @apply hidden; }
-        .waytoagi-wrap summary::before { content: "+"; @apply absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 text-slate-500 font-bold text-xs; }
-        .waytoagi-wrap[open] summary::before { content: "-"; }
-        .waytoagi-wrap summary span { @apply pl-8; }
-
-        .waytoagi-head { @apply flex flex-wrap justify-between items-center gap-3 px-5 sm:px-6 py-4 border-b border-slate-200/50 dark:border-slate-700/50 bg-white/40 dark:bg-slate-800/40; }
-        .waytoagi-head h2 { @apply text-base font-bold tracking-tight text-slate-900 dark:text-white; }
-        .waytoagi-tools { @apply flex items-center gap-3; }
-        .waytoagi-switch { @apply inline-flex bg-slate-100 dark:bg-slate-900 p-1 rounded-xl; }
-        .waytoagi-btn { @apply px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 dark:text-slate-400 transition-all; }
-        .waytoagi-btn.active { @apply bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm; }
-        #waytoagiUpdatedAt { @apply text-xs font-medium text-slate-500 dark:text-slate-400; }
-
-        .waytoagi-meta { @apply flex flex-wrap items-center gap-2 px-5 sm:px-6 pt-4 text-xs font-semibold text-slate-500 dark:text-slate-400; }
-        .waytoagi-meta a { @apply text-accent hover:text-blue-600 dark:hover:text-blue-400 transition-colors; }
-
-        .waytoagi-list { @apply flex flex-col gap-2 p-5 sm:px-6 sm:pb-6; }
-        .waytoagi-item { @apply flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 p-3 bg-white/70 dark:bg-slate-800/70 border border-slate-200/50 dark:border-slate-700/50 rounded-xl hover:shadow-md hover:-translate-y-0.5 transition-all duration-300; }
-        .waytoagi-item .d { @apply text-xs font-bold text-slate-500 dark:text-slate-400 sm:min-w-[64px]; }
-        .waytoagi-item .t { @apply text-[13px] font-semibold text-slate-800 dark:text-slate-200 leading-relaxed; }
-        .waytoagi-error, .waytoagi-empty { @apply p-6 text-center text-sm font-medium text-slate-500 dark:text-slate-400; }
-
-        /* ---- advanced panel ---- */
-        .advanced-panel { @apply mt-6 bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 rounded-3xl shadow-sm overflow-hidden transition-all duration-300; }
-        .advanced-panel summary { @apply flex justify-between items-center py-4 px-5 sm:px-6 text-sm font-semibold text-slate-900 dark:text-white cursor-pointer select-none list-none relative transition-colors hover:bg-slate-50 dark:hover:bg-slate-700/50; }
-        .advanced-panel summary::-webkit-details-marker { @apply hidden; }
-        .advanced-panel summary::before { content: "+"; @apply absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 text-slate-500 font-bold text-xs; }
-        .advanced-panel[open] summary::before { content: "-"; }
-        .advanced-panel summary span:first-child { @apply pl-8; }
-        .advanced-summary { @apply text-xs font-medium text-slate-500 dark:text-slate-400 whitespace-nowrap; }
-        .advanced-content { @apply grid gap-4 px-5 pb-5 sm:px-6 sm:pb-6 border-t border-slate-200/50 dark:border-slate-700/50 pt-5; }
-        .advanced-controls { @apply grid grid-cols-1 md:grid-cols-[minmax(180px,0.8fr)_auto_auto] gap-4 items-end; }
-        .field { @apply flex flex-col gap-2 text-xs font-medium text-slate-500 dark:text-slate-400; }
-        .advanced-panel select, .advanced-panel input[type="text"] { @apply w-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/80 text-slate-900 dark:text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all shadow-sm; }
-
-        /* ---- source health ---- */
-        .source-health { @apply mt-2; }
-        .health-grid { @apply grid grid-cols-2 md:grid-cols-4 gap-3; }
-        .health-metric { @apply flex flex-col gap-1 p-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-xl border border-slate-200/50 dark:border-slate-700/50 shadow-sm; }
-        .health-metric strong { @apply text-lg font-bold text-slate-900 dark:text-white; }
-        .health-label { @apply text-xs font-medium text-slate-500 dark:text-slate-400; }
-        .health-metric.ok strong { @apply text-good; }
-        .health-metric.warn strong { @apply text-warn; }
-        .health-metric.bad strong { @apply text-bad; }
-
-        .health-empty, .health-ok { @apply px-4 py-3 rounded-xl text-sm font-medium border border-dashed border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400; }
-        .health-ok { @apply border-solid border-good/30 bg-good/10 text-good; }
-
-        .site-pills {
-          @apply flex gap-2 pt-2;
-          overflow-x: auto;
-          flex-wrap: nowrap;
-          white-space: nowrap;
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-        .site-pills::-webkit-scrollbar { display: none; }
-        .pill { @apply flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium bg-white/80 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-slate-600 dark:text-slate-300 shadow-sm transition-all duration-300 hover:shadow-md; }
-        .pill.active { @apply bg-accent border-accent text-white dark:bg-accent dark:border-accent dark:text-white shadow-md; }
-
-        .health-issues { @apply grid gap-3 mt-4; }
-        .health-issue { @apply p-3 border border-red-200/60 dark:border-red-900/60 bg-red-50/50 dark:bg-red-900/20 rounded-xl; }
-        .health-issue-title { @apply text-xs font-bold text-red-600 dark:text-red-400 mb-2; }
-        .health-issue ul { @apply pl-5 text-xs font-medium text-slate-600 dark:text-slate-400 list-disc flex flex-col gap-1; }
-
-        /* ---- coverage strip ---- */
-        .coverage-strip { @apply hidden; }
-
-        /* ---- stats (hidden - data shown elsewhere) ---- */
-        .stats { @apply hidden; }
+      /* ---- Responsive ---- */
+      @media (max-width: 760px) {
+        .hero { grid-template-columns: 1fr; }
+        .hero-card { text-align: left; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .advanced-controls { grid-template-columns: 1fr; }
+        .health-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 460px) {
+        .hero-title { font-size: 1.3rem; }
+        .controls-row { flex-direction: column; align-items: stretch; }
+        .search-box { min-width: 100%; }
+        .news-card { padding: 12px 16px; }
+        .list-head { padding: 14px 16px; }
+        .time-group-head { padding: 8px 16px; }
       }
     </style>
   </head>
   <body>
     <main class="shell">
 
-      <!-- ==================== COMPACT HEADER ==================== -->
-      <header class="compact-header">
-        <div class="header-left">
-          <img class="hero-logo" src="./assets/log.png" alt="AI Signal Board Logo" />
-          <h1>24 小时 AI 更新雷达</h1>
-        </div>
-        <div class="header-right">
-          <div class="flex flex-col items-end gap-0.5">
-            <span class="updated-label">更新时间</span>
-            <span class="updated" id="updatedAt">加载中...</span>
+      <!-- ==================== HERO ==================== -->
+      <header class="hero">
+        <div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px;">
+            <img class="hero-logo" src="./assets/log.png" alt="Logo" />
+            <div>
+              <h1 class="hero-title">AI Signal Board</h1>
+              <div class="hero-subtitle">24 小时 AI / 科技 / 数码 / 硬件 更新雷达</div>
+            </div>
           </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-label">LAST UPDATED</div>
+          <div class="hero-card-value" id="updatedAt">加载中...</div>
         </div>
       </header>
 
-      <!-- ==================== SEARCH BAR ==================== -->
-      <div class="search-bar">
-        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/>
-        </svg>
-        <input id="searchInput" type="search" placeholder="搜索 AI 信号 / 来源..." autocomplete="off" />
-      </div>
+      <!-- ==================== STATS ==================== -->
+      <section class="stats-grid" id="statsGrid"></section>
 
-      <!-- ==================== MODE ROW ==================== -->
-      <div class="mode-row">
-        <div class="mode-switch">
-          <button id="modeAiBtn" class="mode-btn active" type="button">AI强相关</button>
-          <button id="modeAllBtn" class="mode-btn" type="button">全量</button>
+      <!-- ==================== CATEGORY NAV (sticky) ==================== -->
+      <nav class="cat-nav" id="catNav"></nav>
+
+      <!-- ==================== CONTROLS ROW ==================== -->
+      <div class="controls-row">
+        <div class="search-box">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/>
+          </svg>
+          <input id="searchInput" type="search" placeholder="搜索信号 / 来源..." autocomplete="off" />
         </div>
-        <div class="sort-switch">
-          <button id="sortTimeBtn" class="sort-btn active" type="button">时间</button>
-          <button id="sortHotBtn" class="sort-btn" type="button">🔥 热门</button>
+        <div class="pill-group">
+          <button id="modeAiBtn" class="pill-btn active" type="button">AI 强相关</button>
+          <button id="modeAllBtn" class="pill-btn" type="button">全量</button>
+        </div>
+        <div class="pill-group">
+          <button id="sortTimeBtn" class="pill-btn active" type="button">时间</button>
+          <button id="sortHotBtn" class="pill-btn" type="button">热门</button>
         </div>
         <span class="mode-hint" id="modeHint">AI强相关</span>
-        <label id="allDedupeWrap" class="all-dedupe" for="allDedupeToggle">
-          <input id="allDedupeToggle" type="checkbox" checked />
-          <span class="all-dedupe-dot"></span>
+        <label id="allDedupeWrap" class="dedup-toggle" for="allDedupeToggle">
+          <input id="allDedupeToggle" type="checkbox" checked style="display:none" />
+          <span class="dedup-dot"></span>
           <span id="allDedupeLabel">去重开</span>
         </label>
       </div>
 
-      <!-- ==================== NEWS LIST (MAIN CONTENT) ==================== -->
-      <section class="list-wrap">
+      <!-- ==================== NEWS LIST ==================== -->
+      <section class="list-section">
         <div class="list-head">
           <h2 id="listTitle">AI 信号流</h2>
-          <span id="resultCount">0 条</span>
+          <span class="list-count" id="resultCount">0 条</span>
         </div>
-        <div id="newsList" class="news-list"></div>
+        <div id="newsList"></div>
       </section>
 
-      <!-- ==================== WAYTOAGI (COLLAPSED) ==================== -->
-      <details class="waytoagi-wrap">
-        <summary>
-          <span>WaytoAGI 更新日志</span>
-        </summary>
+      <!-- ==================== WAYTOAGI ==================== -->
+      <details class="waytoagi-section">
+        <summary><span>WaytoAGI 更新日志</span></summary>
         <div class="waytoagi-head">
           <h2>WaytoAGI 更新日志</h2>
           <div class="waytoagi-tools">
-            <div class="waytoagi-switch">
-              <button id="waytoagiTodayBtn" class="waytoagi-btn active" type="button">最近更新日</button>
-              <button id="waytoagi7dBtn" class="waytoagi-btn" type="button">近7日</button>
+            <div class="pill-group">
+              <button id="waytoagiTodayBtn" class="pill-btn active" type="button">最近更新日</button>
+              <button id="waytoagi7dBtn" class="pill-btn" type="button">近7日</button>
             </div>
             <span id="waytoagiUpdatedAt">加载中...</span>
           </div>
@@ -346,8 +738,8 @@
         <div id="waytoagiList" class="waytoagi-list"></div>
       </details>
 
-      <!-- ==================== ADVANCED PANEL (COLLAPSED) ==================== -->
-      <details class="advanced-panel">
+      <!-- ==================== ADVANCED PANEL ==================== -->
+      <details class="advanced-section">
         <summary>
           <span>高级筛选与源状态</span>
           <span class="advanced-summary" id="advancedSummary">加载中...</span>
@@ -355,20 +747,16 @@
         <div class="advanced-content">
           <div class="advanced-controls">
             <label class="field">
-              <span>站点</span>
+              <span>站点筛选</span>
               <select id="siteSelect">
                 <option value="">全部站点</option>
               </select>
             </label>
           </div>
           <section class="site-pills" id="sitePills"></section>
-          <div class="source-health" id="sourceHealth">源状态加载中...</div>
+          <div id="sourceHealth">源状态加载中...</div>
         </div>
       </details>
-
-      <!-- stats / coverage kept for JS compatibility (hidden) -->
-      <section class="stats" id="stats"></section>
-      <section class="coverage-strip" id="coverageStrip" aria-label="Source coverage status"></section>
 
     </main>
 
@@ -378,13 +766,13 @@
     <!-- ==================== ITEM TEMPLATE ==================== -->
     <template id="itemTpl">
       <article class="news-card">
-        <div class="meta-row">
-          <span class="site"></span>
-          <span class="category"></span>
-          <span class="source"></span>
-          <time class="time"></time>
+        <div class="card-meta">
+          <span class="card-site"></span>
+          <span class="card-cat-badge"></span>
+          <span class="card-source"></span>
+          <time class="card-time"></time>
         </div>
-        <a class="title" target="_blank" rel="noopener noreferrer"></a>
+        <a class="card-title" target="_blank" rel="noopener noreferrer"></a>
       </article>
     </template>
 

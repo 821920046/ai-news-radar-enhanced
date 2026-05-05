@@ -43,6 +43,7 @@ from scripts.utils import (
     utc_now,
 )
 from scripts.topic_filter import (
+    classify_item,
     is_ai_related_record,
     normalize_source_for_display,
     sanitize_public_payload,
@@ -193,6 +194,11 @@ def main() -> int:
     latest_items_all = normalize_aihubtoday_records(latest_items_all)
 
     latest_items_all.sort(key=lambda x: event_time(x) or dt_cls.min.replace(tzinfo=UTC), reverse=True)
+
+    # 为每条新闻打上主题分类标签（AI / 科技 / 数码 / 电脑硬件）
+    for record in latest_items_all:
+        record["category"] = classify_item(record)
+
     latest_items = [record for record in latest_items_all if is_ai_related_record(record)]
     title_cache = load_title_zh_cache(title_cache_path)
     latest_items, latest_items_all, title_cache = add_bilingual_fields(

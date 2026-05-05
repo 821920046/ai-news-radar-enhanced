@@ -1,10 +1,9 @@
 // ============================================================
-//  AI Signal Board — app.js (redesigned)
-//  Data-loading layer unchanged; rendering layer rebuilt around
-//  time-based grouping with source-tinted card borders.
+//  AI Signal Board — app.js
+//  暖色调编辑风格 + 分类导航 + 时间分组 + 来源筛选
 // ============================================================
 
-// ---- global state -----------------------------------------------------------
+// ---- Global State ------------------------------------------------------------
 const state = {
   itemsAi: [],
   itemsAll: [],
@@ -18,92 +17,90 @@ const state = {
   allDataUrl: "data/latest-24h-all.json",
   allDataPromise: null,
   siteFilter: "",
+  category: "",   // "" = 全部, "AI", "科技", "数码", "电脑硬件"
   query: "",
-  mode: "ai",
-  sortBy: "time",  // "time" or "hot"
+  mode: "ai",     // "ai" or "all"
+  sortBy: "time", // "time" or "hot"
   waytoagiMode: "today",
   waytoagiData: null,
   sourceStatus: null,
   generatedAt: null,
 };
 
-// ---- DOM refs (all IDs preserved for backward-compat) -----------------------
-const statsEl              = document.getElementById("stats");
-const siteSelectEl         = document.getElementById("siteSelect");
-const sitePillsEl          = document.getElementById("sitePills");
-const newsListEl           = document.getElementById("newsList");
-const updatedAtEl          = document.getElementById("updatedAt");
-const searchInputEl        = document.getElementById("searchInput");
-const resultCountEl        = document.getElementById("resultCount");
-const listTitleEl          = document.getElementById("listTitle");
-const itemTpl              = document.getElementById("itemTpl");
-const modeAiBtnEl          = document.getElementById("modeAiBtn");
-const modeAllBtnEl         = document.getElementById("modeAllBtn");
-const modeHintEl           = document.getElementById("modeHint");
-const allDedupeWrapEl      = document.getElementById("allDedupeWrap");
-const allDedupeToggleEl    = document.getElementById("allDedupeToggle");
-const allDedupeLabelEl     = document.getElementById("allDedupeLabel");
-const advancedSummaryEl    = document.getElementById("advancedSummary");
-const sourceHealthEl       = document.getElementById("sourceHealth");
-const waytoagiUpdatedAtEl  = document.getElementById("waytoagiUpdatedAt");
-const waytoagiMetaEl       = document.getElementById("waytoagiMeta");
-const waytoagiListEl       = document.getElementById("waytoagiList");
-const waytoagiTodayBtnEl   = document.getElementById("waytoagiTodayBtn");
-const waytoagi7dBtnEl      = document.getElementById("waytoagi7dBtn");
-const coverageStripEl      = document.getElementById("coverageStrip");
-const backToTopEl          = document.getElementById("backToTop");
-const sortTimeBtnEl        = document.getElementById("sortTimeBtn");
-const sortHotBtnEl         = document.getElementById("sortHotBtn");
+// ---- DOM Refs ----------------------------------------------------------------
+const statsGridEl        = document.getElementById("statsGrid");
+const catNavEl           = document.getElementById("catNav");
+const siteSelectEl       = document.getElementById("siteSelect");
+const sitePillsEl        = document.getElementById("sitePills");
+const newsListEl         = document.getElementById("newsList");
+const updatedAtEl        = document.getElementById("updatedAt");
+const searchInputEl      = document.getElementById("searchInput");
+const resultCountEl      = document.getElementById("resultCount");
+const listTitleEl        = document.getElementById("listTitle");
+const itemTpl            = document.getElementById("itemTpl");
+const modeAiBtnEl        = document.getElementById("modeAiBtn");
+const modeAllBtnEl       = document.getElementById("modeAllBtn");
+const modeHintEl         = document.getElementById("modeHint");
+const allDedupeWrapEl    = document.getElementById("allDedupeWrap");
+const allDedupeToggleEl  = document.getElementById("allDedupeToggle");
+const allDedupeLabelEl   = document.getElementById("allDedupeLabel");
+const advancedSummaryEl  = document.getElementById("advancedSummary");
+const sourceHealthEl     = document.getElementById("sourceHealth");
+const waytoagiUpdatedAtEl= document.getElementById("waytoagiUpdatedAt");
+const waytoagiMetaEl     = document.getElementById("waytoagiMeta");
+const waytoagiListEl     = document.getElementById("waytoagiList");
+const waytoagiTodayBtnEl = document.getElementById("waytoagiTodayBtn");
+const waytoagi7dBtnEl    = document.getElementById("waytoagi7dBtn");
+const backToTopEl        = document.getElementById("backToTop");
+const sortTimeBtnEl      = document.getElementById("sortTimeBtn");
+const sortHotBtnEl       = document.getElementById("sortHotBtn");
 
-// ---- Source kind registry ---------------------------------------------------
-// tone → CSS class suffix; label → badge text
+// ---- Source Kind Registry ----------------------------------------------------
 const SOURCE_KINDS = {
-  official_ai:  { label: "官方",   tone: "official" },
-  aibreakfast:  { label: "日报",   tone: "newsletter" },
+  official_ai:   { label: "官方",     tone: "official" },
+  aibreakfast:   { label: "日报",     tone: "newsletter" },
   followbuilders:{ label: "Builders/X", tone: "builders" },
-  aihubtoday:   { label: "AI站点", tone: "aihub" },
-  aibase:       { label: "AI站点", tone: "aihub" },
-  techurls:     { label: "聚合",   tone: "aggregate" },
-  buzzing:      { label: "聚合",   tone: "aggregate" },
-  iris:         { label: "聚合",   tone: "aggregate" },
-  bestblogs:    { label: "博客",   tone: "aggregate" },
-  tophub:       { label: "聚合",   tone: "aggregate" },
-  zeli:         { label: "聚合",   tone: "aggregate" },
-  newsnow:      { label: "聚合",   tone: "aggregate" },
+  aihubtoday:    { label: "AI站点",   tone: "aihub" },
+  aibase:        { label: "AI站点",   tone: "aihub" },
+  techurls:      { label: "聚合",     tone: "aggregate" },
+  buzzing:       { label: "聚合",     tone: "aggregate" },
+  iris:          { label: "聚合",     tone: "aggregate" },
+  bestblogs:     { label: "博客",     tone: "aggregate" },
+  tophub:        { label: "聚合",     tone: "aggregate" },
+  zeli:          { label: "聚合",     tone: "aggregate" },
+  newsnow:       { label: "聚合",     tone: "aggregate" },
+};
+
+// ---- Category Colors (for JS-generated badges) ------------------------------
+const CATEGORY_META = {
+  "AI":       { color: "#2563eb", bg: "#eff6ff" },
+  "科技":     { color: "#0d9488", bg: "#f0fdfa" },
+  "数码":     { color: "#7c3aed", bg: "#f5f3ff" },
+  "电脑硬件": { color: "#ea580c", bg: "#fff7ed" },
 };
 
 // ---- Utilities --------------------------------------------------------------
 
-/** 大数字格式化（如 1,234） */
 function fmtNumber(n) {
   return new Intl.NumberFormat("zh-CN").format(n || 0);
 }
 
-/** ISO → "05/04 14:30" */
 function fmtTime(iso) {
   if (!iso) return "时间未知";
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "时间未知";
   return new Intl.DateTimeFormat("zh-CN", {
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
+    month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
   }).format(d);
 }
 
-/** date string → "05/04" */
 function fmtDate(iso) {
   if (!iso) return "未知日期";
   const d = new Date(`${iso}T00:00:00`);
   if (Number.isNaN(d.getTime())) return iso;
-  return new Intl.DateTimeFormat("zh-CN", {
-    month: "2-digit",
-    day: "2-digit",
-  }).format(d);
+  return new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit" }).format(d);
 }
 
-/** 150ms 防抖 — 搜索输入时减少不必要的渲染 */
 function debounce(fn, ms) {
   let timer;
   return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), ms); };
@@ -118,100 +115,93 @@ function siteRows() {
 }
 
 function siteRow(siteId) {
-  return siteRows().find((site) => site.site_id === siteId) || null;
+  return siteRows().find((s) => s.site_id === siteId) || null;
 }
 
-// ---- Time bucket helper -----------------------------------------------------
-// 把 ISO 时间戳映射到 5 个时间桶：最近1h / 1-3h / 3-6h / 6-12h / 12-24h
+// ---- Time Buckets -----------------------------------------------------------
 const TIME_BUCKETS = [
   { label: "最近 1 小时", maxMs: 1 * 3600_000 },
-  { label: "1-3 小时前", maxMs: 3 * 3600_000 },
-  { label: "3-6 小时前", maxMs: 6 * 3600_000 },
+  { label: "1-3 小时前",  maxMs: 3 * 3600_000 },
+  { label: "3-6 小时前",  maxMs: 6 * 3600_000 },
   { label: "6-12 小时前", maxMs: 12 * 3600_000 },
   { label: "12-24 小时前", maxMs: 24 * 3600_000 },
 ];
 
 function getTimeBucket(iso) {
-  if (!iso) return 4; // 未知时间 → 放在最后一个桶
+  if (!iso) return 4;
   const diff = Date.now() - new Date(iso).getTime();
-  if (diff < 0) return 0; // 未来时间（时区偏移）→ 最新桶
+  if (diff < 0) return 0;
   for (let i = 0; i < TIME_BUCKETS.length; i++) {
     if (diff < TIME_BUCKETS[i].maxMs) return i;
   }
-  return TIME_BUCKETS.length - 1; // 超过24h → 最后一个桶
+  return TIME_BUCKETS.length - 1;
 }
 
-// ---- Stats (hidden but preserved) ------------------------------------------
+// ---- Stats Grid (visible) ---------------------------------------------------
 
-function setStats(payload) {
+function renderStats(payload) {
+  if (!statsGridEl) return;
+  statsGridEl.innerHTML = "";
   const cards = [
-    ["AI 信号", fmtNumber(payload.total_items)],
-    ["站点数",  fmtNumber(payload.site_count)],
-    ["来源分组", fmtNumber(payload.source_count)],
-    ["归档",   fmtNumber(payload.archive_total || 0)],
+    { label: "AI 信号", value: fmtNumber(payload.total_items), color: "#2563eb" },
+    { label: "覆盖站点", value: fmtNumber(payload.site_count), color: "#0d9488" },
+    { label: "来源分组", value: fmtNumber(payload.source_count), color: "#7c3aed" },
+    { label: "归档总量", value: fmtNumber(payload.archive_total || 0), color: "#ea580c" },
   ];
-  statsEl.innerHTML = "";
-  cards.forEach(([k, v]) => {
+  cards.forEach(({ label, value, color }) => {
     const node = document.createElement("div");
-    node.className = "stat";
-    node.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
-    statsEl.appendChild(node);
+    node.className = "stat-card";
+    node.style.borderTopColor = color;
+    node.innerHTML = `<div class="stat-label">${label}</div><div class="stat-value">${value}</div>`;
+    statsGridEl.appendChild(node);
   });
 }
 
-// ---- Coverage strip (hidden but preserved) ----------------------------------
+// ---- Category Nav -----------------------------------------------------------
 
-function renderCoverageCard(label, value, meta, tone = "") {
-  const node = document.createElement("div");
-  node.className = `coverage-card ${tone}`.trim();
-  const labelEl = document.createElement("span");
-  labelEl.className = "coverage-label";
-  labelEl.textContent = label;
-  const valueEl = document.createElement("strong");
-  valueEl.textContent = value;
-  const metaEl = document.createElement("span");
-  metaEl.className = "coverage-meta";
-  metaEl.textContent = meta;
-  node.append(labelEl, valueEl, metaEl);
-  return node;
+function computeCategoryCounts(items) {
+  const counts = { "": 0, "AI": 0, "科技": 0, "数码": 0, "电脑硬件": 0 };
+  items.forEach((item) => {
+    const cat = item.category || "科技";
+    counts[""] += 1;
+    if (counts[cat] !== undefined) counts[cat] += 1;
+    else counts["科技"] += 1; // fallback
+  });
+  return counts;
 }
 
-function renderCoverageStrip(errorMessage = "") {
-  if (!coverageStripEl) return;
-  coverageStripEl.innerHTML = "";
+function renderCategoryNav() {
+  if (!catNavEl) return;
+  const items = modeItems();
+  const counts = computeCategoryCounts(items);
 
-  const rows = siteRows();
-  const failedSites = Array.isArray(state.sourceStatus?.failed_sites) ? state.sourceStatus.failed_sites : [];
-  const rss = state.sourceStatus?.rss_opml || {};
-  const allCount = Number(state.sourceStatus?.items_before_topic_filter || state.totalAllMode || state.itemsAll.length || 0);
-  const coverageCount = Number(state.sourceStatus?.fetched_raw_items || state.totalRaw || allCount || 0);
-  const officialCount = Number(siteRow("official_ai")?.item_count || 0);
-  const newsletterCount = Number(siteRow("aibreakfast")?.item_count || 0);
-  const buildersCount = Number(siteRow("followbuilders")?.item_count || 0);
-  const totalSites = rows.length;
-  const okSites = Number(state.sourceStatus?.successful_sites || 0);
-  const opmlValue = rss.enabled
-    ? `${fmtNumber(rss.ok_feeds || 0)}/${fmtNumber(rss.effective_feed_total || 0)}`
-    : "OPML";
-  const opmlMeta = rss.enabled ? "私有订阅已接入" : "可用 Secret 接入私有源";
-
-  const cards = [
-    ["源健康", totalSites ? `${fmtNumber(okSites)}/${fmtNumber(totalSites)}` : "加载中",
-      failedSites.length ? `${fmtNumber(failedSites.length)} 个失败源` : (errorMessage || "内置源正常"),
-      failedSites.length ? "warn" : "ok"],
-    ["今日覆盖池", `${fmtNumber(coverageCount)} 条`,
-      allCount ? `全网抓取原始信号 · ${fmtNumber(allCount)} 条入池` : "全网抓取原始信号", "signal"],
-    ["AI精选", `${fmtNumber(state.totalAi)} 条`, "24小时强相关信号", "signal"],
-    ["官方/日报源池", `${fmtNumber(officialCount + newsletterCount)} 条`, "官方节点 + AI Breakfast", "official"],
-    ["Builders/X源池", `${fmtNumber(buildersCount)} 条`, "Follow Builders公开feed", "builders"],
-    ["私人扩展", opmlValue, opmlMeta, "private"],
+  const categories = [
+    { key: "", label: "全部" },
+    { key: "AI", label: "AI" },
+    { key: "科技", label: "科技" },
+    { key: "数码", label: "数码" },
+    { key: "电脑硬件", label: "电脑硬件" },
   ];
-  cards.forEach(([label, value, meta, tone]) => {
-    coverageStripEl.appendChild(renderCoverageCard(label, value, meta, tone));
+
+  catNavEl.innerHTML = "";
+  categories.forEach(({ key, label }) => {
+    const btn = document.createElement("button");
+    btn.className = `cat-btn ${state.category === key ? "active" : ""}`;
+    if (key) btn.setAttribute("data-cat", key);
+    btn.type = "button";
+
+    const count = counts[key] || 0;
+    btn.innerHTML = `${label}<span class="cat-count">${fmtNumber(count)}</span>`;
+    btn.onclick = () => {
+      state.category = key;
+      renderCategoryNav();
+      renderList();
+    };
+    catNavEl.appendChild(btn);
   });
 }
 
-// ---- Advanced summary -------------------------------------------------------
+// ---- Advanced Summary -------------------------------------------------------
 
 function renderAdvancedSummary() {
   if (!advancedSummaryEl) return;
@@ -224,12 +214,11 @@ function renderAdvancedSummary() {
     return;
   }
   const sites = Array.isArray(status.sites) ? status.sites : [];
-  const totalSites = sites.length;
   const okSites = Number(status.successful_sites || 0);
-  advancedSummaryEl.textContent = `${fmtNumber(okSites)}/${fmtNumber(totalSites)} 源可用 · 全量 ${fmtNumber(allCount)} 条`;
+  advancedSummaryEl.textContent = `${fmtNumber(okSites)}/${fmtNumber(sites.length)} 源可用 · 全量 ${fmtNumber(allCount)} 条`;
 }
 
-// ---- Site filters -----------------------------------------------------------
+// ---- Site Filters -----------------------------------------------------------
 
 function computeSiteStats(items) {
   const m = new Map();
@@ -237,9 +226,8 @@ function computeSiteStats(items) {
     if (!m.has(item.site_id)) {
       m.set(item.site_id, { site_id: item.site_id, site_name: item.site_name, count: 0, raw_count: 0 });
     }
-    const row = m.get(item.site_id);
-    row.count += 1;
-    row.raw_count += 1;
+    m.get(item.site_id).count += 1;
+    m.get(item.site_id).raw_count += 1;
   });
   return Array.from(m.values()).sort((a, b) => b.count - a.count || a.site_name.localeCompare(b.site_name, "zh-CN"));
 }
@@ -252,43 +240,39 @@ function currentSiteStats() {
 function renderSiteFilters() {
   const stats = currentSiteStats();
 
-  // dropdown
   siteSelectEl.innerHTML = '<option value="">全部站点</option>';
   stats.forEach((s) => {
     const opt = document.createElement("option");
     opt.value = s.site_id;
-    const raw = s.raw_count ?? s.count;
-    opt.textContent = `${s.site_name} (${s.count}/${raw})`;
+    opt.textContent = `${s.site_name} (${s.count})`;
     siteSelectEl.appendChild(opt);
   });
   siteSelectEl.value = state.siteFilter;
 
-  // pills
   sitePillsEl.innerHTML = "";
   const allPill = document.createElement("button");
-  allPill.className = `pill ${state.siteFilter === "" ? "active" : ""}`;
+  allPill.className = `site-pill ${state.siteFilter === "" ? "active" : ""}`;
   allPill.textContent = "全部";
   allPill.onclick = () => { state.siteFilter = ""; renderSiteFilters(); renderList(); };
   sitePillsEl.appendChild(allPill);
 
   stats.forEach((s) => {
     const btn = document.createElement("button");
-    btn.className = `pill ${state.siteFilter === s.site_id ? "active" : ""}`;
-    const raw = s.raw_count ?? s.count;
-    btn.textContent = `${s.site_name} ${s.count}/${raw}`;
+    btn.className = `site-pill ${state.siteFilter === s.site_id ? "active" : ""}`;
+    btn.textContent = `${s.site_name} ${s.count}`;
     btn.onclick = () => { state.siteFilter = s.site_id; renderSiteFilters(); renderList(); };
     sitePillsEl.appendChild(btn);
   });
 }
 
-// ---- Mode switch ------------------------------------------------------------
+// ---- Mode Switch ------------------------------------------------------------
 
 function renderModeSwitch() {
   modeAiBtnEl.classList.toggle("active", state.mode === "ai");
   modeAllBtnEl.classList.toggle("active", state.mode === "all");
-  if (sortTimeBtnEl) sortTimeBtnEl.classList.toggle("active", state.sortBy === "time");
-  if (sortHotBtnEl)  sortHotBtnEl.classList.toggle("active", state.sortBy === "hot");
-  if (allDedupeWrapEl)   allDedupeWrapEl.classList.toggle("show", state.mode === "all");
+  sortTimeBtnEl?.classList.toggle("active", state.sortBy === "time");
+  sortHotBtnEl?.classList.toggle("active", state.sortBy === "hot");
+  allDedupeWrapEl?.classList.toggle("show", state.mode === "all");
   if (allDedupeToggleEl) allDedupeToggleEl.checked = state.allDedup;
   if (allDedupeLabelEl)  allDedupeLabelEl.textContent = state.allDedup ? "去重开" : "去重关";
 
@@ -318,19 +302,22 @@ function modeItems() {
 function getFilteredItems() {
   const q = state.query.trim().toLowerCase();
   let items = modeItems().filter((item) => {
+    // Site filter
     if (state.siteFilter && item.site_id !== state.siteFilter) return false;
+    // Category filter
+    if (state.category && (item.category || "科技") !== state.category) return false;
+    // Search filter
     if (!q) return true;
     const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""}`.toLowerCase();
     return hay.includes(q);
   });
 
-  // Sort by hotness if toggled
+  // Sort by hotness
   if (state.sortBy === "hot") {
     items = [...items].sort((a, b) => {
       const sa = a.hotness_score || 0;
       const sb = b.hotness_score || 0;
       if (sb !== sa) return sb - sa;
-      // Fallback: newest first
       return (b.published_at || "").localeCompare(a.published_at || "");
     });
   }
@@ -338,34 +325,40 @@ function getFilteredItems() {
   return items;
 }
 
-// ---- Item rendering ---------------------------------------------------------
+// ---- Item Rendering ---------------------------------------------------------
 
 function renderItemNode(item) {
   const node = itemTpl.content.firstElementChild.cloneNode(true);
   const kind = sourceKind(item.site_id);
+  const category = item.category || "科技";
 
-  // 左侧彩色边框 — 根据 tone 添加对应 class
-  node.classList.add(`border-${kind.tone}`);
+  // Category-based left border (via data attribute + CSS)
+  node.setAttribute("data-category", category);
 
-  node.querySelector(".site").textContent = item.site_name;
+  // Site name
+  node.querySelector(".card-site").textContent = item.site_name;
 
-  const categoryEl = node.querySelector(".category");
-  categoryEl.textContent = kind.label;
-  categoryEl.classList.add(`kind-${kind.tone}`);
+  // Category badge
+  const catBadge = node.querySelector(".card-cat-badge");
+  catBadge.textContent = category;
+  catBadge.setAttribute("data-cat", category);
 
-  node.querySelector(".source").textContent = `分区: ${item.source}`;
-  node.querySelector(".time").textContent = fmtTime(item.published_at || item.first_seen_at);
+  // Source section
+  node.querySelector(".card-source").textContent = `分区: ${item.source}`;
 
-  // 热度标签
+  // Time
+  node.querySelector(".card-time").textContent = fmtTime(item.published_at || item.first_seen_at);
+
+  // Hotness badge
   if (item.hotness_score > 0 && item.hotness_raw) {
     const badge = document.createElement("span");
     badge.className = "hotness-badge";
-    badge.textContent = `🔥 ${item.hotness_raw}`;
-    const metaRow = node.querySelector(".meta-row");
-    metaRow.appendChild(badge);
+    badge.textContent = item.hotness_raw;
+    node.querySelector(".card-meta").appendChild(badge);
   }
 
-  const titleEl = node.querySelector(".title");
+  // Title (bilingual)
+  const titleEl = node.querySelector(".card-title");
   const zh = (item.title_zh || "").trim();
   const en = (item.title_en || "").trim();
   titleEl.textContent = "";
@@ -373,7 +366,7 @@ function renderItemNode(item) {
     const primary = document.createElement("span");
     primary.textContent = zh;
     const sub = document.createElement("span");
-    sub.className = "title-sub";
+    sub.className = "card-title-sub";
     sub.textContent = en;
     titleEl.appendChild(primary);
     titleEl.appendChild(sub);
@@ -384,7 +377,7 @@ function renderItemNode(item) {
   return node;
 }
 
-// ---- Skeleton loading -------------------------------------------------------
+// ---- Skeleton ---------------------------------------------------------------
 
 function renderSkeleton(count = 5) {
   const frag = document.createDocumentFragment();
@@ -392,35 +385,32 @@ function renderSkeleton(count = 5) {
     const card = document.createElement("div");
     card.className = "skeleton-card";
     card.innerHTML = `
-      <div class="flex items-center gap-2 mb-2.5">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
         <div class="skeleton" style="width:60px;height:14px"></div>
         <div class="skeleton" style="width:36px;height:14px;border-radius:9999px"></div>
-        <div class="skeleton ml-auto" style="width:72px;height:14px"></div>
+        <div class="skeleton" style="margin-left:auto;width:72px;height:14px"></div>
       </div>
-      <div class="skeleton" style="width:90%;height:16px"></div>
-      <div class="skeleton mt-1.5" style="width:55%;height:12px"></div>
+      <div class="skeleton" style="width:88%;height:16px"></div>
+      <div class="skeleton" style="margin-top:6px;width:50%;height:12px"></div>
     `;
     frag.appendChild(card);
   }
   return frag;
 }
 
-// ---- Time-based grouping (default view) -------------------------------------
+// ---- Time-grouped rendering -------------------------------------------------
 
 function renderTimeGrouped(items) {
-  // 按时间桶分组
   const buckets = TIME_BUCKETS.map(() => []);
   items.forEach((item) => {
-    const bucketIdx = getTimeBucket(item.published_at || item.first_seen_at);
-    buckets[bucketIdx].push(item);
+    const idx = getTimeBucket(item.published_at || item.first_seen_at);
+    buckets[idx].push(item);
   });
 
   const frag = document.createDocumentFragment();
-
   buckets.forEach((bucketItems, idx) => {
     if (bucketItems.length === 0) return;
 
-    // 组标题（sticky on mobile via CSS）
     const header = document.createElement("div");
     header.className = "time-group-head";
     const title = document.createElement("h3");
@@ -430,14 +420,13 @@ function renderTimeGrouped(items) {
     header.append(title, count);
     frag.appendChild(header);
 
-    // 该桶内的卡片
     bucketItems.forEach((item) => frag.appendChild(renderItemNode(item)));
   });
 
   newsListEl.appendChild(frag);
 }
 
-// ---- Source-grouped view (when site filter is active) -----------------------
+// ---- Source-grouped rendering -----------------------------------------------
 
 function groupBySource(items) {
   const groupMap = new Map();
@@ -450,28 +439,21 @@ function groupBySource(items) {
     .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], "zh-CN"));
 }
 
-function buildSourceGroupNode(source, items) {
-  const section = document.createElement("section");
-  section.className = "source-group";
-  const header = document.createElement("header");
-  header.className = "source-group-head";
-  const title = document.createElement("h3");
-  title.textContent = source;
-  const count = document.createElement("span");
-  count.textContent = `${fmtNumber(items.length)} 条`;
-  const listEl = document.createElement("div");
-  listEl.className = "source-group-list";
-  header.append(title, count);
-  section.append(header, listEl);
-  items.forEach((item) => listEl.appendChild(renderItemNode(item)));
-  return section;
-}
-
 function renderGroupedBySource(items) {
   const groups = groupBySource(items);
   const frag = document.createDocumentFragment();
   groups.forEach(([source, groupItems]) => {
-    frag.appendChild(buildSourceGroupNode(source, groupItems));
+    const section = document.createElement("section");
+    const header = document.createElement("header");
+    header.className = "source-group-head";
+    const title = document.createElement("h3");
+    title.textContent = source;
+    const count = document.createElement("span");
+    count.textContent = `${fmtNumber(groupItems.length)} 条`;
+    header.append(title, count);
+    section.appendChild(header);
+    groupItems.forEach((item) => section.appendChild(renderItemNode(item)));
+    frag.appendChild(section);
   });
   newsListEl.appendChild(frag);
 }
@@ -485,17 +467,15 @@ function renderList() {
 
   if (!filtered.length) {
     const empty = document.createElement("div");
-    empty.className = "empty";
+    empty.className = "empty-state";
     empty.textContent = "当前筛选条件下没有结果。";
     newsListEl.appendChild(empty);
     return;
   }
 
   if (state.siteFilter) {
-    // 选了具体站点 → 按来源分组
     renderGroupedBySource(filtered);
   } else {
-    // 默认 → 按时间桶分组
     renderTimeGrouped(filtered);
   }
 }
@@ -513,8 +493,8 @@ function waytoagiViews(waytoagi) {
 
 function renderWaytoagi(waytoagi) {
   const { updates7d, updatesToday, latestDate } = waytoagiViews(waytoagi);
-  if (waytoagiTodayBtnEl) waytoagiTodayBtnEl.classList.toggle("active", state.waytoagiMode === "today");
-  if (waytoagi7dBtnEl)    waytoagi7dBtnEl.classList.toggle("active", state.waytoagiMode === "7d");
+  waytoagiTodayBtnEl?.classList.toggle("active", state.waytoagiMode === "today");
+  waytoagi7dBtnEl?.classList.toggle("active", state.waytoagiMode === "7d");
   waytoagiUpdatedAtEl.textContent = `更新时间：${fmtTime(waytoagi.generated_at)}`;
 
   waytoagiMetaEl.innerHTML = "";
@@ -579,11 +559,11 @@ function renderWaytoagi(waytoagi) {
   });
 }
 
-// ---- Source health -----------------------------------------------------------
+// ---- Source Health -----------------------------------------------------------
 
 function renderMetric(label, value, tone = "") {
   const node = document.createElement("div");
-  node.className = `health-metric ${tone}`.trim();
+  node.className = `health-card ${tone}`.trim();
   const labelEl = document.createElement("span");
   labelEl.className = "health-label";
   labelEl.textContent = label;
@@ -669,7 +649,7 @@ function renderSourceHealth(errorMessage = "") {
   renderAdvancedSummary();
 }
 
-// ---- Data loaders -----------------------------------------------------------
+// ---- Data Loaders -----------------------------------------------------------
 
 async function loadNewsData() {
   const res = await fetch(`./data/latest-24h.json?t=${Date.now()}`);
@@ -715,9 +695,8 @@ async function loadSourceStatusData() {
 // ---- Init -------------------------------------------------------------------
 
 async function init() {
-  // 显示骨架屏
   newsListEl.innerHTML = "";
-  newsListEl.appendChild(renderSkeleton(5));
+  newsListEl.appendChild(renderSkeleton(6));
 
   const [newsResult, waytoagiResult, statusResult] = await Promise.allSettled([
     loadNewsData(),
@@ -727,36 +706,33 @@ async function init() {
 
   if (newsResult.status === "fulfilled") {
     const payload = newsResult.value;
-    state.itemsAi      = payload.items_ai || payload.items || [];
-    state.itemsAllRaw  = payload.items_all_raw || payload.items_all || [];
-    state.itemsAll     = payload.items_all || [];
-    state.statsAi      = payload.site_stats || [];
-    state.totalAi      = payload.total_items || state.itemsAi.length;
-    state.totalRaw     = payload.total_items_raw || state.itemsAllRaw.length;
-    state.totalAllMode = payload.total_items_all_mode || state.itemsAll.length;
-    state.allDataUrl   = payload.all_mode_data_url || state.allDataUrl;
+    state.itemsAi       = payload.items_ai || payload.items || [];
+    state.itemsAllRaw   = payload.items_all_raw || payload.items_all || [];
+    state.itemsAll      = payload.items_all || [];
+    state.statsAi       = payload.site_stats || [];
+    state.totalAi       = payload.total_items || state.itemsAi.length;
+    state.totalRaw      = payload.total_items_raw || state.itemsAllRaw.length;
+    state.totalAllMode  = payload.total_items_all_mode || state.itemsAll.length;
+    state.allDataUrl    = payload.all_mode_data_url || state.allDataUrl;
     state.allDataLoaded = Boolean(payload.items_all || payload.items_all_raw);
-    state.generatedAt  = payload.generated_at;
+    state.generatedAt   = payload.generated_at;
 
-    setStats(payload);
+    renderStats(payload);
     renderModeSwitch();
-    renderCoverageStrip();
+    renderCategoryNav();
     renderSiteFilters();
     renderList();
-    updatedAtEl.textContent = `更新时间：${fmtTime(state.generatedAt)}`;
+    updatedAtEl.textContent = fmtTime(state.generatedAt);
   } else {
-    updatedAtEl.textContent = "新闻数据加载失败";
-    newsListEl.innerHTML = `<div class="empty">${newsResult.reason.message}</div>`;
-    renderCoverageStrip(newsResult.reason.message);
+    updatedAtEl.textContent = "加载失败";
+    newsListEl.innerHTML = `<div class="empty-state">${newsResult.reason.message}</div>`;
   }
 
   if (statusResult.status === "fulfilled") {
     state.sourceStatus = statusResult.value;
     renderSourceHealth();
-    renderCoverageStrip();
   } else {
-    renderSourceHealth(statusResult.reason.message);
-    renderCoverageStrip(statusResult.reason.message);
+    renderSourceHealth(statusResult.reason?.message);
   }
 
   if (waytoagiResult.status === "fulfilled") {
@@ -764,23 +740,19 @@ async function init() {
     renderWaytoagi(state.waytoagiData);
   } else {
     waytoagiUpdatedAtEl.textContent = "加载失败";
-    waytoagiListEl.innerHTML = `<div class="waytoagi-error">${waytoagiResult.reason.message}</div>`;
+    waytoagiListEl.innerHTML = `<div class="waytoagi-error">${waytoagiResult.reason?.message}</div>`;
   }
 }
 
-// ---- Event listeners --------------------------------------------------------
+// ---- Event Listeners --------------------------------------------------------
 
-// 搜索框 — 150ms 防抖
 const debouncedSearch = debounce((value) => {
   state.query = value;
   renderList();
 }, 150);
 
-searchInputEl.addEventListener("input", (e) => {
-  debouncedSearch(e.target.value);
-});
+searchInputEl.addEventListener("input", (e) => debouncedSearch(e.target.value));
 
-// Esc 键清空搜索并失焦
 searchInputEl.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     searchInputEl.value = "";
@@ -799,6 +771,7 @@ siteSelectEl.addEventListener("change", (e) => {
 modeAiBtnEl.addEventListener("click", () => {
   state.mode = "ai";
   renderModeSwitch();
+  renderCategoryNav();
   renderSiteFilters();
   renderList();
 });
@@ -806,15 +779,15 @@ modeAiBtnEl.addEventListener("click", () => {
 modeAllBtnEl.addEventListener("click", async () => {
   state.mode = "all";
   renderModeSwitch();
-  // 切换到全量模式时显示骨架屏
   newsListEl.innerHTML = "";
-  newsListEl.appendChild(renderSkeleton(5));
+  newsListEl.appendChild(renderSkeleton(6));
   try {
     await loadAllModeData();
+    renderCategoryNav();
     renderSiteFilters();
     renderList();
   } catch (err) {
-    newsListEl.innerHTML = `<div class="empty">${err.message}</div>`;
+    newsListEl.innerHTML = `<div class="empty-state">${err.message}</div>`;
   }
 });
 
@@ -822,49 +795,38 @@ if (allDedupeToggleEl) {
   allDedupeToggleEl.addEventListener("change", (e) => {
     state.allDedup = Boolean(e.target.checked);
     renderModeSwitch();
+    renderCategoryNav();
     renderSiteFilters();
     renderList();
   });
 }
 
-if (sortTimeBtnEl) {
-  sortTimeBtnEl.addEventListener("click", () => {
-    state.sortBy = "time";
-    renderModeSwitch();
-    renderList();
-  });
-}
+sortTimeBtnEl?.addEventListener("click", () => {
+  state.sortBy = "time";
+  renderModeSwitch();
+  renderList();
+});
 
-if (sortHotBtnEl) {
-  sortHotBtnEl.addEventListener("click", () => {
-    state.sortBy = "hot";
-    renderModeSwitch();
-    renderList();
-  });
-}
+sortHotBtnEl?.addEventListener("click", () => {
+  state.sortBy = "hot";
+  renderModeSwitch();
+  renderList();
+});
 
-if (waytoagiTodayBtnEl) {
-  waytoagiTodayBtnEl.addEventListener("click", () => {
-    state.waytoagiMode = "today";
-    if (state.waytoagiData) renderWaytoagi(state.waytoagiData);
-  });
-}
+waytoagiTodayBtnEl?.addEventListener("click", () => {
+  state.waytoagiMode = "today";
+  if (state.waytoagiData) renderWaytoagi(state.waytoagiData);
+});
 
-if (waytoagi7dBtnEl) {
-  waytoagi7dBtnEl.addEventListener("click", () => {
-    state.waytoagiMode = "7d";
-    if (state.waytoagiData) renderWaytoagi(state.waytoagiData);
-  });
-}
+waytoagi7dBtnEl?.addEventListener("click", () => {
+  state.waytoagiMode = "7d";
+  if (state.waytoagiData) renderWaytoagi(state.waytoagiData);
+});
 
-// ---- Back-to-top button -----------------------------------------------------
+// ---- Back to Top ------------------------------------------------------------
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > window.innerHeight * 2) {
-    backToTopEl.classList.remove("hidden");
-  } else {
-    backToTopEl.classList.add("hidden");
-  }
+  backToTopEl.classList.toggle("hidden", window.scrollY <= window.innerHeight * 2);
 }, { passive: true });
 
 backToTopEl.addEventListener("click", () => {

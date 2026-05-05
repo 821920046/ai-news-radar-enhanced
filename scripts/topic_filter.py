@@ -226,3 +226,72 @@ def is_ai_related_record(record: dict[str, Any]) -> bool:
         return False
 
     return True
+
+
+# ---- Topic category classification ----
+# 为每条新闻打上 topic_category 字段，用于前端分类导航栏
+# 优先级：电脑硬件 > 数码 > AI > 科技（默认）
+
+TOPIC_HARDWARE_KEYWORDS = [
+    "cpu", "gpu", "显卡", "处理器", "主板", "内存", "ssd", "硬盘",
+    "ryzen", "intel core", "geforce", "rtx", "radeon", "arc a",
+    "ddr5", "ddr4", "pcie", "nvme", "散热", "电源", "机箱",
+    "显示器", "笔记本电脑", "台式机", "pc ", "工作站",
+    "chipset", "motherboard", "graphics card", "ram ",
+    "qualcomm snapdragon", "mediatek dimensity",
+    "苹果m4", "苹果m3", "apple m4", "apple m3",
+]
+
+TOPIC_DIGITAL_KEYWORDS = [
+    "手机", "iphone", "ipad", "平板", "可穿戴", "耳机", "手表",
+    "智能家居", "相机", "充电", "折叠屏", "智能手表",
+    "ios", "android", "鸿蒙", "harmonyos",
+    "小米", "华为", "三星", "oppo", "vivo", "荣耀",
+    "samsung", "pixel", "oneplus", "realme",
+    "tws", "降噪", "快充", "无线充电",
+    "wearable", "smartphone", "tablet", "earbuds",
+    "智能眼镜", "ar眼镜", "vr头显", "vision pro",
+]
+
+TOPIC_AI_KEYWORDS = [
+    "llm", "gpt", "claude", "gemini", "openai", "anthropic",
+    "deepseek", "copilot", "codex", "mcp", "huggingface",
+    "hugging face", "transformer", "diffusion",
+    "大模型", "人工智能", "机器学习", "深度学习",
+    "智能体", "多模态", "算力", "推理引擎", "微调",
+    "aigc", "chatgpt", "midjourney", "stable diffusion",
+    "prompt", "fine-tune", "rag", "embedding",
+    "langchain", "llamaindex", "ollama",
+    "神经网络", "neural", "训练数据",
+    "ai agent", "ai编程", "ai coding",
+]
+
+TOPIC_TECH_KEYWORDS = [
+    "startup", "融资", "创业", "cloud", "saas",
+    "开源", "开发者", "编程", "github", "product hunt",
+    "软件", "互联网", "科技",
+    "36氪", "少数派", "infoq", "sspai", "v2ex",
+    "readhub", "hacker news",
+    "自动驾驶", "量子计算", "区块链", "web3",
+    "cybersecurity", "安全漏洞", "privacy", "隐私",
+]
+
+
+def classify_item(record: dict[str, Any]) -> str:
+    """为新闻条目分配主题分类。返回值之一：'电脑硬件'/'数码'/'AI'/'科技'"""
+    title = str(record.get("title") or "")
+    source = str(record.get("source") or "")
+    site_name = str(record.get("site_name") or "")
+    text = f"{title} {source} {site_name}".lower()
+
+    # 优先级匹配：硬件 > 数码 > AI > 科技（默认）
+    if contains_any_keyword(text, TOPIC_HARDWARE_KEYWORDS):
+        return "电脑硬件"
+    if contains_any_keyword(text, TOPIC_DIGITAL_KEYWORDS):
+        return "数码"
+    if contains_any_keyword(text, TOPIC_AI_KEYWORDS) or contains_meaningful_ai_signal(text):
+        return "AI"
+    if contains_any_keyword(text, TOPIC_TECH_KEYWORDS):
+        return "科技"
+    # 兜底：没有匹配到任何关键词，默认归科技
+    return "科技"
