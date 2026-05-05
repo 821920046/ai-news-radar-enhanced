@@ -1,122 +1,109 @@
 {
-  "generated_at": "2026-05-04T14:48:14.499732Z",
+  "generated_at": "2026-05-05T15:36:07.263232Z",
   "sites": [
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 2,
-      "error": "Missing dependencies for SOCKS support."
-    },
-    {
-      "site_id": "aibreakfast",
-      "site_name": "AI Breakfast",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 6,
-      "error": "Missing dependencies for SOCKS support."
-    },
     {
       "site_id": "followbuilders",
       "site_name": "Follow Builders",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 8,
-      "error": "Missing dependencies for SOCKS support."
-    },
-    {
-      "site_id": "bestblogs",
-      "site_name": "BestBlogs",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 7,
-      "error": "Missing dependencies for SOCKS support."
-    },
-    {
-      "site_id": "techurls",
-      "site_name": "TechURLs",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 9,
-      "error": "Missing dependencies for SOCKS support."
-    },
-    {
-      "site_id": "zeli",
-      "site_name": "Zeli",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 3,
-      "error": "Missing dependencies for SOCKS support."
-    },
-    {
-      "site_id": "buzzing",
-      "site_name": "Buzzing",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 9,
-      "error": "Missing dependencies for SOCKS support."
-    },
-    {
-      "site_id": "iris",
-      "site_name": "Info Flow",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 9,
-      "error": "Missing dependencies for SOCKS support."
-    },
-    {
-      "site_id": "aibase",
-      "site_name": "AIbase",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 2,
-      "error": "Missing dependencies for SOCKS support."
+      "ok": true,
+      "item_count": 27,
+      "duration_ms": 91,
+      "error": null
     },
     {
       "site_id": "aihubtoday",
       "site_name": "AI HubToday",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 2,
-      "error": "Missing dependencies for SOCKS support."
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 267,
+      "error": null
+    },
+    {
+      "site_id": "techurls",
+      "site_name": "TechURLs",
+      "ok": true,
+      "item_count": 405,
+      "duration_ms": 455,
+      "error": null
     },
     {
       "site_id": "newsnow",
       "site_name": "NewsNow",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 2,
-      "error": "Missing dependencies for SOCKS support."
+      "ok": true,
+      "item_count": 146,
+      "duration_ms": 500,
+      "error": null
+    },
+    {
+      "site_id": "zeli",
+      "site_name": "Zeli",
+      "ok": true,
+      "item_count": 74,
+      "duration_ms": 653,
+      "error": null
+    },
+    {
+      "site_id": "aibreakfast",
+      "site_name": "AI Breakfast",
+      "ok": true,
+      "item_count": 9,
+      "duration_ms": 691,
+      "error": null
+    },
+    {
+      "site_id": "bestblogs",
+      "site_name": "BestBlogs",
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 879,
+      "error": null
+    },
+    {
+      "site_id": "buzzing",
+      "site_name": "Buzzing",
+      "ok": true,
+      "item_count": 744,
+      "duration_ms": 1091,
+      "error": null
+    },
+    {
+      "site_id": "aibase",
+      "site_name": "AIbase",
+      "ok": true,
+      "item_count": 20,
+      "duration_ms": 1731,
+      "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 3035,
+      "duration_ms": 2368,
+      "error": null
+    },
+    {
+      "site_id": "iris",
+      "site_name": "Info Flow",
+      "ok": true,
+      "item_count": 405,
+      "duration_ms": 13529,
+      "error": null
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 14,
-      "error": "No official AI update sources returned items"
+      "ok": true,
+      "item_count": 272,
+      "duration_ms": 15131,
+      "error": null
     }
   ],
-  "successful_sites": 0,
-  "failed_sites": [
-    "tophub",
-    "aibreakfast",
-    "followbuilders",
-    "bestblogs",
-    "techurls",
-    "zeli",
-    "buzzing",
-    "iris",
-    "aibase",
-    "aihubtoday",
-    "newsnow",
-    "official_ai"
-  ],
+  "successful_sites": 12,
+  "failed_sites": [],
   "zero_item_sites": [],
-  "fetched_raw_items": 0,
-  "items_before_topic_filter": 3558,
-  "items_in_24h": 269,
+  "fetched_raw_items": 5139,
+  "items_before_topic_filter": 2458,
+  "items_in_24h": 316,
   "rss_opml": {
     "enabled": false,
     "path": null,
