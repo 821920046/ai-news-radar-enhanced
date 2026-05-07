@@ -193,3 +193,4 @@ class RawItem:
     url: str
     published_at: datetime | None
     meta: dict[str, Any]
+    description: str = ""

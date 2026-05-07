@@ -44,6 +44,7 @@ from scripts.utils import (
 )
 from scripts.topic_filter import (
     classify_item,
+    classify_tags,
     is_ai_related_record,
     normalize_source_for_display,
     sanitize_public_payload,
@@ -143,6 +144,7 @@ def main() -> int:
                 "published_at": iso(raw.published_at),
                 "first_seen_at": iso(now),
                 "last_seen_at": iso(now),
+                "description": raw.description or "",
             }
         else:
             existing["site_id"] = raw.site_id
@@ -155,6 +157,8 @@ def main() -> int:
                 if raw.site_id == "opmlrss" or not existing.get("published_at"):
                     existing["published_at"] = iso(raw.published_at)
             existing["last_seen_at"] = iso(now)
+            if raw.description:
+                existing["description"] = raw.description
 
     # Prune old archive
     keep_after = now - timedelta(days=args.archive_days)
@@ -195,9 +199,10 @@ def main() -> int:
 
     latest_items_all.sort(key=lambda x: event_time(x) or dt_cls.min.replace(tzinfo=UTC), reverse=True)
 
-    # 为每条新闻打上主题分类标签（AI / 科技 / 数码 / 电脑硬件）
+    # 为每条新闻打上主题分类标签（AI / 科技 / 数码 / 电脑硬件）+ 细分标签
     for record in latest_items_all:
         record["category"] = classify_item(record)
+        record["tags"] = classify_tags(record)
 
     latest_items = [record for record in latest_items_all if is_ai_related_record(record)]
     title_cache = load_title_zh_cache(title_cache_path)
@@ -382,6 +387,8 @@ from scripts.utils import (  # noqa: F401, E402
     parse_relative_time_zh,
     parse_date_any,
     decode_escaped_json,
+    strip_html_tags,
+    truncate_description,
     create_session,
     utc_now,
     iso,
@@ -407,6 +414,7 @@ from scripts.topic_filter import (  # noqa: F401, E402
     has_mojibake_noise,
     normalize_source_for_display,
     is_ai_related_record,
+    classify_tags,
 )
 from scripts.dedup import (  # noqa: F401, E402
     dedupe_items_by_title_url,

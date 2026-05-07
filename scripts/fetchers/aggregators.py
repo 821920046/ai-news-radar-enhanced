@@ -27,6 +27,7 @@ from scripts.utils import (
     parse_feed_entries_via_xml,
     parse_relative_time_zh,
     parse_unix_timestamp,
+    truncate_description,
 )
 
 logger = logging.getLogger(__name__)
@@ -225,6 +226,13 @@ def fetch_iris(session: requests.Session, now: datetime) -> list[RawItem]:
                         or parse_date_any(entry.get("updated"), now)
                         or parse_date_any(entry.get("pubDate"), now)
                     )
+                    raw_desc = str(
+                        entry.get("summary")
+                        or entry.get("description")
+                        or (entry.get("content", [{}])[0].get("value") if entry.get("content") else "")
+                        or ""
+                    )
+                    description = truncate_description(raw_desc) if raw_desc.strip() else ""
                     out.append(
                         RawItem(
                             site_id=site_id,
@@ -234,6 +242,7 @@ def fetch_iris(session: requests.Session, now: datetime) -> list[RawItem]:
                             url=url,
                             published_at=published,
                             meta={"feed_url": feed_url},
+                            description=description,
                         )
                     )
                 continue
@@ -252,6 +261,7 @@ def fetch_iris(session: requests.Session, now: datetime) -> list[RawItem]:
                         url=entry["link"],
                         published_at=parse_date_any(entry.get("published"), now),
                         meta={"feed_url": feed_url},
+                        description=entry.get("description", ""),
                     )
                 )
         except Exception as exc:

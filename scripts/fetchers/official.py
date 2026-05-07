@@ -16,7 +16,7 @@ except ModuleNotFoundError:
     feedparser = None
 
 from scripts.models import BROWSER_UA, OFFICIAL_AI_FEEDS, OFFICIAL_AI_MAX_AGE_DAYS, RawItem
-from scripts.utils import maybe_fix_mojibake, parse_date_any, parse_feed_entries_via_xml
+from scripts.utils import maybe_fix_mojibake, parse_date_any, parse_feed_entries_via_xml, truncate_description
 
 logger = logging.getLogger(__name__)
 
@@ -161,6 +161,15 @@ def fetch_feed_as_official_items(
         if published < now - timedelta(days=OFFICIAL_AI_MAX_AGE_DAYS):
             continue
 
+        # Extract description from feedparser entry
+        raw_desc = str(
+            entry.get("summary")
+            or entry.get("description")
+            or (entry.get("content", [{}])[0].get("value") if entry.get("content") else "")
+            or ""
+        )
+        description = truncate_description(raw_desc) if raw_desc.strip() else ""
+
         out.append(
             RawItem(
                 site_id=site_id,
@@ -173,6 +182,7 @@ def fetch_feed_as_official_items(
                     "feed_url": feed_url,
                     "feed_home": feed.get("html_url") or "",
                 },
+                description=description,
             )
         )
 

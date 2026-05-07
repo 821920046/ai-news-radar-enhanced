@@ -118,23 +118,24 @@ function siteRow(siteId) {
   return siteRows().find((s) => s.site_id === siteId) || null;
 }
 
-// ---- Time Buckets -----------------------------------------------------------
-const TIME_BUCKETS = [
-  { label: "最近 1 小时", maxMs: 1 * 3600_000 },
-  { label: "1-3 小时前",  maxMs: 3 * 3600_000 },
-  { label: "3-6 小时前",  maxMs: 6 * 3600_000 },
-  { label: "6-12 小时前", maxMs: 12 * 3600_000 },
-  { label: "12-24 小时前", maxMs: 24 * 3600_000 },
-];
+// ---- Date Grouping ----------------------------------------------------------
 
-function getTimeBucket(iso) {
-  if (!iso) return 4;
-  const diff = Date.now() - new Date(iso).getTime();
-  if (diff < 0) return 0;
-  for (let i = 0; i < TIME_BUCKETS.length; i++) {
-    if (diff < TIME_BUCKETS[i].maxMs) return i;
-  }
-  return TIME_BUCKETS.length - 1;
+const WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+
+function fmtDateGroup(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "未知日期";
+  const m = d.getMonth() + 1;
+  const day = d.getDate();
+  const wd = WEEKDAYS[d.getDay()];
+  return `${m}月${day}日 · ${wd}`;
+}
+
+function dateKey(iso) {
+  if (!iso) return "unknown";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "unknown";
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
 // ---- Stats Grid (visible) ---------------------------------------------------
@@ -308,7 +309,8 @@ function getFilteredItems() {
     if (state.category && (item.category || "科技") !== state.category) return false;
     // Search filter
     if (!q) return true;
-    const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""}`.toLowerCase();
+    const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
+    const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""} ${item.description || ""} ${tags}`.toLowerCase();
     return hay.includes(q);
   });
 
@@ -374,6 +376,30 @@ function renderItemNode(item) {
     titleEl.textContent = item.title || zh || en;
   }
   titleEl.href = item.url;
+
+  // Summary (description)
+  const summaryEl = node.querySelector(".card-summary");
+  const desc = (item.description || "").trim();
+  if (desc) {
+    summaryEl.textContent = desc;
+  } else {
+    summaryEl.remove();
+  }
+
+  // Tags
+  const tagsEl = node.querySelector(".card-tags");
+  const tags = Array.isArray(item.tags) ? item.tags : [];
+  if (tags.length) {
+    tags.forEach((tag) => {
+      const span = document.createElement("span");
+      span.className = "card-tag";
+      span.textContent = tag;
+      tagsEl.appendChild(span);
+    });
+  } else {
+    tagsEl.remove();
+  }
+
   return node;
 }
 
@@ -391,37 +417,42 @@ function renderSkeleton(count = 5) {
         <div class="skeleton" style="margin-left:auto;width:72px;height:14px"></div>
       </div>
       <div class="skeleton" style="width:88%;height:16px"></div>
-      <div class="skeleton" style="margin-top:6px;width:50%;height:12px"></div>
+      <div class="skeleton" style="margin-top:6px;width:70%;height:12px"></div>
+      <div style="display:flex;gap:5px;margin-top:8px;">
+        <div class="skeleton" style="width:48px;height:16px;border-radius:9999px"></div>
+        <div class="skeleton" style="width:56px;height:16px;border-radius:9999px"></div>
+      </div>
     `;
     frag.appendChild(card);
   }
   return frag;
 }
 
-// ---- Time-grouped rendering -------------------------------------------------
+// ---- Date-grouped rendering -------------------------------------------------
 
-function renderTimeGrouped(items) {
-  const buckets = TIME_BUCKETS.map(() => []);
+function renderDateGrouped(items) {
+  // Group by date key, preserving insertion order (items are pre-sorted by time desc)
+  const groups = new Map();
   items.forEach((item) => {
-    const idx = getTimeBucket(item.published_at || item.first_seen_at);
-    buckets[idx].push(item);
+    const key = dateKey(item.published_at || item.first_seen_at);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(item);
   });
 
   const frag = document.createDocumentFragment();
-  buckets.forEach((bucketItems, idx) => {
-    if (bucketItems.length === 0) return;
-
+  for (const [key, groupItems] of groups) {
     const header = document.createElement("div");
     header.className = "time-group-head";
     const title = document.createElement("h3");
-    title.textContent = TIME_BUCKETS[idx].label;
+    const sampleIso = groupItems[0].published_at || groupItems[0].first_seen_at;
+    title.textContent = fmtDateGroup(sampleIso);
     const count = document.createElement("span");
-    count.textContent = `${fmtNumber(bucketItems.length)} 条`;
+    count.textContent = `${fmtNumber(groupItems.length)} 条`;
     header.append(title, count);
     frag.appendChild(header);
 
-    bucketItems.forEach((item) => frag.appendChild(renderItemNode(item)));
-  });
+    groupItems.forEach((item) => frag.appendChild(renderItemNode(item)));
+  }
 
   newsListEl.appendChild(frag);
 }
@@ -476,7 +507,7 @@ function renderList() {
   if (state.siteFilter) {
     renderGroupedBySource(filtered);
   } else {
-    renderTimeGrouped(filtered);
+    renderDateGrouped(filtered);
   }
 }
 

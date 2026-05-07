@@ -134,6 +134,25 @@ def is_mostly_english(text: str) -> bool:
     return len(letters) >= max(6, len(s) // 4)
 
 
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+_MAX_DESC_LEN = 200
+
+
+def strip_html_tags(html: str) -> str:
+    """Remove HTML tags and collapse whitespace."""
+    text = _HTML_TAG_RE.sub("", html)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def truncate_description(text: str, max_len: int = _MAX_DESC_LEN) -> str:
+    """Truncate description to max_len characters."""
+    text = strip_html_tags(text)
+    if len(text) > max_len:
+        return text[:max_len].rsplit(" ", 1)[0] + "..."
+    return text
+
+
 def parse_feed_entries_via_xml(feed_xml: bytes) -> list[dict[str, Any]]:
     out: list[dict[str, Any]] = []
     seen: set[tuple[str, str]] = set()
@@ -165,12 +184,24 @@ def parse_feed_entries_via_xml(feed_xml: bytes) -> list[dict[str, Any]]:
                 or node.findtext("updated")
                 or node.findtext("{*}updated")
             )
+            # Extract description from common RSS/Atom fields
+            raw_desc = (
+                node.findtext("description")
+                or node.findtext("{*}description")
+                or node.findtext("summary")
+                or node.findtext("{*}summary")
+                or node.findtext("{*}content")
+                or node.findtext("content")
+                or ""
+            )
+            description = truncate_description(raw_desc) if raw_desc else ""
+
             if title and link:
                 key = (title, link)
                 if key in seen:
                     continue
                 seen.add(key)
-                out.append({"title": title, "link": link, "published": published})
+                out.append({"title": title, "link": link, "published": published, "description": description})
     return out
 
 

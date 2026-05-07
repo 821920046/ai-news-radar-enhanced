@@ -295,3 +295,45 @@ def classify_item(record: dict[str, Any]) -> str:
         return "科技"
     # 兜底：没有匹配到任何关键词，默认归科技
     return "科技"
+
+
+# ---- 多标签分类 ----
+# 为每条新闻打上 0-3 个细分标签，用于前端标签行展示
+
+TAG_RULES: list[tuple[str, list[str]]] = [
+    ("智能体",   ["agent", "智能体", "autonomous", "agentic", "multi-agent"]),
+    ("模型发布", ["gpt", "claude", "gemini", "llama", "mistral", "qwen", "deepseek",
+                  "发布", "release", "launch", "announce"]),
+    ("论文研究", ["paper", "arxiv", "论文", "研究", "benchmark", "测评", "survey",
+                  "research", "preprint"]),
+    ("编码工具", ["copilot", "codex", "coding", "编程", "ide", "cursor", "vscode",
+                  "code assistant", "ai编程", "ai coding"]),
+    ("MCP/工具", ["mcp", "tool use", "plugin", "插件", "工具", "function call",
+                  "tool calling"]),
+    ("开源",     ["open source", "开源", "github", "huggingface", "hugging face",
+                  "apache", "mit license"]),
+    ("部署推理", ["inference", "部署", "推理", "serving", "onnx", "tensorrt",
+                  "ollama", "vllm", "gguf", "quantiz", "distill"]),
+    ("多模态",   ["multimodal", "多模态", "vision", "视觉", "image", "diffusion",
+                  "video", "audio", "speech", "whisper", "dall-e", "midjourney"]),
+    ("安全对齐", ["safety", "alignment", "安全", "对齐", "red team", "rlhf",
+                  "guardrail", "responsible ai"]),
+    ("行业动态", ["融资", "startup", "收购", "acquisition", "partnership",
+                  "估值", "valuation", "ipo", "投资"]),
+]
+
+
+def classify_tags(record: dict[str, Any]) -> list[str]:
+    """为新闻条目返回 0-3 个细分标签。"""
+    title = str(record.get("title") or "")
+    source = str(record.get("source") or "")
+    description = str(record.get("description") or "")
+    text = f"{title} {source} {description}".lower()
+
+    matched: list[str] = []
+    for tag_name, keywords in TAG_RULES:
+        if len(matched) >= 3:
+            break
+        if contains_any_keyword(text, keywords):
+            matched.append(tag_name)
+    return matched

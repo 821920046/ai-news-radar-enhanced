@@ -19,7 +19,7 @@ except ModuleNotFoundError:
     feedparser = None
 
 from scripts.models import BROWSER_UA, RSS_FEED_REPLACEMENTS, RSS_FEED_SKIP_EXACT, RSS_FEED_SKIP_PREFIXES, RawItem
-from scripts.utils import create_session, first_non_empty, host_of_url, parse_date_any, parse_feed_entries_via_xml
+from scripts.utils import create_session, first_non_empty, host_of_url, parse_date_any, parse_feed_entries_via_xml, truncate_description
 
 logger = logging.getLogger(__name__)
 
@@ -169,6 +169,13 @@ def fetch_opml_rss(
                     )
                     if not published:
                         continue
+                    raw_desc = str(
+                        entry.get("summary")
+                        or entry.get("description")
+                        or (entry.get("content", [{}])[0].get("value") if entry.get("content") else "")
+                        or ""
+                    )
+                    description = truncate_description(raw_desc) if raw_desc.strip() else ""
                     local_items.append(
                         RawItem(
                             site_id="opmlrss",
@@ -181,6 +188,7 @@ def fetch_opml_rss(
                                 "feed_url": feed_url,
                                 "feed_home": feed.get("html_url") or "",
                             },
+                            description=description,
                         )
                     )
             else:
@@ -202,6 +210,7 @@ def fetch_opml_rss(
                                 "feed_url": feed_url,
                                 "feed_home": feed.get("html_url") or "",
                             },
+                            description=entry.get("description", ""),
                         )
                     )
         except Exception as exc:
