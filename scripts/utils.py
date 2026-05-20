@@ -349,7 +349,7 @@ def create_session() -> requests.Session:
         status_forcelist=[429, 500, 502, 503, 504],
         allowed_methods=frozenset(["GET", "POST"]),
     )
-    adapter = HTTPAdapter(max_retries=retry)
+    adapter = HTTPAdapter(pool_connections=35, pool_maxsize=35, max_retries=retry)
     session.mount("http://", adapter)
     session.mount("https://", adapter)
     session.headers.update({"User-Agent": BROWSER_UA, "Accept-Language": "zh-CN,zh;q=0.9"})

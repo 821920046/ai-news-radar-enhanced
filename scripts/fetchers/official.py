@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from typing import Any
 
@@ -191,27 +192,43 @@ def fetch_feed_as_official_items(
 
 def fetch_official_ai_updates(session: requests.Session, now: datetime) -> list[RawItem]:
     out: list[RawItem] = []
+    tasks = []
 
+    # 1. 25+ RSS Feeds
     for feed in OFFICIAL_AI_FEEDS:
-        try:
-            out.extend(fetch_feed_as_official_items(session, feed, now))
-        except Exception as exc:
-            logger.warning("Official feed %s failed: %s", feed.get("title"), exc)
-            continue
+        tasks.append(
+            (
+                f"RSS: {feed.get('title')}",
+                lambda f=feed: fetch_feed_as_official_items(session, f, now),
+            )
+        )
 
-    try:
+    # 2. Anthropic News Page
+    def fetch_anthropic():
         r = session.get("https://www.anthropic.com/news", timeout=20)
         r.raise_for_status()
-        out.extend(parse_anthropic_news_items(r.text, now))
-    except Exception as exc:
-        logger.warning("Anthropic news fetch failed: %s", exc)
+        return parse_anthropic_news_items(r.text, now)
 
-    try:
+    tasks.append(("Page: Anthropic News", fetch_anthropic))
+
+    # 3. OpenAI Codex Changelog
+    def fetch_openai():
         r = session.get("https://developers.openai.com/codex/changelog", timeout=20)
         r.raise_for_status()
-        out.extend(parse_openai_codex_changelog_items(r.text, now))
-    except Exception as exc:
-        logger.warning("OpenAI Codex changelog fetch failed: %s", exc)
+        return parse_openai_codex_changelog_items(r.text, now)
+
+    tasks.append(("Page: OpenAI Codex Changelog", fetch_openai))
+
+    # 并发请求，最慢的源超时时间为 20s
+    with ThreadPoolExecutor(max_workers=min(32, len(tasks))) as executor:
+        future_to_name = {executor.submit(fn): name for name, fn in tasks}
+        for future in as_completed(future_to_name):
+            name = future_to_name[future]
+            try:
+                items = future.result()
+                out.extend(items)
+            except Exception as exc:
+                logger.warning("Official source %s failed: %s", name, exc)
 
     if not out:
         raise ValueError("No official AI update sources returned items")

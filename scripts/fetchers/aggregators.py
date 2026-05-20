@@ -493,21 +493,35 @@ def fetch_newsnow(session: requests.Session, now: datetime) -> list[RawItem]:
     site_id = "newsnow"
     site_name = "NewsNow"
 
-    home = session.get("https://newsnow.busiyi.world/", timeout=30)
-    home.raise_for_status()
-    soup = BeautifulSoup(home.text, "html.parser")
+    # 全面完整的静态兜底站点列表，防止 JS Bundle 抓取或正则解析失败
+    source_ids = [
+        "hackernews", "producthunt", "github", "sspai", "juejin", "36kr",
+        "v2ex", "readhub", "infoq", "jiqizhixin", "liangziwei", "geekpark",
+        "techcrunch", "solidot", "ithome", "cnbeta", "bilibili", "weibo",
+        "zhihu", "tieba", "douban", "guokr", "huxiu", "tmtpost", "toutiao",
+        "zaodula", "wanqu", "xueqiu", "wallstreetcn", "36kr_hot", "kr"
+    ]
 
-    bundle = None
-    for script in soup.select("script[src]"):
-        src = script.get("src", "")
-        if "/assets/index-" in src and src.endswith(".js"):
-            bundle = urljoin("https://newsnow.busiyi.world/", src)
-            break
+    try:
+        # 使用较短的超时（8秒），避免在主站卡死时无限期阻塞整个任务
+        home = session.get("https://newsnow.busiyi.world/", timeout=8)
+        home.raise_for_status()
+        soup = BeautifulSoup(home.text, "html.parser")
 
-    source_ids = ["hackernews", "producthunt", "github", "sspai", "juejin", "36kr"]
-    if bundle:
-        js = session.get(bundle, timeout=30).text
-        source_ids = extract_newsnow_source_ids(js)
+        bundle = None
+        for script in soup.select("script[src]"):
+            src = script.get("src", "")
+            if "/assets/index-" in src and src.endswith(".js"):
+                bundle = urljoin("https://newsnow.busiyi.world/", src)
+                break
+
+        if bundle:
+            js = session.get(bundle, timeout=8).text
+            parsed_ids = extract_newsnow_source_ids(js)
+            if parsed_ids and len(parsed_ids) > 5:
+                source_ids = parsed_ids
+    except Exception as exc:
+        logger.warning("NewsNow dynamic source_ids fetch failed (falling back to static list): %s", exc)
 
     headers = {
         "User-Agent": BROWSER_UA,
@@ -521,7 +535,7 @@ def fetch_newsnow(session: requests.Session, now: datetime) -> list[RawItem]:
         "https://newsnow.busiyi.world/api/s/entire",
         json={"sources": source_ids},
         headers=headers,
-        timeout=45,
+        timeout=30,
     )
 
     if response.status_code != 200:

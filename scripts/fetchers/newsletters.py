@@ -84,7 +84,7 @@ def fetch_bestblogs(session: requests.Session, now: datetime) -> list[RawItem]:
         current_page = 1
         page_count = 1
 
-        while current_page <= page_count and current_page <= 12:
+        while current_page <= page_count and current_page <= 2:
             payload = {
                 "currentPage": current_page,
                 "pageSize": 20,
