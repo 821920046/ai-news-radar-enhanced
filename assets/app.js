@@ -1,6 +1,6 @@
 // ============================================================
-//  AI Signal Board — app.js
-//  暖色调编辑风格 + 分类导航 + 时间分组 + 来源筛选
+//  AI Signal Board — app.js (Tailwind Dark Tech Edition)
+//  深色科技风格 + 毛玻璃 + 流光渐变徽章 + 时间与来源精排
 // ============================================================
 
 // ---- Global State ------------------------------------------------------------
@@ -71,12 +71,13 @@ const SOURCE_KINDS = {
   newsnow:       { label: "聚合",     tone: "aggregate" },
 };
 
-// ---- Category Colors (for JS-generated badges) ------------------------------
+// ---- Category Colors (Tailwind classes) --------------------------------------
 const CATEGORY_META = {
-  "AI":       { color: "#2563eb", bg: "#eff6ff" },
-  "科技":     { color: "#0d9488", bg: "#f0fdfa" },
-  "数码":     { color: "#7c3aed", bg: "#f5f3ff" },
-  "电脑硬件": { color: "#ea580c", bg: "#fff7ed" },
+  "AI":       { text: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20", activeGlow: "bg-gradient-to-r from-blue-600 to-indigo-600 shadow-blue-500/20" },
+  "科技":     { text: "text-teal-400", bg: "bg-teal-500/10", border: "border-teal-500/20", activeGlow: "bg-gradient-to-r from-teal-500 to-emerald-600 shadow-teal-500/20" },
+  "数码":     { text: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20", activeGlow: "bg-gradient-to-r from-purple-500 to-pink-600 shadow-purple-500/20" },
+  "电脑硬件": { text: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20", activeGlow: "bg-gradient-to-r from-orange-500 to-red-600 shadow-orange-500/20" },
+  "":         { activeGlow: "bg-gradient-to-r from-zinc-700 to-zinc-800 shadow-zinc-500/20" }
 };
 
 // ---- Utilities --------------------------------------------------------------
@@ -144,16 +145,19 @@ function renderStats(payload) {
   if (!statsGridEl) return;
   statsGridEl.innerHTML = "";
   const cards = [
-    { label: "AI 信号", value: fmtNumber(payload.total_items), color: "#2563eb" },
-    { label: "覆盖站点", value: fmtNumber(payload.site_count), color: "#0d9488" },
-    { label: "来源分组", value: fmtNumber(payload.source_count), color: "#7c3aed" },
-    { label: "归档总量", value: fmtNumber(payload.archive_total || 0), color: "#ea580c" },
+    { label: "AI 信号", value: fmtNumber(payload.total_items), color: "#3b82f6" },
+    { label: "覆盖站点", value: fmtNumber(payload.site_count), color: "#14b8a6" },
+    { label: "来源分组", value: fmtNumber(payload.source_count), color: "#8b5cf6" },
+    { label: "归档总量", value: fmtNumber(payload.archive_total || 0), color: "#f97316" },
   ];
   cards.forEach(({ label, value, color }) => {
     const node = document.createElement("div");
-    node.className = "stat-card";
-    node.style.borderTopColor = color;
-    node.innerHTML = `<div class="stat-label">${label}</div><div class="stat-value">${value}</div>`;
+    node.className = "glass-panel rounded-2xl p-4 transition-all duration-300 hover:border-zinc-700 hover:scale-[1.02] hover:shadow-lg hover:shadow-teal-500/5 flex flex-col justify-between relative overflow-hidden";
+    node.innerHTML = `
+      <div class="absolute top-0 left-0 right-0 h-[2px]" style="background: linear-gradient(90deg, ${color}, rgba(20, 184, 166, 0.4))"></div>
+      <div class="text-[10px] font-bold text-zinc-500 tracking-wider uppercase">${label}</div>
+      <div class="text-xl font-extrabold text-zinc-100 mt-2 font-mono tracking-tight">${value}</div>
+    `;
     statsGridEl.appendChild(node);
   });
 }
@@ -187,12 +191,23 @@ function renderCategoryNav() {
   catNavEl.innerHTML = "";
   categories.forEach(({ key, label }) => {
     const btn = document.createElement("button");
-    btn.className = `cat-btn ${state.category === key ? "active" : ""}`;
-    if (key) btn.setAttribute("data-cat", key);
     btn.type = "button";
-
+    
     const count = counts[key] || 0;
-    btn.innerHTML = `${label}<span class="cat-count">${fmtNumber(count)}</span>`;
+    const isActive = state.category === key;
+    
+    if (isActive) {
+      const glowClass = CATEGORY_META[key].activeGlow;
+      btn.className = `flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 text-white shadow-lg border border-transparent ${glowClass}`;
+    } else {
+      btn.className = "flex-shrink-0 px-4 py-2 rounded-full text-xs font-semibold bg-zinc-900/40 text-zinc-400 border border-zinc-800/80 hover:border-zinc-700 hover:text-zinc-200 transition-all duration-200";
+    }
+
+    const countBadgeClass = isActive 
+      ? "bg-white/20 text-white ml-2 px-1.5 py-0.5 rounded-full text-[9px]" 
+      : "bg-zinc-950 text-zinc-500 border border-zinc-800 ml-2 px-1.5 py-0.5 rounded-full text-[9px]";
+      
+    btn.innerHTML = `${label}<span class="${countBadgeClass}">${fmtNumber(count)}</span>`;
     btn.onclick = () => {
       state.category = key;
       renderCategoryNav();
@@ -252,15 +267,24 @@ function renderSiteFilters() {
 
   sitePillsEl.innerHTML = "";
   const allPill = document.createElement("button");
-  allPill.className = `site-pill ${state.siteFilter === "" ? "active" : ""}`;
+  
+  if (state.siteFilter === "") {
+    allPill.className = "flex-shrink-0 px-3 py-1 rounded-lg text-xs font-bold bg-teal-500/15 text-teal-400 border border-teal-500/30 shadow-sm";
+  } else {
+    allPill.className = "flex-shrink-0 px-3 py-1 rounded-lg text-xs font-semibold bg-zinc-900/40 text-zinc-400 border border-zinc-800 hover:border-zinc-700 hover:text-zinc-300 transition-all";
+  }
   allPill.textContent = "全部";
   allPill.onclick = () => { state.siteFilter = ""; renderSiteFilters(); renderList(); };
   sitePillsEl.appendChild(allPill);
 
   stats.forEach((s) => {
     const btn = document.createElement("button");
-    btn.className = `site-pill ${state.siteFilter === s.site_id ? "active" : ""}`;
-    btn.textContent = `${s.site_name} ${s.count}`;
+    if (state.siteFilter === s.site_id) {
+      btn.className = "flex-shrink-0 px-3 py-1 rounded-lg text-xs font-bold bg-teal-500/15 text-teal-400 border border-teal-500/30 shadow-sm";
+    } else {
+      btn.className = "flex-shrink-0 px-3 py-1 rounded-lg text-xs font-semibold bg-zinc-900/40 text-zinc-400 border border-zinc-800 hover:border-zinc-700 hover:text-zinc-300 transition-all";
+    }
+    btn.textContent = `${s.site_name} (${s.count})`;
     btn.onclick = () => { state.siteFilter = s.site_id; renderSiteFilters(); renderList(); };
     sitePillsEl.appendChild(btn);
   });
@@ -269,23 +293,31 @@ function renderSiteFilters() {
 // ---- Mode Switch ------------------------------------------------------------
 
 function renderModeSwitch() {
-  modeAiBtnEl.classList.toggle("active", state.mode === "ai");
-  modeAllBtnEl.classList.toggle("active", state.mode === "all");
-  sortTimeBtnEl?.classList.toggle("active", state.sortBy === "time");
-  sortHotBtnEl?.classList.toggle("active", state.sortBy === "hot");
-  allDedupeWrapEl?.classList.toggle("show", state.mode === "all");
+  const activeClass = "bg-teal-600 text-white shadow-md shadow-teal-600/10";
+  const inactiveClass = "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/40";
+  
+  modeAiBtnEl.className = `px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${state.mode === "ai" ? activeClass : inactiveClass}`;
+  modeAllBtnEl.className = `px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${state.mode === "all" ? activeClass : inactiveClass}`;
+  
+  sortTimeBtnEl.className = `px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${state.sortBy === "time" ? activeClass : inactiveClass}`;
+  sortHotBtnEl.className = `px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${state.sortBy === "hot" ? activeClass : inactiveClass}`;
+
+  // 去重栏在 Tailwind 里需要显示为 flex
+  allDedupeWrapEl?.classList.toggle("hidden", state.mode !== "all");
+  allDedupeWrapEl?.classList.toggle("flex", state.mode === "all");
+
   if (allDedupeToggleEl) allDedupeToggleEl.checked = state.allDedup;
-  if (allDedupeLabelEl)  allDedupeLabelEl.textContent = state.allDedup ? "去重开" : "去重关";
+  if (allDedupeLabelEl)  allDedupeLabelEl.textContent = state.allDedup ? "已去重" : "未去重";
 
   if (state.mode === "ai") {
-    modeHintEl.textContent = `AI强相关 · ${fmtNumber(state.totalAi)} 条`;
+    modeHintEl.textContent = `AI强相关信号流 · 共计 ${fmtNumber(state.totalAi)} 条数据`;
     if (listTitleEl) listTitleEl.textContent = "AI 信号流";
   } else {
     const allCount = state.allDedup
       ? (state.totalAllMode || state.itemsAll.length)
       : (state.totalRaw || state.itemsAllRaw.length);
-    modeHintEl.textContent = `全量 · ${state.allDedup ? "去重开" : "去重关"} · ${fmtNumber(allCount)} 条`;
-    if (listTitleEl) listTitleEl.textContent = "全量更新";
+    modeHintEl.textContent = `全量情报流 (${state.allDedup ? "已进行高置信度去重" : "显示所有原始信号"}) · 共计 ${fmtNumber(allCount)} 条数据`;
+    if (listTitleEl) listTitleEl.textContent = "全量情报";
   }
   renderAdvancedSummary();
 }
@@ -331,35 +363,40 @@ function getFilteredItems() {
 
 function renderItemNode(item) {
   const node = itemTpl.content.firstElementChild.cloneNode(true);
-  const kind = sourceKind(item.site_id);
   const category = item.category || "科技";
 
-  // Category-based left border (via data attribute + CSS)
+  // 分类左边框 (via data attribute + CSS)
   node.setAttribute("data-category", category);
 
-  // Site name
+  // 站点名字
   node.querySelector(".card-site").textContent = item.site_name;
 
-  // Category badge
+  // 分类 Badge 配色渲染
   const catBadge = node.querySelector(".card-cat-badge");
   catBadge.textContent = category;
-  catBadge.setAttribute("data-cat", category);
+  const meta = CATEGORY_META[category] || CATEGORY_META["科技"];
+  catBadge.className = `card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase border ${meta.text} ${meta.bg} ${meta.border}`;
 
-  // Source section
+  // 来源分区
   node.querySelector(".card-source").textContent = `分区: ${item.source}`;
 
-  // Time
+  // 时间格式化
   node.querySelector(".card-time").textContent = fmtTime(item.published_at || item.first_seen_at);
 
-  // Hotness badge
+  // 热度指标
   if (item.hotness_score > 0 && item.hotness_raw) {
     const badge = document.createElement("span");
-    badge.className = "hotness-badge";
-    badge.textContent = item.hotness_raw;
+    badge.className = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-sm shadow-red-500/20";
+    badge.innerHTML = `
+      <svg class="w-2.5 h-2.5 text-white animate-pulse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.963 2.285a.75.75 0 00-1.071-.136 9.707 9.707 0 00-.73 9.694l.519.954a.75.75 0 101.32-.718l-.518-.954a8.207 8.207 0 01.618-8.006.75.75 0 00-.138-.833zM7.403 4.274a.75.75 0 00-1.015-.251 9.72 9.72 0 00-4.485 8.148 9.75 9.75 0 0019.227 2.034 9.73 9.73 0 00-3.135-7.463.75.75 0 00-1.017.072l-1.06 1.14a7.22 7.22 0 01-1.636 1.34l-.53.31a.75.75 0 10.764 1.288l.53-.31a8.721 8.721 0 002.492-2.148 8.25 8.25 0 01-14.717 3.562c.18-.838.487-1.65.91-2.4l1.012-1.802a.75.75 0 00-.39-.997l-1.06-.415z" clip-rule="evenodd" />
+      </svg>
+      <span>${item.hotness_raw}</span>
+    `;
     node.querySelector(".card-meta").appendChild(badge);
   }
 
-  // Title (bilingual)
+  // 双语标题
   const titleEl = node.querySelector(".card-title");
   const zh = (item.title_zh || "").trim();
   const en = (item.title_en || "").trim();
@@ -368,7 +405,7 @@ function renderItemNode(item) {
     const primary = document.createElement("span");
     primary.textContent = zh;
     const sub = document.createElement("span");
-    sub.className = "card-title-sub";
+    sub.className = "card-title-sub text-xs text-zinc-400 font-normal mt-1 block italic font-sans leading-relaxed group-hover:text-zinc-300 transition-colors";
     sub.textContent = en;
     titleEl.appendChild(primary);
     titleEl.appendChild(sub);
@@ -377,7 +414,7 @@ function renderItemNode(item) {
   }
   titleEl.href = item.url;
 
-  // Summary (description)
+  // 摘要
   const summaryEl = node.querySelector(".card-summary");
   const desc = (item.description || "").trim();
   if (desc) {
@@ -386,13 +423,13 @@ function renderItemNode(item) {
     summaryEl.remove();
   }
 
-  // Tags
+  // 标签
   const tagsEl = node.querySelector(".card-tags");
   const tags = Array.isArray(item.tags) ? item.tags : [];
   if (tags.length) {
     tags.forEach((tag) => {
       const span = document.createElement("span");
-      span.className = "card-tag";
+      span.className = "px-2 py-0.5 rounded-md text-[10px] bg-zinc-900/60 border border-zinc-800 text-zinc-400 font-medium hover:border-zinc-700 hover:text-zinc-300 transition-colors duration-150";
       span.textContent = tag;
       tagsEl.appendChild(span);
     });
@@ -409,18 +446,18 @@ function renderSkeleton(count = 5) {
   const frag = document.createDocumentFragment();
   for (let i = 0; i < count; i++) {
     const card = document.createElement("div");
-    card.className = "skeleton-card";
+    card.className = "p-5 flex flex-col border-b border-zinc-900/80";
     card.innerHTML = `
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-        <div class="skeleton" style="width:60px;height:14px"></div>
-        <div class="skeleton" style="width:36px;height:14px;border-radius:9999px"></div>
-        <div class="skeleton" style="margin-left:auto;width:72px;height:14px"></div>
+      <div class="flex items-center gap-2 mb-3">
+        <div class="shimmer-bg w-14 h-4 rounded-md"></div>
+        <div class="shimmer-bg w-10 h-4 rounded-full"></div>
+        <div class="shimmer-bg ml-auto w-16 h-3 rounded-md"></div>
       </div>
-      <div class="skeleton" style="width:88%;height:16px"></div>
-      <div class="skeleton" style="margin-top:6px;width:70%;height:12px"></div>
-      <div style="display:flex;gap:5px;margin-top:8px;">
-        <div class="skeleton" style="width:48px;height:16px;border-radius:9999px"></div>
-        <div class="skeleton" style="width:56px;height:16px;border-radius:9999px"></div>
+      <div class="shimmer-bg w-4/5 h-5 rounded-md mb-2"></div>
+      <div class="shimmer-bg w-2/3 h-4 rounded-md mb-3"></div>
+      <div class="flex gap-2">
+        <div class="shimmer-bg w-12 h-4 rounded-md"></div>
+        <div class="shimmer-bg w-16 h-4 rounded-md"></div>
       </div>
     `;
     frag.appendChild(card);
@@ -442,12 +479,17 @@ function renderDateGrouped(items) {
   const frag = document.createDocumentFragment();
   for (const [key, groupItems] of groups) {
     const header = document.createElement("div");
-    header.className = "time-group-head";
+    header.className = "flex justify-between items-center px-6 py-2.5 bg-zinc-900/10 text-xs font-semibold text-zinc-400 border-b border-zinc-900";
+    
     const title = document.createElement("h3");
     const sampleIso = groupItems[0].published_at || groupItems[0].first_seen_at;
+    title.className = "font-bold text-zinc-400";
     title.textContent = fmtDateGroup(sampleIso);
+    
     const count = document.createElement("span");
+    count.className = "font-mono font-bold text-[10px] text-zinc-500 bg-zinc-950 px-1.5 py-0.5 border border-zinc-900 rounded";
     count.textContent = `${fmtNumber(groupItems.length)} 条`;
+    
     header.append(title, count);
     frag.appendChild(header);
 
@@ -476,11 +518,16 @@ function renderGroupedBySource(items) {
   groups.forEach(([source, groupItems]) => {
     const section = document.createElement("section");
     const header = document.createElement("header");
-    header.className = "source-group-head";
+    header.className = "flex justify-between items-center px-6 py-2.5 bg-zinc-900/10 text-xs font-semibold text-zinc-400 border-b border-zinc-900";
+    
     const title = document.createElement("h3");
+    title.className = "font-bold text-zinc-400";
     title.textContent = source;
+    
     const count = document.createElement("span");
+    count.className = "font-mono font-bold text-[10px] text-zinc-500 bg-zinc-950 px-1.5 py-0.5 border border-zinc-900 rounded";
     count.textContent = `${fmtNumber(groupItems.length)} 条`;
+    
     header.append(title, count);
     section.appendChild(header);
     groupItems.forEach((item) => section.appendChild(renderItemNode(item)));
@@ -498,8 +545,8 @@ function renderList() {
 
   if (!filtered.length) {
     const empty = document.createElement("div");
-    empty.className = "empty-state";
-    empty.textContent = "当前筛选条件下没有结果。";
+    empty.className = "p-10 text-center text-sm font-semibold text-zinc-500";
+    empty.textContent = "当前筛选条件下没有匹配的情报结果。";
     newsListEl.appendChild(empty);
     return;
   }
@@ -524,8 +571,16 @@ function waytoagiViews(waytoagi) {
 
 function renderWaytoagi(waytoagi) {
   const { updates7d, updatesToday, latestDate } = waytoagiViews(waytoagi);
+  
+  const activeClass = "bg-teal-600 text-white shadow-md shadow-teal-600/10";
+  const inactiveClass = "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/40";
   waytoagiTodayBtnEl?.classList.toggle("active", state.waytoagiMode === "today");
-  waytoagi7dBtnEl?.classList.toggle("active", state.waytoagiMode === "7d");
+  if (waytoagiTodayBtnEl) {
+    waytoagiTodayBtnEl.className = `px-3 py-1 rounded-md text-[11px] font-bold transition-all duration-150 ${state.waytoagiMode === "today" ? activeClass : inactiveClass}`;
+  }
+  if (waytoagi7dBtnEl) {
+    waytoagi7dBtnEl.className = `px-3 py-1 rounded-md text-[11px] font-bold transition-all duration-150 ${state.waytoagiMode === "7d" ? activeClass : inactiveClass}`;
+  }
   waytoagiUpdatedAtEl.textContent = `更新时间：${fmtTime(waytoagi.generated_at)}`;
 
   waytoagiMetaEl.innerHTML = "";
@@ -533,20 +588,29 @@ function renderWaytoagi(waytoagi) {
   rootLink.href = waytoagi.root_url || "#";
   rootLink.target = "_blank";
   rootLink.rel = "noopener noreferrer";
+  rootLink.className = "text-teal-400 hover:text-teal-300 font-bold underline decoration-teal-500/30 underline-offset-4";
   rootLink.textContent = "主页面";
+  
   const historyLink = document.createElement("a");
   historyLink.href = waytoagi.history_url || "#";
   historyLink.target = "_blank";
   historyLink.rel = "noopener noreferrer";
+  historyLink.className = "text-teal-400 hover:text-teal-300 font-bold underline decoration-teal-500/30 underline-offset-4";
   historyLink.textContent = "历史更新页";
+  
   const todayCount = document.createElement("span");
+  todayCount.className = "text-zinc-400 font-semibold";
   todayCount.textContent = `最近更新日(${latestDate || "--"})：${fmtNumber(waytoagi.count_today || updatesToday.length)} 条`;
+  
   const weekCount = document.createElement("span");
+  weekCount.className = "text-zinc-400 font-semibold";
   weekCount.textContent = `近 7 日：${fmtNumber(waytoagi.count_7d || updates7d.length)} 条`;
+  
   [rootLink, "·", historyLink, "·", todayCount, "·", weekCount].forEach((part) => {
     if (typeof part === "string") {
       const sep = document.createElement("span");
-      sep.textContent = part;
+      sep.className = "text-zinc-600";
+      sep.textContent = ` ${part} `;
       waytoagiMetaEl.appendChild(sep);
     } else {
       waytoagiMetaEl.appendChild(part);
@@ -556,7 +620,7 @@ function renderWaytoagi(waytoagi) {
   waytoagiListEl.innerHTML = "";
   if (waytoagi.has_error) {
     const div = document.createElement("div");
-    div.className = "waytoagi-error";
+    div.className = "p-5 text-center text-xs font-semibold text-red-400";
     div.textContent = waytoagi.error || "WaytoAGI 数据加载失败";
     waytoagiListEl.appendChild(div);
     return;
@@ -565,7 +629,7 @@ function renderWaytoagi(waytoagi) {
   const updates = state.waytoagiMode === "today" ? updatesToday : updates7d;
   if (!updates.length) {
     const div = document.createElement("div");
-    div.className = "waytoagi-empty";
+    div.className = "p-5 text-center text-xs font-semibold text-zinc-500";
     div.textContent = state.waytoagiMode === "today"
       ? "最近更新日没有更新，可切换到近7日查看。"
       : (waytoagi.warning || "近 7 日没有更新");
@@ -575,16 +639,19 @@ function renderWaytoagi(waytoagi) {
 
   updates.forEach((u) => {
     const row = document.createElement("a");
-    row.className = "waytoagi-item";
+    row.className = "flex items-center gap-4 p-3 bg-zinc-900/20 border border-zinc-900/60 rounded-xl hover:bg-zinc-900/40 hover:border-zinc-800 transition-all duration-200 group/item";
     row.href = u.url || "#";
     row.target = "_blank";
     row.rel = "noopener noreferrer";
+    
     const dateEl = document.createElement("span");
-    dateEl.className = "d";
+    dateEl.className = "font-mono text-[10px] text-teal-400 font-bold bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20";
     dateEl.textContent = fmtDate(u.date);
+    
     const titleEl = document.createElement("span");
-    titleEl.className = "t";
+    titleEl.className = "text-xs text-zinc-300 group-hover/item:text-teal-300 font-medium leading-relaxed transition-colors";
     titleEl.textContent = u.title;
+    
     row.append(dateEl, titleEl);
     waytoagiListEl.appendChild(row);
   });
@@ -594,23 +661,49 @@ function renderWaytoagi(waytoagi) {
 
 function renderMetric(label, value, tone = "") {
   const node = document.createElement("div");
-  node.className = `health-card ${tone}`.trim();
-  const labelEl = document.createElement("span");
-  labelEl.className = "health-label";
-  labelEl.textContent = label;
-  const valueEl = document.createElement("strong");
-  valueEl.textContent = value;
-  node.append(labelEl, valueEl);
+  node.className = "flex flex-col justify-between p-3.5 bg-zinc-900/30 border border-zinc-900 rounded-xl relative overflow-hidden";
+  
+  let valColor = "text-zinc-100";
+  let borderColor = "border-zinc-900";
+  
+  if (tone === "ok") {
+    valColor = "text-emerald-400";
+    borderColor = "border-emerald-500/20";
+    node.className += " bg-emerald-500/[0.02]";
+  } else if (tone === "warn") {
+    valColor = "text-amber-400";
+    borderColor = "border-amber-500/20";
+    node.className += " bg-amber-500/[0.02]";
+  } else if (tone === "bad") {
+    valColor = "text-red-400";
+    borderColor = "border-red-500/20";
+    node.className += " bg-red-500/[0.02]";
+  }
+  
+  node.className += ` ${borderColor}`;
+
+  node.innerHTML = `
+    <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-wide">${label}</span>
+    <strong class="text-base font-extrabold font-mono mt-1 ${valColor}">${value}</strong>
+  `;
   return node;
 }
 
 function renderIssueList(title, items) {
   const wrap = document.createElement("div");
-  wrap.className = "health-issue";
+  wrap.className = "p-4 border border-red-500/15 bg-red-500/5 rounded-xl";
+  
   const titleEl = document.createElement("div");
-  titleEl.className = "health-issue-title";
-  titleEl.textContent = title;
+  titleEl.className = "text-xs font-bold text-red-400 mb-2 uppercase tracking-wide flex items-center gap-1";
+  titleEl.innerHTML = `
+    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+    </svg>
+    <span>${title}</span>
+  `;
+  
   const list = document.createElement("ul");
+  list.className = "space-y-1 pl-4 list-disc text-xs text-zinc-400 font-medium";
   items.slice(0, 6).forEach((item) => {
     const li = document.createElement("li");
     li.textContent = typeof item === "string" ? item : JSON.stringify(item);
@@ -618,7 +711,8 @@ function renderIssueList(title, items) {
   });
   if (items.length > 6) {
     const li = document.createElement("li");
-    li.textContent = `另有 ${fmtNumber(items.length - 6)} 项`;
+    li.className = "list-none text-zinc-500 mt-1 italic";
+    li.textContent = `另外还有 ${fmtNumber(items.length - 6)} 个失败项...`;
     list.appendChild(li);
   }
   wrap.append(titleEl, list);
@@ -632,8 +726,8 @@ function renderSourceHealth(errorMessage = "") {
   const status = state.sourceStatus;
   if (!status) {
     const empty = document.createElement("div");
-    empty.className = "health-empty";
-    empty.textContent = errorMessage || "源状态未生成";
+    empty.className = "p-4 border border-dashed border-zinc-800 rounded-xl text-xs font-semibold text-zinc-500 text-center";
+    empty.textContent = errorMessage || "系统源监控状态报告尚未生成。";
     sourceHealthEl.appendChild(empty);
     renderAdvancedSummary();
     return;
@@ -648,33 +742,40 @@ function renderSourceHealth(errorMessage = "") {
   const replacedFeeds = Array.isArray(rss.replaced_feeds) ? rss.replaced_feeds : [];
 
   const metricGrid = document.createElement("div");
-  metricGrid.className = "health-grid";
+  metricGrid.className = "grid grid-cols-2 md:grid-cols-4 gap-3";
   metricGrid.append(
-    renderMetric("内置源", `${fmtNumber(status.successful_sites || 0)}/${fmtNumber(sites.length)}`,
+    renderMetric("官方/内置源", `${fmtNumber(status.successful_sites || 0)}/${fmtNumber(sites.length)}`,
       failedSites.length ? "warn" : "ok"),
-    renderMetric("RSS", rss.enabled
+    renderMetric("订阅(RSS)源", rss.enabled
       ? `${fmtNumber(rss.ok_feeds || 0)}/${fmtNumber(rss.effective_feed_total || 0)}`
       : "未启用"),
-    renderMetric("失败源", fmtNumber(failedSites.length + failedFeeds.length),
+    renderMetric("失败采集源", fmtNumber(failedSites.length + failedFeeds.length),
       failedSites.length || failedFeeds.length ? "bad" : "ok"),
-    renderMetric("替换/跳过", `${fmtNumber(replacedFeeds.length)}/${fmtNumber(skippedFeeds.length)}`)
+    renderMetric("替换/忽略RSS", `${fmtNumber(replacedFeeds.length)}/${fmtNumber(skippedFeeds.length)}`)
   );
   sourceHealthEl.appendChild(metricGrid);
 
   const issues = document.createElement("div");
-  issues.className = "health-issues";
-  if (failedSites.length) issues.appendChild(renderIssueList("失败站点", failedSites));
-  if (zeroSites.length)   issues.appendChild(renderIssueList("零结果站点", zeroSites));
-  if (failedFeeds.length) issues.appendChild(renderIssueList("失败 RSS", failedFeeds));
+  issues.className = "grid grid-cols-1 md:grid-cols-2 gap-3 mt-4";
+  
+  if (failedSites.length) issues.appendChild(renderIssueList("内置源抓取异常", failedSites));
+  if (zeroSites.length)   issues.appendChild(renderIssueList("空数据反馈源 (24h)", zeroSites));
+  if (failedFeeds.length) issues.appendChild(renderIssueList("RSS 种子解析异常", failedFeeds));
   if (skippedFeeds.length) {
-    issues.appendChild(renderIssueList("跳过 RSS", skippedFeeds.map((item) => `${item.feed_url} · ${item.reason || "skipped"}`)));
+    issues.appendChild(renderIssueList("过滤/跳过RSS", skippedFeeds.map((item) => `${item.feed_url} (${item.reason || "skipped"})`)));
   }
+  
   if (issues.childElementCount) {
     sourceHealthEl.appendChild(issues);
   } else {
     const ok = document.createElement("div");
-    ok.className = "health-ok";
-    ok.textContent = "源状态正常";
+    ok.className = "p-3.5 border border-emerald-500/15 bg-emerald-500/5 rounded-xl text-xs font-bold text-emerald-400 flex items-center gap-1.5";
+    ok.innerHTML = `
+      <svg class="w-4 h-4 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+      </svg>
+      <span>所有采集节点运作正常，数据一致性验证通过。</span>
+    `;
     sourceHealthEl.appendChild(ok);
   }
   renderAdvancedSummary();
@@ -756,7 +857,7 @@ async function init() {
     updatedAtEl.textContent = fmtTime(state.generatedAt);
   } else {
     updatedAtEl.textContent = "加载失败";
-    newsListEl.innerHTML = `<div class="empty-state">${newsResult.reason.message}</div>`;
+    newsListEl.innerHTML = `<div class="p-10 text-center text-sm text-red-400 font-semibold">${newsResult.reason.message}</div>`;
   }
 
   if (statusResult.status === "fulfilled") {
@@ -771,7 +872,7 @@ async function init() {
     renderWaytoagi(state.waytoagiData);
   } else {
     waytoagiUpdatedAtEl.textContent = "加载失败";
-    waytoagiListEl.innerHTML = `<div class="waytoagi-error">${waytoagiResult.reason?.message}</div>`;
+    waytoagiListEl.innerHTML = `<div class="p-5 text-center text-xs font-semibold text-red-400">${waytoagiResult.reason?.message}</div>`;
   }
 }
 
@@ -818,7 +919,7 @@ modeAllBtnEl.addEventListener("click", async () => {
     renderSiteFilters();
     renderList();
   } catch (err) {
-    newsListEl.innerHTML = `<div class="empty-state">${err.message}</div>`;
+    newsListEl.innerHTML = `<div class="p-10 text-center text-sm font-semibold text-red-400">${err.message}</div>`;
   }
 });
 
@@ -857,7 +958,10 @@ waytoagi7dBtnEl?.addEventListener("click", () => {
 // ---- Back to Top ------------------------------------------------------------
 
 window.addEventListener("scroll", () => {
-  backToTopEl.classList.toggle("hidden", window.scrollY <= window.innerHeight * 2);
+  const isHidden = window.scrollY <= window.innerHeight * 1.5;
+  backToTopEl.classList.toggle("opacity-0", isHidden);
+  backToTopEl.classList.toggle("pointer-events-none", isHidden);
+  backToTopEl.classList.toggle("translate-y-4", isHidden);
 }, { passive: true });
 
 backToTopEl.addEventListener("click", () => {

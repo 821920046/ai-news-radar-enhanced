@@ -1,33 +1,34 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Signal Board — 24 小时 AI 更新雷达</title>
+    <title>AI Signal Board — 24 小时 AI 资讯雷达</title>
     <link rel="icon" href="./assets/log.png" type="image/png" />
+
+    <!-- 引入 Google fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: 'media',
+        darkMode: 'class',
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', '"Noto Sans SC"', '"Microsoft YaHei"', 'sans-serif'],
+            },
             colors: {
-              surface:  '#faf9f6',
-              card:     '#ffffff',
-              ink:      '#1a1a2e',
-              muted:    '#64748b',
-              primary:  '#126a73',
-              'primary-light': '#e6f3f4',
-              'cat-ai':       '#2563eb',
-              'cat-ai-bg':    '#eff6ff',
-              'cat-tech':     '#0d9488',
-              'cat-tech-bg':  '#f0fdfa',
-              'cat-digital':  '#7c3aed',
-              'cat-digital-bg':'#f5f3ff',
-              'cat-hardware': '#ea580c',
-              'cat-hardware-bg':'#fff7ed',
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                500: '#0d9488',
+                600: '#0f766e',
+                DEFAULT: '#14b8a6'
+              }
             }
           }
         }
@@ -35,776 +36,272 @@
     </script>
 
     <style>
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        background: #faf9f6;
-        color: #1a1a2e;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-        -webkit-font-smoothing: antialiased;
+      /* 隐藏默认滚动条，使用极细的美化滚动条 */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
       }
-      a { color: inherit; text-decoration: none; }
-
-      /* ---- Shell ---- */
-      .shell { max-width: 920px; margin: 0 auto; padding: 0 18px; }
-
-      /* ---- Hero ---- */
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 24px;
-        align-items: end;
-        padding: 32px 0 24px;
+      ::-webkit-scrollbar-track {
+        background: rgba(9, 9, 11, 0.5);
       }
-      .hero-logo { width: 48px; height: 48px; border-radius: 14px; object-fit: contain; }
-      .hero-title {
-        font-size: 1.65rem;
-        font-weight: 700;
-        color: #1a1a2e;
-        line-height: 1.3;
-        margin: 0;
-      }
-      .hero-subtitle { color: #64748b; font-size: 0.82rem; margin-top: 4px; }
-      .hero-card {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 14px 20px;
-        text-align: right;
-        min-width: 180px;
-      }
-      .hero-card-label { font-size: 0.65rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; }
-      .hero-card-value { font-size: 0.92rem; font-weight: 700; color: #1a1a2e; margin-top: 2px; }
-
-      /* ---- Stats Grid ---- */
-      .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 12px;
-        padding-bottom: 20px;
-      }
-      .stat-card {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 14px 16px;
-        border-top: 3px solid #126a73;
-      }
-      .stat-label { font-size: 0.7rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
-      .stat-value { font-size: 1.3rem; font-weight: 700; color: #1a1a2e; margin-top: 4px; }
-
-      /* ---- Category Nav (sticky) ---- */
-      .cat-nav {
-        position: sticky;
-        top: 0;
-        z-index: 40;
-        background: #faf9f6;
-        padding: 12px 0;
-        border-bottom: 1px solid #e5e7eb;
-        display: flex;
-        gap: 8px;
-        overflow-x: auto;
-        scrollbar-width: none;
-      }
-      .cat-nav::-webkit-scrollbar { display: none; }
-      .cat-btn {
-        flex-shrink: 0;
-        padding: 7px 18px;
+      ::-webkit-scrollbar-thumb {
+        background: rgba(63, 63, 70, 0.4);
         border-radius: 9999px;
-        font-size: 0.82rem;
-        font-weight: 600;
-        border: 1.5px solid #d1d5db;
-        background: #ffffff;
-        color: #64748b;
-        cursor: pointer;
-        transition: all 0.2s;
-        white-space: nowrap;
       }
-      .cat-btn:hover { border-color: #126a73; color: #126a73; }
-      .cat-btn.active {
-        background: #126a73;
-        color: #ffffff;
-        border-color: #126a73;
-      }
-      .cat-btn[data-cat="ai"].active       { background: #2563eb; border-color: #2563eb; }
-      .cat-btn[data-cat="科技"].active      { background: #0d9488; border-color: #0d9488; }
-      .cat-btn[data-cat="数码"].active      { background: #7c3aed; border-color: #7c3aed; }
-      .cat-btn[data-cat="电脑硬件"].active  { background: #ea580c; border-color: #ea580c; }
-
-      .cat-count {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 20px;
-        height: 18px;
-        padding: 0 5px;
-        border-radius: 9999px;
-        font-size: 0.65rem;
-        font-weight: 700;
-        margin-left: 6px;
-        background: #f1f5f9;
-        color: #64748b;
-      }
-      .cat-btn.active .cat-count { background: rgba(255,255,255,0.25); color: #ffffff; }
-
-      /* ---- Controls Row ---- */
-      .controls-row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 12px;
-        padding: 16px 0 12px;
-      }
-      .search-box {
-        flex: 1;
-        min-width: 200px;
-        position: relative;
-      }
-      .search-box input {
-        width: 100%;
-        padding: 10px 14px 10px 38px;
-        border: 1.5px solid #d1d5db;
-        border-radius: 10px;
-        font-size: 0.85rem;
-        background: #ffffff;
-        color: #1a1a2e;
-        outline: none;
-        transition: border-color 0.2s;
-      }
-      .search-box input:focus { border-color: #126a73; }
-      .search-box input::placeholder { color: #9ca3af; }
-      .search-icon {
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 16px;
-        color: #9ca3af;
-        pointer-events: none;
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(20, 184, 166, 0.5);
       }
 
-      .pill-group {
-        display: inline-flex;
-        background: #f1f5f9;
-        padding: 3px;
-        border-radius: 10px;
-      }
-      .pill-btn {
-        padding: 6px 14px;
-        border-radius: 8px;
-        font-size: 0.78rem;
-        font-weight: 600;
-        color: #64748b;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        transition: all 0.15s;
-      }
-      .pill-btn.active {
-        background: #ffffff;
-        color: #1a1a2e;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-      }
-
-      .mode-hint {
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: #64748b;
-        white-space: nowrap;
-      }
-
-      /* Dedup toggle */
-      .dedup-toggle {
+      /* 消除横向溢出滚动条样式 */
+      .no-scrollbar::-webkit-scrollbar {
         display: none;
-        align-items: center;
-        gap: 6px;
-        padding: 5px 12px;
-        background: #f1f5f9;
-        border-radius: 10px;
-        font-size: 0.78rem;
-        font-weight: 600;
-        color: #64748b;
-        cursor: pointer;
       }
-      .dedup-toggle.show { display: inline-flex; }
-      .dedup-dot {
-        width: 14px; height: 14px;
-        border-radius: 50%;
-        border: 2px solid #d1d5db;
-        background: #ffffff;
-        transition: all 0.15s;
-      }
-      .dedup-toggle input:checked + .dedup-dot {
-        border-color: #126a73;
-        background: #126a73;
-      }
-
-      /* ---- News List ---- */
-      .list-section {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 14px;
-        overflow: hidden;
-        margin-top: 4px;
-      }
-      .list-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 24px;
-        border-bottom: 1px solid #f1f5f9;
-      }
-      .list-head h2 { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; margin: 0; }
-      .list-count { font-size: 0.82rem; font-weight: 600; color: #64748b; }
-
-      /* Time group header */
-      .time-group-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 24px;
-        background: #faf9f6;
-        border-bottom: 1px solid #f1f5f9;
-      }
-      .time-group-head h3 { font-size: 0.82rem; font-weight: 700; color: #64748b; margin: 0; }
-      .time-group-head span { font-size: 0.75rem; font-weight: 600; color: #9ca3af; }
-
-      /* Source group header */
-      .source-group-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 24px;
-        background: #faf9f6;
-        border-bottom: 1px solid #f1f5f9;
-      }
-      .source-group-head h3 { font-size: 0.82rem; font-weight: 600; color: #64748b; margin: 0; }
-      .source-group-head span { font-size: 0.75rem; font-weight: 600; color: #9ca3af; }
-
-      /* ---- News Card ---- */
-      .news-card {
-        display: flex;
-        flex-direction: column;
-        padding: 14px 24px;
-        border-bottom: 1px solid #f1f5f9;
-        border-left: 3px solid transparent;
-        transition: background 0.15s, transform 0.1s;
-        cursor: default;
-      }
-      .news-card:last-child { border-bottom: none; }
-      .news-card:hover { background: #faf9f6; transform: translateX(2px); }
-
-      /* Category-based left border */
-      .news-card[data-category="AI"]       { border-left-color: #2563eb; }
-      .news-card[data-category="科技"]     { border-left-color: #0d9488; }
-      .news-card[data-category="数码"]     { border-left-color: #7c3aed; }
-      .news-card[data-category="电脑硬件"] { border-left-color: #ea580c; }
-
-      .card-meta {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.72rem;
-        font-weight: 600;
-        color: #64748b;
-        margin-bottom: 6px;
-      }
-      .card-site { font-weight: 700; color: #374151; }
-
-      .card-cat-badge {
-        display: inline-block;
-        padding: 1px 8px;
-        border-radius: 9999px;
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-      }
-      .card-cat-badge[data-cat="AI"]       { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
-      .card-cat-badge[data-cat="科技"]     { background: #f0fdfa; color: #0d9488; border: 1px solid #99f6e4; }
-      .card-cat-badge[data-cat="数码"]     { background: #f5f3ff; color: #7c3aed; border: 1px solid #c4b5fd; }
-      .card-cat-badge[data-cat="电脑硬件"] { background: #fff7ed; color: #ea580c; border: 1px solid #fdba74; }
-
-      .card-source {
-        display: inline-block;
-        padding: 1px 8px;
-        border-radius: 9999px;
-        font-size: 0.65rem;
-        font-weight: 600;
-        color: #64748b;
-        border: 1px solid #e5e7eb;
-        background: #f9fafb;
-      }
-      .card-time { margin-left: auto; font-size: 0.72rem; font-weight: 600; color: #9ca3af; }
-
-      .card-title {
-        font-size: 0.92rem;
-        font-weight: 600;
-        color: #1a1a2e;
-        line-height: 1.5;
-        transition: color 0.15s;
-      }
-      .card-title:hover { color: #126a73; }
-      .card-title-sub {
-        display: block;
-        font-size: 0.78rem;
-        font-weight: 500;
-        color: #64748b;
-        margin-top: 3px;
-        line-height: 1.4;
-      }
-
-      /* Hotness badge */
-      .hotness-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 2px;
-        padding: 1px 7px;
-        border-radius: 9999px;
-        font-size: 0.65rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #ff6b35, #ff3b30);
-        color: #ffffff;
-        box-shadow: 0 1px 2px rgba(255,59,48,0.25);
-      }
-
-      /* Summary line */
-      .card-summary {
-        font-size: 0.78rem;
-        color: #64748b;
-        line-height: 1.5;
-        margin: 4px 0 0;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      /* Tag pills */
-      .card-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-        margin-top: 6px;
-      }
-      .card-tag {
-        display: inline-block;
-        padding: 1px 8px;
-        border-radius: 9999px;
-        font-size: 0.62rem;
-        font-weight: 600;
-        color: #64748b;
-        background: #f1f5f9;
-        border: 1px solid #e5e7eb;
-      }
-
-      /* Empty state */
-      .empty-state {
-        padding: 40px 24px;
-        text-align: center;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #64748b;
-      }
-
-      /* Skeleton */
-      .skeleton {
-        background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
-        background-size: 200% 100%;
-        animation: shimmer 1.5s ease-in-out infinite;
-        border-radius: 6px;
-      }
-      @keyframes shimmer {
-        0%   { background-position: 200% 0; }
-        100% { background-position: -200% 0; }
-      }
-      .skeleton-card { padding: 14px 24px; border-bottom: 1px solid #f1f5f9; }
-      .skeleton-card:last-child { border-bottom: none; }
-
-      /* ---- WaytoAGI ---- */
-      .waytoagi-section {
-        margin-top: 20px;
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 14px;
-        overflow: hidden;
-      }
-      .waytoagi-section summary {
-        display: flex;
-        align-items: center;
-        padding: 14px 20px;
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: #1a1a2e;
-        cursor: pointer;
-        list-style: none;
-        user-select: none;
-        position: relative;
-        transition: background 0.15s;
-      }
-      .waytoagi-section summary:hover { background: #faf9f6; }
-      .waytoagi-section summary::-webkit-details-marker { display: none; }
-      .waytoagi-section summary::before {
-        content: "+";
-        position: absolute;
-        left: 20px;
-        width: 20px; height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 1.5px solid #d1d5db;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: #64748b;
-      }
-      .waytoagi-section[open] summary::before { content: "\2212"; }
-      .waytoagi-section summary span { padding-left: 32px; }
-
-      .waytoagi-head {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 20px;
-        border-top: 1px solid #f1f5f9;
-        background: #faf9f6;
-      }
-      .waytoagi-head h2 { font-size: 0.92rem; font-weight: 700; color: #1a1a2e; margin: 0; }
-      .waytoagi-tools { display: flex; align-items: center; gap: 10px; }
-      #waytoagiUpdatedAt { font-size: 0.72rem; font-weight: 600; color: #9ca3af; }
-
-      .waytoagi-meta {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 6px;
-        padding: 12px 20px 0;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: #64748b;
-      }
-      .waytoagi-meta a { color: #126a73; }
-      .waytoagi-meta a:hover { color: #0e555c; }
-
-      .waytoagi-list { display: flex; flex-direction: column; gap: 8px; padding: 12px 20px 16px; }
-      .waytoagi-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 14px;
-        background: #faf9f6;
-        border: 1px solid #f1f5f9;
-        border-radius: 10px;
-        transition: all 0.15s;
-      }
-      .waytoagi-item:hover { background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-      .waytoagi-item .d { font-size: 0.72rem; font-weight: 700; color: #64748b; min-width: 48px; }
-      .waytoagi-item .t { font-size: 0.82rem; font-weight: 600; color: #1a1a2e; line-height: 1.45; }
-
-      .waytoagi-error, .waytoagi-empty {
-        padding: 20px;
-        text-align: center;
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: #64748b;
-      }
-
-      /* ---- Advanced Panel ---- */
-      .advanced-section {
-        margin-top: 20px;
-        margin-bottom: 40px;
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 14px;
-        overflow: hidden;
-      }
-      .advanced-section summary {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 14px 20px;
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: #1a1a2e;
-        cursor: pointer;
-        list-style: none;
-        user-select: none;
-        position: relative;
-        transition: background 0.15s;
-      }
-      .advanced-section summary:hover { background: #faf9f6; }
-      .advanced-section summary::-webkit-details-marker { display: none; }
-      .advanced-section summary::before {
-        content: "+";
-        position: absolute;
-        left: 20px;
-        width: 20px; height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 1.5px solid #d1d5db;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: #64748b;
-      }
-      .advanced-section[open] summary::before { content: "\2212"; }
-      .advanced-section summary > span:first-child { padding-left: 32px; }
-      .advanced-summary { font-size: 0.75rem; font-weight: 600; color: #9ca3af; white-space: nowrap; }
-
-      .advanced-content {
-        display: grid;
-        gap: 14px;
-        padding: 0 20px 20px;
-        border-top: 1px solid #f1f5f9;
-        padding-top: 16px;
-      }
-      .advanced-controls {
-        display: grid;
-        grid-template-columns: minmax(160px, 0.8fr) auto auto;
-        gap: 12px;
-        align-items: end;
-      }
-      .field { display: flex; flex-direction: column; gap: 4px; font-size: 0.75rem; font-weight: 600; color: #64748b; }
-      .advanced-section select, .advanced-section input[type="text"] {
-        width: 100%;
-        padding: 8px 12px;
-        border: 1.5px solid #d1d5db;
-        border-radius: 10px;
-        font-size: 0.82rem;
-        background: #ffffff;
-        color: #1a1a2e;
-        outline: none;
-        transition: border-color 0.15s;
-      }
-      .advanced-section select:focus, .advanced-section input:focus { border-color: #126a73; }
-
-      .site-pills {
-        display: flex;
-        gap: 6px;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        white-space: nowrap;
+      .no-scrollbar {
+        -ms-overflow-style: none;
         scrollbar-width: none;
       }
-      .site-pills::-webkit-scrollbar { display: none; }
-      .site-pill {
-        flex-shrink: 0;
-        padding: 5px 12px;
-        border-radius: 9999px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        border: 1.5px solid #d1d5db;
-        background: #ffffff;
-        color: #64748b;
-        cursor: pointer;
-        transition: all 0.15s;
-      }
-      .site-pill:hover { border-color: #126a73; color: #126a73; }
-      .site-pill.active { background: #126a73; color: #ffffff; border-color: #126a73; }
 
-      /* Source health */
-      .health-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
-      .health-card {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        padding: 12px 14px;
-        background: #faf9f6;
-        border: 1px solid #f1f5f9;
-        border-radius: 10px;
-      }
-      .health-card strong { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; }
-      .health-label { font-size: 0.7rem; font-weight: 600; color: #64748b; }
-      .health-card.ok strong { color: #16a34a; }
-      .health-card.warn strong { color: #ca8a04; }
-      .health-card.bad strong { color: #dc2626; }
-
-      .health-issues { display: grid; gap: 10px; margin-top: 10px; }
-      .health-issue {
-        padding: 10px 14px;
-        border: 1px solid #fecaca;
-        background: #fef2f2;
-        border-radius: 10px;
-      }
-      .health-issue-title { font-size: 0.75rem; font-weight: 700; color: #dc2626; margin-bottom: 6px; }
-      .health-issue ul { margin: 0; padding-left: 18px; font-size: 0.75rem; font-weight: 600; color: #64748b; }
-      .health-issue li { margin-bottom: 2px; }
-      .health-ok {
-        padding: 10px 14px;
-        border: 1.5px solid #bbf7d0;
-        background: #f0fdf4;
-        border-radius: 10px;
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: #16a34a;
-      }
-      .health-empty {
-        padding: 10px 14px;
-        border: 1.5px dashed #d1d5db;
-        border-radius: 10px;
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: #64748b;
+      /* 毛玻璃面板基类 */
+      .glass-panel {
+        background: rgba(24, 24, 27, 0.45);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(63, 63, 70, 0.3);
       }
 
-      /* ---- Back to top ---- */
-      .back-to-top {
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background: #126a73;
-        color: #ffffff;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        box-shadow: 0 4px 12px rgba(18,106,115,0.3);
-        transition: opacity 0.3s, transform 0.3s;
-        z-index: 50;
+      /* 流光输入框焦点效果 */
+      .search-glow:focus-within {
+        border-color: rgba(20, 184, 166, 0.6);
+        box-shadow: 0 0 15px rgba(20, 184, 166, 0.15);
       }
-      .back-to-top.hidden { opacity: 0; pointer-events: none; transform: translateY(10px); }
-      .back-to-top:hover { background: #0e555c; }
 
-      /* ---- Responsive ---- */
-      @media (max-width: 760px) {
-        .hero { grid-template-columns: 1fr; }
-        .hero-card { text-align: left; }
-        .stats-grid { grid-template-columns: repeat(2, 1fr); }
-        .advanced-controls { grid-template-columns: 1fr; }
-        .health-grid { grid-template-columns: repeat(2, 1fr); }
+      /* 旋转动画适用于 details 箭头的旋转 */
+      details[open] summary .arrow-icon {
+        transform: rotate(180deg);
       }
-      @media (max-width: 460px) {
-        .hero-title { font-size: 1.3rem; }
-        .controls-row { flex-direction: column; align-items: stretch; }
-        .search-box { min-width: 100%; }
-        .news-card { padding: 12px 16px; }
-        .list-head { padding: 14px 16px; }
-        .time-group-head { padding: 8px 16px; }
+
+      /* 卡片悬停时的流光左边框过渡 */
+      .card-left-border {
+        position: relative;
+      }
+      .card-left-border::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 3px;
+        background: transparent;
+        transition: background-color 0.3s ease;
+      }
+
+      .card-left-border[data-category="AI"]::before { background-color: #3b82f6; }
+      .card-left-border[data-category="科技"]::before { background-color: #14b8a6; }
+      .card-left-border[data-category="数码"]::before { background-color: #8b5cf6; }
+      .card-left-border[data-category="电脑硬件"]::before { background-color: #f97316; }
+
+      /* 骨架屏流光闪烁 */
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .shimmer-bg {
+        background: linear-gradient(90deg, #1e1e24 25%, #2a2a35 50%, #1e1e24 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.6s infinite linear;
       }
     </style>
   </head>
-  <body>
-    <main class="shell">
+  <body class="bg-[#09090b] text-zinc-100 min-h-screen font-sans selection:bg-teal-500/30 selection:text-teal-200 antialiased relative overflow-x-hidden">
+    
+    <!-- 极光背景装饰球 -->
+    <div class="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] rounded-full bg-teal-500/10 blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-[20%] right-[-150px] w-[600px] h-[600px] rounded-full bg-purple-600/10 blur-[130px] pointer-events-none"></div>
+    <div class="absolute bottom-[10%] left-[-150px] w-[500px] h-[500px] rounded-full bg-blue-600/5 blur-[120px] pointer-events-none"></div>
 
-      <!-- ==================== HERO ==================== -->
-      <header class="hero">
-        <div>
-          <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px;">
-            <img class="hero-logo" src="./assets/log.png" alt="Logo" />
-            <div>
-              <h1 class="hero-title">AI Signal Board</h1>
-              <div class="hero-subtitle">24 小时 AI / 科技 / 数码 / 硬件 更新雷达</div>
-            </div>
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+
+      <!-- ==================== HERO HEADER ==================== -->
+      <header class="glass-panel rounded-2xl p-6 mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xl shadow-black/30">
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <img class="w-14 h-14 rounded-xl object-contain ring-2 ring-teal-500/20 p-1 bg-zinc-900" src="./assets/log.png" alt="Logo" />
+            <span class="absolute -bottom-1 -right-1 flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
+            </span>
+          </div>
+          <div>
+            <h1 class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-teal-300 via-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              AI Signal Board
+            </h1>
+            <p class="text-xs text-zinc-400 font-medium mt-1">24 小时 AI / 科技 / 数码 / 硬件 全向情报雷达</p>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-label">LAST UPDATED</div>
-          <div class="hero-card-value" id="updatedAt">加载中...</div>
+        <div class="flex items-center gap-3 bg-zinc-950/40 border border-zinc-800/80 px-4 py-2.5 rounded-xl self-stretch md:self-auto justify-between">
+          <div class="text-left md:text-right">
+            <span class="block text-[10px] font-bold text-zinc-500 tracking-wider uppercase">Last Updated</span>
+            <span class="text-sm font-semibold text-teal-400 font-mono mt-0.5 block" id="updatedAt">加载中...</span>
+          </div>
         </div>
       </header>
 
-      <!-- ==================== STATS ==================== -->
-      <section class="stats-grid" id="statsGrid"></section>
-
-      <!-- ==================== CATEGORY NAV (sticky) ==================== -->
-      <nav class="cat-nav" id="catNav"></nav>
-
-      <!-- ==================== CONTROLS ROW ==================== -->
-      <div class="controls-row">
-        <div class="search-box">
-          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/>
-          </svg>
-          <input id="searchInput" type="search" placeholder="搜索信号 / 来源..." autocomplete="off" />
-        </div>
-        <div class="pill-group">
-          <button id="modeAiBtn" class="pill-btn active" type="button">AI 强相关</button>
-          <button id="modeAllBtn" class="pill-btn" type="button">全量</button>
-        </div>
-        <div class="pill-group">
-          <button id="sortTimeBtn" class="pill-btn active" type="button">时间</button>
-          <button id="sortHotBtn" class="pill-btn" type="button">热门</button>
-        </div>
-        <span class="mode-hint" id="modeHint">AI强相关</span>
-        <label id="allDedupeWrap" class="dedup-toggle" for="allDedupeToggle">
-          <input id="allDedupeToggle" type="checkbox" checked style="display:none" />
-          <span class="dedup-dot"></span>
-          <span id="allDedupeLabel">去重开</span>
-        </label>
-      </div>
-
-      <!-- ==================== NEWS LIST ==================== -->
-      <section class="list-section">
-        <div class="list-head">
-          <h2 id="listTitle">AI 信号流</h2>
-          <span class="list-count" id="resultCount">0 条</span>
-        </div>
-        <div id="newsList"></div>
+      <!-- ==================== STATS GRID ==================== -->
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="statsGrid">
+        <!-- 动态生成数据统计卡片 -->
       </section>
 
-      <!-- ==================== WAYTOAGI ==================== -->
-      <details class="waytoagi-section">
-        <summary><span>WaytoAGI 更新日志</span></summary>
-        <div class="waytoagi-head">
-          <h2>WaytoAGI 更新日志</h2>
-          <div class="waytoagi-tools">
-            <div class="pill-group">
-              <button id="waytoagiTodayBtn" class="pill-btn active" type="button">最近更新日</button>
-              <button id="waytoagi7dBtn" class="pill-btn" type="button">近7日</button>
-            </div>
-            <span id="waytoagiUpdatedAt">加载中...</span>
-          </div>
-        </div>
-        <div id="waytoagiMeta" class="waytoagi-meta"></div>
-        <div id="waytoagiList" class="waytoagi-list"></div>
-      </details>
+      <!-- ==================== CATEGORY NAV ==================== -->
+      <nav class="sticky top-0 z-40 bg-[#09090b]/80 backdrop-blur-md py-3 border-b border-zinc-900/60 mb-6 overflow-x-auto no-scrollbar flex gap-2" id="catNav">
+        <!-- 动态生成分类按钮 -->
+      </nav>
 
-      <!-- ==================== ADVANCED PANEL ==================== -->
-      <details class="advanced-section">
-        <summary>
-          <span>高级筛选与源状态</span>
-          <span class="advanced-summary" id="advancedSummary">加载中...</span>
-        </summary>
-        <div class="advanced-content">
-          <div class="advanced-controls">
-            <label class="field">
-              <span>站点筛选</span>
-              <select id="siteSelect">
-                <option value="">全部站点</option>
-              </select>
+      <!-- ==================== CONTROLS DECK ==================== -->
+      <div class="glass-panel p-4 rounded-2xl mb-6 shadow-lg shadow-black/20 flex flex-col gap-4">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <!-- 搜索框 -->
+          <div class="relative flex-1 min-w-[280px] search-glow transition-all duration-300 border border-zinc-800 rounded-xl bg-zinc-950/40">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+              <svg class="h-4 w-4 text-zinc-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <input id="searchInput" type="search" placeholder="在海量信号中检索关键字或来源..." autocomplete="off" 
+                   class="block w-full pl-10 pr-4 py-2.5 bg-transparent border-0 text-sm text-zinc-100 placeholder-zinc-500 focus:ring-0 focus:outline-none" />
+          </div>
+
+          <!-- 模式切换与排序组合 -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="bg-zinc-950/60 border border-zinc-800/80 p-1 rounded-xl flex gap-1">
+              <button id="modeAiBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200" type="button">AI 强相关</button>
+              <button id="modeAllBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200" type="button">全量情报</button>
+            </div>
+            
+            <div class="bg-zinc-950/60 border border-zinc-800/80 p-1 rounded-xl flex gap-1">
+              <button id="sortTimeBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200" type="button">时间序</button>
+              <button id="sortHotBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200" type="button">热度榜</button>
+            </div>
+
+            <!-- 去重切换 -->
+            <label id="allDedupeWrap" class="hidden items-center gap-2 px-3 py-1.5 bg-zinc-950/60 border border-zinc-800/80 rounded-xl cursor-pointer hover:bg-zinc-900/60 transition-colors" for="allDedupeToggle">
+              <input id="allDedupeToggle" type="checkbox" checked class="sr-only peer" />
+              <div class="w-7 h-4 bg-zinc-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-zinc-400 after:border-zinc-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-teal-600 peer-checked:after:bg-white relative"></div>
+              <span id="allDedupeLabel" class="text-xs font-semibold text-zinc-400 select-none">去重开</span>
             </label>
           </div>
-          <section class="site-pills" id="sitePills"></section>
-          <div id="sourceHealth">源状态加载中...</div>
+        </div>
+
+        <div class="flex items-center gap-2 text-xs font-medium text-zinc-500 border-t border-zinc-900/80 pt-3">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+          <span>当前模式：</span>
+          <span class="text-zinc-300 font-semibold" id="modeHint">加载中...</span>
+        </div>
+      </div>
+
+      <!-- ==================== NEWS LIST CONTAINER ==================== -->
+      <section class="glass-panel rounded-2xl shadow-xl shadow-black/30 overflow-hidden border border-zinc-850">
+        <div class="flex justify-between items-center px-6 py-4.5 border-b border-zinc-900/80 bg-zinc-900/20">
+          <h2 class="text-sm font-bold tracking-wider uppercase text-zinc-400" id="listTitle">AI 信号流</h2>
+          <span class="text-xs font-bold font-mono px-2.5 py-1 bg-zinc-950/80 border border-zinc-800 rounded-lg text-teal-400 shadow-inner" id="resultCount">0 条</span>
+        </div>
+        <div id="newsList" class="divide-y divide-zinc-900/80">
+          <!-- 动态加载新闻内容 -->
+        </div>
+      </section>
+
+      <!-- ==================== WAYTOAGI UPDATES ==================== -->
+      <details class="glass-panel rounded-2xl shadow-xl shadow-black/20 overflow-hidden mt-6 border border-zinc-850 group/details">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer hover:bg-zinc-900/20 list-none select-none">
+          <div class="flex items-center gap-3">
+            <svg class="h-4.5 w-4.5 text-teal-400 transition-transform duration-300 arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+            <span class="text-sm font-bold text-zinc-300">WaytoAGI 更新日志</span>
+          </div>
+          <span class="text-xs text-zinc-500 font-semibold group-hover/details:text-zinc-300 transition-colors">点击展开详情</span>
+        </summary>
+        
+        <div class="border-t border-zinc-900 bg-zinc-950/20">
+          <div class="flex flex-wrap justify-between items-center gap-4 px-6 py-3.5 bg-zinc-900/10 border-b border-zinc-900">
+            <h2 class="text-xs font-bold text-zinc-400 tracking-wide uppercase">WaytoAGI 最近情报</h2>
+            <div class="flex items-center gap-4">
+              <div class="bg-zinc-950/60 border border-zinc-900 p-0.5 rounded-lg flex gap-0.5">
+                <button id="waytoagiTodayBtn" class="px-3 py-1 rounded-md text-[11px] font-bold transition-all duration-150" type="button">最近更新日</button>
+                <button id="waytoagi7dBtn" class="px-3 py-1 rounded-md text-[11px] font-bold transition-all duration-150" type="button">近7日</button>
+              </div>
+              <span id="waytoagiUpdatedAt" class="text-[10px] font-semibold text-zinc-500 font-mono">加载中...</span>
+            </div>
+          </div>
+          <div id="waytoagiMeta" class="flex flex-wrap items-center gap-2 px-6 py-2.5 text-xs text-zinc-400 bg-zinc-950/40 border-b border-zinc-900/60">
+            <!-- 动态生成元信息链接 -->
+          </div>
+          <div id="waytoagiList" class="p-5 flex flex-col gap-2 max-h-[400px] overflow-y-auto">
+            <!-- 动态填充列表 -->
+          </div>
+        </div>
+      </details>
+
+      <!-- ==================== ADVANCED PANEL & HEALTH ==================== -->
+      <details class="glass-panel rounded-2xl shadow-xl shadow-black/20 overflow-hidden mt-6 mb-12 border border-zinc-850 group/details">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer hover:bg-zinc-900/20 list-none select-none">
+          <div class="flex items-center gap-3">
+            <svg class="h-4.5 w-4.5 text-teal-400 transition-transform duration-300 arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+            <span class="text-sm font-bold text-zinc-300">高级筛选与源状态监控</span>
+          </div>
+          <span class="text-xs text-teal-400/80 font-mono font-bold" id="advancedSummary">加载中...</span>
+        </summary>
+        
+        <div class="border-t border-zinc-900 bg-zinc-950/20 p-5 flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider">按源站点精确检索</span>
+            <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+              <select id="siteSelect" class="bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-2 text-sm text-zinc-100 outline-none focus:border-teal-500 transition-colors min-w-[200px]">
+                <option value="">全部站点</option>
+              </select>
+              <div class="text-[10px] text-zinc-500 font-semibold">或者直接点击下方徽章快速过滤：</div>
+            </div>
+            <!-- 快速筛选的 Pills 列表 -->
+            <div class="flex gap-2 overflow-x-auto py-1 no-scrollbar flex-nowrap" id="sitePills"></div>
+          </div>
+
+          <div class="border-t border-zinc-900/80 pt-4">
+            <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider block mb-3">系统采集源健康状况</span>
+            <div id="sourceHealth">
+              <!-- 源状态监控信息 -->
+            </div>
+          </div>
         </div>
       </details>
 
     </main>
 
     <!-- ==================== BACK TO TOP ==================== -->
-    <button id="backToTop" class="back-to-top hidden" aria-label="回到顶部">&uarr;</button>
+    <button id="backToTop" class="back-to-top fixed bottom-6 right-6 w-11 h-11 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold shadow-lg shadow-teal-500/20 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 z-50 opacity-0 pointer-events-none translate-y-4" aria-label="回到顶部">
+      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+      </svg>
+    </button>
 
     <!-- ==================== ITEM TEMPLATE ==================== -->
     <template id="itemTpl">
-      <article class="news-card">
-        <div class="card-meta">
-          <span class="card-site"></span>
-          <span class="card-cat-badge"></span>
-          <span class="card-source"></span>
-          <time class="card-time"></time>
+      <article class="news-card card-left-border p-5 flex flex-col transition-all duration-300 hover:bg-zinc-900/35 relative overflow-hidden group">
+        <!-- 悬停时轻微的光亮边框动效 -->
+        <div class="absolute inset-0 border border-transparent group-hover:border-zinc-800/40 rounded-none pointer-events-none transition-all duration-300"></div>
+
+        <div class="card-meta flex flex-wrap items-center gap-2 text-xs text-zinc-500 mb-2.5 relative z-10">
+          <span class="card-site font-extrabold text-zinc-300 transition-colors"></span>
+          <span class="card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase"></span>
+          <span class="card-source px-2 py-0.5 rounded-full text-[10px] bg-zinc-900/60 border border-zinc-800 text-zinc-400 font-medium"></span>
+          <time class="card-time ml-auto font-mono text-[11px] text-zinc-500 font-semibold"></time>
         </div>
-        <a class="card-title" target="_blank" rel="noopener noreferrer"></a>
-        <p class="card-summary"></p>
-        <div class="card-tags"></div>
+
+        <div class="relative z-10 flex flex-col">
+          <a class="card-title text-base font-semibold text-zinc-100 leading-snug group-hover:text-teal-300 transition-colors block mb-1.5" target="_blank" rel="noopener noreferrer"></a>
+          <p class="card-summary text-sm text-zinc-400 line-clamp-2 leading-relaxed mb-3 mt-1"></p>
+          <div class="card-tags flex flex-wrap gap-1.5"></div>
+        </div>
       </article>
     </template>
 
