@@ -120,7 +120,7 @@
         position: absolute;
         inset: -50%;
         background: conic-gradient(from 0deg, transparent 70%, rgba(20, 184, 166, 0.7) 100%);
-        animation: radar-spin 2s linear infinite;
+        animation: radar-spin 4.5s linear infinite;
         pointer-events: none;
       }
     </style>
@@ -142,7 +142,7 @@
           <div class="relative group cursor-pointer">
             <!-- 带有 overflow-hidden 的图标和扫描层容器 -->
             <div class="relative w-14 h-14 rounded-xl overflow-hidden ring-2 ring-teal-500/20 bg-zinc-900 group-hover:ring-teal-400/50 transition-all duration-300">
-              <img class="relative z-10 w-full h-full object-contain p-1" src="./assets/log.png" alt="Logo" />
+              <img class="relative z-10 w-full h-full object-cover scale-[1.15]" src="./assets/log.png" alt="Logo" />
               <!-- 雷达扫描光线 -->
               <div class="radar-scanner z-20"></div>
             </div>
