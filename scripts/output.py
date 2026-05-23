@@ -18,9 +18,7 @@ def build_latest_payloads(latest_payload: dict[str, Any]) -> tuple[dict[str, Any
         "total_items_raw": latest_payload.get("total_items_raw"),
         "total_items_all_mode": latest_payload.get("total_items_all_mode"),
         "items_all": latest_payload.get("items_all", []),
-        "items_all_raw": latest_payload.get("items_all_raw", []),
     }
     slim_payload.pop("items_all", None)
-    slim_payload.pop("items_all_raw", None)
     slim_payload["all_mode_data_url"] = "data/latest-24h-all.json"
     return slim_payload, all_payload

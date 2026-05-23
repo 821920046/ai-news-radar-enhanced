@@ -275,7 +275,6 @@ def main() -> int:
         "site_stats": sorted(site_stat.values(), key=lambda x: x["count"], reverse=True),
         "items": latest_items_ai_dedup,
         "items_ai": latest_items_ai_dedup,
-        "items_all_raw": latest_items_all,
         "items_all": latest_items_all_dedup,
     }
 

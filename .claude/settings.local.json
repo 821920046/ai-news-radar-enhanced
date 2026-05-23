@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sL --insecure --max-time 10 \"https://pytorch.org/blog/feed.xml\")",
+      "Bash(curl -sL --insecure --max-time 10 \"https://lilianweng.github.io/index.xml\")",
+      "Bash(curl -sL --insecure --max-time 10 -w \"HTTP %{http_code} Size: %{size_download}\\\\n\" \"https://blog.langchain.dev/rss\")",
+      "Bash(curl -sL --insecure --max-time 10 \"https://blog.langchain.dev/rss\")",
+      "Bash(curl -sL --insecure --max-time 10 \"https://wandb.ai/fully-connected/rss.xml\")",
+      "Bash(curl -sL --insecure --max-time 10 \"https://www.anyscale.com/blog/rss.xml\")",
+      "Bash(curl -sL --insecure --max-time 10 \"https://www.together.ai/blog/rss.xml\")",
+      "WebFetch(domain:github.com)",
+      "Bash(gh api *)",
+      "Bash(python3 -c \"import sys,base64; print\\(base64.b64decode\\(sys.stdin.read\\(\\)\\).decode\\(\\)\\)\")",
+      "WebFetch(domain:aihot.virxact.com)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('data/archive.json','r',encoding='utf-8'\\)\\); items=d.get\\('items',[]\\); print\\('total:',len\\(items\\)\\); item=items[0] if items else {}; print\\(json.dumps\\({k:type\\(v\\).__name__ for k,v in item.items\\(\\)}, indent=2\\)\\); print\\('---keys---'\\); print\\(list\\(item.keys\\(\\)\\)\\); print\\('---sample---'\\); print\\(json.dumps\\(item, ensure_ascii=False, indent=2\\)\\)\")",
+      "Bash(python -c \"import py_compile; py_compile.compile\\('scripts/models.py', doraise=True\\); py_compile.compile\\('scripts/utils.py', doraise=True\\); py_compile.compile\\('scripts/topic_filter.py', doraise=True\\); py_compile.compile\\('scripts/update_news.py', doraise=True\\); py_compile.compile\\('scripts/fetchers/official.py', doraise=True\\); py_compile.compile\\('scripts/fetchers/aggregators.py', doraise=True\\); py_compile.compile\\('scripts/fetchers/opml.py', doraise=True\\); print\\('All files compile OK'\\)\")",
+      "Bash(python -m pytest tests/ -x -q)"
+    ]
+  }
+}

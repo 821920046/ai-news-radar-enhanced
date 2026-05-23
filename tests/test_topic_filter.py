@@ -269,14 +269,11 @@ class TopicFilterTests(unittest.TestCase):
             "total_items_all_mode": 2,
             "items_ai": [{"title": "AI post", "url": "https://example.com/a"}],
             "items_all": [{"title": "All post", "url": "https://example.com/b"}],
-            "items_all_raw": [{"title": "Raw post", "url": "https://example.com/c"}],
         }
         slim, all_payload = build_latest_payloads(latest_payload)
         self.assertIn("items_ai", slim)
         self.assertNotIn("items_all", slim)
-        self.assertNotIn("items_all_raw", slim)
         self.assertEqual(all_payload["items_all"][0]["title"], "All post")
-        self.assertEqual(all_payload["items_all_raw"][0]["title"], "Raw post")
 
 
 if __name__ == "__main__":

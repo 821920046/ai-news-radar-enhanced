@@ -7,12 +7,9 @@
 const state = {
   itemsAi: [],
   itemsAll: [],
-  itemsAllRaw: [],
   statsAi: [],
   totalAi: 0,
-  totalRaw: 0,
   totalAllMode: 0,
-  allDedup: true,
   allDataLoaded: false,
   allDataUrl: "data/latest-24h-all.json",
   allDataPromise: null,
@@ -41,9 +38,6 @@ const itemTpl            = document.getElementById("itemTpl");
 const modeAiBtnEl        = document.getElementById("modeAiBtn");
 const modeAllBtnEl       = document.getElementById("modeAllBtn");
 const modeHintEl         = document.getElementById("modeHint");
-const allDedupeWrapEl    = document.getElementById("allDedupeWrap");
-const allDedupeToggleEl  = document.getElementById("allDedupeToggle");
-const allDedupeLabelEl   = document.getElementById("allDedupeLabel");
 const advancedSummaryEl  = document.getElementById("advancedSummary");
 const sourceHealthEl     = document.getElementById("sourceHealth");
 const waytoagiUpdatedAtEl= document.getElementById("waytoagiUpdatedAt");
@@ -54,6 +48,10 @@ const waytoagi7dBtnEl    = document.getElementById("waytoagi7dBtn");
 const backToTopEl        = document.getElementById("backToTop");
 const sortTimeBtnEl      = document.getElementById("sortTimeBtn");
 const sortHotBtnEl       = document.getElementById("sortHotBtn");
+
+// Source Health Global Indicator
+const healthStatusPing   = document.querySelector(".animate-ping");
+const healthStatusDot    = healthStatusPing ? healthStatusPing.nextElementSibling : null;
 
 // ---- Source Kind Registry ----------------------------------------------------
 const SOURCE_KINDS = {
@@ -107,16 +105,17 @@ function debounce(fn, ms) {
   return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), ms); };
 }
 
-function sourceKind(siteId) {
-  return SOURCE_KINDS[siteId] || { label: "来源", tone: "default" };
+function escapeHtml(text) {
+  const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+  return (text || "").replace(/[&<>"']/g, (m) => map[m]);
 }
 
-function siteRows() {
-  return Array.isArray(state.sourceStatus?.sites) ? state.sourceStatus.sites : [];
-}
-
-function siteRow(siteId) {
-  return siteRows().find((s) => s.site_id === siteId) || null;
+function highlightText(text, query) {
+  if (!query || !text) return escapeHtml(text || "");
+  const safeText = escapeHtml(text);
+  const safeQuery = escapeHtml(query);
+  const regex = new RegExp(`(${safeQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  return safeText.replace(regex, '<span class="bg-teal-500/30 text-teal-200 px-0.5 rounded font-bold">$1</span>');
 }
 
 // ---- Date Grouping ----------------------------------------------------------
@@ -170,7 +169,7 @@ function computeCategoryCounts(items) {
     const cat = item.category || "科技";
     counts[""] += 1;
     if (counts[cat] !== undefined) counts[cat] += 1;
-    else counts["科技"] += 1; // fallback
+    else counts["科技"] += 1;
   });
   return counts;
 }
@@ -222,9 +221,7 @@ function renderCategoryNav() {
 function renderAdvancedSummary() {
   if (!advancedSummaryEl) return;
   const status = state.sourceStatus;
-  const allCount = state.allDedup
-    ? (state.totalAllMode || state.itemsAll.length)
-    : (state.totalRaw || state.itemsAllRaw.length);
+  const allCount = state.totalAllMode || state.itemsAll.length;
   if (!status) {
     advancedSummaryEl.textContent = `全量 ${fmtNumber(allCount)} 条`;
     return;
@@ -232,6 +229,35 @@ function renderAdvancedSummary() {
   const sites = Array.isArray(status.sites) ? status.sites : [];
   const okSites = Number(status.successful_sites || 0);
   advancedSummaryEl.textContent = `${fmtNumber(okSites)}/${fmtNumber(sites.length)} 源可用 · 全量 ${fmtNumber(allCount)} 条`;
+  
+  // 更新右上角呼吸灯
+  updateHealthIndicator(failedCount(status) > 0 ? "warn" : "ok");
+}
+
+function failedCount(status) {
+  if (!status) return 0;
+  const failedSites = Array.isArray(status.failed_sites) ? status.failed_sites.length : 0;
+  const failedFeeds = status.rss_opml && Array.isArray(status.rss_opml.failed_feeds) ? status.rss_opml.failed_feeds.length : 0;
+  return failedSites + failedFeeds;
+}
+
+function updateHealthIndicator(tone) {
+  if (!healthStatusPing || !healthStatusDot) return;
+  healthStatusPing.className = "animate-ping absolute inline-flex h-full w-full rounded-full opacity-75";
+  healthStatusDot.className = "relative inline-flex rounded-full h-3 w-3";
+  if (tone === "ok") {
+    healthStatusPing.classList.add("bg-teal-400");
+    healthStatusDot.classList.add("bg-teal-500");
+  } else if (tone === "warn") {
+    healthStatusPing.classList.add("bg-amber-400");
+    healthStatusDot.classList.add("bg-amber-500");
+  } else if (tone === "bad") {
+    healthStatusPing.classList.add("bg-red-500");
+    healthStatusDot.classList.add("bg-red-600");
+  } else {
+    healthStatusPing.classList.add("bg-zinc-500");
+    healthStatusDot.classList.add("bg-zinc-500");
+  }
 }
 
 // ---- Site Filters -----------------------------------------------------------
@@ -250,7 +276,7 @@ function computeSiteStats(items) {
 
 function currentSiteStats() {
   if (state.mode === "ai") return state.statsAi || [];
-  return computeSiteStats(state.allDedup ? (state.itemsAll || []) : (state.itemsAllRaw || []));
+  return computeSiteStats(state.itemsAll || []);
 }
 
 function renderSiteFilters() {
@@ -302,21 +328,12 @@ function renderModeSwitch() {
   sortTimeBtnEl.className = `px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${state.sortBy === "time" ? activeClass : inactiveClass}`;
   sortHotBtnEl.className = `px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${state.sortBy === "hot" ? activeClass : inactiveClass}`;
 
-  // 去重栏在 Tailwind 里需要显示为 flex
-  allDedupeWrapEl?.classList.toggle("hidden", state.mode !== "all");
-  allDedupeWrapEl?.classList.toggle("flex", state.mode === "all");
-
-  if (allDedupeToggleEl) allDedupeToggleEl.checked = state.allDedup;
-  if (allDedupeLabelEl)  allDedupeLabelEl.textContent = state.allDedup ? "已去重" : "未去重";
-
   if (state.mode === "ai") {
     modeHintEl.textContent = `AI强相关信号流 · 共计 ${fmtNumber(state.totalAi)} 条数据`;
     if (listTitleEl) listTitleEl.textContent = "AI 信号流";
   } else {
-    const allCount = state.allDedup
-      ? (state.totalAllMode || state.itemsAll.length)
-      : (state.totalRaw || state.itemsAllRaw.length);
-    modeHintEl.textContent = `全量情报流 (${state.allDedup ? "已进行高置信度去重" : "显示所有原始信号"}) · 共计 ${fmtNumber(allCount)} 条数据`;
+    const allCount = state.totalAllMode || state.itemsAll.length;
+    modeHintEl.textContent = `全量情报流 · 共计 ${fmtNumber(allCount)} 条数据`;
     if (listTitleEl) listTitleEl.textContent = "全量情报";
   }
   renderAdvancedSummary();
@@ -324,29 +341,21 @@ function renderModeSwitch() {
 
 // ---- Filtering --------------------------------------------------------------
 
-function effectiveAllItems() {
-  return state.allDedup ? state.itemsAll : state.itemsAllRaw;
-}
-
 function modeItems() {
-  return state.mode === "all" ? effectiveAllItems() : state.itemsAi;
+  return state.mode === "all" ? state.itemsAll : state.itemsAi;
 }
 
 function getFilteredItems() {
   const q = state.query.trim().toLowerCase();
   let items = modeItems().filter((item) => {
-    // Site filter
     if (state.siteFilter && item.site_id !== state.siteFilter) return false;
-    // Category filter
     if (state.category && (item.category || "科技") !== state.category) return false;
-    // Search filter
     if (!q) return true;
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
     const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""} ${item.description || ""} ${tags}`.toLowerCase();
     return hay.includes(q);
   });
 
-  // Sort by hotness
   if (state.sortBy === "hot") {
     items = [...items].sort((a, b) => {
       const sa = a.hotness_score || 0;
@@ -365,25 +374,17 @@ function renderItemNode(item) {
   const node = itemTpl.content.firstElementChild.cloneNode(true);
   const category = item.category || "科技";
 
-  // 分类左边框 (via data attribute + CSS)
   node.setAttribute("data-category", category);
+  node.querySelector(".card-site").innerHTML = highlightText(item.site_name, state.query);
 
-  // 站点名字
-  node.querySelector(".card-site").textContent = item.site_name;
-
-  // 分类 Badge 配色渲染
   const catBadge = node.querySelector(".card-cat-badge");
   catBadge.textContent = category;
   const meta = CATEGORY_META[category] || CATEGORY_META["科技"];
   catBadge.className = `card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase border ${meta.text} ${meta.bg} ${meta.border}`;
 
-  // 来源分区
-  node.querySelector(".card-source").textContent = `分区: ${item.source}`;
-
-  // 时间格式化
+  node.querySelector(".card-source").innerHTML = highlightText(`分区: ${item.source}`, state.query);
   node.querySelector(".card-time").textContent = fmtTime(item.published_at || item.first_seen_at);
 
-  // 热度指标
   if (item.hotness_score > 0 && item.hotness_raw) {
     const badge = document.createElement("span");
     badge.className = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-sm shadow-red-500/20";
@@ -396,41 +397,38 @@ function renderItemNode(item) {
     node.querySelector(".card-meta").appendChild(badge);
   }
 
-  // 双语标题
   const titleEl = node.querySelector(".card-title");
   const zh = (item.title_zh || "").trim();
   const en = (item.title_en || "").trim();
-  titleEl.textContent = "";
+  titleEl.innerHTML = "";
   if (zh && en && zh !== en) {
     const primary = document.createElement("span");
-    primary.textContent = zh;
+    primary.innerHTML = highlightText(zh, state.query);
     const sub = document.createElement("span");
     sub.className = "card-title-sub text-xs text-zinc-400 font-normal mt-1 block italic font-sans leading-relaxed group-hover:text-zinc-300 transition-colors";
-    sub.textContent = en;
+    sub.innerHTML = highlightText(en, state.query);
     titleEl.appendChild(primary);
     titleEl.appendChild(sub);
   } else {
-    titleEl.textContent = item.title || zh || en;
+    titleEl.innerHTML = highlightText(item.title || zh || en, state.query);
   }
   titleEl.href = item.url;
 
-  // 摘要
   const summaryEl = node.querySelector(".card-summary");
   const desc = (item.description || "").trim();
   if (desc) {
-    summaryEl.textContent = desc;
+    summaryEl.innerHTML = highlightText(desc, state.query);
   } else {
     summaryEl.remove();
   }
 
-  // 标签
   const tagsEl = node.querySelector(".card-tags");
   const tags = Array.isArray(item.tags) ? item.tags : [];
   if (tags.length) {
     tags.forEach((tag) => {
       const span = document.createElement("span");
       span.className = "px-2 py-0.5 rounded-md text-[10px] bg-zinc-900/60 border border-zinc-800 text-zinc-400 font-medium hover:border-zinc-700 hover:text-zinc-300 transition-colors duration-150";
-      span.textContent = tag;
+      span.innerHTML = highlightText(tag, state.query);
       tagsEl.appendChild(span);
     });
   } else {
@@ -465,97 +463,96 @@ function renderSkeleton(count = 5) {
   return frag;
 }
 
-// ---- Date-grouped rendering -------------------------------------------------
+// ---- Virtual Rendering (Lazy Load) ------------------------------------------
 
-function renderDateGrouped(items) {
-  // Group by date key, preserving insertion order (items are pre-sorted by time desc)
-  const groups = new Map();
-  items.forEach((item) => {
-    const key = dateKey(item.published_at || item.first_seen_at);
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(item);
-  });
+let currentFilteredItems = [];
+let currentRenderCount = 0;
+let currentGroupVal = null;
+const BATCH_SIZE = 50;
 
-  const frag = document.createDocumentFragment();
-  for (const [key, groupItems] of groups) {
-    const header = document.createElement("div");
-    header.className = "flex justify-between items-center px-6 py-2.5 bg-zinc-900/10 text-xs font-semibold text-zinc-400 border-b border-zinc-900";
-    
-    const title = document.createElement("h3");
-    const sampleIso = groupItems[0].published_at || groupItems[0].first_seen_at;
-    title.className = "font-bold text-zinc-400";
-    title.textContent = fmtDateGroup(sampleIso);
-    
-    const count = document.createElement("span");
-    count.className = "font-mono font-bold text-[10px] text-zinc-500 bg-zinc-950 px-1.5 py-0.5 border border-zinc-900 rounded";
-    count.textContent = `${fmtNumber(groupItems.length)} 条`;
-    
-    header.append(title, count);
-    frag.appendChild(header);
-
-    groupItems.forEach((item) => frag.appendChild(renderItemNode(item)));
+const renderObserver = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) {
+    loadNextBatch();
   }
+}, { rootMargin: "200px" });
 
-  newsListEl.appendChild(frag);
-}
+function loadNextBatch() {
+  const batch = currentFilteredItems.slice(currentRenderCount, currentRenderCount + BATCH_SIZE);
+  if (!batch.length) return;
 
-// ---- Source-grouped rendering -----------------------------------------------
-
-function groupBySource(items) {
-  const groupMap = new Map();
-  items.forEach((item) => {
-    const key = item.source || "未分区";
-    if (!groupMap.has(key)) groupMap.set(key, []);
-    groupMap.get(key).push(item);
-  });
-  return Array.from(groupMap.entries())
-    .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], "zh-CN"));
-}
-
-function renderGroupedBySource(items) {
-  const groups = groupBySource(items);
   const frag = document.createDocumentFragment();
-  groups.forEach(([source, groupItems]) => {
-    const section = document.createElement("section");
-    const header = document.createElement("header");
-    header.className = "flex justify-between items-center px-6 py-2.5 bg-zinc-900/10 text-xs font-semibold text-zinc-400 border-b border-zinc-900";
+  batch.forEach(item => {
+    let groupVal;
+    if (state.siteFilter) {
+      groupVal = item.source || "未分区";
+    } else {
+      groupVal = dateKey(item.published_at || item.first_seen_at);
+    }
     
-    const title = document.createElement("h3");
-    title.className = "font-bold text-zinc-400";
-    title.textContent = source;
+    if (groupVal !== currentGroupVal) {
+      currentGroupVal = groupVal;
+      const header = document.createElement("div");
+      header.className = "flex justify-between items-center px-6 py-2.5 bg-zinc-900/10 text-xs font-semibold text-zinc-400 border-b border-zinc-900";
+      
+      const title = document.createElement("h3");
+      title.className = "font-bold text-zinc-400";
+      if (state.siteFilter) {
+         title.textContent = groupVal;
+      } else {
+         const sampleIso = item.published_at || item.first_seen_at;
+         title.textContent = fmtDateGroup(sampleIso);
+      }
+      header.append(title);
+      frag.appendChild(header);
+    }
     
-    const count = document.createElement("span");
-    count.className = "font-mono font-bold text-[10px] text-zinc-500 bg-zinc-950 px-1.5 py-0.5 border border-zinc-900 rounded";
-    count.textContent = `${fmtNumber(groupItems.length)} 条`;
-    
-    header.append(title, count);
-    section.appendChild(header);
-    groupItems.forEach((item) => section.appendChild(renderItemNode(item)));
-    frag.appendChild(section);
+    frag.appendChild(renderItemNode(item));
   });
-  newsListEl.appendChild(frag);
-}
 
-// ---- Main render dispatcher -------------------------------------------------
+  currentRenderCount += batch.length;
+  
+  const sentinel = document.getElementById("renderSentinel");
+  if (sentinel) {
+    newsListEl.insertBefore(frag, sentinel);
+  } else {
+    newsListEl.appendChild(frag);
+  }
+  
+  if (currentRenderCount >= currentFilteredItems.length && sentinel) {
+    renderObserver.unobserve(sentinel);
+    sentinel.remove();
+  }
+}
 
 function renderList() {
-  const filtered = getFilteredItems();
-  resultCountEl.textContent = `${fmtNumber(filtered.length)} 条`;
+  currentFilteredItems = getFilteredItems();
+  resultCountEl.textContent = `${fmtNumber(currentFilteredItems.length)} 条`;
   newsListEl.innerHTML = "";
+  currentRenderCount = 0;
+  currentGroupVal = null;
 
-  if (!filtered.length) {
+  if (!currentFilteredItems.length) {
     const empty = document.createElement("div");
     empty.className = "p-10 text-center text-sm font-semibold text-zinc-500";
     empty.textContent = "当前筛选条件下没有匹配的情报结果。";
     newsListEl.appendChild(empty);
     return;
   }
-
-  if (state.siteFilter) {
-    renderGroupedBySource(filtered);
+  
+  let sentinel = document.getElementById("renderSentinel");
+  if (!sentinel) {
+    sentinel = document.createElement("div");
+    sentinel.id = "renderSentinel";
+    sentinel.className = "h-4 w-full";
   } else {
-    renderDateGrouped(filtered);
+    renderObserver.unobserve(sentinel);
   }
+  
+  newsListEl.appendChild(sentinel);
+  renderObserver.observe(sentinel);
+  
+  // Kick off the first batch
+  loadNextBatch();
 }
 
 // ---- WaytoAGI ---------------------------------------------------------------
@@ -650,7 +647,7 @@ function renderWaytoagi(waytoagi) {
     
     const titleEl = document.createElement("span");
     titleEl.className = "text-xs text-zinc-300 group-hover/item:text-teal-300 font-medium leading-relaxed transition-colors";
-    titleEl.textContent = u.title;
+    titleEl.innerHTML = highlightText(u.title, state.query);
     
     row.append(dateEl, titleEl);
     waytoagiListEl.appendChild(row);
@@ -798,9 +795,7 @@ async function loadAllModeData() {
         return res.json();
       })
       .then((payload) => {
-        state.itemsAllRaw = payload.items_all_raw || payload.items_all || state.itemsAi;
         state.itemsAll = payload.items_all || state.itemsAi;
-        state.totalRaw = payload.total_items_raw || state.itemsAllRaw.length;
         state.totalAllMode = payload.total_items_all_mode || state.itemsAll.length;
         state.allDataLoaded = true;
       })
@@ -839,14 +834,12 @@ async function init() {
   if (newsResult.status === "fulfilled") {
     const payload = newsResult.value;
     state.itemsAi       = payload.items_ai || payload.items || [];
-    state.itemsAllRaw   = payload.items_all_raw || payload.items_all || [];
     state.itemsAll      = payload.items_all || [];
     state.statsAi       = payload.site_stats || [];
     state.totalAi       = payload.total_items || state.itemsAi.length;
-    state.totalRaw      = payload.total_items_raw || state.itemsAllRaw.length;
     state.totalAllMode  = payload.total_items_all_mode || state.itemsAll.length;
     state.allDataUrl    = payload.all_mode_data_url || state.allDataUrl;
-    state.allDataLoaded = Boolean(payload.items_all || payload.items_all_raw);
+    state.allDataLoaded = Boolean(payload.items_all);
     state.generatedAt   = payload.generated_at;
 
     renderStats(payload);
@@ -922,16 +915,6 @@ modeAllBtnEl.addEventListener("click", async () => {
     newsListEl.innerHTML = `<div class="p-10 text-center text-sm font-semibold text-red-400">${err.message}</div>`;
   }
 });
-
-if (allDedupeToggleEl) {
-  allDedupeToggleEl.addEventListener("change", (e) => {
-    state.allDedup = Boolean(e.target.checked);
-    renderModeSwitch();
-    renderCategoryNav();
-    renderSiteFilters();
-    renderList();
-  });
-}
 
 sortTimeBtnEl?.addEventListener("click", () => {
   state.sortBy = "time";
