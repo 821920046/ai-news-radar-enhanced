@@ -110,6 +110,15 @@
         background-size: 200% 100%;
         animation: shimmer 1.6s infinite linear;
       }
+
+      /* Logo 磁悬浮动效 */
+      @keyframes float-logo {
+        0%, 100% { transform: translateY(0); filter: drop-shadow(0 0 8px rgba(20, 184, 166, 0.15)); }
+        50% { transform: translateY(-4px); filter: drop-shadow(0 0 16px rgba(20, 184, 166, 0.4)); }
+      }
+      .animate-float-logo {
+        animation: float-logo 3.5s ease-in-out infinite;
+      }
     </style>
   </head>
   <body class="bg-[#09090b] text-zinc-100 min-h-screen font-sans selection:bg-teal-500/30 selection:text-teal-200 antialiased relative overflow-x-hidden w-full">
@@ -126,8 +135,8 @@
       <!-- ==================== HERO HEADER ==================== -->
       <header class="glass-panel rounded-2xl p-6 mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xl shadow-black/30">
         <div class="flex items-center gap-4">
-          <div class="relative">
-            <img class="w-14 h-14 rounded-xl object-contain ring-2 ring-teal-500/20 p-1 bg-zinc-900" src="./assets/log.png" alt="Logo" />
+          <div class="relative animate-float-logo group cursor-pointer">
+            <img class="w-14 h-14 rounded-xl object-contain ring-2 ring-teal-500/20 p-1 bg-zinc-900 group-hover:ring-teal-400/50 group-hover:-rotate-3 transition-all duration-300" src="./assets/log.png" alt="Logo" />
             <span class="absolute -bottom-1 -right-1 flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
