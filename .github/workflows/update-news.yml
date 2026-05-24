@@ -48,6 +48,16 @@ jobs:
           fi
 
       - name: Update data
+        env:
+          OPENROUTER_KEYS: ${{ secrets.OPENROUTER_KEYS }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+          AI_TLDR_ENABLED: ${{ vars.AI_TLDR_ENABLED }}
+          AI_TLDR_TOP_N: ${{ vars.AI_TLDR_TOP_N }}
+          AI_TLDR_MAX_WORKERS: ${{ vars.AI_TLDR_MAX_WORKERS }}
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_TYPE: ${{ vars.WEBHOOK_TYPE }}
+          WEBHOOK_MODE: ${{ vars.WEBHOOK_MODE }}
+          WEBHOOK_HOTNESS_THRESHOLD: ${{ vars.WEBHOOK_HOTNESS_THRESHOLD }}
         run: |
           if [ -f feeds/follow.opml ]; then
             python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --rss-opml feeds/follow.opml

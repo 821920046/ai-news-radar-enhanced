@@ -232,7 +232,7 @@ You only need to run one command, or let GitHub Actions run it on schedule.
 - One-shot local command:
   - `python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml`
 - Scheduled automation:
-  - `.github/workflows/update-news.yml` runs every 30 minutes and commits updated data.
+  - `.github/workflows/update-news.yml` runs every 4 hours and commits updated data.
 
 ### 4. Core features
 
@@ -247,6 +247,8 @@ You only need to run one command, or let GitHub Actions run it on schedule.
 - Coverage radar for source health, signal density, official/newsletter, builders/X, aggregator breadth, and private extension paths
 - Site + section grouping
 - Bilingual title rendering
+- Optional OpenRouter TL;DR generation for the top AI-focused items
+- Optional webhook digest or breaking-news notifications
 - WaytoAGI toggle (`Today` / `Last 7 Days`)
 - RSS resilience:
   - Auto-replace failed feeds with official sources when available
@@ -262,6 +264,15 @@ This project uses a two-layer design:
 
 For custom sources, prefer `feeds/follow.opml` locally or GitHub secret `FOLLOW_OPML_B64` in Actions. Do not commit private subscription files.
 See `docs/SOURCE_COVERAGE.md` for source strategy. The Codex / Claude Code project skill lives at `skills/ai-news-radar/SKILL.md`.
+
+Optional v4 enhancements stay in the advanced layer:
+
+- `OPENROUTER_KEYS`: comma-separated OpenRouter keys. When set, the update pipeline adds `tldr` to selected high-signal items.
+- `AI_TLDR_TOP_N`: max items summarized per run. The default is small to protect free-tier rate limits.
+- `AI_TLDR_MAX_WORKERS`: concurrent OpenRouter requests.
+- `WEBHOOK_URL`: optional robot/webhook endpoint for digest or breaking-news pushes.
+- `WEBHOOK_TYPE`: `markdown`, `wechat`, `dingtalk`, or `feishu`.
+- `WEBHOOK_MODE`: `digest` for a Top N summary, or `breaking` for hotness-threshold alerts.
 
 Source reliability notes:
 
@@ -311,3 +322,5 @@ If you later add private APIs/feeds:
 - Use environment variables or GitHub Secrets
 - Never commit real tokens/keys
 - For private RSS OPML in GitHub Actions, store `base64` content in secret `FOLLOW_OPML_B64`
+- For optional AI TL;DR, store comma-separated OpenRouter keys in `OPENROUTER_KEYS`
+- For optional IM delivery, store the robot endpoint in `WEBHOOK_URL`

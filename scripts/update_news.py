@@ -60,6 +60,8 @@ from scripts.output import build_latest_payloads
 from scripts.fetchers import collect_all
 from scripts.fetchers.opml import fetch_opml_rss
 from scripts.fetchers.waytoagi import fetch_waytoagi_recent_7d
+from scripts.ai_processor import process_items_with_ai
+from scripts.notifier import maybe_send_news_notification
 
 logger = logging.getLogger(__name__)
 
@@ -225,6 +227,13 @@ def main() -> int:
         logger.error("Too few AI items (%d), possible source failure", len(latest_items_ai_dedup))
         return 1
 
+    try:
+        latest_items_ai_dedup = process_items_with_ai(latest_items_ai_dedup)
+    except Exception as exc:
+        logger.warning("Optional AI TL;DR processing failed; continuing without it: %s", exc)
+
+    ai_tldr_count = sum(1 for item in latest_items_ai_dedup if item.get("tldr"))
+
     # site stats
     site_stat: dict[str, dict] = {}
     raw_count_by_site: dict[str, int] = {}
@@ -297,6 +306,9 @@ def main() -> int:
         "fetched_raw_items": len(raw_items),
         "items_before_topic_filter": len(latest_items_all),
         "items_in_24h": len(latest_items_ai_dedup),
+        "ai_processing": {
+            "tldr_items": ai_tldr_count,
+        },
         "rss_opml": {
             "enabled": bool(args.rss_opml),
             "path": "configured" if args.rss_opml else None,
@@ -365,6 +377,11 @@ def main() -> int:
     print(f"Wrote: {status_path}")
     print(f"Wrote: {waytoagi_path} ({waytoagi_payload.get('count_7d', 0)} items)")
     print(f"Wrote: {title_cache_path} ({len(title_cache)} entries)")
+
+    try:
+        maybe_send_news_notification(latest_items_ai_dedup)
+    except Exception as exc:
+        logger.warning("Optional webhook notification failed; data output is still valid: %s", exc)
 
     return 0
 

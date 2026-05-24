@@ -352,7 +352,7 @@ function getFilteredItems() {
     if (state.category && (item.category || "科技") !== state.category) return false;
     if (!q) return true;
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
-    const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""} ${item.description || ""} ${tags}`.toLowerCase();
+    const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""} ${item.tldr || ""} ${item.description || ""} ${tags}`.toLowerCase();
     return hay.includes(q);
   });
 
@@ -415,8 +415,13 @@ function renderItemNode(item) {
   titleEl.href = item.url;
 
   const summaryEl = node.querySelector(".card-summary");
+  const tldr = (item.tldr || "").trim();
   const desc = (item.description || "").trim();
-  if (desc) {
+  if (tldr) {
+    summaryEl.innerHTML = `<span class="inline-flex items-center mr-2 px-1.5 py-0.5 rounded-md bg-teal-500/10 border border-teal-500/20 text-[10px] font-bold text-teal-300 align-middle">AI 极简</span>${highlightText(tldr, state.query)}`;
+    summaryEl.classList.remove("text-zinc-400");
+    summaryEl.classList.add("text-teal-100");
+  } else if (desc) {
     summaryEl.innerHTML = highlightText(desc, state.query);
   } else {
     summaryEl.remove();

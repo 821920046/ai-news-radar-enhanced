@@ -109,6 +109,27 @@ For a private custom setup:
 5. Keep `feeds/follow.opml` private. For GitHub Actions, store its base64
    content in the `FOLLOW_OPML_B64` secret.
 
+## Optional V4 AI and Webhook Layer
+
+The core pipeline still runs without API keys. The v4 enhancements are opt-in:
+
+- `OPENROUTER_KEYS`: comma-separated OpenRouter keys. When present, the pipeline
+  adds a `tldr` field to selected high-signal items.
+- `OPENROUTER_MODEL`: optional model override. Defaults to the repository's
+  configured free-tier model.
+- `AI_TLDR_TOP_N`: number of AI-focused items to summarize per run. The default
+  is intentionally small to avoid rate limits.
+- `AI_TLDR_MAX_WORKERS`: concurrent OpenRouter requests. Keep this low for free
+  tiers.
+- `WEBHOOK_URL`: optional robot/webhook endpoint for digest delivery.
+- `WEBHOOK_TYPE`: `markdown`, `wechat`, `dingtalk`, or `feishu`.
+- `WEBHOOK_MODE`: `digest` for Top N summary pushes, or `breaking` for hotness
+  threshold alerts.
+- `WEBHOOK_HOTNESS_THRESHOLD`: minimum hotness score for `breaking` mode.
+
+Do not commit keys or webhook URLs. Configure them as local environment
+variables or GitHub Secrets/Variables.
+
 ## Adding A Built-In Source
 
 Use this only for sources that should benefit every public visitor:
