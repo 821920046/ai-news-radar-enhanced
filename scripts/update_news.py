@@ -35,6 +35,7 @@ from scripts.utils import (
     add_hotness_scores,
     create_session,
     event_time,
+    normalize_image_url,
     iso,
     make_item_id,
     maybe_fix_mojibake,
@@ -57,6 +58,7 @@ from scripts.dedup import (
 from scripts.translate import add_bilingual_fields, load_title_zh_cache
 from scripts.archive import load_archive
 from scripts.output import build_latest_payloads
+from scripts.recommend import enrich_recommendation_fields
 from scripts.fetchers import collect_all
 from scripts.fetchers.opml import fetch_opml_rss
 from scripts.fetchers.waytoagi import fetch_waytoagi_recent_7d
@@ -133,6 +135,8 @@ def main() -> int:
 
         item_id = make_item_id(raw.site_id, raw.source, title, url)
         seen_this_run.add(item_id)
+        raw_meta = raw.meta if isinstance(raw.meta, dict) else {}
+        image_url = normalize_image_url(raw_meta.get("image_url") or raw_meta.get("thumbnail") or "", url)
 
         existing = archive.get(item_id)
         if existing is None:
@@ -147,6 +151,7 @@ def main() -> int:
                 "first_seen_at": iso(now),
                 "last_seen_at": iso(now),
                 "description": raw.description or "",
+                "image_url": image_url,
             }
         else:
             existing["site_id"] = raw.site_id
@@ -161,6 +166,8 @@ def main() -> int:
             existing["last_seen_at"] = iso(now)
             if raw.description:
                 existing["description"] = raw.description
+            if image_url:
+                existing["image_url"] = image_url
 
     # Prune old archive
     keep_after = now - timedelta(days=args.archive_days)
@@ -232,6 +239,8 @@ def main() -> int:
     except Exception as exc:
         logger.warning("Optional AI TL;DR processing failed; continuing without it: %s", exc)
 
+    enrich_recommendation_fields(latest_items_ai_dedup)
+    enrich_recommendation_fields(latest_items_all_dedup)
     ai_tldr_count = sum(1 for item in latest_items_ai_dedup if item.get("tldr"))
 
     # site stats
@@ -398,6 +407,9 @@ from scripts.utils import (  # noqa: F401, E402
     has_cjk,
     is_mostly_english,
     parse_feed_entries_via_xml,
+    normalize_image_url,
+    extract_image_url_from_html,
+    extract_image_url_from_feed_entry,
     make_item_id,
     parse_unix_timestamp,
     parse_relative_time_zh,

@@ -19,6 +19,7 @@ except ModuleNotFoundError:
 
 from scripts.models import BROWSER_UA, RawItem
 from scripts.utils import (
+    extract_image_url_from_feed_entry,
     first_non_empty,
     host_of_url,
     maybe_fix_mojibake,
@@ -233,6 +234,7 @@ def fetch_iris(session: requests.Session, now: datetime) -> list[RawItem]:
                         or ""
                     )
                     description = truncate_description(raw_desc) if raw_desc.strip() else ""
+                    image_url = extract_image_url_from_feed_entry(entry, url)
                     out.append(
                         RawItem(
                             site_id=site_id,
@@ -241,7 +243,7 @@ def fetch_iris(session: requests.Session, now: datetime) -> list[RawItem]:
                             title=title,
                             url=url,
                             published_at=published,
-                            meta={"feed_url": feed_url},
+                            meta={"feed_url": feed_url, "image_url": image_url},
                             description=description,
                         )
                     )
@@ -260,7 +262,7 @@ def fetch_iris(session: requests.Session, now: datetime) -> list[RawItem]:
                         title=entry["title"],
                         url=entry["link"],
                         published_at=parse_date_any(entry.get("published"), now),
-                        meta={"feed_url": feed_url},
+                        meta={"feed_url": feed_url, "image_url": entry.get("image_url", "")},
                         description=entry.get("description", ""),
                     )
                 )

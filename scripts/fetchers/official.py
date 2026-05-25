@@ -17,7 +17,13 @@ except ModuleNotFoundError:
     feedparser = None
 
 from scripts.models import BROWSER_UA, OFFICIAL_AI_FEEDS, OFFICIAL_AI_MAX_AGE_DAYS, RawItem
-from scripts.utils import maybe_fix_mojibake, parse_date_any, parse_feed_entries_via_xml, truncate_description
+from scripts.utils import (
+    extract_image_url_from_feed_entry,
+    maybe_fix_mojibake,
+    parse_date_any,
+    parse_feed_entries_via_xml,
+    truncate_description,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -170,6 +176,7 @@ def fetch_feed_as_official_items(
             or ""
         )
         description = truncate_description(raw_desc) if raw_desc.strip() else ""
+        image_url = extract_image_url_from_feed_entry(entry, link)
 
         out.append(
             RawItem(
@@ -182,6 +189,7 @@ def fetch_feed_as_official_items(
                 meta={
                     "feed_url": feed_url,
                     "feed_home": feed.get("html_url") or "",
+                    "image_url": image_url,
                 },
                 description=description,
             )

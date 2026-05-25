@@ -123,6 +123,62 @@
         animation: radar-spin 4.5s linear infinite;
         pointer-events: none;
       }
+
+      .timeline-news-row {
+        display: grid;
+        grid-template-columns: 76px minmax(0, 1fr);
+        gap: 16px;
+      }
+      .timeline-stamp {
+        position: relative;
+        min-height: 100%;
+        padding-top: 14px;
+        text-align: right;
+      }
+      .timeline-stamp::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: -20px;
+        right: 7px;
+        width: 1px;
+        background: linear-gradient(180deg, rgba(45, 212, 191, 0.45), rgba(63, 63, 70, 0.35));
+      }
+      .timeline-dot {
+        position: absolute;
+        top: 19px;
+        right: 2px;
+        width: 11px;
+        height: 11px;
+        border-radius: 9999px;
+        background: #14b8a6;
+        box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.12), 0 0 16px rgba(20, 184, 166, 0.55);
+      }
+      .news-thumb {
+        aspect-ratio: 16 / 10;
+      }
+      @media (max-width: 640px) {
+        .timeline-news-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .timeline-stamp {
+          min-height: auto;
+          padding: 0 0 0 14px;
+          text-align: left;
+        }
+        .timeline-stamp::before {
+          left: 4px;
+          right: auto;
+          top: 4px;
+          bottom: -12px;
+        }
+        .timeline-dot {
+          left: 0;
+          right: auto;
+          top: 5px;
+        }
+      }
     </style>
   </head>
   <body class="bg-[#09090b] text-zinc-100 min-h-screen font-sans selection:bg-teal-500/30 selection:text-teal-200 antialiased relative overflow-x-hidden w-full">
@@ -220,7 +276,7 @@
           <h2 class="text-sm font-bold tracking-wider uppercase text-zinc-400" id="listTitle">AI 信号流</h2>
           <span class="text-xs font-bold font-mono px-2.5 py-1 bg-zinc-950/80 border border-zinc-800 rounded-lg text-teal-400 shadow-inner" id="resultCount">0 条</span>
         </div>
-        <div id="newsList" class="divide-y divide-zinc-900/80">
+        <div id="newsList" class="flex flex-col gap-4 p-3 sm:p-4">
           <!-- 动态加载新闻内容 -->
         </div>
       </section>
@@ -302,21 +358,38 @@
 
     <!-- ==================== ITEM TEMPLATE ==================== -->
     <template id="itemTpl">
-      <article class="news-card card-left-border p-5 flex flex-col transition-all duration-300 hover:bg-zinc-900/35 relative overflow-hidden group">
-        <!-- 悬停时轻微的光亮边框动效 -->
-        <div class="absolute inset-0 border border-transparent group-hover:border-zinc-800/40 rounded-none pointer-events-none transition-all duration-300"></div>
-
-        <div class="card-meta flex flex-wrap items-center gap-2 text-xs text-zinc-500 mb-2.5 relative z-10">
-          <span class="card-site font-extrabold text-zinc-300 transition-colors"></span>
-          <span class="card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase"></span>
-          <span class="card-source px-2 py-0.5 rounded-full text-[10px] bg-zinc-900/60 border border-zinc-800 text-zinc-400 font-medium"></span>
-          <time class="card-time ml-auto font-mono text-[11px] text-zinc-500 font-semibold"></time>
+      <article class="news-card timeline-news-row group">
+        <div class="timeline-stamp">
+          <time class="timeline-time block pr-6 text-lg font-extrabold text-zinc-100 font-mono tracking-tight"></time>
+          <span class="timeline-dot"></span>
         </div>
-
-        <div class="relative z-10 flex flex-col">
-          <a class="card-title text-base font-semibold text-zinc-100 leading-snug break-words group-hover:text-teal-300 transition-colors block mb-1.5" target="_blank" rel="noopener noreferrer"></a>
-          <p class="card-summary text-sm text-zinc-400 line-clamp-2 leading-relaxed mb-3 mt-1 break-words"></p>
-          <div class="card-tags flex flex-wrap gap-1.5"></div>
+        <div class="card-shell relative rounded-2xl border border-zinc-800/80 bg-zinc-900/45 shadow-lg shadow-black/20 overflow-hidden transition-all duration-300 group-hover:border-teal-500/30 group-hover:bg-zinc-900/65">
+          <div class="p-4 sm:p-5">
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="min-w-0 flex-1">
+                <div class="card-meta flex flex-wrap items-center gap-2 text-xs text-zinc-500 mb-2.5 pr-24">
+                  <span class="card-site font-bold text-zinc-500 transition-colors"></span>
+                  <span class="card-source px-2 py-0.5 rounded-full text-[10px] bg-zinc-800/70 border border-zinc-700/70 text-zinc-400 font-medium"></span>
+                  <span class="card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase"></span>
+                </div>
+                <a class="card-title text-base sm:text-lg font-extrabold text-zinc-100 leading-snug break-words group-hover:text-teal-200 transition-colors block mb-2" target="_blank" rel="noopener noreferrer"></a>
+                <p class="card-summary text-sm text-zinc-400 line-clamp-2 leading-relaxed mb-3 mt-1 break-words"></p>
+                <div class="card-tags flex flex-wrap gap-1.5 mb-3"></div>
+                <div class="card-discussion text-xs text-zinc-500 font-medium"></div>
+              </div>
+              <a class="card-thumb-link news-thumb w-full md:w-[168px] flex-shrink-0 rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950/70 relative" target="_blank" rel="noopener noreferrer">
+                <img class="card-thumb-img w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105" alt="" loading="lazy" />
+                <div class="card-thumb-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-zinc-800 via-zinc-900 to-teal-950">
+                  <span class="card-thumb-initial text-2xl font-extrabold text-teal-200/80"></span>
+                </div>
+              </a>
+              <div class="card-score absolute top-4 right-4 md:right-5 flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-full border border-amber-400/30 bg-amber-400/10 text-[10px] font-extrabold text-amber-300">精选</span>
+                <span class="px-2 py-0.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-[10px] font-extrabold text-cyan-300 font-mono"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-reason mx-4 sm:mx-5 mb-4 sm:mb-5 px-3 py-2 rounded-xl border border-teal-500/10 bg-teal-500/10 text-xs sm:text-sm text-teal-300 font-semibold leading-relaxed"></div>
         </div>
       </article>
     </template>

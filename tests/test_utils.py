@@ -3,7 +3,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from scripts.update_news import make_item_id, normalize_url, parse_date_any, parse_opml_subscriptions, parse_relative_time_zh
+from scripts.update_news import (
+    extract_image_url_from_html,
+    make_item_id,
+    normalize_image_url,
+    normalize_url,
+    parse_date_any,
+    parse_opml_subscriptions,
+    parse_relative_time_zh,
+)
 
 
 class UtilsTests(unittest.TestCase):
@@ -40,6 +48,13 @@ class UtilsTests(unittest.TestCase):
         self.assertEqual(len(feeds), 2)
         self.assertEqual(feeds[0]["title"], "A")
         self.assertEqual(feeds[1]["title"], "B")
+
+    def test_extract_image_url_from_html(self):
+        html = '<p>Intro</p><img src="/cover.jpg" alt="cover">'
+        self.assertEqual(extract_image_url_from_html(html, "https://example.com/post"), "https://example.com/cover.jpg")
+
+    def test_normalize_image_url_rejects_inline_data(self):
+        self.assertEqual(normalize_image_url("data:image/png;base64,abc"), "")
 
 
 if __name__ == "__main__":

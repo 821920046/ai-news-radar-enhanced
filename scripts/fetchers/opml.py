@@ -19,7 +19,15 @@ except ModuleNotFoundError:
     feedparser = None
 
 from scripts.models import BROWSER_UA, RSS_FEED_REPLACEMENTS, RSS_FEED_SKIP_EXACT, RSS_FEED_SKIP_PREFIXES, RawItem
-from scripts.utils import create_session, first_non_empty, host_of_url, parse_date_any, parse_feed_entries_via_xml, truncate_description
+from scripts.utils import (
+    create_session,
+    extract_image_url_from_feed_entry,
+    first_non_empty,
+    host_of_url,
+    parse_date_any,
+    parse_feed_entries_via_xml,
+    truncate_description,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -176,6 +184,7 @@ def fetch_opml_rss(
                         or ""
                     )
                     description = truncate_description(raw_desc) if raw_desc.strip() else ""
+                    image_url = extract_image_url_from_feed_entry(entry, link)
                     local_items.append(
                         RawItem(
                             site_id="opmlrss",
@@ -187,6 +196,7 @@ def fetch_opml_rss(
                             meta={
                                 "feed_url": feed_url,
                                 "feed_home": feed.get("html_url") or "",
+                                "image_url": image_url,
                             },
                             description=description,
                         )
@@ -209,6 +219,7 @@ def fetch_opml_rss(
                             meta={
                                 "feed_url": feed_url,
                                 "feed_home": feed.get("html_url") or "",
+                                "image_url": entry.get("image_url", ""),
                             },
                             description=entry.get("description", ""),
                         )

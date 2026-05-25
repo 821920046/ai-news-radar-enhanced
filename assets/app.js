@@ -93,6 +93,15 @@ function fmtTime(iso) {
   }).format(d);
 }
 
+function fmtClock(iso) {
+  if (!iso) return "--:--";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "--:--";
+  return new Intl.DateTimeFormat("zh-CN", {
+    hour: "2-digit", minute: "2-digit", hour12: false,
+  }).format(d);
+}
+
 function fmtDate(iso) {
   if (!iso) return "未知日期";
   const d = new Date(`${iso}T00:00:00`);
@@ -116,6 +125,26 @@ function highlightText(text, query) {
   const safeQuery = escapeHtml(query);
   const regex = new RegExp(`(${safeQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   return safeText.replace(regex, '<span class="bg-teal-500/30 text-teal-200 px-0.5 rounded font-bold">$1</span>');
+}
+
+function hostFromUrl(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch (_) {
+    return "";
+  }
+}
+
+function sourceInitial(item) {
+  const text = (item.site_name || item.source || item.title || "AI").trim();
+  return text.slice(0, 2).toUpperCase();
+}
+
+function fallbackReason(item) {
+  if (item.tldr) return `推荐理由：这条消息已经提炼出核心结论，适合快速判断是否深入阅读。`;
+  const tags = Array.isArray(item.tags) ? item.tags : [];
+  if (tags.length) return `推荐理由：命中「${tags[0]}」信号，适合关注相关方向的变化。`;
+  return `推荐理由：已通过 AI/科技主题过滤，适合作为今日情报流的补充线索。`;
 }
 
 // ---- Date Grouping ----------------------------------------------------------
@@ -373,27 +402,23 @@ function getFilteredItems() {
 function renderItemNode(item) {
   const node = itemTpl.content.firstElementChild.cloneNode(true);
   const category = item.category || "科技";
+  const itemTime = item.published_at || item.first_seen_at;
 
   node.setAttribute("data-category", category);
   node.querySelector(".card-site").innerHTML = highlightText(item.site_name, state.query);
+  node.querySelector(".timeline-time").textContent = fmtClock(itemTime);
 
   const catBadge = node.querySelector(".card-cat-badge");
   catBadge.textContent = category;
   const meta = CATEGORY_META[category] || CATEGORY_META["科技"];
   catBadge.className = `card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase border ${meta.text} ${meta.bg} ${meta.border}`;
 
-  node.querySelector(".card-source").innerHTML = highlightText(`分区: ${item.source}`, state.query);
-  node.querySelector(".card-time").textContent = fmtTime(item.published_at || item.first_seen_at);
+  node.querySelector(".card-source").innerHTML = highlightText(`${item.source || hostFromUrl(item.url) || "RSS"} · ${fmtTime(itemTime)}`, state.query);
 
   if (item.hotness_score > 0 && item.hotness_raw) {
     const badge = document.createElement("span");
-    badge.className = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-sm shadow-red-500/20";
-    badge.innerHTML = `
-      <svg class="w-2.5 h-2.5 text-white animate-pulse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path fill-rule="evenodd" d="M12.963 2.285a.75.75 0 00-1.071-.136 9.707 9.707 0 00-.73 9.694l.519.954a.75.75 0 101.32-.718l-.518-.954a8.207 8.207 0 01.618-8.006.75.75 0 00-.138-.833zM7.403 4.274a.75.75 0 00-1.015-.251 9.72 9.72 0 00-4.485 8.148 9.75 9.75 0 0019.227 2.034 9.73 9.73 0 00-3.135-7.463.75.75 0 00-1.017.072l-1.06 1.14a7.22 7.22 0 01-1.636 1.34l-.53.31a.75.75 0 10.764 1.288l.53-.31a8.721 8.721 0 002.492-2.148 8.25 8.25 0 01-14.717 3.562c.18-.838.487-1.65.91-2.4l1.012-1.802a.75.75 0 00-.39-.997l-1.06-.415z" clip-rule="evenodd" />
-      </svg>
-      <span>${item.hotness_raw}</span>
-    `;
+    badge.className = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-orange-500/10 border border-orange-400/20 text-orange-300";
+    badge.textContent = item.hotness_raw;
     node.querySelector(".card-meta").appendChild(badge);
   }
 
@@ -438,6 +463,41 @@ function renderItemNode(item) {
     });
   } else {
     tagsEl.remove();
+  }
+
+  const discussionEl = node.querySelector(".card-discussion");
+  const host = hostFromUrl(item.url);
+  const signalParts = ["关联讨论 1 条"];
+  if (host) signalParts.push(host);
+  if (item.hotness_raw) signalParts.push(`热榜 ${item.hotness_raw}`);
+  discussionEl.textContent = signalParts.join(" · ");
+
+  const scoreEl = node.querySelector(".card-score span:last-child");
+  scoreEl.textContent = item.signal_score || Math.min(99, Math.max(60, Math.round(60 + (item.hotness_score || 0) / 25)));
+
+  const reasonEl = node.querySelector(".card-reason");
+  const reason = item.recommendation_reason || fallbackReason(item).replace(/^推荐理由：/, "");
+  reasonEl.innerHTML = `<span class="text-teal-200">推荐理由：</span>${highlightText(reason, state.query)}`;
+
+  const thumbLink = node.querySelector(".card-thumb-link");
+  const thumbImg = node.querySelector(".card-thumb-img");
+  const thumbFallback = node.querySelector(".card-thumb-fallback");
+  const thumbInitial = node.querySelector(".card-thumb-initial");
+  thumbLink.href = item.url;
+  thumbImg.alt = `${item.site_name || "AI News"} image`;
+  thumbInitial.textContent = sourceInitial(item);
+  if (item.image_url) {
+    thumbImg.src = item.image_url;
+    thumbImg.onerror = () => {
+      thumbImg.removeAttribute("src");
+      thumbImg.classList.add("hidden");
+      thumbFallback.classList.remove("hidden");
+      thumbFallback.classList.add("flex");
+    };
+  } else {
+    thumbImg.classList.add("hidden");
+    thumbFallback.classList.remove("hidden");
+    thumbFallback.classList.add("flex");
   }
 
   return node;
@@ -497,10 +557,10 @@ function loadNextBatch() {
     if (groupVal !== currentGroupVal) {
       currentGroupVal = groupVal;
       const header = document.createElement("div");
-      header.className = "flex justify-between items-center px-6 py-2.5 bg-zinc-900/10 text-xs font-semibold text-zinc-400 border-b border-zinc-900";
+      header.className = "flex justify-between items-center px-2 sm:px-[92px] pt-1 pb-0 text-xs font-semibold text-zinc-500";
       
       const title = document.createElement("h3");
-      title.className = "font-bold text-zinc-400";
+      title.className = "font-bold text-zinc-500 tracking-wide";
       if (state.siteFilter) {
          title.textContent = groupVal;
       } else {

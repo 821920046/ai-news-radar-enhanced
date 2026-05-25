@@ -8,7 +8,7 @@ import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from typing import Any
-from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
+from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 
 import requests
 from dateutil import parser as dtparser
@@ -135,6 +135,8 @@ def is_mostly_english(text: str) -> bool:
 
 
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
+_IMG_TAG_RE = re.compile(r"<img\b[^>]*(?:src|data-src|data-original)=['\"]([^'\"]+)['\"]", re.I)
+_SRCSET_RE = re.compile(r"<img\b[^>]*srcset=['\"]([^'\"]+)['\"]", re.I)
 _MAX_DESC_LEN = 200
 
 
@@ -151,6 +153,78 @@ def truncate_description(text: str, max_len: int = _MAX_DESC_LEN) -> str:
     if len(text) > max_len:
         return text[:max_len].rsplit(" ", 1)[0] + "..."
     return text
+
+
+def normalize_image_url(raw_url: Any, base_url: str = "") -> str:
+    """Normalize a candidate image URL and reject unsupported inline images."""
+    url = str(raw_url or "").strip()
+    if not url:
+        return ""
+    if "," in url and " " in url:
+        url = url.split(",", 1)[0].strip().split(" ", 1)[0].strip()
+    if url.startswith("//"):
+        url = "https:" + url
+    if base_url:
+        url = urljoin(base_url, url)
+    parsed = urlparse(url)
+    if parsed.scheme not in {"http", "https"}:
+        return ""
+    return urlunparse(parsed._replace(fragment="")).strip()
+
+
+def extract_image_url_from_html(html: str, base_url: str = "") -> str:
+    """Extract the first usable image URL from an HTML snippet."""
+    if not html:
+        return ""
+    for pattern in (_IMG_TAG_RE, _SRCSET_RE):
+        match = pattern.search(html)
+        if not match:
+            continue
+        url = normalize_image_url(match.group(1), base_url)
+        if url:
+            return url
+    return ""
+
+
+def extract_image_url_from_feed_entry(entry: Any, base_url: str = "") -> str:
+    """Extract image URLs from common feedparser entry structures."""
+    candidates: list[Any] = []
+
+    for key in ("image", "thumbnail", "itunes_image"):
+        value = entry.get(key) if hasattr(entry, "get") else None
+        if isinstance(value, dict):
+            candidates.extend([value.get("href"), value.get("url")])
+        else:
+            candidates.append(value)
+
+    for key in ("media_thumbnail", "media_content", "enclosures", "links"):
+        values = entry.get(key) if hasattr(entry, "get") else None
+        if isinstance(values, dict):
+            values = [values]
+        for value in values or []:
+            if not isinstance(value, dict):
+                continue
+            mime = str(value.get("type") or value.get("medium") or "").lower()
+            rel = str(value.get("rel") or "").lower()
+            if mime and not (mime.startswith("image/") or mime == "image"):
+                continue
+            if rel and rel not in {"enclosure", "image", "thumbnail", "alternate"}:
+                continue
+            candidates.extend([value.get("url"), value.get("href")])
+
+    raw_html = str(
+        (entry.get("summary") if hasattr(entry, "get") else "")
+        or (entry.get("description") if hasattr(entry, "get") else "")
+        or ((entry.get("content", [{}])[0].get("value")) if hasattr(entry, "get") and entry.get("content") else "")
+        or ""
+    )
+    candidates.append(extract_image_url_from_html(raw_html, base_url))
+
+    for candidate in candidates:
+        url = normalize_image_url(candidate, base_url)
+        if url:
+            return url
+    return ""
 
 
 def parse_feed_entries_via_xml(feed_xml: bytes) -> list[dict[str, Any]]:
@@ -195,13 +269,37 @@ def parse_feed_entries_via_xml(feed_xml: bytes) -> list[dict[str, Any]]:
                 or ""
             )
             description = truncate_description(raw_desc) if raw_desc else ""
+            image_url = ""
+            media_node = node.find("{*}thumbnail")
+            if media_node is None:
+                media_node = node.find("{*}content")
+            if media_node is not None:
+                medium = str(media_node.get("medium") or media_node.get("type") or "").lower()
+                if not medium or medium == "image" or medium.startswith("image/"):
+                    image_url = normalize_image_url(media_node.get("url"), link)
+            if not image_url:
+                enclosure = node.find("enclosure")
+                if enclosure is None:
+                    enclosure = node.find("{*}enclosure")
+                if enclosure is not None and str(enclosure.get("type") or "").lower().startswith("image/"):
+                    image_url = normalize_image_url(enclosure.get("url"), link)
+            if not image_url:
+                image_url = extract_image_url_from_html(raw_desc, link)
 
             if title and link:
                 key = (title, link)
                 if key in seen:
                     continue
                 seen.add(key)
-                out.append({"title": title, "link": link, "published": published, "description": description})
+                out.append(
+                    {
+                        "title": title,
+                        "link": link,
+                        "published": published,
+                        "description": description,
+                        "image_url": image_url,
+                    }
+                )
     return out
 
 
