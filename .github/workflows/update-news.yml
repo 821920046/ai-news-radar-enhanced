@@ -41,8 +41,12 @@ jobs:
         run: |
           mkdir -p feeds
           if [ -n "$FOLLOW_OPML_B64" ]; then
-            echo "$FOLLOW_OPML_B64" | base64 --decode > feeds/follow.opml
-            echo "Loaded feeds/follow.opml from FOLLOW_OPML_B64 secret"
+            if printf '%s' "$FOLLOW_OPML_B64" | tr -d '\r\n ' | base64 --decode > feeds/follow.opml; then
+              echo "Loaded feeds/follow.opml from FOLLOW_OPML_B64 secret"
+            else
+              rm -f feeds/follow.opml
+              echo "::warning::FOLLOW_OPML_B64 is set but is not valid base64; continuing without private OPML"
+            fi
           else
             echo "No FOLLOW_OPML_B64 secret provided; RSS OPML is optional"
           fi
