@@ -14,15 +14,34 @@
       <outline text="Anthropic News" title="Anthropic News" type="rss" xmlUrl="https://www.anthropic.com/news.rss" htmlUrl="https://www.anthropic.com/news" />
     </outline>
 
-    <!-- 2. Hardware & Infrastructure -->
+    <!-- 2. AI Labs & Model Providers -->
+    <outline text="AI Labs &amp; Model Providers">
+      <outline text="Microsoft AI Blog" title="Microsoft AI Blog" type="rss" xmlUrl="https://blogs.microsoft.com/ai/feed/" htmlUrl="https://blogs.microsoft.com/ai/" />
+      <outline text="Meta AI Blog" title="Meta AI Blog" type="rss" xmlUrl="https://ai.meta.com/blog/rss/" htmlUrl="https://ai.meta.com/blog/" />
+      <outline text="NVIDIA AI Blog" title="NVIDIA AI Blog" type="rss" xmlUrl="https://blogs.nvidia.com/ai/feed/" htmlUrl="https://blogs.nvidia.com/ai/" />
+      <outline text="Ollama Blog" title="Ollama Blog" type="rss" xmlUrl="https://ollama.com/blog/rss.xml" htmlUrl="https://ollama.com/blog" />
+      <outline text="Together AI Blog" title="Together AI Blog" type="rss" xmlUrl="https://www.together.ai/blog/rss.xml" htmlUrl="https://www.together.ai/blog" />
+      <outline text="TechCrunch AI" title="TechCrunch AI" type="rss" xmlUrl="https://techcrunch.com/category/artificial-intelligence/feed/" htmlUrl="https://techcrunch.com/category/artificial-intelligence/" />
+      <outline text="VentureBeat AI" title="VentureBeat AI" type="rss" xmlUrl="https://venturebeat.com/category/ai/feed/" htmlUrl="https://venturebeat.com/category/ai/" />
+    </outline>
+
+    <!-- 3. Research & Papers -->
+    <outline text="Research &amp; Papers">
+      <outline text="Hugging Face Papers" title="Hugging Face Papers" type="rss" xmlUrl="https://huggingface.co/papers/feed.xml" htmlUrl="https://huggingface.co/papers" />
+      <outline text="Papers With Code" title="Papers With Code" type="rss" xmlUrl="https://paperswithcode.com/latest.rss" htmlUrl="https://paperswithcode.com" />
+      <outline text="Quanta Magazine - Computer Science" title="Quanta Magazine - CS" type="rss" xmlUrl="https://api.quantamagazine.org/feed/" htmlUrl="https://www.quantamagazine.org/computer-science/" />
+    </outline>
+
+    <!-- 4. Hardware & Infrastructure -->
     <outline text="Hardware &amp; Infrastructure">
       <outline text="AnandTech" title="AnandTech" type="rss" xmlUrl="https://www.anandtech.com/rss" htmlUrl="https://www.anandtech.com/" />
       <outline text="Tom's Hardware" title="Tom's Hardware" type="rss" xmlUrl="https://www.tomshardware.com/rss.xml" htmlUrl="https://www.tomshardware.com/" />
       <outline text="Ars Technica" title="Ars Technica" type="rss" xmlUrl="https://feeds.arstechnica.com/arstechnica/index" htmlUrl="https://arstechnica.com/" />
+      <outline text="NVIDIA Technical Blog" title="NVIDIA Technical Blog" type="rss" xmlUrl="https://developer.nvidia.com/blog/feed/" htmlUrl="https://developer.nvidia.com/blog" />
       <outline text="ServeTheHome" title="ServeTheHome" type="rss" xmlUrl="https://www.servethehome.com/feed/" htmlUrl="https://www.servethehome.com/" />
     </outline>
 
-    <!-- 3. Cybersecurity & Privacy -->
+    <!-- 5. Cybersecurity & Privacy -->
     <outline text="Cybersecurity &amp; Privacy">
       <outline text="The Hacker News" title="The Hacker News" type="rss" xmlUrl="https://feeds.feedburner.com/TheHackersNews" htmlUrl="https://thehackernews.com/" />
       <outline text="Dark Reading" title="Dark Reading" type="rss" xmlUrl="https://www.darkreading.com/rss.xml" htmlUrl="https://www.darkreading.com/" />
@@ -31,15 +50,22 @@
       <outline text="Schneier on Security" title="Schneier on Security" type="rss" xmlUrl="https://www.schneier.com/blog/index.rdf" htmlUrl="https://www.schneier.com/blog/" />
     </outline>
 
-    <!-- 4. Thought Leaders & Strategic Analysis -->
+    <!-- 6. Builders & Strategic Analysis -->
     <outline text="Thought Leaders &amp; Analysis">
       <outline text="Benedict Evans" title="Benedict Evans" type="rss" xmlUrl="https://www.ben-evans.com/benedictevans?format=rss" htmlUrl="https://www.ben-evans.com/" />
       <outline text="Simon Willison's Weblog" title="Simon Willison's Weblog" type="rss" xmlUrl="https://simonwillison.net/atom/entries/" htmlUrl="https://simonwillison.net/" />
+      <outline text="Latent Space" title="Latent Space" type="rss" xmlUrl="https://www.latent.space/feed" htmlUrl="https://www.latent.space/" />
       <outline text="Stratechery by Ben Thompson" title="Stratechery by Ben Thompson" type="rss" xmlUrl="https://stratechery.com/feed/" htmlUrl="https://stratechery.com/" />
-      <outline text="Quanta Magazine - Computer Science" title="Quanta Magazine - CS" type="rss" xmlUrl="https://api.quantamagazine.org/feed/" htmlUrl="https://www.quantamagazine.org/computer-science/" />
     </outline>
 
-    <!-- 5. Engineering & Development -->
+    <!-- 7. Chinese AI & Tech Sources -->
+    <outline text="Chinese AI &amp; Tech Sources">
+      <outline text="机器之心" title="机器之心" type="rss" xmlUrl="https://www.jiqizhixin.com/rss" htmlUrl="https://www.jiqizhixin.com/" />
+      <outline text="InfoQ 中文" title="InfoQ 中文" type="rss" xmlUrl="https://www.infoq.cn/feed" htmlUrl="https://www.infoq.cn/" />
+      <outline text="少数派" title="少数派" type="rss" xmlUrl="https://sspai.com/feed" htmlUrl="https://sspai.com/" />
+    </outline>
+
+    <!-- 8. Engineering & Development -->
     <outline text="Engineering &amp; Dev">
       <outline text="GitHub Changelog" title="GitHub Changelog" type="rss" xmlUrl="https://github.blog/changelog/feed/" htmlUrl="https://github.blog/changelog/" />
       <outline text="Vercel Blog" title="Vercel Blog" type="rss" xmlUrl="https://vercel.com/blog/feed" htmlUrl="https://vercel.com/blog" />
