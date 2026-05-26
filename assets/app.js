@@ -141,10 +141,13 @@ function sourceInitial(item) {
 }
 
 function fallbackReason(item) {
-  if (item.tldr) return `推荐理由：这条消息已经提炼出核心结论，适合快速判断是否深入阅读。`;
+  const title = (item.title_zh || item.title || item.title_en || "").trim();
+  const desc = (item.tldr || item.description || "").replace(/\s+/g, " ").trim();
   const tags = Array.isArray(item.tags) ? item.tags : [];
-  if (tags.length) return `推荐理由：命中「${tags[0]}」信号，适合关注相关方向的变化。`;
-  return `推荐理由：已通过 AI/科技主题过滤，适合作为今日情报流的补充线索。`;
+  const topic = tags.length ? `命中「${tags[0]}」信号` : "通过 AI/科技主题过滤";
+  if (desc) return `推荐理由：${desc.slice(0, 54)}，${topic}，值得优先扫一眼。`;
+  if (title) return `推荐理由：${title.slice(0, 54)}，${topic}，适合作为今日重点线索。`;
+  return `推荐理由：${topic}，适合作为今日情报流的补充线索。`;
 }
 
 // ---- Date Grouping ----------------------------------------------------------
@@ -481,23 +484,15 @@ function renderItemNode(item) {
 
   const thumbLink = node.querySelector(".card-thumb-link");
   const thumbImg = node.querySelector(".card-thumb-img");
-  const thumbFallback = node.querySelector(".card-thumb-fallback");
-  const thumbInitial = node.querySelector(".card-thumb-initial");
   thumbLink.href = item.url;
   thumbImg.alt = `${item.site_name || "AI News"} image`;
-  thumbInitial.textContent = sourceInitial(item);
   if (item.image_url) {
     thumbImg.src = item.image_url;
     thumbImg.onerror = () => {
-      thumbImg.removeAttribute("src");
-      thumbImg.classList.add("hidden");
-      thumbFallback.classList.remove("hidden");
-      thumbFallback.classList.add("flex");
+      thumbLink.remove();
     };
   } else {
-    thumbImg.classList.add("hidden");
-    thumbFallback.classList.remove("hidden");
-    thumbFallback.classList.add("flex");
+    thumbLink.remove();
   }
 
   return node;

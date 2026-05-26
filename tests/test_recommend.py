@@ -4,9 +4,16 @@ from scripts.recommend import build_recommendation_reason, build_signal_score, e
 
 
 class RecommendTests(unittest.TestCase):
-    def test_tag_reason_takes_priority(self):
-        record = {"tags": ["模型发布"], "hotness_score": 0, "site_id": "buzzing"}
-        self.assertIn("模型或产品发布", build_recommendation_reason(record))
+    def test_reason_uses_article_specific_fact(self):
+        record = {
+            "title": "OpenRouter 完成 1.13 亿美元融资",
+            "tags": ["模型发布", "行业动态"],
+            "hotness_score": 400,
+            "site_id": "buzzing",
+        }
+        reason = build_recommendation_reason(record)
+        self.assertIn("OpenRouter", reason)
+        self.assertIn("1.13 亿美元", reason)
 
     def test_official_source_gets_higher_score(self):
         base = {"site_id": "buzzing", "tags": [], "hotness_score": 0}

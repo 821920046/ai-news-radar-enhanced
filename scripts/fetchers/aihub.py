@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 
 from scripts.models import RawItem, UTC
 from scripts.dedup import is_hubtoday_generic_anchor_title, normalize_aihubtoday_records
-from scripts.utils import normalize_url, parse_date_any
+from scripts.utils import extract_image_url_from_html, normalize_url, parse_date_any, truncate_description
 
 logger = logging.getLogger(__name__)
 
@@ -136,6 +136,16 @@ def fetch_aibase(session: requests.Session, now: datetime) -> list[RawItem]:
         if time_tag:
             time_text = time_tag.get_text(" ", strip=True)
 
+        image_url = extract_image_url_from_html(str(a), "https://www.aibase.com")
+        desc = ""
+        for selector in ("p", ".line-clamp-2", ".text-gray-500", ".text-gray-400"):
+            desc_tag = a.select_one(selector)
+            if desc_tag and desc_tag is not time_tag:
+                desc = truncate_description(desc_tag.get_text(" ", strip=True))
+                if desc and desc != title and (not time_text or time_text not in desc):
+                    break
+                desc = ""
+
         published = parse_date_any(time_text, now)
         out.append(
             RawItem(
@@ -145,7 +155,8 @@ def fetch_aibase(session: requests.Session, now: datetime) -> list[RawItem]:
                 title=title,
                 url=urljoin("https://www.aibase.com", href),
                 published_at=published,
-                meta={"time_hint": time_text},
+                meta={"time_hint": time_text, "image_url": image_url},
+                description=desc,
             )
         )
 

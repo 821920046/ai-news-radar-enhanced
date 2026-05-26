@@ -23,6 +23,7 @@ from scripts.utils import (
     first_non_empty,
     host_of_url,
     maybe_fix_mojibake,
+    normalize_image_url,
     normalize_url,
     parse_date_any,
     parse_feed_entries_via_xml,
@@ -32,6 +33,27 @@ from scripts.utils import (
 )
 
 logger = logging.getLogger(__name__)
+
+IMAGE_FIELD_NAMES = ("image_url", "image", "thumbnail", "cover", "cover_url", "pic", "picture", "thumb")
+
+
+def image_url_from_mapping(data: dict[str, Any], base_url: str = "") -> str:
+    for key in IMAGE_FIELD_NAMES:
+        value = data.get(key)
+        if isinstance(value, dict):
+            value = first_non_empty(value.get("url"), value.get("href"), value.get("src"))
+        elif isinstance(value, list):
+            value = next((v for v in value if isinstance(v, str) and v.strip()), "")
+        image_url = normalize_image_url(value, base_url)
+        if image_url:
+            return image_url
+    for key in ("extra", "meta", "media"):
+        nested = data.get(key)
+        if isinstance(nested, dict):
+            image_url = image_url_from_mapping(nested, base_url)
+            if image_url:
+                return image_url
+    return ""
 
 
 def extract_next_f_merged(html: str) -> str:
@@ -178,6 +200,8 @@ def fetch_buzzing(session: requests.Session, now: datetime) -> list[RawItem]:
             site_name,
         )
         published = parse_date_any(it.get("date_published") or it.get("date_modified"), now)
+        image_url = image_url_from_mapping(it, url)
+        raw_desc = first_non_empty(it.get("summary"), it.get("description"), it.get("content"))
         out.append(
             RawItem(
                 site_id=site_id,
@@ -186,7 +210,11 @@ def fetch_buzzing(session: requests.Session, now: datetime) -> list[RawItem]:
                 title=title,
                 url=url,
                 published_at=published,
-                meta={"raw": {k: it.get(k) for k in ("source", "site_name", "channel", "category")}},
+                meta={
+                    "raw": {k: it.get(k) for k in ("source", "site_name", "channel", "category")},
+                    "image_url": image_url,
+                },
+                description=truncate_description(raw_desc) if raw_desc else "",
             )
         )
     return out
@@ -579,6 +607,8 @@ def fetch_newsnow(session: requests.Session, now: datetime) -> list[RawItem]:
             if not published:
                 published = updated
 
+            image_url = image_url_from_mapping(it, url)
+            raw_desc = first_non_empty(it.get("summary"), it.get("description"), it.get("content"), it.get("desc"))
             out.append(
                 RawItem(
                     site_id=site_id,
@@ -587,7 +617,8 @@ def fetch_newsnow(session: requests.Session, now: datetime) -> list[RawItem]:
                     title=title,
                     url=url,
                     published_at=published,
-                    meta={},
+                    meta={"image_url": image_url},
+                    description=truncate_description(raw_desc) if raw_desc else "",
                 )
             )
 

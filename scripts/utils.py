@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import hashlib
+import html as html_lib
 import json
 import re
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from typing import Any
 from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
@@ -135,9 +137,16 @@ def is_mostly_english(text: str) -> bool:
 
 
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
-_IMG_TAG_RE = re.compile(r"<img\b[^>]*(?:src|data-src|data-original)=['\"]([^'\"]+)['\"]", re.I)
-_SRCSET_RE = re.compile(r"<img\b[^>]*srcset=['\"]([^'\"]+)['\"]", re.I)
+_HTML_IMAGE_TAG_RE = re.compile(r"<(?:meta|link|img)\b[^>]*>", re.I)
+_HTML_ATTR_RE = re.compile(r"([a-zA-Z_:.-]+)\s*=\s*(['\"])(.*?)\2", re.S)
+_META_IMAGE_KEYS = {"og:image", "og:image:url", "twitter:image", "twitter:image:src"}
+_LINK_IMAGE_RELS = {"image_src"}
+_PLACEHOLDER_IMAGE_RE = re.compile(
+    r"(?:favicon|apple-touch-icon|sprite|spacer|placeholder|default-avatar|/avatar/|/logo(?:[-_.]|$))",
+    re.I,
+)
 _MAX_DESC_LEN = 200
+_MAX_IMAGE_HTML_BYTES = 2_000_000
 
 
 def strip_html_tags(html: str) -> str:
@@ -172,15 +181,61 @@ def normalize_image_url(raw_url: Any, base_url: str = "") -> str:
     return urlunparse(parsed._replace(fragment="")).strip()
 
 
+def _html_attrs(tag: str) -> dict[str, str]:
+    return {m.group(1).lower(): html_lib.unescape(m.group(3).strip()) for m in _HTML_ATTR_RE.finditer(tag)}
+
+
+def _srcset_candidates(srcset: str) -> list[str]:
+    out: list[str] = []
+    for part in str(srcset or "").split(","):
+        candidate = part.strip().split(" ", 1)[0].strip()
+        if candidate:
+            out.append(candidate)
+    return out
+
+
+def _is_probable_placeholder_image(url: str) -> bool:
+    if not url:
+        return True
+    return bool(_PLACEHOLDER_IMAGE_RE.search(url))
+
+
+def _normalize_content_image(raw_url: Any, base_url: str = "") -> str:
+    url = normalize_image_url(raw_url, base_url)
+    if not url or _is_probable_placeholder_image(url):
+        return ""
+    return url
+
+
 def extract_image_url_from_html(html: str, base_url: str = "") -> str:
-    """Extract the first usable image URL from an HTML snippet."""
+    """Extract the first usable content image URL from an HTML snippet."""
     if not html:
         return ""
-    for pattern in (_IMG_TAG_RE, _SRCSET_RE):
-        match = pattern.search(html)
-        if not match:
-            continue
-        url = normalize_image_url(match.group(1), base_url)
+    candidates: list[Any] = []
+    for tag in _HTML_IMAGE_TAG_RE.findall(html):
+        attrs = _html_attrs(tag)
+        tag_l = tag[:12].lower()
+        if tag_l.startswith("<meta"):
+            key = (attrs.get("property") or attrs.get("name") or "").lower()
+            if key in _META_IMAGE_KEYS:
+                candidates.append(attrs.get("content"))
+        elif tag_l.startswith("<link"):
+            rel = (attrs.get("rel") or "").lower()
+            if rel in _LINK_IMAGE_RELS:
+                candidates.append(attrs.get("href"))
+        elif tag_l.startswith("<img"):
+            candidates.extend(
+                [
+                    attrs.get("data-original"),
+                    attrs.get("data-src"),
+                    attrs.get("data-lazy-src"),
+                    attrs.get("src"),
+                ]
+            )
+            candidates.extend(_srcset_candidates(attrs.get("srcset") or ""))
+
+    for candidate in candidates:
+        url = _normalize_content_image(candidate, base_url)
         if url:
             return url
     return ""
@@ -221,10 +276,98 @@ def extract_image_url_from_feed_entry(entry: Any, base_url: str = "") -> str:
     candidates.append(extract_image_url_from_html(raw_html, base_url))
 
     for candidate in candidates:
-        url = normalize_image_url(candidate, base_url)
+        url = _normalize_content_image(candidate, base_url)
         if url:
             return url
     return ""
+
+
+def fetch_article_image_url(session: requests.Session, page_url: str, timeout: int = 8) -> str:
+    """Fetch an article page and extract its Open Graph/Twitter/content image."""
+    url = str(page_url or "").strip()
+    if not url.startswith(("http://", "https://")):
+        return ""
+    try:
+        resp = session.get(
+            url,
+            timeout=timeout,
+            headers={
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            },
+        )
+        resp.raise_for_status()
+    except requests.RequestException:
+        return ""
+
+    content_type = str(resp.headers.get("content-type") or "").lower()
+    if content_type and "html" not in content_type and "text/" not in content_type:
+        return ""
+    raw = resp.content[:_MAX_IMAGE_HTML_BYTES]
+    encoding = resp.encoding or resp.apparent_encoding or "utf-8"
+    html = raw.decode(encoding, errors="replace")
+    return extract_image_url_from_html(html, resp.url or url)
+
+
+def enrich_missing_article_images(
+    items: list[dict[str, Any]],
+    session: requests.Session,
+    *,
+    max_items: int = 80,
+    max_workers: int = 8,
+    timeout: int = 8,
+) -> int:
+    """Fill missing image_url fields by inspecting original article pages."""
+    if max_items <= 0:
+        return 0
+
+    candidates: list[dict[str, Any]] = []
+    seen_urls: set[str] = set()
+    for item in items:
+        if item.get("image_url"):
+            continue
+        url = str(item.get("url") or "").strip()
+        if not url.startswith(("http://", "https://")):
+            continue
+        key = normalize_url(url)
+        if key in seen_urls:
+            continue
+        seen_urls.add(key)
+        candidates.append(item)
+        if len(candidates) >= max_items:
+            break
+
+    if not candidates:
+        return 0
+
+    found_by_url: dict[str, str] = {}
+    worker_count = min(max(1, max_workers), len(candidates))
+    with ThreadPoolExecutor(max_workers=worker_count) as executor:
+        future_to_url = {
+            executor.submit(fetch_article_image_url, session, str(item.get("url") or ""), timeout): normalize_url(
+                str(item.get("url") or "")
+            )
+            for item in candidates
+        }
+        for future in as_completed(future_to_url):
+            try:
+                image_url = future.result()
+            except Exception:
+                continue
+            if image_url:
+                found_by_url[future_to_url[future]] = image_url
+
+    if not found_by_url:
+        return 0
+
+    updated = 0
+    for item in items:
+        if item.get("image_url"):
+            continue
+        image_url = found_by_url.get(normalize_url(str(item.get("url") or "")))
+        if image_url:
+            item["image_url"] = image_url
+            updated += 1
+    return updated
 
 
 def parse_feed_entries_via_xml(feed_xml: bytes) -> list[dict[str, Any]]:

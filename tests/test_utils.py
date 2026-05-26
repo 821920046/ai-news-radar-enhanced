@@ -53,6 +53,13 @@ class UtilsTests(unittest.TestCase):
         html = '<p>Intro</p><img src="/cover.jpg" alt="cover">'
         self.assertEqual(extract_image_url_from_html(html, "https://example.com/post"), "https://example.com/cover.jpg")
 
+    def test_extract_image_url_prefers_og_image(self):
+        html = """
+        <meta property="og:image" content="https://cdn.example.com/news.png">
+        <img src="/inline.jpg" alt="inline">
+        """
+        self.assertEqual(extract_image_url_from_html(html, "https://example.com/post"), "https://cdn.example.com/news.png")
+
     def test_normalize_image_url_rejects_inline_data(self):
         self.assertEqual(normalize_image_url("data:image/png;base64,abc"), "")
 

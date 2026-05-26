@@ -26,6 +26,7 @@ if _project_root not in sys.path:
 import argparse
 import json
 import logging
+import os
 from datetime import datetime as dt_cls, timedelta, timezone
 from pathlib import Path
 
@@ -42,6 +43,7 @@ from scripts.utils import (
     normalize_url,
     parse_iso,
     utc_now,
+    enrich_missing_article_images,
 )
 from scripts.topic_filter import (
     classify_item,
@@ -66,6 +68,17 @@ from scripts.ai_processor import process_items_with_ai
 from scripts.notifier import maybe_send_news_notification
 
 logger = logging.getLogger(__name__)
+
+
+def _env_int(name: str, default: int) -> int:
+    raw = os.environ.get(name)
+    if raw is None or raw == "":
+        return default
+    try:
+        return int(raw)
+    except ValueError:
+        logger.warning("Invalid %s=%r; using %d.", name, raw, default)
+        return default
 
 
 def main() -> int:
@@ -224,6 +237,34 @@ def main() -> int:
     )
     latest_items_ai_dedup = dedupe_items_by_title_url(latest_items)
     latest_items_all_dedup = dedupe_items_by_title_url(latest_items_all)
+
+    image_pool: list[dict] = []
+    seen_image_ids: set[str] = set()
+    for item in latest_items_ai_dedup + latest_items_all_dedup:
+        item_id = str(item.get("id") or "")
+        if item_id and item_id in seen_image_ids:
+            continue
+        if item_id:
+            seen_image_ids.add(item_id)
+        image_pool.append(item)
+    image_enriched_count = enrich_missing_article_images(
+        image_pool,
+        session,
+        max_items=max(0, _env_int("ARTICLE_IMAGE_TOP_N", 80)),
+        max_workers=max(1, _env_int("ARTICLE_IMAGE_MAX_WORKERS", 8)),
+        timeout=max(1, _env_int("ARTICLE_IMAGE_TIMEOUT", 8)),
+    )
+    if image_enriched_count:
+        image_by_id = {str(item.get("id")): item.get("image_url") for item in image_pool if item.get("image_url")}
+        for collection in (latest_items_ai_dedup, latest_items_all_dedup):
+            for item in collection:
+                image_url = image_by_id.get(str(item.get("id") or ""))
+                if image_url and not item.get("image_url"):
+                    item["image_url"] = image_url
+        for item_id, image_url in image_by_id.items():
+            if item_id in archive and image_url and not archive[item_id].get("image_url"):
+                archive[item_id]["image_url"] = image_url
+        logger.info("Article image enrichment added %d images.", image_enriched_count)
 
     # Add hotness scores for trending sort
     add_hotness_scores(latest_items_ai_dedup)
