@@ -11,6 +11,7 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
 import requests
+from scripts.utils import _env_int
 
 logger = logging.getLogger(__name__)
 
@@ -56,15 +57,7 @@ class KeyPoolManager:
             return bool(self.keys) and len(self.exhausted_keys) >= len(self.keys)
 
 
-def _env_int(name: str, default: int) -> int:
-    raw = os.environ.get(name)
-    if raw is None or raw == "":
-        return default
-    try:
-        return int(raw)
-    except ValueError:
-        logger.warning("[AI Pipeline] Invalid %s=%r; using %d.", name, raw, default)
-        return default
+
 
 
 def _is_disabled() -> bool:
@@ -192,14 +185,14 @@ def process_items_with_ai(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     if not key_manager.keys:
         return items
 
-    min_chars = max(1, _env_int("AI_TLDR_MIN_CHARS", DEFAULT_TLDR_MIN_CHARS))
-    top_n = _env_int("AI_TLDR_TOP_N", DEFAULT_TLDR_TOP_N)
+    min_chars = max(1, _env_int("AI_TLDR_MIN_CHARS", DEFAULT_TLDR_MIN_CHARS, prefix="AI Pipeline"))
+    top_n = _env_int("AI_TLDR_TOP_N", DEFAULT_TLDR_TOP_N, prefix="AI Pipeline")
     selected = _selected_items(items, top_n, min_chars)
     if not selected:
         logger.info("[AI Pipeline] No eligible items selected for TL;DR generation.")
         return items
 
-    max_workers = max(1, _env_int("AI_TLDR_MAX_WORKERS", DEFAULT_TLDR_MAX_WORKERS))
+    max_workers = max(1, _env_int("AI_TLDR_MAX_WORKERS", DEFAULT_TLDR_MAX_WORKERS, prefix="AI Pipeline"))
     max_workers = min(max_workers, len(selected), len(key_manager.keys))
     logger.info("[AI Pipeline] Generating TL;DR for %d/%d items.", len(selected), len(items))
 

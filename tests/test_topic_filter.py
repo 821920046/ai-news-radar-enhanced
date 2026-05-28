@@ -1,20 +1,26 @@
 import unittest
 
-from scripts.update_news import (
-    build_latest_payloads,
+from scripts.output import build_latest_payloads
+from scripts.dedup import (
     dedupe_items_by_title_url,
-    is_ai_related_record,
     is_hubtoday_generic_anchor_title,
     is_hubtoday_placeholder_title,
-    maybe_fix_mojibake,
+)
+from scripts.topic_filter import (
+    is_ai_related_record,
     normalize_source_for_display,
-    parse_ai_breakfast_items,
-    parse_feed_entries_via_xml,
-    parse_anthropic_news_items,
-    parse_follow_builders_items,
-    parse_openai_codex_changelog_items,
     redact_public_text,
 )
+from scripts.utils import (
+    maybe_fix_mojibake,
+    parse_feed_entries_via_xml,
+)
+from scripts.fetchers.official import (
+    parse_anthropic_news_items,
+    parse_openai_codex_changelog_items,
+)
+from scripts.fetchers.newsletters import parse_ai_breakfast_items
+from scripts.fetchers.builders import parse_follow_builders_items
 
 
 class TopicFilterTests(unittest.TestCase):

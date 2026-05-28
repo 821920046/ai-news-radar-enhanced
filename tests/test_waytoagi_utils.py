@@ -1,10 +1,10 @@
 import unittest
 from datetime import datetime
 
-from scripts.update_news import (
-    SH_TZ,
+from scripts.models import SH_TZ
+from scripts.utils import decode_escaped_json
+from scripts.fetchers.waytoagi import (
     clean_update_title,
-    decode_escaped_json,
     extract_waytoagi_recent_updates_from_block_map,
     infer_shanghai_year_for_month_day,
     parse_md_heading,

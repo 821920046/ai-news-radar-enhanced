@@ -33,6 +33,7 @@ from pathlib import Path
 from scripts.models import SH_TZ, UTC, WAYTOAGI_DEFAULT
 from scripts.logging_config import setup_logging
 from scripts.utils import (
+    _env_int,
     add_hotness_scores,
     create_session,
     event_time,
@@ -70,24 +71,13 @@ from scripts.notifier import maybe_send_news_notification
 logger = logging.getLogger(__name__)
 
 
-def _env_int(name: str, default: int) -> int:
-    raw = os.environ.get(name)
-    if raw is None or raw == "":
-        return default
-    try:
-        return int(raw)
-    except ValueError:
-        logger.warning("Invalid %s=%r; using %d.", name, raw, default)
-        return default
-
-
 def main() -> int:
     setup_logging()
 
     parser = argparse.ArgumentParser(description="Aggregate AI news updates from multiple sources")
     parser.add_argument("--output-dir", default="data", help="Directory for output JSON files")
     parser.add_argument("--window-hours", type=int, default=24, help="24h window size")
-    parser.add_argument("--archive-days", type=int, default=21, help="Keep archive for N days")
+    parser.add_argument("--archive-days", type=int, default=3, help="Keep archive for N days")
     parser.add_argument("--translate-max-new", type=int, default=80, help="Max new EN->ZH title translations per run")
     parser.add_argument("--rss-opml", default="", help="Optional OPML file path to include RSS sources")
     parser.add_argument("--rss-max-feeds", type=int, default=0, help="Optional max OPML RSS feeds to fetch (0 means all)")
@@ -412,6 +402,11 @@ def main() -> int:
     )
     status_path.write_text(json.dumps(sanitize_public_payload(status_payload), ensure_ascii=False, indent=2), encoding="utf-8")
     waytoagi_path.write_text(json.dumps(sanitize_public_payload(waytoagi_payload), ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # Clean translation cache, keeping only active titles currently in archive
+    archive_titles = {record.get("title") for record in archive.values() if record.get("title")}
+    title_cache = {k: v for k, v in title_cache.items() if k in archive_titles}
+
     title_cache_path.write_text(json.dumps(sanitize_public_payload(title_cache), ensure_ascii=False, indent=2), encoding="utf-8")
 
     logger.info(
@@ -436,84 +431,7 @@ def main() -> int:
     return 0
 
 
-# ---------------------------------------------------------------------------
-# Re-exports for test compatibility (tests import from scripts.update_news)
-# ---------------------------------------------------------------------------
-from scripts.models import RawItem, OFFICIAL_AI_MAX_AGE_DAYS, OFFICIAL_AI_FEEDS, BROWSER_UA, UTC  # noqa: F401, E402
-from scripts.utils import (  # noqa: F401, E402
-    normalize_url,
-    host_of_url,
-    first_non_empty,
-    maybe_fix_mojibake,
-    has_cjk,
-    is_mostly_english,
-    parse_feed_entries_via_xml,
-    normalize_image_url,
-    extract_image_url_from_html,
-    extract_image_url_from_feed_entry,
-    make_item_id,
-    parse_unix_timestamp,
-    parse_relative_time_zh,
-    parse_date_any,
-    decode_escaped_json,
-    strip_html_tags,
-    truncate_description,
-    create_session,
-    utc_now,
-    iso,
-    parse_iso,
-)
-from scripts.topic_filter import (  # noqa: F401, E402
-    AI_KEYWORDS,
-    TECH_KEYWORDS,
-    NOISE_KEYWORDS,
-    COMMERCE_NOISE_KEYWORDS,
-    EN_SIGNAL_RE,
-    MEANINGFUL_EN_SIGNAL_RE,
-    EMAIL_RE,
-    SECRET_LIKE_RE,
-    BROAD_AI_TERMS,
-    TOPHUB_ALLOW_KEYWORDS,
-    TOPHUB_BLOCK_KEYWORDS,
-    contains_any_keyword,
-    contains_meaningful_ai_signal,
-    redact_public_text,
-    sanitize_public_value,
-    sanitize_public_payload,
-    has_mojibake_noise,
-    normalize_source_for_display,
-    is_ai_related_record,
-    classify_tags,
-)
-from scripts.dedup import (  # noqa: F401, E402
-    dedupe_items_by_title_url,
-    normalize_aihubtoday_records,
-    is_hubtoday_placeholder_title,
-    is_hubtoday_generic_anchor_title,
-)
-from scripts.translate import load_title_zh_cache, translate_to_zh_cn, add_bilingual_fields  # noqa: F401, E402
-from scripts.archive import load_archive, event_time  # noqa: F401, E402
-from scripts.output import build_latest_payloads  # noqa: F401, E402
-from scripts.fetchers.official import (  # noqa: F401, E402
-    parse_anthropic_news_items,
-    parse_openai_codex_changelog_items,
-    fetch_feed_as_official_items,
-    fetch_official_ai_updates,
-)
-from scripts.fetchers.newsletters import parse_ai_breakfast_items  # noqa: F401, E402
-from scripts.fetchers.builders import parse_follow_builders_items  # noqa: F401, E402
-from scripts.fetchers.waytoagi import (  # noqa: F401, E402
-    extract_waytoagi_history_url,
-    extract_feishu_client_vars,
-    block_text,
-    clean_update_title,
-    parse_ym_heading,
-    parse_md_heading,
-    infer_shanghai_year_for_month_day,
-    extract_waytoagi_recent_updates_from_block_map,
-    fetch_waytoagi_recent_7d,
-)
-from scripts.fetchers.opml import parse_opml_subscriptions  # noqa: F401, E402
+
 
 
 if __name__ == "__main__":

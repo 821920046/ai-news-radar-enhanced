@@ -8,6 +8,7 @@ import re
 from typing import Any
 
 import requests
+from scripts.utils import _env_int
 
 logger = logging.getLogger(__name__)
 
@@ -16,15 +17,7 @@ DEFAULT_DIGEST_LIMIT = 5
 DEFAULT_BREAKING_LIMIT = 10
 
 
-def _env_int(name: str, default: int) -> int:
-    raw = os.environ.get(name)
-    if raw is None or raw == "":
-        return default
-    try:
-        return int(raw)
-    except ValueError:
-        logger.warning("[IM Notifier] Invalid %s=%r; using %d.", name, raw, default)
-        return default
+
 
 
 def _compact(text: Any, limit: int = 180) -> str:
@@ -134,12 +127,12 @@ def maybe_send_news_notification(items: list[dict[str, Any]]) -> bool:
         return False
 
     if mode == "breaking":
-        threshold = _env_int("WEBHOOK_HOTNESS_THRESHOLD", DEFAULT_HOTNESS_THRESHOLD)
-        limit = _env_int("WEBHOOK_BREAKING_LIMIT", DEFAULT_BREAKING_LIMIT)
+        threshold = _env_int("WEBHOOK_HOTNESS_THRESHOLD", DEFAULT_HOTNESS_THRESHOLD, prefix="IM Notifier")
+        limit = _env_int("WEBHOOK_BREAKING_LIMIT", DEFAULT_BREAKING_LIMIT, prefix="IM Notifier")
         selected = filter_breaking_news(items, threshold)[: max(0, limit)]
         title = "AI News Radar Breaking Alerts"
     else:
-        limit = _env_int("WEBHOOK_DIGEST_LIMIT", DEFAULT_DIGEST_LIMIT)
+        limit = _env_int("WEBHOOK_DIGEST_LIMIT", DEFAULT_DIGEST_LIMIT, prefix="IM Notifier")
         selected = select_digest_items(items, limit)
         title = "AI News Radar Daily Digest"
 

@@ -17,7 +17,20 @@ from dateutil import parser as dtparser
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+import os
 from scripts.models import BROWSER_UA, UTC
+
+
+def _env_int(name: str, default: int, prefix: str = "") -> int:
+    raw = os.environ.get(name)
+    if raw is None or raw == "":
+        return default
+    try:
+        return int(raw)
+    except ValueError:
+        prefix_str = f"[{prefix}] " if prefix else ""
+        logger.warning("%sInvalid %s=%r; using %d.", prefix_str, name, raw, default)
+        return default
 
 
 def utc_now() -> datetime:

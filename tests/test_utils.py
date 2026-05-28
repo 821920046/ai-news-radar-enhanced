@@ -3,15 +3,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from scripts.update_news import (
+from scripts.utils import (
     extract_image_url_from_html,
     make_item_id,
     normalize_image_url,
     normalize_url,
     parse_date_any,
-    parse_opml_subscriptions,
     parse_relative_time_zh,
 )
+from scripts.fetchers.opml import parse_opml_subscriptions
 
 
 class UtilsTests(unittest.TestCase):
@@ -62,6 +62,29 @@ class UtilsTests(unittest.TestCase):
 
     def test_normalize_image_url_rejects_inline_data(self):
         self.assertEqual(normalize_image_url("data:image/png;base64,abc"), "")
+
+    def test_title_cache_pruning_logic(self):
+        # 模拟当前 archive 中的活跃新闻
+        archive = {
+            "id_1": {"title": "OpenAI releases GPT-5"},
+            "id_2": {"title": "Claude 4 launches"},
+        }
+        # 模拟包含很多旧翻译的 translation cache
+        title_cache = {
+            "OpenAI releases GPT-5": "OpenAI 发布 GPT-5",
+            "Claude 4 launches": "Claude 4 发布",
+            "Some old expired news": "一些过期的旧新闻",
+        }
+
+        # 执行淘汰过滤逻辑
+        archive_titles = {record.get("title") for record in archive.values() if record.get("title")}
+        pruned_cache = {k: v for k, v in title_cache.items() if k in archive_titles}
+
+        # 验证淘汰结果
+        self.assertIn("OpenAI releases GPT-5", pruned_cache)
+        self.assertIn("Claude 4 launches", pruned_cache)
+        self.assertNotIn("Some old expired news", pruned_cache)
+        self.assertEqual(len(pruned_cache), 2)
 
 
 if __name__ == "__main__":
