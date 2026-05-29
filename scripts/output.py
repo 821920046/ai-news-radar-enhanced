@@ -21,4 +21,18 @@ def build_latest_payloads(latest_payload: dict[str, Any]) -> tuple[dict[str, Any
     }
     slim_payload.pop("items_all", None)
     slim_payload["all_mode_data_url"] = "data/latest-24h-all.json"
+
+    # Strip fields no longer needed (images removed, empty descriptions)
+    _strip_item_fields(slim_payload.get("items", []))
+    _strip_item_fields(slim_payload.get("items_ai", []))
+    _strip_item_fields(all_payload.get("items_all", []))
+
     return slim_payload, all_payload
+
+
+def _strip_item_fields(items: list[dict[str, Any]]) -> None:
+    """Remove image_url and empty description from items to reduce JSON payload."""
+    for item in items:
+        item.pop("image_url", None)
+        if not item.get("description"):
+            item.pop("description", None)

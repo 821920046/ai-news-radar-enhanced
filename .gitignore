@@ -2,6 +2,8 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+node_modules/
+package-lock.json
 
 # Local/private source inputs
 feeds/*.opml

@@ -33,18 +33,15 @@ from pathlib import Path
 from scripts.models import SH_TZ, UTC, WAYTOAGI_DEFAULT
 from scripts.logging_config import setup_logging
 from scripts.utils import (
-    _env_int,
     add_hotness_scores,
     create_session,
     event_time,
-    normalize_image_url,
     iso,
     make_item_id,
     maybe_fix_mojibake,
     normalize_url,
     parse_iso,
     utc_now,
-    enrich_missing_article_images,
 )
 from scripts.topic_filter import (
     classify_item,
@@ -139,7 +136,6 @@ def main() -> int:
         item_id = make_item_id(raw.site_id, raw.source, title, url)
         seen_this_run.add(item_id)
         raw_meta = raw.meta if isinstance(raw.meta, dict) else {}
-        image_url = normalize_image_url(raw_meta.get("image_url") or raw_meta.get("thumbnail") or "", url)
 
         existing = archive.get(item_id)
         if existing is None:
@@ -154,7 +150,6 @@ def main() -> int:
                 "first_seen_at": iso(now),
                 "last_seen_at": iso(now),
                 "description": raw.description or "",
-                "image_url": image_url,
             }
         else:
             existing["site_id"] = raw.site_id
@@ -169,8 +164,6 @@ def main() -> int:
             existing["last_seen_at"] = iso(now)
             if raw.description:
                 existing["description"] = raw.description
-            if image_url:
-                existing["image_url"] = image_url
 
     # Prune old archive
     keep_after = now - timedelta(days=args.archive_days)
@@ -227,34 +220,6 @@ def main() -> int:
     )
     latest_items_ai_dedup = dedupe_items_by_title_url(latest_items)
     latest_items_all_dedup = dedupe_items_by_title_url(latest_items_all)
-
-    image_pool: list[dict] = []
-    seen_image_ids: set[str] = set()
-    for item in latest_items_ai_dedup + latest_items_all_dedup:
-        item_id = str(item.get("id") or "")
-        if item_id and item_id in seen_image_ids:
-            continue
-        if item_id:
-            seen_image_ids.add(item_id)
-        image_pool.append(item)
-    image_enriched_count = enrich_missing_article_images(
-        image_pool,
-        session,
-        max_items=max(0, _env_int("ARTICLE_IMAGE_TOP_N", 80)),
-        max_workers=max(1, _env_int("ARTICLE_IMAGE_MAX_WORKERS", 8)),
-        timeout=max(1, _env_int("ARTICLE_IMAGE_TIMEOUT", 8)),
-    )
-    if image_enriched_count:
-        image_by_id = {str(item.get("id")): item.get("image_url") for item in image_pool if item.get("image_url")}
-        for collection in (latest_items_ai_dedup, latest_items_all_dedup):
-            for item in collection:
-                image_url = image_by_id.get(str(item.get("id") or ""))
-                if image_url and not item.get("image_url"):
-                    item["image_url"] = image_url
-        for item_id, image_url in image_by_id.items():
-            if item_id in archive and image_url and not archive[item_id].get("image_url"):
-                archive[item_id]["image_url"] = image_url
-        logger.info("Article image enrichment added %d images.", image_enriched_count)
 
     # Add hotness scores for trending sort
     add_hotness_scores(latest_items_ai_dedup)
@@ -394,7 +359,7 @@ def main() -> int:
 
     latest_payload, latest_all_payload = build_latest_payloads(latest_payload)
 
-    latest_path.write_text(json.dumps(sanitize_public_payload(latest_payload), ensure_ascii=False, indent=2), encoding="utf-8")
+    latest_path.write_text(json.dumps(sanitize_public_payload(latest_payload), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     latest_all_path.write_text(json.dumps(sanitize_public_payload(latest_all_payload), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     archive_path.write_text(
         json.dumps(sanitize_public_payload(archive_payload), ensure_ascii=False, separators=(",", ":")),

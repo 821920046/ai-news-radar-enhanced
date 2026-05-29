@@ -1,0 +1,20 @@
+{
+  "name": "AI Signal Board",
+  "short_name": "AI Radar",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "assets/logo-180.webp",
+      "sizes": "180x180",
+      "type": "image/webp"
+    },
+    {
+      "src": "assets/logo-32.webp",
+      "sizes": "32x32",
+      "type": "image/webp"
+    }
+  ]
+}

@@ -433,7 +433,7 @@ function renderItemNode(item) {
     const primary = document.createElement("span");
     primary.innerHTML = highlightText(zh, state.query);
     const sub = document.createElement("span");
-    sub.className = "card-title-sub text-xs text-zinc-400 font-normal mt-1 block italic font-sans leading-relaxed group-hover:text-zinc-300 transition-colors";
+    sub.className = "card-title-sub text-[11px] text-zinc-400 font-normal mt-0.5 block italic font-sans leading-relaxed group-hover:text-zinc-300 transition-colors";
     sub.innerHTML = highlightText(en, state.query);
     titleEl.appendChild(primary);
     titleEl.appendChild(sub);
@@ -481,19 +481,6 @@ function renderItemNode(item) {
   const reasonEl = node.querySelector(".card-reason");
   const reason = item.recommendation_reason || fallbackReason(item).replace(/^推荐理由：/, "");
   reasonEl.innerHTML = `<span class="text-teal-200">推荐理由：</span>${highlightText(reason, state.query)}`;
-
-  const thumbLink = node.querySelector(".card-thumb-link");
-  const thumbImg = node.querySelector(".card-thumb-img");
-  thumbLink.href = item.url;
-  thumbImg.alt = `${item.site_name || "AI News"} image`;
-  if (item.image_url) {
-    thumbImg.src = item.image_url;
-    thumbImg.onerror = () => {
-      thumbLink.remove();
-    };
-  } else {
-    thumbLink.remove();
-  }
 
   return node;
 }

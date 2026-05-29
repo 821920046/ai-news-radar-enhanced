@@ -139,8 +139,6 @@ def build_signal_score(record: dict[str, Any]) -> int:
 
     if record.get("tldr"):
         score += 3
-    if record.get("image_url"):
-        score += 2
 
     return max(60, min(99, score))
 
