@@ -1,6 +1,12 @@
+<p align="center">
+  <img src="./assets/logo.webp" alt="AI Signal Board Logo" width="120" />
+</p>
+
 # AI Signal Board
 
-24 小时 AI/科技/数码/硬件全向情报雷达。纯文字、高密度、标题驱动。
+<p align="center">
+  24 小时 AI/科技/数码/硬件全向情报雷达。纯文字、高密度、标题驱动。
+</p>
 
 实时聚合 12+ 高质量信源，自动分类去重，中英双语标题，AI 精选评分。支持自定义 OPML/RSS 订阅导入。
 
@@ -61,22 +67,77 @@ python -m http.server 8080
 
 打开 `http://localhost:8080`
 
-## 自定义 OPML 订阅
+## 自定义订阅源
 
-导入你自己的 RSS/OPML 订阅，扩展信源覆盖：
+支持导入你自己的 OPML/RSS 订阅，扩展信源覆盖。
+
+### 方式一：本地运行时导入
 
 ```bash
-# 1. 复制模板
+# 1. 从模板复制
 cp feeds/follow.example.opml feeds/follow.opml
 
-# 2. 编辑 feeds/follow.opml，替换为你的订阅源
-# （此文件已在 .gitignore 中，不会被提交）
+# 2. 编辑 feeds/follow.opml，加入你的订阅源
+# （此文件已在 .gitignore 中，不会被提交到仓库）
 
-# 3. 运行时指定 OPML
+# 3. 运行时指定 OPML 文件
 python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml
 ```
 
-**GitHub Actions 方式**：将 OPML 文件内容 base64 编码，存入仓库 Secret `FOLLOW_OPML_B64`，CI 会自动解码使用。
+### 方式二：GitHub Actions 自动化（推荐）
+
+只需配置一次，之后每小时自动抓取你的订阅源：
+
+1. 编辑好 `feeds/follow.opml` 文件（本地）
+2. 终端执行 `base64 < feeds/follow.opml`（macOS）或 `certutil -encode follow.opml follow.b64`（Windows），复制输出内容
+3. 打开 GitHub 仓库 → **Settings** → **Secrets and variables** → **Actions** → **New secret**
+4. Name 填 `FOLLOW_OPML_B64`，Value 粘贴 base64 内容，保存
+5. 完成。CI 每小时运行时会自动解码并抓取你的订阅源
+
+### OPML 文件格式
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head><title>我的订阅</title></head>
+  <body>
+    <!-- 可以有多层分组 -->
+    <outline text="AI 官方" title="AI 官方">
+      <outline type="rss" text="OpenAI Blog" title="OpenAI Blog"
+        xmlUrl="https://openai.com/blog/rss.xml"
+        htmlUrl="https://openai.com/blog" />
+      <outline type="rss" text="Anthropic" title="Anthropic"
+        xmlUrl="https://www.anthropic.com/rss.xml"
+        htmlUrl="https://www.anthropic.com" />
+    </outline>
+    <outline text="科技媒体" title="科技媒体">
+      <outline type="rss" text="36氪快讯" title="36氪快讯"
+        xmlUrl="https://rsshub.app/36kr/newsflashes"
+        htmlUrl="https://36kr.com/" />
+    </outline>
+  </body>
+</opml>
+```
+
+### 从哪里获取 OPML？
+
+大多数 RSS 阅读器支持导出 OPML：
+
+| 阅读器 | 导出路径 |
+|--------|---------|
+| Feedly | Settings → Import/Export → OPML Export |
+| Inoreader | Settings → Import/Export → Export OPML |
+| NetNewsWire | File → Export Subscriptions |
+| Miniflux | Settings → Import → 导出 OPML |
+| Follow (follow.is) | Settings → Import & Export |
+
+导出后直接使用，或只保留你需要的源。
+
+### 支持的订阅源类型
+
+- 标准 RSS / Atom feed（绝大多数博客和新闻站）
+- RSSHub 桥接源（`rsshub.app` 路径，覆盖 B站、知乎、微博等）
+- 项目会自动跳过不支持的源类型（Telegram、Bilibili 直链等），并尝试将已知的 RSSHub 坏链替换为官方 feed
 
 ## 可选配置
 
