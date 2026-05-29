@@ -178,6 +178,149 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "xml_url": "https://www.fast.ai/index.xml",
         "html_url": "https://www.fast.ai",
     },
+    # ── OPML 示例中已有但未内置的高信噪比源 ──
+    {
+        "title": "Simon Willison's Weblog",
+        "xml_url": "https://simonwillison.net/atom/entries/",
+        "html_url": "https://simonwillison.net",
+    },
+    {
+        "title": "Latent Space",
+        "xml_url": "https://www.latent.space/feed",
+        "html_url": "https://www.latent.space",
+    },
+    {
+        "title": "a16z AI",
+        "xml_url": "https://a16z.com/category/ai-data/feed/",
+        "html_url": "https://a16z.com/category/ai-data/",
+    },
+    {
+        "title": "Vercel Blog",
+        "xml_url": "https://vercel.com/blog/feed",
+        "html_url": "https://vercel.com/blog",
+        "include_keywords": "ai,ml,llm,agent,inference,model,ai-sdk,generative,copilot,assistant",
+    },
+    # ── 模型提供商 / AI 基础设施厂商 ──
+    {
+        "title": "Anthropic Blog",
+        "xml_url": "https://www.anthropic.com/news.rss",
+        "html_url": "https://www.anthropic.com/news",
+    },
+    {
+        "title": "Mistral AI Blog",
+        "xml_url": "https://mistral.ai/feed.xml",
+        "html_url": "https://mistral.ai/news",
+    },
+    {
+        "title": "Cohere Blog",
+        "xml_url": "https://cohere.com/blog/feed",
+        "html_url": "https://cohere.com/blog",
+    },
+    {
+        "title": "xAI Blog",
+        "xml_url": "https://x.ai/blog/rss.xml",
+        "html_url": "https://x.ai/blog",
+    },
+    {
+        "title": "Perplexity Blog",
+        "xml_url": "https://www.perplexity.ai/hub/feed",
+        "html_url": "https://www.perplexity.ai/hub",
+    },
+    {
+        "title": "Replicate Blog",
+        "xml_url": "https://replicate.com/blog/rss.xml",
+        "html_url": "https://replicate.com/blog",
+    },
+    {
+        "title": "Groq Blog",
+        "xml_url": "https://wow.groq.com/feed/",
+        "html_url": "https://wow.groq.com",
+    },
+    # ── AI 开发框架 / 工具链生态 ──
+    {
+        "title": "LangChain Blog",
+        "xml_url": "https://blog.langchain.dev/rss/",
+        "html_url": "https://blog.langchain.dev",
+    },
+    {
+        "title": "LlamaIndex Blog",
+        "xml_url": "https://www.llamaindex.ai/blog/rss.xml",
+        "html_url": "https://www.llamaindex.ai/blog",
+    },
+    {
+        "title": "Weights & Biases Blog",
+        "xml_url": "https://wandb.ai/fully-connected/feed",
+        "html_url": "https://wandb.ai/fully-connected",
+    },
+    {
+        "title": "Pinecone Blog",
+        "xml_url": "https://www.pinecone.io/blog/rss/",
+        "html_url": "https://www.pinecone.io/blog",
+    },
+    {
+        "title": "Weaviate Blog",
+        "xml_url": "https://weaviate.io/blog/rss.xml",
+        "html_url": "https://weaviate.io/blog",
+    },
+    # ── Newsletter / 个人博客 ──
+    {
+        "title": "The Batch (Andrew Ng)",
+        "xml_url": "https://www.deeplearning.ai/the-batch/feed/",
+        "html_url": "https://www.deeplearning.ai/the-batch/",
+    },
+    {
+        "title": "AI Snake Oil",
+        "xml_url": "https://www.aisnakeoil.com/feed",
+        "html_url": "https://www.aisnakeoil.com",
+    },
+    {
+        "title": "Interconnects (Nathan Lambert)",
+        "xml_url": "https://www.interconnects.ai/feed",
+        "html_url": "https://www.interconnects.ai",
+    },
+    {
+        "title": "Import AI (Jack Clark)",
+        "xml_url": "https://importai.substack.com/feed",
+        "html_url": "https://importai.substack.com",
+    },
+    {
+        "title": "Ben's Bites",
+        "xml_url": "https://bensbites.beehiiv.com/feed",
+        "html_url": "https://bensbites.beehiiv.com",
+    },
+    # ── 中文 AI 媒体 ──
+    {
+        "title": "量子位",
+        "xml_url": "https://www.qbitai.com/feed",
+        "html_url": "https://www.qbitai.com",
+    },
+    {
+        "title": "爱范儿 ifanr",
+        "xml_url": "https://www.ifanr.com/feed",
+        "html_url": "https://www.ifanr.com",
+        "include_keywords": "ai,人工智能,大模型,llm,gpt,agent,智能,机器人,芯片,gpu,nvidia,deepseek,openai,算力",
+    },
+    # ── 学术 / 研究 ──
+    {
+        "title": "arXiv cs.AI",
+        "xml_url": "https://rss.arxiv.org/rss/cs.AI",
+        "html_url": "https://arxiv.org/list/cs.AI/recent",
+        "include_keywords": "ai,artificial intelligence,llm,language model,agent,reinforcement learning,neural,transformer,reasoning,multimodal",
+    },
+    # ── AI 安全 / 对齐 ──
+    {
+        "title": "Alignment Forum",
+        "xml_url": "https://www.alignmentforum.org/feed.xml",
+        "html_url": "https://www.alignmentforum.org",
+    },
+    # ── 热门项目 / Trending ──
+    {
+        "title": "GitHub Trending",
+        "xml_url": "https://rsshub.rssforever.com/github/trending/daily/any",
+        "html_url": "https://github.com/trending",
+    },
+    # HuggingFace Trending Models / DockerHub Trending 暂无可靠的 RSS 源，
+    # 可在 feeds/follow.opml 中按需添加自托管 RSSHub 路由。
 )
 OFFICIAL_AI_MAX_AGE_DAYS = 45
 AIBREAKFAST_JINA_URL = "https://r.jina.ai/https://aibreakfast.beehiiv.com/"
