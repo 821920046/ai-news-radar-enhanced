@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-03T08:05:42.059963Z",
+  "generated_at": "2026-06-03T13:06:00.060507Z",
   "sites": [
     {
       "site_id": "followbuilders",
       "site_name": "Follow Builders",
       "ok": true,
       "item_count": 39,
-      "duration_ms": 90,
+      "duration_ms": 396,
       "error": null
     },
     {
@@ -14,7 +14,7 @@
       "site_name": "AI Breakfast",
       "ok": true,
       "item_count": 9,
-      "duration_ms": 508,
+      "duration_ms": 470,
       "error": null
     },
     {
@@ -22,7 +22,7 @@
       "site_name": "AI HubToday",
       "ok": true,
       "item_count": 10,
-      "duration_ms": 819,
+      "duration_ms": 850,
       "error": null
     },
     {
@@ -30,7 +30,7 @@
       "site_name": "Zeli",
       "ok": true,
       "item_count": 78,
-      "duration_ms": 829,
+      "duration_ms": 872,
       "error": null
     },
     {
@@ -38,7 +38,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 1563,
+      "duration_ms": 1456,
       "error": null
     },
     {
@@ -46,7 +46,7 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 1637,
+      "duration_ms": 1914,
       "error": null
     },
     {
@@ -54,31 +54,7 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 141,
-      "duration_ms": 2647,
-      "error": null
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 3036,
-      "duration_ms": 8966,
-      "error": null
-    },
-    {
-      "site_id": "buzzing",
-      "site_name": "Buzzing",
-      "ok": true,
-      "item_count": 744,
-      "duration_ms": 9467,
-      "error": null
-    },
-    {
-      "site_id": "official_ai",
-      "site_name": "Official AI Updates",
-      "ok": true,
-      "item_count": 723,
-      "duration_ms": 9495,
+      "duration_ms": 3813,
       "error": null
     },
     {
@@ -86,24 +62,48 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 10375,
+      "duration_ms": 4573,
+      "error": null
+    },
+    {
+      "site_id": "buzzing",
+      "site_name": "Buzzing",
+      "ok": true,
+      "item_count": 744,
+      "duration_ms": 7255,
+      "error": null
+    },
+    {
+      "site_id": "official_ai",
+      "site_name": "Official AI Updates",
+      "ok": true,
+      "item_count": 710,
+      "duration_ms": 7760,
+      "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 3031,
+      "duration_ms": 8853,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 448,
-      "duration_ms": 24591,
+      "item_count": 521,
+      "duration_ms": 29275,
       "error": null
     }
   ],
   "successful_sites": 12,
   "failed_sites": [],
   "zero_item_sites": [],
-  "fetched_raw_items": 5654,
-  "items_before_topic_filter": 6939,
-  "items_in_24h": 1110,
+  "fetched_raw_items": 5709,
+  "items_before_topic_filter": 6815,
+  "items_in_24h": 1058,
   "ai_processing": {
     "tldr_items": 0
   },
