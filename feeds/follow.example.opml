@@ -19,6 +19,12 @@
       <outline text="Microsoft AI Blog" title="Microsoft AI Blog" type="rss" xmlUrl="https://blogs.microsoft.com/ai/feed/" htmlUrl="https://blogs.microsoft.com/ai/" />
       <outline text="Meta AI Blog" title="Meta AI Blog" type="rss" xmlUrl="https://ai.meta.com/blog/rss/" htmlUrl="https://ai.meta.com/blog/" />
       <outline text="NVIDIA AI Blog" title="NVIDIA AI Blog" type="rss" xmlUrl="https://blogs.nvidia.com/ai/feed/" htmlUrl="https://blogs.nvidia.com/ai/" />
+      <outline text="Mistral AI Blog" title="Mistral AI Blog" type="rss" xmlUrl="https://mistral.ai/feed.xml" htmlUrl="https://mistral.ai/news" />
+      <outline text="Cohere Blog" title="Cohere Blog" type="rss" xmlUrl="https://cohere.com/blog/feed" htmlUrl="https://cohere.com/blog" />
+      <outline text="xAI Blog" title="xAI Blog" type="rss" xmlUrl="https://x.ai/blog/rss.xml" htmlUrl="https://x.ai/blog" />
+      <outline text="Groq Blog" title="Groq Blog" type="rss" xmlUrl="https://wow.groq.com/feed/" htmlUrl="https://wow.groq.com" />
+      <outline text="Perplexity Blog" title="Perplexity Blog" type="rss" xmlUrl="https://www.perplexity.ai/hub/feed" htmlUrl="https://www.perplexity.ai/hub" />
+      <outline text="Replicate Blog" title="Replicate Blog" type="rss" xmlUrl="https://replicate.com/blog/rss.xml" htmlUrl="https://replicate.com/blog" />
       <outline text="Ollama Blog" title="Ollama Blog" type="rss" xmlUrl="https://ollama.com/blog/rss.xml" htmlUrl="https://ollama.com/blog" />
       <outline text="Together AI Blog" title="Together AI Blog" type="rss" xmlUrl="https://www.together.ai/blog/rss.xml" htmlUrl="https://www.together.ai/blog" />
       <outline text="TechCrunch AI" title="TechCrunch AI" type="rss" xmlUrl="https://techcrunch.com/category/artificial-intelligence/feed/" htmlUrl="https://techcrunch.com/category/artificial-intelligence/" />
@@ -29,7 +35,9 @@
     <outline text="Research &amp; Papers">
       <outline text="Hugging Face Papers" title="Hugging Face Papers" type="rss" xmlUrl="https://huggingface.co/papers/feed.xml" htmlUrl="https://huggingface.co/papers" />
       <outline text="Papers With Code" title="Papers With Code" type="rss" xmlUrl="https://paperswithcode.com/latest.rss" htmlUrl="https://paperswithcode.com" />
+      <outline text="arXiv cs.AI" title="arXiv cs.AI" type="rss" xmlUrl="https://rss.arxiv.org/rss/cs.AI" htmlUrl="https://arxiv.org/list/cs.AI/recent" />
       <outline text="Quanta Magazine - Computer Science" title="Quanta Magazine - CS" type="rss" xmlUrl="https://api.quantamagazine.org/feed/" htmlUrl="https://www.quantamagazine.org/computer-science/" />
+      <outline text="Alignment Forum" title="Alignment Forum" type="rss" xmlUrl="https://www.alignmentforum.org/feed.xml" htmlUrl="https://www.alignmentforum.org" />
     </outline>
 
     <!-- 4. Hardware & Infrastructure -->
@@ -50,22 +58,39 @@
       <outline text="Schneier on Security" title="Schneier on Security" type="rss" xmlUrl="https://www.schneier.com/blog/index.rdf" htmlUrl="https://www.schneier.com/blog/" />
     </outline>
 
-    <!-- 6. Builders & Strategic Analysis -->
+    <!-- 6. Thought Leaders & Newsletters -->
     <outline text="Thought Leaders &amp; Analysis">
       <outline text="Benedict Evans" title="Benedict Evans" type="rss" xmlUrl="https://www.ben-evans.com/benedictevans?format=rss" htmlUrl="https://www.ben-evans.com/" />
       <outline text="Simon Willison's Weblog" title="Simon Willison's Weblog" type="rss" xmlUrl="https://simonwillison.net/atom/entries/" htmlUrl="https://simonwillison.net/" />
       <outline text="Latent Space" title="Latent Space" type="rss" xmlUrl="https://www.latent.space/feed" htmlUrl="https://www.latent.space/" />
       <outline text="Stratechery by Ben Thompson" title="Stratechery by Ben Thompson" type="rss" xmlUrl="https://stratechery.com/feed/" htmlUrl="https://stratechery.com/" />
+      <outline text="The Batch (Andrew Ng)" title="The Batch" type="rss" xmlUrl="https://www.deeplearning.ai/the-batch/feed/" htmlUrl="https://www.deeplearning.ai/the-batch/" />
+      <outline text="AI Snake Oil" title="AI Snake Oil" type="rss" xmlUrl="https://www.aisnakeoil.com/feed" htmlUrl="https://www.aisnakeoil.com" />
+      <outline text="Interconnects (Nathan Lambert)" title="Interconnects" type="rss" xmlUrl="https://www.interconnects.ai/feed" htmlUrl="https://www.interconnects.ai" />
+      <outline text="Import AI (Jack Clark)" title="Import AI" type="rss" xmlUrl="https://importai.substack.com/feed" htmlUrl="https://importai.substack.com" />
+      <outline text="Ben's Bites" title="Ben's Bites" type="rss" xmlUrl="https://bensbites.beehiiv.com/feed" htmlUrl="https://bensbites.beehiiv.com" />
     </outline>
 
     <!-- 7. Chinese AI & Tech Sources -->
     <outline text="Chinese AI &amp; Tech Sources">
       <outline text="机器之心" title="机器之心" type="rss" xmlUrl="https://www.jiqizhixin.com/rss" htmlUrl="https://www.jiqizhixin.com/" />
+      <outline text="量子位" title="量子位" type="rss" xmlUrl="https://www.qbitai.com/feed" htmlUrl="https://www.qbitai.com" />
+      <outline text="爱范儿 ifanr" title="爱范儿 ifanr" type="rss" xmlUrl="https://www.ifanr.com/feed" htmlUrl="https://www.ifanr.com" />
       <outline text="InfoQ 中文" title="InfoQ 中文" type="rss" xmlUrl="https://www.infoq.cn/feed" htmlUrl="https://www.infoq.cn/" />
       <outline text="少数派" title="少数派" type="rss" xmlUrl="https://sspai.com/feed" htmlUrl="https://sspai.com/" />
     </outline>
 
-    <!-- 8. Engineering & Development -->
+    <!-- 8. AI Toolchain & Frameworks -->
+    <outline text="AI Toolchain &amp; Frameworks">
+      <outline text="LangChain Blog" title="LangChain Blog" type="rss" xmlUrl="https://blog.langchain.dev/rss/" htmlUrl="https://blog.langchain.dev" />
+      <outline text="LlamaIndex Blog" title="LlamaIndex Blog" type="rss" xmlUrl="https://www.llamaindex.ai/blog/rss.xml" htmlUrl="https://www.llamaindex.ai/blog" />
+      <outline text="Weights &amp; Biases Blog" title="Weights &amp; Biases Blog" type="rss" xmlUrl="https://wandb.ai/fully-connected/feed" htmlUrl="https://wandb.ai/fully-connected" />
+      <outline text="Pinecone Blog" title="Pinecone Blog" type="rss" xmlUrl="https://www.pinecone.io/blog/rss/" htmlUrl="https://www.pinecone.io/blog" />
+      <outline text="Weaviate Blog" title="Weaviate Blog" type="rss" xmlUrl="https://weaviate.io/blog/rss.xml" htmlUrl="https://weaviate.io/blog" />
+      <outline text="PyTorch Blog" title="PyTorch Blog" type="rss" xmlUrl="https://pytorch.org/blog/feed.xml" htmlUrl="https://pytorch.org/blog" />
+    </outline>
+
+    <!-- 9. Engineering & Development -->
     <outline text="Engineering &amp; Dev">
       <outline text="GitHub Changelog" title="GitHub Changelog" type="rss" xmlUrl="https://github.blog/changelog/feed/" htmlUrl="https://github.blog/changelog/" />
       <outline text="Vercel Blog" title="Vercel Blog" type="rss" xmlUrl="https://vercel.com/blog/feed" htmlUrl="https://vercel.com/blog" />

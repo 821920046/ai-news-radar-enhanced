@@ -478,6 +478,35 @@ function renderItemNode(item) {
   const scoreEl = node.querySelector(".card-score span:last-child");
   scoreEl.textContent = item.signal_score || Math.min(99, Math.max(60, Math.round(60 + (item.hotness_score || 0) / 25)));
 
+  // 渲染合并的其它信源徽章
+  const sourcesContainer = node.querySelector(".card-sources-container");
+  const sourcesList = node.querySelector(".card-sources-list");
+  const mergedSources = item.merged_sources || [];
+  if (sourcesContainer && sourcesList) {
+    if (mergedSources.length > 1) {
+      sourcesList.innerHTML = "";
+      let hasOtherSource = false;
+      mergedSources.forEach((src) => {
+        if (!src.url || src.url === item.url) return;
+        const a = document.createElement("a");
+        a.href = src.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.className = "px-2 py-0.5 rounded bg-zinc-900/60 hover:bg-teal-500/20 hover:text-teal-200 border border-zinc-800/80 hover:border-teal-500/30 text-zinc-400 text-[10px] font-semibold transition-all duration-150";
+        a.textContent = `${src.site_name} · ${src.source || "链接"}`;
+        sourcesList.appendChild(a);
+        hasOtherSource = true;
+      });
+      if (hasOtherSource) {
+        sourcesContainer.classList.remove("hidden");
+      } else {
+        sourcesContainer.classList.add("hidden");
+      }
+    } else {
+      sourcesContainer.classList.add("hidden");
+    }
+  }
+
   const reasonEl = node.querySelector(".card-reason");
   const reason = item.recommendation_reason || fallbackReason(item).replace(/^推荐理由：/, "");
   reasonEl.innerHTML = `<span class="text-teal-200">推荐理由：</span>${highlightText(reason, state.query)}`;

@@ -19,6 +19,10 @@ https://821920046.github.io/ai-news-radar-enhanced/
 ## 特性
 
 - **12 个内置信源**：官方 AI RSS（OpenAI / Anthropic / Google DeepMind / HuggingFace / NVIDIA 等 25+ feed）、AI Breakfast、Follow Builders、9 个聚合站（TechURLs / Buzzing / Info Flow / BestBlogs / TopHub / Zeli / AI HubToday / AIbase / NewsNow）
+- **三阶段智能去重引擎**：基于 URL 归一化 -> 深度标题归一化（剥离前后缀/渠道标识） -> Bigram Jaccard 相似度匹配模糊合并，支持跨站、跨信源智能合并，拒绝信息过载。
+- **多源热度加权与可视化**：多源报道热度累加增益（Max Hotness + x15.0/额外源），前端卡片顶部挂载“多源聚合”勋章，底部提供毛玻璃徽章一键直达其余信源通道。
+- **工业级灾备与回滚保护**：使用原子文本写入（临时写入与 `os.replace` 原子替换）保证数据完整性；引入翻译缓存断崖式暴跌校验。如检测到缓存（>100条）发生超 50% 暴跌，**自动备份 `.json.bak` 并抛错阻断写入**，强力锁死历史翻译资产。
+- **首屏极致瘦身优化**：深度裁剪前端无用字段（`id`, `title_original`, `last_seen_at`, `title_bilingual`），去重同名中英标题。对有 AI 简述 `tldr` 的条目自动剥离 `description`，**首屏 JSON 体积压缩超 40%**，极速呈现。
 - **双视图模式**：AI 强信号 / 全量情报，一键切换
 - **智能分类**：AI / 科技 / 数码 / 硬件，关键词标签自动标注
 - **中英双语**：英文标题自动翻译中文，双行显示
@@ -34,11 +38,12 @@ https://821920046.github.io/ai-news-radar-enhanced/
 
 | 层 | 技术 |
 |---|---|
-| 前端 | 单文件 SPA（index.html + app.js），预编译 Tailwind CSS，深色 glassmorphism 主题 |
+| 前端 | 单文件 SPA（index.html + app.js），预编译 Tailwind CSS，深色 glassmorphism 主题，IntersectionObserver 批量懒加载 |
 | 后端 | Python 3.11 数据管线（feedparser + BeautifulSoup + requests） |
 | 部署 | GitHub Pages 静态托管，GitHub Actions 每小时自动更新 |
-| 性能 | WebP 多尺寸 logo（1.5MB → 14KB），预编译 CSS（300KB CDN → 28KB），紧凑 JSON |
+| 性能 | WebP 多尺寸 logo（1.5MB → 14KB），预编译 CSS（300KB CDN → 28KB），深度字段裁剪与 Payload 极致压缩 |
 | SEO | Open Graph / Twitter Card / sitemap / robots.txt / PWA manifest |
+
 
 ## 快速开始
 

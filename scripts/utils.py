@@ -708,3 +708,21 @@ def add_hotness_scores(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         item["hotness_score"] = round(score)
         item["hotness_raw"] = raw
     return items
+
+
+def atomic_write_text(file_path: Any, text: str, encoding: str = "utf-8") -> None:
+    """原子性地将文本写入文件，以防写入过程中断或崩溃导致文件坏掉。"""
+    from pathlib import Path
+    import os
+    
+    p = Path(file_path)
+    tmp_path = p.with_suffix(p.suffix + ".tmp")
+    try:
+        tmp_path.write_text(text, encoding=encoding)
+        os.replace(tmp_path, p)
+    finally:
+        if tmp_path.exists():
+            try:
+                tmp_path.unlink()
+            except Exception:
+                pass

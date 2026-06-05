@@ -94,6 +94,9 @@ class DedupTests(unittest.TestCase):
         self.assertEqual(merged["source_count"], 2)
         # merged_sources 应该记录所有的源
         self.assertEqual(len(merged["merged_sources"]), 2)
+        # 校验热度分加权累加及多源文案重写
+        self.assertEqual(merged["hotness_score"], 15.0)
+        self.assertEqual(merged["hotness_raw"], "多源聚合 x2")
 
     def test_dedupe_items_by_title_url_stages(self):
         items = [

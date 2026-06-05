@@ -26,6 +26,33 @@ def load_title_zh_cache(path: Path) -> dict[str, str]:
     return {}
 
 
+def safeguard_title_zh_cache(title_cache_path: Path, new_cache: dict[str, str]) -> None:
+    """检查原缓存文件大小，若新生成的缓存出现断崖式暴跌，拒绝写入并生成备份。"""
+    from scripts.utils import atomic_write_text
+
+    if not title_cache_path.exists():
+        return
+
+    try:
+        with open(title_cache_path, "r", encoding="utf-8") as old_f:
+            old_cache = json.load(old_f)
+    except Exception as e:
+        logger.warning("Failed to load old cache for safeguard checks: %s", e)
+        return
+
+    if isinstance(old_cache, dict) and len(old_cache) > 100:
+        if len(new_cache) < len(old_cache) * 0.5:
+            bak_path = title_cache_path.with_suffix(".json.bak")
+            try:
+                atomic_write_text(bak_path, json.dumps(old_cache, ensure_ascii=False, indent=2), encoding="utf-8")
+            except Exception as e:
+                logger.warning("Failed to write backup cache file: %s", e)
+            raise ValueError(
+                f"Translation cache data plummeted suspiciously from {len(old_cache)} to {len(new_cache)} entries! "
+                f"Aborted write to protect translation data. Previous cache backed up to {bak_path}."
+            )
+
+
 def translate_to_zh_cn(session: requests.Session, text: str) -> str | None:
     s = (text or "").strip()
     if not s:

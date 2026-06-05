@@ -31,8 +31,44 @@ def build_latest_payloads(latest_payload: dict[str, Any]) -> tuple[dict[str, Any
 
 
 def _strip_item_fields(items: list[dict[str, Any]]) -> None:
-    """Remove image_url and empty description from items to reduce JSON payload."""
+    """Remove image_url, title_original, last_seen_at, and other redundant fields from items to reduce JSON payload."""
     for item in items:
+        # 1. 移除图片 url 字段
         item.pop("image_url", None)
+        
+        # 2. 移除空描述
         if not item.get("description"):
             item.pop("description", None)
+            
+        # 3. 移除前端无用的 title_original
+        item.pop("title_original", None)
+        
+        # 4. 移除前端无用的 last_seen_at
+        item.pop("last_seen_at", None)
+
+        # 5. 移除前端无用的 id 与 title_bilingual 字段
+        item.pop("id", None)
+        item.pop("title_bilingual", None)
+
+        # 6. 双语标题冗余优化：若 title_en 与 title_zh 完全一致，则置空 title_en
+        t_en = item.get("title_en")
+        t_zh = item.get("title_zh")
+        if t_en and t_zh and str(t_en).strip() == str(t_zh).strip():
+            item["title_en"] = None
+
+        # 7. 若已有 AI 生成的极简摘要 tldr，则剥离原始 description 字段以节省 Payload 空间
+        if item.get("tldr"):
+            item.pop("description", None)
+
+        # 8. 其它合并信源精简：仅保留前端徽章及直链渲染所需的核心字段
+        merged_sources = item.get("merged_sources")
+        if isinstance(merged_sources, list):
+            pruned = []
+            for src in merged_sources:
+                if isinstance(src, dict):
+                    pruned.append({
+                        "site_name": src.get("site_name"),
+                        "source": src.get("source"),
+                        "url": src.get("url")
+                    })
+            item["merged_sources"] = pruned

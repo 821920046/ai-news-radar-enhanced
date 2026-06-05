@@ -12,6 +12,7 @@ from scripts.utils import (
     parse_relative_time_zh,
 )
 from scripts.fetchers.opml import parse_opml_subscriptions
+from scripts.translate import safeguard_title_zh_cache
 
 
 class UtilsTests(unittest.TestCase):
@@ -85,6 +86,54 @@ class UtilsTests(unittest.TestCase):
         self.assertIn("Claude 4 launches", pruned_cache)
         self.assertNotIn("Some old expired news", pruned_cache)
         self.assertEqual(len(pruned_cache), 2)
+
+
+    def test_atomic_write_text(self):
+        from scripts.utils import atomic_write_text
+        with TemporaryDirectory() as td:
+            p = Path(td) / "test.txt"
+            atomic_write_text(p, "hello", encoding="utf-8")
+            self.assertTrue(p.exists())
+            self.assertEqual(p.read_text(encoding="utf-8"), "hello")
+
+    def test_safeguard_title_zh_cache_normal(self):
+        import json
+        with TemporaryDirectory() as td:
+            p = Path(td) / "cache.json"
+            # 1. 缓存文件不存在，直接返回不抛错
+            safeguard_title_zh_cache(p, {"a": "1"})
+            
+            # 2. 缓存存在但数据量小（<= 100），即便暴跌也不拦截
+            old_data = {f"key_{i}": f"val_{i}" for i in range(80)}
+            p.write_text(json.dumps(old_data), encoding="utf-8")
+            safeguard_title_zh_cache(p, {"a": "1"}) # 此时新缓存只有 1 个，暴跌，但原缓存 <= 100，不拦截
+            
+            # 3. 缓存大于 100，但新旧数据变化不大（>= 50%），不拦截
+            old_data = {f"key_{i}": f"val_{i}" for i in range(120)}
+            p.write_text(json.dumps(old_data), encoding="utf-8")
+            new_data = {f"key_{i}": f"val_{i}" for i in range(70)} # 70 >= 120 * 0.5 = 60
+            safeguard_title_zh_cache(p, new_data)
+
+    def test_safeguard_title_zh_cache_plummet_blocks_and_backs_up(self):
+        import json
+        with TemporaryDirectory() as td:
+            p = Path(td) / "cache.json"
+            old_data = {f"key_{i}": f"val_{i}" for i in range(120)}
+            p.write_text(json.dumps(old_data), encoding="utf-8")
+            
+            new_data = {f"key_{i}": f"val_{i}" for i in range(59)} # 59 < 120 * 0.5 = 60，断崖式下跌
+            
+            with self.assertRaises(ValueError) as ctx:
+                safeguard_title_zh_cache(p, new_data)
+            
+            self.assertIn("plummeted suspiciously", str(ctx.exception))
+            
+            # 验证是否自动备份了 .bak 文件，且内容一致
+            bak_p = p.with_suffix(".json.bak")
+            self.assertTrue(bak_p.exists())
+            bak_data = json.loads(bak_p.read_text(encoding="utf-8"))
+            self.assertEqual(len(bak_data), 120)
+            self.assertEqual(bak_data["key_0"], "val_0")
 
 
 if __name__ == "__main__":

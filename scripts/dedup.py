@@ -244,7 +244,24 @@ def merge_items_group(group: list[dict[str, Any]]) -> dict[str, Any]:
                 })
 
     merged["merged_sources"] = all_sources
-    merged["source_count"] = len(all_sources)
+    source_count = len(all_sources)
+    merged["source_count"] = source_count
+
+    # 4. 综合热度加权计算
+    max_hotness = 0.0
+    for item in group:
+        try:
+            val = float(item.get("hotness_score") or 0.0)
+            if val > max_hotness:
+                max_hotness = val
+        except (ValueError, TypeError):
+            pass
+
+    if source_count > 1:
+        merged["hotness_score"] = max_hotness + (source_count - 1) * 15.0
+        merged["hotness_raw"] = f"多源聚合 x{source_count}"
+    else:
+        merged["hotness_score"] = max_hotness
 
     return merged
 

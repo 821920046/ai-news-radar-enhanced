@@ -34,6 +34,7 @@ from scripts.models import SH_TZ, UTC, WAYTOAGI_DEFAULT
 from scripts.logging_config import setup_logging
 from scripts.utils import (
     add_hotness_scores,
+    atomic_write_text,
     create_session,
     event_time,
     iso,
@@ -55,7 +56,7 @@ from scripts.dedup import (
     is_hubtoday_placeholder_title,
     normalize_aihubtoday_records,
 )
-from scripts.translate import add_bilingual_fields, load_title_zh_cache
+from scripts.translate import add_bilingual_fields, load_title_zh_cache, safeguard_title_zh_cache
 from scripts.archive import load_archive
 from scripts.output import build_latest_payloads
 from scripts.recommend import enrich_recommendation_fields
@@ -359,20 +360,24 @@ def main() -> int:
 
     latest_payload, latest_all_payload = build_latest_payloads(latest_payload)
 
-    latest_path.write_text(json.dumps(sanitize_public_payload(latest_payload), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    latest_all_path.write_text(json.dumps(sanitize_public_payload(latest_all_payload), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    archive_path.write_text(
+    atomic_write_text(latest_path, json.dumps(sanitize_public_payload(latest_payload), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    atomic_write_text(latest_all_path, json.dumps(sanitize_public_payload(latest_all_payload), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    atomic_write_text(
+        archive_path,
         json.dumps(sanitize_public_payload(archive_payload), ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )
-    status_path.write_text(json.dumps(sanitize_public_payload(status_payload), ensure_ascii=False, indent=2), encoding="utf-8")
-    waytoagi_path.write_text(json.dumps(sanitize_public_payload(waytoagi_payload), ensure_ascii=False, indent=2), encoding="utf-8")
+    atomic_write_text(status_path, json.dumps(sanitize_public_payload(status_payload), ensure_ascii=False, indent=2), encoding="utf-8")
+    atomic_write_text(waytoagi_path, json.dumps(sanitize_public_payload(waytoagi_payload), ensure_ascii=False, indent=2), encoding="utf-8")
 
     # Clean translation cache, keeping only active titles currently in archive
     archive_titles = {record.get("title") for record in archive.values() if record.get("title")}
     title_cache = {k: v for k, v in title_cache.items() if k in archive_titles}
 
-    title_cache_path.write_text(json.dumps(sanitize_public_payload(title_cache), ensure_ascii=False, indent=2), encoding="utf-8")
+    # 检查原缓存文件大小，若新生成的缓存出现断崖式暴跌，拒绝写入并生成备份
+    safeguard_title_zh_cache(title_cache_path, title_cache)
+
+    atomic_write_text(title_cache_path, json.dumps(sanitize_public_payload(title_cache), ensure_ascii=False, indent=2), encoding="utf-8")
 
     logger.info(
         "Pipeline complete: %d AI items, %d all-mode items, %d archive, %d successful sources",

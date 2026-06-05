@@ -62,15 +62,43 @@ Add a source only when it passes most of these checks:
 
 ## Built-In Official Nodes
 
-The public site should directly track these high-signal official sources:
+The public site directly tracks these high-signal official sources:
 
-- OpenAI News RSS
-- Anthropic News page
-- Google DeepMind RSS
-- Google AI Blog RSS
-- Hugging Face Blog RSS
-- GitHub AI & ML RSS
-- GitHub Changelog RSS
+**AI Labs & Model Providers:**
+- OpenAI News RSS + Anthropic News page/RSS
+- Google DeepMind RSS + Google AI Blog RSS
+- Meta AI Blog RSS + Microsoft AI Blog RSS
+- NVIDIA AI Blog RSS + NVIDIA Technical Blog RSS
+- Mistral AI Blog, Cohere Blog, xAI Blog, Groq Blog
+- Perplexity Blog, Replicate Blog, Together AI Blog, Ollama Blog
+- Stability AI (via OPML, no stable RSS default)
+
+**Research & Papers:**
+- Hugging Face Blog RSS + Hugging Face Papers RSS
+- Papers With Code RSS, arXiv cs.AI RSS
+- Lilianweng's Blog, fast.ai
+
+**AI Toolchain & Frameworks:**
+- PyTorch Blog, TensorFlow Blog
+- LangChain Blog, LlamaIndex Blog
+- Weights & Biases Blog, Pinecone Blog, Weaviate Blog
+
+**Developer Platforms:**
+- GitHub AI & ML RSS + GitHub Changelog RSS
+- Vercel Blog RSS (AI-keyword filtered)
+
+**Newsletters & Thought Leaders:**
+- AI Breakfast, BestBlogs
+- Simon Willison's Weblog, Latent Space Podcast
+- The Batch (Andrew Ng), AI Snake Oil
+- Interconnects (Nathan Lambert), Import AI (Jack Clark), Ben's Bites
+
+**Chinese AI Media:**
+- 机器之心 (Jiqizhixin), 量子位 (QbitAI)
+- 爱范儿 ifanr (AI-keyword filtered)
+
+**AI Safety & Alignment:**
+- Alignment Forum
 
 Aggregator sites may already surface some of these updates, but they are not
 guaranteed to be complete or timely. Keep these official sources as a stable
