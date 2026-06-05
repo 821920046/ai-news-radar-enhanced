@@ -16,7 +16,7 @@ from scripts.fetchers.opml import parse_opml_subscriptions
 
 class UtilsTests(unittest.TestCase):
     def test_normalize_url_removes_tracking(self):
-        raw = "https://example.com/path?a=1&utm_source=x&fbclid=abc"
+        raw = "https://example.com/path?a=1&utm_source=x&fbclid=abc&from=rss&source=36kr&hmsr=baidu&spm_id_from=123"
         self.assertEqual(normalize_url(raw), "https://example.com/path?a=1")
 
     def test_make_item_id_stable(self):

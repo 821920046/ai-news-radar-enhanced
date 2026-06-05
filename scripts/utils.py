@@ -73,7 +73,7 @@ def normalize_url(raw_url: str) -> str:
         query = []
         for k, v in parse_qsl(parsed.query, keep_blank_values=True):
             lk = k.lower()
-            if lk.startswith("utm_"):
+            if lk.startswith("utm_") or lk.startswith("hm") or lk.startswith("spm_"):
                 continue
             if lk in {
                 "ref",
@@ -86,6 +86,23 @@ def normalize_url(raw_url: str) -> str:
                 "mc_eid",
                 "_hsenc",
                 "_hsmi",
+                "source",
+                "sources",
+                "from",
+                "f",
+                "rss",
+                "feed",
+                "origin",
+                "client",
+                "repost",
+                "trid",
+                "_stat",
+                "to",
+                "tag",
+                "original",
+                "vd_source",
+                "ts",
+                "time",
             }:
                 continue
             query.append((k, v))
