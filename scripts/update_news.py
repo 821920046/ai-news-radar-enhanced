@@ -151,6 +151,7 @@ def main() -> int:
                 "first_seen_at": iso(now),
                 "last_seen_at": iso(now),
                 "description": raw.description or "",
+                "meta": raw_meta,
             }
         else:
             existing["site_id"] = raw.site_id

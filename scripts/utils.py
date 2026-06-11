@@ -660,6 +660,26 @@ def compute_hotness(record: dict[str, Any]) -> tuple[float, str]:
     if not isinstance(meta, dict):
         meta = {}
 
+    # ── 开源热榜：综合热度评分，星标驱动 ──
+    if site_id == "oss_trending":
+        import math
+        platform = str(meta.get("platform") or "")
+        if platform == "github_trending":
+            stars_today = float(meta.get("stars_today") or 0)
+            total_stars = float(meta.get("total_stars") or 0)
+            # 今日星标权重最高，总星标作为修正因子
+            score = math.log10(max(1, stars_today) + 1) * 250 + math.log10(max(1, total_stars) + 1) * 30
+            score = min(1000, max(300, score))
+            raw = f"{int(stars_today):,}⭐" if stars_today > 0 else ""
+            return (score, raw)
+        elif platform == "vercel_ecosystem":
+            framework = str(meta.get("framework") or "")
+            score = 420 if framework else 400
+            raw = "Vercel" + (f" ⸱ {framework}" if framework else "")
+            return (score, raw)
+        # 其他未知子平台，给一个适中的默认分
+        return (350, "")
+
     # TopHub: has explicit view/like count in meta.metric
     if site_id == "tophub":
         raw = str(meta.get("metric") or "")

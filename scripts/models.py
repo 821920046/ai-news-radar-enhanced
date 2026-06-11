@@ -326,6 +326,12 @@ OFFICIAL_AI_MAX_AGE_DAYS = 45
 AIBREAKFAST_JINA_URL = "https://r.jina.ai/https://aibreakfast.beehiiv.com/"
 FOLLOW_BUILDERS_FEED_BASE = "https://raw.githubusercontent.com/zarazhangrui/follow-builders/main"
 
+# ── 开源热榜 ──
+GITHUB_TRENDING_URL = "https://github.com/trending?since=daily"
+VERCEL_TEMPLATES_URL = "https://vercel.com/templates"
+VERCEL_AI_SDK_TOPIC_URL = "https://github.com/topics/vercel-ai-sdk"
+OSS_MAX_COMBINED = 30  # 综合排名取 TOP N
+
 
 @dataclass
 class RawItem:

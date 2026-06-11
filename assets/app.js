@@ -67,6 +67,7 @@ const SOURCE_KINDS = {
   tophub:        { label: "聚合",     tone: "aggregate" },
   zeli:          { label: "聚合",     tone: "aggregate" },
   newsnow:       { label: "聚合",     tone: "aggregate" },
+  oss_trending:  { label: "开源热榜", tone: "oss" },
 };
 
 // ---- Category Colors (Tailwind classes) --------------------------------------
@@ -75,6 +76,7 @@ const CATEGORY_META = {
   "科技":     { text: "text-teal-400", bg: "bg-teal-500/10", border: "border-teal-500/20", activeGlow: "bg-gradient-to-r from-teal-500 to-emerald-600 shadow-teal-500/20" },
   "数码":     { text: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20", activeGlow: "bg-gradient-to-r from-purple-500 to-pink-600 shadow-purple-500/20" },
   "电脑硬件": { text: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20", activeGlow: "bg-gradient-to-r from-orange-500 to-red-600 shadow-orange-500/20" },
+  "开源热榜": { text: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20", activeGlow: "bg-gradient-to-r from-green-500 to-lime-600 shadow-green-500/20" },
   "":         { activeGlow: "bg-gradient-to-r from-zinc-700 to-zinc-800 shadow-zinc-500/20" }
 };
 
@@ -196,7 +198,7 @@ function renderStats(payload) {
 // ---- Category Nav -----------------------------------------------------------
 
 function computeCategoryCounts(items) {
-  const counts = { "": 0, "AI": 0, "科技": 0, "数码": 0, "电脑硬件": 0 };
+  const counts = { "": 0, "开源热榜": 0, "AI": 0, "科技": 0, "数码": 0, "电脑硬件": 0 };
   items.forEach((item) => {
     const cat = item.category || "科技";
     counts[""] += 1;
@@ -213,6 +215,7 @@ function renderCategoryNav() {
 
   const categories = [
     { key: "", label: "全部" },
+    { key: "开源热榜", label: "开源热榜" },
     { key: "AI", label: "AI" },
     { key: "科技", label: "科技" },
     { key: "数码", label: "数码" },

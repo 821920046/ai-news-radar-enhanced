@@ -12,6 +12,7 @@ import requests
 
 from scripts.models import RawItem
 
+from scripts.fetchers.oss_trending import fetch_oss_trending
 from scripts.fetchers.official import fetch_official_ai_updates
 from scripts.fetchers.newsletters import fetch_ai_breakfast, fetch_bestblogs
 from scripts.fetchers.builders import fetch_follow_builders
@@ -31,6 +32,7 @@ logger = logging.getLogger(__name__)
 
 def collect_all(session: requests.Session, now: datetime) -> tuple[list[RawItem], list[dict[str, Any]]]:
     tasks = [
+        ("oss_trending", "开源热榜", fetch_oss_trending),
         ("official_ai", "Official AI Updates", fetch_official_ai_updates),
         ("aibreakfast", "AI Breakfast", fetch_ai_breakfast),
         ("followbuilders", "Follow Builders", fetch_follow_builders),

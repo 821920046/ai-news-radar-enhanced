@@ -91,6 +91,13 @@ _DEFAULT_TOPIC_TECH_KEYWORDS = [
     "cybersecurity", "安全漏洞", "privacy", "隐私"
 ]
 
+_DEFAULT_TOPIC_OSS_KEYWORDS = [
+    "open source", "开源", "github trending", "github",
+    "vercel", "next.js", "sdk", "framework", "library",
+    "repo", "repository", "git", "stars", "forks",
+    "template", "deploy", "ai-sdk", "插件", "工具"
+]
+
 _DEFAULT_TAG_RULES = [
     ("智能体", ["agent", "智能体", "autonomous", "agentic", "multi-agent"]),
     ("模型发布", ["gpt", "claude", "gemini", "llama", "mistral", "qwen", "deepseek", "发布", "release", "launch", "announce"]),
@@ -129,6 +136,7 @@ TOPIC_HARDWARE_KEYWORDS = _rules.get("TOPIC_HARDWARE_KEYWORDS", _DEFAULT_TOPIC_H
 TOPIC_DIGITAL_KEYWORDS = _rules.get("TOPIC_DIGITAL_KEYWORDS", _DEFAULT_TOPIC_DIGITAL_KEYWORDS)
 TOPIC_AI_KEYWORDS = _rules.get("TOPIC_AI_KEYWORDS", _DEFAULT_TOPIC_AI_KEYWORDS)
 TOPIC_TECH_KEYWORDS = _rules.get("TOPIC_TECH_KEYWORDS", _DEFAULT_TOPIC_TECH_KEYWORDS)
+TOPIC_OSS_KEYWORDS = _rules.get("TOPIC_OSS_KEYWORDS", _DEFAULT_TOPIC_OSS_KEYWORDS)
 
 # 转换 TAG_RULES 为 list[tuple[str, list[str]]]
 raw_tag_rules = _rules.get("TAG_RULES")
@@ -229,7 +237,7 @@ def is_ai_related_record(record: dict[str, Any]) -> bool:
             return False
 
     # AI/hot aggregation sites are kept by default to avoid false negatives.
-    if site_id in {"aibase", "aihot", "aihubtoday"}:
+    if site_id in {"aibase", "aihot", "aihubtoday", "oss_trending"}:
         return True
 
     has_ai = contains_meaningful_ai_signal(text)
@@ -251,15 +259,21 @@ def is_ai_related_record(record: dict[str, Any]) -> bool:
 
 # ---- Topic category classification ----
 # 为每条新闻打上 topic_category 字段，用于前端分类导航栏
-# 优先级：电脑硬件 > 数码 > AI > 科技（默认）
+# 优先级：开源热榜 > 电脑硬件 > 数码 > AI > 科技（默认）
 
 def classify_item(record: dict[str, Any]) -> str:
-    """为新闻条目分配主题分类。返回值之一：'电脑硬件'/'数码'/'AI'/'科技'"""
+    """为新闻条目分配主题分类。返回值之一：'开源热榜'/'电脑硬件'/'数码'/'AI'/'科技'"""
     title = str(record.get("title") or "")
     source = str(record.get("source") or "")
     site_name = str(record.get("site_name") or "")
     text = f"{title} {source} {site_name}".lower()
 
+    # 开源热榜：site_id 快速匹配（oss_trending 抓取器产出的条目全部归入此类）
+    if str(record.get("site_id") or "") == "oss_trending":
+        return "开源热榜"
+    # 开源热榜：关键词降级匹配（其他源中命中开源关键词的也归入此类）
+    if contains_any_keyword(text, TOPIC_OSS_KEYWORDS):
+        return "开源热榜"
     # 优先级匹配：硬件 > 数码 > AI > 科技（默认）
     if contains_any_keyword(text, TOPIC_HARDWARE_KEYWORDS):
         return "电脑硬件"

@@ -135,6 +135,7 @@ def _pick_best_item(group: list[dict[str, Any]]) -> dict[str, Any]:
     # 来源优先级（信号源等级越高，权重分越高）
     site_priority = {
         "official_ai": 100,
+        "oss_trending": 95,
         "opmlrss": 90,
         "buzzing": 80,
         "zeli": 70,

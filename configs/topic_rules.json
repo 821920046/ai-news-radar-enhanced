@@ -141,6 +141,12 @@
     "自动驾驶", "量子计算", "区块链", "web3",
     "cybersecurity", "安全漏洞", "privacy", "隐私"
   ],
+  "TOPIC_OSS_KEYWORDS": [
+    "open source", "开源", "github trending", "github",
+    "vercel", "next.js", "sdk", "framework", "library",
+    "repo", "repository", "git", "stars", "forks",
+    "template", "deploy", "ai-sdk", "插件", "工具"
+  ],
   "TAG_RULES": [
     ["智能体", ["agent", "智能体", "autonomous", "agentic", "multi-agent"]],
     ["模型发布", ["gpt", "claude", "gemini", "llama", "mistral", "qwen", "deepseek", "发布", "release", "launch", "announce"]],
