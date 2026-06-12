@@ -198,13 +198,14 @@ function renderStats(payload) {
 // ---- Category Nav -----------------------------------------------------------
 
 function computeCategoryCounts(items) {
-  const counts = { "": 0, "开源热榜": 0, "AI": 0, "科技": 0, "数码": 0, "电脑硬件": 0 };
+  const counts = { "": items.length, "开源热榜": 0, "AI": 0, "科技": 0, "数码": 0, "电脑硬件": 0 };
   items.forEach((item) => {
     const cat = item.category || "科技";
-    counts[""] += 1;
     if (counts[cat] !== undefined) counts[cat] += 1;
     else counts["科技"] += 1;
   });
+  // 开源热榜只统计 oss_trending 抓取器产出的项目，不混入关键词命中的新闻
+  counts["开源热榜"] = items.filter((item) => item.site_id === "oss_trending").length;
   return counts;
 }
 
@@ -384,14 +385,19 @@ function getFilteredItems() {
   const q = state.query.trim().toLowerCase();
   let items = modeItems().filter((item) => {
     if (state.siteFilter && item.site_id !== state.siteFilter) return false;
-    if (state.category && (item.category || "科技") !== state.category) return false;
+    if (state.category) {
+      // 开源热榜：只显示 oss_trending 抓取器产出的项目，不混入关键词匹配的新闻
+      if (state.category === "开源热榜" && item.site_id !== "oss_trending") return false;
+      if (state.category !== "开源热榜" && (item.category || "科技") !== state.category) return false;
+    }
     if (!q) return true;
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
     const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""} ${item.tldr || ""} ${item.description || ""} ${tags}`.toLowerCase();
     return hay.includes(q);
   });
 
-  if (state.sortBy === "hot") {
+  // 开源热榜始终按热度排序
+  if (state.sortBy === "hot" || state.category === "开源热榜") {
     items = [...items].sort((a, b) => {
       const sa = a.hotness_score || 0;
       const sb = b.hotness_score || 0;

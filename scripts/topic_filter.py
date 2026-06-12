@@ -268,11 +268,9 @@ def classify_item(record: dict[str, Any]) -> str:
     site_name = str(record.get("site_name") or "")
     text = f"{title} {source} {site_name}".lower()
 
-    # 开源热榜：site_id 快速匹配（oss_trending 抓取器产出的条目全部归入此类）
+    # 开源热榜：仅限 oss_trending 抓取器产出的条目，不做关键词降级匹配
+    # （关键词如 "github""开源""工具" 在科技新闻中出现频率过高，误匹配严重）
     if str(record.get("site_id") or "") == "oss_trending":
-        return "开源热榜"
-    # 开源热榜：关键词降级匹配（其他源中命中开源关键词的也归入此类）
-    if contains_any_keyword(text, TOPIC_OSS_KEYWORDS):
         return "开源热榜"
     # 优先级匹配：硬件 > 数码 > AI > 科技（默认）
     if contains_any_keyword(text, TOPIC_HARDWARE_KEYWORDS):
