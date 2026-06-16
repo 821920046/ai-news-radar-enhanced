@@ -206,6 +206,22 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "xml_url": "https://www.anthropic.com/news.rss",
         "html_url": "https://www.anthropic.com/news",
     },
+    # ── Anthropic 细分（Olshansk 抓取，官方 RSS 未覆盖）──
+    {
+        "title": "Anthropic Engineering",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml",
+        "html_url": "https://www.anthropic.com/engineering",
+    },
+    {
+        "title": "Anthropic Research",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml",
+        "html_url": "https://www.anthropic.com/research",
+    },
+    {
+        "title": "Anthropic Frontier Red Team",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_red.xml",
+        "html_url": "https://www.anthropic.com/news",
+    },
     {
         "title": "Mistral AI Blog",
         "xml_url": "https://mistral.ai/feed.xml",
@@ -261,6 +277,22 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "title": "Weaviate Blog",
         "xml_url": "https://weaviate.io/blog/rss.xml",
         "html_url": "https://weaviate.io/blog",
+    },
+    # ── AI 编程工具生态（Olshansk 抓取，无官方 RSS）──
+    {
+        "title": "Cursor Blog",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_cursor.xml",
+        "html_url": "https://cursor.com/blog",
+    },
+    {
+        "title": "Windsurf Blog",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_windsurf_blog.xml",
+        "html_url": "https://windsurf.com/blog",
+    },
+    {
+        "title": "Windsurf Changelog",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_windsurf_changelog.xml",
+        "html_url": "https://windsurf.com/changelog",
     },
     # ── Newsletter / 个人博客 ──
     {
