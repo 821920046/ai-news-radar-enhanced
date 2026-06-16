@@ -90,7 +90,12 @@ def fetch_bestblogs(session: requests.Session, now: datetime) -> list[RawItem]:
                 "pageSize": 20,
                 "userLanguage": "en",
             }
-            r = session.post(api, json=payload, timeout=30)
+            r = session.post(api, json=payload, timeout=30, headers={
+                "User-Agent": BROWSER_UA,
+                "Accept": "application/json",
+                "Origin": "https://www.bestblogs.dev",
+                "Referer": "https://www.bestblogs.dev/en/newsletter",
+            })
             r.raise_for_status()
             body = r.json()
             data = body.get("data", {})

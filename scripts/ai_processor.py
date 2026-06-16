@@ -16,7 +16,7 @@ from scripts.utils import _env_int
 logger = logging.getLogger(__name__)
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_OPENROUTER_MODEL = "google/gemini-2.5-flash-free"
+DEFAULT_OPENROUTER_MODEL = "google/gemma-4-31b-it:free"
 DEFAULT_TLDR_TOP_N = 10
 DEFAULT_TLDR_MIN_CHARS = 30
 DEFAULT_TLDR_MAX_WORKERS = 2

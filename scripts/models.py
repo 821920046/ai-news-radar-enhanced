@@ -88,21 +88,23 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "title": "Hugging Face Papers",
         "xml_url": "https://huggingface.co/papers/feed.xml",
         "html_url": "https://huggingface.co/papers",
+        "hf_auth_required": "HuggingFace Papers RSS 需要 HF_TOKEN 认证，GitHub Actions 中未设置则跳过",
     },
     {
         "title": "Microsoft AI Blog",
-        "xml_url": "https://blogs.microsoft.com/ai/feed/",
-        "html_url": "https://blogs.microsoft.com/ai/",
+        "xml_url": "https://blogs.microsoft.com/blog/tag/microsoft-ai/feed/",
+        "html_url": "https://blogs.microsoft.com/blog/tag/microsoft-ai/",
     },
     {
         "title": "Meta AI Blog",
-        "xml_url": "https://ai.meta.com/blog/rss/",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_meta_ai.xml",
         "html_url": "https://ai.meta.com/blog/",
+        "olshansk_note": "官方 RSS 400 失效，改用 Olshansk 抓取",
     },
     {
         "title": "NVIDIA AI Blog",
-        "xml_url": "https://blogs.nvidia.com/ai/feed/",
-        "html_url": "https://blogs.nvidia.com/ai/",
+        "xml_url": "https://blogs.nvidia.com/feed/",
+        "html_url": "https://blogs.nvidia.com/",
     },
     {
         "title": "MIT Technology Review",
@@ -191,8 +193,8 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
     },
     {
         "title": "a16z AI",
-        "xml_url": "https://a16z.com/category/ai-data/feed/",
-        "html_url": "https://a16z.com/category/ai-data/",
+        "xml_url": "https://a16z.com/feed/",
+        "html_url": "https://a16z.com/",
     },
     {
         "title": "Vercel Blog",
@@ -203,8 +205,9 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
     # ── 模型提供商 / AI 基础设施厂商 ──
     {
         "title": "Anthropic Blog",
-        "xml_url": "https://www.anthropic.com/news.rss",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml",
         "html_url": "https://www.anthropic.com/news",
+        "olshansk_note": "官方 RSS (news.rss) 已失效，改用 Olshansk 抓取",
     },
     # ── Anthropic 细分（Olshansk 抓取，官方 RSS 未覆盖）──
     {
@@ -224,28 +227,33 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
     },
     {
         "title": "Mistral AI Blog",
-        "xml_url": "https://mistral.ai/feed.xml",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_mistral.xml",
         "html_url": "https://mistral.ai/news",
+        "olshansk_note": "官方 RSS (mistral.ai/feed.xml) 404，改用 Olshansk 抓取",
     },
     {
         "title": "Cohere Blog",
-        "xml_url": "https://cohere.com/blog/feed",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_cohere.xml",
         "html_url": "https://cohere.com/blog",
+        "olshansk_note": "官方 RSS 404，改用 Olshansk 抓取",
     },
     {
         "title": "xAI Blog",
-        "xml_url": "https://x.ai/blog/rss.xml",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xainews.xml",
         "html_url": "https://x.ai/blog",
+        "olshansk_note": "官方 RSS (x.ai/news/rss.xml) 404，改用 Olshansk 抓取",
     },
     {
         "title": "Perplexity Blog",
-        "xml_url": "https://www.perplexity.ai/hub/feed",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_perplexity_hub.xml",
         "html_url": "https://www.perplexity.ai/hub",
+        "olshansk_note": "官方 RSS 404，改用 Olshansk 抓取",
     },
     {
         "title": "Replicate Blog",
         "xml_url": "https://replicate.com/blog/rss.xml",
         "html_url": "https://replicate.com/blog",
+        "olshansk_note": "官方 RSS 间歇性 404，暂无 Olshansk 替代，保留观察",
     },
     {
         "title": "Groq Blog",
@@ -262,6 +270,7 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "title": "LlamaIndex Blog",
         "xml_url": "https://www.llamaindex.ai/blog/rss.xml",
         "html_url": "https://www.llamaindex.ai/blog",
+        "olshansk_note": "官方 RSS 间歇性 404，暂无 Olshansk 替代，保留观察",
     },
     {
         "title": "Weights & Biases Blog",
@@ -270,8 +279,9 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
     },
     {
         "title": "Pinecone Blog",
-        "xml_url": "https://www.pinecone.io/blog/rss/",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_pinecone.xml",
         "html_url": "https://www.pinecone.io/blog",
+        "olshansk_note": "官方 RSS 404，改用 Olshansk 抓取",
     },
     {
         "title": "Weaviate Blog",
@@ -297,8 +307,9 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
     # ── Newsletter / 个人博客 ──
     {
         "title": "The Batch (Andrew Ng)",
-        "xml_url": "https://www.deeplearning.ai/the-batch/feed/",
+        "xml_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_the_batch.xml",
         "html_url": "https://www.deeplearning.ai/the-batch/",
+        "olshansk_note": "官方 RSS 403，改用 Olshansk 抓取",
     },
     {
         "title": "AI Snake Oil",
@@ -314,17 +325,21 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "title": "Import AI (Jack Clark)",
         "xml_url": "https://importai.substack.com/feed",
         "html_url": "https://importai.substack.com",
+        "olshansk_note": "Substack RSS 间歇性 403，已知限制",
     },
     {
         "title": "Ben's Bites",
         "xml_url": "https://bensbites.beehiiv.com/feed",
         "html_url": "https://bensbites.beehiiv.com",
+        "include_keywords": "ai,artificial intelligence,llm,gpt,openai,anthropic,agent,ml,machine learning,neural,robot,generative,startup,funding",
+        "olshansk_note": "Beehiiv RSS 间歇性 404，注意监控",
     },
     # ── 中文 AI 媒体 ──
     {
         "title": "量子位",
         "xml_url": "https://www.qbitai.com/feed",
         "html_url": "https://www.qbitai.com",
+        "olshansk_note": "量子位 RSS 间歇性 403，第三方反爬触发限制",
     },
     {
         "title": "爱范儿 ifanr",
