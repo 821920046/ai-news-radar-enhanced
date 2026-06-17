@@ -82,7 +82,7 @@ class AiProcessorTests(unittest.TestCase):
         ]
         env = {"OPENROUTER_KEYS": "k1", "AI_TLDR_TOP_N": "1", "AI_TLDR_MAX_WORKERS": "1"}
         with patch.dict(os.environ, env, clear=True):
-            with patch("scripts.ai_processor.generate_tldr", return_value="High signal summary"):
+            with patch("core.agents.analyst_agent.generate_tldr", return_value="High signal summary"):
                 process_items_with_ai(items)
         self.assertNotIn("tldr", items[0])
         self.assertEqual(items[1]["tldr"], "High signal summary")
