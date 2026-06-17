@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
 from typing import Any
@@ -125,14 +126,22 @@ def fetch_feed_as_official_items(
     feed_url = feed["xml_url"]
     feed_title = feed["title"]
 
+    # 静默跳过需要 HF_TOKEN 但未配置的信源（不打印 warning）
+    request_headers: dict[str, str] = {
+        "User-Agent": BROWSER_UA,
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Accept": "application/rss+xml, application/xml, text/xml, */*",
+    }
+    if feed.get("hf_token_required"):
+        token = os.environ.get("HF_TOKEN", "").strip()
+        if not token:
+            return []
+        request_headers["Authorization"] = f"Bearer {token}"
+
     resp = session.get(
         feed_url,
         timeout=20,
-        headers={
-            "User-Agent": BROWSER_UA,
-            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-            "Accept": "application/rss+xml, application/xml, text/xml, */*",
-        },
+        headers=request_headers,
     )
     resp.raise_for_status()
 

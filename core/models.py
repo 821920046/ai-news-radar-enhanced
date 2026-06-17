@@ -88,7 +88,7 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "title": "Hugging Face Papers",
         "xml_url": "https://huggingface.co/papers/feed.xml",
         "html_url": "https://huggingface.co/papers",
-        "hf_auth_required": "HuggingFace Papers RSS 需要 HF_TOKEN 认证，GitHub Actions 中未设置则跳过",
+        "hf_token_required": True,
     },
     {
         "title": "Microsoft AI Blog",
@@ -192,11 +192,6 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "html_url": "https://www.latent.space",
     },
     {
-        "title": "a16z AI",
-        "xml_url": "https://a16z.com/feed/",
-        "html_url": "https://a16z.com/",
-    },
-    {
         "title": "Vercel Blog",
         "xml_url": "https://vercel.com/blog/feed",
         "html_url": "https://vercel.com/blog",
@@ -250,12 +245,6 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "olshansk_note": "官方 RSS 404，改用 Olshansk 抓取",
     },
     {
-        "title": "Replicate Blog",
-        "xml_url": "https://replicate.com/blog/rss.xml",
-        "html_url": "https://replicate.com/blog",
-        "olshansk_note": "官方 RSS 间歇性 404，暂无 Olshansk 替代，保留观察",
-    },
-    {
         "title": "Groq Blog",
         "xml_url": "https://wow.groq.com/feed/",
         "html_url": "https://wow.groq.com",
@@ -265,12 +254,6 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "title": "LangChain Blog",
         "xml_url": "https://blog.langchain.dev/rss/",
         "html_url": "https://blog.langchain.dev",
-    },
-    {
-        "title": "LlamaIndex Blog",
-        "xml_url": "https://www.llamaindex.ai/blog/rss.xml",
-        "html_url": "https://www.llamaindex.ai/blog",
-        "olshansk_note": "官方 RSS 间歇性 404，暂无 Olshansk 替代，保留观察",
     },
     {
         "title": "Weights & Biases Blog",
@@ -320,19 +303,6 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
         "title": "Interconnects (Nathan Lambert)",
         "xml_url": "https://www.interconnects.ai/feed",
         "html_url": "https://www.interconnects.ai",
-    },
-    {
-        "title": "Import AI (Jack Clark)",
-        "xml_url": "https://importai.substack.com/feed",
-        "html_url": "https://importai.substack.com",
-        "olshansk_note": "Substack RSS 间歇性 403，已知限制",
-    },
-    {
-        "title": "Ben's Bites",
-        "xml_url": "https://bensbites.beehiiv.com/feed",
-        "html_url": "https://bensbites.beehiiv.com",
-        "include_keywords": "ai,artificial intelligence,llm,gpt,openai,anthropic,agent,ml,machine learning,neural,robot,generative,startup,funding",
-        "olshansk_note": "Beehiiv RSS 间歇性 404，注意监控",
     },
     # ── 中文 AI 媒体 ──
     {
