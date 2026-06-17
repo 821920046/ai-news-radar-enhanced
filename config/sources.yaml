@@ -1,0 +1,23 @@
+# AI News Radar V3 — 数据源配置
+# 从 core/models.py 的 OFFICIAL_AI_FEEDS 迁移，方便非程序员修改
+
+official_ai_feeds:
+  - title: "OpenAI News"
+    xml_url: "https://openai.com/news/rss.xml"
+    html_url: "https://openai.com/news"
+  - title: "Google DeepMind"
+    xml_url: "https://deepmind.google/blog/rss.xml"
+    html_url: "https://deepmind.google/blog"
+  - title: "Hugging Face Blog"
+    xml_url: "https://huggingface.co/blog/feed.xml"
+    html_url: "https://huggingface.co/blog"
+
+# API 模型配置（可选，运行时从环境变量读取）
+openrouter_default_model: "google/gemma-4-31b-it:free"
+embedding_model: "openai/text-embedding-3-small"
+
+# Pipeline 默认参数
+pipeline:
+  window_hours: 24
+  archive_days: 3
+  translate_max_new: 80

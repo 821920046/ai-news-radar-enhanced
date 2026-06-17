@@ -1,0 +1,31 @@
+# AI News Radar V3 — 模型配置
+# 运行时可通过同名环境变量覆盖
+
+openrouter:
+  api_url: "https://openrouter.ai/api/v1/chat/completions"
+  embeddings_url: "https://openrouter.ai/api/v1/embeddings"
+
+  # TL;DR 模型
+  tldr_model: "google/gemma-4-31b-it:free"
+
+  # Embedding 模型
+  embedding_model: "openai/text-embedding-3-small"
+
+  # 深度分析模型（可选，更贵但更好）
+  deep_analysis_model: "anthropic/claude-haiku"
+
+# AI Features（默认关闭，通过环境变量开启）
+features:
+  tldr_enabled: false
+  deep_analysis_enabled: false
+  trend_engine_enabled: false
+
+  # 成本控制
+  tldr_top_n: 10
+  tldr_max_workers: 2
+  max_embeddings_per_run: 50
+
+# 翻译
+translation:
+  api: "https://translate.googleapis.com/translate_a/single"
+  max_new_per_run: 80

@@ -1,0 +1,26 @@
+# Signal Score 2.0 权重配置
+# 权重总和应为 1.0
+
+weights:
+  source_weight: 0.25    # 来源权威度
+  technical_score: 0.25  # 技术深度
+  novelty: 0.20          # 新近性
+  velocity: 0.15         # 传播速度
+  community: 0.15        # 社区信号
+
+# 等级阈值
+levels:
+  S: 85   # Breaking / 重大事件
+  A: 70   # Important / 重要
+  B: 50   # Notable / 值得关注
+  C: 0    # Reference / 参考
+
+# 来源权重映射
+source_weights:
+  official_ai: 100
+  aibreakfast: 85
+  followbuilders: 85
+  oss_trending: 85
+  buzzing: 70
+  zeli: 70
+  newsnow: 70
