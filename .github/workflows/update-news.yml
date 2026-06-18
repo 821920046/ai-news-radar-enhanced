@@ -3,10 +3,10 @@ name: Update AI News Snapshot
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"   # 每 1 小时运行一次
+    - cron: "0 * * * *" # 每 1 小时运行一次
 
 concurrency:
-  group: update-ai-news-${{ github.ref }}
+  group: update-ai-news-$ github.ref 
   cancel-in-progress: true
 
 permissions:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Prepare OPML (optional)
         env:
-          FOLLOW_OPML_B64: ${{ secrets.FOLLOW_OPML_B64 }}
+          FOLLOW_OPML_B64: $ secrets.FOLLOW_OPML_B64 
         run: |
           mkdir -p feeds
           if [ -n "$FOLLOW_OPML_B64" ]; then
@@ -53,15 +53,15 @@ jobs:
 
       - name: Update data
         env:
-          OPENROUTER_KEYS: ${{ secrets.OPENROUTER_KEYS }}
-          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
-          AI_TLDR_ENABLED: ${{ vars.AI_TLDR_ENABLED }}
-          AI_TLDR_TOP_N: ${{ vars.AI_TLDR_TOP_N }}
-          AI_TLDR_MAX_WORKERS: ${{ vars.AI_TLDR_MAX_WORKERS }}
-          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-          WEBHOOK_TYPE: ${{ vars.WEBHOOK_TYPE }}
-          WEBHOOK_MODE: ${{ vars.WEBHOOK_MODE }}
-          WEBHOOK_HOTNESS_THRESHOLD: ${{ vars.WEBHOOK_HOTNESS_THRESHOLD }}
+          OPENROUTER_KEYS: $ secrets.OPENROUTER_KEYS 
+          OPENROUTER_MODEL: $ secrets.OPENROUTER_MODEL 
+          AI_TLDR_ENABLED: $ secrets.AI_TLDR_ENABLED 
+          AI_TLDR_TOP_N: $ secrets.AI_TLDR_TOP_N 
+          AI_TLDR_MAX_WORKERS: $ secrets.AI_TLDR_MAX_WORKERS 
+          WEBHOOK_URL: $ secrets.WEBHOOK_URL 
+          WEBHOOK_TYPE: $ secrets.WEBHOOK_TYPE 
+          WEBHOOK_MODE: $ secrets.WEBHOOK_MODE 
+          WEBHOOK_HOTNESS_THRESHOLD: $ secrets.WEBHOOK_HOTNESS_THRESHOLD 
         run: |
           if [ -f feeds/follow.opml ]; then
             python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --rss-opml feeds/follow.opml
@@ -82,6 +82,11 @@ jobs:
           print('Data quality check passed')
           "
 
+      # ── 新增：构建期静态预渲染（SSG），把首屏新闻写进 index.html ──
+      - name: Prerender static HTML (SEO + first paint)
+        run: |
+          python scripts/prerender.py --data data/latest-24h.json --html index.html --top 30
+
       - name: Commit and push changes
         run: |
           if git diff --quiet; then
@@ -90,14 +95,16 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest-24h.json data/latest-24h-all.json data/archive.json data/source-status.json data/waytoagi-7d.json data/title-zh-cache.json
-          git commit -m "chore: update ai news snapshot"
+          git add data/latest-24h.json data/latest-24h-all.json data/archive.json data/source-status.json data/waytoagi-7d.json data/title-zh-cache.json index.html
+          git commit -m "chore: update ai news snapshot + prerender"
           git push
 
-      # Uncomment and configure to receive failure notifications
-      # - name: Notify on failure
-      #   if: failure()
-      #   run: |
-      #     curl -X POST "${{ secrets.WEBHOOK_URL }}" \
-      #       -H "Content-Type: application/json" \
-      #       -d '{"text": "AI News Radar update failed! Check: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}'
+      # ── 新增：失败时 Webhook 告警（需配置 WEBHOOK_URL secret）──
+      - name: Notify on failure
+        if: failure() && env.WEBHOOK_URL != ''
+        env:
+          WEBHOOK_URL: $ secrets.WEBHOOK_URL 
+        run: |
+          curl -sS -X POST "$WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"AI News Radar update failed! Run: $ github.server_url /$ github.repository /actions/runs/$ github.run_id \"}" || true

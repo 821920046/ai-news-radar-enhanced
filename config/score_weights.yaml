@@ -1,22 +1,31 @@
-# Signal Score 2.0 权重配置
-# 权重总和应为 1.0
+# Signal Score 2.0 评分配置
+# 修改此文件即可调整评分行为，无需改动代码。
 
+# 各维度权重（引擎会自动归一化，无需手动保证加和为 1.0）
 weights:
-  source_weight: 0.25    # 来源权威度
-  technical_score: 0.25  # 技术深度
-  novelty: 0.20          # 新近性
-  velocity: 0.15         # 传播速度
-  community: 0.15        # 社区信号
+  source_weight: 0.25
+  technical_score: 0.25
+  novelty: 0.20
+  velocity: 0.15
+  community: 0.15
 
-# 等级阈值
+# 等级分层配置
 levels:
-  S: 85   # Breaking / 重大事件
-  A: 70   # Important / 重要
-  B: 50   # Notable / 值得关注
-  C: 0    # Reference / 参考
+  # static     = 固定阈值（总分 > 阈值 即归入该级）
+  # percentile = 动态分位数分级，可避免分数通胀导致的等级失真
+  mode: "static"
+  thresholds:
+    S: 85
+    A: 70
+    B: 50
+  # percentile 模式下使用的分位点（0-1），仅当 mode=percentile 生效
+  percentiles:
+    S: 0.90
+    A: 0.70
+    B: 0.40
 
-# 来源权重映射
-source_weights:
+# 信源权威度映射（site_id -> 0-100）
+source_authority:
   official_ai: 100
   aibreakfast: 85
   followbuilders: 85
@@ -24,3 +33,18 @@ source_weights:
   buzzing: 70
   zeli: 70
   newsnow: 70
+
+# 技术深度启发式加分
+technical_scoring:
+  tldr_bonus: 30
+  long_description_bonus: 25
+  long_description_min_chars: 200
+  depth_tag_bonus: 25
+  number_in_title_bonus: 20
+  depth_tags:
+    - 论文研究
+    - 模型发布
+    - 部署推理
+
+# 未知信源权威度回退：使用 hotness_score / divisor 估计
+unknown_source_hotness_divisor: 10

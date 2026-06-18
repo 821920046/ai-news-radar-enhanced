@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hot Ticker 演示 · 24 小时热榜</title>
+<style>
+	body{margin:0;min-height:100vh;background:radial-gradient(1200px 600px at 50% -10%,#16203a,#080b12 60%);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#e8edf6;padding:40px 16px}
+	.demo-shell{max-width:1040px;margin:0 auto}
+	.demo-brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+	.demo-logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#28e0a8,#5b8cff);display:grid;place-items:center;font-size:22px}
+	.demo-brand h1{margin:0;font-size:20px}
+	.demo-brand p{margin:2px 0 0;color:#8b97ab;font-size:13px}
+	.demo-note{margin:24px 0 8px;color:#8b97ab;font-size:13px}
+</style>
+</head>
+<body>
+<div class="demo-shell">
+	<div class="demo-brand">
+		<div class="demo-logo">📡</div>
+		<div><h1>AI Signal Board</h1><p>24 小时 AI / 科技 / 数码 / 硬件 全向情报雷达</p></div>
+	</div>
+
+	<!-- 原「AI信号/覆盖站点/来源分组/归档总量」四张统计卡位置，现改为热榜滚动区 -->
+	<hot-ticker data-top="20"></hot-ticker>
+
+	<p class="demo-note">↑ 鼠标悬停可暂停滚动；点击任意条目查看详情。本页使用内置示例数据，接入真实环境时会自动读取 /hot 或 data/*.json。</p>
+</div>
+
+<!-- 演示用示例数据（生产环境由 prerender.py 注入或由 /hot 接口提供） -->
+<script id="__PRERENDER_DATA__" type="application/json">
+{"items_ai":[
+{"title_zh":"千组织/千代码：Kilo-Org 发布全栈 Agent 编程平台","title":"Kilo-Org releases kilocode","url":"https://github.com/Kilo-Org/kilocode","source":"GitHub Trending","signal_score":94,"signal_level":"S","stars":1339,"tags":["开源","Agent","GitHub"],"tldr":"Kilo-Org 发布全栈 Agent 编程平台 kilocode 并登上 GitHub 热榜。","published":"2026-06-18T22:45:00+08:00"},
+{"title_zh":"OpenAI 发布 GPT-5.5：推理成本下降 40%","url":"https://openai.com/blog","source":"OpenAI Blog","signal_score":97,"signal_level":"S","hotness":980,"tags":["模型","OpenAI"],"tldr":"新一代模型在保持性能的同时大幅降低推理成本。","published":"2026-06-18T20:10:00+08:00"},
+{"title_zh":"Anthropic 推出 Claude 企业级记忆功能","url":"https://anthropic.com","source":"Anthropic","signal_score":88,"signal_level":"A","hotness":640,"tags":["产品","Claude"],"tldr":"面向企业的长期记忆与知识库集成。","published":"2026-06-18T18:30:00+08:00"},
+{"title_zh":"谷歌 DeepMind 发布新一代机器人基础模型","url":"https://deepmind.google","source":"DeepMind","signal_score":85,"signal_level":"A","hotness":520,"tags":["机器人","具身智能"],"tldr":"在多任务操控上达到 SOTA。","published":"2026-06-18T16:05:00+08:00"},
+{"title_zh":"Mistral 开源 120B MoE 模型","url":"https://github.com/mistralai","source":"GitHub Trending","signal_score":91,"signal_level":"S","stars":2870,"tags":["开源","MoE","GitHub"],"tldr":"可商用许可的 120B 混合专家模型。","published":"2026-06-18T14:20:00+08:00"},
+{"title_zh":"HuggingFace 推出本地 Agent 运行时","url":"https://github.com/huggingface","source":"GitHub Trending","signal_score":83,"signal_level":"A","stars":910,"tags":["开源","Agent"],"tldr":"本地优先、可离线运行的轻量 Agent 框架。","published":"2026-06-18T12:00:00+08:00"},
+{"title_zh":"英伟达发布新一代推理芯片","url":"https://nvidia.com","source":"NVIDIA","signal_score":80,"signal_level":"A","hotness":430,"tags":["硬件","芯片"],"tldr":"推理性能功耗比显著提升。","published":"2026-06-18T09:40:00+08:00"},
+{"title_zh":"LangChain 发布 v1.0 稳定版","url":"https://github.com/langchain-ai/langchain","source":"GitHub Trending","signal_score":78,"signal_level":"A","stars":1520,"tags":["开源","框架"],"tldr":"API 趋于稳定，联合生态重构。","published":"2026-06-18T08:15:00+08:00"}
+]}
+</script>
+
+<script src="hot-ticker.js"></script>
+</body>
+</html>
