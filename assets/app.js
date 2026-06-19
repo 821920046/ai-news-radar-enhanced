@@ -179,11 +179,6 @@ function renderStats(payload) {
   statsGridEl.innerHTML = "";
 
   const allItems = payload.items || [];
-  
-  // 最新的热门新闻 (按 published_at 降序)
-  const latestNews = [...allItems]
-    .sort((a, b) => new Date(b.published_at || b.first_seen_at) - new Date(a.published_at || a.first_seen_at))
-    .slice(0, 15);
     
   // 24小时内热门新闻 (按 signal_score / hotness 降序)
   const hottestNews = [...allItems]
@@ -192,24 +187,23 @@ function renderStats(payload) {
       const hb = (b.hotness != null ? b.hotness : (b.stars != null ? b.stars : b.signal_score)) || 0;
       return hb - ha;
     })
-    .slice(0, 15);
+    .slice(0, 20);
 
   const createTickerHTML = (titleStr, items, color) => {
     if (!items.length) return "";
     const listHtml = items.map(item => {
       const text = item.title_zh || item.title || item.name || "未命名";
       const link = item.url || "#";
-      return `<li class="inline-flex items-center mx-4"><a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-[${color}] transition-colors duration-200 text-[15px] font-medium text-zinc-200 tracking-wide" title="${text}">${text}</a><span class="ml-8 text-zinc-700 select-none text-lg">•</span></li>`;
+      return `<li class="inline-flex items-center"><a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-[${color}] transition-colors duration-200 text-[14px] md:text-[15px] font-medium text-zinc-200 tracking-wide whitespace-nowrap" title="${text}">${text}</a><span class="mx-6 md:mx-10 text-zinc-700/80 select-none text-xl">•</span></li>`;
     }).join("");
     
     return `
-      <div class="glass-panel rounded-2xl p-4 flex flex-col relative overflow-hidden h-[90px] border-zinc-800/80 bg-zinc-950/60 shadow-inner">
-        <div class="absolute top-0 left-0 right-0 h-[2px]" style="background: linear-gradient(90deg, ${color}, rgba(20, 184, 166, 0.4))"></div>
-        <div class="flex items-center gap-2 mb-1 z-10">
+      <div class="glass-panel rounded-full flex items-center relative overflow-hidden h-[50px] border border-zinc-800/60 bg-zinc-950/60 shadow-lg shadow-black/20 w-full">
+        <div class="flex items-center gap-2 z-20 h-full pl-5 pr-8 bg-gradient-to-r from-zinc-950 via-zinc-950/95 to-transparent flex-shrink-0">
           <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: ${color}; box-shadow: 0 0 10px ${color}"></div>
-          <div class="text-[11px] font-bold text-zinc-400 tracking-widest uppercase" style="color: ${color}">${titleStr}</div>
+          <div class="text-[12px] font-bold tracking-widest uppercase whitespace-nowrap" style="color: ${color}">${titleStr}</div>
         </div>
-        <div class="flex-1 overflow-hidden relative flex items-center" style="-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);">
+        <div class="flex-1 overflow-hidden relative flex items-center h-full" style="-webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);">
           <ul class="flex items-center m-0 p-0 list-none ticker-scroll-x w-max">
             ${listHtml}
             ${listHtml}
@@ -219,8 +213,7 @@ function renderStats(payload) {
     `;
   };
 
-  statsGridEl.innerHTML = createTickerHTML("最新的热门新闻", latestNews, "#14b8a6") + 
-                          createTickerHTML("24小时内热门新闻", hottestNews, "#f97316");
+  statsGridEl.innerHTML = createTickerHTML("24H最热", hottestNews, "#14b8a6");
 }
 
 // ---- Category Nav -----------------------------------------------------------
