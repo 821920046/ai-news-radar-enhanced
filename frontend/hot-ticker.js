@@ -173,51 +173,24 @@
 		if (root.getElementById && root.getElementById(STYLE_ID)) return
 		if (document.getElementById(STYLE_ID)) return
 		var css = "\n" +
-		".ht-wrap{--ht-bg:rgba(20,24,33,.6);--ht-card:rgba(32,38,52,.7);--ht-border:rgba(255,255,255,.08);--ht-accent:#28e0a8;--ht-accent2:#5b8cff;--ht-text:#e8edf6;--ht-sub:#8b97ab;border:1px solid var(--ht-border);background:var(--ht-bg);border-radius:16px;padding:14px 16px;backdrop-filter:blur(8px);color:var(--ht-text);font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif}\n" +
-		".ht-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}\n" +
-		".ht-title{font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px}\n" +
-		".ht-live{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ht-accent);font-weight:600}\n" +
-		".ht-dot{width:7px;height:7px;border-radius:50%;background:var(--ht-accent);box-shadow:0 0 0 0 rgba(40,224,168,.6);animation:ht-pulse 1.6s infinite}\n" +
-		"@keyframes ht-pulse{0%{box-shadow:0 0 0 0 rgba(40,224,168,.55)}70%{box-shadow:0 0 0 8px rgba(40,224,168,0)}100%{box-shadow:0 0 0 0 rgba(40,224,168,0)}}\n" +
-		".ht-updated{margin-left:auto;font-size:11px;color:var(--ht-sub)}\n" +
-		".ht-lane{position:relative;overflow:hidden;margin:8px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}\n" +
-		".ht-lane-label{font-size:11px;font-weight:700;letter-spacing:.5px;padding:2px 8px;border-radius:6px;margin-bottom:4px;display:inline-block}\n" +
-		".ht-lane-news .ht-lane-label{color:#9fd0ff;background:rgba(91,140,255,.14)}\n" +
-		".ht-lane-os .ht-lane-label{color:#7df0c8;background:rgba(40,224,168,.14)}\n" +
-		".ht-track{display:flex;gap:10px;width:max-content;will-change:transform}\n" +
-		".ht-lane:hover .ht-track{animation-play-state:paused}\n" +
-		".ht-track.ht-left{animation:ht-marquee-l var(--ht-dur,40s) linear infinite}\n" +
-		".ht-track.ht-right{animation:ht-marquee-r var(--ht-dur,46s) linear infinite}\n" +
-		"@keyframes ht-marquee-l{from{transform:translateX(0)}to{transform:translateX(-50%)}}\n" +
-		"@keyframes ht-marquee-r{from{transform:translateX(-50%)}to{transform:translateX(0)}}\n" +
-		".ht-card{flex:0 0 auto;max-width:340px;display:flex;align-items:center;gap:9px;background:var(--ht-card);border:1px solid var(--ht-border);border-radius:11px;padding:8px 12px;cursor:pointer;transition:transform .15s,border-color .15s,background .15s}\n" +
-		".ht-card:hover{transform:translateY(-2px);border-color:var(--ht-accent);background:rgba(40,224,168,.08)}\n" +
-		".ht-rank{font-weight:800;font-size:13px;color:var(--ht-sub);min-width:20px;text-align:center}\n" +
-		".ht-rank.top{color:#ffcd5b}\n" +
-		".ht-card-body{min-width:0}\n" +
-		".ht-card-title{font-size:13px;font-weight:600;color:var(--ht-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}\n" +
-		".ht-card-meta{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--ht-sub);margin-top:2px}\n" +
-		".ht-badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:5px}\n" +
-		".ht-badge.S{color:#ff7a7a;background:rgba(255,122,122,.14)}\n" +
-		".ht-badge.A{color:#ffb05b;background:rgba(255,176,91,.14)}\n" +
-		".ht-badge.B{color:#ffe45b;background:rgba(255,228,91,.12)}\n" +
-		".ht-badge.C{color:#9aa7bd;background:rgba(154,167,189,.12)}\n" +
-		".ht-hot{color:#ff8e53;font-weight:700}\n" +
-		".ht-empty{color:var(--ht-sub);font-size:12px;padding:10px 4px}\n" +
-		/* modal */
-		".ht-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(6,9,15,.62);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .18s}\n" +
-		".ht-modal.open{opacity:1;pointer-events:auto}\n" +
-		".ht-modal-card{width:min(560px,92vw);max-height:84vh;overflow:auto;background:#161b26;border:1px solid var(--ht-border);border-radius:16px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.5)}\n" +
-		".ht-modal-card h3{margin:0 0 8px;font-size:18px;line-height:1.4;color:var(--ht-text)}\n" +
-		".ht-modal-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px;color:var(--ht-sub);margin-bottom:12px}\n" +
-		".ht-modal-card p{color:#cdd6e6;font-size:14px;line-height:1.7;margin:10px 0}\n" +
-		".ht-tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}\n" +
-		".ht-tag{font-size:11px;color:var(--ht-sub);background:rgba(255,255,255,.06);padding:2px 8px;border-radius:6px}\n" +
-		".ht-actions{display:flex;gap:10px;margin-top:16px}\n" +
-		".ht-btn{flex:1;text-align:center;padding:10px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;border:1px solid var(--ht-border)}\n" +
-		".ht-btn.primary{background:var(--ht-accent);color:#06241b;border-color:transparent}\n" +
-		".ht-btn.ghost{background:transparent;color:var(--ht-sub)}\n" +
-		"@media(max-width:640px){.ht-card-title{max-width:160px}}\n"
+		".ht-wrap{--ht-bg:rgba(9,9,11,0.6);--ht-border:rgba(255,255,255,0.08);--ht-text:#e4e4e7;--ht-sub:#71717a;border:1px solid var(--ht-border);background:var(--ht-bg);border-radius:16px;padding:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--ht-text);font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:flex;flex-direction:column;gap:12px;box-shadow:0 10px 15px -3px rgba(0,0,0,0.3)}\n" +
+		".ht-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:8px}\n" +
+		".ht-title{font-weight:800;font-size:14px;display:flex;align-items:center;gap:6px;color:#fff;letter-spacing:0.5px}\n" +
+		".ht-title-fire{color:#f97316;animation:ht-pulse 1.6s infinite;display:inline-block}\n" +
+		"@keyframes ht-pulse{0%{transform:scale(1);opacity:0.9}50%{transform:scale(1.1);opacity:1}100%{transform:scale(1);opacity:0.9}}\n" +
+		".ht-subtitle{font-size:11px;color:var(--ht-sub)}\n" +
+		".ht-body{position:relative;overflow:hidden;height:56px}\n" +
+		".ht-list{margin:0;padding:0;list-style:none}\n" +
+		".ht-item{height:28px;display:flex;align-items:center;justify-content:space-between;font-size:13px;gap:16px}\n" +
+		".ht-left-part{display:flex;align-items:center;gap:10px;min-width:0}\n" +
+		".ht-rank{font-family:monospace;font-weight:700;width:16px;text-align:center;flex-shrink:0;color:var(--ht-sub)}\n" +
+		".ht-rank.rank-1{color:#f43f5e;font-weight:800}\n" +
+		".ht-rank.rank-2{color:#f59e0b;font-weight:800}\n" +
+		".ht-rank.rank-3{color:#eab308;font-weight:800}\n" +
+		".ht-link{color:#e4e4e7;text-decoration:none;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color 0.2s ease}\n" +
+		".ht-link:hover{color:#2dd4bf}\n" +
+		".ht-meta{font-size:11px;color:var(--ht-sub);font-family:monospace;white-space:nowrap;flex-shrink:0}\n" +
+		".ht-empty{color:var(--ht-sub);font-size:12px;padding:10px 4px}\n"
 		var st = document.createElement("style")
 		st.id = STYLE_ID
 		st.textContent = css
@@ -225,119 +198,137 @@
 	}
 
 	// ── 渲染 ──────────────────────────────────────────────────────────────
-	function cardHTML(it, idx) {
-		var lv = levelOf(it)
-		var isOS = isOpenSource(it)
-		var hot = hotness(it)
-		var hotStr = isOS ? "★ " + fmtCount(hot) : "🔥 " + fmtCount(hot)
-		var badge = lv ? '<span class="ht-badge ' + esc(lv) + '">' + esc(lv) + "</span>" : ""
-		var rankCls = idx < 3 ? "ht-rank top" : "ht-rank"
-		return (
-			'<div class="ht-card" data-idx="' + idx + '" role="button" tabindex="0">' +
-			'<div class="' + rankCls + '">' + (idx + 1) + "</div>" +
-			'<div class="ht-card-body">' +
-			'<div class="ht-card-title">' + esc(title(it)) + "</div>" +
-			'<div class="ht-card-meta">' + badge +
-			'<span class="ht-hot">' + esc(hotStr) + "</span>" +
-			"<span>" + esc(source(it)) + "</span>" +
-			"</div></div></div>"
-		)
-	}
-
-	function laneHTML(items, cls, label, dir) {
-		if (!items.length) {
-			return (
-				'<div class="ht-lane ' + cls + '"><span class="ht-lane-label">' + esc(label) +
-				'</span><div class="ht-empty">暂无数据</div></div>'
-			)
-		}
-		var cards = items.map(cardHTML).join("")
-		// 复制一份用于无缝循环（translateX -50%）
-		var dur = Math.max(24, items.length * 3.2)
-		return (
-			'<div class="ht-lane ' + cls + '">' +
-			'<span class="ht-lane-label">' + esc(label) + "</span>" +
-			'<div class="ht-track ht-' + dir + '" style="--ht-dur:' + dur + 's">' +
-			cards + cards +
-			"</div></div>"
-		)
-	}
-
-	function openModal(it) {
-		var lv = levelOf(it)
-		var isOS = isOpenSource(it)
-		var hot = hotness(it)
-		var tags = tagsOf(it)
-		var overlay = document.createElement("div")
-		overlay.className = "ht-modal"
-		overlay.innerHTML =
-			'<div class="ht-modal-card" role="dialog" aria-modal="true">' +
-			"<h3>" + esc(title(it)) + "</h3>" +
-			'<div class="ht-modal-meta">' +
-			(lv ? '<span class="ht-badge ' + esc(lv) + '">' + esc(lv) + " 级</span>" : "") +
-			'<span class="ht-hot">' + (isOS ? "★ " : "🔥 ") + esc(fmtCount(hot)) + "</span>" +
-			"<span>" + esc(source(it)) + "</span>" +
-			(relTime(it.published || it.published_at || it.date) ? "<span>" + esc(relTime(it.published || it.published_at || it.date)) + "</span>" : "") +
-			"</div>" +
-			(summary(it) ? "<p>" + esc(summary(it)) + "</p>" : '<p style="color:#8b97ab">暂无摘要</p>') +
-			(tags.length ? '<div class="ht-tags">' + tags.slice(0, 8).map(function (t) { return '<span class="ht-tag">' + esc(t) + "</span>" }).join("") + "</div>" : "") +
-			'<div class="ht-actions">' +
-			'<a class="ht-btn primary" href="' + esc(url(it)) + '" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>' +
-			'<button class="ht-btn ghost" data-close>关闭</button>' +
-			"</div></div>"
-		document.body.appendChild(overlay)
-		requestAnimationFrame(function () { overlay.classList.add("open") })
-		function close() {
-			overlay.classList.remove("open")
-			setTimeout(function () { overlay.remove() }, 200)
-			document.removeEventListener("keydown", onKey)
-		}
-		function onKey(e) { if (e.key === "Escape") close() }
-		overlay.addEventListener("click", function (e) {
-			if (e.target === overlay || e.target.hasAttribute("data-close")) close()
-		})
-		document.addEventListener("keydown", onKey)
-	}
-
 	function render(host, data, cfg) {
+		if (!host.id) {
+			host.id = "ht_" + Math.random().toString(36).substr(2, 9);
+		}
+
 		var news = data.news || []
-		var os = data.opensource || []
-		var updated = data.generated_at ? "更新于 " + relTime(data.generated_at) : ""
+		if (!news.length) {
+			host.innerHTML = '<div class="ht-wrap"><div class="ht-empty">暂无热点数据</div></div>';
+			return;
+		}
+
+		var itemsHtml = news.map(function (item, idx) {
+			var titleText = title(item);
+			var link = url(item);
+			var rank = idx + 1;
+			var rankClass = "ht-rank";
+			if (rank === 1) rankClass += " rank-1";
+			else if (rank === 2) rankClass += " rank-2";
+			else if (rank === 3) rankClass += " rank-3";
+
+			var srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
+			var timeStr = relTime(item.published || item.published_at || item.date);
+			var metaStr = srcCount + "个信源 · " + timeStr;
+
+			return (
+				'<li class="ht-item" style="height:28px;">' +
+				'<div class="ht-left-part">' +
+				'<span class="' + rankClass + '">' + rank + '</span>' +
+				'<a class="ht-link" href="' + esc(link) + '" target="_blank" rel="noopener noreferrer" title="' + esc(titleText) + '">' +
+				esc(titleText) +
+				'</a>' +
+				'</div>' +
+				'<div class="ht-meta">' + esc(metaStr) + '</div>' +
+				'</li>'
+			);
+		}).join("");
+
+		var copyCount = Math.min(news.length, 2);
+		var copyHtml = "";
+		for (var i = 0; i < copyCount; i++) {
+			var item = news[i];
+			var titleText = title(item);
+			var link = url(item);
+			var rank = i + 1;
+			var rankClass = "ht-rank";
+			if (rank === 1) rankClass += " rank-1";
+			else if (rank === 2) rankClass += " rank-2";
+			else if (rank === 3) rankClass += " rank-3";
+
+			var srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
+			var timeStr = relTime(item.published || item.published_at || item.date);
+			var metaStr = srcCount + "个信源 · " + timeStr;
+
+			copyHtml += (
+				'<li class="ht-item" style="height:28px;">' +
+				'<div class="ht-left-part">' +
+				'<span class="' + rankClass + '">' + rank + '</span>' +
+				'<a class="ht-link" href="' + esc(link) + '" target="_blank" rel="noopener noreferrer" title="' + esc(titleText) + '">' +
+				esc(titleText) +
+				'</a>' +
+				'</div>' +
+				'<div class="ht-meta">' + esc(metaStr) + '</div>' +
+				'</li>'
+			);
+		}
+
 		host.innerHTML =
 			'<div class="ht-wrap">' +
-			'<div class="ht-head">' +
-			'<span class="ht-title">🔥 24 小时热榜</span>' +
-			'<span class="ht-live"><span class="ht-dot"></span>实时滚动</span>' +
-			'<span class="ht-updated">' + esc(updated) + "</span>" +
-			"</div>" +
-			laneHTML(news, "ht-lane-news", "🗞 最热新闻", "left") +
-			laneHTML(os, "ht-lane-os", "⭐ 最热开源", "right") +
-			"</div>"
+			'  <div class="ht-head">' +
+			'    <div class="ht-title">' +
+			'      <span class="ht-title-fire">🔥</span>' +
+			'      <span>当前热点</span>' +
+			'    </div>' +
+			'    <div class="ht-subtitle">多信源热度 · 随时间消退</div>' +
+			'  </div>' +
+			'  <div class="ht-body" id="htContainer_' + host.id + '">' +
+			'    <ul class="ht-list" id="htList_' + host.id + '" style="transform: translateY(0px);">' +
+			       itemsHtml + copyHtml +
+			'    </ul>' +
+			'  </div>' +
+			'</div>';
 
-		// 事件委托：点击/回车打开详情
-		var laneData = [
-			{ sel: ".ht-lane-news", items: news },
-			{ sel: ".ht-lane-os", items: os },
-		]
-		laneData.forEach(function (ld) {
-			var lane = host.querySelector(ld.sel)
-			if (!lane) return
-			lane.addEventListener("click", function (e) {
-				var card = e.target.closest(".ht-card")
-				if (!card) return
-				var it = ld.items[toNum(card.getAttribute("data-idx")) % ld.items.length]
-				if (it) openModal(it)
-			})
-			lane.addEventListener("keydown", function (e) {
-				if (e.key !== "Enter" && e.key !== " ") return
-				var card = e.target.closest(".ht-card")
-				if (!card) return
-				e.preventDefault()
-				var it = ld.items[toNum(card.getAttribute("data-idx")) % ld.items.length]
-				if (it) openModal(it)
-			})
-		})
+		// 启动垂直无缝滚动
+		var container = document.getElementById("htContainer_" + host.id);
+		var list = document.getElementById("htList_" + host.id);
+		if (container && list && news.length > 2) {
+			var rowHeight = 28;
+			var itemsCount = news.length;
+			var currentIndex = 0;
+			var isTransitioning = false;
+			var timer = null;
+
+			var scrollFunc = function () {
+				if (isTransitioning) return;
+				currentIndex++;
+				list.style.transition = "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)";
+				list.style.transform = "translateY(-" + (currentIndex * rowHeight) + "px)";
+
+				if (currentIndex >= itemsCount) {
+					isTransitioning = true;
+					setTimeout(function () {
+						list.style.transition = "none";
+						currentIndex = 0;
+						list.style.transform = "translateY(0px)";
+						isTransitioning = false;
+					}, 500);
+				}
+			};
+
+			timer = setInterval(scrollFunc, 3000);
+
+			container.addEventListener("mouseenter", function () {
+				if (timer) {
+					clearInterval(timer);
+					timer = null;
+				}
+			});
+
+			container.addEventListener("mouseleave", function () {
+				if (!timer) {
+					timer = setInterval(scrollFunc, 3000);
+				}
+			});
+
+			if (host._timer) {
+				clearInterval(host._timer);
+			}
+			host._timer = timer;
+		}
 	}
+
 
 	// ── 挂载 / 刷新 ───────────────────────────────────────────────────────
 	async function mountHotTicker(host, options) {

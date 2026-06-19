@@ -18,8 +18,10 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 import os
+import logging
 from core.models import BROWSER_UA, UTC
 
+logger = logging.getLogger(__name__)
 
 def _env_int(name: str, default: int, prefix: str = "") -> int:
     raw = os.environ.get(name)

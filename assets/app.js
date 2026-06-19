@@ -24,6 +24,8 @@ const state = {
   generatedAt: null,
 };
 
+let hotTickerTimer = null;
+
 // ---- DOM Refs ----------------------------------------------------------------
 const statsGridEl        = document.getElementById("statsGrid");
 const catNavEl           = document.getElementById("catNav");
@@ -174,9 +176,25 @@ function dateKey(iso) {
 
 // ---- Stats Grid (visible) ---------------------------------------------------
 
+function relTime(iso) {
+  if (!iso) return "刚刚";
+  const t = new Date(iso);
+  if (Number.isNaN(t.getTime())) return "刚刚";
+  const diff = (Date.now() - t.getTime()) / 1000;
+  if (diff < 60) return "刚刚";
+  if (diff < 3600) return Math.floor(diff / 60) + "分钟前";
+  if (diff < 86400) return Math.floor(diff / 3600) + "小时前";
+  return Math.floor(diff / 86400) + "天前";
+}
+
 function renderStats(payload) {
   if (!statsGridEl) return;
   statsGridEl.innerHTML = "";
+
+  if (hotTickerTimer) {
+    clearInterval(hotTickerTimer);
+    hotTickerTimer = null;
+  }
 
   const allItems = payload.items || [];
     
@@ -189,32 +207,128 @@ function renderStats(payload) {
     })
     .slice(0, 20);
 
-  const createTickerHTML = (titleStr, items, color) => {
-    if (!items.length) return "";
-    const listHtml = items.map(item => {
-      const text = item.title_zh || item.title || item.name || "未命名";
-      const link = item.url || "#";
-      return `<li class="inline-flex items-center"><a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-[${color}] transition-colors duration-200 text-[14px] md:text-[15px] font-medium text-zinc-200 tracking-wide whitespace-nowrap" title="${text}">${text}</a><span class="mx-6 md:mx-10 text-zinc-700/80 select-none text-xl">•</span></li>`;
-    }).join("");
-    
-    return `
-      <div class="glass-panel rounded-full flex items-center relative overflow-hidden h-[50px] border border-zinc-800/60 bg-zinc-950/60 shadow-lg shadow-black/20 w-full">
-        <div class="flex items-center gap-2 z-20 h-full pl-5 pr-8 bg-gradient-to-r from-zinc-950 via-zinc-950/95 to-transparent flex-shrink-0">
-          <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: ${color}; box-shadow: 0 0 10px ${color}"></div>
-          <div class="text-[12px] font-bold tracking-widest uppercase whitespace-nowrap" style="color: ${color}">${titleStr}</div>
-        </div>
-        <div class="flex-1 overflow-hidden relative flex items-center h-full" style="-webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);">
-          <ul class="flex items-center m-0 p-0 list-none ticker-scroll-x w-max">
-            ${listHtml}
-            ${listHtml}
-          </ul>
-        </div>
-      </div>
-    `;
-  };
+  if (!hottestNews.length) return;
 
-  statsGridEl.innerHTML = createTickerHTML("24H最热", hottestNews, "#14b8a6");
+  const itemsHtml = hottestNews.map((item, idx) => {
+    const titleText = item.title_zh || item.title || item.name || "未命名";
+    const link = item.url || "#";
+    const rank = idx + 1;
+    let rankColor = "text-zinc-500";
+    if (rank === 1) rankColor = "text-rose-500 font-extrabold";
+    else if (rank === 2) rankColor = "text-amber-500 font-extrabold";
+    else if (rank === 3) rankColor = "text-yellow-500 font-extrabold";
+
+    const srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
+    const timeStr = relTime(item.published_at || item.published || item.first_seen_at);
+    const metaStr = `${srcCount}个信源 · ${timeStr}`;
+
+    return `
+      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-4 min-w-0">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span class="font-mono text-center shrink-0 w-5 ${rankColor}">${rank}</span>
+          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200" title="${escapeHtml(titleText)}">
+            ${escapeHtml(titleText)}
+          </a>
+        </div>
+        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap">${escapeHtml(metaStr)}</div>
+      </li>
+    `;
+  }).join("");
+
+  const copyCount = Math.min(hottestNews.length, 2);
+  let copyHtml = "";
+  for (let i = 0; i < copyCount; i++) {
+    const item = hottestNews[i];
+    const titleText = item.title_zh || item.title || item.name || "未命名";
+    const link = item.url || "#";
+    const rank = i + 1;
+    let rankColor = "text-zinc-500";
+    if (rank === 1) rankColor = "text-rose-500 font-extrabold";
+    else if (rank === 2) rankColor = "text-amber-500 font-extrabold";
+    else if (rank === 3) rankColor = "text-yellow-500 font-extrabold";
+
+    const srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
+    const timeStr = relTime(item.published_at || item.published || item.first_seen_at);
+    const metaStr = `${srcCount}个信源 · ${timeStr}`;
+
+    copyHtml += `
+      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-4 min-w-0">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span class="font-mono text-center shrink-0 w-5 ${rankColor}">${rank}</span>
+          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200" title="${escapeHtml(titleText)}">
+            ${escapeHtml(titleText)}
+          </a>
+        </div>
+        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap">${escapeHtml(metaStr)}</div>
+      </li>
+    `;
+  }
+
+  statsGridEl.innerHTML = `
+    <div class="glass-panel rounded-2xl border border-zinc-800/60 bg-zinc-950/60 p-4 shadow-lg shadow-black/20 w-full flex flex-col gap-3">
+      <!-- 头部 Header -->
+      <div class="flex items-center justify-between border-b border-zinc-900/60 pb-2 flex-shrink-0">
+        <div class="flex items-center gap-2">
+          <span class="text-base text-orange-500 animate-pulse">🔥</span>
+          <span class="text-sm font-extrabold text-zinc-100 tracking-wider">当前热点</span>
+        </div>
+        <div class="text-[11px] text-zinc-500 font-medium">多信源热度 · 随时间消退</div>
+      </div>
+      
+      <!-- 滚动区 Body -->
+      <div class="relative overflow-hidden h-[56px]" id="hotTickerContainer">
+        <ul class="flex flex-col m-0 p-0 list-none" id="hotTickerList" style="transform: translateY(0px);">
+          ${itemsHtml}
+          ${copyHtml}
+        </ul>
+      </div>
+    </div>
+  `;
+
+  const container = document.getElementById("hotTickerContainer");
+  const list = document.getElementById("hotTickerList");
+
+  if (container && list && hottestNews.length > 2) {
+    const rowHeight = 28;
+    const itemsCount = hottestNews.length;
+    let currentIndex = 0;
+    let isTransitioning = false;
+
+    const scrollFunc = () => {
+      if (isTransitioning) return;
+      currentIndex++;
+
+      list.style.transition = "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)";
+      list.style.transform = `translateY(-${currentIndex * rowHeight}px)`;
+
+      if (currentIndex >= itemsCount) {
+        isTransitioning = true;
+        setTimeout(() => {
+          list.style.transition = "none";
+          currentIndex = 0;
+          list.style.transform = "translateY(0px)";
+          isTransitioning = false;
+        }, 500);
+      }
+    };
+
+    hotTickerTimer = setInterval(scrollFunc, 3000);
+
+    container.addEventListener("mouseenter", () => {
+      if (hotTickerTimer) {
+        clearInterval(hotTickerTimer);
+        hotTickerTimer = null;
+      }
+    });
+
+    container.addEventListener("mouseleave", () => {
+      if (!hotTickerTimer) {
+        hotTickerTimer = setInterval(scrollFunc, 3000);
+      }
+    });
+  }
 }
+
 
 // ---- Category Nav -----------------------------------------------------------
 
