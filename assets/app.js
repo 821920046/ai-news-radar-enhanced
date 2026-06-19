@@ -177,22 +177,47 @@ function dateKey(iso) {
 function renderStats(payload) {
   if (!statsGridEl) return;
   statsGridEl.innerHTML = "";
-  const cards = [
-    { label: "AI 信号", value: fmtNumber(payload.total_items), color: "#3b82f6" },
-    { label: "覆盖站点", value: fmtNumber(payload.site_count), color: "#14b8a6" },
-    { label: "来源分组", value: fmtNumber(payload.source_count), color: "#8b5cf6" },
-    { label: "归档总量", value: fmtNumber(payload.archive_total || 0), color: "#f97316" },
-  ];
-  cards.forEach(({ label, value, color }) => {
-    const node = document.createElement("div");
-    node.className = "glass-panel rounded-2xl p-4 transition-all duration-300 hover:border-zinc-700 hover:scale-[1.02] hover:shadow-lg hover:shadow-teal-500/5 flex flex-col justify-between relative overflow-hidden";
-    node.innerHTML = `
-      <div class="absolute top-0 left-0 right-0 h-[2px]" style="background: linear-gradient(90deg, ${color}, rgba(20, 184, 166, 0.4))"></div>
-      <div class="text-[10px] font-bold text-zinc-500 tracking-wider uppercase">${label}</div>
-      <div class="text-xl font-extrabold text-zinc-100 mt-2 font-mono tracking-tight">${value}</div>
+
+  const allItems = payload.items || [];
+  
+  // 最新的热门新闻 (按 published_at 降序)
+  const latestNews = [...allItems]
+    .sort((a, b) => new Date(b.published_at || b.first_seen_at) - new Date(a.published_at || a.first_seen_at))
+    .slice(0, 15);
+    
+  // 24小时内热门新闻 (按 signal_score / hotness 降序)
+  const hottestNews = [...allItems]
+    .sort((a, b) => {
+      const ha = (a.hotness != null ? a.hotness : (a.stars != null ? a.stars : a.signal_score)) || 0;
+      const hb = (b.hotness != null ? b.hotness : (b.stars != null ? b.stars : b.signal_score)) || 0;
+      return hb - ha;
+    })
+    .slice(0, 15);
+
+  const createTickerHTML = (titleStr, items, color) => {
+    if (!items.length) return "";
+    const listHtml = items.map(item => {
+      const text = item.title_zh || item.title || item.name || "未命名";
+      const link = item.url || "#";
+      return `<li class="py-1.5 truncate"><a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors duration-200 text-sm text-zinc-300" title="${text}">${text}</a></li>`;
+    }).join("");
+    
+    return `
+      <div class="glass-panel rounded-2xl p-4 flex flex-col relative overflow-hidden h-[130px]">
+        <div class="absolute top-0 left-0 right-0 h-[2px]" style="background: linear-gradient(90deg, ${color}, rgba(20, 184, 166, 0.4))"></div>
+        <div class="text-[12px] font-bold text-zinc-400 tracking-wider uppercase mb-2 flex-shrink-0 z-10 bg-[#09090b]/80 shadow-[0_4px_8px_rgba(9,9,11,0.8)]">${titleStr}</div>
+        <div class="flex-1 overflow-hidden relative" style="-webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);">
+          <ul class="absolute inset-x-0 top-0 m-0 p-0 list-none ticker-scroll">
+            ${listHtml}
+            ${listHtml}
+          </ul>
+        </div>
+      </div>
     `;
-    statsGridEl.appendChild(node);
-  });
+  };
+
+  statsGridEl.innerHTML = createTickerHTML("最新的热门新闻", latestNews, "#3b82f6") + 
+                          createTickerHTML("24小时内热门新闻", hottestNews, "#f97316");
 }
 
 // ---- Category Nav -----------------------------------------------------------

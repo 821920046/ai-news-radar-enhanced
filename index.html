@@ -178,6 +178,17 @@
           top: 5px;
         }
       }
+      /* 滚动组件动画 */
+      @keyframes ticker-slide {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+      }
+      .ticker-scroll {
+        animation: ticker-slide 30s linear infinite;
+      }
+      .ticker-scroll:hover {
+        animation-play-state: paused;
+      }
     </style>
   <!-- PRERENDER:HEAD -->
 <meta name="description" content="乔普特拉哈斯/净空 / palmier-io/palmier-pro / aishwaryanr/awesome-generative-ai-guide / 考拉73/世界监测 / BuilderIO/代理原生">
@@ -272,7 +283,7 @@
       </header>
 
       <!-- ==================== STATS GRID ==================== -->
-      <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="statsGrid">
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" id="statsGrid">
         <!-- 动态生成数据统计卡片 -->
       </section>
 
