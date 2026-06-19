@@ -199,15 +199,18 @@ function renderStats(payload) {
     const listHtml = items.map(item => {
       const text = item.title_zh || item.title || item.name || "未命名";
       const link = item.url || "#";
-      return `<li class="py-1.5 truncate"><a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors duration-200 text-sm text-zinc-300" title="${text}">${text}</a></li>`;
+      return `<li class="inline-flex items-center mx-4"><a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-[${color}] transition-colors duration-200 text-[15px] font-medium text-zinc-200 tracking-wide" title="${text}">${text}</a><span class="ml-8 text-zinc-700 select-none text-lg">•</span></li>`;
     }).join("");
     
     return `
-      <div class="glass-panel rounded-2xl p-4 flex flex-col relative overflow-hidden h-[130px]">
+      <div class="glass-panel rounded-2xl p-4 flex flex-col relative overflow-hidden h-[90px] border-zinc-800/80 bg-zinc-950/60 shadow-inner">
         <div class="absolute top-0 left-0 right-0 h-[2px]" style="background: linear-gradient(90deg, ${color}, rgba(20, 184, 166, 0.4))"></div>
-        <div class="text-[12px] font-bold text-zinc-400 tracking-wider uppercase mb-2 flex-shrink-0 z-10 bg-[#09090b]/80 shadow-[0_4px_8px_rgba(9,9,11,0.8)]">${titleStr}</div>
-        <div class="flex-1 overflow-hidden relative" style="-webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);">
-          <ul class="absolute inset-x-0 top-0 m-0 p-0 list-none ticker-scroll">
+        <div class="flex items-center gap-2 mb-1 z-10">
+          <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: ${color}; box-shadow: 0 0 10px ${color}"></div>
+          <div class="text-[11px] font-bold text-zinc-400 tracking-widest uppercase" style="color: ${color}">${titleStr}</div>
+        </div>
+        <div class="flex-1 overflow-hidden relative flex items-center" style="-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);">
+          <ul class="flex items-center m-0 p-0 list-none ticker-scroll-x w-max">
             ${listHtml}
             ${listHtml}
           </ul>
@@ -216,7 +219,7 @@ function renderStats(payload) {
     `;
   };
 
-  statsGridEl.innerHTML = createTickerHTML("最新的热门新闻", latestNews, "#3b82f6") + 
+  statsGridEl.innerHTML = createTickerHTML("最新的热门新闻", latestNews, "#14b8a6") + 
                           createTickerHTML("24小时内热门新闻", hottestNews, "#f97316");
 }
 

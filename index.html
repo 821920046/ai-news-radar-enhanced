@@ -178,15 +178,16 @@
           top: 5px;
         }
       }
-      /* 滚动组件动画 */
-      @keyframes ticker-slide {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-50%); }
+      /* 滚动组件动画 (横向) */
+      @keyframes ticker-slide-x {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
       }
-      .ticker-scroll {
-        animation: ticker-slide 30s linear infinite;
+      .ticker-scroll-x {
+        animation: ticker-slide-x 40s linear infinite;
+        will-change: transform;
       }
-      .ticker-scroll:hover {
+      .ticker-scroll-x:hover {
         animation-play-state: paused;
       }
     </style>
