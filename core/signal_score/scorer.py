@@ -325,6 +325,8 @@ class SignalScoreEngine:
             article["signal_level"] = level
             article["signal_breakdown"] = {dim: round(val, 1) for dim, val in dims.items()}
             distribution[level] = distribution.get(level, 0) + 1
+            article.pop("_title_words", None)
+            article.pop("_desc_bigrams", None)
 
         logger.info(
             "[SignalScore] mode=%s thresholds=%s distribution=%s",

@@ -30,11 +30,21 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
     window_start = now - timedelta(hours=24)
 
     current_tags = set(current_article.get("tags") or [])
-    current_title = strip_html_tags(str(current_article.get("title") or "")).lower()
-    current_desc = strip_html_tags(str(current_article.get("description") or "")).lower()
+    
+    current_title_words = current_article.get("_title_words")
+    if current_title_words is None:
+        current_title = strip_html_tags(str(current_article.get("title") or "")).lower()
+        current_title_words = {w for w in re.findall(r"[a-zA-Z一-鿿]{2,}", current_title)}
+        current_article["_title_words"] = current_title_words
 
-    # 从标题提取关键词（长度 >= 2 的词）
-    current_title_words = {w for w in re.findall(r"[a-zA-Z一-鿿]{2,}", current_title)}
+    current_bigrams = current_article.get("_desc_bigrams")
+    if current_bigrams is None:
+        current_desc = strip_html_tags(str(current_article.get("description") or "")).lower()
+        if len(current_desc) > 20:
+            current_bigrams = {current_desc[i : i + 2] for i in range(len(current_desc) - 1)}
+        else:
+            current_bigrams = set()
+        current_article["_desc_bigrams"] = current_bigrams
 
     related_count = 0
     for article in articles:
@@ -42,9 +52,7 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
             continue
 
         art_time = event_time(article)
-        if not art_time:
-            continue
-        if art_time < window_start:
+        if not art_time or art_time < window_start:
             continue
 
         # 标签重叠
@@ -54,25 +62,28 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
             continue
 
         # 关键词重叠（至少 2 个共同词）
-        art_title = strip_html_tags(str(article.get("title") or "")).lower()
-        art_title_words = {w for w in re.findall(r"[a-zA-Z一-鿿]{2,}", art_title)}
-        common_words = current_title_words & art_title_words
-        if len(common_words) >= 2:
+        art_title_words = article.get("_title_words")
+        if art_title_words is None:
+            art_title = strip_html_tags(str(article.get("title") or "")).lower()
+            art_title_words = {w for w in re.findall(r"[a-zA-Z一-鿿]{2,}", art_title)}
+            article["_title_words"] = art_title_words
+
+        if len(current_title_words & art_title_words) >= 2:
             related_count += 1
             continue
 
         # 描述文本重叠
-        art_desc = strip_html_tags(str(article.get("description") or "")).lower()
-        if current_desc and art_desc and len(current_desc) > 20 and len(art_desc) > 20:
-            # 用简单的 bigram 重叠
-            def get_bigrams(s: str) -> set[str]:
-                return {s[i : i + 2] for i in range(len(s) - 1)}
+        art_bigrams = article.get("_desc_bigrams")
+        if art_bigrams is None:
+            art_desc = strip_html_tags(str(article.get("description") or "")).lower()
+            if len(art_desc) > 20:
+                art_bigrams = {art_desc[i : i + 2] for i in range(len(art_desc) - 1)}
+            else:
+                art_bigrams = set()
+            article["_desc_bigrams"] = art_bigrams
 
-            current_bigrams = get_bigrams(current_desc)
-            art_bigrams = get_bigrams(art_desc)
-            overlap = current_bigrams & art_bigrams
-            if len(overlap) >= 3:
-                related_count += 1
+        if current_bigrams and art_bigrams and len(current_bigrams & art_bigrams) >= 3:
+            related_count += 1
 
     return min(100.0, related_count * 20.0)
 
