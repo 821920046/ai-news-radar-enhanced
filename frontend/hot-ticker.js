@@ -203,7 +203,7 @@
 			host.id = "ht_" + Math.random().toString(36).substr(2, 9);
 		}
 
-		var news = data.news || []
+		var news = (data.news || []).slice(0, 15);
 		if (!news.length) {
 			host.innerHTML = '<div class="ht-wrap"><div class="ht-empty">暂无热点数据</div></div>';
 			return;
@@ -273,7 +273,7 @@
 			'    </div>' +
 			'    <div class="ht-subtitle">多信源热度 · 随时间消退</div>' +
 			'  </div>' +
-			'  <div class="ht-body" id="htContainer_' + host.id + '">' +
+			'  <div class="ht-body" id="htContainer_' + host.id + '" style="position: relative; overflow: hidden; height: 56px;">' +
 			'    <ul class="ht-list" id="htList_' + host.id + '" style="transform: translateY(0px);">' +
 			       itemsHtml + copyHtml +
 			'    </ul>' +
@@ -337,7 +337,7 @@
 			endpoint: options.endpoint || host.getAttribute("data-endpoint") || "",
 			newsJson: options.newsJson || host.getAttribute("data-news-json") || "data/latest-24h.json",
 			allJson: options.allJson || host.getAttribute("data-all-json") || "data/latest-24h-all.json",
-			top: toNum(options.top || host.getAttribute("data-top") || 20) || 20,
+			top: toNum(options.top || host.getAttribute("data-top") || 15) || 15,
 			refreshMs: toNum(options.refreshMs || host.getAttribute("data-refresh") || 0),
 		}
 		injectStyle(document)

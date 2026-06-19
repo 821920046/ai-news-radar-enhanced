@@ -205,7 +205,7 @@ function renderStats(payload) {
       const hb = (b.hotness != null ? b.hotness : (b.stars != null ? b.stars : b.signal_score)) || 0;
       return hb - ha;
     })
-    .slice(0, 20);
+    .slice(0, 15);
 
   if (!hottestNews.length) return;
 
@@ -276,7 +276,7 @@ function renderStats(payload) {
       </div>
       
       <!-- 滚动区 Body -->
-      <div class="relative overflow-hidden h-[56px]" id="hotTickerContainer">
+      <div style="position: relative; overflow: hidden; height: 56px;" id="hotTickerContainer">
         <ul class="flex flex-col m-0 p-0 list-none" id="hotTickerList" style="transform: translateY(0px);">
           ${itemsHtml}
           ${copyHtml}
