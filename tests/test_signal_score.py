@@ -6,32 +6,22 @@
 
 from __future__ import annotations
 
-import sys
-import types
+import pytest
+from unittest.mock import patch
 
+from core.signal_score.scorer import SignalScoreEngine
 
-def _install_stubs():
+@pytest.fixture(autouse=True)
+def mock_dependencies():
     """为 scorer 所需的 core.utils / features 注入轻量打桩模块。"""
-    # core 包
-    if "core" not in sys.modules:
-        sys.modules["core"] = types.ModuleType("core")
-
-    utils = types.ModuleType("core.utils")
-    utils.compute_hotness = lambda article: (float(article.get("hotness_score") or 0.0), {})
-    utils.strip_html_tags = lambda s: s
-    sys.modules["core.utils"] = utils
-
-    features = types.ModuleType("core.signal_score.features")
-    features.compute_velocity = lambda articles, article: 0.0
-    features.compute_novelty = lambda article, archive=None: float(article.get("_novelty", 50.0))
-    features.compute_community_signal = lambda article: float(article.get("_community", 50.0))
-    sys.modules["core.signal_score.features"] = features
-
+    with patch("core.signal_score.scorer.compute_hotness", side_effect=lambda article: (float(article.get("hotness_score") or 0.0), {})), \
+         patch("core.signal_score.scorer.strip_html_tags", side_effect=lambda s: s), \
+         patch("core.signal_score.scorer.compute_velocity", side_effect=lambda articles, article: 0.0), \
+         patch("core.signal_score.scorer.compute_novelty", side_effect=lambda article, archive=None: float(article.get("_novelty", 50.0))), \
+         patch("core.signal_score.scorer.compute_community_signal", side_effect=lambda article: float(article.get("_community", 50.0))):
+        yield
 
 def _engine(**overrides):
-    _install_stubs()
-    from core.signal_score.scorer import SignalScoreEngine
-
     return SignalScoreEngine(overrides or None)
 
 

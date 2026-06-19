@@ -18,6 +18,7 @@
     <outline text="AI Labs &amp; Model Providers">
       <outline text="Microsoft AI Blog" title="Microsoft AI Blog" type="rss" xmlUrl="https://blogs.microsoft.com/ai/feed/" htmlUrl="https://blogs.microsoft.com/ai/" />
       <outline text="Meta AI Blog" title="Meta AI Blog" type="rss" xmlUrl="https://ai.meta.com/blog/rss/" htmlUrl="https://ai.meta.com/blog/" />
+      <outline text="DeepMind Blog" title="DeepMind Blog" type="rss" xmlUrl="https://deepmind.google/blog/rss.xml" htmlUrl="https://deepmind.google/blog/" />
       <outline text="NVIDIA AI Blog" title="NVIDIA AI Blog" type="rss" xmlUrl="https://blogs.nvidia.com/ai/feed/" htmlUrl="https://blogs.nvidia.com/ai/" />
       <outline text="Mistral AI Blog" title="Mistral AI Blog" type="rss" xmlUrl="https://mistral.ai/feed.xml" htmlUrl="https://mistral.ai/news" />
       <outline text="Cohere Blog" title="Cohere Blog" type="rss" xmlUrl="https://cohere.com/blog/feed" htmlUrl="https://cohere.com/blog" />
@@ -68,6 +69,7 @@
       <outline text="AI Snake Oil" title="AI Snake Oil" type="rss" xmlUrl="https://www.aisnakeoil.com/feed" htmlUrl="https://www.aisnakeoil.com" />
       <outline text="Interconnects (Nathan Lambert)" title="Interconnects" type="rss" xmlUrl="https://www.interconnects.ai/feed" htmlUrl="https://www.interconnects.ai" />
       <outline text="Import AI (Jack Clark)" title="Import AI" type="rss" xmlUrl="https://importai.substack.com/feed" htmlUrl="https://importai.substack.com" />
+      <outline text="The Sequence" title="The Sequence" type="rss" xmlUrl="https://thesequence.substack.com/feed" htmlUrl="https://thesequence.substack.com/" />
       <outline text="Ben's Bites" title="Ben's Bites" type="rss" xmlUrl="https://bensbites.beehiiv.com/feed" htmlUrl="https://bensbites.beehiiv.com" />
     </outline>
 
@@ -90,12 +92,18 @@
       <outline text="PyTorch Blog" title="PyTorch Blog" type="rss" xmlUrl="https://pytorch.org/blog/feed.xml" htmlUrl="https://pytorch.org/blog" />
     </outline>
 
-    <!-- 9. Engineering & Development -->
+    <!-- 9. Engineering & Dev -->
     <outline text="Engineering &amp; Dev">
       <outline text="GitHub Changelog" title="GitHub Changelog" type="rss" xmlUrl="https://github.blog/changelog/feed/" htmlUrl="https://github.blog/changelog/" />
       <outline text="Vercel Blog" title="Vercel Blog" type="rss" xmlUrl="https://vercel.com/blog/feed" htmlUrl="https://vercel.com/blog" />
       <outline text="InfoQ - Software Development" title="InfoQ" type="rss" xmlUrl="https://feed.infoq.com/" htmlUrl="https://www.infoq.com/" />
       <outline text="Hackaday" title="Hackaday" type="rss" xmlUrl="https://hackaday.com/blog/feed/" htmlUrl="https://hackaday.com/" />
+    </outline>
+
+    <!-- 10. Communities -->
+    <outline text="Communities">
+      <outline text="Hacker News AI" title="Hacker News AI" type="rss" xmlUrl="https://hnrss.org/newest?q=AI" htmlUrl="https://news.ycombinator.com/newest" />
+      <outline text="r/MachineLearning" title="r/MachineLearning" type="rss" xmlUrl="https://www.reddit.com/r/MachineLearning/new/.rss" htmlUrl="https://www.reddit.com/r/MachineLearning/" />
     </outline>
   </body>
 </opml>
