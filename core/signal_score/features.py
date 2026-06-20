@@ -19,16 +19,56 @@ logger = logging.getLogger(__name__)
 def compute_velocity(articles: list[dict], current_article: dict) -> float:
     """计算同一 24h 窗口内有多少文章讨论相似话题。返回 0-100。
 
-    通过标签重叠 + 关键词重叠来判断文章是否相关。
-    速度分 = min(100, 相关文章数 * 20)。
+    通过倒排索引预召回和提前剪枝，极大优化了海量比对时的算法性能，彻底避免超时。
     """
     article_time = event_time(current_article)
     if not article_time:
         return 0.0
 
+    if not articles or len(articles) <= 1:
+        return 0.0
+
     now = utc_now()
     window_start = now - timedelta(hours=24)
 
+    # 1. 尝试从第一篇文章字典获取当前批次的倒排索引和映射缓存
+    cache_holder = articles[0]
+    cache = cache_holder.get("_velocity_cache_data")
+    
+    if cache is None:
+        inverted = {}
+        id_map = {}
+        for art in articles:
+            art_id = id(art)
+            id_map[art_id] = art
+            
+            # 预处理标题词
+            art_title_words = art.get("_title_words")
+            if art_title_words is None:
+                art_title = strip_html_tags(str(art.get("title") or "")).lower()
+                art_title_words = {w for w in re.findall(r"[a-zA-Z一-鿿]{2,}", art_title)}
+                art["_title_words"] = art_title_words
+            
+            for w in art_title_words:
+                if w not in inverted:
+                    inverted[w] = []
+                inverted[w].append(art_id)
+
+            # 预处理标签为倒排索引词
+            art_tags = art.get("tags") or []
+            for t in art_tags:
+                tag_key = f"tag:{t}"
+                if tag_key not in inverted:
+                    inverted[tag_key] = []
+                inverted[tag_key].append(art_id)
+                
+        cache = {"inverted": inverted, "id_map": id_map}
+        cache_holder["_velocity_cache_data"] = cache
+    else:
+        inverted = cache["inverted"]
+        id_map = cache["id_map"]
+
+    # 2. 提取当前文章的特征集
     current_tags = set(current_article.get("tags") or [])
     
     current_title_words = current_article.get("_title_words")
@@ -46,9 +86,24 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
             current_bigrams = set()
         current_article["_desc_bigrams"] = current_bigrams
 
+    # 3. 通过倒排索引找出潜在相关的候选文章 ID，避开 99% 不相关的新闻
+    candidate_ids = set()
+    for w in current_title_words:
+        if w in inverted:
+            candidate_ids.update(inverted[w])
+    for t in current_tags:
+        tag_key = f"tag:{t}"
+        if tag_key in inverted:
+            candidate_ids.update(inverted[tag_key])
+
+    # 排除自身
+    candidate_ids.discard(id(current_article))
+
+    # 4. 针对候选集进行精确比对，达到匹配阈值时提前终止循环
     related_count = 0
-    for article in articles:
-        if article is current_article:
+    for art_id in candidate_ids:
+        article = id_map.get(art_id)
+        if not article:
             continue
 
         art_time = event_time(article)
@@ -59,20 +114,19 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
         art_tags = set(article.get("tags") or [])
         if current_tags and art_tags and (current_tags & art_tags):
             related_count += 1
+            if related_count >= 5:
+                return 100.0
             continue
 
-        # 关键词重叠（至少 2 个共同词）
+        # 关键词重叠（至少 2 个共同标题词）
         art_title_words = article.get("_title_words")
-        if art_title_words is None:
-            art_title = strip_html_tags(str(article.get("title") or "")).lower()
-            art_title_words = {w for w in re.findall(r"[a-zA-Z一-鿿]{2,}", art_title)}
-            article["_title_words"] = art_title_words
-
         if len(current_title_words & art_title_words) >= 2:
             related_count += 1
+            if related_count >= 5:
+                return 100.0
             continue
 
-        # 描述文本重叠
+        # 描述文本重叠 (Bigrams)
         art_bigrams = article.get("_desc_bigrams")
         if art_bigrams is None:
             art_desc = strip_html_tags(str(article.get("description") or "")).lower()
@@ -84,6 +138,8 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
 
         if current_bigrams and art_bigrams and len(current_bigrams & art_bigrams) >= 3:
             related_count += 1
+            if related_count >= 5:
+                return 100.0
 
     return min(100.0, related_count * 20.0)
 

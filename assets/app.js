@@ -187,6 +187,17 @@ function relTime(iso) {
   return Math.floor(diff / 86400) + "天前";
 }
 
+function relTimeShort(iso) {
+  if (!iso) return "now";
+  const t = new Date(iso);
+  if (Number.isNaN(t.getTime())) return "now";
+  const diff = (Date.now() - t.getTime()) / 1000;
+  if (diff < 60) return "now";
+  if (diff < 3600) return Math.floor(diff / 60) + "m";
+  if (diff < 86400) return Math.floor(diff / 3600) + "h";
+  return Math.floor(diff / 86400) + "d";
+}
+
 function renderStats(payload) {
   if (!statsGridEl) return;
   statsGridEl.innerHTML = "";
@@ -220,17 +231,21 @@ function renderStats(payload) {
 
     const srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
     const timeStr = relTime(item.published_at || item.published || item.first_seen_at);
-    const metaStr = `${srcCount}个信源 · ${timeStr}`;
+    const shortTimeStr = relTimeShort(item.published_at || item.published || item.first_seen_at);
 
     return `
-      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-4 min-w-0">
-        <div class="flex items-center gap-2.5 min-w-0">
+      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-2 min-w-0">
+        <div class="flex items-center gap-2 min-w-0 flex-1">
           <span class="font-mono text-center shrink-0 w-5 ${rankColor}">${rank}</span>
-          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200" title="${escapeHtml(titleText)}">
+          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200 flex-1 min-w-0" title="${escapeHtml(titleText)}">
             ${escapeHtml(titleText)}
           </a>
         </div>
-        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap">${escapeHtml(metaStr)}</div>
+        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap ml-2">
+          <span class="hidden sm:inline">${srcCount}个信源 · </span>
+          <span class="hidden sm:inline">${timeStr}</span>
+          <span class="inline sm:hidden">${shortTimeStr}</span>
+        </div>
       </li>
     `;
   }).join("");
@@ -249,17 +264,21 @@ function renderStats(payload) {
 
     const srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
     const timeStr = relTime(item.published_at || item.published || item.first_seen_at);
-    const metaStr = `${srcCount}个信源 · ${timeStr}`;
+    const shortTimeStr = relTimeShort(item.published_at || item.published || item.first_seen_at);
 
     copyHtml += `
-      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-4 min-w-0">
-        <div class="flex items-center gap-2.5 min-w-0">
+      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-2 min-w-0">
+        <div class="flex items-center gap-2 min-w-0 flex-1">
           <span class="font-mono text-center shrink-0 w-5 ${rankColor}">${rank}</span>
-          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200" title="${escapeHtml(titleText)}">
+          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200 flex-1 min-w-0" title="${escapeHtml(titleText)}">
             ${escapeHtml(titleText)}
           </a>
         </div>
-        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap">${escapeHtml(metaStr)}</div>
+        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap ml-2">
+          <span class="hidden sm:inline">${srcCount}个信源 · </span>
+          <span class="hidden sm:inline">${timeStr}</span>
+          <span class="inline sm:hidden">${shortTimeStr}</span>
+        </div>
       </li>
     `;
   }

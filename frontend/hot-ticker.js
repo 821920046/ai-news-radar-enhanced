@@ -61,6 +61,17 @@
 		return Math.floor(diff / 86400) + " 天前"
 	}
 
+	function relTimeShort(iso) {
+		if (!iso) return "now"
+		var t = new Date(String(iso).replace(" ", "T"))
+		if (isNaN(t.getTime())) return "now"
+		var diff = (Date.now() - t.getTime()) / 1000
+		if (diff < 60) return "now"
+		if (diff < 3600) return Math.floor(diff / 60) + "m"
+		if (diff < 86400) return Math.floor(diff / 3600) + "h"
+		return Math.floor(diff / 86400) + "d"
+	}
+
 	function title(it) {
 		return it.title_zh || it.title || it.name || "未命名"
 	}
@@ -190,7 +201,14 @@
 		".ht-link{color:#e4e4e7;text-decoration:none;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color 0.2s ease}\n" +
 		".ht-link:hover{color:#2dd4bf}\n" +
 		".ht-meta{font-size:11px;color:var(--ht-sub);font-family:monospace;white-space:nowrap;flex-shrink:0}\n" +
-		".ht-empty{color:var(--ht-sub);font-size:12px;padding:10px 4px}\n"
+		".ht-meta-long{display:inline}\n" +
+		".ht-meta-short{display:none}\n" +
+		".ht-empty{color:var(--ht-sub);font-size:12px;padding:10px 4px}\n" +
+		"@media(max-width:640px){\n" +
+		"  .ht-item{gap:8px}\n" +
+		"  .ht-meta-long{display:none !important}\n" +
+		"  .ht-meta-short{display:inline !important}\n" +
+		"}\n"
 		var st = document.createElement("style")
 		st.id = STYLE_ID
 		st.textContent = css
@@ -220,17 +238,21 @@
 
 			var srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
 			var timeStr = relTime(item.published || item.published_at || item.date);
-			var metaStr = srcCount + "个信源 · " + timeStr;
+			var shortTimeStr = relTimeShort(item.published || item.published_at || item.date);
+
+			var metaHtml = 
+				'<span class="ht-meta-long">' + srcCount + '个信源 · ' + timeStr + '</span>' +
+				'<span class="ht-meta-short">' + shortTimeStr + '</span>';
 
 			return (
-				'<li class="ht-item" style="height:28px;">' +
-				'<div class="ht-left-part">' +
+				'<li class="ht-item" style="height:28px; display:flex; align-items:center; justify-content:space-between; gap:8px;">' +
+				'<div class="ht-left-part" style="flex:1; min-width:0; display:flex; align-items:center; gap:10px;">' +
 				'<span class="' + rankClass + '">' + rank + '</span>' +
-				'<a class="ht-link" href="' + esc(link) + '" target="_blank" rel="noopener noreferrer" title="' + esc(titleText) + '">' +
+				'<a class="ht-link" href="' + esc(link) + '" target="_blank" rel="noopener noreferrer" title="' + esc(titleText) + '" style="flex:1; min-width:0;">' +
 				esc(titleText) +
 				'</a>' +
 				'</div>' +
-				'<div class="ht-meta">' + esc(metaStr) + '</div>' +
+				'<div class="ht-meta" style="flex-shrink:0;">' + metaHtml + '</div>' +
 				'</li>'
 			);
 		}).join("");
@@ -249,17 +271,21 @@
 
 			var srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
 			var timeStr = relTime(item.published || item.published_at || item.date);
-			var metaStr = srcCount + "个信源 · " + timeStr;
+			var shortTimeStr = relTimeShort(item.published || item.published_at || item.date);
+
+			var metaHtml = 
+				'<span class="ht-meta-long">' + srcCount + '个信源 · ' + timeStr + '</span>' +
+				'<span class="ht-meta-short">' + shortTimeStr + '</span>';
 
 			copyHtml += (
-				'<li class="ht-item" style="height:28px;">' +
-				'<div class="ht-left-part">' +
+				'<li class="ht-item" style="height:28px; display:flex; align-items:center; justify-content:space-between; gap:8px;">' +
+				'<div class="ht-left-part" style="flex:1; min-width:0; display:flex; align-items:center; gap:10px;">' +
 				'<span class="' + rankClass + '">' + rank + '</span>' +
-				'<a class="ht-link" href="' + esc(link) + '" target="_blank" rel="noopener noreferrer" title="' + esc(titleText) + '">' +
+				'<a class="ht-link" href="' + esc(link) + '" target="_blank" rel="noopener noreferrer" title="' + esc(titleText) + '" style="flex:1; min-width:0;">' +
 				esc(titleText) +
 				'</a>' +
 				'</div>' +
-				'<div class="ht-meta">' + esc(metaStr) + '</div>' +
+				'<div class="ht-meta" style="flex-shrink:0;">' + metaHtml + '</div>' +
 				'</li>'
 			);
 		}
