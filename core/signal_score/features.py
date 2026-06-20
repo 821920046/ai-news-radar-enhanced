@@ -16,10 +16,14 @@ from core.utils import event_time, strip_html_tags, utc_now
 logger = logging.getLogger(__name__)
 
 
+_VELOCITY_CACHE: dict[int, dict[str, Any]] = {}
+
+
 def compute_velocity(articles: list[dict], current_article: dict) -> float:
     """计算同一 24h 窗口内有多少文章讨论相似话题。返回 0-100。
 
-    通过倒排索引预召回和提前剪枝，极大优化了海量比对时的算法性能，彻底避免超时。
+    通过全局倒排索引预召回和提前剪枝，极大优化了算法性能。
+    使用模块级全局变量缓存，彻底避免污染文章字典产生循环引用递归溢出报错。
     """
     article_time = event_time(current_article)
     if not article_time:
@@ -31,11 +35,14 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
     now = utc_now()
     window_start = now - timedelta(hours=24)
 
-    # 1. 尝试从第一篇文章字典获取当前批次的倒排索引和映射缓存
-    cache_holder = articles[0]
-    cache = cache_holder.get("_velocity_cache_data")
+    # 1. 尝试从全局缓存中读取当前批次的倒排索引和映射缓存
+    batch_key = id(articles)
+    cache = _VELOCITY_CACHE.get(batch_key)
     
     if cache is None:
+        # 换了新的批次列表，清空旧缓存，防止内存泄漏
+        _VELOCITY_CACHE.clear()
+        
         inverted = {}
         id_map = {}
         for art in articles:
@@ -63,7 +70,7 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
                 inverted[tag_key].append(art_id)
                 
         cache = {"inverted": inverted, "id_map": id_map}
-        cache_holder["_velocity_cache_data"] = cache
+        _VELOCITY_CACHE[batch_key] = cache
     else:
         inverted = cache["inverted"]
         id_map = cache["id_map"]
@@ -86,7 +93,7 @@ def compute_velocity(articles: list[dict], current_article: dict) -> float:
             current_bigrams = set()
         current_article["_desc_bigrams"] = current_bigrams
 
-    # 3. 通过倒排索引找出潜在相关的候选文章 ID，避开 99% 不相关的新闻
+    # 3. 通过倒排索引找出潜在相关的候选文章 ID
     candidate_ids = set()
     for w in current_title_words:
         if w in inverted:
