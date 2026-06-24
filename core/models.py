@@ -47,7 +47,7 @@ RSS_FEED_SKIP_EXACT: set[str] = {
     "https://flak.tedunangst.com/rss",
 }
 
-OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
+_DEFAULT_OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
     {
         "title": "OpenAI News",
         "xml_url": "https://openai.com/news/rss.xml",
@@ -339,6 +339,47 @@ OFFICIAL_AI_FEEDS: tuple[dict[str, str], ...] = (
     # HuggingFace Trending Models / DockerHub Trending 暂无可靠的 RSS 源，
     # 可在 feeds/follow.opml 中按需添加自托管 RSSHub 路由。
 )
+
+def _load_official_feeds() -> tuple[dict[str, Any], ...]:
+    from pathlib import Path
+    config_path = Path(__file__).resolve().parent.parent / "config" / "sources.yaml"
+    if not config_path.exists():
+        return _DEFAULT_OFFICIAL_AI_FEEDS
+    try:
+        import yaml
+        with open(config_path, "r", encoding="utf-8") as fh:
+            data = yaml.safe_load(fh) or {}
+            yaml_feeds = data.get("official_ai_feeds")
+            if not yaml_feeds or not isinstance(yaml_feeds, list):
+                return _DEFAULT_OFFICIAL_AI_FEEDS
+            
+            merged: dict[str, dict[str, Any]] = {}
+            for f in _DEFAULT_OFFICIAL_AI_FEEDS:
+                url = str(f.get("xml_url") or "").strip()
+                if url:
+                    merged[url] = dict(f)
+            
+            for f in yaml_feeds:
+                if not isinstance(f, dict):
+                    continue
+                url = str(f.get("xml_url") or "").strip()
+                if not url:
+                    continue
+                # 用 YAML 中的源覆盖或新增，其余保留默认
+                merged[url] = {
+                    "title": str(f.get("title", "")),
+                    "xml_url": url,
+                    "html_url": str(f.get("html_url", "")),
+                    "include_keywords": f.get("include_keywords") or merged.get(url, {}).get("include_keywords"),
+                    "hf_token_required": f.get("hf_token_required") or merged.get(url, {}).get("hf_token_required"),
+                }
+            return tuple(merged.values())
+    except Exception as e:
+        import logging
+        logging.getLogger(__name__).warning("Failed to load official feeds from sources.yaml: %s", e)
+        return _DEFAULT_OFFICIAL_AI_FEEDS
+
+OFFICIAL_AI_FEEDS = _load_official_feeds()
 OFFICIAL_AI_MAX_AGE_DAYS = 45
 AIBREAKFAST_JINA_URL = "https://r.jina.ai/https://aibreakfast.beehiiv.com/"
 FOLLOW_BUILDERS_FEED_BASE = "https://raw.githubusercontent.com/zarazhangrui/follow-builders/main"

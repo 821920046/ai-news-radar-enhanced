@@ -12,6 +12,7 @@ the AnalystAgent class wrapper.
 
 from __future__ import annotations
 
+import json
 import logging
 import os
 import re
@@ -31,7 +32,7 @@ logger = logging.getLogger(__name__)
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 DEFAULT_OPENROUTER_MODEL = "google/gemma-4-31b-it:free"
-DEFAULT_TLDR_TOP_N = 10
+DEFAULT_TLDR_TOP_N = 30
 DEFAULT_TLDR_MIN_CHARS = 30
 DEFAULT_TLDR_MAX_WORKERS = 2
 
@@ -118,6 +119,37 @@ def _clean_tldr(text: str) -> str:
     return text[:80].strip()
 
 
+def _parse_tldr_and_tags(content: str) -> tuple[str, list[str]]:
+    """解析 AI 返回的 JSON 格式，提取 tldr 和 tags。支持防御性兜底。"""
+    content = (content or "").strip()
+    if not content:
+        return "", []
+
+    # 移除 markdown 代码块包裹 ```json ... ```
+    if content.startswith("```"):
+        match = re.match(r"^```(?:json)?\s*(.*?)\s*```$", content, re.DOTALL)
+        if match:
+            content = match.group(1).strip()
+
+    # 查找第一个 { 和最后一个 } 边界
+    start_idx = content.find("{")
+    end_idx = content.rfind("}")
+    if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
+        json_str = content[start_idx:end_idx + 1]
+        try:
+            data = json.loads(json_str)
+            if isinstance(data, dict):
+                tldr = str(data.get("tldr") or "").strip()
+                raw_tags = data.get("tags") or []
+                tags = [str(t).strip() for t in raw_tags if str(t).strip()]
+                return tldr, tags
+        except Exception:
+            pass
+
+    # JSON 解析失败兜底，整段作为 tldr，tags 为空
+    return _clean_tldr(content), []
+
+
 def _selected_items(
     items: list[dict[str, Any]], limit: int, min_chars: int
 ) -> list[dict[str, Any]]:
@@ -153,10 +185,11 @@ def generate_tldr(
     session: requests.Session | None = None,
     model: str | None = None,
     timeout: int = 12,
+    item: dict[str, Any] | None = None,
 ) -> str:
     """Generate a concise Chinese TL;DR via OpenRouter API.
 
-    用极其干练的方式将文章内容提炼成一句不超过30个汉字的总结。
+    用极其干练的方式将文章内容提炼成一句不超过30个汉字的总结，并提取核心细分标签。
     失败时返回空字符串，不抛异常。
 
     Args:
@@ -165,6 +198,7 @@ def generate_tldr(
         session: 可复用的 requests.Session
         model: 模型名，不传则用环境变量或默认值
         timeout: 单次请求超时秒数
+        item: 可选的新闻条目字典，用于原地合并和更新提取出的 tags 标签
     """
     if not text or len(text) < DEFAULT_TLDR_MIN_CHARS:
         return ""
@@ -175,8 +209,10 @@ def generate_tldr(
     app_title = os.environ.get("OPENROUTER_APP_TITLE") or "AI News Radar"
 
     system_prompt = (
-        "你是极其干练的科技新闻主编。请把输入内容提炼成一句中文 TL;DR，"
-        "不超过30个汉字。只输出结论本身，不要前缀、解释或项目符号。"
+        "你是极其干练的科技新闻主编。根据输入的新闻内容，返回一个 JSON 格式的对象，包含以下字段：\n"
+        "1. tldr: 一句中文 TL;DR 总结，不超过 30 个汉字，不要有任何前缀或解释。\n"
+        "2. tags: 包含 2-3 个最核心、最精准的中文细分标签的列表（如：'模型发布', 'AI编程', '开源', '自动驾驶' 等）。\n"
+        "不要包含任何 markdown 代码块标记，只输出合法的 JSON 字符串。"
     )
 
     max_attempts = max(1, len(key_manager.keys))
@@ -198,7 +234,7 @@ def generate_tldr(
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": text[:1500]},
             ],
-            "max_tokens": 80,
+            "max_tokens": 150,
             "temperature": 0.2,
         }
 
@@ -223,7 +259,24 @@ def generate_tldr(
             if not choices:
                 return ""
             content = choices[0].get("message", {}).get("content", "")
-            return _clean_tldr(content)
+            tldr, tags = _parse_tldr_and_tags(content)
+            
+            if item is not None and isinstance(item, dict) and tags:
+                existing_tags = item.get("tags") or []
+                combined_tags = []
+                seen = set()
+                # 优先保留 AI 标签并排序
+                for t in tags:
+                    if t not in seen:
+                        combined_tags.append(t)
+                        seen.add(t)
+                for t in existing_tags:
+                    if t not in seen:
+                        combined_tags.append(t)
+                        seen.add(t)
+                item["tags"] = combined_tags[:4]  # 最多保留4个标签
+                
+            return tldr
 
         if response.status_code in {402, 403, 429}:
             key_manager.mark_exhausted(key)
@@ -374,7 +427,7 @@ def process_items_with_ai(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     def worker(item: dict[str, Any]) -> None:
         if key_manager.is_all_exhausted():
             return
-        tldr = generate_tldr(_item_text(item), key_manager)
+        tldr = generate_tldr(_item_text(item), key_manager, item=item)
         if tldr:
             item["tldr"] = tldr
 
@@ -458,6 +511,7 @@ class AnalystAgent:
         session: requests.Session | None = None,
         model: str | None = None,
         timeout: int = 12,
+        item: dict[str, Any] | None = None,
     ) -> str:
         """Generate a concise Chinese TL;DR for the given text."""
         key_manager = self._get_key_manager()
@@ -469,6 +523,7 @@ class AnalystAgent:
             session=session,
             model=model or self.default_model,
             timeout=timeout,
+            item=item,
         )
 
     # ------------------------------------------------------------------
@@ -539,8 +594,8 @@ class AnalystAgent:
         def worker(item: dict[str, Any]) -> None:
             if key_manager.is_all_exhausted():
                 return
-            # TL;DR
-            tldr = generate_tldr(_item_text(item), key_manager)
+            # TL;DR + tags
+            tldr = generate_tldr(_item_text(item), key_manager, item=item)
             if tldr:
                 item["tldr"] = tldr
             # Deep analysis (only for high-scoring items)

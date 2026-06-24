@@ -53,15 +53,17 @@ jobs:
 
       - name: Update data
         env:
-          OPENROUTER_KEYS: $ secrets.OPENROUTER_KEYS 
-          OPENROUTER_MODEL: $ secrets.OPENROUTER_MODEL 
-          AI_TLDR_ENABLED: $ secrets.AI_TLDR_ENABLED 
-          AI_TLDR_TOP_N: $ secrets.AI_TLDR_TOP_N 
-          AI_TLDR_MAX_WORKERS: $ secrets.AI_TLDR_MAX_WORKERS 
-          WEBHOOK_URL: $ secrets.WEBHOOK_URL 
-          WEBHOOK_TYPE: $ secrets.WEBHOOK_TYPE 
-          WEBHOOK_MODE: $ secrets.WEBHOOK_MODE 
-          WEBHOOK_HOTNESS_THRESHOLD: $ secrets.WEBHOOK_HOTNESS_THRESHOLD 
+          OPENROUTER_KEYS: ${{ secrets.OPENROUTER_KEYS }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+          OPENROUTER_HTTP_REFERER: ${{ secrets.OPENROUTER_HTTP_REFERER }}
+          AI_TLDR_ENABLED: ${{ secrets.AI_TLDR_ENABLED }}
+          AI_TLDR_TOP_N: ${{ secrets.AI_TLDR_TOP_N }}
+          AI_TLDR_MAX_WORKERS: ${{ secrets.AI_TLDR_MAX_WORKERS }}
+          AI_TRANSLATE_ENABLED: ${{ secrets.AI_TRANSLATE_ENABLED }}
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
+          WEBHOOK_MODE: ${{ secrets.WEBHOOK_MODE }}
+          WEBHOOK_HOTNESS_THRESHOLD: ${{ secrets.WEBHOOK_HOTNESS_THRESHOLD }}
         run: |
           if [ -f feeds/follow.opml ]; then
             python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --rss-opml feeds/follow.opml

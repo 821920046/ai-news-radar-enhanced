@@ -380,16 +380,39 @@ class Pipeline:
         return result
 
 
+def _load_sources_config() -> dict[str, Any]:
+    from pathlib import Path
+    config_path = Path(__file__).resolve().parent.parent.parent / "config" / "sources.yaml"
+    if config_path.exists():
+        try:
+            import yaml
+            with open(config_path, "r", encoding="utf-8") as fh:
+                return yaml.safe_load(fh) or {}
+        except Exception as e:
+            logger.warning("Failed to load config/sources.yaml: %s", e)
+    return {}
+
+
 # ── CLI entry point (backward compatible with scripts/update_news.py) ──────
 
 def main() -> int:
     """CLI entry point — mirrors the old scripts/update_news.py interface."""
     import argparse
+    import os
+    
+    cfg = _load_sources_config()
+    pipeline_cfg = cfg.get("pipeline", {})
+    
+    # 动态将 yaml 中的默认模型写入环境变量以供全局使用
+    default_model = cfg.get("openrouter_default_model")
+    if default_model and not os.environ.get("OPENROUTER_MODEL"):
+        os.environ["OPENROUTER_MODEL"] = str(default_model)
+
     parser = argparse.ArgumentParser(description="V3 AI News Radar Pipeline")
     parser.add_argument("--output-dir", default="data")
-    parser.add_argument("--window-hours", type=int, default=24)
-    parser.add_argument("--archive-days", type=int, default=3)
-    parser.add_argument("--translate-max-new", type=int, default=80)
+    parser.add_argument("--window-hours", type=int, default=pipeline_cfg.get("window_hours", 24))
+    parser.add_argument("--archive-days", type=int, default=pipeline_cfg.get("archive_days", 3))
+    parser.add_argument("--translate-max-new", type=int, default=pipeline_cfg.get("translate_max_new", 80))
     parser.add_argument("--rss-opml", default="")
     parser.add_argument("--rss-max-feeds", type=int, default=0)
     parser.add_argument("--trend-engine", action="store_true", default=False, help="Enable Trend Engine")
