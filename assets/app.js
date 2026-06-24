@@ -220,70 +220,103 @@ function renderStats(payload) {
 
   if (!hottestNews.length) return;
 
-  const itemsHtml = hottestNews.map((item, idx) => {
+  // 响应式行高：移动端使用更大行高避免文字重叠
+  function getTickerRowHeight() {
+    return window.innerWidth < 640 ? 40 : 28;
+  }
+
+  function buildTickerItem(item, rank) {
     const titleText = item.title_zh || item.title || item.name || "未命名";
     const link = item.url || "#";
-    const rank = idx + 1;
-    let rankColor = "text-zinc-500";
-    if (rank === 1) rankColor = "text-rose-500 font-extrabold";
-    else if (rank === 2) rankColor = "text-amber-500 font-extrabold";
-    else if (rank === 3) rankColor = "text-yellow-500 font-extrabold";
+    let rankColor = "color:#71717a";
+    if (rank === 1) rankColor = "color:#f43f5e;font-weight:800";
+    else if (rank === 2) rankColor = "color:#f59e0b;font-weight:800";
+    else if (rank === 3) rankColor = "color:#eab308;font-weight:800";
 
     const srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
-    const timeStr = relTime(item.published_at || item.published || item.first_seen_at);
     const shortTimeStr = relTimeShort(item.published_at || item.published || item.first_seen_at);
 
-    return `
-      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-2 min-w-0">
-        <div class="flex items-center gap-2 min-w-0 flex-1">
-          <span class="font-mono text-center shrink-0 w-5 ${rankColor}">${rank}</span>
-          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200 flex-1 min-w-0" title="${escapeHtml(titleText)}">
-            ${escapeHtml(titleText)}
-          </a>
-        </div>
-        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap ml-2">
-          <span class="hidden sm:inline">${srcCount}个信源 · </span>
-          <span class="hidden sm:inline">${timeStr}</span>
-          <span class="inline sm:hidden">${shortTimeStr}</span>
-        </div>
-      </li>
-    `;
-  }).join("");
+    return `<li class="hot-ticker-row">
+      <span class="hot-ticker-rank" style="${rankColor}">${rank}</span>
+      <a href="${link}" target="_blank" rel="noopener noreferrer" class="hot-ticker-title" title="${escapeHtml(titleText)}">${escapeHtml(titleText)}</a>
+      <span class="hot-ticker-meta">${shortTimeStr}</span>
+    </li>`;
+  }
 
+  const itemsHtml = hottestNews.map((item, idx) => buildTickerItem(item, idx + 1)).join("");
+
+  // 无缝滚动需复制前2条到末尾
   const copyCount = Math.min(hottestNews.length, 2);
   let copyHtml = "";
   for (let i = 0; i < copyCount; i++) {
-    const item = hottestNews[i];
-    const titleText = item.title_zh || item.title || item.name || "未命名";
-    const link = item.url || "#";
-    const rank = i + 1;
-    let rankColor = "text-zinc-500";
-    if (rank === 1) rankColor = "text-rose-500 font-extrabold";
-    else if (rank === 2) rankColor = "text-amber-500 font-extrabold";
-    else if (rank === 3) rankColor = "text-yellow-500 font-extrabold";
-
-    const srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
-    const timeStr = relTime(item.published_at || item.published || item.first_seen_at);
-    const shortTimeStr = relTimeShort(item.published_at || item.published || item.first_seen_at);
-
-    copyHtml += `
-      <li style="height: 28px;" class="flex items-center justify-between text-xs sm:text-sm text-zinc-300 gap-2 min-w-0">
-        <div class="flex items-center gap-2 min-w-0 flex-1">
-          <span class="font-mono text-center shrink-0 w-5 ${rankColor}">${rank}</span>
-          <a href="${link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 font-medium text-zinc-200 truncate block transition-colors duration-200 flex-1 min-w-0" title="${escapeHtml(titleText)}">
-            ${escapeHtml(titleText)}
-          </a>
-        </div>
-        <div class="text-[11px] text-zinc-500 font-mono shrink-0 whitespace-nowrap ml-2">
-          <span class="hidden sm:inline">${srcCount}个信源 · </span>
-          <span class="hidden sm:inline">${timeStr}</span>
-          <span class="inline sm:hidden">${shortTimeStr}</span>
-        </div>
-      </li>
-    `;
+    copyHtml += buildTickerItem(hottestNews[i], i + 1);
   }
 
+  const rowH = getTickerRowHeight();
+  const visibleRows = 2;
+  const containerH = rowH * visibleRows;
+
   statsGridEl.innerHTML = `
+    <style>
+      .hot-ticker-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+        padding: 0 4px;
+        box-sizing: border-box;
+        list-style: none;
+      }
+      .hot-ticker-rank {
+        font-family: ui-monospace, SFMono-Regular, monospace;
+        text-align: center;
+        flex-shrink: 0;
+        width: 20px;
+        font-size: 13px;
+        line-height: 1;
+      }
+      .hot-ticker-title {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #e4e4e7;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-size: 13px;
+        line-height: 1.2;
+      }
+      .hot-ticker-title:hover {
+        color: #2dd4bf;
+      }
+      .hot-ticker-meta {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-family: ui-monospace, SFMono-Regular, monospace;
+        font-size: 11px;
+        color: #71717a;
+        line-height: 1;
+      }
+      /* 移动端 (<640px) 优化 */
+      @media (max-width: 639px) {
+        .hot-ticker-row {
+          gap: 6px;
+          padding: 0 2px;
+        }
+        .hot-ticker-rank {
+          width: 18px;
+          font-size: 12px;
+        }
+        .hot-ticker-title {
+          font-size: 13px;
+        }
+        .hot-ticker-meta {
+          font-size: 10px;
+        }
+      }
+    </style>
     <div class="glass-panel rounded-2xl border border-zinc-800/60 bg-zinc-950/60 p-4 shadow-lg shadow-black/20 w-full flex flex-col gap-3">
       <!-- 头部 Header -->
       <div class="flex items-center justify-between border-b border-zinc-900/60 pb-2 flex-shrink-0">
@@ -295,8 +328,8 @@ function renderStats(payload) {
       </div>
       
       <!-- 滚动区 Body -->
-      <div style="position: relative; overflow: hidden; height: 56px;" id="hotTickerContainer">
-        <ul class="flex flex-col m-0 p-0 list-none" id="hotTickerList" style="transform: translateY(0px);">
+      <div style="position:relative;overflow:hidden;height:${containerH}px;" id="hotTickerContainer">
+        <ul style="margin:0;padding:0;list-style:none;transform:translateY(0px);" id="hotTickerList">
           ${itemsHtml}
           ${copyHtml}
         </ul>
@@ -304,11 +337,17 @@ function renderStats(payload) {
     </div>
   `;
 
+  // 设置每行实际高度（通过内联样式确保精确）
+  const allRows = document.querySelectorAll(".hot-ticker-row");
+  allRows.forEach(row => {
+    row.style.height = rowH + "px";
+  });
+
   const container = document.getElementById("hotTickerContainer");
   const list = document.getElementById("hotTickerList");
 
   if (container && list && hottestNews.length > 2) {
-    const rowHeight = 28;
+    let currentRowH = getTickerRowHeight();
     const itemsCount = hottestNews.length;
     let currentIndex = 0;
     let isTransitioning = false;
@@ -318,7 +357,7 @@ function renderStats(payload) {
       currentIndex++;
 
       list.style.transition = "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)";
-      list.style.transform = `translateY(-${currentIndex * rowHeight}px)`;
+      list.style.transform = `translateY(-${currentIndex * currentRowH}px)`;
 
       if (currentIndex >= itemsCount) {
         isTransitioning = true;
@@ -332,6 +371,41 @@ function renderStats(payload) {
     };
 
     hotTickerTimer = setInterval(scrollFunc, 3000);
+
+    // 窗口大小变化时重新计算行高
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const newRowH = getTickerRowHeight();
+        if (newRowH !== currentRowH) {
+          currentRowH = newRowH;
+          const newContainerH = newRowH * visibleRows;
+          container.style.height = newContainerH + "px";
+          document.querySelectorAll(".hot-ticker-row").forEach(row => {
+            row.style.height = newRowH + "px";
+          });
+          // 重置滚动位置
+          list.style.transition = "none";
+          currentIndex = 0;
+          list.style.transform = "translateY(0px)";
+        }
+      }, 200);
+    });
+
+    // 触摸设备：触摸暂停滚动
+    container.addEventListener("touchstart", () => {
+      if (hotTickerTimer) {
+        clearInterval(hotTickerTimer);
+        hotTickerTimer = null;
+      }
+    }, { passive: true });
+
+    container.addEventListener("touchend", () => {
+      if (!hotTickerTimer) {
+        hotTickerTimer = setInterval(scrollFunc, 3000);
+      }
+    }, { passive: true });
 
     container.addEventListener("mouseenter", () => {
       if (hotTickerTimer) {
