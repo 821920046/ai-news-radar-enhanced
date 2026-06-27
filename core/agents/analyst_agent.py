@@ -22,7 +22,7 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
 import requests
-from core.utils import _env_int
+from core.utils import _env_int, get_model_chain, mark_model_dead
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_OPENROUTER_MODEL = "google/gemma-4-31b-it:free"
+DEFAULT_OPENROUTER_MODEL = "deepseek/deepseek-chat-v3-0324:free"
 DEFAULT_TLDR_TOP_N = 30
 DEFAULT_TLDR_MIN_CHARS = 30
 DEFAULT_TLDR_MAX_WORKERS = 2
@@ -204,7 +204,8 @@ def generate_tldr(
         return ""
 
     requester = session or requests
-    model_name = model or os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
+    model_chain = get_model_chain(model)
+    model_name = model_chain[0]
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
     app_title = os.environ.get("OPENROUTER_APP_TITLE") or "AI News Radar"
 
@@ -215,8 +216,9 @@ def generate_tldr(
         "不要包含任何 markdown 代码块标记，只输出合法的 JSON 字符串。"
     )
 
-    max_attempts = max(1, len(key_manager.keys))
+    max_attempts = max(len(model_chain), len(key_manager.keys))
     for attempt in range(max_attempts):
+        model_name = model_chain[attempt % len(model_chain)]
         key = key_manager.get_key()
         if not key:
             logger.warning("[AI] No usable OpenRouter keys remain.")
@@ -278,8 +280,16 @@ def generate_tldr(
                 
             return tldr
 
-        if response.status_code in {402, 403, 429}:
+        if response.status_code in {402, 403}:
             key_manager.mark_exhausted(key)
+            continue
+
+        if response.status_code in {400, 404}:
+            mark_model_dead(model_name)
+            continue
+
+        if response.status_code == 429:
+            time.sleep(min(2, attempt + 1))
             continue
 
         logger.error(
@@ -287,7 +297,7 @@ def generate_tldr(
             response.status_code,
             response.text[:200],
         )
-        return ""
+        continue
 
     return ""
 
@@ -317,7 +327,8 @@ def deep_analyze(
         return ""
 
     requester = session or requests
-    model_name = model or os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
+    model_chain = get_model_chain(model)
+    model_name = model_chain[0]
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
     app_title = os.environ.get("OPENROUTER_APP_TITLE") or "AI News Radar"
 
@@ -328,8 +339,9 @@ def deep_analyze(
         "只输出分析内容本身，不要前缀或解释。"
     )
 
-    max_attempts = max(1, len(key_manager.keys))
+    max_attempts = max(len(model_chain), len(key_manager.keys))
     for attempt in range(max_attempts):
+        model_name = model_chain[attempt % len(model_chain)]
         key = key_manager.get_key()
         if not key:
             logger.warning("[AI Deep] No usable OpenRouter keys remain.")
@@ -374,8 +386,16 @@ def deep_analyze(
             content = choices[0].get("message", {}).get("content", "")
             return content.strip()
 
-        if response.status_code in {402, 403, 429}:
+        if response.status_code in {402, 403}:
             key_manager.mark_exhausted(key)
+            continue
+
+        if response.status_code in {400, 404}:
+            mark_model_dead(model_name)
+            continue
+
+        if response.status_code == 429:
+            time.sleep(min(2, attempt + 1))
             continue
 
         logger.error(
@@ -383,7 +403,7 @@ def deep_analyze(
             response.status_code,
             response.text[:200],
         )
-        return ""
+        continue
 
     return ""
 
@@ -453,7 +473,7 @@ class AnalystAgent:
         self.default_model = (
             self.config.get("model")
             or os.environ.get("OPENROUTER_MODEL")
-            or DEFAULT_OPENROUTER_MODEL
+            or None
         )
         self.top_n = self.config.get("top_n") or int(
             os.environ.get("AI_TLDR_TOP_N", str(DEFAULT_TLDR_TOP_N))

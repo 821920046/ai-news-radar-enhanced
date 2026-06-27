@@ -5,8 +5,17 @@ openrouter:
   api_url: "https://openrouter.ai/api/v1/chat/completions"
   embeddings_url: "https://openrouter.ai/api/v1/embeddings"
 
-  # TL;DR 模型
-  tldr_model: "google/gemma-4-31b-it:free"
+  # TL;DR / 翻译 默认模型（= 下方 models 链的第一个）
+  tldr_model: "deepseek/deepseek-chat-v3-0324:free"
+
+  # 多模型回退链（环境变量 OPENROUTER_MODELS 可覆盖，逗号分隔）
+  # 按「中文效果 / 速度 / 免费额度稳定性」综合排序
+  models:
+    - "deepseek/deepseek-chat-v3-0324:free"   # DeepSeek V3：中文摘要/翻译综合最佳
+    - "qwen/qwen3-235b-a22b:free"             # 通义千问3 235B：中文顶级
+    - "z-ai/glm-4.5-air:free"                 # 智谱 GLM-4.5-Air：中文强、低延迟
+    - "moonshotai/kimi-k2:free"              # 月之暗面 Kimi K2：中文长文本强
+    - "deepseek/deepseek-r1:free"            # DeepSeek R1：推理兜底
 
   # Embedding 模型
   embedding_model: "openai/text-embedding-3-small"

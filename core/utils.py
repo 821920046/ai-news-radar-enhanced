@@ -748,3 +748,66 @@ def atomic_write_text(file_path: Any, text: str, encoding: str = "utf-8") -> Non
                 tmp_path.unlink()
             except Exception:
                 pass
+
+
+# ---------------------------------------------------------------------------
+# OpenRouter model selection (multi-model fallback chain)
+# ---------------------------------------------------------------------------
+
+# 默认按「中文效果 / 速度 / 免费额度稳定性」综合排序的 OpenRouter 免费模型链。
+# 运行时按顺序尝试：前一个不可用 / 被限流 / 额度耗尽时自动回退到下一个。
+# 可用环境变量 OPENROUTER_MODELS（逗号分隔）覆盖，或 config/*.yaml 的 openrouter_models。
+DEFAULT_OPENROUTER_MODELS = [
+    "deepseek/deepseek-chat-v3-0324:free",  # DeepSeek V3：中文摘要/翻译综合最佳，速度快
+    "qwen/qwen3-235b-a22b:free",            # 通义千问3 235B：中文能力顶级
+    "z-ai/glm-4.5-air:free",                # 智谱 GLM-4.5-Air：中文强、轻量低延迟
+    "moonshotai/kimi-k2:free",             # 月之暗面 Kimi K2：中文长文本强
+    "deepseek/deepseek-r1:free",           # DeepSeek R1：推理兜底（较慢，放最后）
+]
+
+# 本轮运行中被判定为不可用（HTTP 400/404，多为模型名错误/下线）的模型，跳过不再重试。
+_DEAD_MODELS: set[str] = set()
+
+
+def get_model_chain(explicit: "str | list[str] | None" = None) -> list[str]:
+    """返回有序的 OpenRouter 模型回退链。
+
+    优先级：显式参数 > OPENROUTER_MODELS 环境变量（逗号分隔）
+            > OPENROUTER_MODEL 环境变量（单个，向后兼容）> 内置默认链。
+    自动去重保序，并剔除本轮已确认不可用（_DEAD_MODELS）的模型。
+    """
+    candidates: list[str] = []
+
+    if explicit:
+        if isinstance(explicit, str):
+            candidates.extend(p.strip() for p in explicit.split(",") if p.strip())
+        else:
+            candidates.extend(str(p).strip() for p in explicit if str(p).strip())
+
+    env_multi = os.environ.get("OPENROUTER_MODELS", "")
+    if env_multi.strip():
+        candidates.extend(p.strip() for p in env_multi.split(",") if p.strip())
+
+    env_single = os.environ.get("OPENROUTER_MODEL", "")
+    if env_single.strip():
+        candidates.append(env_single.strip())
+
+    if not candidates:
+        candidates = list(DEFAULT_OPENROUTER_MODELS)
+
+    seen: set[str] = set()
+    chain: list[str] = []
+    for model in candidates:
+        if model and model not in seen:
+            seen.add(model)
+            chain.append(model)
+
+    live = [m for m in chain if m not in _DEAD_MODELS]
+    # 即使全部被标记为 dead，也返回原链以便重试（避免误杀导致彻底失效）
+    return live or chain
+
+
+def mark_model_dead(model: str) -> None:
+    """将某个模型标记为本轮不可用（HTTP 400/404），后续调用自动跳过。"""
+    if model:
+        _DEAD_MODELS.add(model)

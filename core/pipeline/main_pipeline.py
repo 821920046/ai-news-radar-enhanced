@@ -408,6 +408,10 @@ def main() -> int:
     if default_model and not os.environ.get("OPENROUTER_MODEL"):
         os.environ["OPENROUTER_MODEL"] = str(default_model)
 
+    models_list = cfg.get("openrouter_models")
+    if models_list and not os.environ.get("OPENROUTER_MODELS"):
+        os.environ["OPENROUTER_MODELS"] = ",".join(str(m) for m in models_list)
+
     parser = argparse.ArgumentParser(description="V3 AI News Radar Pipeline")
     parser.add_argument("--output-dir", default="data")
     parser.add_argument("--window-hours", type=int, default=pipeline_cfg.get("window_hours", 24))

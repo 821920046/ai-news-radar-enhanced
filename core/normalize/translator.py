@@ -17,7 +17,13 @@ from typing import Any
 
 import requests
 
-from core.utils import has_cjk, is_mostly_english, normalize_url
+from core.utils import (
+    get_model_chain,
+    has_cjk,
+    is_mostly_english,
+    mark_model_dead,
+    normalize_url,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +32,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_OPENROUTER_MODEL = "google/gemma-4-31b-it:free"
+DEFAULT_OPENROUTER_MODEL = "deepseek/deepseek-chat-v3-0324:free"
 
 # AI 翻译的系统提示词：要求高质量、自然流畅的中文翻译
 AI_TRANSLATE_SYSTEM_PROMPT = (
@@ -158,43 +164,50 @@ def _ai_translate_single(
     if not text or not api_key:
         return None
 
-    model = os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
 
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": referer,
-        "X-Title": "AI News Radar",
-    }
-    payload = {
-        "model": model,
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": text[:800]},
-        ],
-        "max_tokens": max_tokens,
-        "temperature": 0.1,
-    }
+    for model in get_model_chain():
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": referer,
+            "X-Title": "AI News Radar",
+        }
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": text[:800]},
+            ],
+            "max_tokens": max_tokens,
+            "temperature": 0.1,
+        }
 
-    try:
-        resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
-        if resp.status_code == 200:
-            data = resp.json()
-            choices = data.get("choices") if isinstance(data, dict) else None
-            if choices:
-                content = choices[0].get("message", {}).get("content", "").strip()
-                # 清理常见前缀
-                content = re.sub(r"^(翻译[：:]\s*|译文[：:]\s*)", "", content).strip()
-                if content and has_cjk(content):
-                    return content
-        elif resp.status_code in {402, 403, 429}:
-            logger.warning("[AI Translate] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
-            return None
-        else:
-            logger.warning("[AI Translate] Unexpected HTTP %d: %s", resp.status_code, resp.text[:200])
-    except requests.exceptions.RequestException as exc:
-        logger.warning("[AI Translate] Request failed: %s", exc)
+        try:
+            resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
+            if resp.status_code == 200:
+                data = resp.json()
+                choices = data.get("choices") if isinstance(data, dict) else None
+                if choices:
+                    content = choices[0].get("message", {}).get("content", "").strip()
+                    # 清理常见前缀
+                    content = re.sub(r"^(翻译[：:]\s*|译文[：:]\s*)", "", content).strip()
+                    if content and has_cjk(content):
+                        return content
+                return None
+            elif resp.status_code in {400, 404}:
+                # 模型不可用/名称错误：标记后尝试链中下一个模型
+                mark_model_dead(model)
+                continue
+            elif resp.status_code in {402, 403, 429}:
+                logger.warning("[AI Translate] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
+                return None
+            else:
+                logger.warning("[AI Translate] Unexpected HTTP %d: %s", resp.status_code, resp.text[:200])
+                continue
+        except requests.exceptions.RequestException as exc:
+            logger.warning("[AI Translate] Request failed: %s", exc)
+            continue
 
     return None
 
@@ -210,42 +223,49 @@ def _ai_translate_batch(
     if not titles or not api_key:
         return [None] * len(titles)
 
-    model = os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
 
     # 构建编号列表
     numbered_input = "\n".join(f"{i + 1}. {title}" for i, title in enumerate(titles))
 
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": referer,
-        "X-Title": "AI News Radar",
-    }
-    payload = {
-        "model": model,
-        "messages": [
-            {"role": "system", "content": AI_BATCH_TRANSLATE_SYSTEM_PROMPT},
-            {"role": "user", "content": numbered_input},
-        ],
-        "max_tokens": 150 * len(titles),
-        "temperature": 0.1,
-    }
+    for model in get_model_chain():
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": referer,
+            "X-Title": "AI News Radar",
+        }
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": AI_BATCH_TRANSLATE_SYSTEM_PROMPT},
+                {"role": "user", "content": numbered_input},
+            ],
+            "max_tokens": 150 * len(titles),
+            "temperature": 0.1,
+        }
 
-    try:
-        resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
-        if resp.status_code == 200:
-            data = resp.json()
-            choices = data.get("choices") if isinstance(data, dict) else None
-            if choices:
-                content = choices[0].get("message", {}).get("content", "").strip()
-                return _parse_batch_result(content, len(titles))
-        elif resp.status_code in {402, 403, 429}:
-            logger.warning("[AI Translate Batch] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
-        else:
-            logger.warning("[AI Translate Batch] HTTP %d: %s", resp.status_code, resp.text[:200])
-    except requests.exceptions.RequestException as exc:
-        logger.warning("[AI Translate Batch] Request failed: %s", exc)
+        try:
+            resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
+            if resp.status_code == 200:
+                data = resp.json()
+                choices = data.get("choices") if isinstance(data, dict) else None
+                if choices:
+                    content = choices[0].get("message", {}).get("content", "").strip()
+                    return _parse_batch_result(content, len(titles))
+                return [None] * len(titles)
+            elif resp.status_code in {400, 404}:
+                mark_model_dead(model)
+                continue
+            elif resp.status_code in {402, 403, 429}:
+                logger.warning("[AI Translate Batch] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
+                break
+            else:
+                logger.warning("[AI Translate Batch] HTTP %d: %s", resp.status_code, resp.text[:200])
+                continue
+        except requests.exceptions.RequestException as exc:
+            logger.warning("[AI Translate Batch] Request failed: %s", exc)
+            continue
 
     return [None] * len(titles)
 
