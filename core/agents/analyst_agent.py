@@ -280,16 +280,14 @@ def generate_tldr(
                 
             return tldr
 
-        if response.status_code in {402, 403}:
+        if response.status_code in {402, 403, 429}:
+            # 402/403=账号额度/鉴权；429=免费额度限流（OpenRouter 免费档多为账号级共享限额）→ 换 key
             key_manager.mark_exhausted(key)
             continue
 
         if response.status_code in {400, 404}:
+            # 模型名错误/已下线 → 标记后换下一个模型
             mark_model_dead(model_name)
-            continue
-
-        if response.status_code == 429:
-            time.sleep(min(2, attempt + 1))
             continue
 
         logger.error(
@@ -386,16 +384,14 @@ def deep_analyze(
             content = choices[0].get("message", {}).get("content", "")
             return content.strip()
 
-        if response.status_code in {402, 403}:
+        if response.status_code in {402, 403, 429}:
+            # 402/403=账号额度/鉴权；429=免费额度限流（OpenRouter 免费档多为账号级共享限额）→ 换 key
             key_manager.mark_exhausted(key)
             continue
 
         if response.status_code in {400, 404}:
+            # 模型名错误/已下线 → 标记后换下一个模型
             mark_model_dead(model_name)
-            continue
-
-        if response.status_code == 429:
-            time.sleep(min(2, attempt + 1))
             continue
 
         logger.error(

@@ -5,6 +5,5 @@ python-dateutil==2.9.0.post0
 pytest==8.3.5
 fastapi==0.115.0
 uvicorn[standard]==0.30.0
-scikit-learn==1.5.0
-numpy==2.0.0
+# scikit-learn / numpy 已移除：代码中无任何实际 import（聚类余弦相似度为纯 Python 实现），去掉可明显加快 CI 装依赖速度
 pyyaml==6.0.2

@@ -37,6 +37,8 @@ class TrendClustering:
         )
         self.max_embeddings = self.config.get("max_embeddings", DEFAULT_MAX_EMBEDDINGS)
         self.embedding_model = self.config.get("embedding_model", DEFAULT_EMBEDDING_MODEL)
+        # 单次批量 embedding 的最大文本数（成本/请求数控制）
+        self.batch_size = int(self.config.get("embedding_batch_size", 96))
 
     def get_embedding(
         self,
@@ -81,6 +83,90 @@ class TrendClustering:
 
         return None
 
+    def get_embeddings_batch(
+        self,
+        texts: list[str],
+        api_key: str,
+        *,
+        session: requests.Session | None = None,
+        timeout: int = 30,
+        referer: str = "https://github.com/LearnPrompt/ai-news-radar",
+    ) -> list[list[float] | None]:
+        """批量获取文本向量。
+
+        一次请求提交多条文本（OpenRouter embeddings 的 input 支持数组），
+        将原来 N 次调用压缩为 ceil(N/batch_size) 次，大幅减少请求数。
+        返回与输入等长且位置对齐的列表；某项失败则该位置为 None。
+        整批请求失败时，对该批逐条回退到 get_embedding。
+        """
+        results: list[list[float] | None] = [None] * len(texts)
+        if not texts:
+            return results
+
+        requester = session or requests
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": referer,
+            "X-Title": "AI News Radar Trend Engine",
+        }
+        batch_size = max(1, int(self.batch_size))
+
+        for start in range(0, len(texts), batch_size):
+            chunk = texts[start : start + batch_size]
+            # 仅对非空文本请求，同时记录其在 chunk 内的局部下标
+            valid = [(i, t) for i, t in enumerate(chunk) if t and t.strip()]
+            if not valid:
+                continue
+
+            payload = {
+                "model": self.embedding_model,
+                "input": [t[:8000] for _, t in valid],
+            }
+            try:
+                response = requester.post(
+                    OPENROUTER_EMBEDDINGS_URL,
+                    headers=headers,
+                    json=payload,
+                    timeout=timeout,
+                )
+                response.raise_for_status()
+                data = response.json()
+                items = data.get("data") if isinstance(data, dict) else None
+                if not isinstance(items, list) or not items:
+                    raise ValueError("unexpected embeddings response shape")
+                # 优先按返回的 index 对齐，缺失时退回顺序
+                for pos, emb_obj in enumerate(items):
+                    if isinstance(emb_obj, dict):
+                        local = emb_obj.get("index", pos)
+                        emb = emb_obj.get("embedding")
+                    else:
+                        local, emb = pos, None
+                    if (
+                        isinstance(emb, list)
+                        and emb
+                        and isinstance(local, int)
+                        and 0 <= local < len(valid)
+                    ):
+                        results[start + valid[local][0]] = emb
+                time.sleep(0.05)  # API 速率限制
+            except Exception as exc:
+                logger.warning(
+                    "OpenRouter batch embedding failed (%d-%d): %s; 逐条回退。",
+                    start,
+                    start + len(chunk),
+                    exc,
+                )
+                for local_i, t in valid:
+                    emb = self.get_embedding(
+                        t, api_key, session=session, timeout=timeout, referer=referer
+                    )
+                    if emb:
+                        results[start + local_i] = emb
+                    time.sleep(0.05)
+
+        return results
+
     def _cosine_similarity(self, a: list[float], b: list[float]) -> float:
         """纯 Python 余弦相似度计算，不依赖 numpy。"""
         if not a or not b or len(a) != len(b):
@@ -114,16 +200,13 @@ class TrendClustering:
             logger.info("[TrendEngine] No OpenRouter key; falling back to tag clustering.")
             return self._fallback_tag_clustering(articles)
 
-        # 为前 N 篇文章生成嵌入向量（成本控制）
+        # 为前 N 篇文章生成嵌入向量（成本控制）——批量请求，大幅减少 API 调用次数
         to_embed = articles[: self.max_embeddings]
-        embeddings_map: dict[int, list[float]] = {}
-
-        for idx, article in enumerate(to_embed):
-            text = self._article_text(article)
-            embedding = self.get_embedding(text, key)
-            if embedding:
-                embeddings_map[idx] = embedding
-            time.sleep(0.05)  # API 速率限制
+        texts = [self._article_text(article) for article in to_embed]
+        vectors = self.get_embeddings_batch(texts, key)
+        embeddings_map: dict[int, list[float]] = {
+            idx: vec for idx, vec in enumerate(vectors) if vec
+        }
 
         if not embeddings_map:
             logger.info("[TrendEngine] No embeddings generated; falling back to tag clustering.")
