@@ -17,12 +17,13 @@ from __future__ import annotations
 import json
 import logging
 import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from threading import Lock
 from typing import Any
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, PlainTextResponse
 
@@ -46,6 +47,47 @@ app.add_middleware(
     allow_methods=["GET"],
     allow_headers=["*"],
 )
+
+# ── 简易内存限流 + 安全/缓存响应头中间件（零依赖，适合免费部署）──
+_RATE_LIMIT = int(os.getenv("RATE_LIMIT_PER_MIN", "120"))
+_RATE_WINDOW = 60.0
+_RATE_BUCKET: dict[str, list[float]] = {}
+_RATE_LOCK = Lock()
+_PUBLIC_CACHE_SECONDS = int(os.getenv("PUBLIC_CACHE_SECONDS", "300"))
+_SECURITY_HEADERS = {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Cross-Origin-Resource-Policy": "cross-origin",
+    "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
+}
+
+
+@app.middleware("http")
+async def _security_and_rate_limit(request: Request, call_next):
+    # 按客户端 IP 的滑动窗口限流（本地内存，进程级）
+    if _RATE_LIMIT > 0:
+        client = request.client.host if request.client else "unknown"
+        now = time.monotonic()
+        with _RATE_LOCK:
+            bucket = _RATE_BUCKET.setdefault(client, [])
+            cutoff = now - _RATE_WINDOW
+            bucket[:] = [t for t in bucket if t > cutoff]
+            if len(bucket) >= _RATE_LIMIT:
+                return JSONResponse(
+                    status_code=429,
+                    content={"detail": "Too Many Requests"},
+                    headers={"Retry-After": "60"},
+                )
+            bucket.append(now)
+    response = await call_next(request)
+    for _k, _v in _SECURITY_HEADERS.items():
+        response.headers.setdefault(_k, _v)
+    if request.method == "GET" and response.status_code == 200:
+        response.headers.setdefault(
+            "Cache-Control", f"public, max-age={_PUBLIC_CACHE_SECONDS}"
+        )
+    return response
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 

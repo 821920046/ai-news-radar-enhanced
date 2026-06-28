@@ -99,7 +99,7 @@ def update_title(doc: str, title: str) -> str:
     return new + doc
 
 
-def build_head(items: list[dict], generated_at: str, og_image: str = "") -> str:
+def build_head(items: list[dict], generated_at: str, og_image: str = "", base_url: str = "") -> str:
     desc_titles = [(it.get("title_zh") or it.get("title") or "") for it in items[:5]]
     desc = " / ".join(t for t in desc_titles if t) or SITE_DESC_FALLBACK
     desc = desc[:200]
@@ -133,6 +133,9 @@ def build_head(items: list[dict], generated_at: str, og_image: str = "") -> str:
         f'<meta name="twitter:title" content="{_esc(title_tag)}">',
         f'<meta name="twitter:description" content="{_esc(desc)}">',
     ]
+    if base_url:
+        lines.insert(0, f'<link rel="canonical" href="{base_url}/">')
+        lines.append(f'<meta property="og:url" content="{base_url}/">')
     if og_image:
         lines.append(f'<meta property="og:image" content="{_esc(og_image)}">')
         lines.append(f'<meta name="twitter:image" content="{_esc(og_image)}">')
@@ -192,7 +195,12 @@ def main() -> int:
     ap.add_argument("--out", default="", help="输出路径，默认原地覆盖 --html")
     ap.add_argument("--top", type=int, default=30)
     ap.add_argument("--og-image", default="", help="可选 Open Graph 配图绝对 URL")
+    ap.add_argument("--base-url", default="https://821920046.github.io/ai-news-radar-enhanced",
+                    help="站点绝对 URL（用于 canonical / og:url / sitemap）")
+    ap.add_argument("--sitemap", default="sitemap.xml", help="sitemap 文件名（留空则不生成）")
     args = ap.parse_args()
+    base_url = (args.base_url or "").rstrip("/")
+    og_image = args.og_image or (f"{base_url}/assets/social-preview.png" if base_url else "")
 
     html_path = Path(args.html)
     out_path = Path(args.out) if args.out else html_path
@@ -219,12 +227,26 @@ def main() -> int:
     doc = ensure_markers(doc)
     doc = strip_seo(doc)
     doc = update_title(doc, title_tag)
-    doc = fill(doc, HEAD_MARK, build_head(items, generated_at, args.og_image))
+    doc = fill(doc, HEAD_MARK, build_head(items, generated_at, og_image=og_image, base_url=base_url))
     doc = fill(doc, DATA_MARK, build_data(payload, items))
     doc = fill(doc, ITEMS_MARK, build_items(items))
 
     out_path.write_text(doc, encoding="utf-8")
     logger.info("预渲染完成: %s（注入 %d 条，generated_at=%s）", out_path, len(items), generated_at)
+
+    if args.sitemap and base_url:
+        lastmod = (generated_at or "")[:10] or datetime.now(timezone.utc).date().isoformat()
+        sitemap = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f'  <url><loc>{base_url}/</loc><lastmod>{lastmod}</lastmod>'
+            '<changefreq>hourly</changefreq><priority>1.0</priority></url>\n'
+            '</urlset>\n'
+        )
+        sm_path = out_path.parent / args.sitemap
+        sm_path.write_text(sitemap, encoding="utf-8")
+        logger.info("sitemap 生成: %s", sm_path)
+
     return 0
 
 

@@ -10,7 +10,9 @@
 from __future__ import annotations
 
 import logging
+import math
 import os
+import re
 import time
 from typing import Any
 
@@ -39,6 +41,11 @@ class TrendClustering:
         self.embedding_model = self.config.get("embedding_model", DEFAULT_EMBEDDING_MODEL)
         # 单次批量 embedding 的最大文本数（成本/请求数控制）
         self.batch_size = int(self.config.get("embedding_batch_size", 96))
+        # 聚类方法：tfidf（默认，免费、零依赖）| embedding（付费 API）| tag
+        self.clustering_method = str(self.config.get("clustering_method", "tfidf")).lower()
+        # TF-IDF 贪心聚类的余弦阈值与最大文档数
+        self.tfidf_threshold = float(self.config.get("tfidf_similarity_threshold", 0.18))
+        self.tfidf_max_docs = int(self.config.get("tfidf_max_docs", 400))
 
     def get_embedding(
         self,
@@ -194,7 +201,13 @@ class TrendClustering:
         if not articles:
             return []
 
-        # 特性开关：需要 API key
+        # 默认：免费 TF-IDF 聚类（纯 Python，零外部调用、零成本）
+        if self.clustering_method == "tfidf":
+            return self._tfidf_cluster(articles)
+        if self.clustering_method == "tag":
+            return self._fallback_tag_clustering(articles)
+
+        # embedding 模式：需要 API key（付费）
         key = api_key or os.environ.get("OPENROUTER_KEYS", "").split(",")[0].strip()
         if not key:
             logger.info("[TrendEngine] No OpenRouter key; falling back to tag clustering.")
@@ -274,6 +287,88 @@ class TrendClustering:
             title = items[0].get("title_zh") or items[0].get("title", "Unknown")
             return str(title)[:40]
         return "Unknown Topic"
+
+    # ── 免费 TF-IDF 聚类（纯 Python，不调用任何付费 API）──
+    _TOKEN_RE = re.compile(r"[a-z0-9]+")
+    _CJK_RE = re.compile(r"[\u4e00-\u9fff]")
+
+    def _tokenize(self, text: str) -> list[str]:
+        """简易中英文分词：ASCII 词 + 中文单字 + 中文相邻二元组。"""
+        if not text:
+            return []
+        low = text.lower()
+        tokens = self._TOKEN_RE.findall(low)
+        cjk = self._CJK_RE.findall(low)
+        tokens.extend(cjk)
+        for i in range(len(cjk) - 1):
+            tokens.append(cjk[i] + cjk[i + 1])
+        return tokens
+
+    def _sparse_cosine(self, a: dict, b: dict) -> float:
+        """稀疏向量余弦相似度。"""
+        if not a or not b:
+            return 0.0
+        if len(a) > len(b):
+            a, b = b, a
+        dot = 0.0
+        for t, w in a.items():
+            bw = b.get(t)
+            if bw:
+                dot += w * bw
+        if dot == 0.0:
+            return 0.0
+        na = math.sqrt(sum(w * w for w in a.values()))
+        nb = math.sqrt(sum(w * w for w in b.values()))
+        if na == 0.0 or nb == 0.0:
+            return 0.0
+        return dot / (na * nb)
+
+    def _tfidf_cluster(self, articles: list[dict]) -> list[dict]:
+        """基于 TF-IDF + 余弦相似度的贪心聚类，完全免费。"""
+        docs = articles[: max(1, self.tfidf_max_docs)]
+        tokenized = [self._tokenize(self._article_text(a)) for a in docs]
+        df: dict[str, int] = {}
+        for toks in tokenized:
+            for t in set(toks):
+                df[t] = df.get(t, 0) + 1
+        n = len(docs) or 1
+        idf = {t: math.log((1 + n) / (1 + c)) + 1.0 for t, c in df.items()}
+        vecs: list[dict] = []
+        for toks in tokenized:
+            if not toks:
+                vecs.append({})
+                continue
+            tf: dict[str, int] = {}
+            for t in toks:
+                tf[t] = tf.get(t, 0) + 1
+            length = len(toks)
+            vecs.append({t: (c / length) * idf.get(t, 0.0) for t, c in tf.items()})
+
+        clusters: list[dict] = []
+        for idx, v in enumerate(vecs):
+            if not v:
+                continue
+            matched = False
+            for cl in clusters:
+                if self._sparse_cosine(v, cl["center"]) >= self.tfidf_threshold:
+                    cl["items"].append(docs[idx])
+                    m = len(cl["items"])
+                    c = cl["center"]
+                    for t in list(c.keys()):
+                        c[t] = c[t] * (m - 1) / m
+                    for t, w in v.items():
+                        c[t] = c.get(t, 0.0) + w / m
+                    matched = True
+                    break
+            if not matched:
+                clusters.append({"center": dict(v), "items": [docs[idx]]})
+
+        for cl in clusters:
+            cl.pop("center", None)
+            cl["topic"] = self._name_cluster(cl["items"])
+            cl["size"] = len(cl["items"])
+        clusters.sort(key=lambda c: c["size"], reverse=True)
+        return clusters
 
     def _fallback_tag_clustering(self, articles: list[dict]) -> list[dict]:
         """无嵌入时的回退方案：按文章标签（取第一个标签）聚类。"""

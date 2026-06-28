@@ -343,6 +343,42 @@ class Pipeline:
         atomic_write_text(status_path, json.dumps(sanitize_public_payload(status_payload),
                                                    ensure_ascii=False, indent=2), encoding="utf-8")
 
+        # Trend Engine 产出 → data/trends.json（供 API /trends 与前端消费；免费 TF-IDF 聚类）
+        if trend_result:
+            try:
+                bursts = trend_result.get("bursts") or trend_result.get("trends") or []
+                trends_out = []
+                for b in bursts:
+                    raw_items = b.get("items", []) or []
+                    trends_out.append({
+                        "topic": b.get("topic") or b.get("tag") or "",
+                        "status": b.get("status"),
+                        "burst_score": b.get("burst_score"),
+                        "current_count": b.get("current_count", b.get("size")),
+                        "avg_7d": b.get("avg_7d"),
+                        "size": b.get("size", len(raw_items)),
+                        "items": [
+                            {"title": it.get("title_zh") or it.get("title"),
+                             "url": it.get("url"),
+                             "signal_score": it.get("signal_score", 0),
+                             "source": it.get("source") or it.get("site_name", "")}
+                            for it in raw_items[:5]
+                        ],
+                    })
+                trends_payload = {
+                    "generated_at": iso(now),
+                    "source": "trend_engine",
+                    "trend_count": trend_result.get("trend_count", len(trends_out)),
+                    "total_clustered": trend_result.get("total_clustered"),
+                    "trends": trends_out,
+                }
+                atomic_write_text(output_path / "trends.json",
+                                  json.dumps(sanitize_public_payload(trends_payload),
+                                             ensure_ascii=False, separators=(",", ":")),
+                                  encoding="utf-8")
+            except Exception as exc:
+                logger.warning("[Pipeline] 写入 trends.json 失败（非致命）: %s", exc)
+
         # WaytoAGI
         try:
             waytoagi_payload = fetch_waytoagi_recent_7d(session, now, WAYTOAGI_DEFAULT)
