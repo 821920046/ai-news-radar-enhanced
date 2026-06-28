@@ -22,3 +22,6 @@ cookies.json
 .pytest_cache/
 playwright-report/
 test-results/
+
+# 本地 AI 助手配置（不应提交）
+.claude/
