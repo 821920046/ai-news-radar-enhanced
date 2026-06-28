@@ -66,9 +66,9 @@ jobs:
           WEBHOOK_HOTNESS_THRESHOLD: ${{ secrets.WEBHOOK_HOTNESS_THRESHOLD }}
         run: |
           if [ -f feeds/follow.opml ]; then
-            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --rss-opml feeds/follow.opml
+            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --rss-opml feeds/follow.opml --trend-engine
           else
-            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3
+            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --trend-engine
           fi
 
       - name: Validate output
@@ -97,9 +97,10 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest-24h.json data/latest-24h-all.json data/archive.json data/source-status.json data/waytoagi-7d.json data/title-zh-cache.json index.html
+          git add data/latest-24h.json data/latest-24h-all.json data/archive.json data/source-status.json data/waytoagi-7d.json data/title-zh-cache.json index.html sitemap.xml
           # Trend Engine 历史（仅在启用趋势引擎时生成，存在才提交，跨运行持久化 7 日基线）
           [ -f data/trend_history.json ] && git add data/trend_history.json || true
+          [ -f data/trends.json ] && git add data/trends.json || true
           git commit -m "chore: update ai news snapshot + prerender"
           git push
 
