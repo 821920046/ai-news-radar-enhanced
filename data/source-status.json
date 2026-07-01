@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-07-01T19:39:07.175462Z",
+  "generated_at": "2026-07-01T21:17:03.727522Z",
   "sites": [
-    {
-      "site_id": "aibreakfast",
-      "site_name": "AI Breakfast",
-      "ok": true,
-      "item_count": 9,
-      "duration_ms": 222,
-      "error": null
-    },
     {
       "site_id": "aihubtoday",
       "site_name": "AI HubToday",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 391,
+      "duration_ms": 358,
       "error": null
     },
     {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
+      "site_id": "aibreakfast",
+      "site_name": "AI Breakfast",
       "ok": true,
-      "item_count": 39,
-      "duration_ms": 1326,
+      "item_count": 9,
+      "duration_ms": 462,
       "error": null
     },
     {
@@ -30,31 +22,15 @@
       "site_name": "Zeli",
       "ok": true,
       "item_count": 77,
-      "duration_ms": 1713,
+      "duration_ms": 796,
       "error": null
     },
     {
-      "site_id": "techurls",
-      "site_name": "TechURLs",
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
       "ok": true,
-      "item_count": 405,
-      "duration_ms": 2066,
-      "error": null
-    },
-    {
-      "site_id": "bestblogs",
-      "site_name": "BestBlogs",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 2248,
-      "error": null
-    },
-    {
-      "site_id": "oss_trending",
-      "site_name": "开源热榜",
-      "ok": true,
-      "item_count": 30,
-      "duration_ms": 4177,
+      "item_count": 39,
+      "duration_ms": 1450,
       "error": null
     },
     {
@@ -62,7 +38,31 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 4334,
+      "duration_ms": 1701,
+      "error": null
+    },
+    {
+      "site_id": "techurls",
+      "site_name": "TechURLs",
+      "ok": true,
+      "item_count": 405,
+      "duration_ms": 2677,
+      "error": null
+    },
+    {
+      "site_id": "bestblogs",
+      "site_name": "BestBlogs",
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 2783,
+      "error": null
+    },
+    {
+      "site_id": "oss_trending",
+      "site_name": "开源热榜",
+      "ok": true,
+      "item_count": 30,
+      "duration_ms": 4757,
       "error": null
     },
     {
@@ -70,15 +70,7 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 130,
-      "duration_ms": 5574,
-      "error": null
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 3045,
-      "duration_ms": 10213,
+      "duration_ms": 5330,
       "error": null
     },
     {
@@ -86,32 +78,42 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 10665,
-      "error": null
-    },
-    {
-      "site_id": "iris",
-      "site_name": "Info Flow",
-      "ok": true,
-      "item_count": 353,
-      "duration_ms": 19461,
+      "duration_ms": 8014,
       "error": null
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 750,
-      "duration_ms": 34080,
+      "item_count": 748,
+      "duration_ms": 10348,
       "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 2981,
+      "duration_ms": 10336,
+      "error": null
+    },
+    {
+      "site_id": "iris",
+      "site_name": "Info Flow",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 125188,
+      "error": "HTTPSConnectionPool(host='iris.findtruman.io', port=443): Max retries exceeded with url: /web/info_flow (Caused by ConnectTimeoutError(<HTTPSConnection(host='iris.findtruman.io', port=443) at 0x7fef64157010>, 'Connection to iris.findtruman.io timed out. (connect timeout=30)'))"
     }
   ],
-  "successful_sites": 13,
-  "failed_sites": [],
+  "successful_sites": 12,
+  "failed_sites": [
+    "iris"
+  ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5604,
-  "items_before_topic_filter": 7177,
-  "items_in_24h": 891,
+  "fetched_raw_items": 5185,
+  "items_before_topic_filter": 7100,
+  "items_in_24h": 884,
   "ai_processing": {
     "tldr_items": 0
   },
