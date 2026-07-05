@@ -174,5 +174,10 @@ def enrich_recommendation_fields(items: list[dict[str, Any]]) -> list[dict[str, 
     """Attach recommendation reason and compact score in-place."""
     for item in items:
         item["recommendation_reason"] = build_recommendation_reason(item)
-        item["signal_score"] = build_signal_score(item)
+        # 保留 Signal Score 2.0 引擎的 signal_score（与 signal_level / breakdown 一致）；
+        # 仅在引擎未评分时回退到紧凑启发式分值。紧凑分同时保留供前端徽章使用。
+        compact = build_signal_score(item)
+        item["compact_score"] = compact
+        if item.get("signal_score") is None:
+            item["signal_score"] = compact
     return items

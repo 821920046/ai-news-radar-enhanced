@@ -301,6 +301,10 @@ class SignalScoreEngine:
 
         根据 levels.mode 选择静态阈值或动态分位数阈值分级。
         """
+        # 防御性清理：避免不同批次因 id(list) 被 Python 重用而命中陈旧的速度倒排缓存。
+        from .features import _VELOCITY_CACHE
+        _VELOCITY_CACHE.clear()
+
         computed: list[tuple[dict, float, dict]] = []
         totals: list[float] = []
         for article in articles:

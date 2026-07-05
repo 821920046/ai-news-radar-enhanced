@@ -306,35 +306,42 @@ def dedupe_items_by_title_url(items: list[dict[str, Any]], similarity_threshold:
         after_title_dedup.append(merge_items_group(group))
 
     # --- Layer 3: 基于标题 Bigram Jaccard 相似度模糊合并 ---
+    # 性能优化：用与 final_items 对齐的 final_clean_titles 缓存已归一化标题，
+    # 避免在 O(n^2) 双层循环中重复调用昂贵的 normalize_title_for_dedup。
     final_items: list[dict[str, Any]] = []
+    final_clean_titles: list[str] = []
     for item in after_title_dedup:
         matched = False
         title_original = item.get("title_original") or item.get("title") or ""
         item_clean_title = normalize_title_for_dedup(title_original)
 
-        for existing in final_items:
-            existing_title_original = existing.get("title_original") or existing.get("title") or ""
-            existing_clean_title = normalize_title_for_dedup(existing_title_original)
+        if item_clean_title:
+            len_a = len(item_clean_title)
+            for idx, existing in enumerate(final_items):
+                existing_clean_title = final_clean_titles[idx]
+                if not existing_clean_title:
+                    continue
 
-            if not item_clean_title or not existing_clean_title:
-                continue
+                # 快速过滤：长度差异过大不进行计算
+                len_b = len(existing_clean_title)
+                if min(len_a, len_b) / max(len_a, len_b) < 0.60:
+                    continue
 
-            # 快速过滤：长度差异过大不进行计算
-            len_a, len_b = len(item_clean_title), len(existing_clean_title)
-            if min(len_a, len_b) / max(len_a, len_b) < 0.60:
-                continue
-
-            sim = compute_title_similarity(item_clean_title, existing_clean_title)
-            if sim >= similarity_threshold:
-                # 模糊匹配成功，原地更新 existing 以进行合并
-                merged_result = merge_items_group([existing, item])
-                existing.clear()
-                existing.update(merged_result)
-                matched = True
-                break
+                sim = compute_title_similarity(item_clean_title, existing_clean_title)
+                if sim >= similarity_threshold:
+                    # 模糊匹配成功，原地更新 existing 以进行合并
+                    merged_result = merge_items_group([existing, item])
+                    existing.clear()
+                    existing.update(merged_result)
+                    # 合并后代表标题可能变化，刷新缓存
+                    merged_title = existing.get("title_original") or existing.get("title") or ""
+                    final_clean_titles[idx] = normalize_title_for_dedup(merged_title)
+                    matched = True
+                    break
 
         if not matched:
             final_items.append(item)
+            final_clean_titles.append(item_clean_title)
 
     # 按发布时间/事件时间排序（最新的排在前面）
     final_items.sort(key=lambda x: event_time(x) or datetime.min.replace(tzinfo=UTC), reverse=True)
