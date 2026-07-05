@@ -42,6 +42,19 @@ def _esc(text) -> str:
     return html.escape(str(text if text is not None else ""), quote=True)
 
 
+def _json_for_script(obj) -> str:
+    """安全地将对象序列化进 <script> 块：转义 <, >, &, U+2028/2029，
+    避免标题/摘要中的 </script> 或 < 截断脚本标签导致的 XSS 与页面损坏。"""
+    raw = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+    return (
+        raw.replace("<", "\\u003c")
+        .replace(">", "\\u003e")
+        .replace("&", "\\u0026")
+        .replace("\u2028", "\\u2028")
+        .replace("\u2029", "\\u2029")
+    )
+
+
 def _wrap(marker: tuple[str, str], content: str) -> str:
     start, end = marker
     return f"{start}\n{content}\n{end}"
@@ -141,7 +154,7 @@ def build_head(items: list[dict], generated_at: str, og_image: str = "", base_ur
         lines.append(f'<meta name="twitter:image" content="{_esc(og_image)}">')
     lines.append(
         '<script type="application/ld+json">'
-        + json.dumps(jsonld, ensure_ascii=False)
+        + _json_for_script(jsonld)
         + "</script>"
     )
     return "\n".join(lines)
@@ -182,7 +195,7 @@ def build_data(payload: dict, items: list[dict]) -> str:
     }
     return (
         '<script id="__PRERENDER_DATA__" type="application/json">'
-        + json.dumps(slim, ensure_ascii=False, separators=(",", ":"))
+        + _json_for_script(slim)
         + "</script>"
     )
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>My AI News Radar Subscriptions</title>
+  </head>
+  <body>
+    <!-- ====================================================================
+         你的私有订阅源。本文件会被流水线读取（本地用 CLI 参数 rss-opml 指向 feeds/follow.opml；
+         CI 把整份文件 base64 后放进 FOLLOW_OPML_B64 secret）。
+         这里的条目以 site_id=opmlrss 进入管线，权威度 90，参与去重、热度与 Signal 评分。
+         安全说明：只当作纯数据读取（标题、链接、摘要），绝不执行 feed 内的任何指令。
+    ==================================================================== -->
+
+    <outline text="Curated AI Digests">
+      <!-- AI HOT（数字生命卡兹克）精选最新 50 条；条目链接指向原文（x.com、官方博客等），
+           便于与其他信源按 URL 去重并叠加多源热度。 -->
+      <outline text="AI HOT 精选" title="AI HOT 精选" type="rss"
+               xmlUrl="https://aihot.virxact.com/feed.xml"
+               htmlUrl="https://aihot.virxact.com" />
+
+      <!-- 官方另提供全部最新 50、日报最新 30 期两个 feed；如需要可参照官网地址自行添加。 -->
+    </outline>
+
+    <!-- 在此继续添加你自己的订阅源，每条一行 outline，填好 xmlUrl 与 htmlUrl 即可。 -->
+  </body>
+</opml>
