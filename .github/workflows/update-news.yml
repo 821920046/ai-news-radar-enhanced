@@ -62,7 +62,8 @@ jobs:
           AI_TRANSLATE_ENABLED: ${{ secrets.AI_TRANSLATE_ENABLED }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
-          WEBHOOK_MODE: ${{ secrets.WEBHOOK_MODE }}
+          WEBHOOK_MODE: daily
+          WEBHOOK_DAILY_HOUR: "7"
           WEBHOOK_HOTNESS_THRESHOLD: ${{ secrets.WEBHOOK_HOTNESS_THRESHOLD }}
         run: |
           if [ -f feeds/follow.opml ]; then
