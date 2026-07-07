@@ -664,18 +664,26 @@ function getFilteredItems() {
 function renderItemNode(item) {
   const node = itemTpl.content.firstElementChild.cloneNode(true);
   const category = item.category || "科技";
+  // 时间可靠性判断：有真实 published_at 才算“精确发布时间”；
+  // 若发布时间晚于站点构建时间(generated_at)，说明来源时间不可靠，按“采集/近似”处理
+  const _gen = state.generatedAt || "";
+  let hasExactTime = !!item.published_at;
+  if (hasExactTime && _gen && item.published_at > _gen) hasExactTime = false;
   const itemTime = item.published_at || item.first_seen_at;
+  const _timePrefix = hasExactTime ? "" : "≈";
 
   node.setAttribute("data-category", category);
   node.querySelector(".card-site").innerHTML = highlightText(item.site_name, state.query);
-  node.querySelector(".timeline-time").textContent = fmtClock(itemTime);
+  const _timeEl = node.querySelector(".timeline-time");
+  _timeEl.textContent = _timePrefix + fmtClock(itemTime);
+  if (!hasExactTime) _timeEl.title = "该时间为采集时间（来源未提供原文发布时间），非文章真实发布时间";
 
   const catBadge = node.querySelector(".card-cat-badge");
   catBadge.textContent = category;
   const meta = CATEGORY_META[category] || CATEGORY_META["科技"];
   catBadge.className = `card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase border ${meta.text} ${meta.bg} ${meta.border}`;
 
-  node.querySelector(".card-source").innerHTML = highlightText(`${item.source || hostFromUrl(item.url) || "RSS"} · ${fmtTime(itemTime)}`, state.query);
+  node.querySelector(".card-source").innerHTML = highlightText(`${item.source || hostFromUrl(item.url) || "RSS"} · ${hasExactTime ? "" : "采集 "}${fmtTime(itemTime)}`, state.query);
 
   if (item.hotness_score > 0 && item.hotness_raw) {
     const badge = document.createElement("span");

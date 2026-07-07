@@ -604,8 +604,8 @@ def fetch_newsnow(session: requests.Session, now: datetime) -> list[RawItem]:
                 extra = it.get("extra") or {}
                 if isinstance(extra, dict):
                     published = parse_date_any(extra.get("date"), now)
-            if not published:
-                published = updated
+            # 不再用整块 updatedTime（NewsNow 刷新时间）冒充文章发布时间；
+            # 无真实单条时间时留空，前端会标注为“采集”时间而非发布时间。
 
             image_url = image_url_from_mapping(it, url)
             raw_desc = first_non_empty(it.get("summary"), it.get("description"), it.get("content"), it.get("desc"))

@@ -181,6 +181,11 @@ class Pipeline:
             ts = event_time(rec)
             if ts and ts >= window_start:
                 normed = dict(rec)
+                # 时间健全化：发布时间不得晚于本次构建时间(now)。
+                # 防止来源时钟偏差/时区标错/仅给日期导致“新闻比站点更新还新”的超前时间。
+                _pub = parse_iso(normed.get("published_at"))
+                if _pub and _pub > now + timedelta(minutes=10):
+                    normed["published_at"] = None
                 normed["title"] = maybe_fix_mojibake(str(normed.get("title", "")))
                 normed["source"] = maybe_fix_mojibake(normalize_source_for_display(
                     str(normed.get("site_id", "")), str(normed.get("source", "")), str(normed.get("url", ""))))
