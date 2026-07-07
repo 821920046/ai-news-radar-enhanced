@@ -77,6 +77,7 @@ const CATEGORY_META = {
   "AI":       { text: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20", activeGlow: "bg-gradient-to-r from-blue-600 to-indigo-600 shadow-blue-500/20" },
   "科技":     { text: "text-teal-400", bg: "bg-teal-500/10", border: "border-teal-500/20", activeGlow: "bg-gradient-to-r from-teal-500 to-emerald-600 shadow-teal-500/20" },
   "数码":     { text: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20", activeGlow: "bg-gradient-to-r from-purple-500 to-pink-600 shadow-purple-500/20" },
+  "手机":     { text: "text-sky-400", bg: "bg-sky-500/10", border: "border-sky-500/20", activeGlow: "bg-gradient-to-r from-sky-500 to-cyan-600 shadow-sky-500/20" },
   "电脑硬件": { text: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20", activeGlow: "bg-gradient-to-r from-orange-500 to-red-600 shadow-orange-500/20" },
   "开源热榜": { text: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20", activeGlow: "bg-gradient-to-r from-green-500 to-lime-600 shadow-green-500/20" },
   "":         { activeGlow: "bg-gradient-to-r from-zinc-700 to-zinc-800 shadow-zinc-500/20" }
@@ -94,6 +95,7 @@ function fmtTime(iso) {
   if (Number.isNaN(d.getTime())) return "时间未知";
   return new Intl.DateTimeFormat("zh-CN", {
     month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
+    timeZone: "Asia/Shanghai",
   }).format(d);
 }
 
@@ -103,14 +105,15 @@ function fmtClock(iso) {
   if (Number.isNaN(d.getTime())) return "--:--";
   return new Intl.DateTimeFormat("zh-CN", {
     hour: "2-digit", minute: "2-digit", hour12: false,
+    timeZone: "Asia/Shanghai",
   }).format(d);
 }
 
 function fmtDate(iso) {
   if (!iso) return "未知日期";
-  const d = new Date(`${iso}T00:00:00`);
-  if (Number.isNaN(d.getTime())) return iso;
-  return new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit" }).format(d);
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso));
+  if (!m) return iso;
+  return `${m[2]}/${m[3]}`;
 }
 
 function debounce(fn, ms) {
@@ -158,20 +161,38 @@ function fallbackReason(item) {
 
 const WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
-function fmtDateGroup(iso) {
+// 统一使用北京时间（UTC+8）解析日期部件，保证所有访客看到的时间一致
+const APP_TZ = "Asia/Shanghai";
+const _WD_INDEX = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+
+function tzParts(iso) {
   const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return "未知日期";
-  const m = d.getMonth() + 1;
-  const day = d.getDate();
-  const wd = WEEKDAYS[d.getDay()];
-  return `${m}月${day}日 · ${wd}`;
+  if (Number.isNaN(d.getTime())) return null;
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: APP_TZ,
+    year: "numeric", month: "numeric", day: "numeric", weekday: "short",
+  }).formatToParts(d);
+  const o = {};
+  for (const p of parts) o[p.type] = p.value;
+  return {
+    year: parseInt(o.year, 10),
+    month: parseInt(o.month, 10),
+    day: parseInt(o.day, 10),
+    weekday: _WD_INDEX[o.weekday] || 0,
+  };
+}
+
+function fmtDateGroup(iso) {
+  const p = tzParts(iso);
+  if (!p) return "未知日期";
+  return `${p.month}月${p.day}日 · ${WEEKDAYS[p.weekday]}`;
 }
 
 function dateKey(iso) {
   if (!iso) return "unknown";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return "unknown";
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const p = tzParts(iso);
+  if (!p) return "unknown";
+  return `${p.year}-${String(p.month).padStart(2, "0")}-${String(p.day).padStart(2, "0")}`;
 }
 
 // ---- Stats Grid (visible) ---------------------------------------------------
@@ -426,7 +447,7 @@ function renderStats(payload) {
 // ---- Category Nav -----------------------------------------------------------
 
 function computeCategoryCounts(items) {
-  const counts = { "": items.length, "开源热榜": 0, "AI": 0, "科技": 0, "数码": 0, "电脑硬件": 0 };
+  const counts = { "": items.length, "开源热榜": 0, "AI": 0, "科技": 0, "数码": 0, "手机": 0, "电脑硬件": 0 };
   items.forEach((item) => {
     const cat = item.category || "科技";
     if (counts[cat] !== undefined) counts[cat] += 1;
@@ -448,6 +469,7 @@ function renderCategoryNav() {
     { key: "AI", label: "AI" },
     { key: "科技", label: "科技" },
     { key: "数码", label: "数码" },
+    { key: "手机", label: "手机" },
     { key: "电脑硬件", label: "电脑硬件" },
   ];
 
@@ -1094,7 +1116,7 @@ function renderSourceHealth(errorMessage = "") {
 // ---- Data Loaders -----------------------------------------------------------
 
 async function loadNewsData() {
-  const res = await fetch(`./data/latest-24h.json?t=${Date.now()}`);
+  const res = await fetch(`./data/latest-24h.json`);
   if (!res.ok) throw new Error(`加载 latest-24h.json 失败: ${res.status}`);
   return res.json();
 }
@@ -1102,7 +1124,7 @@ async function loadNewsData() {
 async function loadAllModeData() {
   if (state.allDataLoaded) return;
   if (!state.allDataPromise) {
-    state.allDataPromise = fetch(`./${state.allDataUrl}?t=${Date.now()}`)
+    state.allDataPromise = fetch(`./${state.allDataUrl}`)
       .then((res) => {
         if (!res.ok) throw new Error(`加载 latest-24h-all.json 失败: ${res.status}`);
         return res.json();
@@ -1121,13 +1143,13 @@ async function loadAllModeData() {
 }
 
 async function loadWaytoagiData() {
-  const res = await fetch(`./data/waytoagi-7d.json?t=${Date.now()}`);
+  const res = await fetch(`./data/waytoagi-7d.json`);
   if (!res.ok) throw new Error(`加载 waytoagi-7d.json 失败: ${res.status}`);
   return res.json();
 }
 
 async function loadSourceStatusData() {
-  const res = await fetch(`./data/source-status.json?t=${Date.now()}`);
+  const res = await fetch(`./data/source-status.json`);
   if (!res.ok) throw new Error(`加载 source-status.json 失败: ${res.status}`);
   return res.json();
 }

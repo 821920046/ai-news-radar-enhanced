@@ -68,6 +68,15 @@ _DEFAULT_TOPIC_DIGITAL_KEYWORDS = [
     "智能眼镜", "ar眼镜", "vr头显", "vision pro"
 ]
 
+_DEFAULT_TOPIC_PHONE_KEYWORDS = [
+    "手机", "smartphone", "iphone", "安卓旗舰", "折叠屏", "折叠手机", "直板旗舰",
+    "galaxy", "三星galaxy", "pixel", "谷歌手机", "oneplus", "一加", "iqoo",
+    "oppo", "vivo", "realme", "红米", "redmi", "小米手机", "魅族", "moto",
+    "motorola", "nothing phone", "荣耀magic", "华为mate", "mate 60", "mate60",
+    "mate 70", "mate70", "旗舰机", "旗舰手机", "影像旗舰", "移动影像",
+    "手机市场", "手机销量", "手机出货", "出货量", "骁龙8", "天玑9", "麒麟"
+]
+
 _DEFAULT_TOPIC_AI_KEYWORDS = [
     "llm", "gpt", "claude", "gemini", "openai", "anthropic",
     "deepseek", "copilot", "codex", "mcp", "huggingface",
@@ -134,6 +143,7 @@ TOPHUB_BLOCK_KEYWORDS = _rules.get("TOPHUB_BLOCK_KEYWORDS", _DEFAULT_TOPHUB_BLOC
 
 TOPIC_HARDWARE_KEYWORDS = _rules.get("TOPIC_HARDWARE_KEYWORDS", _DEFAULT_TOPIC_HARDWARE_KEYWORDS)
 TOPIC_DIGITAL_KEYWORDS = _rules.get("TOPIC_DIGITAL_KEYWORDS", _DEFAULT_TOPIC_DIGITAL_KEYWORDS)
+TOPIC_PHONE_KEYWORDS = _rules.get("TOPIC_PHONE_KEYWORDS", _DEFAULT_TOPIC_PHONE_KEYWORDS)
 TOPIC_AI_KEYWORDS = _rules.get("TOPIC_AI_KEYWORDS", _DEFAULT_TOPIC_AI_KEYWORDS)
 TOPIC_TECH_KEYWORDS = _rules.get("TOPIC_TECH_KEYWORDS", _DEFAULT_TOPIC_TECH_KEYWORDS)
 TOPIC_OSS_KEYWORDS = _rules.get("TOPIC_OSS_KEYWORDS", _DEFAULT_TOPIC_OSS_KEYWORDS)
@@ -259,10 +269,10 @@ def is_ai_related_record(record: dict[str, Any]) -> bool:
 
 # ---- Topic category classification ----
 # 为每条新闻打上 topic_category 字段，用于前端分类导航栏
-# 优先级：开源热榜 > 电脑硬件 > 数码 > AI > 科技（默认）
+# 优先级：开源热榜 > 手机 > 电脑硬件 > 数码 > AI > 科技（默认）
 
 def classify_item(record: dict[str, Any]) -> str:
-    """为新闻条目分配主题分类。返回值之一：'开源热榜'/'电脑硬件'/'数码'/'AI'/'科技'"""
+    """为新闻条目分配主题分类。返回值之一：'开源热榜'/'手机'/'电脑硬件'/'数码'/'AI'/'科技'"""
     title = str(record.get("title") or "")
     source = str(record.get("source") or "")
     site_name = str(record.get("site_name") or "")
@@ -272,7 +282,9 @@ def classify_item(record: dict[str, Any]) -> str:
     # （关键词如 "github""开源""工具" 在科技新闻中出现频率过高，误匹配严重）
     if str(record.get("site_id") or "") == "oss_trending":
         return "开源热榜"
-    # 优先级匹配：硬件 > 数码 > AI > 科技（默认）
+    # 优先级匹配：手机 > 硬件 > 数码 > AI > 科技（默认）
+    if contains_any_keyword(text, TOPIC_PHONE_KEYWORDS):
+        return "手机"
     if contains_any_keyword(text, TOPIC_HARDWARE_KEYWORDS):
         return "电脑硬件"
     if contains_any_keyword(text, TOPIC_DIGITAL_KEYWORDS):
