@@ -41,6 +41,20 @@ SITE_DESC_FALLBACK = "24 小时 AI/科技情报雷达 — 多源聚合、智能�
 def _esc(text) -> str:
     return html.escape(str(text if text is not None else ""), quote=True)
 
+_ALLOWED_URL_SCHEMES = {"http", "https", "mailto"}
+
+
+def _safe_url(url) -> str:
+    """仅允许 http/https/mailto 及相对链接，阻断 javascript:/data: 等可执行协议后再做 HTML 转义。"""
+    raw = str(url if url is not None else "")
+    raw = raw.replace("\t", "").replace("\n", "").replace("\r", "").strip()
+    if not raw:
+        return "#"
+    m = re.match(r"^([a-zA-Z][a-zA-Z0-9+.-]*):", raw)
+    if m and m.group(1).lower() not in _ALLOWED_URL_SCHEMES:
+        return "#"
+    return _esc(raw)
+
 
 def _json_for_script(obj) -> str:
     """安全地将对象序列化进 <script> 块：转义 <, >, &, U+2028/2029，
@@ -168,7 +182,7 @@ def build_items(items: list[dict]) -> str:
         zh = it.get("title_zh")
         title = _esc(zh or it.get("title") or "Untitled")
         en = _esc(it.get("title")) if zh and it.get("title") else ""
-        url = _esc(it.get("url") or "#")
+        url = _safe_url(it.get("url") or "#")
         source = _esc(it.get("source") or it.get("site_name") or "")
         level = _esc(it.get("signal_level") or "")
         score = _esc(it.get("signal_score") if it.get("signal_score") is not None else "")
