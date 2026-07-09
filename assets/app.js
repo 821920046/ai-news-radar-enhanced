@@ -126,6 +126,18 @@ function escapeHtml(text) {
   return (text || "").replace(/[&<>"']/g, (m) => map[m]);
 }
 
+function safeUrl(url) {
+  // 仅允许 http/https/mailto 及相对链接；阻断 javascript:/data:/vbscript: 等可执行协议，防止来自第三方源的 XSS
+  let raw = (url == null ? "" : String(url)).replace(/[\t\n\r]/g, "").trim();
+  if (!raw) return "#";
+  const scheme = raw.match(/^([a-z][a-z0-9+.-]*):/i);
+  if (scheme) {
+    const s = scheme[1].toLowerCase();
+    if (s !== "http" && s !== "https" && s !== "mailto") return "#";
+  }
+  return raw;
+}
+
 function highlightText(text, query) {
   if (!query || !text) return escapeHtml(text || "");
   const safeText = escapeHtml(text);
@@ -259,7 +271,7 @@ function renderStats(payload) {
 
     return `<li class="hot-ticker-row">
       <span class="hot-ticker-rank" style="${rankColor}">${rank}</span>
-      <a href="${link}" target="_blank" rel="noopener noreferrer" class="hot-ticker-title" title="${escapeHtml(titleText)}">${escapeHtml(titleText)}</a>
+      <a href="${escapeHtml(safeUrl(link))}" target="_blank" rel="noopener noreferrer" class="hot-ticker-title" title="${escapeHtml(titleText)}">${escapeHtml(titleText)}</a>
       <span class="hot-ticker-meta">${shortTimeStr}</span>
     </li>`;
   }
@@ -707,7 +719,7 @@ function renderItemNode(item) {
   } else {
     titleEl.innerHTML = highlightText(item.title || zh || en, state.query);
   }
-  titleEl.href = item.url;
+  titleEl.href = safeUrl(item.url);
 
   const summaryEl = node.querySelector(".card-summary");
   const tldr = (item.tldr || "").trim();
@@ -756,7 +768,7 @@ function renderItemNode(item) {
       mergedSources.forEach((src) => {
         if (!src.url || src.url === item.url) return;
         const a = document.createElement("a");
-        a.href = src.url;
+        a.href = safeUrl(src.url);
         a.target = "_blank";
         a.rel = "noopener noreferrer";
         a.className = "px-2 py-0.5 rounded bg-zinc-900/60 hover:bg-teal-500/20 hover:text-teal-200 border border-zinc-800/80 hover:border-teal-500/30 text-zinc-400 text-[10px] font-semibold transition-all duration-150";
@@ -925,14 +937,14 @@ function renderWaytoagi(waytoagi) {
 
   waytoagiMetaEl.innerHTML = "";
   const rootLink = document.createElement("a");
-  rootLink.href = waytoagi.root_url || "#";
+  rootLink.href = safeUrl(waytoagi.root_url || "#");
   rootLink.target = "_blank";
   rootLink.rel = "noopener noreferrer";
   rootLink.className = "text-teal-400 hover:text-teal-300 font-bold underline decoration-teal-500/30 underline-offset-4";
   rootLink.textContent = "主页面";
   
   const historyLink = document.createElement("a");
-  historyLink.href = waytoagi.history_url || "#";
+  historyLink.href = safeUrl(waytoagi.history_url || "#");
   historyLink.target = "_blank";
   historyLink.rel = "noopener noreferrer";
   historyLink.className = "text-teal-400 hover:text-teal-300 font-bold underline decoration-teal-500/30 underline-offset-4";
@@ -980,7 +992,7 @@ function renderWaytoagi(waytoagi) {
   updates.forEach((u) => {
     const row = document.createElement("a");
     row.className = "flex items-center gap-4 p-3 bg-zinc-900/20 border border-zinc-900/60 rounded-xl hover:bg-zinc-900/40 hover:border-zinc-800 transition-all duration-200 group/item";
-    row.href = u.url || "#";
+    row.href = safeUrl(u.url || "#");
     row.target = "_blank";
     row.rel = "noopener noreferrer";
     
