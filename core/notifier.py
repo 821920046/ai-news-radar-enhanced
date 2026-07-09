@@ -10,6 +10,12 @@ from typing import Any
 
 import requests
 from core.utils import _env_int
+from core.normalize.normalizer import (
+    NOISE_KEYWORDS,
+    TOPIC_TECH_KEYWORDS,
+    contains_any_keyword,
+    contains_meaningful_ai_signal,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -123,13 +129,35 @@ def send_webhook_notification(items: list[dict[str, Any]], *, title: str = "AI N
 # ---- Daily categorized digest (fixed 07:00 Beijing time / UTC+8) ------------
 
 DEFAULT_DAILY_HOUR_CST = 7
-DEFAULT_DAILY_PER_GROUP = 2
+DEFAULT_DAILY_PER_GROUP = 3
 # 每个推送类目 -> 归入该类目的 category 取值集合
+# 「AI」大类目已并入原「科技」；「3C数码」涵盖 数码 / 手机 / 电脑硬件
 DAILY_DIGEST_GROUPS: list[tuple[str, tuple[str, ...]]] = [
-    ("AI", ("AI",)),
-    ("数码科技", ("数码", "科技")),
-    ("手机电脑", ("手机", "电脑硬件")),
+    ("AI", ("AI", "科技")),
+    ("3C数码", ("数码", "手机", "电脑硬件")),
 ]
+
+# 推送选材相关性闸门：视为"具体品类"的 category
+_DIGEST_CONCRETE_CATEGORIES = {"手机", "电脑硬件", "数码", "开源热榜", "AI"}
+
+
+def _is_digest_worthy(item: dict[str, Any]) -> bool:
+    """推送选材相关性闸门：滤掉明显跑题/娱乐八卦类噪声，只推真正的科技/AI 情报。
+    根因：HN 24h 热榜等来源会绕过 AI 相关性过滤，导致枪击、政治等硬新闻混入。
+    注：相关性只看【内容】（标题+摘要），不看来源名——因为 TOPIC_TECH_KEYWORDS 含
+    "hacker news""36氪" 等来源名关键词，若纳入 source 会让任意 HN 条目都误判为相关。"""
+    text = " ".join(
+        str(item.get(k) or "") for k in ("title_zh", "title", "description")
+    ).lower()
+    if contains_any_keyword(text, NOISE_KEYWORDS):
+        return False
+    if str(item.get("category") or "") in _DIGEST_CONCRETE_CATEGORIES:
+        return True
+    if contains_meaningful_ai_signal(text):
+        return True
+    if contains_any_keyword(text, TOPIC_TECH_KEYWORDS):
+        return True
+    return False
 
 
 def _clip(text: Any, limit: int, *, ellipsis: bool = True) -> str:
@@ -158,6 +186,8 @@ def select_daily_digest(
         for item in items:
             if str(item.get("category") or "") not in cat_set:
                 continue
+            if not _is_digest_worthy(item):
+                continue
             title = str(item.get("title_zh") or item.get("title") or "").strip()
             if not title:
                 continue
@@ -178,28 +208,92 @@ def select_daily_digest(
     return groups
 
 
+# 推送类目 -> 展示用 emoji
+DAILY_GROUP_EMOJI = {"AI": "🤖", "3C数码": "📱"}
+
+_HEADLINE_MAX = 34
+_SUMMARY_MAX = 54
+_MESSAGE_BYTE_BUDGET = 3800
+
+
+def _pick_summary(item: dict[str, Any], full_title: str) -> str:
+    """挑选一句真正有信息量的摘要：优先 tldr，其次 description；
+    与标题重复或为空则视为无摘要，避免"正文只是复读标题"。"""
+    for key in ("tldr", "description"):
+        text = re.sub(r"\s+", " ", str(item.get(key) or "")).strip()
+        if text and text != full_title:
+            return _clip(text, _SUMMARY_MAX)
+    return ""
+
+
+def _digest_meta_line(item: dict[str, Any]) -> str:
+    """来源 · 标签 · 信号/热榜 的上下文信息行（替代无意义的标题复读）。"""
+    parts: list[str] = []
+    # 清洗来源：去掉板块后缀（"Hacker News · 24h最热" -> "Hacker News"）与冗余括号注释
+    raw_source = str(item.get("source") or item.get("site_name") or "").strip()
+    raw_source = re.split(r"\s*[·|]\s*", raw_source)[0]
+    raw_source = re.sub(r"\s*[（(].*?[)）]\s*$", "", raw_source).strip()
+    source = _clip(raw_source, 20)
+    if source:
+        parts.append(source)
+    tags = [str(t).strip() for t in (item.get("tags") or []) if str(t).strip()]
+    if tags:
+        parts.append(" ".join(f"#{t}" for t in tags[:2]))
+    try:
+        score = int(round(float(item.get("signal_score") or 0)))
+    except (TypeError, ValueError):
+        score = 0
+    if score:
+        parts.append(f"信号 {score}{str(item.get('signal_level') or '').strip()}")
+    if str(item.get("hotness_raw") or "").strip():
+        parts.append("🔥 热榜")
+    return " · ".join(parts)
+
+
 def build_daily_digest_message(
     groups: list[tuple[str, list[dict[str, Any]]]], *, title: str = "每日科技情报"
 ) -> str:
-    """构造企微/钉钉 markdown：标题（≤10字）+ 内容（≤50字）。"""
+    """构造企业微信/钉钉 markdown 每日精选：
+    - 标题不再硬截断到 10 字（改为完整中文标题，过长��省略）；
+    - 正文优先展示真实摘要（tldr/description），无摘要时展示来源/标签/信号上下文，
+      不再复读标题；
+    - 分类分节 + emoji + 日期表头，排版更清晰易扫读。"""
     total = sum(len(rows) for _, rows in groups)
-    lines = [f"**{title}｜每日 {total} 条精选**"]
+    now_bj = _beijing_now()
+    weekday = "一二三四五六日"[now_bj.weekday()]
+    group_names = " / ".join(label for label, _rows in groups) or "科技情报"
+    lines = [
+        f"# 📡 {title} · {now_bj.month}月{now_bj.day}日 周{weekday}",
+        f"> 每日 {total} 条精选 · {group_names}",
+    ]
+    idx = 0
     for label, rows in groups:
+        emoji = DAILY_GROUP_EMOJI.get(label, "•")
         lines.append("")
-        lines.append(f"**{label}**")
+        lines.append(f"**{emoji} {label}**")
         if not rows:
-            lines.append("· 暂无热点")
+            lines.append("> 今日暂无热点")
             continue
         for item in rows:
-            headline = _clip(item.get("title_zh") or item.get("title"), 10, ellipsis=False)
-            body = _clip(
-                item.get("tldr") or item.get("description") or item.get("title_zh") or item.get("title"),
-                50,
-            )
+            idx += 1
+            full_title = re.sub(
+                r"\s+", " ", str(item.get("title_zh") or item.get("title") or "")
+            ).strip()
+            headline = _clip(full_title, _HEADLINE_MAX) or "未命名"
             url = item.get("url") or "#"
-            lines.append(f"· [{headline}]({url})")
-            lines.append(f"  {body}")
-    return "\n".join(lines)
+            summary = _pick_summary(item, full_title)
+            meta = _digest_meta_line(item)
+            lines.append(f"**{idx}.** [{headline}]({url})")
+            if summary:
+                lines.append(f"> {summary}")
+            if meta:
+                lines.append(f'<font color="comment">{meta}</font>')
+    markdown = "\n".join(lines)
+    # 兜底：企业微信单条 markdown content 上限约 4096 字节，超限则安全截断
+    if len(markdown.encode("utf-8")) > _MESSAGE_BYTE_BUDGET:
+        encoded = markdown.encode("utf-8")[:_MESSAGE_BYTE_BUDGET]
+        markdown = encoded.decode("utf-8", "ignore").rstrip() + "\n> …"
+    return markdown
 
 
 def _post_markdown(markdown: str) -> bool:

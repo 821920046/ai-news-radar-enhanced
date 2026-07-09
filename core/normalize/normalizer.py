@@ -109,7 +109,7 @@ _DEFAULT_TOPIC_OSS_KEYWORDS = [
 
 _DEFAULT_TAG_RULES = [
     ("智能体", ["agent", "智能体", "autonomous", "agentic", "multi-agent"]),
-    ("模型发布", ["gpt", "claude", "gemini", "llama", "mistral", "qwen", "deepseek", "发布", "release", "launch", "announce"]),
+    ("模型发布", ["gpt", "claude", "gemini", "llama", "mistral", "qwen", "deepseek", "grok", "大模型", "模型发布", "开源模型", "预训练模型", "new model", "new llm"]),
     ("论文研究", ["paper", "arxiv", "论文", "研究", "benchmark", "测评", "survey", "research", "preprint"]),
     ("编码工具", ["copilot", "codex", "coding", "编程", "ide", "cursor", "vscode", "code assistant", "ai编程", "ai coding"]),
     ("MCP/工具", ["mcp", "tool use", "plugin", "插件", "工具", "function call", "tool calling"]),
@@ -171,9 +171,35 @@ SECRET_LIKE_RE = re.compile(r"\b(sk-(?!hynix\b)[A-Za-z0-9_-]{12,}|(?:api[_-]?key
 BROAD_AI_TERMS = {"agent", "模型", "推理"}
 
 
+_ASCII_KW_RE_CACHE: dict[str, "re.Pattern[str]"] = {}
+
+
+def _ascii_keyword_regex(keyword: str) -> "re.Pattern[str]":
+    """为纯 ASCII 关键词构造词边界正则，避免子串误匹配
+    （如 'ide' 命中 'video'、'ai' 命中 'said'、'release' 命中普通英文）。"""
+    cached = _ASCII_KW_RE_CACHE.get(keyword)
+    if cached is None:
+        cached = re.compile(
+            r"(?<![a-z0-9])" + re.escape(keyword.strip().lower()) + r"(?![a-z0-9])"
+        )
+        _ASCII_KW_RE_CACHE[keyword] = cached
+    return cached
+
+
 def contains_any_keyword(haystack: str, keywords: list[str]) -> bool:
+    """关键词匹配：纯 ASCII 关键词按词边界匹配（避免子串误匹配），
+    含中文等非 ASCII 字符的关键词仍按子串匹配（CJK 无词边界概念）。"""
     h = haystack.lower()
-    return any(k in h for k in keywords)
+    for keyword in keywords:
+        if not keyword:
+            continue
+        k = str(keyword)
+        if k.isascii():
+            if _ascii_keyword_regex(k).search(h):
+                return True
+        elif k.lower() in h:
+            return True
+    return False
 
 
 def contains_meaningful_ai_signal(haystack: str) -> bool:
