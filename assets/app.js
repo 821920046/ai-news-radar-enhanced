@@ -80,8 +80,17 @@ const CATEGORY_META = {
   "手机":     { text: "text-sky-400", bg: "bg-sky-500/10", border: "border-sky-500/20", activeGlow: "bg-gradient-to-r from-sky-500 to-cyan-600 shadow-sky-500/20" },
   "电脑硬件": { text: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20", activeGlow: "bg-gradient-to-r from-orange-500 to-red-600 shadow-orange-500/20" },
   "开源热榜": { text: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20", activeGlow: "bg-gradient-to-r from-green-500 to-lime-600 shadow-green-500/20" },
+  "3C数码": { text: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20", activeGlow: "bg-gradient-to-r from-purple-500 to-sky-600 shadow-purple-500/20" },
   "":         { activeGlow: "bg-gradient-to-r from-zinc-700 to-zinc-800 shadow-zinc-500/20" }
 };
+
+// 类目合并映射：「科技」并入「AI」；「数码/手机/电脑硬件」合并为「3C数码」。
+// 同时兼容新旧数据（旧快照仍为旧类目时，前端也能即时正确归类）。
+const CATEGORY_MERGE_MAP = { "科技": "AI", "数码": "3C数码", "手机": "3C数码", "电脑硬件": "3C数码" };
+function normCategory(cat) {
+  const c = cat || "AI";
+  return CATEGORY_MERGE_MAP[c] || c;
+}
 
 // ---- Utilities --------------------------------------------------------------
 
@@ -405,7 +414,7 @@ function renderStats(payload) {
 
     hotTickerTimer = setInterval(scrollFunc, 3000);
 
-    // 窗口大小变化时重新计算行高
+    // 窗口大小变��时重新计算行高
     let resizeTimer = null;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimer);
@@ -459,11 +468,11 @@ function renderStats(payload) {
 // ---- Category Nav -----------------------------------------------------------
 
 function computeCategoryCounts(items) {
-  const counts = { "": items.length, "开源热榜": 0, "AI": 0, "科技": 0, "数码": 0, "手机": 0, "电脑硬件": 0 };
+  const counts = { "": items.length, "开源热榜": 0, "AI": 0, "3C数码": 0 };
   items.forEach((item) => {
-    const cat = item.category || "科技";
+    const cat = normCategory(item.category);
     if (counts[cat] !== undefined) counts[cat] += 1;
-    else counts["科技"] += 1;
+    else counts["AI"] += 1;
   });
   // 开源热榜只统计 oss_trending 抓取器产出的项目，不混入关键词命中的新闻
   counts["开源热榜"] = items.filter((item) => item.site_id === "oss_trending").length;
@@ -479,10 +488,7 @@ function renderCategoryNav() {
     { key: "", label: "全部" },
     { key: "开源热榜", label: "开源热榜" },
     { key: "AI", label: "AI" },
-    { key: "科技", label: "科技" },
-    { key: "数码", label: "数码" },
-    { key: "手机", label: "手机" },
-    { key: "电脑硬件", label: "电脑硬件" },
+    { key: "3C数码", label: "3C数码" },
   ];
 
   catNavEl.innerHTML = "";
@@ -650,7 +656,7 @@ function getFilteredItems() {
     if (state.category) {
       // 开源热榜：只显示 oss_trending 抓取器产出的项目，不混入关键词匹配的新闻
       if (state.category === "开源热榜" && item.site_id !== "oss_trending") return false;
-      if (state.category !== "开源热榜" && (item.category || "科技") !== state.category) return false;
+      if (state.category !== "开源热榜" && normCategory(item.category) !== state.category) return false;
     }
     if (!q) return true;
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
@@ -675,7 +681,7 @@ function getFilteredItems() {
 
 function renderItemNode(item) {
   const node = itemTpl.content.firstElementChild.cloneNode(true);
-  const category = item.category || "科技";
+  const category = normCategory(item.category);
   // 时间可靠性判断：有真实 published_at 才算“精确发布时间”；
   // 若发布时间晚于站点构建时间(generated_at)，说明来源时间不可靠，按“采集/近似”处理
   const _gen = state.generatedAt || "";
@@ -692,7 +698,7 @@ function renderItemNode(item) {
 
   const catBadge = node.querySelector(".card-cat-badge");
   catBadge.textContent = category;
-  const meta = CATEGORY_META[category] || CATEGORY_META["科技"];
+  const meta = CATEGORY_META[category] || CATEGORY_META["AI"];
   catBadge.className = `card-cat-badge px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase border ${meta.text} ${meta.bg} ${meta.border}`;
 
   node.querySelector(".card-source").innerHTML = highlightText(`${item.source || hostFromUrl(item.url) || "RSS"} · ${hasExactTime ? "" : "采集 "}${fmtTime(itemTime)}`, state.query);
