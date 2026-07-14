@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-14T19:00:51.558547Z",
+  "generated_at": "2026-07-14T20:48:43.712968Z",
   "sites": [
-    {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
-      "ok": true,
-      "item_count": 40,
-      "duration_ms": 87,
-      "error": null
-    },
     {
       "site_id": "aihubtoday",
       "site_name": "AI HubToday",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 602,
+      "duration_ms": 234,
+      "error": null
+    },
+    {
+      "site_id": "aibreakfast",
+      "site_name": "AI Breakfast",
+      "ok": true,
+      "item_count": 6,
+      "duration_ms": 370,
       "error": null
     },
     {
@@ -22,7 +22,15 @@
       "site_name": "Zeli",
       "ok": true,
       "item_count": 80,
-      "duration_ms": 1819,
+      "duration_ms": 642,
+      "error": null
+    },
+    {
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
+      "ok": true,
+      "item_count": 40,
+      "duration_ms": 1677,
       "error": null
     },
     {
@@ -30,7 +38,7 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 2126,
+      "duration_ms": 2591,
       "error": null
     },
     {
@@ -38,31 +46,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 2180,
-      "error": null
-    },
-    {
-      "site_id": "oss_trending",
-      "site_name": "开源热榜",
-      "ok": true,
-      "item_count": 30,
-      "duration_ms": 3529,
-      "error": null
-    },
-    {
-      "site_id": "aibreakfast",
-      "site_name": "AI Breakfast",
-      "ok": true,
-      "item_count": 9,
-      "duration_ms": 5257,
-      "error": null
-    },
-    {
-      "site_id": "buzzing",
-      "site_name": "Buzzing",
-      "ok": true,
-      "item_count": 744,
-      "duration_ms": 6905,
+      "duration_ms": 2649,
       "error": null
     },
     {
@@ -70,15 +54,47 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 7321,
+      "duration_ms": 2801,
+      "error": null
+    },
+    {
+      "site_id": "oss_trending",
+      "site_name": "开源热榜",
+      "ok": true,
+      "item_count": 30,
+      "duration_ms": 4754,
+      "error": null
+    },
+    {
+      "site_id": "buzzing",
+      "site_name": "Buzzing",
+      "ok": true,
+      "item_count": 744,
+      "duration_ms": 8332,
       "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 3040,
-      "duration_ms": 8720,
+      "item_count": 3023,
+      "duration_ms": 11243,
+      "error": null
+    },
+    {
+      "site_id": "newsnow",
+      "site_name": "NewsNow",
+      "ok": true,
+      "item_count": 125,
+      "duration_ms": 11673,
+      "error": null
+    },
+    {
+      "site_id": "iris",
+      "site_name": "Info Flow",
+      "ok": true,
+      "item_count": 360,
+      "duration_ms": 16043,
       "error": null
     },
     {
@@ -86,34 +102,16 @@
       "site_name": "Official AI Updates",
       "ok": true,
       "item_count": 815,
-      "duration_ms": 9175,
-      "error": null
-    },
-    {
-      "site_id": "newsnow",
-      "site_name": "NewsNow",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 16194,
-      "error": "HTTPSConnectionPool(host='newsnow.busiyi.world', port=443): Max retries exceeded with url: /api/s?id=hackernews (Caused by ResponseError('too many 500 error responses'))"
-    },
-    {
-      "site_id": "iris",
-      "site_name": "Info Flow",
-      "ok": true,
-      "item_count": 358,
-      "duration_ms": 16966,
+      "duration_ms": 16919,
       "error": null
     }
   ],
-  "successful_sites": 12,
-  "failed_sites": [
-    "newsnow"
-  ],
+  "successful_sites": 13,
+  "failed_sites": [],
   "zero_item_sites": [],
-  "fetched_raw_items": 5543,
-  "items_before_topic_filter": 7755,
-  "items_in_24h": 1018,
+  "fetched_raw_items": 5650,
+  "items_before_topic_filter": 7536,
+  "items_in_24h": 1012,
   "ai_processing": {
     "tldr_items": 0
   },
