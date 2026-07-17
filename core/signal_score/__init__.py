@@ -1,6 +1,6 @@
 """Signal Score 2.0 — 多维信号评分引擎。
 
-升级自 V1 的简单 60-99 展示分（scripts/recommend.py 中的 build_signal_score），
+升级自 V1 的简单 60-99 展示分（core/recommend.py 中的 build_signal_score），
 V2 基于 5 个维度（信源权重、技术深度、新颖度、传播速度、社区信号）进行加权评分，
 输出 S/A/B/C 四级分层和细分 breakdown。
 """

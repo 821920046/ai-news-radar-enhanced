@@ -47,7 +47,6 @@ from core.fetch import collect_all
 from core.fetch.opml import fetch_opml_rss
 from core.fetch.waytoagi import fetch_waytoagi_recent_7d
 from core.agents.analyst_agent import process_items_with_ai
-from core.notifier import maybe_send_news_notification
 
 logger = logging.getLogger(__name__)
 
@@ -400,12 +399,6 @@ class Pipeline:
         safeguard_title_zh_cache(title_cache_path, title_cache)
         atomic_write_text(title_cache_path, json.dumps(sanitize_public_payload(title_cache),
                                                         ensure_ascii=False, indent=2), encoding="utf-8")
-
-        # Webhook notification
-        try:
-            maybe_send_news_notification(items_ai)
-        except Exception as exc:
-            logger.warning("[Pipeline] Notification failed (non-fatal): %s", exc)
 
         result = {
             "success": True,

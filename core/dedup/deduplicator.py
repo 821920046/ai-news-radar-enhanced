@@ -1,4 +1,16 @@
-"""Deduplication and normalization of news items."""
+"""Deduplication and normalization of news items.
+
+本模块负责把多来源采集到的新闻做强力去重合并。相比早期版本，本轮在
+“相同/高度雷同内容仍重复出现”上做了下列优化（均向后兼容，不改变已有公开函数的行为）：
+
+1. Layer 1 URL 合并改用更强的 `_canonical_dedup_url`：
+   同一篇文章的 http/https、www./m./amp. 前缀、尾部 /amp 与 index.html
+   等等价写法现在会被归一为同一键。
+2. Layer 3 模糊层新增“包含关系（containment）”与“描述佐证”两条召回路径，
+   保证副标题/同款改写标题、跨源同文也能合并。
+3. Layer 3 用 bigram 倒排索引做候选块（blocking），把原本 O(n^2) 的两两比对
+   降为“只与共享字片的少量候选”比对，在大数据量下显著提速且不降低召回。
+"""
 
 from __future__ import annotations
 
@@ -6,6 +18,7 @@ import logging
 import re
 from datetime import datetime
 from typing import Any
+from urllib.parse import urlparse, urlunparse
 
 from core.models import UTC
 from core.utils import event_time, normalize_url
@@ -96,6 +109,13 @@ def normalize_title_for_dedup(title: str) -> str:
     return t
 
 
+def _title_bigrams(s: str) -> set[str]:
+    """生成标题的 bigram 集合（长度 <2 时退化为单字集合）。"""
+    if len(s) < 2:
+        return set(s)
+    return {s[i:i + 2] for i in range(len(s) - 1)}
+
+
 def compute_title_similarity(a: str, b: str) -> float:
     """计算两个标题的 bigram Jaccard 相似度。
     输入应当是经过清洗后的标题（例如由 normalize_title_for_dedup 处理后的极净字符串）。
@@ -110,19 +130,130 @@ def compute_title_similarity(a: str, b: str) -> float:
     if min(len_a, len_b) / max(len_a, len_b) < 0.60:
         return 0.0
 
-    # 生成 bigram 集合
-    def get_bigrams(s: str) -> set[str]:
-        if len(s) < 2:
-            return set(s)
-        return {s[i:i+2] for i in range(len(s) - 1)}
-
-    set_a = get_bigrams(a)
-    set_b = get_bigrams(b)
+    set_a = _title_bigrams(a)
+    set_b = _title_bigrams(b)
 
     union = len(set_a.union(set_b))
     if union == 0:
         return 0.0
     return len(set_a.intersection(set_b)) / union
+
+
+def compute_containment(a: str, b: str) -> float:
+    """计算“较短标题的 bigram 有多大比例被较长标题覆盖”（包含度）。
+    用于捕捉“标题A” vs “标题A（附视频/实测）”这类子集/超集标题，
+    这种情形下 Jaccard 会因长度差异而偏低。
+    """
+    if not a or not b:
+        return 0.0
+    if a == b:
+        return 1.0
+    set_a = _title_bigrams(a)
+    set_b = _title_bigrams(b)
+    short, long = (set_a, set_b) if len(set_a) <= len(set_b) else (set_b, set_a)
+    if not short:
+        return 0.0
+    return len(short & long) / len(short)
+
+
+def _raw_bigram_jaccard(a: str, b: str) -> float:
+    """不做长度剪枝的 bigram Jaccard，用于描述佐证等内部判定。"""
+    if not a or not b:
+        return 0.0
+    if a == b:
+        return 1.0
+    set_a = _title_bigrams(a)
+    set_b = _title_bigrams(b)
+    union = len(set_a | set_b)
+    return len(set_a & set_b) / union if union else 0.0
+
+
+def _clean_text_for_dedup(text: Any) -> str:
+    """正文/描述的极净归一化（仅留中英文与数字），用于描述佐证合并。"""
+    t = str(text or "").strip().lower()
+    if not t:
+        return ""
+    return "".join(re.findall(r'[\w\u4e00-\u9fff]+', t))
+
+
+# 模糊层参数（可调）
+_CONTAINMENT_THRESHOLD = 0.90   # 包含度达到此值视为子集/超集重复（较短标题几乎完全被较长标题覆盖）
+_CONTAINMENT_MIN_LEN = 8        # 参与包含判定的较短标题最小字符数（避免短/通用标题误合）
+_CONTAINMENT_MIN_RATIO = 0.45   # 较短/较长标题长度比下限（避免把短标题并入超长无关标题）
+_DESC_CORROBORATE_MIN_SIM = 0.50  # 描述佐证时标题需达到的最低相似度
+_DESC_CORROBORATE_MIN_LEN = 20    # 描述佐证需要的最小描述字符数
+_DESC_CORROBORATE_SIM = 0.80      # 描述相似度达到此值视为同一内容
+
+
+def _titles_are_duplicate(
+    item_clean_title: str,
+    existing_clean_title: str,
+    item: dict[str, Any],
+    existing: dict[str, Any],
+    similarity_threshold: float,
+) -> bool:
+    """多信号判定两条新闻是否为重复：
+    1) bigram Jaccard 相似度 >= 阈值（主路径，与旧版一致）；
+    2) 子集/超集标题（包含度 >= 0.90 且长度比 >= 0.45，较短标题 >= 8 字）；
+    3) 标题中度相似（>=0.5）且描述高度一致（>=0.8）——跨源同文改写标题。
+    """
+    sim = compute_title_similarity(item_clean_title, existing_clean_title)
+    if sim >= similarity_threshold:
+        return True
+
+    # 包含关系（子集/超集标题）：不依赖会做长度剪枝的 compute_title_similarity，
+    # 因为本分支正是为了处理“标题A” vs “标题A（附��…）”这种长度差异大的情形。
+    short_len = min(len(item_clean_title), len(existing_clean_title))
+    long_len = max(len(item_clean_title), len(existing_clean_title))
+    if (
+        short_len >= _CONTAINMENT_MIN_LEN
+        and long_len > 0
+        and short_len / long_len >= _CONTAINMENT_MIN_RATIO
+        and compute_containment(item_clean_title, existing_clean_title) >= _CONTAINMENT_THRESHOLD
+    ):
+        return True
+
+    # 描述佐证的灰区合并：标题中度相似 + 描述高度一致 => 跨源同文改写标题
+    if sim >= _DESC_CORROBORATE_MIN_SIM:
+        d1 = _clean_text_for_dedup(item.get("description"))
+        d2 = _clean_text_for_dedup(existing.get("description"))
+        if (
+            len(d1) >= _DESC_CORROBORATE_MIN_LEN
+            and len(d2) >= _DESC_CORROBORATE_MIN_LEN
+            and _raw_bigram_jaccard(d1, d2) >= _DESC_CORROBORATE_SIM
+        ):
+            return True
+
+    return False
+
+
+def _canonical_dedup_url(raw_url: str) -> str:
+    """更激进的 URL 归一化（仅用于去重键，不用于展示）。
+
+    在 normalize_url（去 utm/ref 等追踪参数）基础上额外：
+    - 统一 scheme 为 https（同一文章 http/https 视为同源）
+    - 去掉 www. / m. / amp. / mobile. 等等价子域前缀
+    - 去掉路径尾部的 /amp、index.html、default.html 与多余斜杠
+    """
+    base = normalize_url(str(raw_url or ""))
+    if not base:
+        return ""
+    try:
+        parsed = urlparse(base)
+        if not parsed.scheme:
+            return base
+        netloc = parsed.netloc.lower()
+        for prefix in ("www.", "m.", "amp.", "mobile."):
+            if netloc.startswith(prefix):
+                netloc = netloc[len(prefix):]
+                break
+        path = parsed.path or ""
+        path = re.sub(r'/(?:amp|index\.html?|default\.html?)/?$', '', path, flags=re.I)
+        path = path.rstrip('/')
+        parsed = parsed._replace(scheme="https", netloc=netloc, path=path, fragment="")
+        return urlunparse(parsed).rstrip("/")
+    except Exception:
+        return base
 
 
 def _pick_best_item(group: list[dict[str, Any]]) -> dict[str, Any]:
@@ -269,7 +400,7 @@ def merge_items_group(group: list[dict[str, Any]]) -> dict[str, Any]:
 
 def dedupe_items_by_title_url(items: list[dict[str, Any]], similarity_threshold: float = 0.70, **kwargs: Any) -> list[dict[str, Any]]:
     """使用多层级联算法（URL 精确匹配 -> 标题精确匹配 -> 标题相似度模糊匹配）对新闻记录进行强力去重。
-    
+
     Parameters
     ----------
     items : list[dict]
@@ -283,9 +414,10 @@ def dedupe_items_by_title_url(items: list[dict[str, Any]], similarity_threshold:
         return []
 
     # --- Layer 1: 基于归一化 URL 精确匹配合并 ---
+    # 使用更强的 canonical URL（http/https、www./m./amp.、尾部 amp/index 均归一为同一键）
     by_url: dict[str, list[dict[str, Any]]] = {}
     for item in items:
-        url = normalize_url(str(item.get("url") or ""))
+        url = _canonical_dedup_url(str(item.get("url") or ""))
         by_url.setdefault(url, []).append(item)
 
     after_url_dedup: list[dict[str, Any]] = []
@@ -298,50 +430,63 @@ def dedupe_items_by_title_url(items: list[dict[str, Any]], similarity_threshold:
         title_original = item.get("title_original") or item.get("title") or ""
         clean_title = normalize_title_for_dedup(title_original)
         if not clean_title:
-            clean_title = f"__empty_title__::{normalize_url(str(item.get('url') or ''))}"
+            clean_title = f"__empty_title__::{_canonical_dedup_url(str(item.get('url') or ''))}"
         by_clean_title.setdefault(clean_title, []).append(item)
 
     after_title_dedup: list[dict[str, Any]] = []
     for group in by_clean_title.values():
         after_title_dedup.append(merge_items_group(group))
 
-    # --- Layer 3: 基于标题 Bigram Jaccard 相似度模糊合并 ---
-    # 性能优化：用与 final_items 对齐的 final_clean_titles 缓存已归一化标题，
-    # 避免在 O(n^2) 双层循环中重复调用昂贵的 normalize_title_for_dedup。
+    # --- Layer 3: 基于标题 Bigram Jaccard 相似度 + 包含度 + 描述佐证的模糊合并 ---
+    # 性能优化：用 bigram 倒排索引做候选块（blocking），只与“共享至少一个
+    # bigram”的已有条目比对，把 O(n^2) 的全量两两比对降为近线性。
+    # 因为任意两条真正相似/包含的标题必然共享大量 bigram，故不会降低召回。
     final_items: list[dict[str, Any]] = []
     final_clean_titles: list[str] = []
+    bigram_index: dict[str, set[int]] = {}
+
+    def _register(idx: int, clean_title: str) -> None:
+        for bg in _title_bigrams(clean_title):
+            bigram_index.setdefault(bg, set()).add(idx)
+
     for item in after_title_dedup:
         matched = False
         title_original = item.get("title_original") or item.get("title") or ""
         item_clean_title = normalize_title_for_dedup(title_original)
 
         if item_clean_title:
-            len_a = len(item_clean_title)
-            for idx, existing in enumerate(final_items):
+            # 从倒排索引收集候选（共享至少一个 bigram 的已有条目）
+            candidates: set[int] = set()
+            for bg in _title_bigrams(item_clean_title):
+                candidates |= bigram_index.get(bg, set())
+
+            for idx in sorted(candidates):
+                existing = final_items[idx]
                 existing_clean_title = final_clean_titles[idx]
                 if not existing_clean_title:
                     continue
-
-                # 快速过滤：长度差异过大不进行计算
-                len_b = len(existing_clean_title)
-                if min(len_a, len_b) / max(len_a, len_b) < 0.60:
-                    continue
-
-                sim = compute_title_similarity(item_clean_title, existing_clean_title)
-                if sim >= similarity_threshold:
+                if _titles_are_duplicate(
+                    item_clean_title, existing_clean_title, item, existing, similarity_threshold
+                ):
                     # 模糊匹配成功，原地更新 existing 以进行合并
                     merged_result = merge_items_group([existing, item])
                     existing.clear()
                     existing.update(merged_result)
-                    # 合并后代表标题可能变化，刷新缓存
+                    # 合并后代表标题可能变化，刷新缓存与倒排索引
                     merged_title = existing.get("title_original") or existing.get("title") or ""
-                    final_clean_titles[idx] = normalize_title_for_dedup(merged_title)
+                    new_clean = normalize_title_for_dedup(merged_title)
+                    if new_clean != existing_clean_title:
+                        final_clean_titles[idx] = new_clean
+                        _register(idx, new_clean)
                     matched = True
                     break
 
         if not matched:
+            new_idx = len(final_items)
             final_items.append(item)
             final_clean_titles.append(item_clean_title)
+            if item_clean_title:
+                _register(new_idx, item_clean_title)
 
     # 按发布时间/事件时间排序（最新的排在前面）
     final_items.sort(key=lambda x: event_time(x) or datetime.min.replace(tzinfo=UTC), reverse=True)
