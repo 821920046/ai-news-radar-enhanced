@@ -1,9 +1,9 @@
 import unittest
 from datetime import datetime
 
-from scripts.models import SH_TZ
-from scripts.utils import decode_escaped_json
-from scripts.fetchers.waytoagi import (
+from core.models import SH_TZ
+from core.utils import decode_escaped_json
+from core.fetch.waytoagi import (
     clean_update_title,
     extract_waytoagi_recent_updates_from_block_map,
     infer_shanghai_year_for_month_day,

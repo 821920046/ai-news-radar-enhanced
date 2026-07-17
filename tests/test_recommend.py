@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.recommend import build_recommendation_reason, build_signal_score, enrich_recommendation_fields
+from core.recommend import build_recommendation_reason, build_signal_score, enrich_recommendation_fields
 
 
 class RecommendTests(unittest.TestCase):

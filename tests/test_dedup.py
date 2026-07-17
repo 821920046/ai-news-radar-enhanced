@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime, timezone
-from scripts.dedup import (
+from core.dedup.deduplicator import (
     normalize_title_for_dedup,
     compute_title_similarity,
     _pick_best_item,

@@ -2,7 +2,7 @@ import os
 import unittest
 from unittest.mock import patch
 
-from scripts.ai_processor import KeyPoolManager, generate_tldr, process_items_with_ai
+from core.agents.analyst_agent import KeyPoolManager, generate_tldr, process_items_with_ai
 
 
 class FakeResponse:

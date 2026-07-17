@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from scripts.utils import (
+from core.utils import (
     extract_image_url_from_html,
     make_item_id,
     normalize_image_url,
@@ -11,8 +11,8 @@ from scripts.utils import (
     parse_date_any,
     parse_relative_time_zh,
 )
-from scripts.fetchers.opml import parse_opml_subscriptions
-from scripts.translate import safeguard_title_zh_cache
+from core.fetch.opml import parse_opml_subscriptions
+from core.normalize.translator import safeguard_title_zh_cache
 
 
 class UtilsTests(unittest.TestCase):
@@ -89,7 +89,7 @@ class UtilsTests(unittest.TestCase):
 
 
     def test_atomic_write_text(self):
-        from scripts.utils import atomic_write_text
+        from core.utils import atomic_write_text
         with TemporaryDirectory() as td:
             p = Path(td) / "test.txt"
             atomic_write_text(p, "hello", encoding="utf-8")
