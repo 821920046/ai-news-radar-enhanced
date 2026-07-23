@@ -26,6 +26,7 @@ from core.fetch.aggregators import (
     fetch_newsnow,
 )
 from core.fetch.aihub import fetch_ai_hubtoday, fetch_aibase
+from core.fetch.aihot_virxact import fetch_aihot_virxact
 
 logger = logging.getLogger(__name__)
 
@@ -36,6 +37,7 @@ def collect_all(session: requests.Session, now: datetime) -> tuple[list[RawItem]
         ("official_ai", "Official AI Updates", fetch_official_ai_updates),
         ("aibreakfast", "AI Breakfast", fetch_ai_breakfast),
         ("followbuilders", "Follow Builders", fetch_follow_builders),
+        ("aihot", "AI HOT", fetch_aihot_virxact),
         ("techurls", "TechURLs", fetch_techurls),
         ("buzzing", "Buzzing", fetch_buzzing),
         ("iris", "Info Flow", fetch_iris),

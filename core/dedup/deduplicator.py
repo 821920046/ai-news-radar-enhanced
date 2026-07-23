@@ -268,6 +268,7 @@ def _pick_best_item(group: list[dict[str, Any]]) -> dict[str, Any]:
         "official_ai": 100,
         "oss_trending": 95,
         "opmlrss": 90,
+        "aihot": 88,
         "buzzing": 80,
         "zeli": 70,
         "tophub": 60,
