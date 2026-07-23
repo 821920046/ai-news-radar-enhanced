@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>AI News Radar — 扩充订阅源（X 账号 + 高信噪比补充源）</title>
+    <!--
+      用法：把需要的 <outline> 复制进你的 feeds/follow.opml，
+      或在 GitHub Actions 里用 FOLLOW_OPML_B64 注入。
+      注意：X 通过 RSSHub 抓取，公共实例可能超时/失效；
+      建议自建 RSSHub 或多准备几个镜像域名。去重层会兜底跨源重复。
+    -->
+  </head>
+  <body>
+
+    <!-- ===== A. X / Twitter 核心 AI 人物（RSSHub 路由）===== -->
+    <outline text="X · AI Researchers &amp; Founders (via RSSHub)">
+      <outline text="Sam Altman"        title="Sam Altman"        type="rss" xmlUrl="https://rsshub.app/twitter/user/sama"            htmlUrl="https://x.com/sama" />
+      <outline text="Andrej Karpathy"   title="Andrej Karpathy"   type="rss" xmlUrl="https://rsshub.app/twitter/user/karpathy"        htmlUrl="https://x.com/karpathy" />
+      <outline text="Yann LeCun"        title="Yann LeCun"        type="rss" xmlUrl="https://rsshub.app/twitter/user/ylecun"          htmlUrl="https://x.com/ylecun" />
+      <outline text="Demis Hassabis"    title="Demis Hassabis"    type="rss" xmlUrl="https://rsshub.app/twitter/user/demishassabis"    htmlUrl="https://x.com/demishassabis" />
+      <outline text="Jim Fan"           title="Jim Fan"           type="rss" xmlUrl="https://rsshub.app/twitter/user/DrJimFan"         htmlUrl="https://x.com/DrJimFan" />
+      <outline text="Andrew Ng"         title="Andrew Ng"         type="rss" xmlUrl="https://rsshub.app/twitter/user/AndrewYNg"        htmlUrl="https://x.com/AndrewYNg" />
+      <outline text="Sebastian Raschka" title="Sebastian Raschka" type="rss" xmlUrl="https://rsshub.app/twitter/user/rasbt"            htmlUrl="https://x.com/rasbt" />
+      <outline text="Philipp Schmid"    title="Philipp Schmid"    type="rss" xmlUrl="https://rsshub.app/twitter/user/_philschmid"      htmlUrl="https://x.com/_philschmid" />
+      <outline text="swyx"              title="swyx"              type="rss" xmlUrl="https://rsshub.app/twitter/user/swyx"             htmlUrl="https://x.com/swyx" />
+      <outline text="Simon Willison"    title="Simon Willison"    type="rss" xmlUrl="https://rsshub.app/twitter/user/simonw"           htmlUrl="https://x.com/simonw" />
+    </outline>
+
+    <!-- ===== B. X / Twitter 官方机构账号（RSSHub 路由）===== -->
+    <outline text="X · AI Labs &amp; Orgs (via RSSHub)">
+      <outline text="OpenAI"      title="OpenAI"      type="rss" xmlUrl="https://rsshub.app/twitter/user/OpenAI"        htmlUrl="https://x.com/OpenAI" />
+      <outline text="Anthropic"   title="Anthropic"   type="rss" xmlUrl="https://rsshub.app/twitter/user/AnthropicAI"   htmlUrl="https://x.com/AnthropicAI" />
+      <outline text="Google DeepMind" title="Google DeepMind" type="rss" xmlUrl="https://rsshub.app/twitter/user/GoogleDeepMind" htmlUrl="https://x.com/GoogleDeepMind" />
+      <outline text="Hugging Face" title="Hugging Face" type="rss" xmlUrl="https://rsshub.app/twitter/user/huggingface"  htmlUrl="https://x.com/huggingface" />
+      <outline text="Mistral AI"  title="Mistral AI"  type="rss" xmlUrl="https://rsshub.app/twitter/user/MistralAI"     htmlUrl="https://x.com/MistralAI" />
+      <outline text="DeepSeek"    title="DeepSeek"    type="rss" xmlUrl="https://rsshub.app/twitter/user/deepseek_ai"   htmlUrl="https://x.com/deepseek_ai" />
+      <outline text="Qwen"        title="Qwen"        type="rss" xmlUrl="https://rsshub.app/twitter/user/Alibaba_Qwen"  htmlUrl="https://x.com/Alibaba_Qwen" />
+    </outline>
+
+    <!-- ===== C. 高信噪比英文源（原生 RSS，稳定）===== -->
+    <outline text="Newsletters &amp; Analysis">
+      <outline text="The Batch (DeepLearning.AI)" title="The Batch" type="rss" xmlUrl="https://www.deeplearning.ai/the-batch/feed/" htmlUrl="https://www.deeplearning.ai/the-batch/" />
+      <outline text="Import AI (Jack Clark)"      title="Import AI"  type="rss" xmlUrl="https://jack-clark.net/feed/"                 htmlUrl="https://jack-clark.net/" />
+      <outline text="AI Snake Oil"                title="AI Snake Oil" type="rss" xmlUrl="https://www.aisnakeoil.com/feed"          htmlUrl="https://www.aisnakeoil.com/" />
+      <outline text="Interconnects (Nathan Lambert)" title="Interconnects" type="rss" xmlUrl="https://www.interconnects.ai/feed"    htmlUrl="https://www.interconnects.ai/" />
+      <outline text="Ahead of AI (Sebastian Raschka)" title="Ahead of AI" type="rss" xmlUrl="https://magazine.sebastianraschka.com/feed" htmlUrl="https://magazine.sebastianraschka.com/" />
+      <outline text="Google Research Blog"        title="Google Research" type="rss" xmlUrl="https://research.google/blog/rss/"    htmlUrl="https://research.google/blog/" />
+      <outline text="Apple Machine Learning"      title="Apple ML"   type="rss" xmlUrl="https://machinelearning.apple.com/rss.xml" htmlUrl="https://machinelearning.apple.com/" />
+      <outline text="Amazon Science"              title="Amazon Science" type="rss" xmlUrl="https://www.amazon.science/index.rss"   htmlUrl="https://www.amazon.science/" />
+      <outline text="Stability AI News"           title="Stability AI" type="rss" xmlUrl="https://stability.ai/news?format=rss"    htmlUrl="https://stability.ai/news" />
+    </outline>
+
+    <!-- ===== D. 中文 AI 媒体补充（部分需 RSSHub / 自建）===== -->
+    <outline text="Chinese AI Media (补充)">
+      <outline text="新智元 (via RSSHub)"  title="新智元"  type="rss" xmlUrl="https://rsshub.app/wechat/mp/xinzhiyuan" htmlUrl="https://www.zhihu.com/org/xin-zhi-yuan-88" />
+      <outline text="PaperWeekly (via RSSHub)" title="PaperWeekly" type="rss" xmlUrl="https://rsshub.app/zhihu/people/activities/PaperWeekly" htmlUrl="https://www.zhihu.com/people/PaperWeekly" />
+      <outline text="APPSO" title="APPSO" type="rss" xmlUrl="https://www.ifanr.com/feed" htmlUrl="https://www.ifanr.com/" />
+      <outline text="36氪"  title="36氪"  type="rss" xmlUrl="https://36kr.com/feed" htmlUrl="https://36kr.com/" />
+    </outline>
+
+  </body>
+</opml>
