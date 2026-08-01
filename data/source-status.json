@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-01T08:02:15.682103Z",
+  "generated_at": "2026-08-01T10:27:18.530173Z",
   "sites": [
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 28,
+      "duration_ms": 37,
       "error": "403 Client Error: Forbidden for url: https://r.jina.ai/https://aibreakfast.beehiiv.com/"
     },
     {
@@ -14,15 +14,15 @@
       "site_name": "Follow Builders",
       "ok": true,
       "item_count": 33,
-      "duration_ms": 65,
+      "duration_ms": 64,
       "error": null
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 75,
-      "duration_ms": 618,
+      "item_count": 78,
+      "duration_ms": 493,
       "error": null
     },
     {
@@ -30,7 +30,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 2912,
+      "duration_ms": 2054,
       "error": null
     },
     {
@@ -38,63 +38,7 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 2943,
-      "error": null
-    },
-    {
-      "site_id": "oss_trending",
-      "site_name": "开源热榜",
-      "ok": true,
-      "item_count": 30,
-      "duration_ms": 4808,
-      "error": null
-    },
-    {
-      "site_id": "aihubtoday",
-      "site_name": "AI HubToday",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 5364,
-      "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='ai.hubtoday.app', port=443): Failed to resolve 'ai.hubtoday.app' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "site_id": "buzzing",
-      "site_name": "Buzzing",
-      "ok": true,
-      "item_count": 744,
-      "duration_ms": 8143,
-      "error": null
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 3033,
-      "duration_ms": 11107,
-      "error": null
-    },
-    {
-      "site_id": "official_ai",
-      "site_name": "Official AI Updates",
-      "ok": true,
-      "item_count": 495,
-      "duration_ms": 11189,
-      "error": null
-    },
-    {
-      "site_id": "newsnow",
-      "site_name": "NewsNow",
-      "ok": true,
-      "item_count": 122,
-      "duration_ms": 11619,
-      "error": null
-    },
-    {
-      "site_id": "aihot",
-      "site_name": "AI HOT",
-      "ok": true,
-      "item_count": 500,
-      "duration_ms": 14293,
+      "duration_ms": 2264,
       "error": null
     },
     {
@@ -102,15 +46,71 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 14745,
+      "duration_ms": 2295,
+      "error": null
+    },
+    {
+      "site_id": "oss_trending",
+      "site_name": "开源热榜",
+      "ok": true,
+      "item_count": 30,
+      "duration_ms": 4918,
+      "error": null
+    },
+    {
+      "site_id": "aihubtoday",
+      "site_name": "AI HubToday",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 5095,
+      "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='ai.hubtoday.app', port=443): Failed to resolve 'ai.hubtoday.app' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "site_id": "buzzing",
+      "site_name": "Buzzing",
+      "ok": true,
+      "item_count": 744,
+      "duration_ms": 8514,
+      "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 3027,
+      "duration_ms": 11423,
+      "error": null
+    },
+    {
+      "site_id": "official_ai",
+      "site_name": "Official AI Updates",
+      "ok": true,
+      "item_count": 492,
+      "duration_ms": 11644,
+      "error": null
+    },
+    {
+      "site_id": "newsnow",
+      "site_name": "NewsNow",
+      "ok": true,
+      "item_count": 122,
+      "duration_ms": 12130,
+      "error": null
+    },
+    {
+      "site_id": "aihot",
+      "site_name": "AI HOT",
+      "ok": true,
+      "item_count": 500,
+      "duration_ms": 13045,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 407,
-      "duration_ms": 29003,
+      "item_count": 410,
+      "duration_ms": 21517,
       "error": null
     }
   ],
@@ -120,9 +120,9 @@
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5865,
-  "items_before_topic_filter": 7198,
-  "items_in_24h": 771,
+  "fetched_raw_items": 5862,
+  "items_before_topic_filter": 6888,
+  "items_in_24h": 720,
   "ai_processing": {
     "tldr_items": 0
   },
