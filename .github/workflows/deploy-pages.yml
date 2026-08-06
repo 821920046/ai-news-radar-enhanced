@@ -1,0 +1,108 @@
+name: Deploy to GitHub Pages
+
+on:
+  # 只在“内容真正变了”的时候部署；避免每次 push 都排队
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "assets/**"
+      - "data/latest-24h.json"
+      - "data/latest-24h-all.json"
+      - "data/source-status.json"
+      - "data/waytoagi-7d.json"
+      - "data/trends.json"
+      - "manifest.json"
+      - "sw.js"
+      - "robots.txt"
+      - "sitemap.xml"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 关键 1：Pages 部署全局串行，且不要取消正在进行的部署
+# cancel-in-progress: true 会把已经 Created 的 deployment 变成“孤儿”，
+# 后续 deployment 只能排队 -> 表现为一直 deployment_in_progress
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble site (只打包前端需要的文件)
+        run: |
+          set -euo pipefail
+          rm -rf _site && mkdir -p _site/assets _site/data
+          cp index.html manifest.json sw.js robots.txt sitemap.xml _site/
+          cp -r assets/. _site/assets/
+          # assets/log.png (1.5MB) 在前端无任何引用，不发布
+          rm -f _site/assets/log.png
+          # 关键 2：只发布前端真正会 fetch 的数据，archive.json / trend_history.json
+          # 这类 16MB+ 的历史文件不要进 artifact
+          for f in latest-24h.json latest-24h-all.json source-status.json \
+                   waytoagi-7d.json trends.json; do
+            [ -f "data/$f" ] && cp "data/$f" _site/data/ || true
+          done
+          # 关键 3：禁用 Jekyll，否则 _headers 等下划线开头的文件会被吞掉
+          touch _site/.nojekyll
+
+          # 自定义域名必须随每份 Pages artifact 发布，否则配置可能被冲掉。
+          echo "news.my-tv.eu.cc" > _site/CNAME
+
+          # Service Worker 缓存版本注入：sw.js 里 CACHE 是硬编码的，
+          # 每小时更新的站点不 bump 版本号，老用户会一直看到缓存的旧快照。
+          sed -i "s/^const CACHE = .*/const CACHE = 'ai-news-radar-${GITHUB_SHA::7}';/" _site/sw.js
+          grep -n "^const CACHE" _site/sw.js
+
+          # 发布前最后一道门：拒绝空文件、坏 JSON、错误域名和意外的大包。
+          python - <<'PY'
+          import json, pathlib, sys
+          root = pathlib.Path('_site')
+          for p in root.joinpath('data').glob('*.json'):
+              if p.stat().st_size == 0:
+                  sys.exit(f'empty file: {p}')
+              try: json.loads(p.read_text(encoding='utf-8'))
+              except Exception as e: sys.exit(f'invalid JSON {p}: {e}')
+          if root.joinpath('CNAME').read_text().strip() != 'news.my-tv.eu.cc':
+              sys.exit('invalid CNAME')
+          size = sum(p.stat().st_size for p in root.rglob('*') if p.is_file())
+          print(f'site size: {size/1024/1024:.1f} MB')
+          if size > 25 * 1024 * 1024:
+              sys.exit('site unexpectedly exceeds 25 MB')
+          PY
+
+          echo "--- site tree ---"; find _site -type f | wc -l; du -sh _site
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+          # 根因修复：Pages artifact 只在本次 run 内有用，默认 90 天保留是纯浪费。
+          # 每小时一份 × 90 天 = 2160 份堆积。定时清理只是兼底，这里才是源头。
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 300000
+          error_count: 10
