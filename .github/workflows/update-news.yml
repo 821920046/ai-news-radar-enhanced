@@ -5,9 +5,12 @@ on:
   schedule:
     - cron: "0 * * * *" # 每 1 小时运行一次
 
+# 修复：原文件里 ${{ }} 被写坏成 "$ github.ref "，concurrency 实际完全失效。
+# 另外 cancel-in-progress 改为 false：这个 job 会 git push，
+# 中途被杀可能留下半写入的 data/*.json 或未推送的 commit。
 concurrency:
-  group: update-ai-news-$ github.ref 
-  cancel-in-progress: true
+  group: update-ai-news-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -18,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
@@ -35,9 +38,27 @@ jobs:
       - name: Run tests
         run: python -m pytest tests/ -v --tb=short
 
+      # archive / trend_history / translation cache are mutable pipeline state,
+      # not website output. Keeping them on main adds ~18 MB of JSON churn every
+      # hour. Restore the latest snapshot from a one-commit state branch instead.
+      - name: Restore pipeline state
+        run: |
+          set -euo pipefail
+          # checkout@v4 uses a single-branch refspec. A plain
+          # `git fetch origin pipeline-state` only updates FETCH_HEAD and does
+          # NOT create origin/pipeline-state; use an explicit destination ref.
+          git fetch --no-tags --depth=1 origin \
+            refs/heads/pipeline-state:refs/remotes/origin/pipeline-state || true
+          for f in archive.json trend_history.json title-zh-cache.json; do
+            if git cat-file -e "origin/pipeline-state:data/$f" 2>/dev/null; then
+              git show "origin/pipeline-state:data/$f" > "data/$f"
+              echo "restored data/$f"
+            fi
+          done
+
       - name: Prepare OPML (optional)
         env:
-          FOLLOW_OPML_B64: $ secrets.FOLLOW_OPML_B64 
+          FOLLOW_OPML_B64: ${{ secrets.FOLLOW_OPML_B64 }}
         run: |
           mkdir -p feeds
           if [ -n "$FOLLOW_OPML_B64" ]; then
@@ -69,43 +90,79 @@ jobs:
 
       - name: Validate output
         run: |
-          python -c "
+          python - <<'PY'
           import json, sys
           d = json.load(open('data/latest-24h.json', encoding='utf-8'))
           n = d.get('total_items', 0)
           print(f'AI items: {n}')
           if n < 3:
-              print('ERROR: Too few items, possible source failure')
-              sys.exit(1)
+              sys.exit('ERROR: Too few items, possible source failure')
           print('Data quality check passed')
-          "
+          PY
 
-      # ── 新增：构建期静态预渲染（SSG），把首屏新闻写进 index.html ──
       - name: Prerender static HTML (SEO + first paint)
+        run: python scripts/prerender.py --data data/latest-24h.json --html index.html --top 30
+
+      - name: Save pipeline state (single-commit branch)
         run: |
-          python scripts/prerender.py --data data/latest-24h.json --html index.html --top 30
+          set -euo pipefail
+          root="$PWD"
+          tmp=$(mktemp -d)
+          trap 'git worktree remove --force "$tmp" >/dev/null 2>&1 || true; rm -rf "$tmp"' EXIT
+          git worktree add --detach "$tmp" HEAD
+          cd "$tmp"
+          git checkout --orphan "pipeline-state-next-${GITHUB_RUN_ID}"
+          git rm -rf . >/dev/null
+          mkdir -p data
+          for f in archive.json trend_history.json title-zh-cache.json; do
+            [ -f "$root/data/$f" ] && cp "$root/data/$f" "data/$f"
+          done
+          git add data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "state: latest pipeline snapshot"
+          # Force is intentional: this branch is a mutable snapshot, not history.
+          # --force-with-lease prevents overwriting an unexpected concurrent writer.
+          old=$(git ls-remote origin refs/heads/pipeline-state | awk '{print $1}')
+          if [ -n "$old" ]; then
+            git push --force-with-lease="refs/heads/pipeline-state:$old" \
+              origin HEAD:refs/heads/pipeline-state
+          else
+            git push origin HEAD:refs/heads/pipeline-state
+          fi
 
       - name: Commit and push changes
         run: |
-          if git diff --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest-24h.json data/latest-24h-all.json data/archive.json data/source-status.json data/waytoagi-7d.json data/title-zh-cache.json index.html sitemap.xml
-          # Trend Engine 历史（仅在启用趋势引擎时生成，存在才提交，跨运行持久化 7 日基线）
-          [ -f data/trend_history.json ] && git add data/trend_history.json || true
-          [ -f data/trends.json ] && git add data/trends.json || true
+          # Only commit files the browser actually fetches. Pipeline state is
+          # persisted on the single-commit pipeline-state branch above.
+          git add -- data/latest-24h.json data/latest-24h-all.json \
+                     data/source-status.json data/waytoagi-7d.json \
+                     index.html sitemap.xml
+          [ -f data/trends.json ] && git add -- data/trends.json || true
+          # 修复：原来用 `git diff --quiet` 判断，它只看工作区、看不到已 add 的改动，
+          # 会在“有变更但已暂存”时误判为无变更。应该看暂存区。
+          if git diff --cached --quiet; then
+            echo "No changes to commit"; exit 0
+          fi
           git commit -m "chore: update ai news snapshot + prerender"
-          git push
+          # 修复：每小时 push 可能和人工提交撞车，直接 push 会 non-fast-forward 失败
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+            echo "push retry $i"; sleep 5
+          done
+          echo "::error::push failed after 3 retries"; exit 1
 
-      # ── 新增：失败时 Webhook 告警（需配置 WEBHOOK_URL secret）──
       - name: Notify on failure
-        if: failure() && env.WEBHOOK_URL != ''
+        if: failure()
         env:
-          WEBHOOK_URL: $ secrets.WEBHOOK_URL 
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         run: |
-          curl -sS -X POST "$WEBHOOK_URL" \
-            -H "Content-Type: application/json" \
-            -d "{\"text\": \"AI News Radar update failed! Run: $ github.server_url /$ github.repository /actions/runs/$ github.run_id \"}" || true
+          # 修复：原来写 `if: failure() && env.WEBHOOK_URL != ''`，但 job 级 if 里读不到
+          # step 级 env，条件恒为假，告警从来没发出过。改成在 shell 里判。
+          if [ -z "${WEBHOOK_URL:-}" ]; then echo "no WEBHOOK_URL, skip"; exit 0; fi
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          curl -sS -X POST "$WEBHOOK_URL" -H "Content-Type: application/json" \
+            --data "$(jq -nc --arg t "AI News Radar update failed! Run: $RUN_URL" '{text:$t}')" || true
