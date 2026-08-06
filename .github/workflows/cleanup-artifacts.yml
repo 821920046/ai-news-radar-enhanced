@@ -1,0 +1,58 @@
+name: Cleanup Actions Artifacts
+
+on:
+  # Event-driven cleanup closes the cron-delay gap: every completed Pages run
+  # immediately cleans a small batch. The daily schedule remains a backstop.
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+  schedule:
+    # UTC 18:30 = 北京时间 02:30，避开每小时整点的 update-news / pages 部署
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "只看不删（首次上线请保持勾选）"
+        type: boolean
+        default: true
+      keep_hours:
+        description: "保留最近 N 小时内的 artifact"
+        default: "24"
+      max_deletes:
+        description: "单次最多删多少份（首次清存量建议分批）"
+        default: "200"
+
+permissions:
+  contents: read
+  actions: write   # 删 artifact 必需；缺了会得到 403 Resource not accessible
+
+# 不能和自己并发（两个实例会互相 404）；也不取消进行中的
+concurrency:
+  group: cleanup-artifacts
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts/cleanup_artifacts.sh
+          sparse-checkout-cone-mode: false
+
+      - name: Cleanup
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          # schedule/workflow_run 真删；手动触发默认 dry-run
+          DRY_RUN: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_run') && 'false' || inputs.dry_run }}
+          KEEP_HOURS: ${{ inputs.keep_hours || '24' }}
+          # 每次部署后只清小批，定时/手动扫描可清大批，避免 secondary rate limit
+          MAX_DELETES: ${{ github.event_name == 'workflow_run' && '30' || (inputs.max_deletes || '200') }}
+          KEEP_LATEST_PER_NAME: "1"
+          TIME_BUDGET_SEC: "600"   # 小于 job 的 timeout-minutes: 20
+          FAIL_RATE_ABORT: "50"
+        run: |
+          chmod +x scripts/cleanup_artifacts.sh
+          ./scripts/cleanup_artifacts.sh
