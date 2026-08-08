@@ -161,6 +161,72 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      # 分层定位第一步：直接问 GitHub 自己的 Pages 配置，这是权威来源，
+      # 比看工作流颜色可靠。build_type 不是 workflow 就说明对外服务的
+      # 根本不是本工作流的 artifact。同时抓自定义域名的响应头，
+      # 用 cf-cache-status / age 分辨“源站旧”还是“边缘缓存旧”。
+      - name: Diagnose the serving layer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SITE: https://news.my-tv.eu.cc
+        run: |
+          set -uo pipefail
+          echo "===== A 层：GitHub Pages 配置（权威来源）====="
+          if gh api "/repos/${{ github.repository }}/pages" > /tmp/pages.json 2>/tmp/pages.err; then
+            python3 - <<'PY'
+          import json
+          d = json.load(open('/tmp/pages.json'))
+          bt = d.get('build_type')
+          src = d.get('source') or {}
+          print('build_type :', bt)
+          print('cname      :', d.get('cname'))
+          print('html_url   :', d.get('html_url'))
+          print('status     :', d.get('status'))
+          print('source     :', src.get('branch'), src.get('path'))
+          if bt != 'workflow':
+              print('::error::Pages 部署源是 "%s"（分支模式），不是 GitHub Actions。' % bt)
+              print('::error::对外服务的是分支构建器的旧站点，本工作流再绿也不会生效。')
+              print('::error::修法：Settings -> Pages -> Build and deployment -> Source = GitHub Actions')
+          else:
+              print('build_type 正确（workflow）：A 层排除，问题在边缘缓存或 DNS。')
+          PY
+          else
+            echo "::warning::无法读取 Pages 配置: $(cat /tmp/pages.err)"
+          fi
+          echo "===== B 层：自定义域名响应头 ====="
+          curl -sSI --max-time 30 "$SITE/data/latest-24h.json" 2>/dev/null | tr -d '\r' \
+            | grep -iE '^(HTTP|server|age|cf-cache-status|cache-control|last-modified|x-github-request-id|cf-ray)' || true
+          echo "提示：cf-cache-status: HIT 且 age 很大 = 边缘缓存在服务旧内容；"
+          echo "      server: GitHub.com 且无 cf-* = 域名未走 Cloudflare 代理。"
+
+      # 该域名走 Cloudflare 代理，而仓库里的 _headers 在 GitHub Pages 上不生效，
+      # 因此 /data/*.json 没有任何源站缓存策略约束。发完就主动清一次边缘缓存，
+      # 这是 B 层的根治办法（客户端发 Cache-Control: no-cache 对 Cloudflare 无效）。
+      - name: Purge Cloudflare edge cache (optional)
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CF_API_TOKEN:-}" ] || [ -z "${CF_ZONE_ID:-}" ]; then
+            echo "::warning::未配置 CF_API_TOKEN / CF_ZONE_ID，跳过 Cloudflare 缓存清除。"
+            echo "::warning::该域名走 Cloudflare 代理，不清边缘缓存时新数据可能长时间不生效。"
+            exit 0
+          fi
+          s="https://news.my-tv.eu.cc"
+          payload=$(printf '{"files":["%s/","%s/index.html","%s/sw.js","%s/data/latest-24h.json","%s/data/latest-24h-all.json","%s/data/source-status.json","%s/data/waytoagi-7d.json","%s/data/trends.json"]}' "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s")
+          code=$(curl -sS -o /tmp/cf.json -w '%{http_code}' --max-time 60 \
+            -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" --data "$payload")
+          cat /tmp/cf.json; echo
+          if [ "$code" != "200" ] || ! python3 -c 'import json,sys; sys.exit(0 if json.load(open("/tmp/cf.json")).get("success") else 1)'; then
+            echo "::error::Cloudflare 缓存清除失败 (HTTP $code)；请检查 token 权限与 zone id"
+            exit 1
+          fi
+          echo "Cloudflare edge cache purged"
+          sleep 10
+
       - name: Verify the live site serves exactly what we just published
         env:
           EXPECTED: ${{ needs.build.outputs.generated_at }}
@@ -186,6 +252,11 @@ jobs:
             fi
             sleep 20
           done
+          echo "::error::分层结论请看上面 Diagnose the serving layer 步骤的输出："
+          echo "::error::  • build_type 不是 workflow → A 层：改 Settings -> Pages -> Source = GitHub Actions"
+          echo "::error::  • build_type 是 workflow 但 cf-cache-status: HIT/age 很大 → B 层：Cloudflare 边缘缓存"
+          echo "::error::    配 CF_API_TOKEN / CF_ZONE_ID 两个 secret 后本工作流会自动清缓存，"
+          echo "::error::    并在 Cloudflare 加一条 Cache Rule：/data/* → Bypass cache"
           echo "::error::线上服务的数据与本次发布不一致（expected $EXPECTED）。"
           echo "::error::最常见原因：Settings -> Pages -> Source 不是 \"GitHub Actions\"，"
           echo "::error::此时对外服务的是分支构建器的旧站点，本工作流再绿也不会生效。"
