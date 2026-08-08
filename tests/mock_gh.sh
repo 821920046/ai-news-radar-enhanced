@@ -2,6 +2,12 @@
 # 对抗审查用的 gh 模拟器 v2
 # 新增：run 状态实时查询（TOCTOU）、HTTP 403/429/401 错误分类
 set -uo pipefail
+# Default every knob the harness may not export. `set -u` turns a missing one
+# into an opaque failure that looks like a bug in the script under test.
+: "${MOCK_DELETED:=/tmp/deleted.txt}"
+: "${MOCK_ARTIFACTS:=/tmp/mock_artifacts.json}"
+: "${MOCK_MODE:=normal}"
+: "${MOCK_RERUN:=}"
 ARG_ALL="$*"
 
 # --- 单个 run 状态查询（删前重核）---

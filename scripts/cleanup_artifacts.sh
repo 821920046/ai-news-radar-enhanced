@@ -26,7 +26,10 @@ MAX_DELETES="${MAX_DELETES:-200}"          # 单次删除上限（限流护栏�
 TIME_BUDGET_SEC="${TIME_BUDGET_SEC:-600}"  # 删除阶段时间预算
 FAIL_RATE_ABORT="${FAIL_RATE_ABORT:-50}"   # 失败率百分比阈值，超过则报错退出
 DRY_RUN="${DRY_RUN:-true}"
-SELF_RUN_ID="${GITHUB_RUN_ID:-0}"
+# An explicitly supplied SELF_RUN_ID must win. Hardcoding GITHUB_RUN_ID here
+# silently ignored the documented override, which made the "never delete the
+# artifact of the current run" guard untestable outside Actions.
+SELF_RUN_ID="${SELF_RUN_ID:-${GITHUB_RUN_ID:-0}}"
 
 log() { printf '%s\n' "$*" >&2; }
 
