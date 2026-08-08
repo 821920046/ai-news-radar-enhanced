@@ -48,6 +48,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # 把本次发布的数据时间戳交给 deploy 之后的 verify 作业核对。
+    outputs:
+      generated_at: ${{ steps.assemble.outputs.generated_at }}
     # 采集失败时不要把可能残缺的数据发布上线。
     if: >-
       github.event_name != 'workflow_run' ||
@@ -61,6 +64,7 @@ jobs:
           ref: ${{ github.event.repository.default_branch || github.ref }}
 
       - name: Assemble site (只打包前端需要的文件)
+        id: assemble
         run: |
           set -euo pipefail
           rm -rf _site && mkdir -p _site/assets _site/data
@@ -94,6 +98,25 @@ jobs:
                   sys.exit(f'empty file: {p}')
               try: json.loads(p.read_text(encoding='utf-8'))
               except Exception as e: sys.exit(f'invalid JSON {p}: {e}')
+
+          # 记下数据自身的 generated_at，交给 verify 作业核对“线上真正被
+          # 服务的内容 == 本次发布的内容”。
+          import datetime, os
+          main = root / 'data' / 'latest-24h.json'
+          if not main.exists():
+              sys.exit('data/latest-24h.json missing; refusing to publish a site without data')
+          gen = json.loads(main.read_text(encoding='utf-8')).get('generated_at') or ''
+          if not gen:
+              sys.exit('latest-24h.json has no generated_at; freshness cannot be verified')
+          age_h = (datetime.datetime.now(datetime.timezone.utc)
+                   - datetime.datetime.fromisoformat(gen.replace('Z', '+00:00'))).total_seconds() / 3600
+          print(f'data generated_at: {gen} ({age_h:.1f} h old)')
+          # 只告警不阻断：数据旧不应该阻止发布，但必须在日志里显式喊出来。
+          if age_h > 6:
+              print(f'::warning::published data is {age_h:.1f} h old; check Update AI News Snapshot')
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as fh:
+              fh.write(f'generated_at={gen}\n')
+
           if root.joinpath('CNAME').read_text().strip() != 'news.my-tv.eu.cc':
               sys.exit('invalid CNAME')
           size = sum(p.stat().st_size for p in root.rglob('*') if p.is_file())
@@ -125,3 +148,45 @@ jobs:
         with:
           timeout: 300000
           error_count: 10
+
+  # 本轮根因修复：以前整条链条只验证“我们发布了什么”，从不验证“线上真正被
+  # 服务的是什么”。这两者可以长期不一致而全程绿灯，例如：
+  #   • Settings -> Pages -> Source 仍为 "Deploy from a branch"，此时对外
+  #     服务的是分支构建器（pages-build-deployment）产出的旧站点，
+  #     本工作流的 artifact 部署再成功也不会生效；
+  #   • CNAME 被冲掉、CDN/边缘缓存未失效。
+  # 加一道出站核对，把“发布成功但没生效”这类静默故障变成红色。
+  verify:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verify the live site serves exactly what we just published
+        env:
+          EXPECTED: ${{ needs.build.outputs.generated_at }}
+          SITE: https://news.my-tv.eu.cc
+        run: |
+          set -euo pipefail
+          if [ -z "$EXPECTED" ]; then
+            echo "::error::build did not report generated_at; cannot verify the live site"
+            exit 1
+          fi
+          echo "expected generated_at: $EXPECTED"
+          # Pages 发布到边缘生效有传播延迟，重试而不是一次定生死。
+          for i in 1 2 3 4 5 6; do
+            served=$(curl -fsSL --max-time 30 \
+              -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' \
+              "$SITE/data/latest-24h.json?cb=${GITHUB_RUN_ID}-$i" 2>/dev/null \
+              | python3 -c 'import json,sys; print(json.load(sys.stdin).get("generated_at",""))' \
+              2>/dev/null || true)
+            echo "attempt $i: served=${served:-<none>}"
+            if [ "$served" = "$EXPECTED" ]; then
+              echo "live site matches the published artifact"
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "::error::线上服务的数据与本次发布不一致（expected $EXPECTED）。"
+          echo "::error::最常见原因：Settings -> Pages -> Source 不是 \"GitHub Actions\"，"
+          echo "::error::此时对外服务的是分支构建器的旧站点，本工作流再绿也不会生效。"
+          exit 1
