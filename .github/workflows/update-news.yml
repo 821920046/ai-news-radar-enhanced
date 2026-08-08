@@ -160,6 +160,12 @@ jobs:
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         run: |
+          # A setup-phase failure is infrastructure, not a data problem, and the
+          # retry workflow already recovers it. Alerting on it trains people to
+          # ignore alerts, so stay quiet unless repository code actually ran.
+          if [ "${GITHUB_RUN_ATTEMPT:-1}" -lt 2 ]; then
+            echo "first attempt; letting automatic retry act before alerting"; exit 0
+          fi
           # 修复：原来写 `if: failure() && env.WEBHOOK_URL != ''`，但 job 级 if 里读不到
           # step 级 env，条件恒为假，告警从来没发出过。改成在 shell 里判。
           if [ -z "${WEBHOOK_URL:-}" ]; then echo "no WEBHOOK_URL, skip"; exit 0; fi
