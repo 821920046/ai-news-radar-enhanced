@@ -91,12 +91,24 @@ jobs:
       - name: Validate output
         run: |
           python - <<'PY'
-          import json, sys
+          import json, sys, datetime
           d = json.load(open('data/latest-24h.json', encoding='utf-8'))
           n = d.get('total_items', 0)
           print(f'AI items: {n}')
           if n < 3:
               sys.exit('ERROR: Too few items, possible source failure')
+          # 根因修复：这道门禁原来只数条目数，不看时间。如果采集静默失败、
+          # 根本没重写文件，它读到的就是上一次的旧文件，条目数照样合格 ——
+          # 于是工作流全绿而数据永远停在某一天。必须校验数据自身的 generated_at。
+          gen = d.get('generated_at') or ''
+          if not gen:
+              sys.exit('ERROR: latest-24h.json has no generated_at')
+          age_h = (datetime.datetime.now(datetime.timezone.utc)
+                   - datetime.datetime.fromisoformat(gen.replace('Z', '+00:00'))).total_seconds() / 3600
+          print(f'generated_at: {gen} ({age_h:.1f} h old)')
+          if age_h > 2:
+              sys.exit(f'ERROR: pipeline produced stale data ({age_h:.1f} h old); '
+                       'it did not rewrite its output this run')
           print('Data quality check passed')
           PY
 
@@ -145,6 +157,13 @@ jobs:
           # 修复：原来用 `git diff --quiet` 判断，它只看工作区、看不到已 add 的改动，
           # 会在“有变更但已暂存”时误判为无变更。应该看暂存区。
           if git diff --cached --quiet; then
+            # 每小时一跑的流水线必然会改写 source-status.json 里的 generated_at，
+            # 因此“定时运行却零变更”不是正常状态，而是流水线没有真正写盘的
+            # 信号。以前这里静默 exit 0，把这种故障伪装成了绿色。
+            if [ "${GITHUB_EVENT_NAME:-}" = "schedule" ]; then
+              echo "::error::scheduled run produced no changes at all; the pipeline did not rewrite its output"
+              exit 1
+            fi
             echo "No changes to commit"; exit 0
           fi
           git commit -m "chore: update ai news snapshot + prerender"
