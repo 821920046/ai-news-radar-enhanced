@@ -1,0 +1,92 @@
+name: Retry Transient Failures
+
+# A job that fails inside "Set up job" never executed repository code: the
+# runner was still resolving the actions listed in `uses:`. GitHub retries that
+# resolution twice internally and then fails the job permanently, with no
+# built-in job-level retry. This workflow supplies the missing recovery.
+#
+# This workflow deliberately declares ZERO `uses:` steps. A recovery mechanism
+# must not share the failure mode it exists to recover from: if action
+# resolution is returning 503, a checkout step here would fail for exactly the
+# same reason and recovery would vanish precisely when it is needed. The `gh`
+# CLI, `jq` and `git` are preinstalled on GitHub-hosted runners, so the decision
+# script is fetched over the plain REST API instead, keeping one copy of the
+# logic in the repository.
+on:
+  workflow_run:
+    workflows:
+      - "Deploy to GitHub Pages"
+      - "Update AI News Snapshot"
+      - "Cleanup Actions Artifacts"
+    types: [completed]
+
+permissions:
+  contents: read
+  actions: write   # required to request a re-run
+
+# Never process the same failed run twice concurrently.
+concurrency:
+  group: retry-${{ github.event.workflow_run.id }}
+  cancel-in-progress: false
+
+jobs:
+  retry:
+    # Cheap pre-filter; the script re-validates everything itself.
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch decision script
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          # Always the default branch: the script must be the reviewed version,
+          # never whatever a feature branch happened to contain.
+          REF: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          mkdir -p scripts
+
+          # Fetch the JSON form, not the raw form. Raw bytes carry no integrity
+          # information, and a truncated shell script is still syntactically
+          # valid: `bash -n` would pass while the recovery logic silently
+          # disappeared. The JSON form carries `size` and the git blob `sha`,
+          # which make completeness verifiable rather than assumed.
+          gh api "/repos/$REPO/contents/scripts/retry_transient_failure.sh?ref=$REF" \
+            > /tmp/script_meta.json
+
+          jq -r '.content' /tmp/script_meta.json | base64 -d \
+            > scripts/retry_transient_failure.sh
+
+          expected_size=$(jq -r '.size' /tmp/script_meta.json)
+          expected_sha=$(jq -r '.sha' /tmp/script_meta.json)
+          actual_size=$(wc -c < scripts/retry_transient_failure.sh)
+          # A git blob sha is computed over the object header plus content,
+          # which is exactly what `git hash-object` reproduces.
+          actual_sha=$(git hash-object scripts/retry_transient_failure.sh)
+
+          if [ "$actual_size" != "$expected_size" ]; then
+            echo "::error::size mismatch: got $actual_size, expected $expected_size"; exit 1
+          fi
+          if [ "$actual_sha" != "$expected_sha" ]; then
+            echo "::error::checksum mismatch: got $actual_sha, expected $expected_sha"; exit 1
+          fi
+
+          bash -n scripts/retry_transient_failure.sh
+          chmod +x scripts/retry_transient_failure.sh
+          echo "verified $actual_size bytes, blob $actual_sha"
+
+      - name: Evaluate and re-run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
+          # Guard against ever watching itself: that would be a self-feeding
+          # loop no attempt cap could bound, because each retry run is a new
+          # run with attempt 1.
+          SELF_WORKFLOW_NAME: ${{ github.workflow }}
+          MAX_ATTEMPTS: "3"
+        run: ./scripts/retry_transient_failure.sh
