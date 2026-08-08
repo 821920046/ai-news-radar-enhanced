@@ -11,9 +11,19 @@ done
 for f in .github/workflows/deploy-pages.yml \
          .github/workflows/update-news.yml \
          .github/workflows/cleanup-artifacts.yml \
-         scripts/cleanup_artifacts.sh; do
+         .github/workflows/retry-transient-failures.yml \
+         scripts/cleanup_artifacts.sh \
+         scripts/retry_transient_failure.sh \
+         CLEANUP.sh; do
   [ -f "$f" ] || { echo "ERROR: missing $f; copy bundle first" >&2; exit 1; }
 done
+
+# CLEANUP.sh requires a clean working tree, while this script stages changes.
+# Running them in the wrong order makes the cleanup refuse to start, so state
+# the ordering now rather than letting the user discover it later.
+chmod +x CLEANUP.sh 2>/dev/null || true
+echo "note: run ./CLEANUP.sh BEFORE this script, or after committing what this" >&2
+echo "      script stages. See README-APPLY.md step 0." >&2
 
 # 1) Persist current mutable state on a one-commit snapshot branch.
 tmp=$(mktemp -d)
@@ -56,8 +66,9 @@ if ! grep -Fqx "$marker" .gitignore; then
 fi
 git rm --cached --ignore-unmatch \
   data/archive.json data/trend_history.json data/title-zh-cache.json
-git add .gitignore .github/workflows scripts/cleanup_artifacts.sh
-chmod +x scripts/cleanup_artifacts.sh
+git add .gitignore .github/workflows scripts/cleanup_artifacts.sh scripts/retry_transient_failure.sh
+chmod +x scripts/cleanup_artifacts.sh scripts/retry_transient_failure.sh
+git update-index --chmod=+x scripts/cleanup_artifacts.sh scripts/retry_transient_failure.sh 2>/dev/null || true
 
 echo
 echo "Prepared successfully. Review, then commit and push:"
