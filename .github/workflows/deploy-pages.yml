@@ -17,6 +17,19 @@ on:
       - "robots.txt"
       - "sitemap.xml"
       - ".github/workflows/deploy-pages.yml"
+  # 根因修复：上面的 push 触发器对每小时的数据更新永远不会生效。
+  # GitHub 规定“使用默认 GITHUB_TOKEN 推送的提交不会创建新的工作流运行”
+  # （官方为防止工作流互相触发导致无限递归而设的硬性限制）。
+  # update-news.yml 正是用默认 GITHUB_TOKEN push 数据的，所以它每小时的
+  # commit 不产生 push 事件 -> Pages 从不部署 -> 采集全绿、站点却停在
+  # 最后一次人工部署的日期。这是“所有工作流都是绿的，但页面是旧的”的原因。
+  #
+  # workflow_run 监听的是“工作流运行结束”这个事件，不是 push 事件，
+  # 因此不受 GITHUB_TOKEN 限制，是官方文档给出的标准解法。
+  # 注意：workflows 里的名字必须与目标工作流 name: 字段逐字相同，写错则静默不触发。
+  workflow_run:
+    workflows: ["Update AI News Snapshot"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -35,8 +48,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # 采集失败时不要把可能残缺的数据发布上线。
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     steps:
+      # 必须取默认分支的最新 HEAD，绝不能写成 ref: github.event.workflow_run.head_sha。
+      # workflow_run 的 head_sha 是“触发上游那次运行的提交”，也就是数据更新之前的
+      # 提交；用它 checkout 会发布旧数据，等于把刚修好的这个 bug 原样复现一遍。
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch || github.ref }}
 
       - name: Assemble site (只打包前端需要的文件)
         run: |
