@@ -1,36 +1,28 @@
 {
-  "generated_at": "2026-08-09T06:36:53.403901Z",
+  "generated_at": "2026-08-09T07:44:10.326783Z",
   "sites": [
-    {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
-      "ok": true,
-      "item_count": 27,
-      "duration_ms": 77,
-      "error": null
-    },
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 336,
+      "duration_ms": 73,
       "error": "403 Client Error: Forbidden for url: https://r.jina.ai/https://aibreakfast.beehiiv.com/"
+    },
+    {
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
+      "ok": true,
+      "item_count": 27,
+      "duration_ms": 250,
+      "error": null
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 52,
-      "duration_ms": 636,
-      "error": null
-    },
-    {
-      "site_id": "bestblogs",
-      "site_name": "BestBlogs",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 1963,
+      "item_count": 53,
+      "duration_ms": 634,
       "error": null
     },
     {
@@ -38,7 +30,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 2220,
+      "duration_ms": 1799,
       "error": null
     },
     {
@@ -46,7 +38,15 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 2539,
+      "duration_ms": 2415,
+      "error": null
+    },
+    {
+      "site_id": "bestblogs",
+      "site_name": "BestBlogs",
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 2627,
       "error": null
     },
     {
@@ -54,7 +54,7 @@
       "site_name": "开源热榜",
       "ok": true,
       "item_count": 30,
-      "duration_ms": 3352,
+      "duration_ms": 4009,
       "error": null
     },
     {
@@ -62,7 +62,7 @@
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 5210,
+      "duration_ms": 5173,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='ai.hubtoday.app', port=443): Failed to resolve 'ai.hubtoday.app' ([Errno -2] Name or service not known)\"))"
     },
     {
@@ -70,23 +70,23 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 6254,
+      "duration_ms": 6621,
       "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 3027,
-      "duration_ms": 8341,
+      "item_count": 3026,
+      "duration_ms": 8867,
       "error": null
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 492,
-      "duration_ms": 9213,
+      "item_count": 490,
+      "duration_ms": 9360,
       "error": null
     },
     {
@@ -94,7 +94,7 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 122,
-      "duration_ms": 9674,
+      "duration_ms": 9819,
       "error": null
     },
     {
@@ -102,15 +102,15 @@
       "site_name": "AI HOT",
       "ok": true,
       "item_count": 497,
-      "duration_ms": 12940,
+      "duration_ms": 11666,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 345,
-      "duration_ms": 20938,
+      "item_count": 350,
+      "duration_ms": 20489,
       "error": null
     },
     {
@@ -119,7 +119,7 @@
       "ok": true,
       "partial_failures": 0,
       "item_count": 50,
-      "duration_ms": 113,
+      "duration_ms": 157,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -135,9 +135,9 @@
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5812,
-  "items_before_topic_filter": 6065,
-  "items_in_24h": 443,
+  "fetched_raw_items": 5815,
+  "items_before_topic_filter": 6068,
+  "items_in_24h": 442,
   "ai_processing": {
     "tldr_items": 0
   },
