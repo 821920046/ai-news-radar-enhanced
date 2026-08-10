@@ -52,18 +52,18 @@ jobs:
           # valid: `bash -n` would pass while the recovery logic silently
           # disappeared. The JSON form carries `size` and the git blob `sha`,
           # which make completeness verifiable rather than assumed.
-          gh api "/repos/$REPO/contents/scripts/retry_transient_failure.sh?ref=$REF" \
+          gh api "/repos/$REPO/contents/tools/ci/retry_transient_failure.sh?ref=$REF" \
             > /tmp/script_meta.json
 
           jq -r '.content' /tmp/script_meta.json | base64 -d \
-            > scripts/retry_transient_failure.sh
+            > tools/ci/retry_transient_failure.sh
 
           expected_size=$(jq -r '.size' /tmp/script_meta.json)
           expected_sha=$(jq -r '.sha' /tmp/script_meta.json)
-          actual_size=$(wc -c < scripts/retry_transient_failure.sh)
+          actual_size=$(wc -c < tools/ci/retry_transient_failure.sh)
           # A git blob sha is computed over the object header plus content,
           # which is exactly what `git hash-object` reproduces.
-          actual_sha=$(git hash-object scripts/retry_transient_failure.sh)
+          actual_sha=$(git hash-object tools/ci/retry_transient_failure.sh)
 
           if [ "$actual_size" != "$expected_size" ]; then
             echo "::error::size mismatch: got $actual_size, expected $expected_size"; exit 1
@@ -72,8 +72,8 @@ jobs:
             echo "::error::checksum mismatch: got $actual_sha, expected $expected_sha"; exit 1
           fi
 
-          bash -n scripts/retry_transient_failure.sh
-          chmod +x scripts/retry_transient_failure.sh
+          bash -n tools/ci/retry_transient_failure.sh
+          chmod +x tools/ci/retry_transient_failure.sh
           echo "verified $actual_size bytes, blob $actual_sha"
 
       - name: Evaluate and re-run
@@ -89,4 +89,4 @@ jobs:
           # run with attempt 1.
           SELF_WORKFLOW_NAME: ${{ github.workflow }}
           MAX_ATTEMPTS: "3"
-        run: ./scripts/retry_transient_failure.sh
+        run: ./tools/ci/retry_transient_failure.sh
