@@ -32,7 +32,12 @@ concurrency:
 jobs:
   retry:
     # Cheap pre-filter; the script re-validates everything itself.
-    if: github.event.workflow_run.conclusion == 'failure'
+    # GitHub 的运行结论不只有 failure。当 "Set up job" 阶段彻底失败时，整次运行常被判为
+    # startup_failure；运行器被回收则得到 timed_out。这两种恰好是本工作流要救的场景，
+    # 只收 failure 会让它在最该出手时安静跳过。cancelled 是人的决定，永不受理。
+    if: >-
+      contains(fromJSON('["failure","startup_failure","timed_out"]'),
+               github.event.workflow_run.conclusion)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
