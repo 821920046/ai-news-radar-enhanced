@@ -166,38 +166,107 @@ jobs:
       # 根本不是本工作流的 artifact。同时抓自定义域名的响应头，
       # 用 cf-cache-status / age 分辨“源站旧”还是“边缘缓存旧”。
       - name: Diagnose the serving layer
+        id: diag
         env:
           GH_TOKEN: ${{ github.token }}
-          SITE: https://news.my-tv.eu.cc
+          EXPECTED: ${{ needs.build.outputs.generated_at }}
+          SITE_HOST: news.my-tv.eu.cc
         run: |
           set -uo pipefail
-          echo "===== A 层：GitHub Pages 配置（权威来源）====="
+          echo "expected (本次发布): $EXPECTED"
+
+          echo ""
+          echo "===== 实验 1：GitHub Pages 配置（权威来源）====="
           if gh api "/repos/${{ github.repository }}/pages" > /tmp/pages.json 2>/tmp/pages.err; then
-            python3 - <<'PY'
-          import json
-          d = json.load(open('/tmp/pages.json'))
-          bt = d.get('build_type')
-          src = d.get('source') or {}
-          print('build_type :', bt)
-          print('cname      :', d.get('cname'))
-          print('html_url   :', d.get('html_url'))
-          print('status     :', d.get('status'))
-          print('source     :', src.get('branch'), src.get('path'))
-          if bt != 'workflow':
-              print('::error::Pages 部署源是 "%s"（分支模式），不是 GitHub Actions。' % bt)
-              print('::error::对外服务的是分支构建器的旧站点，本工作流再绿也不会生效。')
-              print('::error::修法：Settings -> Pages -> Build and deployment -> Source = GitHub Actions')
-          else:
-              print('build_type 正确（workflow）：A 层排除，问题在边缘缓存或 DNS。')
-          PY
+            cat /tmp/pages.json
           else
-            echo "::warning::无法读取 Pages 配置: $(cat /tmp/pages.err)"
+            echo "cannot read pages config: $(cat /tmp/pages.err)"
+            echo '{}' > /tmp/pages.json
           fi
-          echo "===== B 层：自定义域名响应头 ====="
-          curl -sSI --max-time 30 "$SITE/data/latest-24h.json" 2>/dev/null | tr -d '\r' \
-            | grep -iE '^(HTTP|server|age|cf-cache-status|cache-control|last-modified|x-github-request-id|cf-ray)' || true
-          echo "提示：cf-cache-status: HIT 且 age 很大 = 边缘缓存在服务旧内容；"
-          echo "      server: GitHub.com 且无 cf-* = 域名未走 Cloudflare 代理。"
+
+          echo ""
+          echo "===== 实验 2：绕过 DNS 与 Cloudflare，直连 GitHub Pages 源站 ====="
+          # --resolve 强制把域名指向 GitHub Pages 官方 IP，Host 与 SNI 仍为真域名，
+          # 因此这是“源站到底存不存在新数据”的直接实验，不受 DNS/CDN 干扰。
+          : > /tmp/origin.txt
+          for ip in 185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153; do
+            code=$(curl -sS -o /tmp/o.json -w '%{http_code}' --max-time 20 \
+              --resolve "$SITE_HOST:443:$ip" \
+              "https://$SITE_HOST/data/latest-24h.json?cb=${GITHUB_RUN_ID}-$ip" 2>/dev/null || echo 000)
+            g=$(python3 -c "import json;print(json.load(open('/tmp/o.json')).get('generated_at',''))" 2>/dev/null || true)
+            echo "origin $ip -> HTTP $code  generated_at=${g:-<none>}"
+            if [ -n "${g:-}" ]; then echo "$g" >> /tmp/origin.txt; fi
+          done
+
+          echo ""
+          echo "===== 实验 3：域名当前实际响应头 ====="
+          curl -sSI --max-time 20 "https://$SITE_HOST/data/latest-24h.json" 2>/dev/null \
+            | tr -d '\r' > /tmp/head.txt || true
+          grep -iE '^(HTTP|server|age|cf-cache-status|cf-ray|cache-control|last-modified|x-github-request-id|via|x-served-by)' /tmp/head.txt || cat /tmp/head.txt
+          curl -sS --max-time 20 "https://$SITE_HOST/data/latest-24h.json?cb=${GITHUB_RUN_ID}-dom" \
+            -o /tmp/dom.json 2>/dev/null || true
+          echo "domain generated_at=$(python3 -c "import json;print(json.load(open('/tmp/dom.json')).get('generated_at',''))" 2>/dev/null || true)"
+
+          echo ""
+          echo "===== 汇总判定 ====="
+          python3 - <<'PY'
+          import json, os, pathlib
+
+          expected = os.environ.get('EXPECTED', '')
+          def read(p, default=''):
+              try: return pathlib.Path(p).read_text(encoding='utf-8', errors='replace')
+              except Exception: return default
+
+          try: pages = json.loads(read('/tmp/pages.json', '{}') or '{}')
+          except Exception: pages = {}
+          build_type = pages.get('build_type')
+          cname = pages.get('cname')
+
+          origin = [l.strip() for l in read('/tmp/origin.txt').splitlines() if l.strip()]
+          head = read('/tmp/head.txt').lower()
+          try: domain = json.loads(read('/tmp/dom.json', '{}') or '{}').get('generated_at', '')
+          except Exception: domain = ''
+
+          origin_fresh = expected in origin
+          origin_any = bool(origin)
+          domain_fresh = (domain == expected)
+          is_github = 'x-github-request-id' in head
+          is_cf = ('cf-ray' in head) or ('server: cloudflare' in head)
+
+          print('build_type   :', build_type)
+          print('pages cname  :', cname)
+          print('origin 直连   :', origin or '<全部失败/无数据>')
+          print('origin 是新的:', origin_fresh)
+          print('domain       :', domain or '<none>', '是新的:', domain_fresh)
+          print('域名背后有 GitHub 特征头:', is_github, ' 有 Cloudflare 特征头:', is_cf)
+
+          if build_type and build_type != 'workflow':
+              c = ('A层 Pages 部署源是"%s"（分支模式），不是 GitHub Actions。'
+                   '修法：Settings -> Pages -> Source = GitHub Actions' % build_type)
+          elif origin_fresh and not domain_fresh:
+              c = ('C层 GitHub Pages 源站已经是新数据，但域名返回的是旧数据：'
+                   '说明访问该域名的流量根本没有到 GitHub Pages。'
+                   '最常见：存在一个 Cloudflare Pages / Workers 项目（或其它托管）'
+                   '占用了 news.my-tv.eu.cc 这个自定义域名，它优先接管了请求。'
+                   '去 Cloudflare 看 Workers & Pages 里是不是有个旧项目绑了这个域名，'
+                   '或 DNS 里该记录指向的不是 <user>.github.io。')
+          elif origin_any and not origin_fresh:
+              c = ('B层 GitHub Pages 源站本身返回的就是旧内容（origin=%s）：'
+                   'artifact 虽然部署成功，但未成为对外服务的那份。'
+                   '检查 Settings -> Pages 是否有另一个部署源，'
+                   '以及是否存在 gh-pages 分支在并行发布。' % origin[0])
+          elif not origin_any:
+              c = ('D层 无法从 GitHub Pages 官方 IP 取到该域名的内容：'
+                   'GitHub Pages 可能没有绑定这个自定义域名（看上面 pages cname）。')
+          else:
+              c = '无异常：源站与域名都是新数据。'
+
+          print('结论:', c)
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as fh:
+              fh.write('conclusion=' + c.replace('\n', ' ') + '\n')
+          with open(os.environ.get('GITHUB_STEP_SUMMARY', '/dev/null'), 'a', encoding='utf-8') as fh:
+              fh.write('### 分层诊断结论\n\n' + c + '\n')
+          PY
 
       # 该域名走 Cloudflare 代理，而仓库里的 _headers 在 GitHub Pages 上不生效，
       # 因此 /data/*.json 没有任何源站缓存策略约束。发完就主动清一次边缘缓存，
@@ -231,6 +300,7 @@ jobs:
         env:
           EXPECTED: ${{ needs.build.outputs.generated_at }}
           SITE: https://news.my-tv.eu.cc
+          DIAG: ${{ steps.diag.outputs.conclusion }}
         run: |
           set -euo pipefail
           if [ -z "$EXPECTED" ]; then
@@ -240,19 +310,48 @@ jobs:
           echo "expected generated_at: $EXPECTED"
           # Pages 发布到边缘生效有传播延迟，重试而不是一次定生死。
           for i in 1 2 3 4 5 6; do
-            served=$(curl -fsSL --max-time 30 \
+            # 把 HTTP 状态码与 curl 退出码分开记录，绝不把不同病因压成同一个 <none>。
+            out=$(curl -sS -o /tmp/live.json -w '%{http_code}' --max-time 30 \
               -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' \
-              "$SITE/data/latest-24h.json?cb=${GITHUB_RUN_ID}-$i" 2>/dev/null \
-              | python3 -c 'import json,sys; print(json.load(sys.stdin).get("generated_at",""))' \
-              2>/dev/null || true)
-            echo "attempt $i: served=${served:-<none>}"
-            if [ "$served" = "$EXPECTED" ]; then
+              "$SITE/data/latest-24h.json?cb=${GITHUB_RUN_ID}-$i" 2>/tmp/curl.err; echo "|$?")
+            cexit=${out##*|}
+            code=${out%|*}
+            served=$(python3 -c "import json;print(json.load(open('/tmp/live.json')).get('generated_at',''))" 2>/dev/null || true)
+            echo "attempt $i: HTTP ${code:-000}  curl_exit=${cexit}  served=${served:-<none>}"
+            if [ -z "${served:-}" ]; then
+              if [ -s /tmp/curl.err ]; then
+                echo "  curl 说: $(tr -d '\r' < /tmp/curl.err | head -2 | tr '\n' ' ')"
+              fi
+              case "${code:-000}" in
+                000)
+                  echo "  判读：连接阶段就失败了。curl_exit=6 是 DNS 解析不到（很可能解绑自定义域名时连 DNS 记录一起被删了），"
+                  echo "        curl_exit=35/60 是 TLS/证书问题，curl_exit=28 是超时。"
+                  ;;
+                404)
+                  echo "  判读：DNS 通了、请求到达了服务端，但对方说没有这个站点。"
+                  echo "        最常见：GitHub Settings -> Pages -> Custom domain 里还没填 news.my-tv.eu.cc，"
+                  echo "        GitHub Pages 认不出这个 Host，因此直接返回 404。"
+                  ;;
+                52[0-9])
+                  echo "  判读：Cloudflare 连不上源站（${code}）。525/526 通常是 SSL/TLS 加密模式不对，"
+                  echo "        把 SSL/TLS -> Overview 设为 Full（不要用 Flexible）。"
+                  ;;
+                20*)
+                  echo "  判读：HTTP $code 取到了内容，但不是合法 JSON 或缺 generated_at 字段。"
+                  echo "        前 200 字节：$(head -c 200 /tmp/live.json | tr -d '\n')"
+                  ;;
+                *)
+                  echo "  判读：服务端返回 HTTP $code。"
+                  ;;
+              esac
+            fi
+            if [ "${served:-}" = "$EXPECTED" ]; then
               echo "live site matches the published artifact"
               exit 0
             fi
             sleep 20
           done
-          echo "::error::分层结论请看上面 Diagnose the serving layer 步骤的输出："
+          echo "::error::【自动判定结论】$DIAG"
           echo "::error::  • build_type 不是 workflow → A 层：改 Settings -> Pages -> Source = GitHub Actions"
           echo "::error::  • build_type 是 workflow 但 cf-cache-status: HIT/age 很大 → B 层：Cloudflare 边缘缓存"
           echo "::error::    配 CF_API_TOKEN / CF_ZONE_ID 两个 secret 后本工作流会自动清缓存，"
