@@ -55,8 +55,13 @@ decide_skip() {
 # A cancelled run is an explicit human decision and must never be resurrected.
 case "$CONCLUSION" in
   failure) : ;;
+  # A run whose jobs never got past provisioning is reported as
+  # startup_failure, and a runner reclaimed mid-flight yields timed_out.
+  # Both are exactly the infrastructure faults this workflow exists for, so
+  # accepting only "failure" would blind it to its own purpose.
+  startup_failure|timed_out) : ;;
   "") decide_skip "conclusion unavailable" ;;
-  *)  decide_skip "conclusion is '$CONCLUSION', not a failure" ;;
+  *)  decide_skip "conclusion is '$CONCLUSION', not a retryable failure" ;;
 esac
 
 # --- 1b. Never react to itself --------------------------------------------
@@ -81,7 +86,14 @@ fi
 if ! gh api "/repos/$REPO/actions/runs/$RUN_ID/attempts/$RUN_ATTEMPT/jobs?per_page=100" \
       > /tmp/failed_jobs.json 2>/tmp/jobs_err.txt; then
   log "could not read job details: $(cat /tmp/jobs_err.txt)"
-  decide_skip "job details unavailable, refusing to guess"
+  # A startup_failure run often has no attempt sub-resource at all, because no
+  # job was ever created. Treating that as "cannot judge" would permanently
+  # disable recovery for the one failure mode this workflow targets, so fall
+  # through to the log-signature check instead of skipping outright.
+  if [ "$CONCLUSION" != "startup_failure" ]; then
+    decide_skip "job details unavailable, refusing to guess"
+  fi
+  echo '{"jobs":[]}' > /tmp/failed_jobs.json
 fi
 
 # Each failed job falls into exactly one of three classes. Counting "not a
