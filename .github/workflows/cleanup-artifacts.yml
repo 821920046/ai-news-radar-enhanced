@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: scripts/cleanup_artifacts.sh
+          sparse-checkout: tools/ci/cleanup_artifacts.sh
           sparse-checkout-cone-mode: false
 
       - name: Cleanup
@@ -54,5 +54,5 @@ jobs:
           TIME_BUDGET_SEC: "600"   # 小于 job 的 timeout-minutes: 20
           FAIL_RATE_ABORT: "50"
         run: |
-          chmod +x scripts/cleanup_artifacts.sh
-          ./scripts/cleanup_artifacts.sh
+          chmod +x tools/ci/cleanup_artifacts.sh
+          ./tools/ci/cleanup_artifacts.sh
