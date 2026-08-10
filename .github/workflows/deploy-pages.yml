@@ -70,8 +70,6 @@ jobs:
           rm -rf _site && mkdir -p _site/assets _site/data
           cp index.html manifest.json sw.js robots.txt sitemap.xml _site/
           cp -r assets/. _site/assets/
-          # assets/log.png (1.5MB) 在前端无任何引用，不发布
-          rm -f _site/assets/log.png
           # 关键 2：只发布前端真正会 fetch 的数据，archive.json / trend_history.json
           # 这类 16MB+ 的历史文件不要进 artifact
           for f in latest-24h.json latest-24h-all.json source-status.json \
