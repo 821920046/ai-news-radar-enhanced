@@ -25,3 +25,12 @@ test-results/
 
 # 本地 AI 助手配置（不应提交）
 .claude/
+
+# 管道状态：由 update-news.yml 在 pipeline-state 分支上维护，不进主干
+data/archive.json
+data/trend_history.json
+data/title-zh-cache.json
+
+# 本地工具配置
+.idea/
+.vscode/
