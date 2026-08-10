@@ -54,9 +54,9 @@
 | `scripts/prerender.py` | 新增 | **构建期静态预渲染（SSG）**，解决纯客户端 SPA 的首屏白屏 + SEO 不可收录问题；幂等可重复运行 |
 | `tests/test_signal_score.py` | 新增 | 评分/分级/归一化/percentile 单元测试 |
 | `.github/workflows/update-news.yml` | 更新 | 在采集后新增预渲染步骤并提交 `index.html`；启用失败 Webhook 告警 |
-| `frontend/hot-ticker.js` | 新增 | 顶部「24h 最热新闻 + 最热开源」实时滚动榜组件（零依赖、点击查看详情、防 XSS） |
-| `frontend/demo.html` | 新增 | 热榜组件独立演示页（内置示例数据） |
-| `frontend/INTEGRATION.md` | 新增 | 顶部热榜区集成说明 |
+| `examples/hot-ticker/hot-ticker.js` | 新增 | 顶部「24h 最热新闻 + 最热开源」实时滚动榜组件（零依赖、点击查看详情、防 XSS） |
+| `examples/hot-ticker/demo.html` | 新增 | 热榜组件独立演示页（内置示例数据） |
+| `examples/hot-ticker/INTEGRATION.md` | 新增 | 顶部热榜区集成说明 |
 | `api/app.py` `/hot` | 新增接口 | 返回 `news` / `opensource` 两个 24h 热榜（供前端滚动榜调用） |
 
 ---
@@ -74,19 +74,29 @@ ai-news-radar-enhanced/
 │   └── signal_score/
 │       ├── scorer.py             # 评分引擎（本次重写）
 │       └── features.py           # 新颖度/传播速度/社区信号特征
-├── config/
+├── config/                        # 全部配置集中在这里
 │   ├── sources.yaml              # 信源配置
-│   └── score_weights.yaml        # 评分配置（本次新增）
-├── scripts/
+│   ├── score_weights.yaml        # 评分权重 / 阈值 / 信源权威度
+│   ├── model_config.yaml         # OpenRouter 模型配置
+│   └── topic_rules.json          # 主题分类关键词规则
+├── scripts/                       # 只放可执行入口
 │   ├── update_news.py            # 数据更新入口（CI 调用）
-│   └── prerender.py              # 静态预渲染（本次新增）
-├── data/                         # 运行产物（CI 自动生成并提交）
+│   ├── prerender.py              # 静态预渲染
+│   └── probe_aihot.py            # 信源探测工具
+├── tools/ci/                      # CI 运维脚本
+│   ├── cleanup_artifacts.sh      # 定时清理 Actions artifact
+│   └── retry_transient_failure.sh # 瞬时故障自动重跑判定
+├── data/                         # 只放前端会 fetch 的 5 个 JSON
 │   ├── latest-24h.json
 │   ├── latest-24h-all.json
-│   ├── archive.json
 │   ├── source-status.json
-│   └── waytoagi-7d.json
-├── tests/
+│   ├── waytoagi-7d.json
+│   └── trends.json
+│   # archive.json / trend_history.json / title-zh-cache.json 为管道状态，
+│   # 由 update-news.yml 在 pipeline-state 分支上维护，不进主干
+├── docs/                          # history/ 历史记录，maintenance/ 运维诊断
+├── examples/hot-ticker/           # 独立示例组件（主站不引用）
+├── tests/                         # 业务单测；tests/ci/ 为 CI 脚本测试替身
 ├── index.html                    # 前端入口（GitHub Pages 发布，预渲染目标）
 ├── requirements.txt
 └── .github/workflows/update-news.yml

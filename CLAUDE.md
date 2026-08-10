@@ -1,18 +1,20 @@
-# CLAUDE.md — AI News Radar v3
+# CLAUDE.md — AI News Radar v4
 
 Project: AI 新闻聚合 → 情报系统。Python CLI 管线 + FastAPI + 纯静态前端。
 
-## 目录结构（v3）
+## 目录结构（v4）
 
 ```
-core/          ← 主引擎（signal_score / trend_engine / agents / pipeline / fetch / normalize / dedup）
-api/           ← FastAPI（app.py + routes.py）
-config/        ← YAML 配置（sources / score_weights / model_config）
-scripts/       ← 向后兼容 shim 层，全部 delegate 到 core/
-configs/       ← JSON 配置（topic_rules.json）
-data/          ← CI 产出 JSON
-frontend/      ← 纯静态 SPA
-tests/         ← pytest
+core/          ← 全部实现（signal_score / trend_engine / agents / pipeline / fetch / normalize / dedup）
+api/           ← FastAPI（app.py + routes.py），可选服务，与静态站独立
+config/        ← 全部配置（sources / score_weights / model_config 三个 YAML + topic_rules.json）
+scripts/       ← 只放可执行入口：update_news.py / prerender.py / probe_aihot.py
+tools/ci/      ← CI 运维 shell 脚本（artifact 清理、瞬时故障重跑）
+data/          ← 只放前端要 fetch 的 5 个 JSON；管道状态在 pipeline-state 分支
+tests/         ← 业务单测；tests/ci/ 放 CI 脚本的测试替身
+docs/          ← 文档；docs/history/ 历史记录，docs/maintenance/ 运维诊断
+examples/      ← 与主站无依赖关系的独立示例组件
+skills/        ← Agent Skill 定义
 ```
 
 ## 核心模块职责
@@ -24,7 +26,7 @@ tests/         ← pytest
 | Trend Engine | `core/trend_engine/` | Embedding 聚类 + cosine 相似度 + 7 日基线突发检测 |
 | Multi-Agent | `core/agents/` | fetch/analyst/trend/editor/critic 五个 Agent，自动生成日报 |
 | Fetch | `core/fetch/` | 13 信源并发抓取（30+ RSS feed + 9 聚合站 + GitHub Trending） |
-| Normalize | `core/normalize/normalizer.py` | AI 关键词过滤、主题分类（AI/科技/数码/硬件/开源热榜）、标签标注 |
+| Normalize | `core/normalize/normalizer.py`（主题规则读 `config/topic_rules.json`）| AI 关键词过滤、主题分类（AI/科技/数码/硬件/开源热榜）、标签标注 |
 | Dedup | `core/dedup/deduplicator.py` | URL 精确 → 标题极净 → Bigram Jaccard 模糊，三阶段级联 |
 | Translate | `core/normalize/translator.py` | Google Translate API EN→ZH，断崖式缓存保护 |
 | Recommend | `core/recommend.py` | 推荐理由生成 + signal_score（60-99 兼容旧格式） |

@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.notifier import (
+from core.notifier import (
     build_markdown_message,
     build_webhook_payload,
     filter_breaking_news,
