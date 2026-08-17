@@ -1,20 +1,28 @@
 {
-  "generated_at": "2026-08-17T07:42:36.530591Z",
+  "generated_at": "2026-08-17T08:30:26.168279Z",
   "sites": [
+    {
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
+      "ok": true,
+      "item_count": 23,
+      "duration_ms": 74,
+      "error": null
+    },
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 66,
+      "duration_ms": 120,
       "error": "403 Client Error: Forbidden for url: https://r.jina.ai/https://aibreakfast.beehiiv.com/"
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 56,
-      "duration_ms": 876,
+      "item_count": 57,
+      "duration_ms": 707,
       "error": null
     },
     {
@@ -22,7 +30,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 1728,
+      "duration_ms": 2293,
       "error": null
     },
     {
@@ -30,7 +38,7 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 2597,
+      "duration_ms": 2704,
       "error": null
     },
     {
@@ -38,7 +46,7 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 2758,
+      "duration_ms": 3882,
       "error": null
     },
     {
@@ -46,7 +54,7 @@
       "site_name": "开源热榜",
       "ok": true,
       "item_count": 30,
-      "duration_ms": 3338,
+      "duration_ms": 3907,
       "error": null
     },
     {
@@ -54,47 +62,31 @@
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 5201,
+      "duration_ms": 5246,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='ai.hubtoday.app', port=443): Failed to resolve 'ai.hubtoday.app' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
-      "ok": true,
-      "item_count": 23,
-      "duration_ms": 10363,
-      "error": null
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 3032,
-      "duration_ms": 10481,
-      "error": null
-    },
-    {
-      "site_id": "newsnow",
-      "site_name": "NewsNow",
-      "ok": true,
-      "item_count": 117,
-      "duration_ms": 11222,
-      "error": null
     },
     {
       "site_id": "buzzing",
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 11471,
+      "duration_ms": 8662,
+      "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 3029,
+      "duration_ms": 11502,
       "error": null
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 665,
-      "duration_ms": 17700,
+      "item_count": 666,
+      "duration_ms": 11718,
       "error": null
     },
     {
@@ -102,15 +94,23 @@
       "site_name": "AI HOT",
       "ok": true,
       "item_count": 499,
-      "duration_ms": 21852,
+      "duration_ms": 15295,
+      "error": null
+    },
+    {
+      "site_id": "newsnow",
+      "site_name": "NewsNow",
+      "ok": true,
+      "item_count": 117,
+      "duration_ms": 16716,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 376,
-      "duration_ms": 22369,
+      "item_count": 379,
+      "duration_ms": 17473,
       "error": null
     },
     {
@@ -119,7 +119,7 @@
       "ok": true,
       "partial_failures": 0,
       "item_count": 50,
-      "duration_ms": 163,
+      "duration_ms": 246,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -135,9 +135,9 @@
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 6018,
-  "items_before_topic_filter": 6335,
-  "items_in_24h": 722,
+  "fetched_raw_items": 6020,
+  "items_before_topic_filter": 6416,
+  "items_in_24h": 738,
   "ai_processing": {
     "tldr_items": 0
   },
