@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-20T21:17:45.817275Z",
+  "generated_at": "2026-08-20T22:15:21.771217Z",
   "sites": [
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 40,
+      "duration_ms": 404,
       "error": "403 Client Error: Forbidden for url: https://r.jina.ai/https://aibreakfast.beehiiv.com/"
     },
     {
@@ -14,23 +14,7 @@
       "site_name": "Follow Builders",
       "ok": true,
       "item_count": 31,
-      "duration_ms": 137,
-      "error": null
-    },
-    {
-      "site_id": "zeli",
-      "site_name": "Zeli",
-      "ok": true,
-      "item_count": 76,
-      "duration_ms": 759,
-      "error": null
-    },
-    {
-      "site_id": "bestblogs",
-      "site_name": "BestBlogs",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 2108,
+      "duration_ms": 551,
       "error": null
     },
     {
@@ -38,15 +22,23 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 2294,
+      "duration_ms": 928,
       "error": null
     },
     {
-      "site_id": "oss_trending",
-      "site_name": "开源热榜",
+      "site_id": "zeli",
+      "site_name": "Zeli",
       "ok": true,
-      "item_count": 30,
-      "duration_ms": 3002,
+      "item_count": 76,
+      "duration_ms": 996,
+      "error": null
+    },
+    {
+      "site_id": "bestblogs",
+      "site_name": "BestBlogs",
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 1384,
       "error": null
     },
     {
@@ -54,7 +46,15 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 3432,
+      "duration_ms": 1524,
+      "error": null
+    },
+    {
+      "site_id": "oss_trending",
+      "site_name": "开源热榜",
+      "ok": true,
+      "item_count": 30,
+      "duration_ms": 2307,
       "error": null
     },
     {
@@ -62,15 +62,31 @@
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 5207,
+      "duration_ms": 5256,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='ai.hubtoday.app', port=443): Failed to resolve 'ai.hubtoday.app' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "site_id": "buzzing",
+      "site_name": "Buzzing",
+      "ok": true,
+      "item_count": 744,
+      "duration_ms": 5500,
+      "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 2992,
-      "duration_ms": 7630,
+      "item_count": 2946,
+      "duration_ms": 5540,
+      "error": null
+    },
+    {
+      "site_id": "official_ai",
+      "site_name": "Official AI Updates",
+      "ok": true,
+      "item_count": 680,
+      "duration_ms": 6251,
       "error": null
     },
     {
@@ -78,23 +94,7 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 127,
-      "duration_ms": 9483,
-      "error": null
-    },
-    {
-      "site_id": "buzzing",
-      "site_name": "Buzzing",
-      "ok": true,
-      "item_count": 744,
-      "duration_ms": 9629,
-      "error": null
-    },
-    {
-      "site_id": "official_ai",
-      "site_name": "Official AI Updates",
-      "ok": true,
-      "item_count": 694,
-      "duration_ms": 9670,
+      "duration_ms": 6791,
       "error": null
     },
     {
@@ -102,7 +102,7 @@
       "site_name": "AI HOT",
       "ok": true,
       "item_count": 500,
-      "duration_ms": 15716,
+      "duration_ms": 8068,
       "error": null
     },
     {
@@ -110,7 +110,7 @@
       "site_name": "Info Flow",
       "ok": true,
       "item_count": 323,
-      "duration_ms": 20572,
+      "duration_ms": 15226,
       "error": null
     },
     {
@@ -118,8 +118,8 @@
       "site_name": "OPML RSS",
       "ok": true,
       "partial_failures": 0,
-      "item_count": 49,
-      "duration_ms": 188,
+      "item_count": 48,
+      "duration_ms": 203,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -135,9 +135,9 @@
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5992,
-  "items_before_topic_filter": 8127,
-  "items_in_24h": 973,
+  "fetched_raw_items": 5931,
+  "items_before_topic_filter": 8100,
+  "items_in_24h": 978,
   "ai_processing": {
     "tldr_items": 0
   },
