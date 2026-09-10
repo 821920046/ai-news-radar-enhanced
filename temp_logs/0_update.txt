@@ -1,0 +1,570 @@
+﻿2026-06-25T10:10:30.6167436Z Current runner version: '***.335.***'
+2026-06-25T10:10:30.6206024Z ##[group]Runner Image Provisioner
+2026-06-25T10:10:30.6207676Z Hosted Compute Agent
+2026-06-25T10:10:30.6209016Z Version: ***0***606***.554
+2026-06-25T10:10:30.6210549Z Commit: 5e078***fdc90***47***3d3be8***0dd***4dd3***555c***bd***
+2026-06-25T10:10:30.6212687Z Build Date: ***0***6-06-***T***:40:46Z
+2026-06-25T10:10:30.6214251Z Worker ID: {cfb6786b-d9ba-409e-bc***3-65b3ba***c8b6c}
+2026-06-25T10:10:30.6215789Z Azure Region: eastus
+2026-06-25T10:10:30.6216866Z ##[endgroup]
+2026-06-25T10:10:30.6219952Z ##[group]Operating System
+2026-06-25T10:10:30.6221269Z Ubuntu
+2026-06-25T10:10:30.6222639Z ***4.04.4
+2026-06-25T10:10:30.6223864Z LTS
+2026-06-25T10:10:30.6224878Z ##[endgroup]
+2026-06-25T10:10:30.6226217Z ##[group]Runner Image
+2026-06-25T10:10:30.6227410Z Image: ubuntu-***4.04
+2026-06-25T10:10:30.6228718Z Version: ***0***606***5.***05.***
+2026-06-25T10:10:30.6231196Z Included Software: https://github.com/actions/runner-images/blob/ubuntu***4/***0***606***5.***05/images/ubuntu/Ubuntu***404-Readme.md
+2026-06-25T10:10:30.6234490Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu***4%***F***0***606***5.***05
+2026-06-25T10:10:30.6236672Z ##[endgroup]
+2026-06-25T10:10:30.6238908Z ##[group]GITHUB_TOKEN Permissions
+2026-06-25T10:10:30.6242119Z Contents: write
+2026-06-25T10:10:30.6243243Z Metadata: read
+2026-06-25T10:10:30.6244548Z ##[endgroup]
+2026-06-25T10:10:30.6247686Z Secret source: Actions
+2026-06-25T10:10:30.6249137Z Prepare workflow directory
+2026-06-25T10:10:30.6741092Z Prepare all required actions
+2026-06-25T10:10:30.6801290Z Getting action download info
+2026-06-25T10:10:30.8360778Z Download action repository 'actions/checkout@v6' (SHA:df4cb***c069e***874edd3***b43***f***884***7***cec0e***)
+2026-06-25T10:10:30.9189996Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74***98d8649806c4678c6***a***)
+2026-06-25T10:10:31.1960365Z Complete job name: update
+2026-06-25T10:10:31.2740854Z ##[group]Run actions/checkout@v6
+2026-06-25T10:10:31.2742098Z with:
+2026-06-25T10:10:31.2742756Z   repository: 8***9***0046/ai-news-radar-enhanced
+2026-06-25T10:10:31.2747650Z   token: ***
+2026-06-25T10:10:31.2748124Z   ssh-strict: true
+2026-06-25T10:10:31.2748634Z   ssh-user: git
+2026-06-25T10:10:31.2749172Z   persist-credentials: true
+2026-06-25T10:10:31.2749711Z   clean: true
+2026-06-25T10:10:31.2750190Z   sparse-checkout-cone-mode: true
+2026-06-25T10:10:31.2750766Z   fetch-depth: ***
+2026-06-25T10:10:31.2751237Z   fetch-tags: false
+2026-06-25T10:10:31.2751964Z   show-progress: true
+2026-06-25T10:10:31.2752513Z   lfs: false
+2026-06-25T10:10:31.2753025Z   submodules: false
+2026-06-25T10:10:31.2753578Z   set-safe-directory: true
+2026-06-25T10:10:31.2754355Z ##[endgroup]
+2026-06-25T10:10:31.3766101Z Syncing repository: 8***9***0046/ai-news-radar-enhanced
+2026-06-25T10:10:31.3768070Z ##[group]Getting Git version info
+2026-06-25T10:10:31.3769244Z Working directory is '/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced'
+2026-06-25T10:10:31.3770591Z [command]/usr/bin/git version
+2026-06-25T10:10:31.3839629Z git version ***.54.0
+2026-06-25T10:10:31.3864218Z ##[endgroup]
+2026-06-25T10:10:31.3878764Z Temporarily overriding HOME='/home/runner/work/_temp/400a6b3***-58***-44***-838f-6***57006***48' before making global git config changes
+2026-06-25T10:10:31.3883812Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-25T10:10:31.3885879Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced
+2026-06-25T10:10:31.3933095Z Deleting the contents of '/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced'
+2026-06-25T10:10:31.3936851Z ##[group]Determining repository object format
+2026-06-25T10:10:31.3939470Z ##[endgroup]
+2026-06-25T10:10:31.3940288Z ##[group]Initializing the repository
+2026-06-25T10:10:31.3945224Z [command]/usr/bin/git init /home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced
+2026-06-25T10:10:31.4055182Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-25T10:10:31.4056667Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-25T10:10:31.4057752Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-25T10:10:31.4058567Z hint: call:
+2026-06-25T10:10:31.4059185Z hint:
+2026-06-25T10:10:31.4060207Z hint: 	git config --global init.defaultBranch <name>
+2026-06-25T10:10:31.4061177Z hint:
+2026-06-25T10:10:31.4062578Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-25T10:10:31.4064422Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-25T10:10:31.4065900Z hint:
+2026-06-25T10:10:31.4066783Z hint: 	git branch -m <name>
+2026-06-25T10:10:31.4067733Z hint:
+2026-06-25T10:10:31.4068885Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-25T10:10:31.4071160Z Initialized empty Git repository in /home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git/
+2026-06-25T10:10:31.4075247Z [command]/usr/bin/git remote add origin https://github.com/8***9***0046/ai-news-radar-enhanced
+2026-06-25T10:10:31.4153006Z ##[endgroup]
+2026-06-25T10:10:31.4154813Z ##[group]Disabling automatic garbage collection
+2026-06-25T10:10:31.4156645Z [command]/usr/bin/git config --local gc.auto 0
+2026-06-25T10:10:31.4186494Z ##[endgroup]
+2026-06-25T10:10:31.4188329Z ##[group]Setting up auth
+2026-06-25T10:10:31.4189407Z Removing SSH command configuration
+2026-06-25T10:10:31.4195072Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-25T10:10:31.4229294Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-25T10:10:31.4585239Z Removing HTTP extra header
+2026-06-25T10:10:31.4590779Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-25T10:10:31.4622453Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-25T10:10:31.4830817Z Removing includeIf entries pointing to credentials config files
+2026-06-25T10:10:31.4836791Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-25T10:10:31.4867365Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-25T10:10:31.5082980Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-25T10:10:31.5117953Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git.path /home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:10:31.5146635Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:10:31.5179306Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:10:31.5207651Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:10:31.5234376Z ##[endgroup]
+2026-06-25T10:10:31.5235198Z ##[group]Fetching the repository
+2026-06-25T10:10:31.5243003Z [command]/usr/bin/git -c protocol.version=*** fetch --no-tags --prune --no-recurse-submodules --depth=*** origin +d3a667***39f5835e5667cf***c938***60fa6***9cee58:refs/remotes/origin/main
+2026-06-25T10:10:32.4756149Z From https://github.com/8***9***0046/ai-news-radar-enhanced
+2026-06-25T10:10:32.4758497Z  * [new ref]         d3a667***39f5835e5667cf***c938***60fa6***9cee58 -> origin/main
+2026-06-25T10:10:32.4803286Z [command]/usr/bin/git branch --list --remote origin/main
+2026-06-25T10:10:32.4841187Z   origin/main
+2026-06-25T10:10:32.4851787Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-06-25T10:10:32.4877533Z d3a667***39f5835e5667cf***c938***60fa6***9cee58
+2026-06-25T10:10:32.4882748Z ##[endgroup]
+2026-06-25T10:10:32.4884178Z ##[group]Determining the checkout info
+2026-06-25T10:10:32.4885715Z ##[endgroup]
+2026-06-25T10:10:32.4890400Z [command]/usr/bin/git sparse-checkout disable
+2026-06-25T10:10:32.4939498Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-06-25T10:10:32.4968978Z ##[group]Checking out the ref
+2026-06-25T10:10:32.4973885Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-06-25T10:10:32.5847313Z Switched to a new branch 'main'
+2026-06-25T10:10:32.5853222Z branch 'main' set up to track 'origin/main'.
+2026-06-25T10:10:32.5862449Z ##[endgroup]
+2026-06-25T10:10:32.5907220Z [command]/usr/bin/git log -*** --format=%H
+2026-06-25T10:10:32.5931102Z d3a667***39f5835e5667cf***c938***60fa6***9cee58
+2026-06-25T10:10:32.6334685Z ##[group]Run actions/setup-python@v6
+2026-06-25T10:10:32.6335581Z with:
+2026-06-25T10:10:32.6336242Z   python-version: 3.***
+2026-06-25T10:10:32.6336877Z   cache: pip
+2026-06-25T10:10:32.6337491Z   cache-dependency-path: requirements.txt
+2026-06-25T10:10:32.6338375Z   check-latest: false
+2026-06-25T10:10:32.6350116Z   token: ***
+2026-06-25T10:10:32.6350711Z   update-environment: true
+2026-06-25T10:10:32.6351580Z   allow-prereleases: false
+2026-06-25T10:10:32.6352293Z   freethreaded: false
+2026-06-25T10:10:32.6352905Z ##[endgroup]
+2026-06-25T10:10:32.7688180Z ##[group]Installed versions
+2026-06-25T10:10:32.7795254Z Successfully set up CPython (3.***.***5)
+2026-06-25T10:10:32.7796909Z ##[endgroup]
+2026-06-25T10:10:32.8079164Z [command]/opt/hostedtoolcache/Python/3.***.***5/x64/bin/pip cache dir
+2026-06-25T10:10:33.1310320Z /home/runner/.cache/pip
+2026-06-25T10:10:33.2466463Z Cache hit for: setup-python-Linux-x64-***4.04-Ubuntu-python-3.***.***5-pip-6a57***bdd780***5ba3f9***c5af***7ab***3c***c59***673db9f***ef***dd8***8***949a6***848
+2026-06-25T10:10:33.6901057Z Received 86940***30 of 86940***30 (***0.0%), ***06.3 MBs/sec
+2026-06-25T10:10:33.6902266Z Cache Size: ~83 MB (86940***30 B)
+2026-06-25T10:10:33.6933858Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7c8fba5***-cfcb-4ad6-bb79-697c***aa***d768/cache.tzst -P -C /home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced --use-compress-program unzstd
+2026-06-25T10:10:33.8237253Z Cache restored successfully
+2026-06-25T10:10:33.8278954Z Cache restored from key: setup-python-Linux-x64-***4.04-Ubuntu-python-3.***.***5-pip-6a57***bdd780***5ba3f9***c5af***7ab***3c***c59***673db9f***ef***dd8***8***949a6***848
+2026-06-25T10:10:33.8480819Z ##[group]Run python -m pip install --upgrade pip
+2026-06-25T10:10:33.8481664Z [36;***mpython -m pip install --upgrade pip[0m
+2026-06-25T10:10:33.8482102Z [36;***mpip install -r requirements.txt[0m
+2026-06-25T10:10:33.8677199Z shell: /usr/bin/bash -e {0}
+2026-06-25T10:10:33.8677536Z env:
+2026-06-25T10:10:33.8677904Z   pythonLocation: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:33.8678453Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib/pkgconfig
+2026-06-25T10:10:33.8678992Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:33.8679486Z   Python***_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:33.8679946Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:33.8680405Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib
+2026-06-25T10:10:33.8680799Z ##[endgroup]
+2026-06-25T10:10:34.4362073Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.***.***5/x64/lib/python3.***/site-packages (***6.***.***)
+2026-06-25T10:10:34.9822285Z Collecting requests==***.3***.3 (from -r requirements.txt (line ***))
+2026-06-25T10:10:34.9839348Z   Using cached requests-***.3***.3-py3-none-any.whl.metadata (4.6 kB)
+2026-06-25T10:10:34.9997886Z Collecting beautifulsoup4==4.***.3 (from -r requirements.txt (line ***))
+2026-06-25T10:10:35.0014072Z   Using cached beautifulsoup4-4.***.3-py3-none-any.whl.metadata (3.8 kB)
+2026-06-25T10:10:35.0165373Z Collecting feedparser==6.0.*** (from -r requirements.txt (line 3))
+2026-06-25T10:10:35.0191912Z   Using cached feedparser-6.0.***-py3-none-any.whl.metadata (***.4 kB)
+2026-06-25T10:10:35.0311773Z Collecting python-dateutil==***.9.0.post0 (from -r requirements.txt (line 4))
+2026-06-25T10:10:35.0329872Z   Using cached python_dateutil-***.9.0.post0-py***.py3-none-any.whl.metadata (8.4 kB)
+2026-06-25T10:10:35.0575644Z Collecting pytest==8.3.5 (from -r requirements.txt (line 5))
+2026-06-25T10:10:35.0591066Z   Using cached pytest-8.3.5-py3-none-any.whl.metadata (7.6 kB)
+2026-06-25T10:10:35.1072433Z Collecting fastapi==0.***5.0 (from -r requirements.txt (line 6))
+2026-06-25T10:10:35.1087977Z   Using cached fastapi-0.***5.0-py3-none-any.whl.metadata (***7 kB)
+2026-06-25T10:10:35.1304901Z Collecting uvicorn==0.30.0 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:35.1318741Z   Using cached uvicorn-0.30.0-py3-none-any.whl.metadata (6.3 kB)
+2026-06-25T10:10:35.2085743Z Collecting scikit-learn==***.5.0 (from -r requirements.txt (line 8))
+2026-06-25T10:10:35.2101247Z   Using cached scikit_learn-***.5.0-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl.metadata (*** kB)
+2026-06-25T10:10:35.3882547Z Collecting numpy==***.0.0 (from -r requirements.txt (line 9))
+2026-06-25T10:10:35.3897937Z   Using cached numpy-***.0.0-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl.metadata (60 kB)
+2026-06-25T10:10:35.4302144Z Collecting pyyaml==6.0.*** (from -r requirements.txt (line ***))
+2026-06-25T10:10:35.4318037Z   Using cached PyYAML-6.0.***-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl.metadata (***.*** kB)
+2026-06-25T10:10:35.5163214Z Collecting charset-normalizer<4,>=*** (from requests==***.3***.3->-r requirements.txt (line ***))
+2026-06-25T10:10:35.5178608Z   Using cached charset_normalizer-3.4.7-cp3***-cp3***-manylinux***0***4_x86_64.manylinux_***_***7_x86_64.manylinux_***_***8_x86_64.whl.metadata (40 kB)
+2026-06-25T10:10:35.5555804Z Collecting idna<4,>=***.5 (from requests==***.3***.3->-r requirements.txt (line ***))
+2026-06-25T10:10:35.5577355Z   Using cached idna-3.***8-py3-none-any.whl.metadata (6.*** kB)
+2026-06-25T10:10:35.6110484Z Collecting urllib3<3,>=***.***.*** (from requests==***.3***.3->-r requirements.txt (line ***))
+2026-06-25T10:10:35.6124993Z   Using cached urllib3-***.7.0-py3-none-any.whl.metadata (6.9 kB)
+2026-06-25T10:10:35.6293684Z Collecting certifi>=***0***7.4.***7 (from requests==***.3***.3->-r requirements.txt (line ***))
+2026-06-25T10:10:35.6307847Z   Using cached certifi-***0***6.6.***7-py3-none-any.whl.metadata (***.5 kB)
+2026-06-25T10:10:35.6450399Z Collecting soupsieve>***.*** (from beautifulsoup4==4.***.3->-r requirements.txt (line ***))
+2026-06-25T10:10:35.6465167Z   Using cached soupsieve-***.8.4-py3-none-any.whl.metadata (4.6 kB)
+2026-06-25T10:10:35.6609484Z Collecting sgmllib3k (from feedparser==6.0.***->-r requirements.txt (line 3))
+2026-06-25T10:10:35.6610295Z   Using cached sgmllib3k-***.0.0-py3-none-any.whl
+2026-06-25T10:10:35.6766176Z Collecting six>=***.5 (from python-dateutil==***.9.0.post0->-r requirements.txt (line 4))
+2026-06-25T10:10:35.6779555Z   Using cached six-***.***7.0-py***.py3-none-any.whl.metadata (***.7 kB)
+2026-06-25T10:10:35.6869946Z Collecting iniconfig (from pytest==8.3.5->-r requirements.txt (line 5))
+2026-06-25T10:10:35.6883794Z   Using cached iniconfig-***.3.0-py3-none-any.whl.metadata (***.5 kB)
+2026-06-25T10:10:35.7032159Z Collecting packaging (from pytest==8.3.5->-r requirements.txt (line 5))
+2026-06-25T10:10:35.7045680Z   Using cached packaging-***6.***-py3-none-any.whl.metadata (3.5 kB)
+2026-06-25T10:10:35.7147668Z Collecting pluggy<***,>=***.5 (from pytest==8.3.5->-r requirements.txt (line 5))
+2026-06-25T10:10:35.7160676Z   Using cached pluggy-***.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-06-25T10:10:35.7360451Z Collecting starlette<0.39.0,>=0.37.*** (from fastapi==0.***5.0->-r requirements.txt (line 6))
+2026-06-25T10:10:35.7374447Z   Using cached starlette-0.38.6-py3-none-any.whl.metadata (6.0 kB)
+2026-06-25T10:10:35.8359790Z Collecting pydantic!=***.8,!=***.8.***,!=***.0.0,!=***.0.***,!=***.***.0,<3.0.0,>=***.7.4 (from fastapi==0.***5.0->-r requirements.txt (line 6))
+2026-06-25T10:10:35.8374842Z   Using cached pydantic-***.***3.4-py3-none-any.whl.metadata (***9 kB)
+2026-06-25T10:10:35.8557921Z Collecting typing-extensions>=4.8.0 (from fastapi==0.***5.0->-r requirements.txt (line 6))
+2026-06-25T10:10:35.8571752Z   Using cached typing_extensions-4.***5.0-py3-none-any.whl.metadata (3.3 kB)
+2026-06-25T10:10:35.8718077Z Collecting click>=7.0 (from uvicorn==0.30.0->uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:35.9266911Z   Downloading click-8.4.***-py3-none-any.whl.metadata (***.6 kB)
+2026-06-25T10:10:35.9390231Z Collecting h***>=0.8 (from uvicorn==0.30.0->uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:35.9403781Z   Using cached h***-0.***6.0-py3-none-any.whl.metadata (8.3 kB)
+2026-06-25T10:10:36.0562867Z Collecting scipy>=***.6.0 (from scikit-learn==***.5.0->-r requirements.txt (line 8))
+2026-06-25T10:10:36.0577591Z   Using cached scipy-***.***7.***-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux_***_***8_x86_64.whl.metadata (6*** kB)
+2026-06-25T10:10:36.0853790Z Collecting joblib>=***.***.0 (from scikit-learn==***.5.0->-r requirements.txt (line 8))
+2026-06-25T10:10:36.0869885Z   Using cached joblib-***.5.3-py3-none-any.whl.metadata (5.5 kB)
+2026-06-25T10:10:36.0970052Z Collecting threadpoolctl>=3.***.0 (from scikit-learn==***.5.0->-r requirements.txt (line 8))
+2026-06-25T10:10:36.0984343Z   Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (***3 kB)
+2026-06-25T10:10:36.1282891Z Collecting httptools>=0.5.0 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:36.1298373Z   Using cached httptools-0.8.0-cp3***-cp3***-manylinux***_x86_64.manylinux_***_***8_x86_64.manylinux_***_5_x86_64.whl.metadata (3.5 kB)
+2026-06-25T10:10:36.1432637Z Collecting python-dotenv>=0.***3 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:36.1447091Z   Using cached python_dotenv-***.***.***-py3-none-any.whl.metadata (***7 kB)
+2026-06-25T10:10:36.1800107Z Collecting uvloop!=0.***5.0,!=0.***5.***,>=0.***4.0 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:36.1815484Z   Using cached uvloop-0.***.***-cp3***-cp3***-manylinux***0***4_x86_64.manylinux_***_***7_x86_64.manylinux_***_***8_x86_64.whl.metadata (4.9 kB)
+2026-06-25T10:10:36.2497068Z Collecting watchfiles>=0.***3 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:36.2511971Z   Using cached watchfiles-***.***.0-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl.metadata (4.9 kB)
+2026-06-25T10:10:36.3499705Z Collecting websockets>=***.4 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 7))
+2026-06-25T10:10:36.3515597Z   Using cached websockets-***6.0-cp3***-cp3***-manylinux***_x86_64.manylinux_***_***8_x86_64.manylinux_***_5_x86_64.whl.metadata (6.8 kB)
+2026-06-25T10:10:36.3624246Z Collecting annotated-types>=0.6.0 (from pydantic!=***.8,!=***.8.***,!=***.0.0,!=***.0.***,!=***.***.0,<3.0.0,>=***.7.4->fastapi==0.***5.0->-r requirements.txt (line 6))
+2026-06-25T10:10:36.3637288Z   Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (***5 kB)
+2026-06-25T10:10:36.9743379Z Collecting pydantic-core==***.46.4 (from pydantic!=***.8,!=***.8.***,!=***.0.0,!=***.0.***,!=***.***.0,<3.0.0,>=***.7.4->fastapi==0.***5.0->-r requirements.txt (line 6))
+2026-06-25T10:10:36.9759238Z   Using cached pydantic_core-***.46.4-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl.metadata (6.6 kB)
+2026-06-25T10:10:36.9863821Z Collecting typing-inspection>=0.4.*** (from pydantic!=***.8,!=***.8.***,!=***.0.0,!=***.0.***,!=***.***.0,<3.0.0,>=***.7.4->fastapi==0.***5.0->-r requirements.txt (line 6))
+2026-06-25T10:10:36.9877221Z   Using cached typing_inspection-0.4.***-py3-none-any.whl.metadata (***.6 kB)
+2026-06-25T10:10:37.0043515Z Collecting anyio<5,>=3.4.0 (from starlette<0.39.0,>=0.37.***->fastapi==0.***5.0->-r requirements.txt (line 6))
+2026-06-25T10:10:37.0077666Z   Downloading anyio-4.***4.***-py3-none-any.whl.metadata (4.6 kB)
+2026-06-25T10:10:37.0264230Z Using cached requests-***.3***.3-py3-none-any.whl (64 kB)
+2026-06-25T10:10:37.0277163Z Using cached beautifulsoup4-4.***.3-py3-none-any.whl (***47 kB)
+2026-06-25T10:10:37.0290185Z Using cached feedparser-6.0.***-py3-none-any.whl (8*** kB)
+2026-06-25T10:10:37.0303794Z Using cached python_dateutil-***.9.0.post0-py***.py3-none-any.whl (***9 kB)
+2026-06-25T10:10:37.0317102Z Using cached pytest-8.3.5-py3-none-any.whl (343 kB)
+2026-06-25T10:10:37.0330831Z Using cached fastapi-0.***5.0-py3-none-any.whl (94 kB)
+2026-06-25T10:10:37.0344239Z Using cached uvicorn-0.30.0-py3-none-any.whl (6*** kB)
+2026-06-25T10:10:37.0357491Z Using cached scikit_learn-***.5.0-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl (***3.3 MB)
+2026-06-25T10:10:37.0423228Z Using cached numpy-***.0.0-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl (***9.3 MB)
+2026-06-25T10:10:37.0504151Z Using cached PyYAML-6.0.***-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl (76*** kB)
+2026-06-25T10:10:37.0519720Z Using cached charset_normalizer-3.4.7-cp3***-cp3***-manylinux***0***4_x86_64.manylinux_***_***7_x86_64.manylinux_***_***8_x86_64.whl (***4 kB)
+2026-06-25T10:10:37.0532457Z Using cached idna-3.***8-py3-none-any.whl (65 kB)
+2026-06-25T10:10:37.0545495Z Using cached pluggy-***.6.0-py3-none-any.whl (***0 kB)
+2026-06-25T10:10:37.0558326Z Using cached pydantic-***.***3.4-py3-none-any.whl (47*** kB)
+2026-06-25T10:10:37.0573150Z Using cached pydantic_core-***.46.4-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl (***.*** MB)
+2026-06-25T10:10:37.0592878Z Using cached starlette-0.38.6-py3-none-any.whl (7*** kB)
+2026-06-25T10:10:37.0629799Z Downloading anyio-4.***4.***-py3-none-any.whl (***4 kB)
+2026-06-25T10:10:37.0886013Z Using cached urllib3-***.7.0-py3-none-any.whl (***3*** kB)
+2026-06-25T10:10:37.0899030Z Using cached annotated_types-0.7.0-py3-none-any.whl (***3 kB)
+2026-06-25T10:10:37.0911829Z Using cached certifi-***0***6.6.***7-py3-none-any.whl (***33 kB)
+2026-06-25T10:10:37.0944891Z Downloading click-8.4.***-py3-none-any.whl (***9 kB)
+2026-06-25T10:10:37.0996137Z Using cached h***-0.***6.0-py3-none-any.whl (37 kB)
+2026-06-25T10:10:37.1009349Z Using cached httptools-0.8.0-cp3***-cp3***-manylinux***_x86_64.manylinux_***_***8_x86_64.manylinux_***_5_x86_64.whl (464 kB)
+2026-06-25T10:10:37.1023873Z Using cached joblib-***.5.3-py3-none-any.whl (309 kB)
+2026-06-25T10:10:37.1037349Z Using cached python_dotenv-***.***.***-py3-none-any.whl (*** kB)
+2026-06-25T10:10:37.1050274Z Using cached scipy-***.***7.***-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux_***_***8_x86_64.whl (35.3 MB)
+2026-06-25T10:10:37.1193134Z Using cached six-***.***7.0-py***.py3-none-any.whl (*** kB)
+2026-06-25T10:10:37.1205228Z Using cached soupsieve-***.8.4-py3-none-any.whl (37 kB)
+2026-06-25T10:10:37.1218031Z Using cached threadpoolctl-3.6.0-py3-none-any.whl (***8 kB)
+2026-06-25T10:10:37.1230615Z Using cached typing_extensions-4.***5.0-py3-none-any.whl (44 kB)
+2026-06-25T10:10:37.1243830Z Using cached typing_inspection-0.4.***-py3-none-any.whl (***4 kB)
+2026-06-25T10:10:37.1256911Z Using cached uvloop-0.***.***-cp3***-cp3***-manylinux***0***4_x86_64.manylinux_***_***7_x86_64.manylinux_***_***8_x86_64.whl (3.8 MB)
+2026-06-25T10:10:37.1283496Z Using cached watchfiles-***.***.0-cp3***-cp3***-manylinux_***_***7_x86_64.manylinux***0***4_x86_64.whl (456 kB)
+2026-06-25T10:10:37.1297971Z Using cached websockets-***6.0-cp3***-cp3***-manylinux***_x86_64.manylinux_***_***8_x86_64.manylinux_***_5_x86_64.whl (***84 kB)
+2026-06-25T10:10:37.1310794Z Using cached iniconfig-***.3.0-py3-none-any.whl (7.5 kB)
+2026-06-25T10:10:37.1323849Z Using cached packaging-***6.***-py3-none-any.whl (***0 kB)
+2026-06-25T10:10:37.3000015Z Installing collected packages: sgmllib3k, websockets, uvloop, urllib3, typing-extensions, threadpoolctl, soupsieve, six, pyyaml, python-dotenv, pluggy, packaging, numpy, joblib, iniconfig, idna, httptools, h***, feedparser, click, charset-normalizer, certifi, annotated-types, uvicorn, typing-inspection, scipy, requests, python-dateutil, pytest, pydantic-core, beautifulsoup4, anyio, watchfiles, starlette, scikit-learn, pydantic, fastapi
+2026-06-25T10:10:46.3315699Z 
+2026-06-25T10:10:46.3337684Z Successfully installed annotated-types-0.7.0 anyio-4.***4.*** beautifulsoup4-4.***.3 certifi-***0***6.6.***7 charset-normalizer-3.4.7 click-8.4.*** fastapi-0.***5.0 feedparser-6.0.*** h***-0.***6.0 httptools-0.8.0 idna-3.***8 iniconfig-***.3.0 joblib-***.5.3 numpy-***.0.0 packaging-***6.*** pluggy-***.6.0 pydantic-***.***3.4 pydantic-core-***.46.4 pytest-8.3.5 python-dateutil-***.9.0.post0 python-dotenv-***.***.*** pyyaml-6.0.*** requests-***.3***.3 scikit-learn-***.5.0 scipy-***.***7.*** sgmllib3k-***.0.0 six-***.***7.0 soupsieve-***.8.4 starlette-0.38.6 threadpoolctl-3.6.0 typing-extensions-4.***5.0 typing-inspection-0.4.*** urllib3-***.7.0 uvicorn-0.30.0 uvloop-0.***.*** watchfiles-***.***.0 websockets-***6.0
+2026-06-25T10:10:46.4477735Z ##[group]Run python -m pytest tests/ -v --tb=short
+2026-06-25T10:10:46.4478194Z [36;***mpython -m pytest tests/ -v --tb=short[0m
+2026-06-25T10:10:46.4511154Z shell: /usr/bin/bash -e {0}
+2026-06-25T10:10:46.4511587Z env:
+2026-06-25T10:10:46.4511904Z   pythonLocation: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:46.4512396Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib/pkgconfig
+2026-06-25T10:10:46.4512895Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:46.4513334Z   Python***_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:46.4513748Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:46.4514170Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib
+2026-06-25T10:10:46.4514525Z ##[endgroup]
+2026-06-25T10:10:46.9113914Z ============================= test session starts ==============================
+2026-06-25T10:10:46.9115125Z platform linux -- Python 3.***.***5, pytest-8.3.5, pluggy-***.6.0 -- /opt/hostedtoolcache/Python/3.***.***5/x64/bin/python
+2026-06-25T10:10:46.9116139Z cachedir: .pytest_cache
+2026-06-25T10:10:46.9116829Z rootdir: /home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced
+2026-06-25T10:10:46.9117619Z plugins: anyio-4.***4.***
+2026-06-25T10:10:47.4328054Z collecting ... collected 60 items
+2026-06-25T10:10:47.4328488Z 
+2026-06-25T10:10:47.4342199Z tests/test_ai_processor.py::AiProcessorTests::test_generate_tldr_rotates_after_rate_limit PASSED [  ***%]
+2026-06-25T10:10:47.4350087Z tests/test_ai_processor.py::AiProcessorTests::test_key_pool_dedupes_and_marks_exhausted PASSED [  3%]
+2026-06-25T10:10:47.4373563Z tests/test_ai_processor.py::AiProcessorTests::test_process_items_only_selected_top_n PASSED [  5%]
+2026-06-25T10:10:47.4386983Z tests/test_ai_processor.py::AiProcessorTests::test_process_items_without_keys_is_noop PASSED [  6%]
+2026-06-25T10:10:47.4394829Z tests/test_dedup.py::DedupTests::test_compute_title_similarity PASSED    [  8%]
+2026-06-25T10:10:47.4426182Z tests/test_dedup.py::DedupTests::test_dedupe_items_by_title_url_stages PASSED [ ***%]
+2026-06-25T10:10:47.4433669Z tests/test_dedup.py::DedupTests::test_merge_items_group PASSED           [ ***%]
+2026-06-25T10:10:47.4444887Z tests/test_dedup.py::DedupTests::test_normalize_title_for_dedup PASSED   [ ***3%]
+2026-06-25T10:10:47.4454874Z tests/test_dedup.py::DedupTests::test_pick_best_item PASSED              [ ***5%]
+2026-06-25T10:10:47.4462555Z tests/test_notifier.py::NotifierTests::test_build_markdown_message_includes_tldr_and_link PASSED [ ***6%]
+2026-06-25T10:10:47.4468774Z tests/test_notifier.py::NotifierTests::test_build_webhook_payload_shapes PASSED [ ***8%]
+2026-06-25T10:10:47.4475737Z tests/test_notifier.py::NotifierTests::test_filter_breaking_news_uses_score_tags_and_dedupes_titles PASSED [ ***0%]
+2026-06-25T10:10:47.4482901Z tests/test_notifier.py::NotifierTests::test_select_digest_items_prefers_hotness_then_time PASSED [ ***%]
+2026-06-25T10:10:47.4496388Z tests/test_recommend.py::RecommendTests::test_enriches_items_in_place PASSED [ ***3%]
+2026-06-25T10:10:47.4503417Z tests/test_recommend.py::RecommendTests::test_official_source_gets_higher_score PASSED [ ***5%]
+2026-06-25T10:10:47.4512528Z tests/test_recommend.py::RecommendTests::test_reason_uses_article_specific_fact PASSED [ ***6%]
+2026-06-25T10:10:47.4554774Z tests/test_signal_score.py::test_weights_are_normalized PASSED           [ ***8%]
+2026-06-25T10:10:47.4594547Z tests/test_signal_score.py::test_official_source_scores_high PASSED      [ 30%]
+2026-06-25T10:10:47.4633355Z tests/test_signal_score.py::test_low_signal_is_c PASSED                  [ 3***%]
+2026-06-25T10:10:47.4672767Z tests/test_signal_score.py::test_score_batch_annotates_and_distributes PASSED [ 33%]
+2026-06-25T10:10:47.4722017Z tests/test_signal_score.py::test_percentile_mode_splits_levels PASSED    [ 35%]
+2026-06-25T10:10:47.4730040Z tests/test_topic_filter.py::TopicFilterTests::test_accepts_ai_keyword PASSED [ 36%]
+2026-06-25T10:10:47.4739341Z tests/test_topic_filter.py::TopicFilterTests::test_accepts_chinese_model_news_after_noise_tightening PASSED [ 38%]
+2026-06-25T10:10:47.4746463Z tests/test_topic_filter.py::TopicFilterTests::test_accepts_copilot_keyword PASSED [ 40%]
+2026-06-25T10:10:47.4753996Z tests/test_topic_filter.py::TopicFilterTests::test_accepts_follow_builders_curated_feed PASSED [ 4***%]
+2026-06-25T10:10:47.4760834Z tests/test_topic_filter.py::TopicFilterTests::test_accepts_robotics_keyword PASSED [ 43%]
+2026-06-25T10:10:47.4768256Z tests/test_topic_filter.py::TopicFilterTests::test_build_latest_payloads_keeps_initial_payload_slim PASSED [ 45%]
+2026-06-25T10:10:47.4775881Z tests/test_topic_filter.py::TopicFilterTests::test_buzzing_source_fallback_to_host PASSED [ 46%]
+2026-06-25T10:10:47.4786581Z tests/test_topic_filter.py::TopicFilterTests::test_dedupe_items_by_title_url_latest PASSED [ 48%]
+2026-06-25T10:10:47.4794877Z tests/test_topic_filter.py::TopicFilterTests::test_fix_mojibake PASSED   [ 50%]
+2026-06-25T10:10:47.4801890Z tests/test_topic_filter.py::TopicFilterTests::test_hubtoday_placeholder_title PASSED [ 5***%]
+2026-06-25T10:10:47.4818825Z tests/test_topic_filter.py::TopicFilterTests::test_parse_ai_breakfast_items PASSED [ 53%]
+2026-06-25T10:10:47.4835790Z tests/test_topic_filter.py::TopicFilterTests::test_parse_anthropic_news_items PASSED [ 55%]
+2026-06-25T10:10:47.4845021Z tests/test_topic_filter.py::TopicFilterTests::test_parse_atom_feed_entries_via_xml PASSED [ 56%]
+2026-06-25T10:10:47.4852908Z tests/test_topic_filter.py::TopicFilterTests::test_parse_feed_entries_via_xml PASSED [ 58%]
+2026-06-25T10:10:47.4863666Z tests/test_topic_filter.py::TopicFilterTests::test_parse_follow_builders_items PASSED [ 60%]
+2026-06-25T10:10:47.4877922Z tests/test_topic_filter.py::TopicFilterTests::test_parse_openai_codex_changelog_items PASSED [ 6***%]
+2026-06-25T10:10:47.4885031Z tests/test_topic_filter.py::TopicFilterTests::test_redacts_email_like_public_text PASSED [ 63%]
+2026-06-25T10:10:47.4892110Z tests/test_topic_filter.py::TopicFilterTests::test_rejects_broad_agent_noise_without_ai_context PASSED [ 65%]
+2026-06-25T10:10:47.4899119Z tests/test_topic_filter.py::TopicFilterTests::test_rejects_commerce_noise PASSED [ 66%]
+2026-06-25T10:10:47.4906338Z tests/test_topic_filter.py::TopicFilterTests::test_rejects_noise_topic PASSED [ 68%]
+2026-06-25T10:10:47.4914030Z tests/test_topic_filter.py::TopicFilterTests::test_zeli_only_***4h_hot PASSED [ 70%]
+2026-06-25T10:10:47.4926141Z tests/test_utils.py::UtilsTests::test_atomic_write_text PASSED           [ 7***%]
+2026-06-25T10:10:47.4934233Z tests/test_utils.py::UtilsTests::test_extract_image_url_from_html PASSED [ 73%]
+2026-06-25T10:10:47.4942940Z tests/test_utils.py::UtilsTests::test_extract_image_url_prefers_og_image PASSED [ 75%]
+2026-06-25T10:10:47.4950893Z tests/test_utils.py::UtilsTests::test_make_item_id_stable PASSED         [ 76%]
+2026-06-25T10:10:47.4958096Z tests/test_utils.py::UtilsTests::test_normalize_image_url_rejects_inline_data PASSED [ 78%]
+2026-06-25T10:10:47.4965626Z tests/test_utils.py::UtilsTests::test_normalize_url_removes_tracking PASSED [ 80%]
+2026-06-25T10:10:47.4974343Z tests/test_utils.py::UtilsTests::test_parse_date_any_english_rfc_not_misparsed_as_today PASSED [ 8***%]
+2026-06-25T10:10:47.4984863Z tests/test_utils.py::UtilsTests::test_parse_opml_subscriptions PASSED    [ 83%]
+2026-06-25T10:10:47.4991706Z tests/test_utils.py::UtilsTests::test_parse_relative_time_zh_minutes PASSED [ 85%]
+2026-06-25T10:10:47.5005919Z tests/test_utils.py::UtilsTests::test_safeguard_title_zh_cache_normal PASSED [ 86%]
+2026-06-25T10:10:47.5019929Z tests/test_utils.py::UtilsTests::test_safeguard_title_zh_cache_plummet_blocks_and_backs_up PASSED [ 88%]
+2026-06-25T10:10:47.5028968Z tests/test_utils.py::UtilsTests::test_title_cache_pruning_logic PASSED   [ 90%]
+2026-06-25T10:10:47.5036530Z tests/test_waytoagi_utils.py::WaytoAgiUtilsTests::test_clean_update_title PASSED [ 9***%]
+2026-06-25T10:10:47.5043348Z tests/test_waytoagi_utils.py::WaytoAgiUtilsTests::test_decode_escaped_json PASSED [ 93%]
+2026-06-25T10:10:47.5052275Z tests/test_waytoagi_utils.py::WaytoAgiUtilsTests::test_extract_recent_updates_from_block_map PASSED [ 95%]
+2026-06-25T10:10:47.5058379Z tests/test_waytoagi_utils.py::WaytoAgiUtilsTests::test_infer_shanghai_year_for_month_day PASSED [ 96%]
+2026-06-25T10:10:47.5064982Z tests/test_waytoagi_utils.py::WaytoAgiUtilsTests::test_parse_md_heading PASSED [ 98%]
+2026-06-25T10:10:47.5083967Z tests/test_waytoagi_utils.py::WaytoAgiUtilsTests::test_parse_ym_heading PASSED [***0%]
+2026-06-25T10:10:47.5084499Z 
+2026-06-25T10:10:47.5084684Z ============================== 60 passed in 0.60s ==============================
+2026-06-25T10:10:47.5578193Z ##[group]Run mkdir -p feeds
+2026-06-25T10:10:47.5578573Z [36;***mmkdir -p feeds[0m
+2026-06-25T10:10:47.5578863Z [36;***mif [ -n "$FOLLOW_OPML_B64" ]; then[0m
+2026-06-25T10:10:47.5579386Z [36;***m  if printf '%s' "$FOLLOW_OPML_B64" | tr -d '\r\n ' | base64 --decode > feeds/follow.opml; then[0m
+2026-06-25T10:10:47.5580001Z [36;***m    echo "Loaded feeds/follow.opml from FOLLOW_OPML_B64 secret"[0m
+2026-06-25T10:10:47.5580387Z [36;***m  else[0m
+2026-06-25T10:10:47.5580643Z [36;***m    rm -f feeds/follow.opml[0m
+2026-06-25T10:10:47.5581149Z [36;***m    echo "::warning::FOLLOW_OPML_B64 is set but is not valid base64; continuing without private OPML"[0m
+2026-06-25T10:10:47.5581850Z [36;***m  fi[0m
+2026-06-25T10:10:47.5582063Z [36;***melse[0m
+2026-06-25T10:10:47.5582384Z [36;***m  echo "No FOLLOW_OPML_B64 secret provided; RSS OPML is optional"[0m
+2026-06-25T10:10:47.5582777Z [36;***mfi[0m
+2026-06-25T10:10:47.5614058Z shell: /usr/bin/bash -e {0}
+2026-06-25T10:10:47.5614366Z env:
+2026-06-25T10:10:47.5614674Z   pythonLocation: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5633145Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib/pkgconfig
+2026-06-25T10:10:47.5633717Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5634171Z   Python***_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5634631Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5635082Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib
+2026-06-25T10:10:47.5635471Z   FOLLOW_OPML_B64: $ secrets.FOLLOW_OPML_B64
+2026-06-25T10:10:47.5635778Z ##[endgroup]
+2026-06-25T10:10:47.5718903Z base64: invalid input
+2026-06-25T10:10:47.5747961Z ##[warning]FOLLOW_OPML_B64 is set but is not valid base64; continuing without private OPML
+2026-06-25T10:10:47.5795868Z ##[group]Run if [ -f feeds/follow.opml ]; then
+2026-06-25T10:10:47.5796274Z [36;***mif [ -f feeds/follow.opml ]; then[0m
+2026-06-25T10:10:47.5796878Z [36;***m  python scripts/update_news.py --output-dir data --window-hours ***4 --archive-days 3 --rss-opml feeds/follow.opml[0m
+2026-06-25T10:10:47.5797454Z [36;***melse[0m
+2026-06-25T10:10:47.5797860Z [36;***m  python scripts/update_news.py --output-dir data --window-hours ***4 --archive-days 3[0m
+2026-06-25T10:10:47.5798322Z [36;***mfi[0m
+2026-06-25T10:10:47.5826856Z shell: /usr/bin/bash -e {0}
+2026-06-25T10:10:47.5827137Z env:
+2026-06-25T10:10:47.5827451Z   pythonLocation: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5827941Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib/pkgconfig
+2026-06-25T10:10:47.5828414Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5828840Z   Python***_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5829318Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.***.***5/x64
+2026-06-25T10:10:47.5829744Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.***.***5/x64/lib
+2026-06-25T10:10:47.5834979Z   OPENROUTER_KEYS: ***
+2026-06-25T10:10:47.5835273Z   OPENROUTER_MODEL: ***
+2026-06-25T10:10:47.5835523Z   OPENROUTER_HTTP_REFERER: 
+2026-06-25T10:10:47.5835781Z   AI_TLDR_ENABLED: ***
+2026-06-25T10:10:47.5836014Z   AI_TLDR_TOP_N: ***
+2026-06-25T10:10:47.5836281Z   AI_TLDR_MAX_WORKERS: ***
+2026-06-25T10:10:47.5836531Z   AI_TRANSLATE_ENABLED: 
+2026-06-25T10:10:47.5837010Z   WEBHOOK_URL: ***
+2026-06-25T10:10:47.5837239Z   WEBHOOK_TYPE: 
+2026-06-25T10:10:47.5837457Z   WEBHOOK_MODE: 
+2026-06-25T10:10:47.5837685Z   WEBHOOK_HOTNESS_THRESHOLD: 
+2026-06-25T10:10:47.5837939Z ##[endgroup]
+2026-06-25T10:10:47.8195340Z ***:***:47 [INFO] core.pipeline.main_pipeline: [Pipeline] Stage ***/7: Fetching from all sources...
+2026-06-25T10:10:48.0785735Z ***:***:48 [WARNING] core.fetch.newsletters: BestBlogs API fetch failed: 403 Client Error:  for url: https://api.bestblogs.dev/api/newsletter/list
+2026-06-25T10:10:49.8779905Z ***:***:49 [INFO] core.fetch.github_fetcher: Vercel 模板市场抓取到 *** 条
+2026-06-25T10:10:50.6021157Z ***:***:50 [INFO] core.fetch.github_fetcher: 开源热榜共抓取 34 条，综合排名后取 TOP 30 条
+2026-06-25T10:10:54.7335862Z ***:***:54 [WARNING] core.fetch.rss_fetcher: Official source RSS: 量子位 failed: 403 Client Error: Forbidden for url: https://www.qbitai.com/feed
+2026-06-25T10:11:13.3519445Z ***:***:***3 [INFO] core.pipeline.main_pipeline: [Pipeline] Fetched 5679 raw items from ***3 sources.
+2026-06-25T10:11:13.3520307Z ***:***:***3 [INFO] core.pipeline.main_pipeline: [Pipeline] Stage ***/7: Normalizing...
+2026-06-25T10:11:16.9846591Z ***:***:***6 [INFO] core.pipeline.main_pipeline: [Pipeline] Stage 3/7: Translating titles...
+2026-06-25T10:11:17.0536830Z ***:***:***7 [INFO] core.normalize.translator: [Translate] AI 翻译已启用，共 *** 个 API key
+2026-06-25T10:11:17.0639511Z ***:***:***7 [INFO] core.normalize.translator: [Translate] AI 批量翻译 80 条标题...
+2026-06-25T10:11:22.6663527Z ***:***:*** [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:11:28.0163484Z ***:***:***8 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:11:34.4321103Z ***:***:34 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:11:39.8160834Z ***:***:39 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:11:45.9715924Z ***:***:45 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:11:51.7022854Z ***:***:5*** [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:11:58.2940273Z ***:***:58 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:12:03.8864610Z ***:***:03 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:12:09.7831578Z ***:***:09 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:12:15.1838516Z ***:***:***5 [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:12:21.2203959Z ***:***:*** [WARNING] core.normalize.translator: [AI Translate Batch] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:13:15.6630802Z ***:***3:***5 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:13:20.9506384Z ***:***3:***0 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:13:26.2362964Z ***:***3:***6 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:14:12.1238922Z ***:***4:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:14:17.5584893Z ***:***4:***7 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:14:22.9231307Z ***:***4:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:14:57.9700102Z ***:***4:57 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:03.1873393Z ***:***5:03 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:09.1519032Z ***:***5:09 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:14.5283267Z ***:***5:***4 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:21.2010333Z ***:***5:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:26.7154664Z ***:***5:***6 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:32.0523928Z ***:***5:3*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:37.8024084Z ***:***5:37 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:43.6720993Z ***:***5:43 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:49.5570495Z ***:***5:49 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:15:55.2552533Z ***:***5:55 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:00.4769625Z ***:***6:00 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:06.7469104Z ***:***6:06 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:12.0217300Z ***:***6:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:17.2539014Z ***:***6:***7 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:22.5339943Z ***:***6:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:28.5735273Z ***:***6:***8 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:33.9269144Z ***:***6:33 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:39.2208531Z ***:***6:39 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:44.4146807Z ***:***6:44 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:50.3516809Z ***:***6:50 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:16:55.8388765Z ***:***6:55 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:01.5005066Z ***:***7:0*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:07.4896002Z ***:***7:07 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:13.8037486Z ***:***7:***3 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:19.2272756Z ***:***7:***9 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:24.6380410Z ***:***7:***4 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:29.8991994Z ***:***7:***9 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:36.2708628Z ***:***7:36 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:41.7034048Z ***:***7:4*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:47.0738968Z ***:***7:47 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:52.2222095Z ***:***7:5*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:17:58.2907626Z ***:***7:58 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:03.4959700Z ***:***8:03 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:09.3430010Z ***:***8:09 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:15.0248507Z ***:***8:***5 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:20.8445493Z ***:***8:***0 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:26.1374332Z ***:***8:***6 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:31.3144985Z ***:***8:3*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:36.6844047Z ***:***8:36 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:42.1556884Z ***:***8:4*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:48.1120137Z ***:***8:48 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:53.9848467Z ***:***8:53 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:18:59.9310437Z ***:***8:59 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:05.6007055Z ***:***9:05 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:10.9296656Z ***:***9:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:16.1988211Z ***:***9:***6 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:21.4234108Z ***:***9:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:27.9589011Z ***:***9:***7 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:33.3228392Z ***:***9:33 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:38.6105121Z ***:***9:38 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:43.9957909Z ***:***9:43 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:49.9697712Z ***:***9:49 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:19:55.3934697Z ***:***9:55 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:00.8058173Z ***:***0:00 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:06.0372001Z ***:***0:06 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:11.5190157Z ***:***0:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:16.7858344Z ***:***0:***6 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:22.0585300Z ***:***0:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:27.2259622Z ***:***0:***7 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:33.7457320Z ***:***0:33 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:38.9940298Z ***:***0:38 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:44.8062327Z ***:***0:44 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:50.6329465Z ***:***0:50 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:20:56.6292069Z ***:***0:56 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:02.4673169Z ***:***:0*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:07.7519156Z ***:***:07 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:13.6012435Z ***:***:***3 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:19.0492050Z ***:***:***9 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:24.3908768Z ***:***:***4 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:29.7514655Z ***:***:***9 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:34.8802487Z ***:***:34 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:40.5696233Z ***:***:40 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:45.7684053Z ***:***:45 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:21:51.9386625Z ***:***:5*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:00.5380903Z ***:***:00 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:06.5704449Z ***:***:06 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:12.1233577Z ***:***:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:17.4189223Z ***:***:***7 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:22.7036981Z ***:***:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:28.4867732Z ***:***:***8 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:34.0227867Z ***:***:34 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:39.3287096Z ***:***:39 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:44.6360260Z ***:***:44 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:22:58.7923025Z ***:***:58 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:04.2203351Z ***:***3:04 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:09.4906683Z ***:***3:09 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:14.7413147Z ***:***3:***4 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:21.0563399Z ***:***3:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:26.9010902Z ***:***3:***6 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:32.2419609Z ***:***3:3*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:37.5388314Z ***:***3:37 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:43.3720187Z ***:***3:43 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:48.9635682Z ***:***3:48 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:54.2186106Z ***:***3:54 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:23:59.3808504Z ***:***3:59 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:05.1484079Z ***:***4:05 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:10.3444432Z ***:***4:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:15.8059734Z ***:***4:***5 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:21.4703829Z ***:***4:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:27.0253503Z ***:***4:***7 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:32.4438764Z ***:***4:3*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:37.6563446Z ***:***4:37 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:43.0240815Z ***:***4:43 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:48.9984793Z ***:***4:48 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:54.4503774Z ***:***4:54 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:24:59.6550409Z ***:***4:59 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:05.6731965Z ***:***5:05 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:11.5443687Z ***:***5:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:16.7885483Z ***:***5:***6 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:22.3868797Z ***:***5:*** [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:27.5675085Z ***:***5:***7 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:33.4567299Z ***:***5:33 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:38.6506515Z ***:***5:38 [WARNING] core.normalize.translator: [AI Translate] Request failed: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v***/chat/completions (Caused by ResponseError('too many 4***9 error responses'))
+2026-06-25T10:25:42.6635730Z ##[error]The operation was canceled.
+2026-06-25T10:25:42.6768071Z Post job cleanup.
+2026-06-25T10:25:42.7592337Z [command]/usr/bin/git version
+2026-06-25T10:25:42.7630037Z git version ***.54.0
+2026-06-25T10:25:42.7703281Z Temporarily overriding HOME='/home/runner/work/_temp/6***946ed0-84c7-45ed-a4***c-dd7***3b04***473' before making global git config changes
+2026-06-25T10:25:42.7704725Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-25T10:25:42.7709786Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced
+2026-06-25T10:25:42.7740017Z Removing SSH command configuration
+2026-06-25T10:25:42.7748466Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-25T10:25:42.7782238Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-25T10:25:42.8953727Z Removing HTTP extra header
+2026-06-25T10:25:42.8954994Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-25T10:25:42.8956921Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-25T10:25:42.8958528Z Removing includeIf entries pointing to credentials config files
+2026-06-25T10:25:42.8959133Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-25T10:25:42.8959853Z includeif.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git.path
+2026-06-25T10:25:42.8960666Z includeif.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git/worktrees/*.path
+2026-06-25T10:25:42.8961760Z includeif.gitdir:/github/workspace/.git.path
+2026-06-25T10:25:42.8962331Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-06-25T10:25:42.8963672Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git.path
+2026-06-25T10:25:42.8964587Z /home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8966265Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git.path /home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8968094Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git/worktrees/*.path
+2026-06-25T10:25:42.8968998Z /home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8970682Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/ai-news-radar-enhanced/ai-news-radar-enhanced/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8973391Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-06-25T10:25:42.8974305Z /github/runner_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8976258Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8978194Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-06-25T10:25:42.8979135Z /github/runner_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8981039Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config
+2026-06-25T10:25:42.8983777Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-25T10:25:42.8985639Z Removing credentials config '/home/runner/work/_temp/git-credentials-044c363d-f4c0-48a7-b3***e-c95***c***d3df0d.config'
+2026-06-25T10:25:42.9052505Z Cleaning up orphan processes
+2026-06-25T10:25:42.9286306Z Terminate orphan process: pid (***365) (python)
