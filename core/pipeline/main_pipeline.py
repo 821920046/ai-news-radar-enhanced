@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import logging
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -47,6 +48,7 @@ from core.fetch import collect_all
 from core.fetch.opml import fetch_opml_rss
 from core.fetch.waytoagi import fetch_waytoagi_recent_7d
 from core.agents.analyst_agent import process_items_with_ai
+from core.notifier import maybe_send_news_notification
 
 logger = logging.getLogger(__name__)
 
@@ -180,11 +182,6 @@ class Pipeline:
             ts = event_time(rec)
             if ts and ts >= window_start:
                 normed = dict(rec)
-                # 时间健全化：发布时间不得晚于本次构建时间(now)。
-                # 防止来源时钟偏差/时区标错/仅给日期导致“新闻比站点更新还新”的超前时间。
-                _pub = parse_iso(normed.get("published_at"))
-                if _pub and _pub > now + timedelta(minutes=10):
-                    normed["published_at"] = None
                 normed["title"] = maybe_fix_mojibake(str(normed.get("title", "")))
                 normed["source"] = maybe_fix_mojibake(normalize_source_for_display(
                     str(normed.get("site_id", "")), str(normed.get("source", "")), str(normed.get("url", ""))))
@@ -208,8 +205,18 @@ class Pipeline:
         logger.info("[Pipeline] Stage 3/7: Translating titles...")
         title_cache_path = output_path / "title-zh-cache.json"
         title_cache = load_title_zh_cache(title_cache_path)
-        latest_ai, latest_all, title_cache = add_bilingual_fields(
-            latest_ai, latest_all, session, title_cache, max_new_translations=max(0, int(translate_max_new)))
+        translate_start = time.monotonic()
+        try:
+            latest_ai, latest_all, title_cache = add_bilingual_fields(
+                latest_ai, latest_all, session, title_cache, max_new_translations=max(0, int(translate_max_new)))
+            translate_elapsed = time.monotonic() - translate_start
+            if translate_elapsed > 300:  # 5 分钟
+                logger.warning("[Pipeline] Stage 3 翻译耗时 %.1f 秒（超过 5 分钟警戒线），请检查 AI API 状态。", translate_elapsed)
+            else:
+                logger.info("[Pipeline] Stage 3 翻译完成，耗时 %.1f 秒。", translate_elapsed)
+        except Exception as exc:
+            translate_elapsed = time.monotonic() - translate_start
+            logger.warning("[Pipeline] Stage 3 翻译异常（耗时 %.1f 秒），降级继续执行后续阶段: %s", translate_elapsed, exc)
 
         # ── Stage 4: Dedup ─────────────────────────────────────────────────
         logger.info("[Pipeline] Stage 4/7: Deduplicating...")
@@ -347,42 +354,6 @@ class Pipeline:
         atomic_write_text(status_path, json.dumps(sanitize_public_payload(status_payload),
                                                    ensure_ascii=False, indent=2), encoding="utf-8")
 
-        # Trend Engine 产出 → data/trends.json（供 API /trends 与前端消费；免费 TF-IDF 聚类）
-        if trend_result:
-            try:
-                bursts = trend_result.get("bursts") or trend_result.get("trends") or []
-                trends_out = []
-                for b in bursts:
-                    raw_items = b.get("items", []) or []
-                    trends_out.append({
-                        "topic": b.get("topic") or b.get("tag") or "",
-                        "status": b.get("status"),
-                        "burst_score": b.get("burst_score"),
-                        "current_count": b.get("current_count", b.get("size")),
-                        "avg_7d": b.get("avg_7d"),
-                        "size": b.get("size", len(raw_items)),
-                        "items": [
-                            {"title": it.get("title_zh") or it.get("title"),
-                             "url": it.get("url"),
-                             "signal_score": it.get("signal_score", 0),
-                             "source": it.get("source") or it.get("site_name", "")}
-                            for it in raw_items[:5]
-                        ],
-                    })
-                trends_payload = {
-                    "generated_at": iso(now),
-                    "source": "trend_engine",
-                    "trend_count": trend_result.get("trend_count", len(trends_out)),
-                    "total_clustered": trend_result.get("total_clustered"),
-                    "trends": trends_out,
-                }
-                atomic_write_text(output_path / "trends.json",
-                                  json.dumps(sanitize_public_payload(trends_payload),
-                                             ensure_ascii=False, separators=(",", ":")),
-                                  encoding="utf-8")
-            except Exception as exc:
-                logger.warning("[Pipeline] 写入 trends.json 失败（非致命）: %s", exc)
-
         # WaytoAGI
         try:
             waytoagi_payload = fetch_waytoagi_recent_7d(session, now, WAYTOAGI_DEFAULT)
@@ -399,6 +370,12 @@ class Pipeline:
         safeguard_title_zh_cache(title_cache_path, title_cache)
         atomic_write_text(title_cache_path, json.dumps(sanitize_public_payload(title_cache),
                                                         ensure_ascii=False, indent=2), encoding="utf-8")
+
+        # Webhook notification
+        try:
+            maybe_send_news_notification(items_ai)
+        except Exception as exc:
+            logger.warning("[Pipeline] Notification failed (non-fatal): %s", exc)
 
         result = {
             "success": True,
@@ -441,10 +418,6 @@ def main() -> int:
     default_model = cfg.get("openrouter_default_model")
     if default_model and not os.environ.get("OPENROUTER_MODEL"):
         os.environ["OPENROUTER_MODEL"] = str(default_model)
-
-    models_list = cfg.get("openrouter_models")
-    if models_list and not os.environ.get("OPENROUTER_MODELS"):
-        os.environ["OPENROUTER_MODELS"] = ",".join(str(m) for m in models_list)
 
     parser = argparse.ArgumentParser(description="V3 AI News Radar Pipeline")
     parser.add_argument("--output-dir", default="data")

@@ -22,7 +22,7 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
 import requests
-from core.utils import _env_int, get_model_chain, mark_model_dead
+from core.utils import _env_int
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_OPENROUTER_MODEL = "deepseek/deepseek-chat-v3-0324:free"
+DEFAULT_OPENROUTER_MODEL = "google/gemma-4-31b-it:free"
 DEFAULT_TLDR_TOP_N = 30
 DEFAULT_TLDR_MIN_CHARS = 30
 DEFAULT_TLDR_MAX_WORKERS = 2
@@ -204,8 +204,7 @@ def generate_tldr(
         return ""
 
     requester = session or requests
-    model_chain = get_model_chain(model)
-    model_name = model_chain[0]
+    model_name = model or os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
     app_title = os.environ.get("OPENROUTER_APP_TITLE") or "AI News Radar"
 
@@ -216,9 +215,14 @@ def generate_tldr(
         "不要包含任何 markdown 代码块标记，只输出合法的 JSON 字符串。"
     )
 
-    max_attempts = max(len(model_chain), len(key_manager.keys))
+    max_attempts = max(1, len(key_manager.keys))
+    consecutive_network_failures = 0
     for attempt in range(max_attempts):
-        model_name = model_chain[attempt % len(model_chain)]
+        # 所有 key 耗尽时立即退出
+        if key_manager.is_all_exhausted():
+            logger.warning("[AI] All OpenRouter keys exhausted, skipping TL;DR.")
+            return ""
+
         key = key_manager.get_key()
         if not key:
             logger.warning("[AI] No usable OpenRouter keys remain.")
@@ -245,11 +249,20 @@ def generate_tldr(
                 OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout
             )
         except requests.exceptions.RequestException as exc:
+            consecutive_network_failures += 1
             logger.warning(
                 "[AI] OpenRouter request failed on attempt %d: %s", attempt + 1, exc
             )
+            # 连续网络异常达 3 次，判定为限流或网络故障，标记当前 key 并退出
+            if consecutive_network_failures >= 3:
+                key_manager.mark_exhausted(key)
+                logger.warning("[AI] 连续 %d 次网络异常，标记 key 并退出重试。", consecutive_network_failures)
+                return ""
             time.sleep(min(2, attempt + 1))
             continue
+
+        # 网络成功时重置计数
+        consecutive_network_failures = 0
 
         if response.status_code == 200:
             try:
@@ -281,13 +294,7 @@ def generate_tldr(
             return tldr
 
         if response.status_code in {402, 403, 429}:
-            # 402/403=账号额度/鉴权；429=免费额度限流（OpenRouter 免费档多为账号级共享限额）→ 换 key
             key_manager.mark_exhausted(key)
-            continue
-
-        if response.status_code in {400, 404}:
-            # 模型名错误/已下线 → 标记后换下一个模型
-            mark_model_dead(model_name)
             continue
 
         logger.error(
@@ -295,7 +302,7 @@ def generate_tldr(
             response.status_code,
             response.text[:200],
         )
-        continue
+        return ""
 
     return ""
 
@@ -325,8 +332,7 @@ def deep_analyze(
         return ""
 
     requester = session or requests
-    model_chain = get_model_chain(model)
-    model_name = model_chain[0]
+    model_name = model or os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
     app_title = os.environ.get("OPENROUTER_APP_TITLE") or "AI News Radar"
 
@@ -337,9 +343,8 @@ def deep_analyze(
         "只输出分析内容本身，不要前缀或解释。"
     )
 
-    max_attempts = max(len(model_chain), len(key_manager.keys))
+    max_attempts = max(1, len(key_manager.keys))
     for attempt in range(max_attempts):
-        model_name = model_chain[attempt % len(model_chain)]
         key = key_manager.get_key()
         if not key:
             logger.warning("[AI Deep] No usable OpenRouter keys remain.")
@@ -385,13 +390,7 @@ def deep_analyze(
             return content.strip()
 
         if response.status_code in {402, 403, 429}:
-            # 402/403=账号额度/鉴权；429=免费额度限流（OpenRouter 免费档多为账号级共享限额）→ 换 key
             key_manager.mark_exhausted(key)
-            continue
-
-        if response.status_code in {400, 404}:
-            # 模型名错误/已下线 → 标记后换下一个模型
-            mark_model_dead(model_name)
             continue
 
         logger.error(
@@ -399,7 +398,7 @@ def deep_analyze(
             response.status_code,
             response.text[:200],
         )
-        continue
+        return ""
 
     return ""
 
@@ -469,7 +468,7 @@ class AnalystAgent:
         self.default_model = (
             self.config.get("model")
             or os.environ.get("OPENROUTER_MODEL")
-            or None
+            or DEFAULT_OPENROUTER_MODEL
         )
         self.top_n = self.config.get("top_n") or int(
             os.environ.get("AI_TLDR_TOP_N", str(DEFAULT_TLDR_TOP_N))

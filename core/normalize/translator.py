@@ -3,6 +3,9 @@
 支持两种翻译后端：
 1. OpenRouter AI 翻译（高质量，需要 OPENROUTER_KEYS）
 2. Google Translate 免费 API（兜底方案）
+
+v3.1: 增加全局熔断器，429/402/403 连续失败 ≥ MAX_CONSECUTIVE_FAILURES 次后
+自动触发熔断，跳过所有后续 AI 调用，平滑降级至 Google Translate。
 """
 
 from __future__ import annotations
@@ -11,19 +14,14 @@ import json
 import logging
 import os
 import re
+import threading
 import time
 from pathlib import Path
 from typing import Any
 
 import requests
 
-from core.utils import (
-    get_model_chain,
-    has_cjk,
-    is_mostly_english,
-    mark_model_dead,
-    normalize_url,
-)
+from core.utils import has_cjk, is_mostly_english, normalize_url
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +30,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_OPENROUTER_MODEL = "deepseek/deepseek-chat-v3-0324:free"
+DEFAULT_OPENROUTER_MODEL = "google/gemma-4-31b-it:free"
 
 # AI 翻译的系统提示词：要求高质量、自然流畅的中文翻译
 AI_TRANSLATE_SYSTEM_PROMPT = (
@@ -60,6 +58,63 @@ AI_DESC_TRANSLATE_SYSTEM_PROMPT = (
 
 # 批量翻译每批的上限
 BATCH_SIZE = 8
+
+# ---------------------------------------------------------------------------
+# 全局熔断器 — 429/402/403 连续失败达阈值后切断所有 AI 翻译
+# ---------------------------------------------------------------------------
+
+MAX_CONSECUTIVE_FAILURES = 3  # 连续失败 N 次触发熔断
+
+_ai_circuit_broken = False              # 熔断标志
+_ai_consecutive_failures = 0            # 连续失败计数
+_circuit_breaker_lock = threading.Lock() # 线程安全
+
+
+def _mark_ai_failure() -> bool:
+    """记录一次 AI 调用失败。返回 True 表示已触发熔断。"""
+    global _ai_circuit_broken, _ai_consecutive_failures
+    with _circuit_breaker_lock:
+        _ai_consecutive_failures += 1
+        if _ai_consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+            if not _ai_circuit_broken:
+                _ai_circuit_broken = True
+                logger.warning(
+                    "[AI 熔断器] 连续 %d 次 AI 翻译失败，触发全局熔断！"
+                    "后续所有 AI 翻译将跳过，降级至 Google Translate。",
+                    _ai_consecutive_failures,
+                )
+            return True
+        return False
+
+
+def trip_circuit_breaker(reason: str = "手动触发") -> None:
+    """立即触发全局熔断（例如所有 key 均已标记耗尽时）。"""
+    global _ai_circuit_broken
+    with _circuit_breaker_lock:
+        if not _ai_circuit_broken:
+            _ai_circuit_broken = True
+            logger.warning("[AI 熔断器] 触发全局熔断原因：%s。后续 AI 翻译跳过。", reason)
+
+
+def _mark_ai_success() -> None:
+    """记录一次 AI 调用成功，重置连续失败计数。"""
+    global _ai_consecutive_failures
+    with _circuit_breaker_lock:
+        _ai_consecutive_failures = 0
+
+
+def _is_circuit_broken() -> bool:
+    """检查熔断器是否已触发。"""
+    with _circuit_breaker_lock:
+        return _ai_circuit_broken
+
+
+def reset_circuit_breaker() -> None:
+    """重置熔断器（供测试和新 Pipeline 运行时调用）。"""
+    global _ai_circuit_broken, _ai_consecutive_failures
+    with _circuit_breaker_lock:
+        _ai_circuit_broken = False
+        _ai_consecutive_failures = 0
 
 
 # ---------------------------------------------------------------------------
@@ -142,7 +197,7 @@ def translate_to_zh_cn(session: requests.Session, text: str) -> str | None:
 
 
 # ---------------------------------------------------------------------------
-# OpenRouter AI 翻译（高质量）
+# OpenRouter AI 翻译（高质量）— 集成熔断器
 # ---------------------------------------------------------------------------
 
 def _get_openrouter_keys() -> list[str]:
@@ -160,54 +215,54 @@ def _ai_translate_single(
     max_tokens: int = 120,
     timeout: int = 15,
 ) -> str | None:
-    """通过 OpenRouter API 翻译单条文本。"""
+    """通过 OpenRouter API 翻译单条文本。集成熔断器。"""
     if not text or not api_key:
         return None
 
+    # 前置熔断检查
+    if _is_circuit_broken():
+        return None
+
+    model = os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
 
-    for model in get_model_chain():
-        headers = {
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": referer,
-            "X-Title": "AI News Radar",
-        }
-        payload = {
-            "model": model,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": text[:800]},
-            ],
-            "max_tokens": max_tokens,
-            "temperature": 0.1,
-        }
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": referer,
+        "X-Title": "AI News Radar",
+    }
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": text[:800]},
+        ],
+        "max_tokens": max_tokens,
+        "temperature": 0.1,
+    }
 
-        try:
-            resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
-            if resp.status_code == 200:
-                data = resp.json()
-                choices = data.get("choices") if isinstance(data, dict) else None
-                if choices:
-                    content = choices[0].get("message", {}).get("content", "").strip()
-                    # 清理常见前缀
-                    content = re.sub(r"^(翻译[：:]\s*|译文[：:]\s*)", "", content).strip()
-                    if content and has_cjk(content):
-                        return content
-                return None
-            elif resp.status_code in {400, 404}:
-                # 模型不可用/名称错误：标记后尝试链中下一个模型
-                mark_model_dead(model)
-                continue
-            elif resp.status_code in {402, 403, 429}:
-                logger.warning("[AI Translate] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
-                return None
-            else:
-                logger.warning("[AI Translate] Unexpected HTTP %d: %s", resp.status_code, resp.text[:200])
-                continue
-        except requests.exceptions.RequestException as exc:
-            logger.warning("[AI Translate] Request failed: %s", exc)
-            continue
+    try:
+        resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
+        if resp.status_code == 200:
+            data = resp.json()
+            choices = data.get("choices") if isinstance(data, dict) else None
+            if choices:
+                content = choices[0].get("message", {}).get("content", "").strip()
+                # 清理常见前缀
+                content = re.sub(r"^(翻译[：:]\\s*|译文[：:]\\s*)", "", content).strip()
+                if content and has_cjk(content):
+                    _mark_ai_success()
+                    return content
+        elif resp.status_code in {402, 403, 429}:
+            logger.warning("[AI Translate] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
+            _mark_ai_failure()
+            return None
+        else:
+            logger.warning("[AI Translate] Unexpected HTTP %d: %s", resp.status_code, resp.text[:200])
+    except requests.exceptions.RequestException as exc:
+        logger.warning("[AI Translate] Request failed: %s", exc)
+        _mark_ai_failure()
 
     return None
 
@@ -219,53 +274,53 @@ def _ai_translate_batch(
     *,
     timeout: int = 30,
 ) -> list[str | None]:
-    """通过 OpenRouter API 批量翻译标题（一次 API 调用翻译多条）。"""
+    """通过 OpenRouter API 批量翻译标题（一次 API 调用翻译多条）。集成熔断器。"""
     if not titles or not api_key:
         return [None] * len(titles)
 
+    # 前置熔断检查
+    if _is_circuit_broken():
+        return [None] * len(titles)
+
+    model = os.environ.get("OPENROUTER_MODEL") or DEFAULT_OPENROUTER_MODEL
     referer = os.environ.get("OPENROUTER_HTTP_REFERER") or "https://github.com/LearnPrompt/ai-news-radar"
 
     # 构建编号列表
     numbered_input = "\n".join(f"{i + 1}. {title}" for i, title in enumerate(titles))
 
-    for model in get_model_chain():
-        headers = {
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": referer,
-            "X-Title": "AI News Radar",
-        }
-        payload = {
-            "model": model,
-            "messages": [
-                {"role": "system", "content": AI_BATCH_TRANSLATE_SYSTEM_PROMPT},
-                {"role": "user", "content": numbered_input},
-            ],
-            "max_tokens": 150 * len(titles),
-            "temperature": 0.1,
-        }
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": referer,
+        "X-Title": "AI News Radar",
+    }
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": AI_BATCH_TRANSLATE_SYSTEM_PROMPT},
+            {"role": "user", "content": numbered_input},
+        ],
+        "max_tokens": 150 * len(titles),
+        "temperature": 0.1,
+    }
 
-        try:
-            resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
-            if resp.status_code == 200:
-                data = resp.json()
-                choices = data.get("choices") if isinstance(data, dict) else None
-                if choices:
-                    content = choices[0].get("message", {}).get("content", "").strip()
-                    return _parse_batch_result(content, len(titles))
-                return [None] * len(titles)
-            elif resp.status_code in {400, 404}:
-                mark_model_dead(model)
-                continue
-            elif resp.status_code in {402, 403, 429}:
-                logger.warning("[AI Translate Batch] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
-                break
-            else:
-                logger.warning("[AI Translate Batch] HTTP %d: %s", resp.status_code, resp.text[:200])
-                continue
-        except requests.exceptions.RequestException as exc:
-            logger.warning("[AI Translate Batch] Request failed: %s", exc)
-            continue
+    try:
+        resp = session.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=timeout)
+        if resp.status_code == 200:
+            data = resp.json()
+            choices = data.get("choices") if isinstance(data, dict) else None
+            if choices:
+                content = choices[0].get("message", {}).get("content", "").strip()
+                _mark_ai_success()
+                return _parse_batch_result(content, len(titles))
+        elif resp.status_code in {402, 403, 429}:
+            logger.warning("[AI Translate Batch] API key exhausted/rate-limited (HTTP %d)", resp.status_code)
+            _mark_ai_failure()
+        else:
+            logger.warning("[AI Translate Batch] HTTP %d: %s", resp.status_code, resp.text[:200])
+    except requests.exceptions.RequestException as exc:
+        logger.warning("[AI Translate Batch] Request failed: %s", exc)
+        _mark_ai_failure()
 
     return [None] * len(titles)
 
@@ -323,6 +378,9 @@ def add_bilingual_fields(
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, str]]:
     """为文章添加双语标题字段，优先使用 AI 翻译。"""
 
+    # 每次 Pipeline 运行重置熔断器状态
+    reset_circuit_breaker()
+
     # 收集已有的中文标题映射（URL → 中文标题）
     zh_by_url: dict[str, str] = {}
     for it in items_all:
@@ -370,15 +428,24 @@ def add_bilingual_fields(
         if needs and len(pending_titles) < max_new_translations:
             pending_titles.append((item, title))
 
-    # AI 批量翻译
+    # AI 批量翻译（受熔断器保护）
     if use_ai and pending_titles:
         logger.info("[Translate] AI 批量翻译 %d 条标题...", len(pending_titles))
 
         for batch_start in range(0, len(pending_titles), BATCH_SIZE):
+            # 熔断检查：若已触发，立即停止批量翻译
+            if _is_circuit_broken():
+                logger.warning(
+                    "[Translate] 熔断器已触发，剩余 %d 条标题切换到 Google Translate",
+                    len(pending_titles) - batch_start,
+                )
+                break
+
             batch = pending_titles[batch_start:batch_start + BATCH_SIZE]
             batch_titles = [title for _, title in batch]
 
             if current_key_idx >= len(api_keys):
+                trip_circuit_breaker("所有 API key 已耗尽")
                 logger.warning("[Translate] 所有 API key 已耗尽，剩余 %d 条切换到 Google Translate",
                                len(pending_titles) - batch_start)
                 break
@@ -387,12 +454,14 @@ def add_bilingual_fields(
             results = _ai_translate_batch(session, batch_titles, api_key, timeout=30)
 
             all_failed = all(r is None for r in results)
-            if all_failed:
+            if all_failed and not _is_circuit_broken():
                 current_key_idx += 1
                 # 用下一个 key 重试
                 if current_key_idx < len(api_keys):
                     api_key = api_keys[current_key_idx]
                     results = _ai_translate_batch(session, batch_titles, api_key, timeout=30)
+                else:
+                    trip_circuit_breaker("所有 API key 在重试后耗尽")
 
             for i, (item, en_title) in enumerate(batch):
                 zh_title = results[i] if i < len(results) else None
@@ -442,8 +511,8 @@ def add_bilingual_fields(
             out["title_zh"] = zh_title
             out["title_bilingual"] = f"{zh_title} / {title}"
 
-        # 翻译 description（仅对 AI 模式条目且有 API key 时）
-        if use_ai and allow_translate and api_keys:
+        # 翻译 description（仅对 AI 模式条目且有 API key 且未熔断时）
+        if use_ai and allow_translate and api_keys and not _is_circuit_broken() and current_key_idx < len(api_keys):
             _try_translate_desc(session, out, api_keys, current_key_idx)
 
         return out
@@ -452,8 +521,9 @@ def add_bilingual_fields(
     all_out = [enrich(it, allow_translate=False) for it in items_all]
 
     logger.info(
-        "[Translate] 翻译完成：AI 翻译 %d 条，Google 翻译 %d 条，缓存命中跳过其余",
+        "[Translate] 翻译完成：AI 翻译 %d 条，Google 翻译 %d 条，熔断状态=%s，缓存命中跳过其余",
         ai_translated_count, google_translated_count,
+        "已触发" if _is_circuit_broken() else "正常",
     )
 
     return ai_out, all_out, cache
@@ -465,7 +535,14 @@ def _try_translate_desc(
     api_keys: list[str],
     start_key_idx: int,
 ) -> None:
-    """尝试将英文 description 翻译为中文（仅在没有 tldr 且 desc 是英文时触发）。"""
+    """尝试将英文 description 翻译为中文（仅在没有 tldr 且 desc 是英文时触发）。
+
+    集成熔断器：前置检查 + 失败后立即返回，不再遍历剩余 key。
+    """
+    # 前置熔断检查
+    if _is_circuit_broken():
+        return
+
     desc = str(item.get("description") or "").strip()
     if not desc or has_cjk(desc) or len(desc) < 20:
         return
@@ -478,6 +555,9 @@ def _try_translate_desc(
         return
 
     for idx in range(start_key_idx, len(api_keys)):
+        # 循环内也检查熔断
+        if _is_circuit_broken():
+            break
         zh_desc = _ai_translate_description(session, desc, api_keys[idx], timeout=15)
         if zh_desc:
             item["description"] = zh_desc
