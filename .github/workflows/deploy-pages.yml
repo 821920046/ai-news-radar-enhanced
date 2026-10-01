@@ -16,6 +16,10 @@ on:
       - "sw.js"
       - "robots.txt"
       - "sitemap.xml"
+      - "llms.txt"
+      - "feed-hot.xml"
+      - "feed-all.xml"
+      - "feed-daily.xml"
       - ".github/workflows/deploy-pages.yml"
   # 根因修复：上面的 push 触发器对每小时的数据更新永远不会生效。
   # GitHub 规定“使用默认 GITHUB_TOKEN 推送的提交不会创建新的工作流运行”
@@ -69,6 +73,12 @@ jobs:
           set -euo pipefail
           rm -rf _site && mkdir -p _site/assets _site/data
           cp index.html manifest.json sw.js robots.txt sitemap.xml _site/
+          # 对外出口：llms.txt（给大模型）与三版 RSS。
+          # 必须在部署白名单里显式列出 —— 本步骤只 cp 指定文件，不会自动
+          # 收集仓库根目录，漏掉就会线上 404（实测踩过）。
+          for f in llms.txt feed-hot.xml feed-all.xml feed-daily.xml; do
+            [ -f "$f" ] && cp "$f" _site/ || echo "::warning::缺少 $f（尚未生成？）"
+          done
           cp -r assets/. _site/assets/
           # 关键 2：只发布前端真正会 fetch 的数据，archive.json / trend_history.json
           # 这类 16MB+ 的历史文件不要进 artifact
@@ -96,6 +106,24 @@ jobs:
                   sys.exit(f'empty file: {p}')
               try: json.loads(p.read_text(encoding='utf-8'))
               except Exception as e: sys.exit(f'invalid JSON {p}: {e}')
+
+          # 对外出口必须是良构 XML / 非空文本，否则订阅端和 Agent 会拿到
+          # 一个「HTTP 200 但无法解析」的响应 —— 这比 404 更难排查。
+          import xml.etree.ElementTree as ET
+          for name in ('feed-hot.xml', 'feed-all.xml', 'feed-daily.xml'):
+              p = root / name
+              if not p.exists():
+                  sys.exit(f'missing feed: {name}')
+              if p.stat().st_size == 0:
+                  sys.exit(f'empty feed: {name}')
+              try:
+                  ET.fromstring(p.read_text(encoding='utf-8'))
+              except Exception as e:
+                  sys.exit(f'malformed RSS {name}: {e}')
+          for name in ('llms.txt',):
+              p = root / name
+              if not p.exists() or p.stat().st_size == 0:
+                  sys.exit(f'missing or empty: {name}')
 
           # 记下数据自身的 generated_at，交给 verify 作业核对“线上真正被
           # 服务的内容 == 本次发布的内容”。
@@ -281,7 +309,7 @@ jobs:
             exit 0
           fi
           s="https://news.my-tv.eu.cc"
-          payload=$(printf '{"files":["%s/","%s/index.html","%s/sw.js","%s/data/latest-24h.json","%s/data/latest-24h-all.json","%s/data/source-status.json","%s/data/waytoagi-7d.json","%s/data/trends.json"]}' "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s")
+          payload=$(printf '{"files":["%s/","%s/index.html","%s/sw.js","%s/llms.txt","%s/feed-hot.xml","%s/feed-all.xml","%s/feed-daily.xml","%s/data/latest-24h.json","%s/data/latest-24h-all.json","%s/data/source-status.json","%s/data/waytoagi-7d.json","%s/data/trends.json"]}' "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s")
           code=$(curl -sS -o /tmp/cf.json -w '%{http_code}' --max-time 60 \
             -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \

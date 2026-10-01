@@ -462,3 +462,39 @@ class TestWorkflowWiring:
         """对外出口失败不应阻断数据更新。"""
         block = workflow.split("build_feeds.py", 1)[1][:300]
         assert "||" in block, "对外出口失败会中断主流程"
+
+    def test_uses_custom_domain_not_github_io(self, workflow: str):
+        """base-url 必须是对外自定义域名。
+
+        站点实际服务在 news.my-tv.eu.cc（Cloudflare 代理），用 github.io
+        地址会 301 跳转，导致 RSS 的 self 链接与 sitemap 全部指向跳转前的
+        地址 —— 实测踩过：线上 feed 404、sitemap 收录到错误域名。
+        """
+        assert "news.my-tv.eu.cc" in workflow, "未使用对外自定义域名"
+        assert "821920046.github.io" not in workflow, (
+            "仍在用 github.io 地址；它会被 301 跳转到自定义域名，"
+            "写进 RSS/sitemap 会指向错误地址"
+        )
+
+
+class TestDeployWhitelist:
+    """部署工作流只 cp 显式列出的文件，漏掉新产物 = 线上 404。"""
+
+    @pytest.fixture(scope="class")
+    def deploy_workflow(self) -> str:
+        p = REPO_ROOT / ".github" / "workflows" / "deploy-pages.yml"
+        return p.read_text(encoding="utf-8")
+
+    def test_feeds_are_copied_into_site(self, deploy_workflow: str):
+        for name in ("llms.txt", "feed-hot.xml", "feed-all.xml", "feed-daily.xml"):
+            assert name in deploy_workflow, f"部署白名单缺少 {name}，线上会 404"
+
+    def test_publish_gate_validates_rss(self, deploy_workflow: str):
+        """发布前必须校验 RSS 是良构 XML —— 否则线上是「200 但解析不了」。"""
+        assert "ET.fromstring" in deploy_workflow or "ElementTree" in deploy_workflow
+
+    def test_feeds_are_in_push_trigger_paths(self, deploy_workflow: str):
+        """新产物要进 push.paths，否则它变了不会触发部署。"""
+        trigger_block = deploy_workflow.split("workflow_run:", 1)[0]
+        for name in ("llms.txt", "feed-hot.xml"):
+            assert name in trigger_block, f"push 触发器缺少 {name}"

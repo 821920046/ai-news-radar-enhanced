@@ -105,17 +105,24 @@ jobs:
         run: python scripts/validate_data.py --data-dir data --max-age-hours 6
 
       # ── 新增：构建期静态预渲染（SSG），把首屏新闻写进 index.html ──
+      # base-url 必须是对外自定义域名：sitemap 与 canonical/og:url 都用它，
+      # 写错会让搜索引擎收录到跳转前的地址（此前一直是 github.io 地址）。
       - name: Prerender static HTML (SEO + first paint)
         run: |
-          python scripts/prerender.py --data data/latest-24h.json --html index.html --top 30
+          python scripts/prerender.py --data data/latest-24h.json --html index.html \
+            --top 30 --base-url "https://news.my-tv.eu.cc"
 
       # ── 对外出口：llms.txt（给大模型）、三版 RSS、robots.txt ──
       # 纯静态产物，由 GitHub Pages 托管，零成本。失败不阻断主流程：
       # 这些是「扩大受众」的增量出口，不该拖垮数据更新。
+      #
+      # base-url 必须用**对外自定义域名**。站点实际服务在 news.my-tv.eu.cc
+      # （Cloudflare 代理），用 github.io 的地址会 301 跳转，
+      # 导致 RSS 里的 self 链接与 llms.txt 里的入口全部指向跳转前的地址。
       - name: Build agent-facing outputs (llms.txt + RSS)
         run: |
           python scripts/build_feeds.py --data data/latest-24h.json \
-            --base-url "https://821920046.github.io/ai-news-radar-enhanced" \
+            --base-url "https://news.my-tv.eu.cc" \
             --out-dir . || echo "::warning::对外出口生成失败（不影响数据更新）"
 
       - name: Commit and push changes
