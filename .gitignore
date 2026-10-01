@@ -34,3 +34,6 @@ data/title-zh-cache.json
 # 本地工具配置
 .idea/
 .vscode/
+# 解压 GitHub 下载包时产生的嵌套副本（与仓库根重复，切勿提交）
+ai-news-radar-enhanced-main/
+_radar_backup_*/

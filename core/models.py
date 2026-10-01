@@ -2,17 +2,42 @@
 
 from __future__ import annotations
 
+import logging
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 from zoneinfo import ZoneInfo
+
+logger = logging.getLogger(__name__)
 
 UTC = timezone.utc
 BROWSER_UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 )
-SH_TZ = ZoneInfo("Asia/Shanghai")
+
+
+def _resolve_shanghai_tz() -> timezone:
+    """Resolve Asia/Shanghai, degrading gracefully when the IANA tzdb is absent.
+
+    zoneinfo looks up the system tz database first and falls back to the `tzdata`
+    PyPI package. On minimal Linux images neither may exist, which would raise
+    ZoneInfoNotFoundError at import time and take down every module that imports
+    this one. Degrading to a fixed UTC+8 offset keeps the pipeline usable; the
+    offset is identical to Asia/Shanghai for all current dates.
+    """
+    try:
+        return ZoneInfo("Asia/Shanghai")
+    except Exception as exc:  # ZoneInfoNotFoundError and any tzdb load error
+        logger.warning(
+            "无法加载 IANA 时区 Asia/Shanghai（%s）；降级为固定 UTC+8 偏移。"
+            "如需精确时区语义，请安装 tzdata 或确保系统 tzdata 可用。",
+            exc,
+        )
+        return timezone(timedelta(hours=8))
+
+
+SH_TZ = _resolve_shanghai_tz()
 WAYTOAGI_DEFAULT = (
     "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
 )

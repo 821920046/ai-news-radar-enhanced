@@ -14,14 +14,16 @@ permissions:
 
 jobs:
   update:
-    timeout-minutes: 20
+    timeout-minutes: 40
     runs-on: ubuntu-latest
     steps:
+      # 注意：actions/checkout 只发布到 v4（v5/v6 从未发布），引用不存在的 tag 会让
+      # job 在第一步就以 "Unable to resolve action" 直接失败。
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
@@ -72,17 +74,7 @@ jobs:
           fi
 
       - name: Validate output
-        run: |
-          python -c "
-          import json, sys
-          d = json.load(open('data/latest-24h.json', encoding='utf-8'))
-          n = d.get('total_items', 0)
-          print(f'AI items: {n}')
-          if n < 3:
-              print('ERROR: Too few items, possible source failure')
-              sys.exit(1)
-          print('Data quality check passed')
-          "
+        run: python scripts/validate_data.py --data-dir data --max-age-hours 6
 
       # ── 新增：构建期静态预渲染（SSG），把首屏新闻写进 index.html ──
       - name: Prerender static HTML (SEO + first paint)
@@ -97,7 +89,13 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest-24h.json data/latest-24h-all.json data/archive.json data/source-status.json data/waytoagi-7d.json data/title-zh-cache.json index.html
+          # archive.json / title-zh-cache.json 由 .gitignore 排除且由 pipeline-state 分支维护，
+          # 加进 git add 会因「被忽略文件」报错或产生无谓 diff，故不列入。
+          git add data/latest-24h.json data/latest-24h-all.json data/source-status.json data/waytoagi-7d.json index.html
+          if git diff --cached --quiet; then
+            echo "No staged changes after add; nothing to commit"
+            exit 0
+          fi
           git commit -m "chore: update ai news snapshot + prerender"
           git pull --rebase origin main || true
           git push

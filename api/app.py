@@ -139,7 +139,20 @@ def _hours_since(iso_str: str | None) -> float | None:
 
 
 def _items_of(payload: dict) -> list[dict]:
-    return payload.get("items_ai", payload.get("items", [])) or []
+    """Extract the item list from any of the payload shapes the pipeline emits.
+
+    The pipeline writes different keys depending on the artifact:
+      * latest-24h.json     -> {"items_ai": [...]}  (AI-filtered)
+      * latest-24h-all.json -> {"items_all": [...]} (unfiltered)
+    Older payloads may use a bare "items". Check all of them explicitly rather
+    than relying on nested .get() defaults, which silently return [] when the
+    first key exists but is empty.
+    """
+    for key in ("items_ai", "items", "items_all"):
+        items = payload.get(key)
+        if items:
+            return items
+    return []
 
 
 # ── Routes ─────────────────────────────────────────────────────────────────
@@ -355,10 +368,14 @@ def hot(top: int = Query(20, ge=1, le=100, description="每个榜单返回条数
     优先使用全量数据（latest-24h-all.json）以便覆盖非 AI 强相关的开源热榜，
     回退到 latest-24h.json。按热度降序。
     """
-    payload = _load_json(DATA_DIR / "latest-24h-all.json") or _load_json(
-        DATA_DIR / "latest-24h.json"
-    )
+    # 注意：不能写成 `A or B`。_load_json 在文件存在但为空/无条目时返回非空 dict，
+    # 其布尔值为 True，会导致「全量文件存在但没有条目」时永不回退到主文件。
+    # 因此必须按「实际是否含条目」判断。
+    payload = _load_json(DATA_DIR / "latest-24h-all.json")
     items = _items_of(payload)
+    if not items:
+        payload = _load_json(DATA_DIR / "latest-24h.json")
+        items = _items_of(payload)
     if not items:
         raise HTTPException(status_code=503, detail="暂无数据")
 

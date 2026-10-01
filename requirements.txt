@@ -7,3 +7,6 @@ fastapi==0.115.0
 uvicorn[standard]==0.30.0
 # scikit-learn / numpy 已移除：代码中无任何实际 import（聚类余弦相似度为纯 Python 实现），去掉可明显加快 CI 装依赖速度
 pyyaml==6.0.2
+# 显式声明 IANA 时区库：zoneinfo 在无系统 tzdata 的环境（如部分精简版 CI 镜像）会抛
+# ZoneInfoNotFoundError，导致 core.models 在 import 期直接崩溃。
+tzdata==2025.2
