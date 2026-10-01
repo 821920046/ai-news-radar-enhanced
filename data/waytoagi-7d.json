@@ -1,238 +1,218 @@
 {
-  "generated_at": "2026-08-24T03:43:46.984067Z",
+  "generated_at": "2026-10-01T14:16:56.829099Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
   "window_days": 7,
-  "latest_date": "2026-08-23",
-  "count_today": 7,
+  "latest_date": "2026-09-30",
+  "count_today": 8,
   "updates_today": [
     {
-      "date": "2026-08-23",
-      "title": "这篇文章是作者亲手做了一个插件并发布到GitHub的完整复盘：从 5 分钟跑通第一个插件，到踩过的两个真实的坑，到配置化、打包、发布。全程实操，命令可复制。",
+      "date": "2026-09-30",
+      "title": "谷歌Gemini 4 Argon 一发布，就直接拿跑分、长上下文和 Agent 能力对标 GPT-6 Astra、Claude Opus 5.5。18 项测试里 Argon 多项第一，DeepSWE、AutomationBench 表现突出；输出上限拉到 100 万 token，支持文本、图像、视频、语音输入；价格、缓存折扣和开放节奏也都列出来了。一起看看谷歌这次到底是跑分好看，还是又真杀回来了。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "这篇文章很适合刚开始用Agent、但总觉得“它不懂你”的人看。作者围绕Harness做了3个 Skill帮你搭建一个懂你的个人Agent：star帮你从零搭个人工作目录，better从安全、上下文、工具、记忆、学习五层做体检，view则把本地文件和Skill变成可视化工作台。",
+      "date": "2026-09-30",
+      "title": "开源模型更新太快，很多人只记得头部大厂发布会，真正适合业务试水的细分模型反而容易漏掉。作者把9月开源的 42 个模型做了一次月度盘点，从 DeepSeek-V4.1-Flash、Qwen-Image-2.1，到Jev、时间序列、自动驾驶、图像生成、文档解析、语音识别、GUI Agent、金融、医学、世界模型等方向都扫了一遍。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "第一次打开 Codex，真正容易卡住的是眼前这些区域分别管什么：项目和任务有什么区别，Local、Worktree、Cloud 该选哪个，Plan 是不是必须开，权限应该给到哪里，Plugins、Skills、MCP 又为什么同时存在。作者这篇教程就从这些基础问题讲起，先把界面、按钮、工作区和常用能力认清，再判断哪些扩展功能值得接入。",
+      "date": "2026-09-30",
+      "title": "作者把用Opus 5.5 做视频的整套流程拆解了下，如果你也想理解 AI 视频背后“到底是怎么跑起来”，或者想上手试试，不要错过！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "本周精选的10篇AI论文转向“运行框架、Skill、记忆、自我改进和成本控制到底靠不靠谱”。Agent Lightning和ClawGym讲怎么在真实框架里训练Agent；Skill Trigger Bottleneck、Demystifying Agent Skills讲Skill太多后怎么触发、怎么写才有用；Harness-Level Forgetting和Fragile Self-Improvement则提醒大家，自我改进很容易变成过拟合和遗忘。",
+      "date": "2026-09-30",
+      "title": "「爆款开场计划」AI短片大赛已经到了第 3、4 周，一起来看看这两周的优质项目：哪些开场够抓人，哪些故事能撑住，哪些脑洞有长成 IP 的可能。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "很多人看到Claude Code的第一反应是：这不是写代码的吗？终端、命令、插件一堆，小白很容易还没开始就被劝退。这篇文章是一个营销人173天的实操复盘，把Claude Code拆成了普通人也能上手的工作系统。",
+      "date": "2026-09-30",
+      "title": "Opus 5.5 出来这一周，被各种AI视频刷屏了。像素动画、界面动效、游戏史短片、AI 发展史纪录片，每一个都特别精细。这篇文章就给朋友们分享下怎么用Claude Opus 5.5 做AI视频。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "很多人生图一翻车，就开始疯狂加风格词、镜头词、材质词，提示词越写越长，结果主体还是歪、文字还是乱。作者从第一性原理出发，带你看懂生图提示词究竟该怎么写？",
+      "date": "2026-09-30",
+      "title": "OpenAI DevDay发布重磅个人Agent产品dots，可以在后台持续执行任务，搭配ChatGPT Space实现人机协同，但仅面向高价付费套餐。作者发现了一个开源平替方案Rakazo，不仅支持私有化部署，还拥有近乎一致的自动化能力，兼容多类大模型，权限可控，数据留存自己手中。如果你想搭建专属AI同事，又不想支付高额订阅成本，这份对比与部署指南极具参考价值。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "Codex 的斜杠命令相当于它的“控制面板”：提示词负责描述你想完成什么，斜杠命令负责控制 Codex 如何工作。作者这篇文章详细拆解了Codex CLI当前内置的全部斜杠命令，并补充了IDE扩展与桌面端特有命令。",
+      "date": "2026-09-30",
+      "title": "9月22-24日的云栖大会已经圆满结束，大雨做了一个完整的复盘，帮你区分行业概念炒作和真实落地进展。读完你会建立更加理性的研判视角，不被展会热点裹挟。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "2026 OpenAI DevDay一次性释放20余项重磅更新。整理收集了大家的一些解读，一起来看看有哪些是值得关注的！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 38,
+  "count_7d": 33,
   "updates_7d": [
     {
-      "date": "2026-08-23",
-      "title": "这篇文章是作者亲手做了一个插件并发布到GitHub的完整复盘：从 5 分钟跑通第一个插件，到踩过的两个真实的坑，到配置化、打包、发布。全程实操，命令可复制。",
+      "date": "2026-09-30",
+      "title": "谷歌Gemini 4 Argon 一发布，就直接拿跑分、长上下文和 Agent 能力对标 GPT-6 Astra、Claude Opus 5.5。18 项测试里 Argon 多项第一，DeepSWE、AutomationBench 表现突出；输出上限拉到 100 万 token，支持文本、图像、视频、语音输入；价格、缓存折扣和开放节奏也都列出来了。一起看看谷歌这次到底是跑分好看，还是又真杀回来了。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "这篇文章很适合刚开始用Agent、但总觉得“它不懂你”的人看。作者围绕Harness做了3个 Skill帮你搭建一个懂你的个人Agent：star帮你从零搭个人工作目录，better从安全、上下文、工具、记忆、学习五层做体检，view则把本地文件和Skill变成可视化工作台。",
+      "date": "2026-09-30",
+      "title": "开源模型更新太快，很多人只记得头部大厂发布会，真正适合业务试水的细分模型反而容易漏掉。作者把9月开源的 42 个模型做了一次月度盘点，从 DeepSeek-V4.1-Flash、Qwen-Image-2.1，到Jev、时间序列、自动驾驶、图像生成、文档解析、语音识别、GUI Agent、金融、医学、世界模型等方向都扫了一遍。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "第一次打开 Codex，真正容易卡住的是眼前这些区域分别管什么：项目和任务有什么区别，Local、Worktree、Cloud 该选哪个，Plan 是不是必须开，权限应该给到哪里，Plugins、Skills、MCP 又为什么同时存在。作者这篇教程就从这些基础问题讲起，先把界面、按钮、工作区和常用能力认清，再判断哪些扩展功能值得接入。",
+      "date": "2026-09-30",
+      "title": "作者把用Opus 5.5 做视频的整套流程拆解了下，如果你也想理解 AI 视频背后“到底是怎么跑起来”，或者想上手试试，不要错过！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "本周精选的10篇AI论文转向“运行框架、Skill、记忆、自我改进和成本控制到底靠不靠谱”。Agent Lightning和ClawGym讲怎么在真实框架里训练Agent；Skill Trigger Bottleneck、Demystifying Agent Skills讲Skill太多后怎么触发、怎么写才有用；Harness-Level Forgetting和Fragile Self-Improvement则提醒大家，自我改进很容易变成过拟合和遗忘。",
+      "date": "2026-09-30",
+      "title": "「爆款开场计划」AI短片大赛已经到了第 3、4 周，一起来看看这两周的优质项目：哪些开场够抓人，哪些故事能撑住，哪些脑洞有长成 IP 的可能。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "很多人看到Claude Code的第一反应是：这不是写代码的吗？终端、命令、插件一堆，小白很容易还没开始就被劝退。这篇文章是一个营销人173天的实操复盘，把Claude Code拆成了普通人也能上手的工作系统。",
+      "date": "2026-09-30",
+      "title": "Opus 5.5 出来这一周，被各种AI视频刷屏了。像素动画、界面动效、游戏史短片、AI 发展史纪录片，每一个都特别精细。这篇文章就给朋友们分享下怎么用Claude Opus 5.5 做AI视频。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "很多人生图一翻车，就开始疯狂加风格词、镜头词、材质词，提示词越写越长，结果主体还是歪、文字还是乱。作者从第一性原理出发，带你看懂生图提示词究竟该怎么写？",
+      "date": "2026-09-30",
+      "title": "OpenAI DevDay发布重磅个人Agent产品dots，可以在后台持续执行任务，搭配ChatGPT Space实现人机协同，但仅面向高价付费套餐。作者发现了一个开源平替方案Rakazo，不仅支持私有化部署，还拥有近乎一致的自动化能力，兼容多类大模型，权限可控，数据留存自己手中。如果你想搭建专属AI同事，又不想支付高额订阅成本，这份对比与部署指南极具参考价值。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-23",
-      "title": "Codex 的斜杠命令相当于它的“控制面板”：提示词负责描述你想完成什么，斜杠命令负责控制 Codex 如何工作。作者这篇文章详细拆解了Codex CLI当前内置的全部斜杠命令，并补充了IDE扩展与桌面端特有命令。",
+      "date": "2026-09-30",
+      "title": "9月22-24日的云栖大会已经圆满结束，大雨做了一个完整的复盘，帮你区分行业概念炒作和真实落地进展。读完你会建立更加理性的研判视角，不被展会热点裹挟。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-22",
-      "title": "这篇对话把Anthropic的产品方法论讲得很透：前沿模型需要Claude Code这样的产品载体，模型能力也要靠持续评测才能被发现、验证和转成用户价值。里面最值得产品经理和AI创业者看的，是“评测就是新的PRD”这条线：把用户的一句“不好用”，拆成可复现、可衡量的任务。想做AI产品，这篇文章不容错过！",
+      "date": "2026-09-30",
+      "title": "2026 OpenAI DevDay一次性释放20余项重磅更新。整理收集了大家的一些解读，一起来看看有哪些是值得关注的！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-22",
-      "title": "很多人改AI生成的文案，第一反应是删“首先其次”、加点口语、把检测分降下去。但所谓AI味，本质上是“均值味”——选词太稳、节奏太平、结构太顺、口癖太像模型。作者这篇文章深度拆解了AI文本检测的底层逻辑，提出了一个跨四层的“结构化离群”统一框架，或许可以帮到你！",
+      "date": "2026-09-29",
+      "title": "还在做基础的PDF问答 RAG？作者给出了 10 套进阶实战项目：覆盖混合检索、元数据过滤、重排序、知识图谱、多模态与智能体 RAG 等方案，还附带配套的技术栈，帮你建立完整的 RAG 工程思维。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-22",
-      "title": "Minke v0.2.0基于DeepSeek Harness的架构，借助Cordis插件树做扩展，实现了移动端远程控制本地Agent主机。它不走传统画面投屏，只同步任务、文件、终端状态，项目与运行环境依旧留存于本地电脑。一起来看看具体的开发细节！",
+      "date": "2026-09-29",
+      "title": "作者用 100 问的方式，把Jev模型的定位、成本优势、调用策略、生态风险和未来走向都拆开讲了下。可以帮助你用更轻松的方式快速摸清 Jev 到底值不值得放进自己的工具箱。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-22",
-      "title": "DeepSeek开源了 DeepSeek Harness（DSH），很多人会以为 DeepSeek 又做了一个AI模型，或者Claude Code、Codex 之外又多了一个同类工具。作者实操了一遍，尽可能的在这篇文章里用通俗的语言来讲明白DSH到底是什么。",
+      "date": "2026-09-29",
+      "title": "云舒这篇收集了大量Opus 5.5的实测案例：一句话生成动效片、旅行照变丙烯画、论文变 MV、口播自动剪成成片、宜家手册变 3D 教学、草图变投石机、网页 Splatoon、Godot 开放世界雏形，甚至还能跑几小时做出多个 App 交互版本。快来一起感受 Opus 5.5 真正打开的想象空间！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-22",
-      "title": "Agent会反思、会写 Skill、会改Harness，好像越来越强。但经验到底有没有被写进长期生效的Prompt、Memory、Tool、Workflow、Harness 或模型参数？有没有在没见过的任务上变好？有没有通过回归、安全、成本和可恢复性检查？这篇文章拆解了Agent自进化的边界和一些未解问题。",
+      "date": "2026-09-29",
+      "title": "Space Bunny Alpha匿名上线 OpenRouter 后，几天内冲上用量榜，OpenCode也公开夸它连续登顶，关键是目前免费、支持多模态，还有 1M 上下文。梦飞用 8 个任务把它和 DeepSeek V4.1 Flash、GLM 5.3 Flash 拉到一起进行了横评：小游戏、记账 App、节气长卷、毛笔书法、视频理解、产业链调研、DCF 估值都测了一遍。看看效果如何！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-21",
-      "title": "这份AI硬件上市合规指南拆解了国内、欧盟、美国三大主流市场的准入规则，覆盖无线、电池安全、数据隐私、AI监管等各类风险点。结合硬件功能、销售地域给出判定逻辑，搭配真实产品案例、研发各阶段时间线、申请材料清单与高频踩坑误区。",
+      "date": "2026-09-29",
+      "title": "Opus 5.5 发布这一周，我们的时间线都被代码做的视频刷屏了：各种产品宣传片、卡点 MV、几分钟的历史短片，基本上全是用代码画出来的。真正的情况是提示词只占一支片子的 10%，剩下的 90%全是制作流程，也就是你要怎么一步步带着 Claude 把片子做出来。这篇文章作者就用这套方法做了两支片子，把整个过程拆成了8步，每一步要跟Claude说什么，都整理成了提示词，照着复制就可以。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-21",
-      "title": "臧师傅的PPT Skill上线了演讲者视图，无需插件，按下P键即可开启双窗口模式。AI自动生成每页口述备注，把大纲要点、案例、转场单独留存，不会污染演示页面。除此之外，还自带计时与排练统计，可以快速定位超时页面。同时还具备屏幕同步校验、黑屏冻结、激光笔标记等功能，可以有效规避线下分享的临场失误。",
+      "date": "2026-09-29",
+      "title": "OpenAI 公开了 GPT-6 Astra 的提示词写法：怎么让它别过早停下来、主动把任务做完；怎么处理用户指令和 Skill 之间的优先级；怎么减少套话和过度 Markdown；什么时候该用子代理并行；以及如何让测试范围和代码改动匹配。或许对你有所帮助！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-21",
-      "title": "很多人把Agent的成败全部押在模型能力上，真正的瓶颈其实在harness。这份实战指南从工具定义、提示词架构、双层记忆、编排策略到人机回环给出了一套可落地的设计范式。可以试试！",
+      "date": "2026-09-29",
+      "title": "DeepSeek Harness 桌面端正式发布，自带完整运行环境，依托插件化的内核，不用复杂配置就能完成 PPT 生成、数据分析、代码调试等办公开发任务，还支持定时任务、多智能体并行协作。新用户登录还能领取限时体验赠金，感兴趣的话快来上手体验下！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-21",
-      "title": "吴恩达梳理出一个搭建生产级AI应用的核心能力框架。从大模型底层原理、数据上下文供给、智能体系统设计，到评估驱动开发、线上运维、机器学习基础都给出了完整指引。",
+      "date": "2026-09-29",
+      "title": "Anthropic Sonnet 5.5正式更新，相比Opus5.5成本减半、速度提升30%。作者在代码动画、PPT制作、3D网页动效、创意写作多场景进行了实测，对比了它和Opus5.5的能力边界。Sonnet执行稳定高效，擅长落地定型任务；Opus则更擅长创意发散与细节增益。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-21",
-      "title": "卡兹克筛选了12个实战提示词，覆盖提问、高效学习、难题拆解、理性决策、自我洞察五大场景，包含苏格拉底问诊、双层学习解释、横纵分析、专家会诊、双向钢人论证、天赋挖掘、人生设计等模板。能够帮你辨别信息幻觉，推演多元方案，完成深度的自我梳理，快速拉高日常和工作里的AI协作质量。",
+      "date": "2026-09-28",
+      "title": "这篇文章把 Google AI 搜索负责人 Robby Stein 的产品方法论讲得很清楚：怎么通过真实场景追问需求，怎么用反馈验证判断，怎么在功能迭代里补齐用户决策所需的信息，甚至让 AI 自动跑产品、截图检查体验。适合产品经理、AI 产品创业者读，能帮你少一点拍脑袋，多一点贴近用户的判断。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-21",
-      "title": "全新的多模态视觉理解模型 DeepSeek-V4-Flash-Vision-Exp 上线 DeepSeek API 平台！",
+      "date": "2026-09-28",
+      "title": "全新升级的 Kling 4.0 将于 10 月正式与大家见面。其中，Kling 4.0 Flash 于9月28日率先开放小范围体验。Kling 4.0在画面真实感、创意可控性、叙事完整度方面都实现了大幅提升，一起来看看！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-21",
-      "title": "Linkloud 在东京沙龙的这场对话涵盖了五个层层递进的问题：过去一年 AI 真正跨过了什么门槛、日本企业的态度如何转变、中国开源模型的接受度、PoC 到规模化落地之间的鸿沟在哪里、企业最终在为什么买单？一起来看看具体都输出了哪些见解！",
+      "date": "2026-09-28",
+      "title": "作者用 Codex + Hypit 完整跑了一遍爆款视频的复刻流程：先分析参考片的开头钩子、字幕节奏、真人出镜和操作演示关系，再换成自己的主题、口播和素材；中途还通过 Hypit Studio 预览时间线、调整画面主次，最后把成片、工程、字幕、视觉配置、质检记录都沉淀成模板。你也可以上手试试！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-20",
-      "title": "这是完整的 12 步路线图，涵盖真正决定智能体能否工作的七大支柱：上下文、工具、记忆、循环、图、开发框架、评估——每一步都有验证其有效性的 Claude 工作流。",
+      "date": "2026-09-28",
+      "title": "「知乎 AI 蓝宝书」把知乎站内高质量专业内容重新整理成知识地图，让你可以先用几小时就搭起一个领域骨架，知道下一步该读什么、怎么继续深入。目前已经整理了 AI Infra、大模型强化学习、具身智能三册，共收录 83 篇内容。如果你想快速入门 AI 技术方向，又不想被碎片信息带偏，可以收藏下！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-20",
-      "title": "这份《DeepSeek Harness的100 个问题》适合刚刷到Harness但看不懂的人，也适合已经在用Agent干活、想搞清楚“为什么别人用同一个模型更稳”的开发者。",
+      "date": "2026-09-28",
+      "title": "Manus 于今日面向海外用户发布了 2.0 版本，并推出面向个人生活场景的智能助理 Cue。一起来看看！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-20",
-      "title": "如果你经常刷完信息更焦虑，也说不清自己到底获得了什么，这篇很适合你看。Dan Koe把“被操控”拆成三个思维层级：NPC只会按脚本反应，主角开始质疑和选择，程序员能观察自己的思考，并主动切换视角。或许能帮你把注意力从反应模式里拽回来，重新变成自己的操作系统。",
+      "date": "2026-09-28",
+      "title": "CY这篇文章把高分 AI 剧集《行镖》的制作过程拆得很细：资产库和制作台本怎么统一角色、场景、道具；分镜如何把剧本文字转成观众看得懂的视觉流；动作提示词怎样写出蓄力、速度、特效滞后和镜头光学；色彩、光线、声音又如何一起服务同一场戏。如果你在做 AI 视频、短剧，不容错过！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-20",
-      "title": "全球AI创造力发展报告【AI+教育专项】梳理了全球AI+教育从政策驱动、技术突破到应用涌现的十年变化，还有中小学、高校、终身学习、教育产品和人机共生等具体场景。",
+      "date": "2026-09-28",
+      "title": "AI 音乐这一周很热闹：一边是工具越来越像真正的音乐工作台，一边是版权、标注、授权规则也在加速补课。苹果收购 AI Music 后，动态自适应音频可能会进入运动、流媒体、游戏配乐场景；Suno v6 训练数据争议继续发酵，Qobuz 开始给 AI 音乐打标签，索尼也加入联盟推动授权标准。产品侧则有 ACE Studio 支持 VSTi/MCP、腾讯 MusicBuddy 内测、Grok Imagine 测试文生音乐。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-20",
-      "title": "MiniMax Design发布，是一款把多模态模型能力变成真实可用的生产力的Harness。H3负责提供视频理解、生成、编辑和参考控制能力，MiniMax Design则把这些能力组织成可执行的创作链路，尤其适合视频编辑、商业内容生产这类既要理解素材、又要精准修改和交付的场景。",
+      "date": "2026-09-27",
+      "title": "本周顶刊 AI 论文合集直击 Agent 开发的各类痛点：涵盖长上下文注意力优化、代码智能体低成本自迭代、机器人图世界规划、Wiki 知识检索、低成本模型裁判方案，还有自组织多智能体、全自动科研智能体等创新方向。附带详实的基准数据，不管是做模型推理优化、搭建多智能体系统，还是设计评估链路，都能快速挖到可复用技术思路。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-20",
-      "title": "Dalton Caldwell 和 Michael Seibel 都做过消费互联网公司，也在 Y Combinator 看过上千个创业项目。这次两人讨论了一个更难的问题：今天的消费级 AI 创业者，去哪里找值得做很多年的点子？一起来看看他们的见解！",
+      "date": "2026-09-27",
+      "title": "作者用Pi SDK和Jev搭建了一个自定义的Harness，把Agent循环里的关键决策拆成了三层：Router负责按任务难度选便宜模型还是强模型，Gate在每次工具调用前判断是否危险、是否需要人工审批，Verifier在最终交付前检查答案质量和依据。Jev是一个专门为这些决策构建的小型模型。你描述情况并提出几个问题，它用数字回答每一个问题。它从不写文本。当你构建自定义harness 时，这一点最为重要！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-19",
-      "title": "这期播客集合了多位硅谷从业者的实战经验，揭开了拉开AI产出差距的真正根源。这些人的工具清单并不神秘，区别在于使用方式。一起来看看他们都是怎么使用的！",
+      "date": "2026-09-27",
+      "title": "作者抢先装上还没正式官宣的 DeepSeek Harness 桌面版，实测了它的登录引导、任务模式、插件系统和完整思维链展示，并用“读取本地环境，生成一个模拟 macOS 的演示网页”做了对比测试。结果很反常识：便宜的 DeepSeek V4.1 flash 在 Harness 里还原出了非常接近本机桌面的交互效果，速度快、过程清晰；而同定位的 GPT-6 Luna 反而更像凭理解重画了一版。模型之外，任务规划和执行框架可能才是下一轮差距。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-19",
-      "title": "最近作者写了不少关于独立开发的思考，想着要汇总一下，就把他的一款产品从开源CLI做到Mac付费软件这一路聊一聊：他当时是怎么想的，哪些事情做下来真的有用，也许能给正在做自己作品的朋友一些输入。",
+      "date": "2026-09-27",
+      "title": "作者把他做 100 多支视频后的经验整理成了一个开源库 Lemo-opuscar：39 种视频风格、每种风格的 STYLE.md，再加 DIRECTOR.md 和 TECHNIQUE.md，告诉 Agent 怎么讲故事、定节奏、拍镜头、配声音、逐帧渲染和自检。你只要讲清主题、故事、节奏、对标、素材和画幅，编排交给Agent，就可以稳定出片！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-19",
-      "title": "拥有二十年游戏行业经验的猫叔，结合自身实战的判断力与AI的体系化知识，开源了一个五十多万字的RPG设计宝典。内容覆盖从立项到上线完整环节，还有问题急救附录与AI辅助生产的落地方案。",
+      "date": "2026-09-27",
+      "title": "作者把 Anthropic 提速 Claude 产品 3 倍的方法拆成了可复用的流程：先找到能量化的指标，再验证这个指标和真实体验相关，接着让 Agent 持续爬山优化，最后用测试、CI 棘轮、功能开关和人工审批把成果锁住。他还把这套方法做成了「闪电.skill」，并拿自己的 4 个网站进行了实测，快来看看效果如何！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-19",
-      "title": "很多人本地部署了DeepSeek harness，能力还没有体验，就发现连文件都不能上传给AI分析，生成的文件还需要下载到本地预览。作者整理了7个DeepSeek harness必装的插件，可以让你的使用体感翻倍。",
+      "date": "2026-09-27",
+      "title": "Opus 5.5 成本下调 40%，但沿用旧提示词习惯，很容易拉高耗时与开销。这份经过重度用户实测的实操指南，带来大量可直接复用的提示词模板，可以帮你充分释放 Opus 5.5 长时间自主执行的能力，减少无效试错。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-19",
-      "title": "如果只看本地推理 ， Ollama 、 LM Studio 和 llama.cpp都是比较成熟的方案。它们可以帮助你下载、管理和运行开源模型。但如果后面要基于自己的数据做 LoRA 或 QLoRA 微调，单纯的推理工具就不够了，还需要训练、数据处理和模型导出能力。Unsloth这套开源工具就给出了一体化的解决方案！",
+      "date": "2026-09-26",
+      "title": "成峰这篇文章拆解了10个关于Opus 5.5的实测案例，讲清了Claude用代码逐帧“画”视频的思路：生成画面、渲染截图、自己检查、继续修改。此外他还复盘了中秋短片《咬了一口月亮》的分镜、角色设定、音效和成本。想用 AI 做短片、动画、视觉内容的创作者不要错过，能少走很多“只会写提示词却做不出片”的弯路。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-19",
-      "title": "从梳理需求、产出开发文档、统一视觉，到AI生成代码、素材托管、真机调试，再搞定类目审核卡点完成上线。梦飞把整个小程序的流程都从头走了一遍，还复盘了一些实操过程中的踩坑经验。普通人可以照搬这套思路，快速把想法变成可上线的小程序产品。",
+      "date": "2026-09-26",
+      "title": "很多人看到 Muse 爆火，第一反应是“又来了一个 Agent”，但这篇文章能帮你看清背后的底层逻辑，或许会对你关于Muse的理解和对Agent的思考有所帮助！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-18",
-      "title": "知识库这件事可以很小，小到把一份 PDF 丢给 ChatGPT，也可以很大，大到要接身份系统、业务数据库、本地模型、审计日志和权限策略。这篇文章就从一份文件开始，带你从入门到精通！",
+      "date": "2026-09-26",
+      "title": "GEO最难的环节，已经从“怎么让 AI 提到我”，转到“线索怎么算、ROI 怎么证明”。乔木老师和姚老师的第五次GEO公开课把GEO效果如何归因拆得很系统：围绕直接转化、延迟效应、渠道协同、间接转化，给出了专属电话、口令、页面、表单、销售追问、词根级 A/B 测试等方法。适合做GEO服务、品牌增长、AI营销的人收藏，读完你会更清楚预算该怎么投、效果该怎么证明。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
-      "date": "2026-08-18",
-      "title": "最近很火的天上白玉京，云中仙宫，很多朋友都很感兴趣。阿真手搓了个营造师 Skill，去任意大家熟悉的Agent装上 Skill，然后给到文中的关键词就可以每次直出3套提示词方案了。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-08-18",
-      "title": "国产开源大模型百花齐放，这些模型能不能不只停留在网页和 API 里，而是真正装进自己的机器，连接本地文件、工具和工作流？ 作者这篇文章尽可能让任何小白玩家都可以轻松驾驭，实现模型本地部署并搭建一套自己的工作流，快来一起跟着试试！",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-08-18",
-      "title": "卡兹克分享了一个极度实用的深度思考Prompt：双向钢人Prompt。它会先帮你重述真实问题，再分别强化“支持你”和“反对你”的最强理由，接着找出真正分歧和关键变量，只问一个最关键的问题，等你回答后再给判断和行动。适合用来做决策、写方案、复盘项目，尤其适合那些“我好像知道答案，但又说不清为什么”的问题。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-08-18",
-      "title": "作者整理了12种运镜+8种转场+4套组合连招+5条心法 ，每种都配了通用模板和具体示例，可以直接套用到你自己的AI视频提示词里。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-08-18",
-      "title": "Benchmark 合伙人Sarah Tavel这篇播客访谈抛出了一个消费级AI的关键创业思路：模型够用之后，产品竞争会转向用户体验、信任和网络效应。未来的爆款AI产品，可能会让你关注靠谱的人、复用他们的方法、看清提示词和资料来源，并在健康、写作、教育、家庭管理等真实任务里自然沉淀社区内容。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-08-18",
-      "title": "AI视频最烧钱的地方，常常藏在空间和运镜里：你脑子里很清楚镜头怎么走、人物站哪、谁挡住谁，一写成提示词，模型就开始猜，最后只能反复抽卡。卡尔用Seedance 2.5+updream预演台给了一个更稳的解法：先用参考图生成粗粒度3D白模，再摆人物、画动线、调机位和关键帧，录好白模后交给Seedance去重渲。一起来看看效果如何！",
+      "date": "2026-09-25",
+      "title": "Opus 5.5 刷屏后，光看成片很容易只感叹“审美强”，但更关键的是它怎么把画面一步步做出来。梦飞这篇文章拆解了 10 个实测案例，讲清 Claude 用代码逐帧“画”视频的思路：生成画面、渲染截图、自己检查、继续修改。他还把玩法分成 2D 动画、three.js 3D 场景、多模型混合三类，并复盘了中秋短片《咬了一口月亮》的分镜、角色设定、音效和成本。一起来看看！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
