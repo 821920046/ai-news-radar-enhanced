@@ -1,16 +1,26 @@
-"""Regression tests for the three P0 defects found during the first-principles audit.
+"""Regression tests for the P0 defects found during the first-principles audit.
 
-Each test locks down a failure mode that was deterministically reproducible:
+Each test locks down a failure mode that was deterministically reproducible in CI.
 
   P0-1  core.models raised ZoneInfoNotFoundError at import time when the IANA
         tz database was unavailable (no system tzdata and no `tzdata` package),
         which took down every module importing it. requirements.txt now pins
         tzdata and the lookup degrades to a fixed UTC+8 offset.
 
-  P0-2  .github/workflows/update-news.yml referenced actions/checkout@v6 and
-        actions/setup-python@v6, which do not exist (v5/v6 were never released),
-        so the job failed on its very first step. The workflow must only
-        reference published major versions and must run the data gate.
+  P0-2  .github/workflows/update-news.yml ran `git add` on data/archive.json and
+        data/title-zh-cache.json, which .gitignore excludes. Git aborts on an
+        ignored path with exit code 1 ("The following paths are ignored by one
+        of your .gitignore files"), so the job failed at "Commit and push
+        changes" after doing all the real work. Confirmed against run
+        36833452328, where steps 1-9 succeeded and step 10 failed.
+        The workflow's `timeout-minutes: 20` was also below the pipeline's real
+        runtime (~20m20s), so scheduled runs were cancelled mid-fetch; it is now
+        40.
+
+        NOTE: an earlier revision of this file claimed checkout@v6 /
+        setup-python@v6 did not exist. That was WRONG -- both tags are published
+        (checked via the GitHub tags API). The action versions were never the
+        cause; the ignored-path `git add` was.
 
   P0-3  api/app.py::_items_of ignored the "items_all" key produced by
         core/output.py for latest-24h-all.json, and the `all_file or main_file`
@@ -81,36 +91,74 @@ def test_no_unused_heavy_dependencies():
         assert heavy not in declared, f"{heavy} 已被移除（代码中无实际 import），不应重新引入"
 
 
-# ── P0-2: GitHub Actions must reference published versions ───────────────────
+# ── P0-2: the commit step must not git-add .gitignore'd paths ────────────────
 
 
-def test_workflow_uses_only_published_action_versions():
+def _gitignore_patterns() -> set[str]:
+    root = ROOT / ".gitignore"
+    if not root.exists():
+        return set()
+    out: set[str] = set()
+    for raw in root.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if line and not line.startswith("#"):
+            out.add(line)
+    return out
+
+
+def _git_add_args(text: str) -> list[str]:
+    """Return every path token passed to git add across the workflow."""
+    tokens: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("git add") and "git add -A" not in stripped:
+            # drop trailing shell redirection / comments
+            body = stripped[len("git add"):].split("#", 1)[0]
+            tokens.extend(p for p in body.split() if not p.startswith("$"))
+    return tokens
+
+
+def test_workflow_never_git_adds_ignored_paths():
+    """This is the actual cause of the CI failure: `git add <ignored>` exits 1."""
     text = WORKFLOW.read_text(encoding="utf-8")
-    uses = re.findall(r"uses:\s*([^\s#]+)", text)
+    ignored = _gitignore_patterns()
+    for token in _git_add_args(text):
+        assert token not in ignored, (
+            f"workflow 对已被 .gitignore 排除的路径执行 git add：{token}；"
+            "git 会以 exit 1 中止，导致 job 在该步骤失败"
+        )
 
-    known = {
-        "actions/checkout": {"v4"},
-        "actions/setup-python": {"v5"},
-        "actions/upload-artifact": {"v4"},
-        "actions/download-artifact": {"v4"},
-        "actions/configure-pages": {"v5"},
-        "actions/upload-pages-artifact": {"v3"},
-        "actions/deploy-pages": {"v4"},
-    }
-    for ref in uses:
-        if "@" not in ref:
+
+def test_workflow_uses_staged_diff_for_emptiness_check():
+    """`git diff --quiet` misses staged changes; must use `--cached`."""
+    text = WORKFLOW.read_text(encoding="utf-8")
+    if "git diff --quiet; then" in text:
+        raise AssertionError(
+            "提交前判空应使用 `git diff --cached --quiet`，"
+            "否则 `git add` 之后 `git diff --quiet` 恒为真、永远不提交"
+        )
+
+
+def test_workflow_timeout_exceeds_observed_pipeline_runtime():
+    """Scheduled runs were cancelled at 20m exactly; observed runtime ~20m20s."""
+    text = WORKFLOW.read_text(encoding="utf-8")
+    m = re.search(r"timeout-minutes:\s*(\d+)", text)
+    assert m, "workflow 应显式设置 timeout-minutes"
+    assert int(m.group(1)) >= 30, (
+        f"timeout-minutes={m.group(1)} 低于实测 pipeline 耗时（约 20 分 20 秒），"
+        "会被 GitHub 强杀"
+    )
+
+
+def test_workflow_action_refs_are_pinned_to_major_tags():
+    """Every `uses:` must carry an explicit version, never a floating branch."""
+    text = WORKFLOW.read_text(encoding="utf-8")
+    for ref in re.findall(r"uses:\s*([^\s#]+)", text):
+        if ref.startswith("./") or "@" not in ref:
             continue
         name, _, ver = ref.partition("@")
-        if name in known:
-            assert ver in known[name], (
-                f"{ref} 引用了未发布的版本；{name} 的可用大版本为 {sorted(known[name])}"
-            )
-
-
-def test_workflow_has_no_v6_or_v7_action_refs():
-    text = WORKFLOW.read_text(encoding="utf-8")
-    bad = re.findall(r"uses:\s*(actions/[^\s@]+@v[67])", text)
-    assert not bad, f"发现不存在的 action 版本: {bad}"
+        assert ver, f"{name} 未固定版本"
+        assert ver not in {"main", "master", "HEAD"}, f"{ref} 使用了浮动引用"
 
 
 def test_workflow_runs_the_data_gate():

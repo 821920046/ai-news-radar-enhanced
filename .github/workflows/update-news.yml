@@ -17,8 +17,7 @@ jobs:
     timeout-minutes: 40
     runs-on: ubuntu-latest
     steps:
-      # 注意：actions/checkout 只发布到 v4（v5/v6 从未发布），引用不存在的 tag 会让
-      # job 在第一步就以 "Unable to resolve action" 直接失败。
+      # 版本固定在当前稳定大版本，避免浮动 tag 带来的意外行为变化。
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -83,17 +82,16 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          if git diff --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # archive.json / title-zh-cache.json 由 .gitignore 排除且由 pipeline-state 分支维护，
-          # 加进 git add 会因「被忽略文件」报错或产生无谓 diff，故不列入。
+          # 只 add 明确需要提交的文件。archive.json / title-zh-cache.json 由 .gitignore 排除
+          # 并由 pipeline-state 分支维护：`git add` 一个被忽略的路径会直接以 exit 1 失败
+          # （"The following paths are ignored by one of your .gitignore files"），
+          # 这正是此前每次运行都在本步骤挂掉的原因。
           git add data/latest-24h.json data/latest-24h-all.json data/source-status.json data/waytoagi-7d.json index.html
+          # 用 staged 差异判断，而不是 git diff --quiet：后者看不到已 add 的内容。
           if git diff --cached --quiet; then
-            echo "No staged changes after add; nothing to commit"
+            echo "No changes to commit"
             exit 0
           fi
           git commit -m "chore: update ai news snapshot + prerender"
