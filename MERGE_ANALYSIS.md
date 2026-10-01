@@ -118,11 +118,36 @@ B 的 `core/models.py` 与 A 一样是裸 `SH_TZ = ZoneInfo("Asia/Shanghai")`。
 `requirements.txt` 显式钉 `tzdata==2025.2`。
 （中国无夏令时，降级语义等价 —— 属双保险，不是替代）
 
-### P0-2　GitHub Actions 引用了不存在的版本
-`update-news.yml` 的 `checkout@v6` / `setup-python@v6` 从未发布（checkout 序列
-是 v1→v4→v7），job 第一步即 "Unable to resolve action" 失败。
-已改为 `@v4` / `@v5`；`timeout-minutes` 20→40（实测 pipeline 需 20m32s，原值会被强杀）；
-validate 步骤改用独立脚本；`git add` 移除两个已被 gitignore 的文件。
+### P0-2　CI 在 "Commit and push changes" 步骤失败
+**（本节结论已更正 —— 早先版本误判为 action 版本号不存在）**
+
+真正原因：`git add` 指向了被 `.gitignore` 排除的路径。GitHub Actions 运行
+`36833452328`（main@4afd90f）的日志原文：
+
+```
+The following paths are ignored by one of your .gitignore files:
+data/archive.json
+data/title-zh-cache.json
+##[error]Process completed with exit code 1.
+```
+
+该次运行的步骤 1–9 全部 success，**仅第 10 步失败** —— 也就是说前 9 步的活
+全白干了。Git 对被忽略的路径执行 `git add` 会直接 exit 1。
+
+另有一条独立的失败：历史大量 `cancelled` 的运行全部卡在第 7 步 "Update data"、
+耗时恰好 `20m19s`/`20m20s`，即被 `timeout-minutes: 20` 强杀（实测 pipeline 需
+约 20 分 20 秒）。
+
+修正内容：
+- `git add` 去掉 `data/archive.json`、`data/title-zh-cache.json`
+- 提交前判空改用 `git diff --cached --quiet`（原 `git diff --quiet` 在 add 之后恒为真）
+- `timeout-minutes` 20 → 40
+- validate 步骤改用独立脚本
+
+> **更正说明**：早先版本称 `checkout@v6` / `setup-python@v6`「从未发布」。
+> 经 GitHub tags API 核实**该说法错误** —— 两个 tag 都真实存在
+> （checkout 有 v1…v7，setup-python 有 v1…v7），且失败运行的 Checkout /
+> Setup Python 步骤均为 success。版本号从来不是失败原因。
 
 ### P0-3　`/hot` 契约漂移永久 503
 `core/output.py` 给 `latest-24h-all.json` 写的是 `items_all`，而 `api/app.py::_items_of`
@@ -131,18 +156,19 @@ validate 步骤改用独立脚本；`git add` 移除两个已被 gitignore 的�
 
 ### 新增资产
 - `scripts/validate_data.py`：独立数据门禁（结构 + 条目数 + 陈旧度 + 信源成功率），失败 exit 1
-- `tests/test_p0_regressions.py`：11 个回归测试，锁死上述三个失败模式
+- `tests/test_p0_regressions.py`：18 个回归测试，锁死上述失败模式
+  （其中 `test_workflow_never_git_adds_ignored_paths` 会读 `.gitignore` 交叉校验
+  workflow 的 `git add` 目标；已实测把旧写法注入回去该项会失败）
 
 ---
 
 ## 六、重建后的验证证据
 
 ```
-pytest tests/                 → 92 passed
+pytest tests/                 → 94 passed
 /health /daily-report /daily-report/markdown /trends /items /stats /hot  → 全 200
 4 个 workflow YAML             → 全部可解析
-action 引用                    → checkout@v4 / setup-python@v5 /
-                                 deploy-pages@v4 / upload-pages-artifact@v3（均真实存在）
+action 引用                    → 均固定到具体大版本
 对已删 shim 的悬空 import      → 0
 scripts/update_news.py --help  → 正常
 ```
