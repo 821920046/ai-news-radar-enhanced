@@ -117,6 +117,27 @@ def main() -> int:
             if rate < 0.3:
                 errors.append(f"信源成功率过低: {rate:.0%} < 30%")
 
+    # ── 5. AI 处理层看门狗（持久运行的关键缺口）──────────────────────────
+    # 抓取成功 ≠ 处理成功。OpenRouter 配额耗尽 / 密钥失效时，管道不会抛异常，
+    # 它会安静地把 items_ai 退化为未加工的原始条目，然后以 exit 0 提交一份
+    # "看起来正常、实际没有 AI 摘要"的数据。长期无人值守时这是最危险的失败模式。
+    raw_total = payload.get("total_items_raw")
+    ai_reported = payload.get("total_items_ai_raw")
+    if isinstance(raw_total, int) and raw_total > 0:
+        ai_count = len(items)
+        ratio = ai_count / raw_total
+        print(f"[INFO] AI 层覆盖: {ai_count}/{raw_total} = {ratio:.0%}")
+        if ratio < 0.05:
+            errors.append(
+                f"AI 处理层疑似失效: 仅 {ai_count}/{raw_total} 条经 AI 处理（{ratio:.0%} < 5%）。"
+                "请检查 OPENROUTER_KEYS 配额与可用性。"
+            )
+    if isinstance(ai_reported, int) and raw_total and ai_reported < raw_total * 0.05:
+        print(
+            f"[WARN] total_items_ai_raw={ai_reported} 远低于 total_items_raw={raw_total}，"
+            "AI 摘要可能大面积缺失。"
+        )
+
     # ── 汇总 ──────────────────────────────────────────────────────────────
     print(f"[INFO] 校验条目数: {len(items)}")
     if errors:

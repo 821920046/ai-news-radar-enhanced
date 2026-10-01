@@ -7,7 +7,11 @@ on:
 
 concurrency:
   group: update-ai-news-${{ github.ref }}
-  cancel-in-progress: true
+  # 必须为 false：这一趟流水线实测要跑 ~20 分钟，而 cron 是每小时触发。
+  # 若为 true，下一小时的调度会直接取消正在运行的那一趟，导致数据永远更新不完
+  # （此前观察到的 `cancelled` @ 20m19s 就是这个原因，而不是超时）。
+  # 排队等待比取消更正确：宁可晚一点，也不要让长任务被腰斩。
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -89,11 +93,38 @@ jobs:
           # （"The following paths are ignored by one of your .gitignore files"），
           # 这正是此前每次运行都在本步骤挂掉的原因。
           git add data/latest-24h.json data/latest-24h-all.json data/source-status.json data/waytoagi-7d.json index.html
-          # 用 staged 差异判断，而不是 git diff --quiet：后者看不到已 add 的内容。
+
+          # ── 抑制无意义快照（仓库负担的根因）──────────────────────────────
+          # generated_at 每次都会变，导致 JSON 至少有 1 字节差异 —— 于是每个小时
+          # 都会产生一个新提交，把 2.6MB + 4.3MB 两个 JSON 各写入一遍。一千多次之后
+          # .git 就膨胀到 GB 级。
+          #
+          # 注意：不能用 `git diff | grep -v generated_at` 来判断。这些 JSON 是
+          # **单行** 文件，生成时间与真实条目内容同处一行，按行过滤会把真正的变化
+          # 一并丢弃，从而漏掉应当提交的更新。这里交给 snapshot_fingerprint.py 做
+          # JSON 语义级比较：剔除 generated_at 后取哈希，与 HEAD 版本比对。
+          #   退出码 0 = 有实质变化；3 = 所有快照都只是 generated_at 不同。
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
+
+          set +e
+          python scripts/snapshot_fingerprint.py \
+            --files data/latest-24h.json data/latest-24h-all.json
+          FP_EXIT=$?
+          set -e
+
+          if [ "$FP_EXIT" -eq 3 ]; then
+            # JSON 快照无实质变化。仅当非 JSON 产物（预渲染 HTML / 信源状态 /
+            # 7 日榜）确实变了时才继续提交。
+            if git diff --cached --quiet -- index.html data/source-status.json data/waytoagi-7d.json; then
+              echo "Snapshot content unchanged and no artifact changes; skipping commit to avoid repo bloat."
+              exit 0
+            fi
+            echo "JSON snapshots unchanged, but other artifacts changed; committing."
+          fi
+
           git commit -m "chore: update ai news snapshot + prerender"
           git pull --rebase origin main || true
           git push
@@ -103,7 +134,9 @@ jobs:
         if: failure() && env.WEBHOOK_URL != ''
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
         run: |
+          PAYLOAD="{\"msgtype\":\"text\",\"text\":{\"content\":\"AI News Radar update failed! Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"},\"text\":\"AI News Radar update failed! Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
           curl -sS -X POST "$WEBHOOK_URL" \
             -H "Content-Type: application/json" \
-            -d "{\"text\": \"AI News Radar update failed! Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" || true
+            -d "$PAYLOAD" || true
