@@ -197,6 +197,31 @@ def test_workflow_suppresses_noop_snapshots():
     )
 
 
+def test_workflow_does_not_mask_rebase_failures():
+    """`git pull --rebase || true` 会吞掉失败，导致实际上从未 rebase。
+
+    实测在 run 36877776289 中出现 "cannot pull with rebase: You have unstaged
+    changes"，被 `|| true` 掩盖。必须显式处理失败。
+    """
+    text = WORKFLOW.read_text(encoding="utf-8")
+    assert "pull --rebase origin main || true" not in text, (
+        "不得用 `|| true` 掩盖 rebase 失败：会静默跳过 rebase 导致 push 被拒"
+    )
+    assert "git pull --rebase origin main" in text, "应保留 rebase 行为"
+    # rebase 前后应清理工作区 / 检查失败
+    assert "git stash" in text, "rebase 前应清理未暂存改动，否则 rebase 必然失败"
+    assert "rebase 失败" in text or "rebase --abort" in text, (
+        "rebase 失败时必须显式报错并终止"
+    )
+
+
+def test_workflow_fails_loudly_on_push_rejection():
+    text = WORKFLOW.read_text(encoding="utf-8")
+    assert "推送失败" in text or "push; then" in text or "if ! git push" in text, (
+        "push 失败必须让 job 失败，不能被吞掉"
+    )
+
+
 def test_snapshot_fingerprint_ignores_generated_at(tmp_path):
     """剔除 generated_at 后内容一致 => 退出码 3（不应提交）。"""
     import json

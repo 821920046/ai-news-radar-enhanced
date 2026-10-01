@@ -126,8 +126,27 @@ jobs:
           fi
 
           git commit -m "chore: update ai news snapshot + prerender"
-          git pull --rebase origin main || true
-          git push
+
+          # ── 推送到远端 ───────────────────────────────────────────────────
+          # 不能写成 `git pull --rebase || true`：一旦工作区存在任何未暂存改动，
+          # rebase 会直接以 "cannot pull with rebase: You have unstaged changes"
+          # 失败，而 `|| true` 把它吞掉 —— 于是实际上从未 rebase，紧接着的
+          # git push 会在远端已前进时被拒绝。实测在 run 36877776289 中已出现
+          # 该错误（被掩盖，恰好当时远端未前进才侥幸成功）。
+          #
+          # 正确做法：先把工作区收拾干净，再 rebase，失败则明确报错。
+          git stash push --include-untracked -m "ci-autostash" >/dev/null 2>&1 || true
+
+          if ! git pull --rebase origin main; then
+            echo "::error::rebase 失败，终止以避免产生分叉或覆盖远端提交"
+            git rebase --abort 2>/dev/null || true
+            exit 1
+          fi
+
+          if ! git push; then
+            echo "::error::推送失败（可能是并发运行抢占了远端）"
+            exit 1
+          fi
 
       # ── 失败时 Webhook 告警（需配置 WEBHOOK_URL secret）──
       - name: Notify on failure
