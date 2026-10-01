@@ -166,15 +166,18 @@ def test_workflow_runs_the_data_gate():
     assert "scripts/validate_data.py" in text, "工作流必须运行数据质量门禁"
 
 
-def test_workflow_does_not_stage_gitignored_artifacts():
+def test_workflow_only_stages_files_that_are_not_ignored():
+    """Generic guard: every git-add target must be a path .gitignore does not cover.
+
+    Complements test_workflow_never_git_adds_ignored_paths by asserting the
+    workflow actually stages something (so a no-op `git add` cannot pass).
+    """
     text = WORKFLOW.read_text(encoding="utf-8")
-    add_lines = [ln for ln in text.splitlines() if "git add" in ln]
-    assert add_lines, "工作流应包含 git add 步骤"
-    for ln in add_lines:
-        assert "archive.json" not in ln, "archive.json 已被 gitignore，不应加入 git add"
-        assert "title-zh-cache.json" not in ln, (
-            "title-zh-cache.json 已被 gitignore，不应加入 git add"
-        )
+    tokens = _git_add_args(text)
+    assert tokens, "工作流应至少 git add 一些文件"
+    ignored = _gitignore_patterns()
+    for token in tokens:
+        assert token not in ignored, f"{token} 被 .gitignore 排除，不应 git add"
 
 
 # ── P0-3: /hot must read the items_all payload ──────────────────────────────
@@ -202,6 +205,21 @@ def test_items_of_falls_back_past_an_empty_primary_key():
 
 def test_items_of_returns_empty_list_for_unknown_shape():
     assert _items_of({"generated_at": "2026-01-01T00:00:00Z"}) == []
+
+
+def test_httpx_is_declared_for_testclient():
+    """TestClient hard-requires httpx; without it two tests below blow up in CI.
+
+    This bit us once: httpx was present locally as a transitive dependency but
+    absent in CI, turning an API regression test into a collection error.
+    """
+    declared = " ".join(_declared_packages()).lower()
+    assert "httpx" in declared, (
+        "httpx 必须显式声明，否则 fastapi.testclient 在 CI 上抛 RuntimeError"
+    )
+    assert importlib.util.find_spec("httpx") is not None, (
+        "运行时缺少 httpx；请先 pip install -r requirements.txt"
+    )
 
 
 def test_hot_route_serves_from_items_all(tmp_path, monkeypatch):

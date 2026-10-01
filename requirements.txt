@@ -10,3 +10,6 @@ pyyaml==6.0.2
 # 显式声明 IANA 时区库：zoneinfo 在无系统 tzdata 的环境（如部分精简版 CI 镜像）会抛
 # ZoneInfoNotFoundError，导致 core.models 在 import 期直接崩溃。
 tzdata==2025.2
+# fastapi.testclient（Starlette TestClient）的硬依赖：缺少时 API 相关测试会直接
+# 抛 RuntimeError 而非跳过。本地常因其它包间接带入而看不出来，CI 上必现。
+httpx==0.27.2
