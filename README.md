@@ -323,14 +323,17 @@ curl http://localhost:8000/health
 
 1. Checkout → 安装依赖 → 跑 `pytest`
 2. （可选）从 `FOLLOW_OPML_B64` 解码私有 OPML
-3. `scripts/update_news.py` 采集并生成 `data/*.json`
-4. **数据质量校验**：条目数 < 3、数据超 6 小时未更新、信源成功率 < 30%、
+3. **从 `pipeline-state` 分支恢复去重归档**（`archive.json` / `title-zh-cache.json`）
+4. `scripts/update_news.py` 采集并生成 `data/*.json`
+5. **数据质量校验**：条目数 < 3、数据超 6 小时未更新、信源成功率 < 30%、
    **AI 处理层覆盖率 < 5%** 均直接失败（`scripts/validate_data.py`）
-5. **`scripts/prerender.py` 预渲染** `index.html`
-6. **语义级变化检测**（`scripts/snapshot_fingerprint.py`）：剔除 `generated_at`
+6. **`scripts/prerender.py` 预渲染** `index.html`
+7. **语义级变化检测**（`scripts/snapshot_fingerprint.py`）：剔除 `generated_at`
    后内容与 HEAD 完全一致则跳过提交
-7. Commit & push `data/*.json` + `index.html`
-8. 失败时 Webhook 告警（需配置 `WEBHOOK_URL`）
+8. Commit & push `data/*.json` + `index.html`
+9. **把归档写回 `pipeline-state`**（不进入 `main` 历史）
+10. **数据陈旧看门狗**：本次运行成功但数据仍过期 → 企微告警
+11. **失败告警**：任意步骤失败 / 取消 / 超时 → 企微告警
 
 **启用步骤**：
 1. 仓库 **Settings → Secrets and variables → Actions** 配置所需 secret（见下表）。
@@ -346,12 +349,40 @@ curl http://localhost:8000/health
 | `cancel-in-progress: false` | workflow `concurrency` | 单趟流水线实测约 20 分钟，而 cron 每小时触发。**必须为 false**，否则下一小时的调度会取消正在运行的那一趟，数据可能永远更新不完。 |
 | `timeout-minutes: 40` | workflow `jobs.update` | 高于实测 20 分钟，留足余量避免被强杀。 |
 | 无实质变化跳过提交 | `scripts/snapshot_fingerprint.py` | `data/latest-24h*.json` 合计约 6.8 MB。若不抑制，`generated_at` 每次变化都会产生一次提交，约 1200 次后 `.git` 会膨胀到 GB 级。 |
-| AI 层看门狗 | `scripts/validate_data.py` | 抓取成功 ≠ 处理成功。OpenRouter 配额耗尽时管道**不会抛异常**，只会安静地退化为无水印的原始条目。看门狗使该故障显式失败并触发告警。 |
+| AI 层看门狗 | `scripts/validate_data.py` | 抓取成功 ≠ 处理成功。OpenRouter 配额耗尽时管道**不会抛异常**，只会安静地退化为未加工的原始条目。看门狗使该故障显式失败并触发告警。 |
 | rebase / push 失败即失败 | workflow 提交步骤 | 不吞错误。工作区有未暂存改动时 `pull --rebase` 会失败，必须先 `git stash` 清理。 |
-| 失败 Webhook 告警 | workflow 末步 | 需配置 `WEBHOOK_URL`；未配置时告警步骤会被跳过（`failure()` 判断失效），**建议务必配置**，否则无人值守时故障不可见。 |
+| 归档走独立分支 | `pipeline-state` | `archive.json` 约 14 MB 且只用于去重，**绝不能进 `main`**（会永久膨胀仓库历史）。现在由 CI 每轮从该分支恢复、处理后再写回。 |
 
-> **建议**：为 AI 摘要所用的 API 设置多个 key（`OPENROUTER_KEYS` 支持逗号分隔），
-> 并配置 `WEBHOOK_URL`。二者是长期无人值守下最容易出问题、也最容易被忽视的两处。
+### 9.2 通知与告警（企业微信）
+
+告警由 `scripts/notify_ci.py` 统一实现，通过现有 `WEBHOOK_URL` 发送，
+支持企微 / 钉钉（`markdown`）、飞书、Slack 三种载荷格式。
+
+覆盖三类「无人值守时必须知道」的情况：
+
+| 场景 | 触发条件 | 说明 |
+|---|---|---|
+| **Actions 异常** | 任意步骤失败、被取消、或超时（`if: !success()`，注意不是 `failure()`） | 之前用 `failure()`，会漏掉 `cancelled` / `timed_out` —— 而这正是最常见的长任务中断形态。 |
+| **数据陈旧** | 流水线**成功**但 `generated_at` 超过 6 小时 | 最隐蔽的失败模式：所有信源抓取失败或上游 API 静默降级时，管道仍以 exit 0 结束，站点持续展示过期新闻，而 Actions 一片绿。 |
+| **调度停摆** | 独立工作流 `staleness-watchdog.yml` 每 6 小时检查一次，超 12 小时即告警 | 若 cron 被 GitHub 因仓库不活跃而停用、或工作流被误禁用，更新流程根本不会启动 —— 写在它内部的检查也就永远不会触发。该看门狗不依赖更新流程，两者失败模式相互独立。 |
+
+未配置 `WEBHOOK_URL` 时：不发送消息，但**看门狗仍会让运行失败**。
+这样「没配告警」不会连带把「能发现故障」的能力一起关掉。
+
+> **必须做的一件事**：配置 `WEBHOOK_URL`（企微群机器人 webhook 地址），
+> 并把 `WEBHOOK_TYPE` 设为 `wecom`。这是目前唯一的故障出口，
+> 不配置则上述三类告警全部无处可去。
+>
+> 另建议为 `OPENROUTER_KEYS` 配置多个 key（逗号分隔），配额耗尽是最常见的长期故障源。
+
+### 9.3 数据保留策略
+
+| 数据 | 保留期 | 说明 |
+|---|---|---|
+| `latest-24h.json` / `latest-24h-all.json` | 24 小时 | 前台展示窗口，由 `--window-hours 24` 控制。 |
+| `archive.json`（去重归档） | 3 天 | 由 `--archive-days 3` 控制。**时间戳全部不可解析的记录会被直接剔除** —— 它们无法证明自己新鲜，且永远匹配不到新抓取的条目。 |
+| `trend_history.json` | 7 天 / 最多 240 条 | 由 `max_history_days` 与 `max_history_entries` 双重限制（`core/trend_engine`）。日期不可解析的条目同样会剔除，避免损坏条目占满配额、挤掉真实历史。 |
+| `title-zh-cache.json` | 跟随 archive | 只保留仍存在于归档中的标题。 |
 
 ---
 

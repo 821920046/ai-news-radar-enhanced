@@ -168,12 +168,36 @@ class Pipeline:
                     existing["description"] = raw.description or ""
 
         # Prune archive
+        #
+        # 注意 `or now` 这个兜底是错的，会让归档只增不减：
+        # 若某条记录三个时间戳全部缺失或损坏，表达式退化为 `now`，
+        # 而 `now >= keep_after` 恒为真 —— 于是这条永远无法被剔除。
+        # 日积月累，归档会囤积大量无法解析、也永远不会再被匹配到的僵尸记录
+        # （实测 pipeline-state 上就冻结着 24986 条，最旧超过 200 天）。
+        #
+        # 正确语义：时间戳全部不可用的记录无法证明自己「新鲜」，应视为陈旧而剔除。
+        # 代价极低 —— 它只会导致该条目在下次抓到时被当作新条目重新入库。
         keep_after = now - timedelta(days=archive_days)
-        archive = {
-            k: v for k, v in archive.items()
-            if (parse_iso(v.get("last_seen_at")) or parse_iso(v.get("published_at"))
-                or parse_iso(v.get("first_seen_at")) or now) >= keep_after
-        }
+        pruned_archive: dict[str, dict] = {}
+        dropped_unparsable = 0
+        for k, v in archive.items():
+            ts = (
+                parse_iso(v.get("last_seen_at"))
+                or parse_iso(v.get("published_at"))
+                or parse_iso(v.get("first_seen_at"))
+            )
+            if ts is None:
+                dropped_unparsable += 1
+                continue
+            if ts >= keep_after:
+                pruned_archive[k] = v
+        if dropped_unparsable:
+            logger.info(
+                "[Pipeline] Pruned %d archive records with unusable timestamps "
+                "(previously retained forever).",
+                dropped_unparsable,
+            )
+        archive = pruned_archive
 
         # 24h window
         window_start = now - timedelta(hours=window_hours)

@@ -107,6 +107,7 @@ class TrendDetector:
         """按时间窗口和硬上限裁剪历史快照。"""
         cutoff = datetime.now(timezone.utc) - timedelta(days=self.max_history_days)
         kept: list[dict] = []
+        dropped_unparsable = 0
         for entry in history:
             ts = entry.get("date")
             try:
@@ -115,9 +116,22 @@ class TrendDetector:
                     dt = dt.replace(tzinfo=timezone.utc)
             except Exception:
                 dt = None
-            # 无法解析时间的旧快照保守保留
-            if dt is None or dt >= cutoff:
+            # 无法解析时间的条目转为剔除。
+            #
+            # 早期实现是「保守保留」，但那样会让损坏条目永久占据配额：
+            # 虽然 max_history_entries 把文件体积限制住了，可 240 个槽位一旦被
+            # 这些永远匹配不到的条目占满，真正的历史就会被挤出去，
+            # 突发检测的基线随之失真。而这类条目本就无法参与时间窗口比较，
+            # 保留它们没有任何价值，剔除反而让配额回收到可用的快照上。
+            if dt is None:
+                dropped_unparsable += 1
+                continue
+            if dt >= cutoff:
                 kept.append(entry)
+        if dropped_unparsable:
+            logger.info(
+                "[TrendEngine] Dropped %d history entries with unusable dates.", dropped_unparsable
+            )
         if len(kept) > self.max_history_entries:
             kept = kept[-self.max_history_entries:]
         return kept

@@ -1,0 +1,69 @@
+name: Data Staleness Watchdog
+
+# 独立于更新流水线的看门狗。
+#
+# 为什么不能只靠 update-news.yml 里的检查：那个检查只在流水线「跑起来」时才有机会
+# 执行。若 cron 因仓库长期不活跃被 GitHub 自动停用、或工作流被误禁用、或调度本身
+# 出问题，更新流程根本不会启动，那么任何写在它内部的检查都永远不会触发 ——
+# 而这恰恰是「新闻一直不能更新」最严重的一种情形。
+#
+# 本工作流只读仓库当前发布的数据，判断其是否过期，过期即企业微信告警。
+# 它不依赖 update-news.yml，因此两者的失败模式相互独立。
+
+on:
+  schedule:
+    # 每 6 小时检查一次（UTC 00:30 / 06:30 / 12:30 / 18:30）
+    # 与更新流水线的每小时调度错开，避免同时占用运行器。
+    - cron: "30 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: staleness-watchdog
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "requirements.txt"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 退出码约定：0 = 数据新鲜（正常）；1 = 数据过期（已尝试告警，标记运行失败以便被发现）
+      - name: Check data freshness
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
+        run: |
+          python scripts/notify_ci.py --mode stale --data-dir data --max-age-hours 12 \
+            --fail-when-stale
+
+      # 上面一步退出 1 时，同样走统一的失败告警通道，确保「看门狗自己失败」
+      # 也不会静默。
+      - name: Notify on watchdog failure
+        if: ${{ !success() }}
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
+        run: |
+          python scripts/notify_ci.py \
+            --mode ci \
+            --status "${{ job.status }}" \
+            --data-dir data \
+            --detail "数据陈旧看门狗触发（超过 12 小时未更新）" \
+            || echo "::warning::告警发送失败"

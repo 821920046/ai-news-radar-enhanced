@@ -107,14 +107,32 @@ def _gitignore_patterns() -> set[str]:
 
 
 def _git_add_args(text: str) -> list[str]:
-    """Return every path token passed to git add across the workflow."""
+    """Paths passed to `git add` in the MAIN repository only.
+
+    The workflow also stages files inside the /tmp/pipeline-state clone, where
+    data/archive.json is deliberately force-added (`-f`): that branch exists
+    precisely to hold gitignored runtime state, and it is not the repo whose
+    history we must protect. Those adds are excluded here.
+    """
     tokens: list[str] = []
+    inside_other_repo = False
     for line in text.splitlines():
         stripped = line.strip()
+        # 跟踪是否已经进入 pipeline-state 克隆的操作区间
+        if "cd /tmp/pipeline-state" in stripped:
+            inside_other_repo = True
+        elif stripped.startswith("cd ") and "pipeline-state" not in stripped:
+            inside_other_repo = False
+
+        if inside_other_repo:
+            continue
         if stripped.startswith("git add") and "git add -A" not in stripped:
-            # drop trailing shell redirection / comments
             body = stripped[len("git add"):].split("#", 1)[0]
-            tokens.extend(p for p in body.split() if not p.startswith("$"))
+            # `-f` / `--force` 显式覆盖 .gitignore，检查忽略规则已无意义
+            force = "-f" in body.split() or "--force" in body.split()
+            if force:
+                continue
+            tokens.extend(p for p in body.split() if not p.startswith("$") and not p.startswith("-"))
     return tokens
 
 
@@ -251,9 +269,19 @@ def test_snapshot_fingerprint_script_is_committed_with_workflow():
 
 
 def test_failure_notification_handles_multiple_webhook_formats():
-    """告警载荷要同时兼容 Slack({"text"}) 与企微({"msgtype","text"})。"""
+    """告警载荷要同时兼容 Slack({"text"}) 与企微({"msgtype","markdown"})。
+
+    告警已从工作流内联 curl 迁移到 scripts/notify_ci.py（便于测试与复用）。
+    这里检查工作流确实调用了该脚本；载荷格式本身由
+    tests/test_alerting_and_retention.py 直接对 send() 做单元验证。
+    """
     text = WORKFLOW.read_text(encoding="utf-8")
-    assert "msgtype" in text, "失败告警应兼容企业微信 webhook 载荷格式"
+    assert "notify_ci.py" in text, "失败告警应走 scripts/notify_ci.py"
+    assert "--mode ci" in text, "失败告警应使用 ci 模式"
+
+    script = (ROOT / "scripts" / "notify_ci.py").read_text(encoding="utf-8")
+    assert "msgtype" in script, "告警脚本应支持企业微信 markdown 载荷"
+    assert '"text"' in script, "告警脚本应支持 Slack/generic 载荷"
 
 
 def test_validate_data_flags_collapsed_ai_layer(tmp_path):

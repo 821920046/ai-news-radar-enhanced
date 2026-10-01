@@ -56,6 +56,31 @@ jobs:
             echo "No FOLLOW_OPML_B64 secret provided; RSS OPML is optional"
           fi
 
+      # ── 恢复去重归档（pipeline-state 分支）───────────────────────────────
+      # archive.json 约 13.8MB，绝不能放进 main（会持续膨胀仓库）。
+      # 但它承载着「这条新闻以前是否见过」的去重历史，丢失会导致重复推送。
+      # 之前注释里写着「由 pipeline-state 分支维护」，但**没有任何代码真正读写该
+      # 分支**，所以归档在每次 runner 回收后即丢失，归档文件本身也冻结在 2026-08。
+      # 这里补上真正的恢复逻辑。
+      - name: Restore dedupe archive from pipeline-state
+        run: |
+          mkdir -p data
+          if git fetch --depth=1 origin pipeline-state 2>/dev/null; then
+            if git show FETCH_HEAD:data/archive.json > data/archive.json 2>/dev/null \
+               && [ -s data/archive.json ]; then
+              echo "已恢复 archive.json（$(wc -c < data/archive.json) 字节）"
+            else
+              echo "pipeline-state 上暂无可用 archive.json，将从空归档开始"
+              rm -f data/archive.json
+            fi
+            git show FETCH_HEAD:data/title-zh-cache.json > data/title-zh-cache.json 2>/dev/null \
+              && echo "已恢复 title-zh-cache.json" \
+              || rm -f data/title-zh-cache.json
+          else
+            echo "pipeline-state 分支尚不存在，将从空归档开始"
+          fi
+
+
       - name: Update data
         env:
           OPENROUTER_KEYS: ${{ secrets.OPENROUTER_KEYS }}
@@ -148,14 +173,104 @@ jobs:
             exit 1
           fi
 
-      # ── 失败时 Webhook 告警（需配置 WEBHOOK_URL secret）──
-      - name: Notify on failure
-        if: failure() && env.WEBHOOK_URL != ''
+      # ── 保存去重归档回 pipeline-state ────────────────────────────────────
+      # 与 main 完全解耦：archive.json 只在 branch 之间流转，永不进入 main 历史，
+      # 因此它 13.8MB 的体积不会拖累仓库。用独立分支还带来一个好处：
+      # 归档的每次覆盖不会产生 main 上的提交（分支本身是可丢弃的派生状态）。
+      - name: Persist dedupe archive to pipeline-state
+        if: success()
+        run: |
+          set -euo pipefail
+          if [ ! -s data/archive.json ]; then
+            echo "无 archive.json 可保存（本次可能未生成），跳过"
+            exit 0
+          fi
+
+          # 归档体积超过 GitHub 单文件 100MB 硬限制时会被拒绝推送。
+          # 正常情况下 --archive-days 3 远低于该阈值，这里只做兜底告警。
+          SIZE=$(wc -c < data/archive.json)
+          echo "archive.json 大小: $SIZE 字节"
+          if [ "$SIZE" -gt 90000000 ]; then
+            echo "::warning::archive.json 已达 $SIZE 字节，接近 100MB 限制，请检查保留策略"
+          fi
+
+          # 用 /tmp 下的独立浅克隆操作，而不是 worktree：
+          # worktree 会把分支「登记」在主仓库里，一旦上次运行残留注册，
+          # `git worktree add -B <branch>` 会直接报
+          # "cannot force update the branch ... used by worktree" 而失败。
+          # 独立克隆与主仓库完全解耦，无此类状态可残留。
+          rm -rf /tmp/pipeline-state
+          if git clone --depth=1 --branch pipeline-state \
+               "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+               /tmp/pipeline-state 2>/dev/null; then
+            echo "已克隆 pipeline-state"
+          else
+            echo "pipeline-state 尚不存在，将初始化一个新分支"
+            mkdir -p /tmp/pipeline-state
+            git -C /tmp/pipeline-state init -q
+            git -C /tmp/pipeline-state remote add origin \
+              "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+            git -C /tmp/pipeline-state checkout -q -b pipeline-state
+          fi
+
+          # 该分支只承载派生状态，不需要主仓库的 .gitignore：
+          # 移除它，避免被忽略的归档文件无法 add。
+          mkdir -p /tmp/pipeline-state/data
+          rm -f /tmp/pipeline-state/.gitignore
+          cp data/archive.json /tmp/pipeline-state/data/archive.json
+          [ -s data/title-zh-cache.json ] && \
+            cp data/title-zh-cache.json /tmp/pipeline-state/data/title-zh-cache.json || true
+          [ -s data/trend_history.json ] && \
+            cp data/trend_history.json /tmp/pipeline-state/data/trend_history.json || true
+
+          cd /tmp/pipeline-state
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/archive.json
+          [ -f data/title-zh-cache.json ] && git add -f data/title-zh-cache.json || true
+          [ -f data/trend_history.json ] && git add -f data/trend_history.json || true
+
+          if git diff --cached --quiet; then
+            echo "归档无变化，跳过推送"
+            exit 0
+          fi
+
+          git commit -q -m "chore(pipeline-state): refresh dedupe archive [skip ci]"
+          if git push origin HEAD:refs/heads/pipeline-state; then
+            echo "已更新 pipeline-state"
+          else
+            # 归档是去重优化的辅助状态，推送失败只降级为重复推送风险，
+            # 不应把一次成功的新闻更新判为失败。
+            echo "::warning::pipeline-state 推送失败（并发运行或权限不足）；本次归档未保存"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 数据陈旧看门狗：流水线「成功」但数据其实没更新 ──────────────────
+      # 最隐蔽的失败模式：所有信源抓取失败 / 运行时间不足 / 上游 API 静默降级时，
+      # 管道仍以 exit 0 结束，站点继续展示过期新闻，而 Actions 一片绿。
+      # 这里在 push 之后复核数据新鲜度，超阈值就走企微告警。
+      - name: Staleness watchdog
+        if: success()
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
         run: |
-          PAYLOAD="{\"msgtype\":\"text\",\"text\":{\"content\":\"AI News Radar update failed! Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"},\"text\":\"AI News Radar update failed! Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
-          curl -sS -X POST "$WEBHOOK_URL" \
-            -H "Content-Type: application/json" \
-            -d "$PAYLOAD" || true
+          python scripts/notify_ci.py --mode stale --data-dir data --max-age-hours 6 \
+            || echo "::warning::陈旧告警发送失败（不影响本次运行结论）"
+
+      # ── 失败/取消/超时告警（企业微信）──────────────────────────────────
+      # 覆盖任意步骤失败。if 用 `!success()` 而非 `failure()`：
+      # cancelled / timed_out 不是 failure，但同样需要有人知道。
+      - name: Notify on failure
+        if: ${{ !success() }}
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
+        run: |
+          python scripts/notify_ci.py \
+            --mode ci \
+            --status "${{ job.status }}" \
+            --data-dir data \
+            --detail "工作流：${{ github.workflow }}" \
+            || echo "::warning::失败告警发送失败（不影响本次运行结论）"
