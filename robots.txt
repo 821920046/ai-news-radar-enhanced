@@ -1,3 +1,18 @@
 User-agent: *
 Allow: /
+
+# 本站是公开聚合数据，欢迎 AI 爬虫抓取。
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://821920046.github.io/ai-news-radar-enhanced/sitemap.xml
+# LLM 说明: https://821920046.github.io/ai-news-radar-enhanced/llms.txt

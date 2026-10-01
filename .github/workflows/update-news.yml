@@ -109,6 +109,15 @@ jobs:
         run: |
           python scripts/prerender.py --data data/latest-24h.json --html index.html --top 30
 
+      # ── 对外出口：llms.txt（给大模型）、三版 RSS、robots.txt ──
+      # 纯静态产物，由 GitHub Pages 托管，零成本。失败不阻断主流程：
+      # 这些是「扩大受众」的增量出口，不该拖垮数据更新。
+      - name: Build agent-facing outputs (llms.txt + RSS)
+        run: |
+          python scripts/build_feeds.py --data data/latest-24h.json \
+            --base-url "https://821920046.github.io/ai-news-radar-enhanced" \
+            --out-dir . || echo "::warning::对外出口生成失败（不影响数据更新）"
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
@@ -117,7 +126,7 @@ jobs:
           # 并由 pipeline-state 分支维护：`git add` 一个被忽略的路径会直接以 exit 1 失败
           # （"The following paths are ignored by one of your .gitignore files"），
           # 这正是此前每次运行都在本步骤挂掉的原因。
-          git add data/latest-24h.json data/latest-24h-all.json data/source-status.json data/waytoagi-7d.json index.html
+          git add data/latest-24h.json data/latest-24h-all.json data/source-status.json data/waytoagi-7d.json index.html llms.txt robots.txt feed-hot.xml feed-all.xml feed-daily.xml
 
           # ── 抑制无意义快照（仓库负担的根因）──────────────────────────────
           # generated_at 每次都会变，导致 JSON 至少有 1 字节差异 —— 于是每个小时
@@ -136,7 +145,8 @@ jobs:
 
           set +e
           python scripts/snapshot_fingerprint.py \
-            --files data/latest-24h.json data/latest-24h-all.json
+            --files data/latest-24h.json data/latest-24h-all.json \
+                    llms.txt feed-hot.xml feed-all.xml feed-daily.xml
           FP_EXIT=$?
           set -e
 

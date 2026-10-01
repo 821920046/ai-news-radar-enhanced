@@ -1,0 +1,64 @@
+# AI Signal Board
+
+> 24 小时 AI/科技情报雷达 — 多源聚合、智能评分、趋势检测。
+
+本站每小时自动更新，聚合 15 个信源 / 173 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
+
+最后更新：2026-10-01T15:31:06.833125+00:00
+当前窗口内容数：1102 条；累计去重归档：5974 条。
+
+## 数据出口
+
+- [首页](https://821920046.github.io/ai-news-radar-enhanced/)：人类可读的看板（含首屏预渲染）
+- [精选 RSS](https://821920046.github.io/ai-news-radar-enhanced/feed-hot.xml)：信号评分较高的一批，适合订阅
+- [全部 RSS](https://821920046.github.io/ai-news-radar-enhanced/feed-all.xml)：窗口内全部内容，不筛不弃
+- [日报 RSS](https://821920046.github.io/ai-news-radar-enhanced/feed-daily.xml)：每天一期的摘要合集
+- [24 小时快照 JSON](https://821920046.github.io/ai-news-radar-enhanced/data/latest-24h.json)：完整结构化数据
+- [全量快照 JSON](https://821920046.github.io/ai-news-radar-enhanced/data/latest-24h-all.json)：未做主题过滤的全量数据
+- [站点地图](https://821920046.github.io/ai-news-radar-enhanced/sitemap.xml)
+
+## 数据契约
+
+`data/latest-24h.json` 的顶层字段：
+
+| 字段 | 含义 |
+| --- | --- |
+| `generated_at` | 生成时刻（UTC ISO 8601）。**判断数据新旧只看这个**，不要用 HTTP 头或文件时间 |
+| `window_hours` | 时间窗口小时数 |
+| `total_items` | 本次窗口内条目数 |
+| `archive_total` | 累计去重归档条目数 |
+| `items_ai` | 条目数组（已按主题过滤） |
+| `hot_events` | 事件级热度榜（见下） |
+| `heat_rule` | 热度算法版本标识 |
+| `heat_behind_sources` | 本轮缺席的信源，非空时热度方向不可信 |
+
+单条内容的字段：
+
+| 字段 | 含义 |
+| --- | --- |
+| `title` / `title_zh` | 原始标题 / 中文标题 |
+| `url` | 原文链接（引用时请用这个） |
+| `published_at` | 原文发布时间。可能为 `null`，此时退回 `first_seen_at` |
+| `first_seen_at` | 本站首次抓到的时刻（**不等于**发布时间） |
+| `site_name` / `source` | 信源站点 / 具体来源 |
+| `signal_score` | 多维信号分（0–100） |
+| `signal_level` | 分级 S/A/B/C |
+| `signal_breakdown` | 五维细分：信源权重、技术深度、新颖度、传播速度、社区信号 |
+| `hotness_score` | 该内容在**其来源站内**的排位热度（0–1000），不是跨站热度 |
+| `tags` | 主题标签 |
+| `recommendation_reason` | 推荐理由 |
+
+## 事件级热度
+
+`hot_events` 与单条的 `hotness_score` 含义不同：前者按**事件**统计有多少个**独立来源**在讨论，后者只是单条内容在其来源站内的排位。
+
+热度规则（`heat_rule`）：48 小时窗口、24 小时半衰期、同一来源无论发几条只计一次。
+
+`heat_trend` 取值：`up` / `down` / `flat` / `new` / `unknown`。
+**`unknown` 表示有信源本轮未产出数据，方向无法判定 —— 不要把它当作下降。**
+
+## 引用要求
+
+- 引用内容时请链接到 `url` 字段指向的**原文**，本站是聚合器，不是原始发布方。
+- 引用数据时请注明本站名称与抓取时刻（`generated_at`）。
+- 请勿把 `first_seen_at` 当作发布时间引用。

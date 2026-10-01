@@ -285,15 +285,28 @@ class Pipeline:
             logger.info("[Pipeline] Stage 7/7: Trend Engine + Report generation...")
             try:
                 trend_detector = self._get_trend_detector()
-                trend_result = trend_detector.analyze(items_ai)
+                # 传入本轮在场的信源集合，让热度算法能识别「源没跟上」，
+                # 从而不把「抓取失败」误报成「热度下跌」。
+                expected_sites = {
+                    str(rec.get("site_id"))
+                    for rec in latest_all
+                    if rec.get("site_id")
+                }
+                trend_result = trend_detector.analyze(
+                    items_ai, expected_site_ids=expected_sites
+                )
                 editor = self._get_editor_agent()
                 report = editor.generate_report(items_ai, trend_result)
                 critic = self._get_critic_agent()
                 validation = critic.validate(report)
                 if not validation.get("valid"):
                     report = critic.improve(report, validation)
-                logger.info("[Pipeline] Report generated (%d chars, validated: %s).",
-                            len(report), validation.get("level", "unknown"))
+                logger.info(
+                    "[Pipeline] Report generated (%d chars, validated: %s, hot_events: %d).",
+                    len(report),
+                    validation.get("level", "unknown"),
+                    len(trend_result.get("hot_events", [])),
+                )
             except Exception as exc:
                 logger.warning("[Pipeline] Trend/Report failed (non-fatal): %s", exc)
         else:
@@ -337,6 +350,12 @@ class Pipeline:
             "source_count": len({f"{i['site_id']}::{i['source']}" for i in items_ai}),
             "site_stats": sorted(site_stat.values(), key=lambda x: x["count"], reverse=True),
             "items": items_ai, "items_ai": items_ai, "items_all": items_all,
+            # ── 事件级热度（heat v1）─────────────────────────────────
+            # 与单条内容的 hotness_score 不同：这里按**事件**算跨来源关注度。
+            # heat_trend == "unknown" 表示有源未跟上，方向不可判定。
+            "hot_events": trend_result.get("hot_events", []),
+            "heat_rule": trend_result.get("heat_rule"),
+            "heat_behind_sources": trend_result.get("behind_sources", []),
         }
 
         archive_payload = {
@@ -409,6 +428,8 @@ class Pipeline:
             "successful_sources": sum(1 for s in statuses if s["ok"]),
             "signal_scored": self.signal_score_enabled,
             "trends_detected": bool(trend_result.get("bursts")),
+            "hot_events": len(trend_result.get("hot_events", [])),
+            "behind_sources": len(trend_result.get("behind_sources", [])),
             "report_length": len(report),
         }
         logger.info("[Pipeline] Complete: %s", result)

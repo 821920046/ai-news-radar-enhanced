@@ -14,10 +14,11 @@ import logging
 import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 from core.trend_engine.clustering import TrendClustering
 from core.trend_engine.burst_detection import BurstDetector
+from core.trend_engine.heat import HeatEngine, detect_behind_sources
 
 try:
     from core.utils import atomic_write_text
@@ -34,6 +35,7 @@ class TrendDetector:
         self.config = config or {}
         self.clustering = TrendClustering(self.config.get("clustering", {}))
         self.burst_detector = BurstDetector(self.config.get("burst", {}))
+        self.heat_engine = HeatEngine(self.config.get("heat", {}))
         # 历史保留天数（与 BurstDetector 的回溯窗口一致）
         self.max_history_days = int(self.config.get("max_history_days", 7))
         # 历史快照硬上限，避免文件无限增长（hourly 运行约 24/天）
@@ -51,19 +53,55 @@ class TrendDetector:
         self,
         articles: list[dict],
         api_key: str | None = None,
+        *,
+        at: datetime | None = None,
+        expected_site_ids: Iterable[str] | None = None,
     ) -> dict[str, Any]:
         """运行完整的趋势分析流水线。
 
+        Args:
+            articles: 本轮全部内容。
+            api_key: embedding 用的 API key（TF-IDF 模式下忽略）。
+            at: 热度计算的基准时刻，默认当前 UTC。
+            expected_site_ids: 本轮理论上应该在场的信源 id 集合。传入后，
+                缺席的源会被识别为「未跟上」，相关事件的趋势标记为
+                ``unknown`` 而非 ``down`` —— 避免把「没抓到」误报成
+                「讨论变少」。
+
         Returns:
             {
-                "clusters": [...],      # 聚类结果
+                "clusters": [...],      # 聚类结果（每个簇附加 heat_* 字段）
                 "bursts": [...],        # 突发检测结果
                 "trend_count": int,     # 检测到的突发话题数
                 "total_clustered": int, # 被聚类的文章总数
+                "behind_sources": [...],# 本轮缺席的信源
+                "heat_rule": str,       # 热度算法版本
             }
         """
+        from datetime import timezone as _tz
+
+        at = at or datetime.now(_tz.utc)
+
         # Step 1: 语义聚类
         clusters = self.clustering.cluster(articles, api_key=api_key)
+
+        # Step 1.5: 事件级热度
+        # 「源未跟上」必须显式识别，否则会把它误判成热度下跌。
+        behind: list[str] = []
+        if expected_site_ids is not None:
+            behind = detect_behind_sources(articles, all_site_ids=expected_site_ids)
+            if behind:
+                logger.info(
+                    "[TrendEngine] %d source(s) produced no evidence this round: %s",
+                    len(behind),
+                    ", ".join(behind[:8]),
+                )
+        behind_set = set(behind)
+        for cluster in clusters:
+            result = self.heat_engine.compute(
+                cluster.get("items", []), at=at, behind_sources=behind_set
+            )
+            cluster.update(result.to_dict())
 
         # Step 2: 突发检测
         bursts = self.burst_detector.detect(clusters, self.cluster_history)
@@ -71,7 +109,7 @@ class TrendDetector:
         # Step 3: 存入历史（供后续运行做基线），并持久化到磁盘
         self.cluster_history.append(
             {
-                "date": datetime.now(timezone.utc).isoformat(),
+                "date": at.isoformat(),
                 "clusters": [
                     {"topic": c["topic"], "size": c["size"]} for c in clusters
                 ],
@@ -81,11 +119,30 @@ class TrendDetector:
         self.cluster_history = self._prune_history(self.cluster_history)
         self._save_history(self.cluster_history)
 
+        # 事件热度榜：只保留有多个独立来源的簇（单来源不算「事件热点」）
+        hot_events = [
+            {
+                "topic": c.get("topic", ""),
+                "heat": c.get("heat", 0.0),
+                "heat_trend": c.get("heat_trend", "unknown"),
+                "heat_participants": c.get("heat_participants", 0),
+                "heat_badges": c.get("heat_badges", []),
+                "heat_sources": c.get("heat_sources", []),
+                "size": c.get("size", 0),
+            }
+            for c in clusters
+            if int(c.get("heat_participants") or 0) >= 2
+        ]
+        hot_events.sort(key=lambda e: -float(e.get("heat") or 0.0))
+
         return {
             "clusters": clusters,
             "bursts": bursts,
+            "hot_events": hot_events,
             "trend_count": len(bursts),
             "total_clustered": sum(c.get("size", 0) for c in clusters),
+            "behind_sources": behind,
+            "heat_rule": clusters[0].get("heat_rule") if clusters else None,
         }
 
     def _load_history(self) -> list[dict]:

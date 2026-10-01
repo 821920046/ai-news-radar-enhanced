@@ -12,10 +12,22 @@ from .clustering import TrendClustering
 from .burst_detection import BurstDetector
 from .trend_detector import TrendDetector
 from .evolution import TrendEvolution
+from .heat import (
+    HEAT_RULE_VERSION,
+    HeatEngine,
+    HeatResult,
+    detect_behind_sources,
+    participant_key,
+)
 
 __all__ = [
     "TrendClustering",
     "BurstDetector",
     "TrendDetector",
     "TrendEvolution",
+    "HEAT_RULE_VERSION",
+    "HeatEngine",
+    "HeatResult",
+    "detect_behind_sources",
+    "participant_key",
 ]

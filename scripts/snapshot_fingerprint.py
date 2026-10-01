@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -49,6 +50,42 @@ def _canonical_hash(raw: str) -> str | None:
     obj.pop("generated_at", None)
     canonical = json.dumps(obj, sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+#: 文本产物里的易变痕迹，逐条正则化后再比较。
+#:
+#: llms.txt 与 RSS 都内嵌生成时刻（llms 的「最后更新」、RSS 的 lastBuildDate），
+#: 若按字节比较，它们每小时都会「变化」，于是每次运行都会产生一个提交 ——
+#: 正是此前把 .git 撑到 GB 级的老问题，换了个文件重复一次。
+#: 这里把这些字段替换成定值后再哈希，只在**内容真的变了**时才认为有变化。
+_VOLATILE_TEXT_PATTERNS = (
+    # llms.txt: 「最后更新：2026-10-01T15:31:06.833125+00:00」
+    (re.compile(r"^最后更新：.*$", re.MULTILINE), "最后更新：<ts>"),
+    # RSS: <lastBuildDate>Thu, 01 Oct 2026 15:31:06 +0000</lastBuildDate>
+    (
+        re.compile(r"<lastBuildDate>.*?</lastBuildDate>", re.DOTALL),
+        "<lastBuildDate>ts</lastBuildDate>",
+    ),
+)
+
+
+def _canonical_text_hash(raw: str) -> str:
+    """对文本产物（llms.txt / RSS / robots.txt）取「剔除时间戳后」的哈希。"""
+    text = raw
+    for pattern, repl in _VOLATILE_TEXT_PATTERNS:
+        text = pattern.sub(repl, text)
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def _hash_for(path: str, raw: str) -> tuple[str | None, bool]:
+    """按扩展名分派哈希方式。
+
+    Returns:
+        (hash, is_json)。``is_json`` 为 False 表示走了文本路径。
+    """
+    if path.endswith(".json"):
+        return _canonical_hash(raw), True
+    return _canonical_text_hash(raw), False
 
 
 def _head_content(path: str) -> str | None:
@@ -86,9 +123,9 @@ def main() -> int:
             changed.append(rel)
             continue
 
-        new_hash = _canonical_hash(disk.read_text(encoding="utf-8"))
+        new_hash, is_json = _hash_for(rel, disk.read_text(encoding="utf-8"))
         if new_hash is None:
-            print(f"[CHANGED] {rel}: 不是可解析的 JSON 对象，按变化处理")
+            print(f"[CHANGED] {rel}: 无法解析，按变化处理")
             changed.append(rel)
             continue
 
@@ -98,7 +135,7 @@ def main() -> int:
             changed.append(rel)
             continue
 
-        old_hash = _canonical_hash(head_raw)
+        old_hash, _ = _hash_for(rel, head_raw)
         if old_hash is None:
             print(f"[CHANGED] {rel}: HEAD 版本无法解析，按变化处理")
             changed.append(rel)
@@ -108,12 +145,13 @@ def main() -> int:
             print(f"[CHANGED] {rel}")
             changed.append(rel)
         else:
-            print(f"[SAME]    {rel}（仅 generated_at 不同）")
+            kind = "仅 generated_at 不同" if is_json else "仅时间戳不同"
+            print(f"[SAME]    {rel}（{kind}）")
             unchanged.append(rel)
 
     if not changed:
         print(
-            f"\n所有 {len(unchanged)} 个快照在剔除 generated_at 后与 HEAD 完全一致，"
+            f"\n所有 {len(unchanged)} 个快照在剔除时间戳后与 HEAD 完全一致，"
             "跳过提交以避免仓库膨胀。"
         )
         return NO_SUBSTANTIVE_CHANGE
