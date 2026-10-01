@@ -324,15 +324,34 @@ curl http://localhost:8000/health
 1. Checkout → 安装依赖 → 跑 `pytest`
 2. （可选）从 `FOLLOW_OPML_B64` 解码私有 OPML
 3. `scripts/update_news.py` 采集并生成 `data/*.json`
-4. **数据质量校验**：条目数 < 3 直接失败
-5. **`scripts/prerender.py` 预渲染** `index.html`（本次新增）
-6. Commit & push `data/*.json` + `index.html`
-7. 失败时 Webhook 告警（需配置 `WEBHOOK_URL`）
+4. **数据质量校验**：条目数 < 3、数据超 6 小时未更新、信源成功率 < 30%、
+   **AI 处理层覆盖率 < 5%** 均直接失败（`scripts/validate_data.py`）
+5. **`scripts/prerender.py` 预渲染** `index.html`
+6. **语义级变化检测**（`scripts/snapshot_fingerprint.py`）：剔除 `generated_at`
+   后内容与 HEAD 完全一致则跳过提交
+7. Commit & push `data/*.json` + `index.html`
+8. 失败时 Webhook 告警（需配置 `WEBHOOK_URL`）
 
 **启用步骤**：
 1. 仓库 **Settings → Secrets and variables → Actions** 配置所需 secret（见下表）。
 2. **Settings → Actions → General → Workflow permissions** 选 **Read and write permissions**（CI 需要 push）。
 3. 手动触发一次：**Actions → Update AI News Snapshot → Run workflow**，确认全绿。
+
+### 9.1 长期无人值守运行要点
+
+本项目按「长期自动跑、无需人工干预」设计，关键约定如下：
+
+| 机制 | 位置 | 作用 |
+|---|---|---|
+| `cancel-in-progress: false` | workflow `concurrency` | 单趟流水线实测约 20 分钟，而 cron 每小时触发。**必须为 false**，否则下一小时的调度会取消正在运行的那一趟，数据可能永远更新不完。 |
+| `timeout-minutes: 40` | workflow `jobs.update` | 高于实测 20 分钟，留足余量避免被强杀。 |
+| 无实质变化跳过提交 | `scripts/snapshot_fingerprint.py` | `data/latest-24h*.json` 合计约 6.8 MB。若不抑制，`generated_at` 每次变化都会产生一次提交，约 1200 次后 `.git` 会膨胀到 GB 级。 |
+| AI 层看门狗 | `scripts/validate_data.py` | 抓取成功 ≠ 处理成功。OpenRouter 配额耗尽时管道**不会抛异常**，只会安静地退化为无水印的原始条目。看门狗使该故障显式失败并触发告警。 |
+| rebase / push 失败即失败 | workflow 提交步骤 | 不吞错误。工作区有未暂存改动时 `pull --rebase` 会失败，必须先 `git stash` 清理。 |
+| 失败 Webhook 告警 | workflow 末步 | 需配置 `WEBHOOK_URL`；未配置时告警步骤会被跳过（`failure()` 判断失效），**建议务必配置**，否则无人值守时故障不可见。 |
+
+> **建议**：为 AI 摘要所用的 API 设置多个 key（`OPENROUTER_KEYS` 支持逗号分隔），
+> 并配置 `WEBHOOK_URL`。二者是长期无人值守下最容易出问题、也最容易被忽视的两处。
 
 ---
 
