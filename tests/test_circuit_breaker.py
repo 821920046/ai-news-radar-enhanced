@@ -90,16 +90,24 @@ class CircuitBreakerTests(unittest.TestCase):
         # 描述保持原样
         self.assertEqual(item["description"], "This is a very long english description about AI breakthrough.")
 
+    @patch("core.normalize.translator._google_session")
     @patch("core.normalize.translator._get_openrouter_keys", return_value=["test-key-1"])
     @patch.dict("os.environ", {"AI_TRANSLATE_ENABLED": "true"})
-    def test_add_bilingual_fields_graceful_degradation_on_429(self, _mock_keys):
-        """验证当遭遇连续 429 限流时，add_bilingual_fields 能自动熔断并降级。"""
+    def test_add_bilingual_fields_graceful_degradation_on_429(self, _mock_keys, mk_google_session):
+        """验证当遭遇连续 429 限流时，add_bilingual_fields 能自动熔断并降级。
+
+        ⚠️ Google 兜底走**独立 session**（v3.2 引入，用于去掉继承来的 3 次重试），
+        所以 mock 主 session 的 `.get` 不再能拦到 Google 请求。必须直接 patch
+        `_google_session`，否则该用例会真的联网 —— 在能访问 translate.googleapis.com
+        的环境（如 GitHub Actions）会拿到真实译文，断言随之失败。
+        """
         mock_session = MagicMock(spec=requests.Session)
         # 模拟每次调用都返回 429
         mock_resp = MagicMock()
         mock_resp.status_code = 429
         mock_session.post.return_value = mock_resp
-        mock_session.get.return_value.status_code = 500  # Google 也失败作为极端用例
+        # Google 也失败作为极端用例（独立 session，需单独 patch）
+        mk_google_session.return_value.get.side_effect = requests.RequestException("google down")
 
         items_ai = [
             {"title": f"English Title {i}", "url": f"https://example.com/{i}", "description": "English desc " * 5}
