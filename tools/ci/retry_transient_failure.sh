@@ -30,6 +30,13 @@ WORKFLOW_NAME="${WORKFLOW_NAME:-unknown}"
 SELF_WORKFLOW_NAME="${SELF_WORKFLOW_NAME:-}"
 MAX_ATTEMPTS="${MAX_ATTEMPTS:-3}"
 DRY_RUN="${DRY_RUN:-false}"
+DEFAULT_BRANCH="${DEFAULT_BRANCH:-main}"
+# 超时 kill 的重试上限比普通故障更小：一次超时可能是上游抖动，连续两次同样的超时
+# 几乎只能是确定性缺陷，再跑一次只是又烧掉一整个超时预算（这里就是 40 分钟）。
+MAX_TIMEOUT_ATTEMPTS="${MAX_TIMEOUT_ATTEMPTS:-2}"
+# 运行时长达到声明超时的百分之多少即判定为「被超时 kill」。留 20% 余量是因为
+# 调度与清理有开销，实测 40 分钟的 job 落在 40m22s~40m24s。
+TIMEOUT_TOLERANCE_PCT="${TIMEOUT_TOLERANCE_PCT:-80}"
 
 log() { printf '%s\n' "$*" >&2; }
 summary() { [ -n "${GITHUB_STEP_SUMMARY:-}" ] && printf '%s\n' "$*" >> "$GITHUB_STEP_SUMMARY"; return 0; }
@@ -51,8 +58,67 @@ decide_skip() {
   exit 0
 }
 
+# ---------------------------------------------------------------------------
+# 判定一个 cancelled 运行是「被超时 kill」还是「人的决定」
+# ---------------------------------------------------------------------------
+# GitHub 对两者给的都是 conclusion=cancelled —— job 超出 timeout-minutes 并没有
+# 独立的 timed_out 结论（本仓库实测：0 个 timed_out、271 个 cancelled，且每个
+# cancelled 都恰好停在超时线上）。日志里也没有区分特征，两边都是
+# "##[error]The operation was canceled."。
+#
+# 唯一可用的判据是**时长**：被 kill 的运行会停在超时线上，人的取消落在任意时刻。
+# 成功时导出 JOB_TIMEOUT_MIN（工作流声明的最外层超时，分钟）。
+is_timeout_kill() {
+  local meta started updated path
+  meta=$(gh api "/repos/$REPO/actions/runs/$RUN_ID" 2>/dev/null) || {
+    log "could not read run metadata"; return 1; }
+  started=$(printf '%s' "$meta" | jq -r '.run_started_at // empty')
+  updated=$(printf '%s' "$meta" | jq -r '.updated_at // empty')
+  path=$(printf '%s' "$meta" | jq -r '.path // empty')
+  if [ -z "$started" ] || [ -z "$updated" ] || [ -z "$path" ]; then
+    log "run metadata incomplete; cannot classify cancelled run"
+    return 1
+  fi
+
+  # GNU date 在 ubuntu-latest 与 Git Bash 上都可用，且比引入 python3 更符合
+  # 本脚本「只依赖预装工具（gh / jq / git / coreutils）」的取向 —— 它刻意不声明
+  # 任何 `uses:` 步骤，就是为了不在自己最该出手时被 action 解析失败拖下水。
+  local started_epoch updated_epoch duration
+  started_epoch=$(date -d "$started" +%s 2>/dev/null) || { log "cannot parse run_started_at='$started'"; return 1; }
+  updated_epoch=$(date -d "$updated" +%s 2>/dev/null) || { log "cannot parse updated_at='$updated'"; return 1; }
+  duration=$(( updated_epoch - started_epoch ))
+  if [ "$duration" -lt 0 ]; then
+    log "negative duration (${duration}s); clock or field mismatch"
+    return 1
+  fi
+
+  # 读工作流文件里声明的超时。取**最大**值：job 级超时是外层上界，步骤级超时
+  # 必须更小（有测试 test_step_timeout_leaves_room_for_downstream 守着），
+  # 因此最大值就是 job 级超时。这样写不依赖 timeout-minutes 在文件中的先后顺序。
+  local wf declared
+  wf=$(gh api "/repos/$REPO/contents/$path?ref=$DEFAULT_BRANCH" --jq '.content' 2>/dev/null \
+       | base64 -d 2>/dev/null) || { log "could not read $path"; return 1; }
+  declared=$(printf '%s\n' "$wf" \
+       | grep -oE '^[[:space:]]*timeout-minutes:[[:space:]]*[0-9]+' \
+       | grep -oE '[0-9]+' | sort -n | tail -1)
+  if [ -z "$declared" ]; then
+    log "$path declares no timeout-minutes; cannot classify a cancelled run"
+    return 1
+  fi
+  JOB_TIMEOUT_MIN="$declared"
+
+  local threshold=$(( declared * 60 * TIMEOUT_TOLERANCE_PCT / 100 ))
+  log "cancelled run ran ${duration}s; declared job timeout ${declared}m (threshold ${threshold}s)"
+  [ "$duration" -ge "$threshold" ]
+}
+
 # --- 1. Only failures are eligible ----------------------------------------
-# A cancelled run is an explicit human decision and must never be resurrected.
+# A cancelled run is normally an explicit human decision and must never be
+# resurrected. But GitHub reports a job that exceeded `timeout-minutes` as
+# `cancelled` too, so rejecting the conclusion outright makes this workflow
+# blind to the one fault it most needs to see. Admit a cancelled run only when
+# its duration proves it was cut off at the timeout.
+TIMEOUT_KILL=false
 case "$CONCLUSION" in
   failure) : ;;
   # A run whose jobs never got past provisioning is reported as
@@ -60,6 +126,14 @@ case "$CONCLUSION" in
   # Both are exactly the infrastructure faults this workflow exists for, so
   # accepting only "failure" would blind it to its own purpose.
   startup_failure|timed_out) : ;;
+  cancelled)
+    if is_timeout_kill; then
+      TIMEOUT_KILL=true
+      log "classified as a timeout-kill, not a human decision"
+    else
+      decide_skip "cancelled before its timeout: a human decision, never resurrected"
+    fi
+    ;;
   "") decide_skip "conclusion unavailable" ;;
   *)  decide_skip "conclusion is '$CONCLUSION', not a retryable failure" ;;
 esac
@@ -80,6 +154,21 @@ if [ "$RUN_ATTEMPT" -ge "$MAX_ATTEMPTS" ]; then
 fi
 
 # --- 3. Classify the failure ----------------------------------------------
+# A timeout-kill is already classified by its duration. It must be decided here
+# rather than by the job classifier below, because the interrupted step's
+# conclusion is `cancelled`, not `failure` — the classifier would count zero
+# failed jobs and refuse to act, which is exactly how this workflow stayed
+# silent through every hang it was built to recover from.
+REASON=""
+if [ "$TIMEOUT_KILL" = "true" ]; then
+  # Retry once. One timeout may be an upstream stall; two identical timeouts
+  # are a deterministic defect, and a third attempt would only burn another
+  # full timeout budget (40 minutes here) for an identical outcome.
+  if [ "$RUN_ATTEMPT" -ge "$MAX_TIMEOUT_ATTEMPTS" ]; then
+    decide_skip "timeout-kill at attempt $RUN_ATTEMPT/$MAX_TIMEOUT_ATTEMPTS; a repeated timeout indicates a deterministic defect, not a transient fault"
+  fi
+  REASON="job exceeded its ${JOB_TIMEOUT_MIN}m timeout with a step still running"
+else
 # Deterministic signal: the runner reports "Set up job" as a real step. If that
 # step failed, action resolution or runner provisioning failed, and repository
 # code never ran.
@@ -117,7 +206,6 @@ read -r SETUP_FAILED CODE_FAILED OPAQUE_FAILED < /tmp/job_classes.txt
 
 log "failed jobs: setup-phase=$SETUP_FAILED code-phase=$CODE_FAILED unreported=$OPAQUE_FAILED"
 
-REASON=""
 if [ "$SETUP_FAILED" -gt 0 ] && [ "$CODE_FAILED" -eq 0 ]; then
   REASON="every failed job failed during Set up job"
 elif [ "$CODE_FAILED" -gt 0 ]; then
@@ -132,6 +220,7 @@ else
   fi
   [ -n "$REASON" ] || decide_skip "failure signature is not recognisably infrastructural"
 fi
+fi  # end: non-timeout classification
 
 # --- 4. Re-run ------------------------------------------------------------
 log "decision: re-run ($REASON)"

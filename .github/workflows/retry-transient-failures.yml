@@ -13,11 +13,21 @@ name: Retry Transient Failures
 # script is fetched over the plain REST API instead, keeping one copy of the
 # logic in the repository.
 on:
+  # 只监听**一个**工作流，且只监听关键路径。
+  #
+  # 曾同时监听 Deploy / Update / Cleanup 三个，但它们是**链式**的：
+  #   Update 完成 → Deploy 完成 → Cleanup 完成
+  # 而 GitHub 的 workflow_run **没有按 conclusion 过滤的能力**（只支持
+  # workflows / types / branches），所以每一次「完成」都必然创建一个运行记录，
+  # 再靠 job 级 if 跳过。结果：每个小时周期产生 3 次运行，实测 1964 次里
+  # 88% 是 skipped 空跑，把 Actions 列表刷得没法看。
+  #
+  # 收敛到 Update 之后：72 次/天 → 24 次/天，且保留秒级即时反应。
+  # Deploy / Cleanup 的瞬时故障不再即时重试，但两者都有每小时的自愈路径
+  # （下一次 Update 会再次触发 Deploy；Cleanup 另有每日 schedule 兜底）。
   workflow_run:
     workflows:
-      - "Deploy to GitHub Pages"
       - "Update AI News Snapshot"
-      - "Cleanup Actions Artifacts"
     types: [completed]
 
 permissions:
@@ -33,10 +43,15 @@ jobs:
   retry:
     # Cheap pre-filter; the script re-validates everything itself.
     # GitHub 的运行结论不只有 failure。当 "Set up job" 阶段彻底失败时，整次运行常被判为
-    # startup_failure；运行器被回收则得到 timed_out。这两种恰好是本工作流要救的场景，
-    # 只收 failure 会让它在最该出手时安静跳过。cancelled 是人的决定，永不受理。
+    # startup_failure；运行器被回收则得到 timed_out。
+    #
+    # cancelled 也必须放进来 —— GitHub 把「job 超出 timeout-minutes」也报成
+    # cancelled（本仓库 0 个 timed_out、271 个 cancelled，且每个 cancelled 都恰好
+    # 停在超时线上）。把它挡在门外，等于对唯一真实发生的故障类型完全失明。
+    # 判定「超时 kill 还是人的决定」需要读运行时长与工作流文件，表达不了在 if 里，
+    # 所以这里放行、由脚本判定并留下日志。
     if: >-
-      contains(fromJSON('["failure","startup_failure","timed_out"]'),
+      contains(fromJSON('["failure","startup_failure","timed_out","cancelled"]'),
                github.event.workflow_run.conclusion)
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -93,5 +108,10 @@ jobs:
           # loop no attempt cap could bound, because each retry run is a new
           # run with attempt 1.
           SELF_WORKFLOW_NAME: ${{ github.workflow }}
+          # 判定「超时 kill」时要读工作流文件里的 timeout-minutes，必须钉在默认分支，
+          # 否则会读到特性分支上未经审查的值。
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           MAX_ATTEMPTS: "3"
+          # 超时 kill 单独设更小的重试上限：见脚本内注释。
+          MAX_TIMEOUT_ATTEMPTS: "2"
         run: ./tools/ci/retry_transient_failure.sh

@@ -38,6 +38,26 @@ if [[ "$ARGS" == *"/jobs"* ]]; then
   exit 0
 fi
 
+# 运行元数据：用于判定 cancelled 究竟是「超时 kill」还是「人的决定」。
+# MOCK_RUN_SECONDS 给出时长，两个时间戳由同一个基准时刻推导，保证自洽。
+if [[ "$ARGS" == *"/actions/runs/"* ]]; then
+  if [ "${MOCK_RUN_META_MISSING:-0}" = "1" ]; then
+    echo '{"run_started_at":null,"updated_at":null,"path":null}'
+    exit 0
+  fi
+  base=1780000000
+  secs="${MOCK_RUN_SECONDS:-0}"
+  echo "{\"run_started_at\":\"$(date -u -d "@$base" +%Y-%m-%dT%H:%M:%SZ)\",\"updated_at\":\"$(date -u -d "@$((base + secs))" +%Y-%m-%dT%H:%M:%SZ)\",\"path\":\"${MOCK_RUN_PATH:-.github/workflows/update-news.yml}\"}"
+  exit 0
+fi
+
+# 工作流文件内容（base64）。脚本用 --jq '.content' 取值，所以这里直接输出 base64。
+if [[ "$ARGS" == *"/contents/"* ]]; then
+  printf '%s' "${MOCK_WORKFLOW_CONTENT:-}" | base64 | tr -d '\n'
+  echo
+  exit 0
+fi
+
 if [[ "$ARGS" == *"--log-failed"* ]]; then
   case "${MOCK_CASE:-setup}" in
     nosteps_transient) echo "##[error]Failed to resolve action download info. Error: Service Unavailable" ;;
