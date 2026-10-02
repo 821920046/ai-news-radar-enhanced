@@ -117,7 +117,8 @@ jobs:
       - name: Update data
         # 纵深防御：即使未来某处再引入无界等待，也只损失这一步（20 分钟），
         # 而不是把整个 job 的 40 分钟预算吃光导致后续步骤全被 skip。
-        # 实测正常耗时 ~2 分钟；20 分钟给了 10x 余量。
+        # 实测耗时：run 36967071191 为 5.6 分钟（AI 翻译预算 240s 用满）；
+        # AI_TRANSLATE_BUDGET_SECONDS 调到 480s 后预计约 9-10 分钟，仍在 20 分钟内。
         # 背景：run 36890199782 曾在此步静默卡死 39 分钟（Google 兜底逐条串行 +
         # 3 次重试 × 12s 超时 × 56 条），必须配合 translator.py 的 Google 熔断/预算修复。
         timeout-minutes: 20
@@ -129,6 +130,8 @@ jobs:
           AI_TLDR_TOP_N: ${{ secrets.AI_TLDR_TOP_N }}
           AI_TLDR_MAX_WORKERS: ${{ secrets.AI_TLDR_MAX_WORKERS }}
           AI_TRANSLATE_ENABLED: ${{ secrets.AI_TRANSLATE_ENABLED }}
+          # 可选的调参逃生口；未配置该 secret 时留空 → 代码里的默认值生效
+          AI_TRANSLATE_BUDGET_SECONDS: ${{ secrets.AI_TRANSLATE_BUDGET_SECONDS }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
           WEBHOOK_MODE: ${{ secrets.WEBHOOK_MODE }}

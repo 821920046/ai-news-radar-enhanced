@@ -146,22 +146,52 @@ def _fetch_free_models() -> tuple[dict[str, dict], dict[str, dict]]:
     return everything, free
 
 
+def is_chat_capable(entry: dict) -> bool:
+    """这个免费模型能不能用来做「文本进 → 文本出」的翻译。
+
+    「pricing 为 0」**不等于**「能翻译」。2026-10-02 的 21 个免费模型里混着非对话
+    模型，朴素筛选会把它们放进链里，而它们的失败方式极其隐蔽（返回音频/分类标签，
+    不是报错）：
+
+      - `google/lyria-3-*`：`output_modalities` 含 `audio` → 音乐生成模型；
+      - `nvidia/nemotron-3.5-content-safety:free`：安全**分类器**，输出标签而非译文。
+
+    因此除了「输出里必须有 text」，还要排除音频输出，并挡掉已知的垂类/审核模型名。
+    """
+    arch = entry.get("architecture") or {}
+    outputs = arch.get("output_modalities")
+    if isinstance(outputs, list):
+        if "audio" in outputs:
+            return False
+        if "text" not in outputs:
+            return False
+    mid = str(entry.get("id") or "").lower()
+    return not any(tag in mid for tag in ("content-safety", "moderation", "guard"))
+
+
 def classify(
     configured: list[tuple[str, str]],
     everything: dict[str, dict],
     free: dict[str, dict],
 ) -> dict[str, list[tuple[str, str]]]:
-    """把已配置模型分成 healthy / missing / no_longer_free 三类。
+    """把已配置模型分成 healthy / missing / no_longer_free / not_a_chat_model 四类。
 
     抽成纯函数是为了能在测试里喂合成数据 —— 分类逻辑（而不是网络）才是这个脚本
     真正需要被测的部分。
     """
-    result: dict[str, list[tuple[str, str]]] = {"healthy": [], "missing": [], "no_longer_free": []}
+    result: dict[str, list[tuple[str, str]]] = {
+        "healthy": [],
+        "missing": [],
+        "no_longer_free": [],
+        "not_a_chat_model": [],
+    }
     for model, origin in configured:
         if model not in everything:
             result["missing"].append((model, origin))
         elif model not in free:
             result["no_longer_free"].append((model, origin))
+        elif not is_chat_capable(everything[model]):
+            result["not_a_chat_model"].append((model, origin))
         else:
             result["healthy"].append((model, origin))
     return result
@@ -284,6 +314,8 @@ def main() -> int:
     healthy = buckets["healthy"]
     missing = buckets["missing"]
     no_longer_free = buckets["no_longer_free"]
+    not_chat = buckets["not_a_chat_model"]
+    broken = bool(missing or no_longer_free or not_chat)
 
     if args.json:
         print(json.dumps(
@@ -293,6 +325,7 @@ def main() -> int:
                 "healthy": [m for m, _ in healthy],
                 "missing": [m for m, _ in missing],
                 "no_longer_free": [m for m, _ in no_longer_free],
+                "not_a_chat_model": [m for m, _ in not_chat],
                 "keys": key_report,
             },
             ensure_ascii=False,
@@ -301,24 +334,29 @@ def main() -> int:
     else:
         print(f"OpenRouter 在线模型 {len(everything)} 个，其中免费 {len(free)} 个。")
         print(f"已配置模型 {len(configured)} 个：正常 {len(healthy)}，"
-              f"已下线 {len(missing)}，已不再免费 {len(no_longer_free)}。\n")
+              f"已下线 {len(missing)}，已不再免费 {len(no_longer_free)}，"
+              f"非对话模型 {len(not_chat)}。\n")
         for model, _origin in healthy:
             print(f"  [OK]      {model}")
         for model, origin in missing:
             print(f"  [MISSING] {model}   ← 来源：{origin}")
         for model, origin in no_longer_free:
             print(f"  [PAID]    {model}   ← 已不再是免费模型，来源：{origin}")
-        if missing or no_longer_free:
+        for model, origin in not_chat:
+            print(f"  [NOTCHAT] {model}   ← 免费但不是文本→文本对话模型"
+                  f"（音乐/分类器等），来源：{origin}")
+        if broken:
             print(
                 "\n请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 以及 config/sources.yaml、\n"
-                "config/model_config.yaml 中的模型名，改用下面这些当前可用的免费模型：\n"
+                "config/model_config.yaml 中的模型名。注意：「免费」不等于「能翻译」——\n"
+                "下面这些当前可用的免费模型里，输出含 audio 的是音乐模型、名字含\n"
+                "content-safety 的是审核分类器，都不能用于翻译：\n"
             )
             for model in sorted(free):
-                print(f"    {model}")
+                flag = "" if is_chat_capable(free[model]) else "   ← 非对话模型，勿用"
+                print(f"    {model}{flag}")
 
-    if missing or no_longer_free:
-        return 1
-    return 0
+    return 1 if broken else 0
 
 
 if __name__ == "__main__":

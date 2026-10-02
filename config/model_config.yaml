@@ -10,13 +10,15 @@ openrouter:
   tldr_model: "qwen/qwen3.8-27b:free"
 
   # 多模型回退链（环境变量 OPENROUTER_MODELS 可覆盖，逗号分隔）
-  # 按「中文效果 / 速度 / 免费额度稳定性」综合排序
+  # 按「中文效果 / 速度 / 免费额度稳定性 / provider 分散」综合排序
   models:
     - "qwen/qwen3.8-27b:free"                    # 通义千问：中文母语级，EN→ZH 最稳
+    - "inclusionai/ling-3.0-flash-sante:free"    # 蚂蚁 Ling 3.0 Flash：中文母语级 + 低延迟
     - "google/gemma-4-31b-it:free"               # Gemma 4 31B：多语言强、指令跟随好
-    - "nvidia/nemotron-3-super-120b-a12b:free"   # Nemotron 3 Super：120B MoE / 12B 激活
     - "google/gemma-4-26b-a4b-it:free"           # Gemma 4 26B A4B：MoE，3.8B 激活，快
+    - "nvidia/nemotron-3-super-120b-a12b:free"   # Nemotron 3 Super：120B MoE / 12B 激活
     - "nvidia/nemotron-3.5-lightning:free"       # Nemotron 3.5 Lightning：3B 激活，高吞吐兜底
+    - "dots-studio/dots-3-note-preview:free"     # Dots 3 Note：独立 provider，降低单点拥塞
     - "openrouter/free"                          # 官方免费模型路由器，最后兜底
 
   # Embedding 模型

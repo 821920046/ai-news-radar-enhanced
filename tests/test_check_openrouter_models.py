@@ -33,8 +33,58 @@ _spec.loader.exec_module(checker)
 from core.utils import DEFAULT_OPENROUTER_MODELS  # noqa: E402
 
 
-def _entry(model_id: str, prompt: str = "0", completion: str = "0") -> dict:
-    return {"id": model_id, "pricing": {"prompt": prompt, "completion": completion}}
+def _entry(
+    model_id: str,
+    prompt: str = "0",
+    completion: str = "0",
+    outputs: list[str] | None = None,
+) -> dict:
+    entry: dict = {"id": model_id, "pricing": {"prompt": prompt, "completion": completion}}
+    if outputs is not None:
+        entry["architecture"] = {"output_modalities": outputs}
+    return entry
+
+
+class ChatCapabilityTests(unittest.TestCase):
+    """「免费」不等于「能翻译」—— 21 个免费模型里混着音乐模型和审核分类器。"""
+
+    def test_text_to_text_model_is_capable(self):
+        self.assertTrue(checker.is_chat_capable(_entry("qwen/x:free", outputs=["text"])))
+
+    def test_model_without_architecture_metadata_is_assumed_capable(self):
+        """字段缺失时不能判为不可用 —— 「没看到」不等于「不存在」。"""
+        self.assertTrue(checker.is_chat_capable(_entry("qwen/x:free")))
+
+    def test_audio_output_model_is_not_capable(self):
+        """google/lyria-3-* 是音乐生成模型，输出含 audio。"""
+        self.assertFalse(
+            checker.is_chat_capable(_entry("google/lyria-3-pro-preview", outputs=["text", "audio"]))
+        )
+
+    def test_text_only_output_requirement(self):
+        """只输出图片/音频的模型同样不能用于翻译。"""
+        self.assertFalse(checker.is_chat_capable(_entry("img/x:free", outputs=["image"])))
+
+    def test_content_safety_classifier_is_not_capable(self):
+        """nvidia/nemotron-3.5-content-safety:free 输出标签而非译文。"""
+        self.assertFalse(
+            checker.is_chat_capable(
+                _entry("nvidia/nemotron-3.5-content-safety:free", outputs=["text"])
+            )
+        )
+
+    def test_non_chat_model_gets_its_own_bucket(self):
+        """混进链里的音乐模型必须被判为不健康，而不是当成 healthy 放行。"""
+        entry = _entry("google/lyria-3-pro-preview", outputs=["text", "audio"])
+        buckets = checker.classify(
+            [("google/lyria-3-pro-preview", "config/sources.yaml")],
+            {"google/lyria-3-pro-preview": entry},
+            {"google/lyria-3-pro-preview": entry},
+        )
+        self.assertEqual(buckets["healthy"], [])
+        self.assertEqual(
+            [m for m, _ in buckets["not_a_chat_model"]], ["google/lyria-3-pro-preview"]
+        )
 
 
 class ClassifyTests(unittest.TestCase):
@@ -98,6 +148,13 @@ class ExitCodeTests(unittest.TestCase):
     def test_missing_model_exits_1(self):
         with patch.object(checker, "_load_configured_models", return_value=[("gone:free", "origin")]), \
                 patch.object(checker, "_fetch_free_models", return_value=({}, {})):
+            self.assertEqual(checker.main(), 1)
+
+    def test_non_chat_model_exits_1(self):
+        """免费但不可用于翻译（音乐/分类器）也必须算配置有问题。"""
+        entry = {"lyria:free": _entry("lyria:free", outputs=["text", "audio"])}
+        with patch.object(checker, "_load_configured_models", return_value=[("lyria:free", "origin")]), \
+                patch.object(checker, "_fetch_free_models", return_value=(entry, entry)):
             self.assertEqual(checker.main(), 1)
 
     def test_no_configured_models_exits_2(self):
@@ -201,6 +258,31 @@ class ConfigSourcesAgreeTests(unittest.TestCase):
 
     def test_registry_still_has_at_least_four_models(self):
         self.assertGreaterEqual(len(DEFAULT_OPENROUTER_MODELS), 4)
+
+    def test_chain_covers_multiple_providers(self):
+        """429 的另一个来源是上游 provider 按模型限流（实测 run 36967071191：
+        6 个模型里 3 个在 6 秒内相继被上游限流）。整条链集中在一家托管方时，
+        一家拥塞 = 全链失效，所以必须跨多家。
+        """
+        providers = {m.split("/")[0] for m in DEFAULT_OPENROUTER_MODELS}
+        self.assertGreaterEqual(
+            len(providers), 4, f"provider 太集中（{sorted(providers)}），一家拥塞会拖垮全链"
+        )
+
+    def test_chain_includes_a_chinese_native_model(self):
+        """EN→ZH 标题翻译，中文母语模型（qwen / ling）的质量与稳定性明显更好。"""
+        joined = " ".join(DEFAULT_OPENROUTER_MODELS)
+        self.assertTrue(
+            "qwen/" in joined or "inclusionai/" in joined,
+            f"模型链里缺少中文母语模型：{DEFAULT_OPENROUTER_MODELS}",
+        )
+
+    def test_chain_has_no_known_non_chat_models(self):
+        """离线也能挡掉一部分陷阱：音乐模型 / 审核分类器绝不该出现在链里。"""
+        for model in DEFAULT_OPENROUTER_MODELS:
+            self.assertNotIn("lyria", model.lower(), f"{model} 是音乐生成模型，不能翻译")
+            for tag in ("content-safety", "moderation", "guard"):
+                self.assertNotIn(tag, model.lower(), f"{model} 是审核/守卫模型，不能翻译")
 
 
 if __name__ == "__main__":

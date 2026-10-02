@@ -766,18 +766,29 @@ def atomic_write_text(file_path: Any, text: str, encoding: str = "utf-8") -> Non
 # 因此本清单**必须**定期用 `scripts/check_openrouter_models.py` 复核。
 #
 # 选型标准（针对本项目 EN→ZH 标题/摘要翻译 + TL;DR，短输出、要求严格按编号输出）：
-#   1) 中文生成质量（qwen 母语级最强；gemma 多语言稳）
+#   1) 中文生成质量（qwen / ling 母语级最强；gemma 多语言稳）
 #   2) 指令跟随（能否稳定只输出译文、不解释、不包引号）
 #   3) 吞吐/延迟（MoE 激活参数小 = 快）
 #   4) 免费额度稳定性（大厂托管优先，避免 stealth / preview / 垂类模型）
+#   5) **provider 分散** —— 429 的另一个来源是上游 provider 按模型限流
+#      （实测 run 36967071191：6 个模型里 3 个在 6 秒内相继被上游限流）。
+#      整条链集中在同一家托管方时，一家拥塞 = 全链失效，故刻意跨 4 家。
+#
+# ⚠️ 陷阱：「pricing 为 0」**不等于**「能翻译」。2026-10-02 的 21 个免费模型里混着
+#   非对话模型，朴素筛选会把它们放进链里：
+#     - google/lyria-3-*（output_modalities 含 audio）= 音乐生成模型；
+#     - nvidia/nemotron-3.5-content-safety:free = 安全**分类器**，不产出译文。
+#   `scripts/check_openrouter_models.py` 会把这二者判为 not_a_chat_model。
 OPENROUTER_MODEL_CHAIN_VERIFIED_AT = "2026-10-02"
 
 DEFAULT_OPENROUTER_MODELS = [
     "qwen/qwen3.8-27b:free",                    # 通义千问：中文母语级，EN→ZH 最稳，27B 稠密
-    "google/gemma-4-31b-it:free",               # Gemma 4 31B：多语言强、指令跟随好（项目现役可用）
-    "nvidia/nemotron-3-super-120b-a12b:free",   # Nemotron 3 Super：120B MoE / 12B 激活，综合能力最强
+    "inclusionai/ling-3.0-flash-sante:free",    # 蚂蚁 Ling 3.0 Flash：中文母语级 + 低延迟（独立 provider）
+    "google/gemma-4-31b-it:free",               # Gemma 4 31B：多语言强、指令跟随好
     "google/gemma-4-26b-a4b-it:free",           # Gemma 4 26B A4B：MoE，3.8B 激活 → 快，质量接近 31B
+    "nvidia/nemotron-3-super-120b-a12b:free",   # Nemotron 3 Super：120B MoE / 12B 激活，综合能力最强
     "nvidia/nemotron-3.5-lightning:free",       # Nemotron 3.5 Lightning：3B 激活 / 1M ctx，高吞吐兜底
+    "dots-studio/dots-3-note-preview:free",     # Dots 3 Note：再引入一家独立 provider，降低单点拥塞
     "openrouter/free",                          # 官方「免费模型路由器」：最后一道兜底，自动挑一个可用免费模型
 ]
 

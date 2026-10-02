@@ -113,7 +113,14 @@ GOOGLE_MAX_WORKERS = 8
 # 时间放大：worst_case = 路由数 × 单次超时。所以必须同时有
 #   1) 单批路由尝试次数上限（防止一个批次把整轮预算吃光）
 #   2) 整个 AI 阶段的墙上时钟预算（防止 80 条 × N 路由线性放大）
-AI_TRANSLATE_BUDGET_SECONDS = float(os.environ.get("AI_TRANSLATE_BUDGET_SECONDS") or 240)
+#
+# 预算取值依据（实测 run 36967071191）：AI 阶段 240s 只够 17 条路由 —— 免费模型
+# 每次 8 条批量请求约 17s，50 条标题要 7 批以上。240s 用尽后剩 4 条标题转 Google，
+# 而 Google 在 GitHub runner 上**瞬间**失败（3 次 <0.4s 全部 ConnectionError，
+# 兜底熔断）—— 也就是说兜底并不存在，预算耗尽就等于**永久丢掉**这些标题。
+# 480s 覆盖约 28 条路由，足够 50 条标题走完并留出重试余量；上限由外层兜住：
+# 「Update data」step 20min、job 40min，实测该 step 除翻译外仅约 84s。
+AI_TRANSLATE_BUDGET_SECONDS = float(os.environ.get("AI_TRANSLATE_BUDGET_SECONDS") or 480)
 # 同一个批次最多换几条路由重试（1 = 不重试，直接交给 Google 兜底）
 MAX_ROUTE_TRIES_PER_BATCH = max(1, int(os.environ.get("AI_MAX_ROUTE_TRIES_PER_BATCH") or 3))
 # 单条 OpenRouter 请求超时（秒）
@@ -652,22 +659,28 @@ def _openrouter_post(
         platform_limited = bool(limit_info.get("X-RateLimit-Limit")) or bool(
             limit_info.get("X-RateLimit-Remaining")
         )
+        # 响应体必须记下来：`X-RateLimit-*` 头的**缺失**只是间接证据，body 里才有
+        # 直接原因（例如 "Rate limit exceeded: free-models-per-day" vs
+        # "Provider returned error"）。只看头不看体，就是在用「没看到」推断「不存在」。
+        body = (resp.text or "")[:300]
         if resp.status_code == 429 and not platform_limited:
-            _record("provider_rate_limited", http=429, **limit_info)
+            _record("provider_rate_limited", http=429, body=body, **limit_info)
             logger.warning(
                 "[AI Translate] 模型 %s 被**上游 provider** 限流/满载（HTTP 429，"
-                "响应无 X-RateLimit-* 头%s），换下一个**模型**",
+                "响应无 X-RateLimit-* 头%s），换下一个**模型**；body=%s",
                 model,
                 "；" + str(limit_info) if limit_info else "",
+                body,
             )
             return None
 
-        _record("key_exhausted", http=resp.status_code, **limit_info)
+        _record("key_exhausted", http=resp.status_code, body=body, **limit_info)
         logger.warning(
-            "[AI Translate] 模型 %s 被平台限流/额度不足（HTTP %d）%s，换下一个 key",
+            "[AI Translate] 模型 %s 被平台限流/额度不足（HTTP %d）%s，换下一个 key；body=%s",
             model,
             resp.status_code,
             "；平台限额 " + str(limit_info) if limit_info else "（响应未带 X-RateLimit-* 头）",
+            body,
         )
         return None
 
