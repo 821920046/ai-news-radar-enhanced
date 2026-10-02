@@ -5,8 +5,19 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 02 Oct 2026 04:09:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 04:15:30 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>OpenAI 发布 GPT-6.1 Sol，能力逼近 Astra</title>
+      <link>https://juejin.cn/post/7690930433831895050</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7690930433831895050</guid>
+      <pubDate>Fri, 02 Oct 2026 04:15:30 +0000</pubDate>
+      <description>OpenAI、GPT-6.1：OpenAI 发布 GPT-6.1 Sol，能力逼近 Astra，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 B · 评分 51.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+    </item>
     <item>
       <title>AutoSynthData：为企业代理生成训练数据</title>
       <link>https://huggingface.co/blog/ServiceNow-AI/autosynthdata</link>
@@ -14,7 +25,7 @@
       <pubDate>Fri, 02 Oct 2026 04:01:31 +0000</pubDate>
       <description>AutoSynthData：为企业代理生成训练数据，适合进一步验证代码、协议或社区采用情况。
 
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
       <category>开源</category>
     </item>
@@ -667,20 +678,6 @@ arXiv:2610.01014v1 Announce Type: new Abstract: Voting over multiple LLM respons
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
-    </item>
-    <item>
-      <title>为错误付费，而不是为流程付费：无标签的 In-Flow 多代理工作流优化</title>
-      <link>https://arxiv.org/abs/2610.01017</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.01017</guid>
-      <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>为错误付费：arXiv:2610.01017v1 Announce Type: new Abstract: Large lang...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.01017v1 Announce Type: new Abstract: Large language models (LLMs) increasingly construct multi-agent workflows that decompose a complex task and assign specialist agents from a pool....
-
-信号等级 B · 评分 60.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
