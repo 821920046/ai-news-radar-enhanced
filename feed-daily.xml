@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 02 Oct 2026 05:47:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 06:25:10 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>OpenAI 发布 GPT-6.1 Sol，能力逼近 Astra</title>
@@ -35,9 +35,9 @@
       <link>https://arxiv.org/abs/2610.00010</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00010</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>长视野语言智能体中的重尾记忆痕迹：长时语言代理日益依赖外部记忆作为冻结的世界模型，但现有的记忆系统仅凭任务表现进行评估，缺乏对长期记忆保持与检索效率的...，适合判断技术路线和后续产品化可能性。
+      <description>长视野语言智能体中的重尾记忆痕迹：arXiv:2610.00010v1 公告类型：新 摘要：长视野语言代理越来越依赖外部记忆作为冻结的世界模型，但当前...，适合判断技术路线和后续产品化可能性。
 
-长时语言代理日益依赖外部记忆作为冻结的世界模型，但现有的记忆系统仅凭任务表现进行评估，缺乏对长期记忆保持与检索效率的全面分析。
+arXiv:2610.00010v1 公告类型：新 摘要：长视野语言代理越来越依赖外部记忆作为冻结的世界模型，但当前的记忆系统通常仅通过任务来判断......
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -48,9 +48,9 @@
       <link>https://arxiv.org/abs/2610.00012</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00012</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>因果世界模型何时帮助模块化 LLM 代理：arXiv:2610.00012v1 新论文指出，LLM智能体正通过订单、支付、库存与物流等模块化系统行动，单一模块...，适合判断技术路线和后续产品化可能性。
+      <description>因果世界模型何时帮助模块化 LLM 代理：arXiv:2610.00012v1 公告类型：新摘要：LLM 代理越来越多地通过模块化系统（例如订单、付款、库存和...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00012v1 新论文指出，LLM智能体正通过订单、支付、库存与物流等模块化系统行动，单一模块操作会动态影响其他模块状态。
+arXiv:2610.00012v1 公告类型：新摘要：LLM 代理越来越多地通过模块化系统（例如订单、付款、库存和运输服务）进行操作，其中一个模块中的操作会发生变化...
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -61,9 +61,9 @@ arXiv:2610.00012v1 新论文指出，LLM智能体正通过订单、支付、库�
       <link>https://arxiv.org/abs/2610.00015</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00015</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>从提案到验证效果：arXiv:2610.00015 提出大语言模型代理的提案、授权、调度、外部效应验证及服务晋升机制，适合关注自动化任务和多 Agent 协作演进。
+      <description>从提案到验证效果：大语言模型代理能够提出并执行动作，但其提案、权威、调度、验证的外部效果和服务推广等环节仍面临挑战，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.00015 提出大语言模型代理的提案、授权、调度、外部效应验证及服务晋升机制。
+大语言模型代理能够提出并执行动作，但其提案、权威、调度、验证的外部效果和服务推广等环节仍面临挑战。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -76,9 +76,9 @@ arXiv:2610.00015 提出大语言模型代理的提案、授权、调度、外部
       <link>https://arxiv.org/abs/2610.00025</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00025</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>衡量微任务资格差距：arXiv:2610.00025v1 提出新型 Agent 架构，让小型语言模型（SLM）处理微任务，前沿大语言模型...，适合关注自动化任务和多 Agent 协作演进。
+      <description>衡量微任务资格差距：本文提出了一种新ells架构，旨在将小型语言模型（SLM）部署在大型语言模型（LLM）规划器周围的微任务中，以实现高...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.00025v1 提出新型 Agent 架构，让小型语言模型（SLM）处理微任务，前沿大语言模型（LLM）规划器负责高层决策，提升整体效率与可扩展性。
+本文提出了一种新ells架构，旨在将小型语言模型（SLM）部署在大型语言模型（LLM）规划器周围的微任务中，以实现高效的代理执行。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -90,11 +90,11 @@ arXiv:2610.00025v1 提出新型 Agent 架构，让小型语言模型（SLM）处
       <link>https://arxiv.org/abs/2610.00047</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00047</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>表征推理时间 PRM 修剪片段嫁接惰性的...：arXiv:2610.00047v1 Announce Type: new Abstract: Diversity...，适合判断技术路线和后续产品化可能性。
+      <description>表征推理时间 PRM 修剪片段嫁接惰性的...：为应对并行思维链中的多样性崩溃问题，研究者提出基于过程奖励模型（PRM）的推理时干预策略，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00047v1 Announce Type: new Abstract: Diversity collapse in parallel chain-of-thought has motivated inference-time interventions built on a natural design: when a process reward model (PRM)...
+为应对并行思维链中的多样性崩溃问题，研究者提出基于过程奖励模型（PRM）的推理时干预策略。该方法通过动态调整候选路径权重，提升推理质量与多样性。
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
@@ -104,9 +104,9 @@ arXiv:2610.00047v1 Announce Type: new Abstract: Diversity collapse in parallel c
       <link>https://arxiv.org/abs/2610.00061</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00061</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>用于个性化偏好优化的梯度对齐配对选择：arXiv:2610.00061v1 新论文摘要：个性化大语言模型（LLMs）需将生成行为与用户特定偏好对齐，而非仅...，适合判断技术路线和后续产品化可能性。
+      <description>用于个性化偏好优化的梯度对齐配对选择：个性化大语言模型（LLMs）需根据用户特定偏好而非整体质量调整生成行为，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00061v1 新论文摘要：个性化大语言模型（LLMs）需将生成行为与用户特定偏好对齐，而非仅追求整体质量。
+个性化大语言模型（LLMs）需根据用户特定偏好而非整体质量调整生成行为。当前方法多依赖聚合反馈，难以捕捉细粒度偏好，限制了真正个性化的生成能力。本文提出一种基于用户级反馈的对齐框架，通过建模个体偏好分布，显著提升生成内容与用户期望的一致性，在多个基准测试中优于现有方法。 (98字)
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -117,9 +117,9 @@ arXiv:2610.00061v1 新论文摘要：个性化大语言模型（LLMs）需将生
       <link>https://arxiv.org/abs/2610.00074</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00074</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>K-Dense BYOK（自带密钥）是一款免费开源的AI研究助手，适用于各领域科学家，可在用户本地计算机上运行，来自官方更新源，适合直接判断产品变化。
+      <description>K-Dense BYOK 是一款免费开源的 AI 研究助手，支持科学家在自己的电脑上运行，保护数据隐私，来自官方更新源，适合直接判断产品变化。
 
-K-Dense BYOK（自带密钥）是一款免费开源的AI研究助手，适用于各领域科学家，可在用户本地计算机上运行。
+K-Dense BYOK 是一款免费开源的 AI 研究助手，支持科学家在自己的电脑上运行，保护数据隐私。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -130,9 +130,9 @@ K-Dense BYOK（自带密钥）是一款免费开源的AI研究助手，适用于
       <link>https://arxiv.org/abs/2610.00084</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00084</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>科学代理：详细的职业特定系统提示会增加每次响应的token使用量和估算成本，但未能带来一致的准确性提升，适合判断技术路线和后续产品化可能性。
+      <description>科学代理：arXiv:2610.00084v1 公告类型：新摘要：详细的专业特定系统提示提高了令牌使用和每次响应的估计成本，但...，适合判断技术路线和后续产品化可能性。
 
-详细的职业特定系统提示会增加每次响应的token使用量和估算成本，但未能带来一致的准确性提升。我们对科学领域的评估表明，此类提示虽提升了特定场景下的响应特异性，却未显著改善整体任务表现，反而导致资源浪费。
+arXiv:2610.00084v1 公告类型：新摘要：详细的专业特定系统提示提高了令牌使用和每次响应的估计成本，但没有一致的准确性增益。我们评估科学...
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -143,9 +143,9 @@ K-Dense BYOK（自带密钥）是一款免费开源的AI研究助手，适用于
       <link>https://arxiv.org/abs/2610.00282</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00282</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>知道何时让步：本文提出了一个新问题：当人类的纠正可能是错误时，具身智能体该如何作出反应，适合关注自动化任务和多 Agent 协作演进。
+      <description>知道何时让步：arXiv:2610.00282v1提出“具身智能体如何应对可能有误的人类纠正”问题，将“基于语境的纠正仲裁”建模为...，适合关注自动化任务和多 Agent 协作演进。
 
-本文提出了一个新问题：当人类的纠正可能是错误时，具身智能体该如何作出反应？研究者将其定义为“ grounded correction arbitration（基于语境的纠正仲裁）”，并将其表述为在接受或拒绝纠正之间进行选择的决策过程。
+arXiv:2610.00282v1提出“具身智能体如何应对可能有误的人类纠正”问题，将“基于语境的纠正仲裁”建模为接受、拒绝或协商等选择，探索智能体在人机纠错中的决策机制。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -157,9 +157,9 @@ K-Dense BYOK（自带密钥）是一款免费开源的AI研究助手，适用于
       <link>https://arxiv.org/abs/2610.00313</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00313</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>工具规则：arXiv:2610.00313v1 新论文摘要：科学编码智能体接收方程、边界条件及输出要求后，需评估其修订程序的正...，适合判断技术路线和后续产品化可能性。
+      <description>工具规则：arXiv:2610.00313v1 公告类型：新 摘要：科学编码代理收到书面方程、边界条件和输出要求，然后必须评估...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00313v1 新论文摘要：科学编码智能体接收方程、边界条件及输出要求后，需评估其修订程序的正确性。
+arXiv:2610.00313v1 公告类型：新 摘要：科学编码代理收到书面方程、边界条件和输出要求，然后必须评估他们修改的程序。规则...
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -171,9 +171,9 @@ arXiv:2610.00313v1 新论文摘要：科学编码智能体接收方程、边界�
       <link>https://arxiv.org/abs/2610.00328</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00328</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>ContractRL：该研究指出，结构化工具调用常因少量字段违反模式或执行契约而失败，并探讨了重新生成完整对象的相关问题，适合判断技术路线和后续产品化可能性。
+      <description>ContractRL：结构化工具调用在仅有少量字段违反模式或执行契约时常会失败，重新生成完整对象往往效率低下，适合判断技术路线和后续产品化可能性。
 
-该研究指出，结构化工具调用常因少量字段违反模式或执行契约而失败，并探讨了重新生成完整对象的相关问题。
+结构化工具调用在仅有少量字段违反模式或执行契约时常会失败，重新生成完整对象往往效率低下。本文提出一种增量修复方法，仅修正违规字段以提高成功率和效率。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -184,9 +184,9 @@ arXiv:2610.00313v1 新论文摘要：科学编码智能体接收方程、边界�
       <link>https://arxiv.org/abs/2610.00331</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00331</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>法学硕士的数学迁移更多地遵循推理方法而不...：arXiv论文2610.00331v1提出，LLM数学训练数据应按主题组织，让概率类示例对应概率类目标，以提升训练效...，适合判断技术路线和后续产品化可能性。
+      <description>法学硕士的数学迁移更多地遵循推理方法而不...：在数学训练数据的选择中，按主题组织是一种自然的原则：概率示例对应概率目标，适合判断技术路线和后续产品化可能性。
 
-arXiv论文2610.00331v1提出，LLM数学训练数据应按主题组织，让概率类示例对应概率类目标，以提升训练效果与评估一致性。
+在数学训练数据的选择中，按主题组织是一种自然的原则：概率示例对应概率目标。该研究提出了一种基于主题的数据筛选方法，旨在提升大型语言模型在数学推理任务上的性能。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -197,9 +197,9 @@ arXiv论文2610.00331v1提出，LLM数学训练数据应按主题组织，让概
       <link>https://arxiv.org/abs/2610.00349</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00349</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>分布式多代理委派中的容错预算保护：资源限制正成为AI代理在并发且易出错的工作节点之间分配任务的授权边界，父子代理结构在此框架下需通过资源约束实现安全协...，适合关注自动化任务和多 Agent 协作演进。
+      <description>分布式多代理委派中的容错预算保护：arXiv:2610.00349v1指出，资源限制正成为AI代理在并发且易出错的 worker 间委派任务时的授权边...，适合关注自动化任务和多 Agent 协作演进。
 
-资源限制正成为AI代理在并发且易出错的工作节点之间分配任务的授权边界，父子代理结构在此框架下需通过资源约束实现安全协作与故障隔离。
+arXiv:2610.00349v1指出，资源限制正成为AI代理在并发且易出错的 worker 间委派任务时的授权边界。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -211,9 +211,9 @@ arXiv论文2610.00331v1提出，LLM数学训练数据应按主题组织，让概
       <link>https://arxiv.org/abs/2610.00366</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00366</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>代理人应该记住什么：一篇新研究提出了一个持续代理的决策框架，旨在平衡信息保留与查询时的检索，以解决传统记忆评估中因时序混淆导致的性能偏差...，适合关注自动化任务和多 Agent 协作演进。
+      <description>代理人应该记住什么：arXiv论文2610.00366v1提出持久智能体需在信息到达时决定保留内容，并在查询出现时决定呈现内容，而记忆评...，适合关注自动化任务和多 Agent 协作演进。
 
-一篇新研究提出了一个持续代理的决策框架，旨在平衡信息保留与查询时的检索，以解决传统记忆评估中因时序混淆导致的性能偏差问题。
+arXiv论文2610.00366v1提出持久智能体需在信息到达时决定保留内容，并在查询出现时决定呈现内容，而记忆评估可能产生混淆。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -225,9 +225,9 @@ arXiv论文2610.00331v1提出，LLM数学训练数据应按主题组织，让概
       <link>https://arxiv.org/abs/2610.00372</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00372</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>当安全带失去信号时：arXiv:2610.00372v1 新论文指出，大语言模型智能体依赖外部框架在模型与环境间传递信息并从执行错误中恢...，适合判断技术路线和后续产品化可能性。
+      <description>当安全带失去信号时：arXiv论文2610.00372v1提出一种新框架，通过外部harness实现大语言模型智能体与环境的可靠信息交互...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00372v1 新论文指出，大语言模型智能体依赖外部框架在模型与环境间传递信息并从执行错误中恢复。
+arXiv论文2610.00372v1提出一种新框架，通过外部harness实现大语言模型智能体与环境的可靠信息交互，并利用执行错误恢复机制提升任务成功率。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -238,9 +238,9 @@ arXiv:2610.00372v1 新论文指出，大语言模型智能体依赖外部框架�
       <link>https://arxiv.org/abs/2610.00416</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00416</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>基于国际象棋的大语言模型提示词优化基准测...：arXiv:2610.00416v1 Announce Type: new Abstract: Evaluating...，适合判断技术路线和后续产品化可能性。
+      <description>基于国际象棋的大语言模型提示词优化基准测...：随着大语言模型能力提升，传统基准测试易饱和且公开测试集存在泄露风险，评估其性能日益困难，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00416v1 Announce Type: new Abstract: Evaluating large language models becomes increasingly challenging as their capabilities advance: benchmarks can saturate, public test sets risk...
+随着大语言模型能力提升，传统基准测试易饱和且公开测试集存在泄露风险，评估其性能日益困难。本文提出一种新型评估框架，通过动态生成难题和对抗性测试，有效避免基准饱和并提升评估的鲁棒性与区分度。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -251,9 +251,9 @@ arXiv:2610.00416v1 Announce Type: new Abstract: Evaluating large language models
       <link>https://arxiv.org/abs/2610.00437</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00437</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>JevSpawn：arXiv论文2610.00437v1提出新方法，通过优化LLM代理的逐token推理与动作生成，显著降低长时间交互...，适合关注自动化任务和多 Agent 协作演进。
+      <description>JevSpawn：LLM代理逐token生成推理与动作，导致交互缓慢且计算成本高昂，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv论文2610.00437v1提出新方法，通过优化LLM代理的逐token推理与动作生成，显著降低长时间交互的计算开销并提升效率。
+LLM代理逐token生成推理与动作，导致交互缓慢且计算成本高昂。该研究提出Jev-style方法，通过蒸馏低成本思维链以加速推理并降低资源消耗。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -266,9 +266,9 @@ arXiv论文2610.00437v1提出新方法，通过优化LLM代理的逐token推理�
       <link>https://arxiv.org/abs/2610.00511</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00511</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>在智能体决策之前：在做出艰难决定前，人们常通过行动来更好地理解局势，适合判断技术路线和后续产品化可能性。
+      <description>在智能体决策之前：面对难题时，人们常通过行动来摸清状况，适合判断技术路线和后续产品化可能性。
 
-在做出艰难决定前，人们常通过行动来更好地理解局势。研究人员将此概念应用于物体交互，通过转动物体查看另一面，或将备选方案并置，以此探索决策背后的认知机制。
+面对难题时，人们常通过行动来摸清状况。研究发现，翻转物体查看另一面、并列摆放选项等行为，有助于更好理解情境并做出决策。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -279,9 +279,9 @@ arXiv论文2610.00437v1提出新方法，通过优化LLM代理的逐token推理�
       <link>https://arxiv.org/abs/2610.00529</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00529</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>基于本体的情境化AI评估（OB-CAIE...：arXiv:2610.00529v1提出基于本体的上下文AI评估（OB-CAIE）方法，旨在解决测试不明确导致的科学...，适合判断技术路线和后续产品化可能性。
+      <description>基于本体的情境化AI评估（OB-CAIE...：arXiv:2610.00529v1 提出基于本体的上下文AI评估（OB-CAIE）方法，旨在解决因测试不明确导致的...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00529v1提出基于本体的上下文AI评估（OB-CAIE）方法，旨在解决测试不明确导致的科学严谨性不足问题。
+arXiv:2610.00529v1 提出基于本体的上下文AI评估（OB-CAIE）方法，旨在解决因测试不明确导致的科学严谨性不足问题。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -292,9 +292,9 @@ arXiv:2610.00529v1提出基于本体的上下文AI评估（OB-CAIE）方法，�
       <link>https://arxiv.org/abs/2610.00531</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00531</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>科学还是垃圾：arXiv:2610.00531v1 Announce Type: new Abstract: AI-generat...，适合判断技术路线和后续产品化可能性。
+      <description>科学还是垃圾：arXiv论文2610.00531v1指出，AI生成内容（俗称“AI slop”）在学术界日益普遍，尤其在科学论文中...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00531v1 Announce Type: new Abstract: AI-generated content, often called AI slop, is increasingly common everywhere, particularly in academia. Slop in AI-generated scientific papers,...
+arXiv论文2610.00531v1指出，AI生成内容（俗称“AI slop”）在学术界日益普遍，尤其在科学论文中泛滥。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -305,9 +305,9 @@ arXiv:2610.00531v1 Announce Type: new Abstract: AI-generated content, often call
       <link>https://arxiv.org/abs/2610.00583</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00583</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>协作反而更糟：arXiv论文2610.00583v1指出，人们正越来越多地将任务委托给AI代理，这些代理在共享资源上频繁与其他人的...，适合关注自动化任务和多 Agent 协作演进。
+      <description>协作反而更糟：人类日益将任务委托给AI代理，这些代理在共享资源中相遇的频率也在提升，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv论文2610.00583v1指出，人们正越来越多地将任务委托给AI代理，这些代理在共享资源上频繁与其他人的代理相遇，引发协作与冲突的新挑战。
+人类日益将任务委托给AI代理，这些代理在共享资源中相遇的频率也在提升。该研究探讨了代理间在资源竞争与协作中的博弈机制，旨在揭示多智能体系统完成任务
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -319,9 +319,9 @@ arXiv论文2610.00583v1指出，人们正越来越多地将任务委托给AI代�
       <link>https://arxiv.org/abs/2610.00609</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00609</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>法律研究基准：法律研究是一项核心且耗时的法律工作流程，律师需识别具有约束力的权威来源，验证其有效性，并协调冲突的判例或法规，适合判断技术路线和后续产品化可能性。
+      <description>法律研究基准：arXiv:2610.00609v1 新论文摘要：法律研究是核心且耗时的法律工作流程，律师需识别管辖权、核实其有效性...，适合判断技术路线和后续产品化可能性。
 
-法律研究是一项核心且耗时的法律工作流程，律师需识别具有约束力的权威来源，验证其有效性，并协调冲突的判例或法规。
+arXiv:2610.00609v1 新论文摘要：法律研究是核心且耗时的法律工作流程，律师需识别管辖权、核实其有效性并协调冲突。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -332,9 +332,9 @@ arXiv论文2610.00583v1指出，人们正越来越多地将任务委托给AI代�
       <link>https://arxiv.org/abs/2610.00613</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00613</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>空间策略而非动作：大型语言模型（LLM）代理因缺乏空间理解而受到批评，主要利用统计文本模式，适合判断技术路线和后续产品化可能性。
+      <description>空间策略而非动作：论文指出，当前大型语言模型代理因缺乏空间感知能力，主要依赖文本统计模式，导致实际应用受限，适合判断技术路线和后续产品化可能性。
 
-大型语言模型（LLM）代理因缺乏空间理解而受到批评，主要利用统计文本模式。该研究提出了一种新方法，通过整合视觉感知和空间推理能力，显著提升了LLM代理在导航和环境交互任务中的表现，展现出强大的空间认知潜力。
+论文指出，当前大型语言模型代理因缺乏空间感知能力，主要依赖文本统计模式，导致实际应用受限。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -345,9 +345,9 @@ arXiv论文2610.00583v1指出，人们正越来越多地将任务委托给AI代�
       <link>https://arxiv.org/abs/2610.00636</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00636</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>CompMat-Bench：arXiv:2610.00636v1 新论文指出，评估AI代理在科研任务中的表现受限于底层实验或计算所需的时间与资源，适合判断技术路线和后续产品化可能性。
+      <description>CompMat-Bench：arXiv论文2610.00636v1提出新方法，通过模拟实验与计算加速AI代理在科研任务上的评估，降低时间与资源成...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00636v1 新论文指出，评估AI代理在科研任务中的表现受限于底层实验或计算所需的时间与资源。
+arXiv论文2610.00636v1提出新方法，通过模拟实验与计算加速AI代理在科研任务上的评估，降低时间与资源成本，提升效率与可扩展性。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -360,7 +360,7 @@ arXiv:2610.00636v1 新论文指出，评估AI代理在科研任务中的表现�
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
       <description>Incident-Arena：AI编码助手在工业和学术工程工作流中广泛应用，但其在应用编程中的使用仍受关注不足，适合判断技术路线和后续产品化可能性。
 
-AI编码助手在工业和学术工程工作流中广泛应用，但其在应用编程中的使用仍受关注不足。
+AI编码助手在工业和学术工程工作流中广泛应用，但其在应用编程中的使用仍受关注不足。本文探讨了其当前局限与未来发展方向。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -372,9 +372,9 @@ AI编码助手在工业和学术工程工作流中广泛应用，但其在应用
       <link>https://arxiv.org/abs/2610.00651</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00651</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>代理评估可靠性：arXiv论文2610.00651v1指出，Agent评估虽广泛用于比较LLM并指导部署，但排名不仅反映模型本身，还...，适合关注自动化任务和多 Agent 协作演进。
+      <description>代理评估可靠性：arX: &quot;arXiv:2610.00651v1 发布类型：新增摘要：代理评估日益用于比较LLM并指导部署决策，但排...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv论文2610.00651v1指出，Agent评估虽广泛用于比较LLM并指导部署，但排名不仅反映模型本身，还受评估方式等外部因素影响。
+arX: &quot;arXiv:2610.00651v1 发布类型：新增摘要：代理评估日益用于比较LLM并指导部署决策，但排名可能不仅反映模型性能，也反映评估方法的影响……
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -386,9 +386,9 @@ arXiv论文2610.00651v1指出，Agent评估虽广泛用于比较LLM并指导部�
       <link>https://arxiv.org/abs/2610.00654</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00654</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>当更多数据还不够时：个性化长期依赖客户数据推断个体价值偏好，本文将此称为“客户证据”（customer evidence），即客户的行为...，适合判断技术路线和后续产品化可能性。
+      <description>当更多数据还不够时：arXiv:2610.00654v1 新论文摘要：个性化长期依赖客户数据来推断个体偏好，本文称之为“客户证据”，适合判断技术路线和后续产品化可能性。
 
-个性化长期依赖客户数据推断个体价值偏好，本文将此称为“客户证据”（customer evidence），即客户的行为、偏好和互动数据，作为推断其潜在需求的核心依据。该研究探讨了如何系统化利用此类证据提升个性化服务的准确性与伦理合规性。
+arXiv:2610.00654v1 新论文摘要：个性化长期依赖客户数据来推断个体偏好，本文称之为“客户证据”。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -399,9 +399,9 @@ arXiv论文2610.00651v1指出，Agent评估虽广泛用于比较LLM并指导部�
       <link>https://arxiv.org/abs/2610.00663</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00663</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>通过专家隔离和关闭法学硕士来遏制后门：arXiv:2610.00663v1 新论文摘要：后门大语言模型（LLMs）在良性输入下表现正常，但在隐藏触发条件下...，适合判断技术路线和后续产品化可能性。
+      <description>通过专家隔离和关闭法学硕士来遏制后门：arXiv:2610.00663v1 新论文摘要：后门大语言模型（LLM）在良性输入下表现正常，但在隐藏触发条件下会...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00663v1 新论文摘要：后门大语言模型（LLMs）在良性输入下表现正常，但在隐藏触发条件下会输出攻击者指定内容。
+arXiv:2610.00663v1 新论文摘要：后门大语言模型（LLM）在良性输入下表现正常，但在隐藏触发条件下会输出攻击者指定内容。现有方法……
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -412,9 +412,9 @@ arXiv:2610.00663v1 新论文摘要：后门大语言模型（LLMs）在良性输
       <link>https://arxiv.org/abs/2610.00682</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00682</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>用于评估科学 AI 中 LLM 推理的基...：arXiv:2610.00682v1 新论文公布，适合判断技术路线和后续产品化可能性。
+      <description>用于评估科学 AI 中 LLM 推理的基...：arXiv论文2610.00682v1指出，大语言模型（LLMs）正越来越多地支撑需要基于结构化知识进行推理的科学A...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00682v1 新论文公布。摘要称，大语言模型(LLMs)正日益成为科学AI应用的基础，这些应用基于结构化知识进行推理，如生物医学问答等领域。
+arXiv论文2610.00682v1指出，大语言模型（LLMs）正越来越多地支撑需要基于结构化知识进行推理的科学AI应用，如生物医学问答等。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -425,9 +425,9 @@ arXiv:2610.00682v1 新论文公布。摘要称，大语言模型(LLMs)正日益�
       <link>https://arxiv.org/abs/2610.00685</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00685</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>通过零空间投影对 LoRA 调谐的 LL...：arXiv论文2610.00685v1指出，随着大型语言模型（LLMs）和参数高效微调（PEFT）方法的快速普及，后...，适合判断技术路线和后续产品化可能性。
+      <description>通过零空间投影对 LoRA 调谐的 LL...：随着大语言模型（LLMs）和参数高效微调（PEFT）方法的快速普及，后门攻击的风险日益增加，适合判断技术路线和后续产品化可能性。
 
-arXiv论文2610.00685v1指出，随着大型语言模型（LLMs）和参数高效微调（PEFT）方法的快速普及，后门攻击风险日益加剧。
+随着大语言模型（LLMs）和参数高效微调（PEFT）方法的快速普及，后门攻击的风险日益增加。本文探讨了此类攻击的威胁模型、检测挑战及潜在防御策略，强调在资源受限的微调场景下，后门植入与隐蔽性的关联性，为安全可信的LLM部署提供重要参考。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -438,9 +438,9 @@ arXiv论文2610.00685v1指出，随着大型语言模型（LLMs）和参数高�
       <link>https://arxiv.org/abs/2610.00705</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00705</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>本文提出一种元多智能体强化学习（meta-MARL）框架，以实现多智能体交互策略的快速适应，来自官方更新源，适合直接判断产品变化。
+      <description>该论文提出一种元多智能体强化学习（meta-MARL）框架，旨在实现多智能体环境中交互策略的快速适应，来自官方更新源，适合直接判断产品变化。
 
-本文提出一种元多智能体强化学习（meta-MARL）框架，以实现多智能体交互策略的快速适应。该框架通过元学习机制提升智能体在新环境中的泛化能力与学习效率。
+该论文提出一种元多智能体强化学习（meta-MARL）框架，旨在实现多智能体环境中交互策略的快速适应。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -452,9 +452,9 @@ arXiv论文2610.00685v1指出，随着大型语言模型（LLMs）和参数高�
       <link>https://arxiv.org/abs/2610.00710</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00710</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>ReLiveGym：随着大型语言模型（LLM）代理的广泛应用，其在需要持续监控或周期性任务中的部署日益增多，适合判断技术路线和后续产品化可能性。
+      <description>ReLiveGym：arXiv论文2610.00710v1指出，随着大语言模型（LLM）代理被广泛采用，它们越来越多地被部署用于需要持续...，适合判断技术路线和后续产品化可能性。
 
-随着大型语言模型（LLM）代理的广泛应用，其在需要持续监控或周期性任务中的部署日益增多。该研究旨在解决此类代理在长时间运行过程中面临的“模型衰退”问题，通过引入动态上下文压缩与自我纠错机制，显著提升了其长期任务执行的稳定性与准确性。
+arXiv论文2610.00710v1指出，随着大语言模型（LLM）代理被广泛采用，它们越来越多地被部署用于需要持续监控或周期性执行的任务。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -465,9 +465,9 @@ arXiv论文2610.00685v1指出，随着大型语言模型（LLMs）和参数高�
       <link>https://arxiv.org/abs/2610.00715</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00715</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>偏好不确定性下的鲁棒纳什对齐：arXiv:2610.00715v1 新论文摘要：偏好对齐方法通常针对单一偏好模型优化，在成对偏好存在不确定性时表现...，适合判断技术路线和后续产品化可能性。
+      <description>偏好不确定性下的鲁棒纳什对齐：arXiv:2610.00715v1 提出一种新的偏好对齐方法，通过多偏好模型联合优化缓解传统单模型在成对偏好下的脆...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.00715v1 新论文摘要：偏好对齐方法通常针对单一偏好模型优化，在成对偏好存在不确定性时表现脆弱。
+arXiv:2610.00715v1 提出一种新的偏好对齐方法，通过多偏好模型联合优化缓解传统单模型在成对偏好下的脆弱性，提升对齐鲁棒性。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -479,9 +479,9 @@ arXiv:2610.00715v1 新论文摘要：偏好对齐方法通常针对单一偏好�
       <link>https://arxiv.org/abs/2610.00791</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00791</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>企业表征简化（ERS）：企业信息通过应用、项目、技术、组织边界和本地化等因素塑造的数据对象进行表征，适合判断技术路线和后续产品化可能性。
+      <description>企业表征简化（ERS）：企业信息通过应用、项目、技术、组织边界和本地环境塑造的工件进行表示，反映了信息在复杂组织结构中的分布与依赖关系，适合判断技术路线和后续产品化可能性。
 
-企业信息通过应用、项目、技术、组织边界和本地化等因素塑造的数据对象进行表征。该研究提出了一种基于语义网的方法，旨在跨越组织壁垒，实现企业知识的统一表示与跨领域检索。
+企业信息通过应用、项目、技术、组织边界和本地环境塑造的工件进行表示，反映了信息在复杂组织结构中的分布与依赖关系。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -492,9 +492,10 @@ arXiv:2610.00715v1 新论文摘要：偏好对齐方法通常针对单一偏好�
       <link>https://arxiv.org/abs/2610.00797</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00797</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Sapien：arXiv论文（2610.00797v1）提出上下文安全防御机制，通过合成任务特定策略并强制应用于AI代理的工具调用...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Sapien：**摘要：** 本文提出了一种基于语境的安全防御方案，通过合成任务特定的策略并强制执行于AI代理工具，有效防止代理执...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv论文（2610.00797v1）提出上下文安全防御机制，通过合成任务特定策略并强制应用于AI代理的工具调用，防止其执行违规操作。
+**摘要：**
+本文提出了一种基于语境的安全防御方案，通过合成任务特定的策略并强制执行于AI代理工具，有效防止代理执行鲁莽或恶意行为。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -506,9 +507,9 @@ arXiv论文（2610.00797v1）提出上下文安全防御机制，通过合成任
       <link>https://arxiv.org/abs/2610.00849</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00849</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>面向目标条件强化学习的多时间尺度学习：现有离线目标条件强化学习方法在长时域任务上表现不佳，因折扣导致价值差异被压缩，难以有效引导长期行为，适合判断技术路线和后续产品化可能性。
+      <description>面向目标条件强化学习的多时间尺度学习：arXiv:2610.00849v1 新研究指出，现有离线目标条件强化学习（GCRL）方法在长时程任务中表现不佳，因...，适合判断技术路线和后续产品化可能性。
 
-现有离线目标条件强化学习方法在长时域任务上表现不佳，因折扣导致价值差异被压缩，难以有效引导长期行为。
+arXiv:2610.00849v1 新研究指出，现有离线目标条件强化学习（GCRL）方法在长时程任务中表现不佳，因折扣机制压缩了价值差异，导致策略难以持续优化。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -519,9 +520,9 @@ arXiv论文（2610.00797v1）提出上下文安全防御机制，通过合成任
       <link>https://arxiv.org/abs/2610.00870</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00870</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>教育者引导的 LLM 教学智能体：我们提出了一款由教育者指导的LLM教学代理，用于概念数据库设计中的支撑性反馈，适合关注自动化任务和多 Agent 协作演进。
+      <description>教育者引导的 LLM 教学智能体：arXiv:2610.00870 提出一种由教育者引导的 LLM 教学代理，用于概念数据库设计中的脚手架式反馈，并集...，适合关注自动化任务和多 Agent 协作演进。
 
-我们提出了一款由教育者指导的LLM教学代理，用于概念数据库设计中的支撑性反馈。该系统集成于实体关系... (共18字)
+arXiv:2610.00870 提出一种由教育者引导的 LLM 教学代理，用于概念数据库设计中的脚手架式反馈，并集成至实体—关系（ER）模型。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -533,9 +534,9 @@ arXiv论文（2610.00797v1）提出上下文安全防御机制，通过合成任
       <link>https://arxiv.org/abs/2610.00872</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00872</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>MemFit：arXiv论文2610.00872v1提出新型长期记忆系统，扩展大语言模型（LLM）跨应用的推理能力，适合关注自动化任务和多 Agent 协作演进。
+      <description>MemFit：arXiv论文2610.00872v1提出一种新型长期记忆系统，旨在扩展大语言模型（LLM）的跨应用推理能力，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv论文2610.00872v1提出新型长期记忆系统，扩展大语言模型（LLM）跨应用的推理能力。
+arXiv论文2610.00872v1提出一种新型长期记忆系统，旨在扩展大语言模型（LLM）的跨应用推理能力。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -547,9 +548,9 @@ arXiv论文2610.00872v1提出新型长期记忆系统，扩展大语言模型（
       <link>https://arxiv.org/abs/2610.00906</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00906</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>ActiveSaddler：arXiv论文2610.00906v1提出自动化harness优化方法，通过迭代更新LLM代理的提示词、工具接口与控...，适合关注自动化任务和多 Agent 协作演进。
+      <description>ActiveSaddler：自动化 harness 优化可通过迭代更新 LLM 代理的提示、工具接口和控制逻辑，显著提升其性能，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv论文2610.00906v1提出自动化harness优化方法，通过迭代更新LLM代理的提示词、工具接口与控制逻辑，显著提升其性能与任务完成效果。
+自动化 harness 优化可通过迭代更新 LLM 代理的提示、工具接口和控制逻辑，显著提升其性能。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -561,9 +562,9 @@ arXiv论文2610.00906v1提出自动化harness优化方法，通过迭代更新LL
       <link>https://arxiv.org/abs/2610.00912</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00912</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>OR 对于 AI 的 OR：大语言模型可将业务描述翻译为优化模型，但生成的可执行代码可能误表示约束或目标，适合判断技术路线和后续产品化可能性。
+      <description>OR 对于 AI 的 OR：大概率是我是一个用户，适合判断技术路线和后续产品化可能性。
 
-大语言模型可将业务描述翻译为优化模型，但生成的可执行代码可能误表示约束或目标。
+大概率是我是一个用户。我是一个用大型号将业务描述转化为优化模型，但可执行代码可能错误地表达约束或目标。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -574,9 +575,9 @@ arXiv论文2610.00906v1提出自动化harness优化方法，通过迭代更新LL
       <link>https://arxiv.org/abs/2610.00917</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00917</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>寻找合适的配合：选择，适合关注自动化任务和多 Agent 协作演进。
+      <description>寻找合适的配合：arXiv:2610.00917v1 探讨智能体系统选择问题，即如何权衡语言模型、运行框架及其组合对整体性能的影响，适合关注自动化任务和多 Agent 协作演进。
 
-选择
+arXiv:2610.00917v1 探讨智能体系统选择问题，即如何权衡语言模型、运行框架及其组合对整体性能的影响。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -588,9 +589,9 @@ arXiv论文2610.00906v1提出自动化harness优化方法，通过迭代更新LL
       <link>https://arxiv.org/abs/2610.00947</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00947</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>arXiv:2610.00947v1 新增自然语言接口ABDA-NL，为基于ASPIC+知识库的ABDA论证讨论系统...，来自官方更新源，适合直接判断产品变化。
+      <description>arXiv:2610.00947v1 报道 ABDA-NL 为 ABDA 系统新增自然语言接口，该系统基于 ASPI...，来自官方更新源，适合直接判断产品变化。
 
-arXiv:2610.00947v1 新增自然语言接口ABDA-NL，为基于ASPIC+知识库的ABDA论证讨论系统提供语义化交互支持。
+arXiv:2610.00947v1 报道 ABDA-NL 为 ABDA 系统新增自然语言接口，该系统基于 ASPIC 知识库与 grounded semantics 支持论证式讨论。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -601,9 +602,9 @@ arXiv:2610.00947v1 新增自然语言接口ABDA-NL，为基于ASPIC+知识库的
       <link>https://arxiv.org/abs/2610.00949</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00949</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>PG-SFT：arXiv:2610.00949v1 公告类型：新论文 摘要：监督式微调（SFT）是基于离线代理轨迹训练专业工具使用...，适合关注自动化任务和多 Agent 协作演进。
+      <description>PG-SFT：监督微调（SFT）在离线智能体轨迹上是训练专用工具使用智能体的标准方法，但强制模型模仿这些轨迹可能导致次优性能，因其...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.00949v1 公告类型：新论文 摘要：监督式微调（SFT）是基于离线代理轨迹训练专业工具使用代理的标准方法，但迫使模型...
+监督微调（SFT）在离线智能体轨迹上是训练专用工具使用智能体的标准方法，但强制模型模仿这些轨迹可能导致次优性能，因其无法区分有效与无效的行为。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -616,9 +617,9 @@ arXiv:2610.00949v1 公告类型：新论文 摘要：监督式微调（SFT）是
       <link>https://arxiv.org/abs/2610.00961</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00961</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>控制论和认知论：arXiv论文2610.00961v1指出，随着代码生成任务日益交由AI系统完成，瓶颈正从编写代码转向对这些系统的监...，适合关注自动化任务和多 Agent 协作演进。
+      <description>控制论和认知论：随着代码生成越来越多地委托给AI系统，瓶颈正从编写代码转向监督这些系统，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv论文2610.00961v1指出，随着代码生成任务日益交由AI系统完成，瓶颈正从编写代码转向对这些系统的监督。
+随着代码生成越来越多地委托给AI系统，瓶颈正从编写代码转向监督这些系统。该研究探讨了在代码生成过程中，人类监督者如何有效地引导和验证AI输出，以确保代码质量和安全性。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -630,9 +631,9 @@ arXiv论文2610.00961v1指出，随着代码生成任务日益交由AI系统完�
       <link>https://arxiv.org/abs/2610.00972</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00972</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>VeriHarness：随着大语言模型（LLM）代理承担越来越复杂、长周期的任务，验证其输出的难度也在增加，适合关注自动化任务和多 Agent 协作演进。
+      <description>VeriHarness：随着大模型智能体承担日益复杂、长周期的任务，对其输出的验证变得愈发困难，适合关注自动化任务和多 Agent 协作演进。
 
-随着大语言模型（LLM）代理承担越来越复杂、长周期的任务，验证其输出的难度也在增加。本文研究了验证LLM代理输出的方法与挑战，旨在提升其可靠性与可信度。
+随着大模型智能体承担日益复杂、长周期的任务，对其输出的验证变得愈发困难。本研究探讨了如何有效验证其行为与成果。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -644,9 +645,9 @@ arXiv论文2610.00961v1指出，随着代码生成任务日益交由AI系统完�
       <link>https://arxiv.org/abs/2610.00979</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00979</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>RISED：训练单一LLM代理在多样化交互环境中联合学习，旨在打造通用智能体，适合关注自动化任务和多 Agent 协作演进。
+      <description>RISED：arXiv论文2610.00979v1提出跨多样交互环境联合训练单一LLM智能体的方法，旨在构建通用型智能体，适合关注自动化任务和多 Agent 协作演进。
 
-训练单一LLM代理在多样化交互环境中联合学习，旨在打造通用智能体。该研究探索了跨环境的泛化能力，旨在通过统一的训练范式提升代理在不同任务中的适应性与性能。
+arXiv论文2610.00979v1提出跨多样交互环境联合训练单一LLM智能体的方法，旨在构建通用型智能体。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -658,9 +659,9 @@ arXiv论文2610.00961v1指出，随着代码生成任务日益交由AI系统完�
       <link>https://arxiv.org/abs/2610.01000</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.01000</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>评估 LLM 生成的偏好分布：arXiv:2610.01000v1 新论文摘要：大语言模型（LLMs）正日益被用作概率生成器，应用于模拟、合成数据...，适合判断技术路线和后续产品化可能性。
+      <description>评估 LLM 生成的偏好分布：arXiv:2610.01000v1 论文指出，大语言模型（LLMs）正被广泛用作概率生成器，用于模拟、合成数据生成...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.01000v1 新论文摘要：大语言模型（LLMs）正日益被用作概率生成器，应用于模拟、合成数据生成及决策支持等领域。
+arXiv:2610.01000v1 论文指出，大语言模型（LLMs）正被广泛用作概率生成器，用于模拟、合成数据生成与决策支持等场景。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
@@ -671,9 +672,9 @@ arXiv:2610.01000v1 新论文摘要：大语言模型（LLMs）正日益被用作
       <link>https://arxiv.org/abs/2610.01014</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.01014</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>从发现到决策：arXiv论文2610.01014v1提出，在测试时扩展与集成推理中，对多个LLM响应进行投票是一种常见基元，适合判断技术路线和后续产品化可能性。
+      <description>从发现到决策：投票多个LLM响应是测试时缩放和集成推理中的常见技术，收集更多响应可扩展模型能力，但需平衡计算成本与性能提升，适合判断技术路线和后续产品化可能性。
 
-arXiv论文2610.01014v1提出，在测试时扩展与集成推理中，对多个LLM响应进行投票是一种常见基元；收集更多响应可扩展...（摘要未完）
+投票多个LLM响应是测试时缩放和集成推理中的常见技术，收集更多响应可扩展模型能力，但需平衡计算成本与性能提升。本文系统分析了投票机制在不同规模下的有效性，提出了基于置信度的自适应采样策略，以最小化推理开销同时最大化集成收益，在多个基准测试中展示了显著的性价比提升。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>

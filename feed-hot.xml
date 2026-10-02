@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 02 Oct 2026 05:47:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 06:25:10 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>NVIDIA AI 工厂如何实现高投资回报：高产出、长寿命、通用性</title>
@@ -36,18 +36,31 @@ Opus 5.5’s biggest tell is the word “dependable,” which pops up 23 times m
       <category>论文研究</category>
     </item>
     <item>
-      <title>表征推理时间 PRM 修剪片段嫁接惰性的配置：来自三个推理 LM 的证据</title>
-      <link>https://arxiv.org/abs/2610.00047</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.00047</guid>
+      <title>代理强化学习的依赖感知奖励塑造</title>
+      <link>https://arxiv.org/abs/2610.01207</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.01207</guid>
       <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>表征推理时间 PRM 修剪片段嫁接惰性的...：arXiv:2610.00047v1 Announce Type: new Abstract: Diversity...，适合判断技术路线和后续产品化可能性。
+      <description>代理强化学习的依赖感知奖励塑造：arXiv:2610.01207v1 Announce Type: new Abstract: When train...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.00047v1 Announce Type: new Abstract: Diversity collapse in parallel chain-of-thought has motivated inference-time interventions built on a natural design: when a process reward model (PRM)...
+arXiv:2610.01207v1 Announce Type: new Abstract: When training large language models with reinforcement learning, terminal rewards provide little guidance about which steps matter. Common methods for...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>DRelay：用于前缀感知并行推测解码修复的全局草案上下文</title>
+      <link>https://arxiv.org/abs/2610.01439</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.01439</guid>
+      <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
+      <description>DRelay：arXiv:2610.01439v1 Announce Type: new Abstract: Parallel d...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.01439v1 Announce Type: new Abstract: Parallel drafting reduces the drafting overhead of speculative decoding for large language models (LLMs), but its gains remain limited by the accepted...
 
 信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
-      <category>部署推理</category>
     </item>
     <item>
       <title>MCRI：分析和评估座席技能的四维框架</title>
@@ -669,19 +682,6 @@ arXiv:2610.02010v1 Announce Type: cross Abstract: Invisible watermarking has bec
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
-    </item>
-    <item>
-      <title>CARM：LLM 强化学习的取消感知响应屏蔽</title>
-      <link>https://arxiv.org/abs/2610.02039</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02039</guid>
-      <pubDate>Fri, 02 Oct 2026 04:00:00 +0000</pubDate>
-      <description>CARM：arXiv:2610.02039v1 Announce Type: cross Abstract: Recent y...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02039v1 Announce Type: cross Abstract: Recent years have witnessed the rapid adoption of reinforcement learning (RL) in large language model (LLM) post-training, with substantial gains in...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
