@@ -5,10 +5,10 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 02 Oct 2026 02:21:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 03:21:49 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>NVIDIA AI 工厂如何实现高产出、长寿命与通用性以最大化投资回报</title>
+      <title>NVIDIA AI 工厂如何实现高投资回报：高产出、长寿命、通用性</title>
       <link>https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories</link>
       <guid isPermaLink="true">https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories</guid>
       <pubDate>Thu, 01 Oct 2026 13:00:49 +0000</pubDate>
@@ -62,19 +62,6 @@ GPT-6 Astra Ultrafast, running on NVIDIA Blackwell GPUs, is available now in the
       <category>模型发布</category>
       <category>编码工具</category>
       <category>部署推理</category>
-    </item>
-    <item>
-      <title>Time 报道称 Grok 曾向特朗普建议抓捕委内瑞拉总统马杜罗</title>
-      <link>https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president</guid>
-      <pubDate>Thu, 01 Oct 2026 21:08:11 +0000</pubDate>
-      <description>Time 报道称 Grok 曾向特朗普建...：President Trump reportedly asked for Grok&apos;s opinion before...，适合优先评估模型能力、价格和工具选型变化。
-
-President Trump reportedly asked for Grok&apos;s opinion before invading Venezuela and capturing Nicolás Maduro.
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
     </item>
     <item>
       <title>AREX-2：通过长期反思任务推进自我改进代理</title>
@@ -559,9 +546,9 @@ arXiv:2609.38266v1 Announce Type: cross Abstract: Agentic large language models 
       <link>https://arxiv.org/abs/2609.38353</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2609.38353</guid>
       <pubDate>Thu, 01 Oct 2026 04:00:00 +0000</pubDate>
-      <description>TAGGRAPH：arXiv:2609.38353v1 Announce Type: cross Abstract: Long-ter...，适合关注自动化任务和多 Agent 协作演进。
+      <description>TAGGRAPH：arXiv:2609.38353v2 Announce Type: cross Abstract: Long-ter...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2609.38353v1 Announce Type: cross Abstract: Long-term memory lets LLM agents recall past interactions and remain consistent across sessions, but memory systems are hard to compare because they...
+arXiv:2609.38353v2 Announce Type: cross Abstract: Long-term memory lets LLM agents recall past interactions and remain consistent across sessions, but memory systems are hard to compare because they...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
@@ -685,6 +672,19 @@ arXiv:2609.38884v1 Announce Type: cross Abstract: Optimization modeling formulat
       <description>Learning Continuous...：arXiv:2609.38893v1 Announce Type: cross Abstract: A stocha...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2609.38893v1 Announce Type: cross Abstract: A stochastic hybrid system (SHS) is governed by a stochastic differential equation (SDE) describing the continuous dynamics and a Markov reset kernel...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Loop-Free Inverse Reinforcement Learning via Sequential Value Recovery with Q-Score Matching</title>
+      <link>https://arxiv.org/abs/2609.38955</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2609.38955</guid>
+      <pubDate>Thu, 01 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Loop-Free Inverse Re...：arXiv:2609.38955v1 Announce Type: cross Abstract: Inverse...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2609.38955v1 Announce Type: cross Abstract: Inverse Reinforcement Learning (IRL) aims to recover a reward function that explains expert demonstrations. Existing IRL methods typically rely on a...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
