@@ -50,15 +50,17 @@ jobs:
       # 退出码 2（网络不通 / 查不了）单独标注 —— 绝不把「无法确定」当成「没问题」。
       - name: Check OpenRouter model availability
         continue-on-error: true
+        env:
+          OPENROUTER_KEYS: ${{ secrets.OPENROUTER_KEYS }}
         run: |
           set +e
-          python scripts/check_openrouter_models.py --json > /tmp/or_models_check.json
+          python scripts/check_openrouter_models.py --probe-keys --json > /tmp/or_models_check.json
           CODE=$?
           set -e
           case "$CODE" in
             0) echo "::notice::OpenRouter 模型链全部在线且免费" ;;
             1)
-              python scripts/check_openrouter_models.py || true
+              python scripts/check_openrouter_models.py --probe-keys || true
               echo "::warning::OpenRouter 模型链中有模型已下线或已不再免费，请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 与 config/*.yaml"
               ;;
             *)
@@ -67,7 +69,7 @@ jobs:
           esac
           if [ -s /tmp/or_models_check.json ]; then
             {
-              echo "### OpenRouter 模型可用性（退出码 $CODE）"
+              echo "### OpenRouter 模型与额度（退出码 $CODE）"
               echo '```json'
               cat /tmp/or_models_check.json
               echo '```'

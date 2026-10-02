@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""校验配置里的 OpenRouter 模型是否**仍然在线且仍然免费**。
+"""校验 OpenRouter 模型可用性，并可探测每个 key 的免费额度余量。
 
 为什么需要这个脚本
 ------------------
@@ -18,18 +18,38 @@ OpenRouter 会定期撤下 `:free` 变体：模型本体还在（可以付费调
   2  **无法确定** —— 网络不通或 API 异常。绝不把「查不到」当成「没问题」，
      这正是本项目反复踩的「不可观测 ⇒ 不可断言」。
 
+关于 key 池（`--probe-keys`）
+---------------------------
+OpenRouter 官方文档（https://openrouter.ai/docs/api_reference/limits）明确写着：
+
+    Making additional accounts or API keys will not affect your rate limits,
+    as we govern capacity globally.
+
+免费模型的限额是**平台级**的，不是每 key 一份：
+
+    累计充值额度     每分钟请求     每天请求
+    < 10               20            50
+    >= 10              20          1000
+
+所以「多开几个账号组成 key 池」**并不能**把额度乘以账号数。`--probe-keys` 会调
+`GET /api/v1/key` 把每个账号的 `free_model_daily_requests.remaining` 打出来，
+让「额度到底还剩多少」这件事变得可观测，而不是靠猜。
+
 用法
 ----
     python scripts/check_openrouter_models.py
     python scripts/check_openrouter_models.py --json
+    OPENROUTER_KEYS=k1,k2 python scripts/check_openrouter_models.py --probe-keys
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
+from typing import Any
 
 import requests
 
@@ -38,6 +58,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 MODELS_API = "https://openrouter.ai/api/v1/models"
+KEY_API = "https://openrouter.ai/api/v1/key"
 TIMEOUT = 30
 
 
@@ -146,10 +167,103 @@ def classify(
     return result
 
 
+def _mask(key: str) -> str:
+    return f"{key[:8]}...{key[-4:]}" if len(key) > 14 else "short-key"
+
+
+def probe_keys(keys: list[str]) -> dict[str, Any]:
+    """逐个探测 key 的免费额度余量。返回 {key_masked: 状态字典}。
+
+    `GET /api/v1/key` 返回 `free_model_daily_requests.{used,limit,remaining}` 与
+    `is_free_tier`。这两个字段是解释 429 的关键：
+      - remaining == 0  → 这个账号今天的免费请求用完了（要等 UTC 次日重置）
+      - is_free_tier    → 是否从未充值；未充值的账号每日上限只有 50
+    """
+    report: dict[str, Any] = {}
+    for key in keys:
+        entry: dict[str, Any] = {"masked": _mask(key)}
+        try:
+            resp = requests.get(KEY_API, headers={"Authorization": f"Bearer {key}"}, timeout=TIMEOUT)
+        except Exception as exc:
+            entry["error"] = f"请求失败：{exc}"
+            report[entry["masked"]] = entry
+            continue
+        if resp.status_code != 200:
+            entry["error"] = f"HTTP {resp.status_code}"
+            report[entry["masked"]] = entry
+            continue
+        try:
+            data = (resp.json() or {}).get("data") or {}
+        except ValueError:
+            entry["error"] = "响应不是合法 JSON"
+            report[entry["masked"]] = entry
+            continue
+
+        free = data.get("free_model_daily_requests") or {}
+        entry.update(
+            {
+                "is_free_tier": data.get("is_free_tier"),
+                "usage": data.get("usage"),
+                "usage_daily": data.get("usage_daily"),
+                "limit_remaining": data.get("limit_remaining"),
+                "free_daily_used": free.get("used"),
+                "free_daily_limit": free.get("limit"),
+                "free_daily_remaining": free.get("remaining"),
+            }
+        )
+        report[entry["masked"]] = entry
+    return report
+
+
+def _print_key_probe(report: dict[str, Any]) -> None:
+    print("\n── Key 免费额度探测 ─────────────────────────────────────────────")
+    total_remaining = 0
+    unknown = 0
+    for masked, entry in report.items():
+        if "error" in entry:
+            unknown += 1
+            print(f"  [??]      {masked}  {entry['error']}")
+            continue
+        remaining = entry.get("free_daily_remaining")
+        limit = entry.get("free_daily_limit")
+        tier = "从未充值" if entry.get("is_free_tier") else "已充值"
+        if remaining is None:
+            unknown += 1
+            print(f"  [??]      {masked}  未返回 free_model_daily_requests（{tier}）")
+            continue
+        total_remaining += int(remaining)
+        flag = "[OK]     " if int(remaining) > 0 else "[EXHAUSTED]"
+        print(f"  {flag} {masked}  今日免费请求 {entry.get('free_daily_used')}/{limit}，剩余 {remaining}（{tier}）")
+    print(f"  合计今日剩余免费请求：{total_remaining}" + (f"（{unknown} 个 key 状态未知）" if unknown else ""))
+    print(
+        "\n  提醒：OpenRouter 的免费模型限额是**平台级**的 —— 官方文档明确写着\n"
+        "  「Making additional accounts or API keys will not affect your rate limits,\n"
+        "    as we govern capacity globally.」多开账号**不会**把额度乘以账号数。\n"
+        "  未充值账号每天只有 50 次免费请求；**单个账号累计充值 ≥10 额度后每天 1000 次**。\n"
+        "  流水线每小时跑一轮、每轮约需 5-10 次请求，即 120-240 次/天 —— 远超 50。\n"
+        "  若 AI 翻译长期 0 条，正解是给**一个**账号充值 ≥10，而不是继续加账号。"
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="校验 OpenRouter 模型是否仍在线且免费")
     parser.add_argument("--json", action="store_true", help="以 JSON 输出结果")
+    parser.add_argument(
+        "--probe-keys",
+        action="store_true",
+        help="额外探测 OPENROUTER_KEYS 中每个 key 的免费额度余量（需要环境变量）",
+    )
     args = parser.parse_args()
+
+    keys = [k.strip() for k in (os.environ.get("OPENROUTER_KEYS") or "").split(",") if k.strip()]
+    key_report: dict[str, Any] = {}
+    if args.probe_keys:
+        if not keys:
+            print("[WARN] 未设置 OPENROUTER_KEYS，跳过 key 探测。", file=sys.stderr)
+        else:
+            key_report = probe_keys(keys)
+            if not args.json:
+                _print_key_probe(key_report)
 
     configured = _dedupe(_load_configured_models())
     if not configured:
@@ -179,6 +293,7 @@ def main() -> int:
                 "healthy": [m for m, _ in healthy],
                 "missing": [m for m, _ in missing],
                 "no_longer_free": [m for m, _ in no_longer_free],
+                "keys": key_report,
             },
             ensure_ascii=False,
             indent=2,

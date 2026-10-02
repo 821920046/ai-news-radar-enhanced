@@ -12,10 +12,12 @@
 from __future__ import annotations
 
 import importlib.util
+import io
+import json
 import sys
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -102,6 +104,77 @@ class ExitCodeTests(unittest.TestCase):
         """解析不到配置 = 无法断言，不能报成功。"""
         with patch.object(checker, "_load_configured_models", return_value=[]):
             self.assertEqual(checker.main(), 2)
+
+
+class KeyProbeTests(unittest.TestCase):
+    """`--probe-keys`：把「额度还剩多少」变成可观测的事实。
+
+    OpenRouter 的免费模型限额是**平台级**的（官方文档：「Making additional accounts
+    or API keys will not affect your rate limits, as we govern capacity globally」），
+    所以多账号组池不能把额度乘以账号数。要判断「为什么全是 429」，只能看每个账号的
+    `free_model_daily_requests.remaining`。
+    """
+
+    # ⚠️ 刻意**不用**真实 OpenRouter key 的前缀。GitHub 的 push protection 会把
+    # 形似 OpenRouter key 的字符串当成真实密钥并拒绝推送（GH013: Push cannot
+    # contain secrets）—— 本文件第一版就因为这个被拦下来了。
+    # 测试用的假凭证必须一眼就不像真凭证。
+    KEY = "test-key-" + "0123456789abcdef" * 3
+
+    def _response(self, payload: dict, status: int = 200) -> MagicMock:
+        resp = MagicMock()
+        resp.status_code = status
+        resp.json.return_value = payload
+        return resp
+
+    def test_reports_daily_remaining(self):
+        payload = {
+            "data": {
+                "is_free_tier": True,
+                "usage": 1.5,
+                "usage_daily": 0.0,
+                "limit_remaining": None,
+                "free_model_daily_requests": {"used": 47, "limit": 50, "remaining": 3},
+            }
+        }
+        with patch.object(checker.requests, "get", return_value=self._response(payload)):
+            report = checker.probe_keys([self.KEY])
+
+        self.assertEqual(len(report), 1)
+        entry = next(iter(report.values()))
+        self.assertEqual(entry["free_daily_remaining"], 3)
+        self.assertEqual(entry["free_daily_limit"], 50)
+        self.assertTrue(entry["is_free_tier"])
+
+    def test_http_error_is_recorded_not_raised(self):
+        with patch.object(checker.requests, "get", return_value=self._response({}, status=401)):
+            report = checker.probe_keys([self.KEY])
+        entry = next(iter(report.values()))
+        self.assertIn("401", entry["error"])
+
+    def test_network_error_is_recorded_not_raised(self):
+        with patch.object(checker.requests, "get", side_effect=RuntimeError("boom")):
+            report = checker.probe_keys([self.KEY])
+        entry = next(iter(report.values()))
+        self.assertIn("请求失败", entry["error"])
+
+    def test_full_key_is_never_written_into_the_report(self):
+        """报告会进 job summary（仓库是 public），绝不能出现完整 key。"""
+        payload = {"data": {"free_model_daily_requests": {"used": 0, "limit": 50, "remaining": 50}}}
+        with patch.object(checker.requests, "get", return_value=self._response(payload)):
+            report = checker.probe_keys([self.KEY])
+        serialized = json.dumps(report, ensure_ascii=False)
+        self.assertNotIn(self.KEY, serialized)
+        self.assertIn("test-key...", serialized)
+
+    def test_summary_prints_the_platform_limit_warning(self):
+        payload = {"data": {"is_free_tier": True, "free_model_daily_requests": {"used": 50, "limit": 50, "remaining": 0}}}
+        with patch.object(checker.requests, "get", return_value=self._response(payload)), \
+                patch("sys.stdout", new_callable=io.StringIO) as out:
+            checker._print_key_probe(checker.probe_keys([self.KEY]))
+        text = out.getvalue()
+        self.assertIn("合计今日剩余免费请求：0", text)
+        self.assertIn("we govern capacity globally", text)
 
 
 class ConfigSourcesAgreeTests(unittest.TestCase):

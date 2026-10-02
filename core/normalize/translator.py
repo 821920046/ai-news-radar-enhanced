@@ -85,8 +85,11 @@ AI_DESC_TRANSLATE_SYSTEM_PROMPT = (
     "2) 译文自然流畅；3) 只输出翻译结果。"
 )
 
-# 批量翻译每批的上限
-BATCH_SIZE = 8
+# 批量翻译每批的上限。
+# 免费模型的限额是按**请求数**计的（见 OpenRouter limits 文档：未充值账号每天仅 50 次），
+# 所以批越大、请求越少、越不容易撞 429。可用 TRANSLATE_BATCH_SIZE 环境变量调大
+# （例如 16 可把 80 条标题的请求数从 10 降到 5），代价是单条解析失败时影响面更大。
+BATCH_SIZE = max(1, int(os.environ.get("TRANSLATE_BATCH_SIZE") or 8))
 
 # ---------------------------------------------------------------------------
 # Google 兜底配置（v3.2）
