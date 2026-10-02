@@ -53,25 +53,22 @@ jobs:
         env:
           OPENROUTER_KEYS: ${{ secrets.OPENROUTER_KEYS }}
         run: |
+          # 同时输出到**日志**和 job summary：日志才是事后取证的主战场
+          # （本项目多次事故的唯一线索就是日志时间戳），summary 便于快速浏览。
           set +e
-          python scripts/check_openrouter_models.py --probe-keys --json > /tmp/or_models_check.json
-          CODE=$?
+          python scripts/check_openrouter_models.py --probe-keys 2>&1 | tee /tmp/or_check.txt
+          CODE=${PIPESTATUS[0]}
           set -e
           case "$CODE" in
             0) echo "::notice::OpenRouter 模型链全部在线且免费" ;;
-            1)
-              python scripts/check_openrouter_models.py --probe-keys || true
-              echo "::warning::OpenRouter 模型链中有模型已下线或已不再免费，请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 与 config/*.yaml"
-              ;;
-            *)
-              echo "::warning::无法确认 OpenRouter 模型可用性（网络/接口异常）—— 这不代表配置没问题，只是「查不了」"
-              ;;
+            1) echo "::warning::OpenRouter 模型链中有模型已下线或已不再免费，请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 与 config/*.yaml" ;;
+            *) echo "::warning::无法确认 OpenRouter 模型可用性（网络/接口异常）—— 这不代表配置没问题，只是「查不了」" ;;
           esac
-          if [ -s /tmp/or_models_check.json ]; then
+          if [ -s /tmp/or_check.txt ]; then
             {
               echo "### OpenRouter 模型与额度（退出码 $CODE）"
-              echo '```json'
-              cat /tmp/or_models_check.json
+              echo '```'
+              cat /tmp/or_check.txt
               echo '```'
             } >> "$GITHUB_STEP_SUMMARY"
           fi
