@@ -711,7 +711,8 @@ class TimeBoundTests(unittest.TestCase):
 
 class ParseBatchResultTests(unittest.TestCase):
     def _parse(self, text: str, n: int = 2) -> list[str | None]:
-        return _parse_batch_result(text, n)
+        # 用占位原标题；品牌名比对需要原标题，这些测试主要验证格式解析
+        return _parse_batch_result(text, [f"Title {i}" for i in range(1, n + 1)])
 
     def test_strict_numbered_dot(self):
         self.assertEqual(self._parse("1. 甲\n2. 乙"), ["甲", "乙"])

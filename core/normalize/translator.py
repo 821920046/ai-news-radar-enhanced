@@ -834,7 +834,7 @@ def _ai_translate_batch(
     if content is None:
         return [None] * len(titles)
 
-    parsed = _parse_batch_result(content, len(titles))
+    parsed = _parse_batch_result(content, titles)
     missing = sum(1 for item in parsed if not item)
     if missing:
         # ⚠️ 这里以前是**完全静默**的：HTTP 200、内容非空，但一条都解析不出来时，
@@ -866,7 +866,7 @@ def _ai_translate_batch(
 #   - 行首列表符号：`- 1. 译文`、`> 1. 译文`
 #   - 漏掉编号：只输出四行译文
 _FULLWIDTH_TRANSLATION = str.maketrans("０１２３４５６７８９．：（）", "0123456789.:()")
-_LEADING_DECORATION = re.compile(r"^(?:[-*+>]\s+|#{1,6}\s+|\*{1,2}|_{1,2}|`{1,3})+")
+_LEADING_DECORATION = re.compile(r"^(?:[-*+>]\s+|#{1,6}\s+|\*{1,4}|_{1,4}|`{1,4})+")
 _TRAILING_DECORATION = re.compile(r"(?:\*{1,2}|_{1,2}|`{1,3})$")
 
 # 第一段：编号 + 标点分隔符（约定格式）。必须严格，否则正文里的数字会被当编号。
@@ -889,8 +889,14 @@ def _normalize_output_line(line: str) -> str:
 
 
 def _extract_numbered(
-    lines: list[str], pattern: "re.Pattern[str]", expected_count: int
+    lines: list[str],
+    pattern: "re.Pattern[str]",
+    expected_count: int,
+    norm_originals: list[str],
 ) -> list[str | None]:
+    """按编号模式提取译文。对品牌名/专有名词宽容：若输出与原标题一致
+    （无中文但内容相同），也算合法结果 —— 模型正确地决定无需翻译。
+    """
     results: list[str | None] = [None] * expected_count
     for line in lines:
         match = pattern.match(line)
@@ -899,13 +905,20 @@ def _extract_numbered(
         # 编号必须落在 1..expected_count 内，避免把年份/数量当成编号
         if not 1 <= int(match.group(1)) <= expected_count:
             continue
+        idx = int(match.group(1)) - 1
         translated = match.group(2).strip().strip("\"'「」『』")
-        if translated and has_cjk(translated):
-            results[int(match.group(1)) - 1] = translated
+        if not translated:
+            continue
+        if has_cjk(translated):
+            results[idx] = translated
+            continue
+        # 无中文，但与原标题一致 → 品牌名/专有名词，保留原样
+        if translated.lower() == norm_originals[idx]:
+            results[idx] = translated
     return results
 
 
-def _parse_batch_result(content: str, expected_count: int) -> list[str | None]:
+def _parse_batch_result(content: str, originals: list[str]) -> list[str | None]:
     """解析批量翻译的编号结果。三段式，越往后越宽松：
 
       1. 严格：`编号 + 标点`（约定格式）；
@@ -914,21 +927,32 @@ def _parse_batch_result(content: str, expected_count: int) -> list[str | None]:
 
     第 3 段刻意加了「数量相等 + 前两段零命中」两个约束：一旦顺序错位，就会把
     A 的译文贴到 B 的标题上。**宁可少翻，不可错配。**
+
+    品牌名宽容：编号匹配到的行若与原标题一致（无中文），仍算合法 —— 避免
+    品牌名被反复重试、烧光路由（实测 run 36967871798 的根因之一）。
     """
+    expected_count = len(originals)
+    norm_originals = [orig.strip().lower() for orig in originals]
     lines = [text for text in (_normalize_output_line(raw) for raw in content.split("\n")) if text]
 
     for pattern in (_STRICT_NUMBERED, _LOOSE_NUMBERED):
-        results = _extract_numbered(lines, pattern, expected_count)
+        results = _extract_numbered(lines, pattern, expected_count, norm_originals)
         if any(results):
             return results
 
     # 兜底：编号全丢，但「含中文且不以数字开头」的行数恰好等于期望条数。
-    # 不以数字开头是为了排除被前两段拒绝的编号行（如 999. 甲），它们看起来是
-    # 「编号解析失败」而非「没有编号」。
+    # 不以数字开头是为了排除被前两段拒绝的编号行（如 999. 甲）。
     cjk_lines = [line.strip("\"'「」『』") for line in lines
                  if has_cjk(line) and not re.match(r"^\d", line)]
     if len(cjk_lines) == expected_count:
-        return list(cjk_lines)
+        # 兜底里的品牌名：逐一比对，若某行与原标题一致，保留原样
+        filled: list[str | None] = []
+        for line, orig_norm in zip(cjk_lines, norm_originals):
+            if line.lower() == orig_norm:
+                filled.append(line)
+            else:
+                filled.append(line if has_cjk(line) else None)
+        return filled
 
     return [None] * expected_count
 
