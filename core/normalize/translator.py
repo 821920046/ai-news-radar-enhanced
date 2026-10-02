@@ -581,11 +581,24 @@ def _openrouter_post(
         return content
 
     if resp.status_code in {402, 403, 429}:
-        # 免费模型上的 429 几乎总是「这个账号今天的免费额度用完了」→ 换 key
-        _record("key_exhausted", http=resp.status_code)
+        # 免费模型上的 429 几乎总是「这个账号今天的免费额度用完了」→ 换 key。
+        #
+        # 但**不能只靠猜**：OpenRouter 文档说明，平台级限额触发的 429 会带上
+        # X-RateLimit-Limit / -Remaining / -Reset，provider 侧的还会带 Retry-After。
+        # 把这三个数记下来，「为什么全是 429」才有答案 —— 是每日额度用完了
+        # （reset 在次日）还是每分钟限额（reset 只有几秒），两者的处置完全不同。
+        limit_info: dict[str, Any] = {}
+        resp_headers = getattr(resp, "headers", None) or {}
+        for name in ("X-RateLimit-Limit", "X-RateLimit-Remaining", "X-RateLimit-Reset", "Retry-After"):
+            value = resp_headers.get(name)
+            if isinstance(value, str) and value:
+                limit_info[name] = value
+        _record("key_exhausted", http=resp.status_code, **limit_info)
         logger.warning(
-            "[AI Translate] 模型 %s 被限流/额度不足（HTTP %d），换下一个 key",
-            model, resp.status_code,
+            "[AI Translate] 模型 %s 被限流/额度不足（HTTP %d）%s，换下一个 key",
+            model,
+            resp.status_code,
+            "；平台限额 " + str(limit_info) if limit_info else "（响应未带 X-RateLimit-* 头）",
         )
         return None
 

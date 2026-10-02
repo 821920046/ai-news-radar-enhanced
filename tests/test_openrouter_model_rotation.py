@@ -71,12 +71,15 @@ def _ok(content: str, *, finish: str = "stop", reasoning: str | None = None) -> 
     return resp
 
 
-def _err(status: int, text: str = "") -> MagicMock:
+def _err(status: int, text: str = "", headers: dict | None = None) -> MagicMock:
     """构造一个非 200 的 OpenRouter 响应。"""
     resp = MagicMock()
     resp.status_code = status
     resp.text = text or f"HTTP {status}"
     resp.json.return_value = {"error": {"message": resp.text}}
+    # 必须是真 dict：真实响应的 .headers 是 CaseInsensitiveDict，
+    # 若用 MagicMock，`.get()` 会返回一个 truthy 的 Mock，把限额信息污染成假数据。
+    resp.headers = dict(headers or {})
     return resp
 
 
@@ -264,6 +267,38 @@ class FailureAttributionTests(unittest.TestCase):
         self.assertEqual(cursor.dead_keys, {"k1"})
         self.assertEqual(cursor.dead_models, set())
         self.assertTrue(cursor.available(), "还有 k2 可用，池不该被判死")
+
+    def test_429_records_the_platform_limit_headers(self):
+        """429 必须把 X-RateLimit-* 记下来。
+
+        没有这三个数就分不清「每日额度用完了」和「每分钟限额」——
+        前者要等次日、要充值；后者只要放慢节奏。实测 10 个账号各剩 50/50
+        日额度却全部 429，正是靠这个区分才能定位。
+        """
+        session = _session([
+            _err(429, "rate limited", headers={
+                "X-RateLimit-Limit": "20",
+                "X-RateLimit-Remaining": "0",
+                "X-RateLimit-Reset": "7",
+                "Retry-After": "7",
+            })
+        ])
+        with patch.object(T, "_openrouter_session", return_value=session):
+            outcome: dict = {}
+            _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
+        self.assertEqual(outcome["status"], "key_exhausted")
+        self.assertEqual(outcome["X-RateLimit-Limit"], "20")
+        self.assertEqual(outcome["X-RateLimit-Remaining"], "0")
+        self.assertEqual(outcome["X-RateLimit-Reset"], "7")
+        self.assertEqual(outcome["Retry-After"], "7")
+
+    def test_429_without_limit_headers_still_reports_the_status(self):
+        session = _session([_err(429)])
+        with patch.object(T, "_openrouter_session", return_value=session):
+            outcome: dict = {}
+            _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
+        self.assertEqual(outcome["status"], "key_exhausted")
+        self.assertNotIn("X-RateLimit-Limit", outcome)
 
     def test_404_marks_model_dead_but_not_key(self):
         cursor = _RouteCursor(["k1"], ["m1", "m2"], 60)
