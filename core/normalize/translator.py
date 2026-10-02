@@ -414,6 +414,10 @@ class _RouteCursor:
         self.hard_failures = 0
         self._unparseable: dict[str, int] = {}
         self._deadline = time.monotonic() + max(0.0, budget_seconds)
+        # 自上次路由池变化（key/model 被淘汰）以来的尝试次数。
+        # 用「变化后清零」的计数器替代「历史累计 attempts」，可避免死路由的尝试
+        # 把活路由的可用额度「吃掉」—— 这是 _live_routes bound 提前熔断的根因。
+        self._attempts_since_change = 0
 
     def _live_keys(self) -> list[str]:
         return [k for k in self.keys if k not in self.dead_keys]
@@ -428,13 +432,24 @@ class _RouteCursor:
         return (
             bool(self._live_keys())
             and bool(self._live_models())
-            and self.attempts < self.total_routes
+            and self._attempts_since_change < self._live_routes
             and not self.out_of_budget()
         )
 
     @property
     def total_routes(self) -> int:
+        """原始配置时的路由总数（只用于统计展示，不用于终止判断）。"""
         return len(self.keys) * len(self.models)
+
+    @property
+    def _live_routes(self) -> int:
+        """当前仍活着的路由数 = live_keys × live_models。
+
+        用 live 计数作为终止上界，避免模型/key 被淘汰后仍反复重试注定失败的组合。
+        实测 run 36970496683：5 个模型被淘汰后只剩 3 个，原始 bound 80 让后 50 次
+        尝试全是重复浪费（约 150 秒预算）。
+        """
+        return max(0, self.live_keys * self.live_models)
 
     @property
     def live_keys(self) -> int:
@@ -469,6 +484,7 @@ class _RouteCursor:
         key = live_keys[i]
         model = live_models[(i + r) % m_count]
         self.attempts += 1
+        self._attempts_since_change += 1
         return key, model
 
     def mark_key_exhausted(self, key: str, reason: str = "额度耗尽/被限流") -> None:
@@ -480,6 +496,7 @@ class _RouteCursor:
             return
         self.dead_keys.add(key)
         self.hard_failures += 1
+        self._attempts_since_change = 0
         masked = f"{key[:6]}...{key[-4:]}" if len(key) > 10 else "short-key"
         logger.warning(
             "[AI Route] key %s %s，已淘汰（剩余 key %d/%d）",
@@ -502,6 +519,7 @@ class _RouteCursor:
             return
         self.dead_models.add(model)
         self.hard_failures += 1
+        self._attempts_since_change = 0
         logger.warning(
             "[AI Route] 模型 %s %s，已淘汰（剩余模型 %d/%d）",
             model, reason, self.live_models, len(self.models),
