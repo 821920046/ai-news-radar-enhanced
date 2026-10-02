@@ -198,6 +198,87 @@ def test_corrupt_snapshot_is_treated_as_stale(tmp_path):
     assert proc.returncode == 1, "损坏的数据文件必须判为陈旧"
 
 
+# ── 告警闸门：只在「确属异常」时才推送 ──────────────────────────────────────
+# 更新流水线每小时运行一次。若 stale 检查无条件发送，就等于每小时推一条
+# 「数据长时间未更新」—— 而数据其实一直是新鲜的。噪音会训练人忽略这个频道，
+# 真正的故障也就跟着被一起忽略。安静的一小时必须保持安静。
+
+
+def _run_notify_main(monkeypatch, argv: list[str]) -> tuple[int, int]:
+    """调用 notify_ci.main() 并返回 (退出码, requests.post 调用次数)。
+
+    必须走 main() 而不是 send()：闸门逻辑在 main() 里，单独测 send() 永远
+    发现不了「不该发却发了」这类问题。
+    """
+    sys.path.insert(0, str(ROOT))
+    import scripts.notify_ci as n
+    from unittest.mock import MagicMock, patch
+
+    monkeypatch.setenv("WEBHOOK_URL", "https://example.invalid/hook")
+    monkeypatch.setenv("WEBHOOK_TYPE", "wecom")
+    monkeypatch.setattr(sys, "argv", ["notify_ci.py", *argv])
+
+    resp = MagicMock(status_code=200, text="ok")
+    resp.json.return_value = {"errcode": 0, "errmsg": "ok"}
+    with patch.object(n.requests, "post", return_value=resp) as post:
+        code = n.main()
+    return code, post.call_count
+
+
+def test_fresh_data_sends_no_alert(monkeypatch, tmp_path):
+    """核心回归：数据新鲜时，即使配了 webhook 也**不能**推送。"""
+    _write_snapshot(tmp_path, age_hours=0.5)
+    code, calls = _run_notify_main(
+        monkeypatch, ["--mode", "stale", "--data-dir", str(tmp_path), "--max-age-hours", "6"]
+    )
+    assert code == 0
+    assert calls == 0, "数据新鲜却推送了告警 —— 这正是每小时一条噪音的来源"
+
+
+def test_stale_data_does_send(monkeypatch, tmp_path):
+    """数据确实陈旧时必须推送，否则告警通道形同虚设。"""
+    _write_snapshot(tmp_path, age_hours=48)
+    code, calls = _run_notify_main(
+        monkeypatch, ["--mode", "stale", "--data-dir", str(tmp_path), "--max-age-hours", "6"]
+    )
+    assert calls == 1, "数据陈旧却不推送，告警失去意义"
+    assert code == 0, "内嵌使用（不带 --fail-when-stale）不应把成功运行判失败"
+
+
+def test_stale_watchdog_still_exits_nonzero(monkeypatch, tmp_path):
+    """独立看门狗带 --fail-when-stale：既推送，也让运行标红。"""
+    _write_snapshot(tmp_path, age_hours=48)
+    code, calls = _run_notify_main(
+        monkeypatch,
+        [
+            "--mode", "stale", "--data-dir", str(tmp_path),
+            "--max-age-hours", "12", "--fail-when-stale",
+        ],
+    )
+    assert calls == 1
+    assert code == 1, "看门狗必须让运行失败才能被发现"
+
+
+def test_ci_mode_sends_nothing_when_status_is_success(monkeypatch, tmp_path):
+    """`--status success` 属于误用：不该变成一条噪音。"""
+    _write_snapshot(tmp_path, age_hours=0.5)
+    code, calls = _run_notify_main(
+        monkeypatch, ["--mode", "ci", "--status", "success", "--data-dir", str(tmp_path)]
+    )
+    assert calls == 0
+    assert code == 0
+
+
+def test_ci_mode_sends_on_every_abnormal_status(monkeypatch, tmp_path):
+    """failure / cancelled / timed_out —— 这些才是该推送的异常。"""
+    _write_snapshot(tmp_path, age_hours=0.5)
+    for status in ("failure", "cancelled", "timed_out"):
+        _code, calls = _run_notify_main(
+            monkeypatch, ["--mode", "ci", "--status", status, "--data-dir", str(tmp_path)]
+        )
+        assert calls == 1, f"{status} 属于异常，必须推送"
+
+
 def test_trend_history_prune_drops_unusable_dates():
     """趋势历史里日期不可解析的条目同样必须剔除。
 

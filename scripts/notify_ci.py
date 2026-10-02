@@ -14,6 +14,12 @@ require different responses:
    every source fetch fails, when the runner is starved of time, or when an upstream
    API silently degrades. The pipeline exits 0 in all of those cases.
 
+Both modes are **gated on an actual anomaly**. This matters more than it sounds:
+the update pipeline runs hourly, so an ungated "stale" check delivers one
+"data has not updated" message every hour even while the data is perfectly fresh.
+Alert noise like that trains people to ignore the channel, so the real outage gets
+ignored with it. A quiet hour must stay quiet.
+
 The script never raises on delivery failure: a notification that fails to send must
 not turn a successful pipeline run into a failed one.
 
@@ -229,6 +235,13 @@ def main() -> int:
 
     data_dir = Path(args.data_dir)
 
+    # ── 闸门一：ci 模式只在「非成功」时推送 ────────────────────────────────
+    # 正常由工作流的 `if: ${{ !success() }}` 保证，但这里再守一道：
+    # 显式传入 `--status success` 属于误用，不该变成一条噪音。
+    if args.mode == "ci" and args.status.strip().lower() == "success":
+        print("[notify] 运行结论为 success，无异常，跳过告警。")
+        return 0
+
     if args.mode == "ci":
         message = build_ci_message(args.status, data_dir, args.detail)
     else:
@@ -247,6 +260,18 @@ def main() -> int:
     # 要不要发消息。未配置 webhook 时仍应让看门狗运行标红，否则告警能力缺失
     # 本身也会变成静默故障。
     stale = args.mode == "stale" and _is_stale(data_dir, args.max_age_hours)
+
+    # ── 闸门二：stale 模式只在数据**确实**陈旧时推送 ──────────────────────
+    # 这里曾经是无条件发送：脚本算了 stale，却只拿它决定退出码，发送逻辑不看它。
+    # 于是更新流水线每小时运行一次，就每小时推一条「数据长时间未更新」，
+    # 而数据其实一直是新鲜的 —— 噪音淹没真正的异常。安静的一小时必须保持安静。
+    if args.mode == "stale" and not stale:
+        age = data_age_hours(data_dir)
+        age_text = f"{age:.1f} 小时" if age is not None else "未知（数据缺失）"
+        print(
+            f"[notify] 数据新鲜（{age_text} ≤ 阈值 {args.max_age_hours:.0f} 小时），无异常，跳过告警。"
+        )
+        return 0
 
     if not webhook_url:
         print("[notify] WEBHOOK_URL 未配置，跳过告警。")
