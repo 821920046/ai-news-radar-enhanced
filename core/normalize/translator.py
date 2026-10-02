@@ -372,16 +372,26 @@ def _ai_translate_enabled() -> bool:
 
 
 class _RouteCursor:
-    """(key, model) 路由游标：轮询取用 + 逐个淘汰 + 全局预算。
+    """(key, model) 路由游标：**错位扫描**轮询 + 定向淘汰 + 全局预算。
 
-    为什么需要「路由」这个概念：免费额度是**按账号**计的（key 维度），而单个模型
-    是否在线、是否被限流是**按模型**计的（model 维度）。只轮换其中一个，可用容量
-    就只有 max(keys, models)；两个都轮换才是 keys × models。
+    为什么需要「路由」这个概念：免费额度按**账号**计（key 轴），而模型是否在线、
+    是否被上游 provider 限流按**模型**计（model 轴）。只轮换其中一条轴，可用容量
+    就只有 max(keys, models)；两条轴都轮换才是 keys × models。
 
-    - 顺序为 **model 外层、key 内层**：连续两次尝试换 key，先把按账号计的免费额度
-      铺满（429 最常见的成因），所有 key 都撞墙后才换模型。
-    - 被淘汰的路由直接从队列移除，本轮不再重试，避免把时间花在已知无望的组合上。
-    - 提供墙上时钟预算：超出后 `available()` 立即转 False，上层停止 AI 阶段。
+    ⚠️ 顺序不能「先把同一个模型的所有 key 试完」，也不能只换 key。429 有两个
+    来源，方向相反：
+      - OpenRouter 平台限额（按 key）→ 该换 key；
+      - 上游 provider 限流/满载（按模型）→ 该换 model，同一模型的所有 key 都会被拒。
+    固定按某一轴优先，一旦猜错方向，整个池就浪费在注定失败的组合上。
+    实测 run 36964009801：按 model 优先，10 个 key 全撞在 qwen 一个模型上
+    （该模型上游 provider 当时正限流）→ AI 翻译 0 条、80 条全降级 Google。
+    错位扫描对两种失败都不敏感：**连续两次尝试的 key 和 model 都会变**，
+    任一条轴被淘汰，下一次尝试立刻换到另一条轴；同时覆盖全部 keys × models。
+
+    - 定向淘汰：平台限额淘汰 key、provider 限流淘汰 model、模型下线淘汰 model；
+      网络抖动/5xx 两条轴都不淘汰（一次失败不足以断言资源坏了）。
+    - 尝试次数上界 = keys × models，保证即使一条轴都没被淘汰也必然终止。
+    - 墙上时钟预算：超出后 `available()` 立即转 False，上层停止 AI 阶段。
     """
 
     def __init__(self, keys: list[str], models: list[str], budget_seconds: float):
@@ -392,23 +402,23 @@ class _RouteCursor:
         self.attempts = 0
         self.hard_failures = 0
         self._deadline = time.monotonic() + max(0.0, budget_seconds)
-        self._queue: list[tuple[str, str]] = []
-        self._rebuild()
 
-    def _rebuild(self) -> None:
-        self._queue = [
-            (key, model)
-            for model in self.models
-            if model not in self.dead_models
-            for key in self.keys
-            if key not in self.dead_keys
-        ]
+    def _live_keys(self) -> list[str]:
+        return [k for k in self.keys if k not in self.dead_keys]
+
+    def _live_models(self) -> list[str]:
+        return [m for m in self.models if m not in self.dead_models]
 
     def out_of_budget(self) -> bool:
         return time.monotonic() >= self._deadline
 
     def available(self) -> bool:
-        return bool(self._queue) and not self.out_of_budget()
+        return (
+            bool(self._live_keys())
+            and bool(self._live_models())
+            and self.attempts < self.total_routes
+            and not self.out_of_budget()
+        )
 
     @property
     def total_routes(self) -> int:
@@ -423,42 +433,75 @@ class _RouteCursor:
         return len(self.models) - len(self.dead_models)
 
     def next_route(self) -> tuple[str, str] | None:
+        """按**错位扫描**给出下一条 (key, model)。
+
+        枚举方式是「外层 model 偏移量 r，内层 key 下标 i」：
+            key   = live_keys[i]
+            model = live_models[(i + r) % M]
+        其中 i = attempts % K，r = (attempts // K) % M。
+
+        为什么不是「两条轴同时 +1」的朴素对角线：那种写法在环面上的周期是
+        lcm(K, M)，**不是** K × M —— 例如 2 key × 2 model 只走得到 2 个组合，
+        另外 2 个永远试不到。错位扫描对每个 i 遍历全部 M 个模型，覆盖完整的
+        K × M；同时因为 i 每步 +1，**连续两次尝试的 key 和 model 都会变**，
+        保留了「不把池浪费在注定失败的组合上」这一关键性质。
+        """
         if not self.available():
             return None
-        route = self._queue.pop(0)
+        live_keys = self._live_keys()
+        live_models = self._live_models()
+        k_count = len(live_keys)
+        m_count = len(live_models)
+        i = self.attempts % k_count
+        r = (self.attempts // k_count) % m_count
+        key = live_keys[i]
+        model = live_models[(i + r) % m_count]
         self.attempts += 1
-        return route
+        return key, model
 
-    def mark_key_exhausted(self, key: str) -> None:
-        """429/402/403：这个账号的免费额度本轮已用完 → 换 key。"""
+    def mark_key_exhausted(self, key: str, reason: str = "额度耗尽/被限流") -> None:
+        """OpenRouter **平台**限额（按 key）→ 这个账号本轮已用完 → 淘汰 key。
+
+        判据是响应**带** `X-RateLimit-*` 头：那是平台在按账号计数。
+        """
         if key in self.dead_keys:
             return
         self.dead_keys.add(key)
         self.hard_failures += 1
         masked = f"{key[:6]}...{key[-4:]}" if len(key) > 10 else "short-key"
         logger.warning(
-            "[AI Route] key %s 额度耗尽/被限流，已淘汰（剩余 key %d/%d）",
-            masked, self.live_keys, len(self.keys),
+            "[AI Route] key %s %s，已淘汰（剩余 key %d/%d）",
+            masked, reason, self.live_keys, len(self.keys),
         )
-        self._rebuild()
 
-    def mark_model_dead(self, model: str) -> None:
-        """400/404：模型名不存在或已下线 → 换模型。"""
+    def mark_model_dead(
+        self, model: str, reason: str = "模型不可用（HTTP 400/404）", *, retired: bool = True
+    ) -> None:
+        """把**这个模型**从本轮路由池中淘汰（而不是换 key）。两种情形共用：
+
+          - 400/404（`retired=True`）：模型名不存在或已被上游撤下 —— 这个模型
+            对**所有**消费方都无效，同步给 `core.utils._DEAD_MODELS`；
+          - 429 但**不带** `X-RateLimit-*` 头（`retired=False`）：上游 provider
+            限流/满载，这是**按模型**计的 —— 同一模型换任何 key 都会被拒，换 key
+            纯属浪费。但它只是**这一轮暂时**不可用，模型本身没坏，故**不**同步给
+            全局注册表，以免连带压制 notifier / analyst_agent 对该模型的使用。
+        """
         if model in self.dead_models:
             return
         self.dead_models.add(model)
         self.hard_failures += 1
         logger.warning(
-            "[AI Route] 模型 %s 不可用（HTTP 400/404），已淘汰（剩余模型 %d/%d）",
-            model, self.live_models, len(self.models),
+            "[AI Route] 模型 %s %s，已淘汰（剩余模型 %d/%d）",
+            model, reason, self.live_models, len(self.models),
         )
+        if not retired:
+            return
         try:
             from core.utils import mark_model_dead as _mark_dead
 
             _mark_dead(model)  # 同步给其他消费方（notifier / analyst_agent）
         except Exception:
             pass
-        self._rebuild()
 
     def summary(self) -> str:
         return (
@@ -472,16 +515,27 @@ def _apply_route_outcome(
 ) -> None:
     """把一次请求的结构化失败原因翻译成路由池的淘汰动作。
 
-    关键区别：
-      - key_exhausted（429/402/403）→ 淘汰**这个账号**，换 key 就可能恢复；
+    关键区别（这是「多账号池形同虚设」的根因，务必分清）：
+      - key_exhausted（429/402/403 且**带** X-RateLimit-* 头）→ OpenRouter 平台
+        按**账号**计的限额用完了 → 淘汰这个 key，换 key 就能恢复；
+      - provider_rate_limited（429 但**不带** X-RateLimit-* 头）→ 上游 provider
+        按**模型**计的限流/满载 → 淘汰这个 model，换 key 无用（所有 key 都会被拒）；
       - model_error（400/404）      → 淘汰**这个模型**，换模型就可能恢复；
       - 其余（网络抖动 / 5xx / 空内容 / 解析失败）→ 两维都不淘汰，
         因为一次失败不足以断言「这个 key 或这个模型坏了」。它们由单批尝试次数
         上限和全局预算兜住，不会无限重试。
+
+    实测 run 36964009801：429 响应不带 X-RateLimit-* 头，即上游 provider 限流；
+    而当时顺序是「model 外层 / key 内层」，10 个账号全撞在同一个模型上 →
+    AI 翻译 0 条。故此处必须把两个来源分开，否则淘汰方向会完全相反。
     """
     status = str(outcome.get("status") or "")
     if status == "key_exhausted":
         cursor.mark_key_exhausted(api_key)
+    elif status == "provider_rate_limited":
+        cursor.mark_model_dead(
+            model, reason="被上游 provider 限流/满载（429 无平台限额头）", retired=False
+        )
     elif status == "model_error":
         cursor.mark_model_dead(model)
 
@@ -581,21 +635,36 @@ def _openrouter_post(
         return content
 
     if resp.status_code in {402, 403, 429}:
-        # 免费模型上的 429 几乎总是「这个账号今天的免费额度用完了」→ 换 key。
-        #
-        # 但**不能只靠猜**：OpenRouter 文档说明，平台级限额触发的 429 会带上
-        # X-RateLimit-Limit / -Remaining / -Reset，provider 侧的还会带 Retry-After。
-        # 把这三个数记下来，「为什么全是 429」才有答案 —— 是每日额度用完了
-        # （reset 在次日）还是每分钟限额（reset 只有几秒），两者的处置完全不同。
+        # 429 有**两个来源，处置方向相反**，必须先分清再决定淘汰哪一维：
+        #   (a) OpenRouter 平台限额（按 key）：响应带 X-RateLimit-Limit/-Remaining/-Reset
+        #       → 这个账号今天的免费额度用完了 → 换 key。
+        #   (b) 上游 provider 限流/满载（按 model）：响应**不带**这些头（可能带 Retry-After）
+        #       → 同一个模型换任何 key 都会被拒 → 换 model，换 key 是浪费。
+        # 判据只能是「响应头是否存在」。实测 run 36964009801 的 429 就不带
+        # X-RateLimit-* 头 —— 若仍按 (a) 处理，10 个账号会全撞在同一个模型上。
         limit_info: dict[str, Any] = {}
         resp_headers = getattr(resp, "headers", None) or {}
         for name in ("X-RateLimit-Limit", "X-RateLimit-Remaining", "X-RateLimit-Reset", "Retry-After"):
             value = resp_headers.get(name)
             if isinstance(value, str) and value:
                 limit_info[name] = value
+
+        platform_limited = bool(limit_info.get("X-RateLimit-Limit")) or bool(
+            limit_info.get("X-RateLimit-Remaining")
+        )
+        if resp.status_code == 429 and not platform_limited:
+            _record("provider_rate_limited", http=429, **limit_info)
+            logger.warning(
+                "[AI Translate] 模型 %s 被**上游 provider** 限流/满载（HTTP 429，"
+                "响应无 X-RateLimit-* 头%s），换下一个**模型**",
+                model,
+                "；" + str(limit_info) if limit_info else "",
+            )
+            return None
+
         _record("key_exhausted", http=resp.status_code, **limit_info)
         logger.warning(
-            "[AI Translate] 模型 %s 被限流/额度不足（HTTP %d）%s，换下一个 key",
+            "[AI Translate] 模型 %s 被平台限流/额度不足（HTTP %d）%s，换下一个 key",
             model,
             resp.status_code,
             "；平台限额 " + str(limit_info) if limit_info else "（响应未带 X-RateLimit-* 头）",

@@ -83,6 +83,29 @@ def _err(status: int, text: str = "", headers: dict | None = None) -> MagicMock:
     return resp
 
 
+# 429 有**两个来源**，处置方向完全相反，判据只能是响应头是否存在。
+# 这两组替身把两种来源区分开，是「淘汰 key 还是淘汰 model」的唯一依据。
+_PLATFORM_LIMIT_HEADERS = {
+    "X-RateLimit-Limit": "20",
+    "X-RateLimit-Remaining": "0",
+    "X-RateLimit-Reset": "7",
+}
+
+
+def _platform_429(text: str = "rate limited") -> MagicMock:
+    """OpenRouter **平台**限额（按 key）：带 X-RateLimit-* → 该换 key。"""
+    return _err(429, text, headers=_PLATFORM_LIMIT_HEADERS)
+
+
+def _provider_429(text: str = "upstream provider saturated") -> MagicMock:
+    """**上游 provider** 限流（按 model）：无 X-RateLimit-* → 该换 model。
+
+    实测 run 36964009801 的 429 就长这样。旧代码把它当成平台限额 → 换 key，
+    于是 10 个账号全撞在同一个被限流的模型上 → AI 翻译 0 条。
+    """
+    return _err(429, text)
+
+
 def _batch_reply(count: int, prefix: str = "译文") -> str:
     """按约定的「编号. 译文」格式生成批量翻译结果。"""
     return "\n".join(f"{i + 1}. {prefix}{i + 1}" for i in range(count))
@@ -186,22 +209,44 @@ class ModelChainConfigurationTests(unittest.TestCase):
 
 
 class RouteCursorTests(unittest.TestCase):
-    def test_order_is_model_major_key_minor(self):
-        """连续两次尝试必须换 key —— 429 是按账号计的，先把账号铺满。"""
-        cursor = _RouteCursor(["k1", "k2", "k3"], ["m1", "m2"], 60)
+    def test_consecutive_attempts_change_both_key_and_model(self):
+        """核心性质：连续两次尝试必须**同时**换 key 和换 model。
+
+        这是「不把池浪费在注定失败的组合上」的保证。旧的 model-major 顺序
+        （先把同一个模型的所有 key 试完）在 run 36964009801 里让 10 个账号
+        全撞在被上游限流的同一个模型上 → AI 翻译 0 条。
+        """
+        cursor = _RouteCursor(["k1", "k2", "k3"], ["m1", "m2", "m3"], 60)
+        routes = [cursor.next_route() for _ in range(6)]
+        for prev, nxt in zip(routes, routes[1:]):
+            self.assertNotEqual(prev[0], nxt[0], f"key 没换：{prev} → {nxt}")
+            self.assertNotEqual(prev[1], nxt[1], f"model 没换：{prev} → {nxt}")
+
+    def test_order_is_a_shifted_sweep(self):
+        """错位扫描：外层 model 偏移量、内层 key 下标。"""
+        cursor = _RouteCursor(["k1", "k2"], ["m1", "m2"], 60)
         self.assertEqual(
             [cursor.next_route() for _ in range(4)],
-            [("k1", "m1"), ("k2", "m1"), ("k3", "m1"), ("k1", "m2")],
+            [("k1", "m1"), ("k2", "m2"), ("k1", "m2"), ("k2", "m1")],
         )
 
     def test_capacity_is_keys_times_models(self):
+        """覆盖必须是完整的 K × M —— 朴素对角线只有 lcm(K, M) 个互异组合。"""
         cursor = _RouteCursor(["k1", "k2"], ["m1", "m2", "m3"], 60)
         self.assertEqual(cursor.total_routes, 6)
         taken = []
         while (route := cursor.next_route()) is not None:
             taken.append(route)
         self.assertEqual(len(taken), 6)
-        self.assertEqual(len(set(taken)), 6)
+        self.assertEqual(len(set(taken)), 6, "2 key × 3 model 必须走出 6 个互异组合")
+
+    def test_small_pool_still_covers_every_combination(self):
+        """2×2 是朴素对角线的反例（周期 lcm(2,2)=2）—— 这里必须走满 4 个。"""
+        cursor = _RouteCursor(["k1", "k2"], ["m1", "m2"], 60)
+        taken = []
+        while (route := cursor.next_route()) is not None:
+            taken.append(route)
+        self.assertEqual(len(set(taken)), 4)
 
     def test_key_exhaustion_removes_every_route_using_that_key(self):
         cursor = _RouteCursor(["k1", "k2"], ["m1", "m2"], 60)
@@ -209,7 +254,9 @@ class RouteCursorTests(unittest.TestCase):
         taken = []
         while (route := cursor.next_route()) is not None:
             taken.append(route)
-        self.assertEqual(taken, [("k2", "m1"), ("k2", "m2")])
+        self.assertTrue(taken, "还有 k2 可用，不该一条路由都给不出来")
+        self.assertEqual({k for k, _ in taken}, {"k2"}, "k1 已被淘汰，不该再出现")
+        self.assertEqual({m for _, m in taken}, {"m1", "m2"}, "两个模型都该被试到")
         self.assertEqual(cursor.live_keys, 1)
 
     def test_model_death_removes_every_route_using_that_model(self):
@@ -218,13 +265,38 @@ class RouteCursorTests(unittest.TestCase):
         taken = []
         while (route := cursor.next_route()) is not None:
             taken.append(route)
-        self.assertEqual(taken, [("k1", "m2"), ("k2", "m2")])
+        self.assertTrue(taken)
+        self.assertEqual({m for _, m in taken}, {"m2"}, "m1 已被淘汰，不该再出现")
+        self.assertEqual({k for k, _ in taken}, {"k1", "k2"}, "两个 key 都该被试到")
         self.assertEqual(cursor.live_models, 1)
+
+    def test_retired_model_is_synced_to_the_global_registry(self):
+        """400/404 = 模型名无效 → 其他消费方（notifier）也不该再用它。"""
+        cursor = _RouteCursor(["k1"], ["m1", "m2"], 60)
+        cursor.mark_model_dead("m1", retired=True)
+        self.assertIn("m1", _utils._DEAD_MODELS)
+
+    def test_provider_rate_limited_model_is_not_globally_blacklisted(self):
+        """provider 限流只是**这一轮**不可用，模型本身没坏。
+
+        若同步给全局注册表，会连带压制 notifier / analyst_agent 对该模型的使用 ——
+        把「暂时忙」误报成「已下线」，正是「把未知伪装成已知」的老毛病。
+        """
+        cursor = _RouteCursor(["k1"], ["m1", "m2"], 60)
+        cursor.mark_model_dead("m1", reason="provider busy", retired=False)
+        self.assertIn("m1", cursor.dead_models, "本轮路由池里必须被淘汰")
+        self.assertNotIn("m1", _utils._DEAD_MODELS, "但不该进全局黑名单")
 
     def test_pool_is_empty_when_all_keys_are_exhausted(self):
         cursor = _RouteCursor(["k1", "k2"], ["m1", "m2"], 60)
         cursor.mark_key_exhausted("k1")
         cursor.mark_key_exhausted("k2")
+        self.assertFalse(cursor.available())
+        self.assertIsNone(cursor.next_route())
+
+    def test_pool_is_empty_when_all_models_are_dead(self):
+        cursor = _RouteCursor(["k1", "k2"], ["m1"], 60)
+        cursor.mark_model_dead("m1")
         self.assertFalse(cursor.available())
         self.assertIsNone(cursor.next_route())
 
@@ -256,9 +328,10 @@ class FailureAttributionTests(unittest.TestCase):
         reset_circuit_breaker()
         reset_google_circuit_breaker()
 
-    def test_429_marks_key_exhausted_but_not_model(self):
+    def test_platform_429_marks_key_exhausted_but_not_model(self):
+        """带 X-RateLimit-* 的 429 = 平台按账号计的限额 → 只淘汰 key。"""
         cursor = _RouteCursor(["k1", "k2"], ["m1"], 60)
-        session = _session([_err(429)])
+        session = _session([_platform_429()])
         with patch.object(T, "_openrouter_session", return_value=session):
             outcome: dict = {}
             _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
@@ -268,6 +341,23 @@ class FailureAttributionTests(unittest.TestCase):
         self.assertEqual(cursor.dead_models, set())
         self.assertTrue(cursor.available(), "还有 k2 可用，池不该被判死")
 
+    def test_provider_429_marks_model_dead_but_not_key(self):
+        """不带 X-RateLimit-* 的 429 = 上游 provider 按模型限流 → 只淘汰 model。
+
+        换 key 无用：同一模型对任何账号都会被上游拒。旧代码在这里换 key，
+        于是 10 个账号全浪费在同一个被限流的模型上（run 36964009801）。
+        """
+        cursor = _RouteCursor(["k1", "k2"], ["m1", "m2"], 60)
+        session = _session([_provider_429()])
+        with patch.object(T, "_openrouter_session", return_value=session):
+            outcome: dict = {}
+            _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
+        self.assertEqual(outcome["status"], "provider_rate_limited")
+        T._apply_route_outcome(cursor, "k1", "m1", outcome)
+        self.assertEqual(cursor.dead_models, {"m1"}, "该淘汰模型")
+        self.assertEqual(cursor.dead_keys, set(), "key 没问题，不该淘汰")
+        self.assertTrue(cursor.available(), "还有 m2 可用")
+
     def test_429_records_the_platform_limit_headers(self):
         """429 必须把 X-RateLimit-* 记下来。
 
@@ -275,14 +365,7 @@ class FailureAttributionTests(unittest.TestCase):
         前者要等次日、要充值；后者只要放慢节奏。实测 10 个账号各剩 50/50
         日额度却全部 429，正是靠这个区分才能定位。
         """
-        session = _session([
-            _err(429, "rate limited", headers={
-                "X-RateLimit-Limit": "20",
-                "X-RateLimit-Remaining": "0",
-                "X-RateLimit-Reset": "7",
-                "Retry-After": "7",
-            })
-        ])
+        session = _session([_platform_429()])
         with patch.object(T, "_openrouter_session", return_value=session):
             outcome: dict = {}
             _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
@@ -290,15 +373,24 @@ class FailureAttributionTests(unittest.TestCase):
         self.assertEqual(outcome["X-RateLimit-Limit"], "20")
         self.assertEqual(outcome["X-RateLimit-Remaining"], "0")
         self.assertEqual(outcome["X-RateLimit-Reset"], "7")
-        self.assertEqual(outcome["Retry-After"], "7")
 
-    def test_429_without_limit_headers_still_reports_the_status(self):
-        session = _session([_err(429)])
+    def test_429_without_limit_headers_is_attributed_to_the_provider(self):
+        """没有 X-RateLimit-* 头就不能猜成平台限额 —— 猜错方向等于废掉整个池。"""
+        session = _session([_provider_429()])
         with patch.object(T, "_openrouter_session", return_value=session):
             outcome: dict = {}
             _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
-        self.assertEqual(outcome["status"], "key_exhausted")
+        self.assertEqual(outcome["status"], "provider_rate_limited")
         self.assertNotIn("X-RateLimit-Limit", outcome)
+
+    def test_429_with_only_retry_after_is_attributed_to_the_provider(self):
+        """Retry-After 是 provider 侧的信号，单独出现也算上游限流。"""
+        session = _session([_err(429, "slow down", headers={"Retry-After": "12"})])
+        with patch.object(T, "_openrouter_session", return_value=session):
+            outcome: dict = {}
+            _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
+        self.assertEqual(outcome["status"], "provider_rate_limited")
+        self.assertEqual(outcome["Retry-After"], "12")
 
     def test_404_marks_model_dead_but_not_key(self):
         cursor = _RouteCursor(["k1"], ["m1", "m2"], 60)
@@ -423,24 +515,48 @@ class KeyPoolActuallyWorksTests(unittest.TestCase):
         """核心回归：前 4 个 key 都被限流，第 5 个仍然要把活干完。
 
         旧逻辑在第 3 次失败时全局熔断 → AI 翻译 0 条。这正是线上看到的现象。
+        这里用**平台限额**（带 X-RateLimit-* 头）的 429：账号级限额，换 key 有用。
         """
         keys = [f"key-{i}" for i in range(1, 6)]
-        session = _session([_err(429)] * 4 + [_ok(_batch_reply(8))])
+        session = _session([_platform_429()] * 4 + [_ok(_batch_reply(8))])
         ai_out, _all_out, cache = self._run(session, _items(8), keys, ["m1"])
 
         self.assertFalse(_is_circuit_broken(), "还有可用 key，不该熔断")
         self.assertEqual(len(cache), 8, "8 条标题都应该被 AI 翻译出来")
-        self.assertEqual(session.post.call_count, 5, "应该正好试到第 5 个 key")
+        self.assertEqual(session.post.call_count, 5, "5 个 key 都被试到才拿到结果")
+        self.assertEqual(len(set(_keys_used(session))), 5, "5 个账号都该真的被用到")
         for item in ai_out:
             self.assertIn(" / ", item["title_bilingual"])
 
-    def test_429_rotates_keys_within_the_same_model(self):
-        """429 是账号级的：同一个模型要换个账号继续试，而不是换模型。"""
-        session = _session([_err(429), _err(429), _ok(_batch_reply(3))])
+    def test_platform_429_works_through_the_key_pool(self):
+        """平台 429 是账号级的 → 逐个账号试过去，池子没被判死。
+
+        注意：错位扫描在 key 级失败时**也会**顺带换模型（因为下标每步 +1）。
+        这是刻意为之 —— 轮询不假设「哪一维才是坏的」，只保证连续两次尝试
+        两条轴都变；模型本身健康，被顺带用上是无害的。
+        真正要钉住的是：3 个账号都被**真的**用上、且池没被提前判死。
+        """
+        session = _session([_platform_429(), _platform_429(), _ok(_batch_reply(3))])
+        _ai_out, _all_out, cache = self._run(
+            session, _items(3), ["k1", "k2", "k3"], ["m1", "m2"]
+        )
+
+        self.assertEqual(session.post.call_count, 3)
+        self.assertEqual(len(set(_keys_used(session))), 3, "三个账号都该被试到")
+        self.assertEqual(len(cache), 3, "第 3 个账号必须把活干完")
+        self.assertFalse(_is_circuit_broken(), "还有账号没试完，不该熔断")
+
+    def test_provider_429_rotates_models_without_burning_every_key(self):
+        """上游 provider 限流是模型级的：换 key 没用，必须换模型。
+
+        旧代码把这类 429 当成账号限额 → 3 个账号会逐个撞在同一个被限流的模型上
+        全部报废（run 36964009801 的 AI 翻译 0 条）。现在第二次就换模型并成功。
+        """
+        session = _session([_provider_429(), _ok(_batch_reply(3))])
         self._run(session, _items(3), ["k1", "k2", "k3"], ["m1", "m2"])
 
-        self.assertEqual(_keys_used(session), ["k1", "k2", "k3"])
-        self.assertEqual(set(_models_used(session)), {"m1"}, "key 还有剩就不该换模型")
+        self.assertEqual(_models_used(session), ["m1", "m2"], "被限流的模型只试一次就换")
+        self.assertEqual(session.post.call_count, 2, "换模型即可恢复，不该把 3 个账号全烧掉")
 
     def test_404_rotates_models_within_the_same_key(self):
         """404 是模型级的：换个模型继续用同一个账号。"""
@@ -451,7 +567,7 @@ class KeyPoolActuallyWorksTests(unittest.TestCase):
         self.assertEqual(set(_keys_used(session)), {"k1"})
 
     def test_breaker_trips_when_every_key_is_exhausted(self):
-        session = _session([_err(429)] * 2)
+        session = _session([_platform_429()] * 2)
         ai_out, _all_out, cache = self._run(session, _items(2), ["k1", "k2"], ["m1", "m2"])
 
         self.assertEqual(session.post.call_count, 2, "两个 key 各试一次就都没了")
@@ -459,6 +575,15 @@ class KeyPoolActuallyWorksTests(unittest.TestCase):
         self.assertEqual(cache, {})
         for item in ai_out:
             self.assertEqual(item["title_bilingual"], item["title"], "降级为英文原标题")
+
+    def test_breaker_trips_when_every_model_is_rate_limited(self):
+        """所有模型都被上游限流 → 池空 → 熔断，而不是死循环重试。"""
+        session = _session([_provider_429()] * 2)
+        ai_out, _all_out, cache = self._run(session, _items(2), ["k1", "k2"], ["m1", "m2"])
+
+        self.assertEqual(session.post.call_count, 2, "两个模型各试一次就都没了")
+        self.assertTrue(_is_circuit_broken())
+        self.assertEqual(cache, {})
 
     def test_every_route_is_consumed_before_giving_up(self):
         """503 不淘汰任何一维 → 四条路由应该被逐条试完，而不是试 3 次就熔断。"""
@@ -472,7 +597,7 @@ class KeyPoolActuallyWorksTests(unittest.TestCase):
 
     def test_failed_titles_are_retried_on_a_fresh_route(self):
         """第一批全军覆没后，失败的标题要退回队列换新路由，不能被丢掉。"""
-        session = _session([_err(429), _ok(_batch_reply(8))])
+        session = _session([_platform_429(), _ok(_batch_reply(8))])
         _ai_out, _all_out, cache = self._run(session, _items(8), ["k1", "k2"], ["m1"])
         self.assertEqual(len(cache), 8)
 
