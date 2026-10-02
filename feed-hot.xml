@@ -5,61 +5,76 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 01 Oct 2026 15:31:06 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 02:21:55 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>OpenAI DevDay 发布智能体 Dots，正面竞争 Meta 的免费方案 Muse</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle</guid>
-      <pubDate>Thu, 01 Oct 2026 14:36:50 +0000</pubDate>
-      <description>OpenAI、Meta：At OpenAI&apos;s annual DevDay conference, the company pulled o...，适合关注自动化任务和多 Agent 协作演进。
-
-At OpenAI&apos;s annual DevDay conference, the company pulled out all the stops to compete with its rivals - primarily Meta, whose Muse AI agent platform has seen early runaway success. CEO Sam Altman...
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>NVIDIA AI 工厂如何实现高投资回报：高产出、长寿命、通用性</title>
+      <title>NVIDIA AI 工厂如何实现高产出、长寿命与通用性以最大化投资回报</title>
       <link>https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories</link>
       <guid isPermaLink="true">https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories</guid>
       <pubDate>Thu, 01 Oct 2026 13:00:49 +0000</pubDate>
-      <description>NVIDIA：AI factories are built by the megawatt, even by the gigawa...，适合判断资金、客户和生态格局的变化。
+      <description>NVIDIA：AI factories are built by the megawatt, even by the gigawa...，适合优先评估模型能力、价格和工具选型变化。
 
 AI factories are built by the megawatt, even by the gigawatt. Each megawatt factory costs roughly $60 million, and AI factory operators will only commit capital on that scale with a clear view of the...
 
+信号等级 B · 评分 68.5</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Graphite 研究：Claude Opus 5.5 爱说 this matters，GPT 模型离人类用词分布更远</title>
+      <link>https://techcrunch.com/2026/10/01/opus-5-5-loves-to-tell-you-this-matters-and-other-ai-writing-tells</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/01/opus-5-5-loves-to-tell-you-this-matters-and-other-ai-writing-tells</guid>
+      <pubDate>Thu, 01 Oct 2026 17:50:19 +0000</pubDate>
+      <description>Claude、GPT：Opus 5.5’s biggest tell is the word “dependable,” which po...，适合优先评估模型能力、价格和工具选型变化。
+
+Opus 5.5’s biggest tell is the word “dependable,” which pops up 23 times more often than in human samples.
+
+信号等级 B · 评分 67.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Latent Space 访谈 MIT 博士生 Alex Zhang：RLM、harness 设计与研究品味</title>
+      <link>https://www.latent.space/p/rlm</link>
+      <guid isPermaLink="true">https://www.latent.space/p/rlm</guid>
+      <pubDate>Fri, 02 Oct 2026 00:28:04 +0000</pubDate>
+      <description>Latent Space 访谈 MIT...：We catch up with RLM first author Alex Zhang, MIT PhD, on...，适合判断技术路线和后续产品化可能性。
+
+We catch up with RLM first author Alex Zhang, MIT PhD, on Jev, PhD masxing, and the future of harnesses.
+
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
-      <category>行业动态</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>Photon 为移动应用办葬礼后获 450 万美元种子轮，用智能体取代 App</title>
-      <link>https://techcrunch.com/2026/10/01/photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-help-replace-them-with-agents</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/01/photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-help-replace-them-with-agents</guid>
-      <pubDate>Thu, 01 Oct 2026 14:00:00 +0000</pubDate>
-      <description>Photon 为移动应用办葬礼后获 45...：The startup helps developers build AI agents that work ove...，适合关注自动化任务和多 Agent 协作演进。
+      <title>NVIDIA 介绍 Blackwell GPU 如何加速 OpenAI GPT-6 Astra Ultrafast</title>
+      <link>https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast</link>
+      <guid isPermaLink="true">https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast</guid>
+      <pubDate>Thu, 01 Oct 2026 23:44:13 +0000</pubDate>
+      <description>NVIDIA、OpenAI：GPT-6 Astra Ultrafast, running on NVIDIA Blackwell GPUs, i...，适合优先评估模型能力、价格和工具选型变化。
 
-The startup helps developers build AI agents that work over iMessage, SMS/RCS, email, and other messaging platforms. It&apos;s a bet that consumers will increasingly use agents instead of downloading apps.
+GPT-6 Astra Ultrafast, running on NVIDIA Blackwell GPUs, is available now in the OpenAI API and to eligible ChatGPT Work and Codex users. Accelerated by inference optimizations through OpenAI’s...
 
-信号等级 B · 评分 65.0</description>
+信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>行业动态</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+      <category>部署推理</category>
     </item>
     <item>
-      <title>前 Google 与 SpaceX 产品经理创办的 Satlyt 融资 800 万美元，在卫星上运行 AI</title>
-      <link>https://techcrunch.com/2026/10/01/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/01/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites</guid>
-      <pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
-      <description>Google：Satlyt wants to be the Android of orbital computing, offer...，适合判断资金、客户和生态格局的变化。
+      <title>Time 报道称 Grok 曾向特朗普建议抓捕委内瑞拉总统马杜罗</title>
+      <link>https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president</guid>
+      <pubDate>Thu, 01 Oct 2026 21:08:11 +0000</pubDate>
+      <description>Time 报道称 Grok 曾向特朗普建...：President Trump reportedly asked for Grok&apos;s opinion before...，适合优先评估模型能力、价格和工具选型变化。
 
-Satlyt wants to be the Android of orbital computing, offering open software that works on many companies&apos; satellites, versus SpaceX&apos;s closed, all-in-one iPhone-style approach.
+President Trump reportedly asked for Grok&apos;s opinion before invading Venezuela and capturing Nicolás Maduro.
 
-信号等级 B · 评分 65.0</description>
+信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
-      <category>行业动态</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>AREX-2：通过长期反思任务推进自我改进代理</title>
@@ -670,19 +685,6 @@ arXiv:2609.38884v1 Announce Type: cross Abstract: Optimization modeling formulat
       <description>Learning Continuous...：arXiv:2609.38893v1 Announce Type: cross Abstract: A stocha...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2609.38893v1 Announce Type: cross Abstract: A stochastic hybrid system (SHS) is governed by a stochastic differential equation (SDE) describing the continuous dynamics and a Markov reset kernel...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Loop-Free Inverse Reinforcement Learning via Sequential Value Recovery with Q-Score Matching</title>
-      <link>https://arxiv.org/abs/2609.38955</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.38955</guid>
-      <pubDate>Thu, 01 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Loop-Free Inverse Re...：arXiv:2609.38955v1 Announce Type: cross Abstract: Inverse...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2609.38955v1 Announce Type: cross Abstract: Inverse Reinforcement Learning (IRL) aims to recover a reward function that explains expert demonstrations. Existing IRL methods typically rely on a...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
