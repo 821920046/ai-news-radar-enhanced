@@ -459,7 +459,17 @@ def main() -> int:
     cfg = _load_sources_config()
     pipeline_cfg = cfg.get("pipeline", {})
     
-    # 动态将 yaml 中的默认模型写入环境变量以供全局使用
+    # 动态将 yaml 中的模型链写入环境变量以供全局使用。
+    # 顺序很关键：OPENROUTER_MODELS（链）优先于 OPENROUTER_MODEL（单个），
+    # 见 core.utils.get_model_chain()。只写入「未被外部显式设置」的那一个，
+    # 这样 CI 上的 secrets 仍能覆盖 yaml。
+    models_cfg = cfg.get("openrouter_models")
+    if models_cfg and not os.environ.get("OPENROUTER_MODELS"):
+        if isinstance(models_cfg, str):
+            models_cfg = [p.strip() for p in models_cfg.split(",") if p.strip()]
+        chain = [str(m).strip() for m in models_cfg if str(m).strip()]
+        if chain:
+            os.environ["OPENROUTER_MODELS"] = ",".join(chain)
     default_model = cfg.get("openrouter_default_model")
     if default_model and not os.environ.get("OPENROUTER_MODEL"):
         os.environ["OPENROUTER_MODEL"] = str(default_model)

@@ -40,6 +40,40 @@ jobs:
       - name: Run tests
         run: python -m pytest tests/ -v --tb=short
 
+      # ── 校验 OpenRouter 免费模型是否仍在线 ───────────────────────────────
+      # OpenRouter 会定期撤下 `:free` 变体（模型本体还在，只是不再免费）。撤下之后
+      # AI 翻译链路会**静默失效** —— 「模型不存在」和「额度耗尽」在日志里长得几乎一样。
+      # 实测 2026-10-02 发现内置模型链里的 5 个模型 `:free` 变体全部已下线，而流水线
+      # 一直在「正常」运行（AI 翻译 0 条，全部降级 Google）。
+      #
+      # 这里刻意**只告警、不阻断**：模型下线不该拖垮数据更新，但必须留下可见记录。
+      # 退出码 2（网络不通 / 查不了）单独标注 —— 绝不把「无法确定」当成「没问题」。
+      - name: Check OpenRouter model availability
+        continue-on-error: true
+        run: |
+          set +e
+          python scripts/check_openrouter_models.py --json > /tmp/or_models_check.json
+          CODE=$?
+          set -e
+          case "$CODE" in
+            0) echo "::notice::OpenRouter 模型链全部在线且免费" ;;
+            1)
+              python scripts/check_openrouter_models.py || true
+              echo "::warning::OpenRouter 模型链中有模型已下线或已不再免费，请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 与 config/*.yaml"
+              ;;
+            *)
+              echo "::warning::无法确认 OpenRouter 模型可用性（网络/接口异常）—— 这不代表配置没问题，只是「查不了」"
+              ;;
+          esac
+          if [ -s /tmp/or_models_check.json ]; then
+            {
+              echo "### OpenRouter 模型可用性（退出码 $CODE）"
+              echo '```json'
+              cat /tmp/or_models_check.json
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Prepare OPML (optional)
         env:
           FOLLOW_OPML_B64: ${{ secrets.FOLLOW_OPML_B64 }}

@@ -91,21 +91,26 @@ class CircuitBreakerTests(unittest.TestCase):
         self.assertEqual(item["description"], "This is a very long english description about AI breakthrough.")
 
     @patch("core.normalize.translator._google_session")
+    @patch("core.normalize.translator._openrouter_session")
     @patch("core.normalize.translator._get_openrouter_keys", return_value=["test-key-1"])
     @patch.dict("os.environ", {"AI_TRANSLATE_ENABLED": "true"})
-    def test_add_bilingual_fields_graceful_degradation_on_429(self, _mock_keys, mk_google_session):
-        """验证当遭遇连续 429 限流时，add_bilingual_fields 能自动熔断并降级。
+    def test_add_bilingual_fields_graceful_degradation_on_429(
+        self, _mock_keys, mk_openrouter_session, mk_google_session
+    ):
+        """验证当所有 key 都被 429 限流时，add_bilingual_fields 能熔断并优雅降级。
 
-        ⚠️ Google 兜底走**独立 session**（v3.2 引入，用于去掉继承来的 3 次重试），
-        所以 mock 主 session 的 `.get` 不再能拦到 Google 请求。必须直接 patch
-        `_google_session`，否则该用例会真的联网 —— 在能访问 translate.googleapis.com
-        的环境（如 GitHub Actions）会拿到真实译文，断言随之失败。
+        ⚠️ OpenRouter 走**独立 session**（v3.3 引入，用于去掉继承来的 3 次重试，
+        让 429 原样暴露给路由池），所以 mock 主 session 的 `.post` 不再能拦到请求。
+        必须直接 patch `_openrouter_session`，否则该用例会真的联网 —— 而
+        tests/conftest.py 的联网守卫会直接抛 RuntimeError。
         """
         mock_session = MagicMock(spec=requests.Session)
-        # 模拟每次调用都返回 429
+        # 模拟每次调用都返回 429（= 这个账号的免费额度用完了）
         mock_resp = MagicMock()
         mock_resp.status_code = 429
+        mock_resp.text = "rate limited"
         mock_session.post.return_value = mock_resp
+        mk_openrouter_session.return_value = mock_session
         # Google 也失败作为极端用例（独立 session，需单独 patch）
         mk_google_session.return_value.get.side_effect = requests.RequestException("google down")
 
@@ -118,7 +123,7 @@ class CircuitBreakerTests(unittest.TestCase):
 
         ai_out, all_out, new_cache = add_bilingual_fields(items_ai, items_all, mock_session, cache, max_new_translations=10)
 
-        # 验证已触发熔断
+        # 唯一的 key 被淘汰后无路可走 → 触发熔断
         self.assertTrue(_is_circuit_broken())
         # 数据不会丢失或崩溃，降级为原标题
         self.assertEqual(len(ai_out), 10)

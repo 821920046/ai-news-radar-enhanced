@@ -757,12 +757,28 @@ def atomic_write_text(file_path: Any, text: str, encoding: str = "utf-8") -> Non
 # 默认按「中文效果 / 速度 / 免费额度稳定性」综合排序的 OpenRouter 免费模型链。
 # 运行时按顺序尝试：前一个不可用 / 被限流 / 额度耗尽时自动回退到下一个。
 # 可用环境变量 OPENROUTER_MODELS（逗号分隔）覆盖，或 config/*.yaml 的 openrouter_models。
+#
+# ⚠️ 维护约定：OpenRouter 会**定期撤下** `:free` 变体（模型本体仍在，只是不再免费）。
+# 2026-10-02 核对 https://openrouter.ai/api/v1/models 发现，本清单原先的 5 个模型
+# （deepseek-chat-v3-0324 / qwen3-235b-a22b / glm-4.5-air / kimi-k2 / deepseek-r1）
+# 的 `:free` 变体**全部已下线**，仅剩付费版 —— 整条链路 100% 返回错误，却因为
+# 「找不到模型」和「没额度」在日志里都表现为一行 warning 而无人察觉。
+# 因此本清单**必须**定期用 `scripts/check_openrouter_models.py` 复核。
+#
+# 选型标准（针对本项目 EN→ZH 标题/摘要翻译 + TL;DR，短输出、要求严格按编号输出）：
+#   1) 中文生成质量（qwen 母语级最强；gemma 多语言稳）
+#   2) 指令跟随（能否稳定只输出译文、不解释、不包引号）
+#   3) 吞吐/延迟（MoE 激活参数小 = 快）
+#   4) 免费额度稳定性（大厂托管优先，避免 stealth / preview / 垂类模型）
+OPENROUTER_MODEL_CHAIN_VERIFIED_AT = "2026-10-02"
+
 DEFAULT_OPENROUTER_MODELS = [
-    "deepseek/deepseek-chat-v3-0324:free",  # DeepSeek V3：中文摘要/翻译综合最佳，速度快
-    "qwen/qwen3-235b-a22b:free",            # 通义千问3 235B：中文能力顶级
-    "z-ai/glm-4.5-air:free",                # 智谱 GLM-4.5-Air：中文强、轻量低延迟
-    "moonshotai/kimi-k2:free",             # 月之暗面 Kimi K2：中文长文本强
-    "deepseek/deepseek-r1:free",           # DeepSeek R1：推理兜底（较慢，放最后）
+    "qwen/qwen3.8-27b:free",                    # 通义千问：中文母语级，EN→ZH 最稳，27B 稠密
+    "google/gemma-4-31b-it:free",               # Gemma 4 31B：多语言强、指令跟随好（项目现役可用）
+    "nvidia/nemotron-3-super-120b-a12b:free",   # Nemotron 3 Super：120B MoE / 12B 激活，综合能力最强
+    "google/gemma-4-26b-a4b-it:free",           # Gemma 4 26B A4B：MoE，3.8B 激活 → 快，质量接近 31B
+    "nvidia/nemotron-3.5-lightning:free",       # Nemotron 3.5 Lightning：3B 激活 / 1M ctx，高吞吐兜底
+    "openrouter/free",                          # 官方「免费模型路由器」：最后一道兜底，自动挑一个可用免费模型
 ]
 
 # 本轮运行中被判定为不可用（HTTP 400/404，多为模型名错误/下线）的模型，跳过不再重试。
