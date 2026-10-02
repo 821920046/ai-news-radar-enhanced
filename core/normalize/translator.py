@@ -123,6 +123,10 @@ GOOGLE_MAX_WORKERS = 8
 AI_TRANSLATE_BUDGET_SECONDS = float(os.environ.get("AI_TRANSLATE_BUDGET_SECONDS") or 480)
 # 同一个批次最多换几条路由重试（1 = 不重试，直接交给 Google 兜底）
 MAX_ROUTE_TRIES_PER_BATCH = max(1, int(os.environ.get("AI_MAX_ROUTE_TRIES_PER_BATCH") or 3))
+# 同一个模型连续几次「200 但输出不可解析」后淘汰它。
+# 实测 run 36967871798：5 个模型全部不守输出约定，80 条路由烧掉 76 条（约 228 秒）
+# 却零产出。这类失败是**模型级**的（换 key 无用），必须能定向淘汰。
+UNPARSEABLE_LIMIT = max(1, int(os.environ.get("AI_UNPARSEABLE_LIMIT") or 2))
 # 单条 OpenRouter 请求超时（秒）
 OPENROUTER_TIMEOUT = int(os.environ.get("OPENROUTER_TIMEOUT") or 30)
 # 是否要求模型关闭思维链。翻译是纯转换任务，思维链既浪费 token 又可能把
@@ -408,6 +412,7 @@ class _RouteCursor:
         self.dead_models: set[str] = set()
         self.attempts = 0
         self.hard_failures = 0
+        self._unparseable: dict[str, int] = {}
         self._deadline = time.monotonic() + max(0.0, budget_seconds)
 
     def _live_keys(self) -> list[str]:
@@ -510,6 +515,27 @@ class _RouteCursor:
         except Exception:
             pass
 
+    def note_unparseable(self, model: str) -> bool:
+        """记录一次「HTTP 200 且内容非空，但一条译文都解析不出来」。
+
+        这是**模型级**属性（这个模型不会按约定格式输出），不是瞬时抖动 —— 换 key
+        无用，只有换模型才有意义。但一次不足以断言，故设阈值
+        `UNPARSEABLE_LIMIT`。达到阈值即淘汰该模型（`retired=False`：模型本身没坏，
+        只是不适合这个任务，不该进全局黑名单）。
+
+        为什么要专门处理：实测 run 36967871798 里 5 个模型全部输出不可解析，
+        80 条路由被烧掉 76 条（每条约 3 秒 ≈ 228 秒预算）却零产出。没有这层，
+        路由池就会被「注定失败的组合」吃掉。
+        """
+        count = self._unparseable.get(model, 0) + 1
+        self._unparseable[model] = count
+        if count < UNPARSEABLE_LIMIT:
+            return False
+        self.mark_model_dead(
+            model, reason=f"连续 {count} 次输出不符合「编号. 译文」约定", retired=False
+        )
+        return True
+
     def summary(self) -> str:
         return (
             f"尝试 {self.attempts}/{self.total_routes} 条路由，淘汰 {self.hard_failures} 次；"
@@ -528,6 +554,8 @@ def _apply_route_outcome(
       - provider_rate_limited（429 但**不带** X-RateLimit-* 头）→ 上游 provider
         按**模型**计的限流/满载 → 淘汰这个 model，换 key 无用（所有 key 都会被拒）；
       - model_error（400/404）      → 淘汰**这个模型**，换模型就可能恢复；
+      - unparseable / invalid_output（HTTP 200 但输出不符合约定）→ 达到阈值后淘汰
+        **这个模型**：换 key 无用（同一个模型换个账号照样不守格式）；
       - 其余（网络抖动 / 5xx / 空内容 / 解析失败）→ 两维都不淘汰，
         因为一次失败不足以断言「这个 key 或这个模型坏了」。它们由单批尝试次数
         上限和全局预算兜住，不会无限重试。
@@ -535,6 +563,9 @@ def _apply_route_outcome(
     实测 run 36964009801：429 响应不带 X-RateLimit-* 头，即上游 provider 限流；
     而当时顺序是「model 外层 / key 内层」，10 个账号全撞在同一个模型上 →
     AI 翻译 0 条。故此处必须把两个来源分开，否则淘汰方向会完全相反。
+
+    实测 run 36967871798：5 个模型全部「200 但输出不可解析」，80 条路由烧掉 76 条
+    却零产出、零日志。故新增 unparseable 归因。
     """
     status = str(outcome.get("status") or "")
     if status == "key_exhausted":
@@ -545,6 +576,8 @@ def _apply_route_outcome(
         )
     elif status == "model_error":
         cursor.mark_model_dead(model)
+    elif status in {"ok", "invalid_output"} and outcome.get("unparseable"):
+        cursor.note_unparseable(model)
 
 
 def _openrouter_post(
@@ -752,8 +785,10 @@ def _ai_translate_single(
         return content
 
     if outcome is not None and outcome.get("status") == "ok":
-        # 200 且非空，但输出里没有中文 → 判为无效输出，让上层换路由重试
+        # 200 且非空，但输出里没有中文 → 判为无效输出，让上层换路由重试。
+        # `unparseable` 与批量路径同名同义，供 `_apply_route_outcome` 做模型级淘汰。
         outcome["status"] = "invalid_output"
+        outcome["unparseable"] = 1
         logger.warning("[AI Translate] 模型 %s 输出不含中文，判为无效：%s", model, content[:80])
     return None
 
@@ -798,29 +833,104 @@ def _ai_translate_batch(
     )
     if content is None:
         return [None] * len(titles)
-    return _parse_batch_result(content, len(titles))
+
+    parsed = _parse_batch_result(content, len(titles))
+    missing = sum(1 for item in parsed if not item)
+    if missing:
+        # ⚠️ 这里以前是**完全静默**的：HTTP 200、内容非空，但一条都解析不出来时，
+        # 上层只看到 [None]*n，日志里一行痕迹都没有。实测 run 36967871798 因此
+        # 烧掉 76 条路由（占 80 条的 95%）而**零输出、零日志**，事后无法归因。
+        # 现在把原始输出留下 —— 「返回了什么」必须可观测。
+        logger.warning(
+            "[AI Translate] 模型 %s 返回了内容，但只解析出 %d/%d 条译文 —— 输出不符合"
+            "「编号. 译文」约定。原始输出（前 300 字符）：%s",
+            model, len(titles) - missing, len(titles), content[:300].replace("\n", "\\n"),
+        )
+    if outcome is not None:
+        # 只有**全军覆没**才算「这个模型不守输出约定」；部分命中说明它会按格式输出，
+        # 只是漏了几条 —— 那是抖动，不该用来淘汰模型。
+        wiped_out = missing == len(titles)
+        outcome["unparseable"] = len(titles) if wiped_out else 0
+        if wiped_out:
+            outcome["raw_head"] = content[:300]
+    return parsed
+
+
+# ---------------------------------------------------------------------------
+# 批量输出的解析（对「格式漂移」宽容，但绝不猜）
+# ---------------------------------------------------------------------------
+# 免费模型（尤其中文母语模型）经常出现这些无害的格式漂移，此前每一条都会让整批
+# 结果变成 None：
+#   - 全角编号/句点：`１． 译文`、`1． 译文`
+#   - markdown 强调与代码围栏：`**1. 译文**`、```1. 译文```
+#   - 行首列表符号：`- 1. 译文`、`> 1. 译文`
+#   - 漏掉编号：只输出四行译文
+_FULLWIDTH_TRANSLATION = str.maketrans("０１２３４５６７８９．：（）", "0123456789.:()")
+_LEADING_DECORATION = re.compile(r"^(?:[-*+>]\s+|#{1,6}\s+|\*{1,2}|_{1,2}|`{1,3})+")
+_TRAILING_DECORATION = re.compile(r"(?:\*{1,2}|_{1,2}|`{1,3})$")
+
+# 第一段：编号 + 标点分隔符（约定格式）。必须严格，否则正文里的数字会被当编号。
+_STRICT_NUMBERED = re.compile(r"^(\d{1,3})\s*[.、)．:：]\s*(.+)$")
+# 第二段：编号 + 空白分隔（`1 译文`）。只在第一段一条都没命中时才启用 ——
+# 放宽到空白会让「3 天前发布的 GPT-5」这类正文被误判成第 3 条译文。
+_LOOSE_NUMBERED = re.compile(r"^(\d{1,3})\s+(.+)$")
+
+
+def _normalize_output_line(line: str) -> str:
+    """剥掉 markdown 装饰、统一全角字符，让编号行能被稳定识别。"""
+    text = line.strip().translate(_FULLWIDTH_TRANSLATION)
+    if text.startswith("```"):
+        text = text.lstrip("`").strip()
+    if text.endswith("```"):
+        text = text.rstrip("`").strip()
+    text = _LEADING_DECORATION.sub("", text)
+    text = _TRAILING_DECORATION.sub("", text)
+    return text.strip()
+
+
+def _extract_numbered(
+    lines: list[str], pattern: "re.Pattern[str]", expected_count: int
+) -> list[str | None]:
+    results: list[str | None] = [None] * expected_count
+    for line in lines:
+        match = pattern.match(line)
+        if not match:
+            continue
+        # 编号必须落在 1..expected_count 内，避免把年份/数量当成编号
+        if not 1 <= int(match.group(1)) <= expected_count:
+            continue
+        translated = match.group(2).strip().strip("\"'「」『』")
+        if translated and has_cjk(translated):
+            results[int(match.group(1)) - 1] = translated
+    return results
 
 
 def _parse_batch_result(content: str, expected_count: int) -> list[str | None]:
-    """解析批量翻译的编号结果。"""
-    results: list[str | None] = [None] * expected_count
-    lines = content.strip().split("\n")
+    """解析批量翻译的编号结果。三段式，越往后越宽松：
 
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-        # 匹配格式: "1. 翻译内容" 或 "1、翻译内容" 或 "1) 翻译内容"
-        match = re.match(r"^(\d+)[.、)]\s*(.+)$", line)
-        if match:
-            idx = int(match.group(1)) - 1
-            translated = match.group(2).strip()
-            # 清理引号包裹
-            translated = translated.strip("\"'「」『』")
-            if 0 <= idx < expected_count and translated and has_cjk(translated):
-                results[idx] = translated
+      1. 严格：`编号 + 标点`（约定格式）；
+      2. 宽松：`编号 + 空白`（仅在第 1 段零命中时启用）；
+      3. 兜底：编号全丢，但「含中文的行数」恰好等于期望条数 → 按出现顺序采用。
 
-    return results
+    第 3 段刻意加了「数量相等 + 前两段零命中」两个约束：一旦顺序错位，就会把
+    A 的译文贴到 B 的标题上。**宁可少翻，不可错配。**
+    """
+    lines = [text for text in (_normalize_output_line(raw) for raw in content.split("\n")) if text]
+
+    for pattern in (_STRICT_NUMBERED, _LOOSE_NUMBERED):
+        results = _extract_numbered(lines, pattern, expected_count)
+        if any(results):
+            return results
+
+    # 兜底：编号全丢，但「含中文且不以数字开头」的行数恰好等于期望条数。
+    # 不以数字开头是为了排除被前两段拒绝的编号行（如 999. 甲），它们看起来是
+    # 「编号解析失败」而非「没有编号」。
+    cjk_lines = [line.strip("\"'「」『』") for line in lines
+                 if has_cjk(line) and not re.match(r"^\d", line)]
+    if len(cjk_lines) == expected_count:
+        return list(cjk_lines)
+
+    return [None] * expected_count
 
 
 def _ai_translate_description(

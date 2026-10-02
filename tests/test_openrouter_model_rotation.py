@@ -35,6 +35,7 @@ from core.normalize.translator import (
     _get_openrouter_keys,
     _is_circuit_broken,
     _openrouter_session,
+    _parse_batch_result,
     _resolve_model,
     add_bilingual_fields,
     reset_circuit_breaker,
@@ -701,6 +702,148 @@ class TimeBoundTests(unittest.TestCase):
 
         # 批次上限 2 次 × 可用路由 4 条 → 最多 4 次请求，绝不会是 10 次
         self.assertLessEqual(session.post.call_count, 4)
+
+
+# ---------------------------------------------------------------------------
+# 6. 批量解析器：容忍格式漂移，但绝不猜
+# ---------------------------------------------------------------------------
+
+
+class ParseBatchResultTests(unittest.TestCase):
+    def _parse(self, text: str, n: int = 2) -> list[str | None]:
+        return _parse_batch_result(text, n)
+
+    def test_strict_numbered_dot(self):
+        self.assertEqual(self._parse("1. 甲\n2. 乙"), ["甲", "乙"])
+
+    def test_strict_numbered_chinese_comma(self):
+        self.assertEqual(self._parse("1、甲\n2、乙"), ["甲", "乙"])
+
+    def test_strict_numbered_paren(self):
+        self.assertEqual(self._parse("1) 甲\n2) 乙"), ["甲", "乙"])
+
+    def test_fullwidth_period(self):
+        """中文母语模型（如 ling、qwen）经常输出全角句点。"""
+        self.assertEqual(self._parse("１． 甲\n２． 乙"), ["甲", "乙"])
+
+    def test_fullwidth_digits_and_colon(self):
+        self.assertEqual(self._parse("１：甲\n２：乙"), ["甲", "乙"])
+
+    def test_markdown_bold(self):
+        """模型偶尔会把整行包在 ** 里。"""
+        self.assertEqual(self._parse("**1. 甲**\n**2. 乙**"), ["甲", "乙"])
+
+    def test_markdown_code_inline(self):
+        self.assertEqual(self._parse("`1. 甲`\n`2. 乙`"), ["甲", "乙"])
+
+    def test_code_fence_with_content(self):
+        self.assertEqual(self._parse("```\n1. 甲\n2. 乙\n```"), ["甲", "乙"])
+
+    def test_leading_bullet(self):
+        """行首有列表符号时，编号必须仍能识别。"""
+        self.assertEqual(self._parse("- 1. 甲\n- 2. 乙"), ["甲", "乙"])
+
+    def test_strips_quote_wrappers(self):
+        self.assertEqual(self._parse('1. 「甲」\n2. "乙"'), ["甲", "乙"])
+
+    def test_loose_matches_space_separated_numbering(self):
+        """`1 甲` 应该只在第一段零命中时才被启用。"""
+        self.assertEqual(self._parse("1 甲\n2 乙"), ["甲", "乙"])
+
+    def test_loose_does_not_match_years(self):
+        """正文里的年份（2024 年…）绝对不能被误当编号行。"""
+        # 用 n=2，输入两行均以数字开头 → fallback 不会救（排除以数字开头的行）
+        self.assertEqual(self._parse("2024 年发布的\n2025 年发布的"), [None, None])
+
+    def test_fallback_to_unnumbered_lines(self):
+        """模型偶尔会丢掉编号 —— 若中文行数恰好等于期望数，按出现顺序采用。"""
+        self.assertEqual(self._parse("甲\n乙"), ["甲", "乙"])
+
+    def test_fallback_is_guarded_by_count(self):
+        """行数不匹配时**宁可少翻也不猜顺序**—— 一旦错位就会贴错标题。"""
+        self.assertEqual(self._parse("甲"), [None, None])
+        self.assertEqual(self._parse("甲\n乙\n丙"), [None, None])
+
+    def test_fallback_requires_zero_strict_matches(self):
+        """严格匹配只要命中一条，就不该 fallback（否则可能覆盖严格结果）。"""
+        self.assertEqual(self._parse("1. 甲\n乙"), ["甲", None])
+
+    def test_ignores_out_of_range_numbers(self):
+        self.assertEqual(self._parse("999. 甲\n1000. 乙"), [None, None])
+
+    def test_empty_lines_are_ignored(self):
+        self.assertEqual(self._parse("1. 甲\n\n2. 乙"), ["甲", "乙"])
+
+
+# ---------------------------------------------------------------------------
+# 7. 不可解析输出：模型级淘汰（防止注定失败的组合空烧路由）
+# ---------------------------------------------------------------------------
+
+
+class UnparseableOutputTests(unittest.TestCase):
+    def setUp(self):
+        reset_circuit_breaker()
+        reset_google_circuit_breaker()
+
+    def tearDown(self):
+        reset_circuit_breaker()
+        reset_google_circuit_breaker()
+
+    def _make_ok_resp(self, content: str) -> MagicMock:
+        """构造 HTTP 200，返回自定义内容（模拟模型不按格式输出）。"""
+        return _ok(content)
+
+    def test_model_retired_after_repeated_unparseable(self):
+        """连续 2 次「200 但输出不可解析」→ 淘汰模型，不再浪费路由。"""
+        cursor = _RouteCursor(["k1"], ["m1", "m2"], 60)
+        # 第一次不淘汰（阈值 2）
+        cursor.note_unparseable("m1")
+        self.assertNotIn("m1", cursor.dead_models)
+        # 第二次淘汰
+        cursor.note_unparseable("m1")
+        self.assertIn("m1", cursor.dead_models)
+        self.assertEqual(cursor.live_models, 1)
+
+    def test_unparseable_retirement_is_not_global(self):
+        """不可解析 = 模型**不适合这个任务**，不是模型本身坏了 → 不进全局黑名单。"""
+        cursor = _RouteCursor(["k1"], ["m1", "m2"], 60)
+        cursor.note_unparseable("m1")
+        cursor.note_unparseable("m1")
+        self.assertIn("m1", cursor.dead_models)
+        self.assertNotIn("m1", _utils._DEAD_MODELS)
+
+    def test_batch_zero_parse_triggers_unparseable(self):
+        """_ai_translate_batch 在全军覆没时会把 outcome["unparseable"] 填进去。"""
+        # 用纯英文输出（无 CJK + 无编号）→ 严格/宽松/兜底全救不了，才算全军覆没
+        session = _session([_ok("Here is the translation list:\nHello\nWorld")])
+        with patch.object(T, "_openrouter_session", return_value=session):
+            outcome: dict = {}
+            result = _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
+        self.assertEqual(result, [None])
+        self.assertEqual(outcome.get("status"), "ok")       # HTTP 是 200
+        self.assertEqual(outcome.get("unparseable"), 1)      # 但 1 条都解析不出
+        self.assertIn("raw_head", outcome)
+
+    def test_unnumbered_chinese_output_is_rescued_by_fallback(self):
+        """模型没写编号、但译文本身有效 → fallback 应该能救，不算全军覆没。"""
+        session = _session([_ok("人工智能翻译结果")])
+        with patch.object(T, "_openrouter_session", return_value=session):
+            outcome: dict = {}
+            result = _ai_translate_batch(session, ["Hi"], "k1", model="m1", outcome=outcome)
+        self.assertEqual(result, ["人工智能翻译结果"])
+        # fallback 救回来了，不触发 model 级淘汰
+        self.assertNotEqual(outcome.get("unparseable"), 1)
+
+    def test_partial_parse_is_not_unparseable(self):
+        """只译出一半 → 不算「全军覆没」，不该触发 model 淘汰。"""
+        session = _session([_ok("1. 甲")])
+        with patch.object(T, "_openrouter_session", return_value=session):
+            outcome: dict = {}
+            result = _ai_translate_batch(
+                session, ["Hi", "Bye"], "k1", model="m1", outcome=outcome
+            )
+        self.assertEqual(result, ["甲", None])
+        self.assertEqual(outcome.get("unparseable"), 0)
 
 
 if __name__ == "__main__":
