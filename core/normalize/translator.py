@@ -6,6 +6,15 @@
 
 v3.1: 增加全局熔断器，429/402/403 连续失败 ≥ MAX_CONSECUTIVE_FAILURES 次后
 自动触发熔断，跳过所有后续 AI 调用，平滑降级至 Google Translate。
+
+v3.2: 修复 Google 兜底阶段长时间挂起（曾导致 Stage 3 卡死 39 分钟、整条流水线被
+40 分钟超时 kill）。三处根因：
+  1) Google 兜底**逐条串行**请求 → 条数 × 单条耗时线性放大；
+  2) 复用 create_session() 的 Retry(total=3, backoff_factor=0.8) × timeout=12
+     → 单条最坏 ~44s，56 条 ≈ 41 分钟；
+  3) 无失败计数、无日志 → 全程静默，属于「不可观测 ⇒ 不可断言」。
+对策：Google 也有熔断器（连续失败即永久跳过本轮的 Google 兜底）+ 单条超时收紧为
+GOOGLE_TIMEOUT + 全局墙上时钟预算 GOOGLE_BUDGET_SECONDS，超预算即停止兜底并留下日志。
 """
 
 from __future__ import annotations
@@ -16,10 +25,13 @@ import os
 import re
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 from core.utils import has_cjk, is_mostly_english, normalize_url
 
@@ -60,6 +72,18 @@ AI_DESC_TRANSLATE_SYSTEM_PROMPT = (
 BATCH_SIZE = 8
 
 # ---------------------------------------------------------------------------
+# Google 兜底配置（v3.2）
+# ---------------------------------------------------------------------------
+# 单条 Google 请求超时。免费端点从 CI 出口常常不可达，宁可快速放弃也不要拖垮流水线。
+GOOGLE_TIMEOUT = 5
+# 整个 Google 兜底阶段的墙上时钟预算（秒）。超出即停止兜底、留下日志、继续后续阶段。
+GOOGLE_BUDGET_SECONDS = float(os.environ.get("GOOGLE_TRANSLATE_BUDGET_SECONDS") or 60)
+# Google 连续失败 N 次即熔断（本轮不再尝试 Google），避免 × 条数的线性放大。
+GOOGLE_MAX_CONSECUTIVE_FAILURES = 3
+# Google 兜底并发度。免费端点无 key、可容忍，用线程池把串行等待压成并行。
+GOOGLE_MAX_WORKERS = 8
+
+# ---------------------------------------------------------------------------
 # 全局熔断器 — 429/402/403 连续失败达阈值后切断所有 AI 翻译
 # ---------------------------------------------------------------------------
 
@@ -68,6 +92,46 @@ MAX_CONSECUTIVE_FAILURES = 3  # 连续失败 N 次触发熔断
 _ai_circuit_broken = False              # 熔断标志
 _ai_consecutive_failures = 0            # 连续失败计数
 _circuit_breaker_lock = threading.Lock() # 线程安全
+
+# Google 兜底熔断器（与 AI 熔断器独立：AI 熔断后正是 Google 兜底最吃力的时候）
+_google_circuit_broken = False
+_google_consecutive_failures = 0
+_google_lock = threading.Lock()
+
+
+def _mark_google_failure() -> bool:
+    """记录一次 Google 兜底失败。返回 True 表示 Google 兜底已熔断。"""
+    global _google_circuit_broken, _google_consecutive_failures
+    with _google_lock:
+        _google_consecutive_failures += 1
+        if _google_consecutive_failures >= GOOGLE_MAX_CONSECUTIVE_FAILURES:
+            if not _google_circuit_broken:
+                _google_circuit_broken = True
+                logger.warning(
+                    "[Google 熔断器] 连续 %d 次 Google 翻译失败，本轮跳过剩余 Google 兜底"
+                    "（剩余标题保留英文原标题，不再消耗流水线时间）。",
+                    _google_consecutive_failures,
+                )
+            return True
+        return False
+
+
+def _mark_google_success() -> None:
+    global _google_consecutive_failures
+    with _google_lock:
+        _google_consecutive_failures = 0
+
+
+def is_google_circuit_broken() -> bool:
+    with _google_lock:
+        return _google_circuit_broken
+
+
+def reset_google_circuit_breaker() -> None:
+    global _google_circuit_broken, _google_consecutive_failures
+    with _google_lock:
+        _google_circuit_broken = False
+        _google_consecutive_failures = 0
 
 
 def _mark_ai_failure() -> bool:
@@ -164,12 +228,31 @@ def safeguard_title_zh_cache(title_cache_path: Path, new_cache: dict[str, str]) 
 # Google Translate 免费 API（兜底方案）
 # ---------------------------------------------------------------------------
 
+def _google_session(session: requests.Session) -> requests.Session:
+    """返回一个**禁用重试**的 session 供 Google 兜底使用。
+
+    复用 create_session() 的 Retry(total=3, backoff_factor=0.8) 是 v3.1 卡死的元凶：
+    端点不可达时单条耗时 = 3 次重试 × (12s 超时 + 退避) ≈ 44s，N 条串行即线性放大。
+    这里为 Google 单独挂一个 max_retries=0 的 adapter，单条耗时上限就是 GOOGLE_TIMEOUT。
+    """
+    s = requests.Session()
+    adapter = HTTPAdapter(max_retries=Retry(total=0, connect=0, read=0))
+    s.mount("http://", adapter)
+    s.mount("https://", adapter)
+    # 继承调用方 UA / 语言头，保证行为与主 session 一致
+    if getattr(session, "headers", None):
+        s.headers.update(session.headers)
+    return s
+
+
 def translate_to_zh_cn(session: requests.Session, text: str) -> str | None:
     s = (text or "").strip()
     if not s:
         return None
+    if is_google_circuit_broken():
+        return None
     try:
-        r = session.get(
+        r = _google_session(session).get(
             "https://translate.googleapis.com/translate_a/single",
             params={
                 "client": "gtx",
@@ -178,20 +261,25 @@ def translate_to_zh_cn(session: requests.Session, text: str) -> str | None:
                 "dt": "t",
                 "q": s,
             },
-            timeout=12,
+            timeout=GOOGLE_TIMEOUT,
         )
         r.raise_for_status()
         payload = r.json()
         if not isinstance(payload, list) or not payload:
+            _mark_google_failure()
             return None
         segs = payload[0]
         if not isinstance(segs, list):
+            _mark_google_failure()
             return None
         translated = "".join(str(seg[0]) for seg in segs if isinstance(seg, list) and seg and seg[0])
         translated = translated.strip()
         if translated and translated != s:
+            _mark_google_success()
             return translated
+        _mark_google_failure()
     except Exception:
+        _mark_google_failure()
         return None
     return None
 
@@ -378,8 +466,9 @@ def add_bilingual_fields(
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, str]]:
     """为文章添加双语标题字段，优先使用 AI 翻译。"""
 
-    # 每次 Pipeline 运行重置熔断器状态
+    # 每次 Pipeline 运行重置熔断器状态（AI + Google 两个熔断器都要复位）
     reset_circuit_breaker()
+    reset_google_circuit_breaker()
 
     # 收集已有的中文标题映射（URL → 中文标题）
     zh_by_url: dict[str, str] = {}
@@ -472,11 +561,73 @@ def add_bilingual_fields(
             # 控制请求频率，避免触发限流
             time.sleep(0.5)
 
-    # 通用 enrich 函数（应用翻译结果 + Google 兜底）
+    # -----------------------------------------------------------------------
+    # Google 兜底：**并行预取**（v3.2）
+    # -----------------------------------------------------------------------
+    # v3.1 在 enrich() 内逐条串行调用 Google，端点不可达时 N 条 × ~44s 线性放大，
+    # 直接把 Stage 3 拖到 40 分钟被 kill。这里改为一个并行、有墙上时钟预算、
+    # 带独立熔断器的预取阶段：先把能拿到的翻译一次性放进 cache，enrich() 只查表。
     google_budget = max_new_translations - ai_translated_count
 
+    if google_budget > 0:
+        # 收集还没有译文的英文标题（去重，保持顺序稳定）
+        pending_google: list[str] = []
+        seen_pending: set[str] = set()
+        for item in items_ai:
+            title = str(item.get("title") or "").strip()
+            if not title or has_cjk(title) or not is_mostly_english(title):
+                continue
+            url = normalize_url(str(item.get("url") or ""))
+            if zh_by_url.get(url) or cache.get(title):
+                continue
+            if title in seen_pending:
+                continue
+            seen_pending.add(title)
+            pending_google.append(title)
+            if len(pending_google) >= google_budget:
+                break
+
+        if pending_google:
+            logger.info(
+                "[Translate] Google 兜底：待翻译 %d 条，预算 %.0fs，并发 %d。",
+                len(pending_google), GOOGLE_BUDGET_SECONDS, GOOGLE_MAX_WORKERS,
+            )
+            deadline = time.monotonic() + GOOGLE_BUDGET_SECONDS
+            skipped_by_budget = 0
+
+            def _fetch(title: str) -> tuple[str, str | None]:
+                # 预算 / 熔断 任一先行即短路，避免把时间花在已知无望的请求上
+                if is_google_circuit_broken() or time.monotonic() >= deadline:
+                    return title, None
+                return title, translate_to_zh_cn(session, title)
+
+            try:
+                with ThreadPoolExecutor(max_workers=GOOGLE_MAX_WORKERS) as pool:
+                    for title, tr in pool.map(_fetch, pending_google):
+                        if tr and has_cjk(tr):
+                            cache[title] = tr
+                            google_translated_count += 1
+                        elif time.monotonic() >= deadline and title not in cache:
+                            skipped_by_budget += 1
+            except Exception as exc:  # 兜底阶段绝不抛出让上层崩掉
+                logger.warning("[Translate] Google 兜底并行阶段异常，跳过剩余：%s", exc)
+
+            if is_google_circuit_broken():
+                logger.warning(
+                    "[Translate] Google 兜底已熔断，本轮成功 %d 条，剩余标题保留英文原标题。",
+                    google_translated_count,
+                )
+            elif skipped_by_budget:
+                logger.warning(
+                    "[Translate] Google 兜底触及 %.0fs 预算上限，已翻译 %d 条，%d 条超时放弃"
+                    "（保留英文原标题）。可调 GOOGLE_TRANSLATE_BUDGET_SECONDS 放宽。",
+                    GOOGLE_BUDGET_SECONDS, google_translated_count, skipped_by_budget,
+                )
+            else:
+                logger.info("[Translate] Google 兜底完成，翻译 %d 条。", google_translated_count)
+
+    # 通用 enrich 函数（应用翻译结果）
     def enrich(item: dict[str, Any], allow_translate: bool) -> dict[str, Any]:
-        nonlocal google_budget, google_translated_count
         out = dict(item)
         title = str(out.get("title") or "").strip()
         url = normalize_url(str(out.get("url") or ""))
@@ -495,17 +646,8 @@ def add_bilingual_fields(
 
         out["title_en"] = title
 
-        # 查找已有翻译
+        # 查找已有翻译（AI 批量结果 + Google 预取结果都已在 cache 里）
         zh_title = zh_by_url.get(url) or cache.get(title)
-
-        # Google Translate 兜底
-        if not zh_title and allow_translate and google_budget > 0:
-            tr = translate_to_zh_cn(session, title)
-            if tr and has_cjk(tr):
-                zh_title = tr
-                cache[title] = tr
-                google_budget -= 1
-                google_translated_count += 1
 
         if zh_title:
             out["title_zh"] = zh_title
@@ -521,9 +663,10 @@ def add_bilingual_fields(
     all_out = [enrich(it, allow_translate=False) for it in items_all]
 
     logger.info(
-        "[Translate] 翻译完成：AI 翻译 %d 条，Google 翻译 %d 条，熔断状态=%s，缓存命中跳过其余",
+        "[Translate] 翻译完成：AI 翻译 %d 条，Google 翻译 %d 条，AI 熔断=%s，Google 熔断=%s，缓存命中跳过其余",
         ai_translated_count, google_translated_count,
         "已触发" if _is_circuit_broken() else "正常",
+        "已触发" if is_google_circuit_broken() else "正常",
     )
 
     return ai_out, all_out, cache

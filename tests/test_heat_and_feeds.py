@@ -477,6 +477,49 @@ class TestWorkflowWiring:
         )
 
 
+class TestUpdateStepIsBounded:
+    """纵深防御：单个步骤不能吃掉整个 job 的超时预算。
+
+    事故 run 36890199782：`Update data` 静默卡死 39 分钟，被 job 级
+    `timeout-minutes: 40` kill，导致后续 8 个步骤全部 skip、当轮数据没有更新。
+    根因已在 translator.py 修掉（Google 兜底熔断 + 预算 + 并行），但这里再加一道
+    步骤级超时，保证**未来任何**无界等待最多只损失这一步。
+    """
+
+    @pytest.fixture(scope="class")
+    def workflow(self) -> str:
+        p = REPO_ROOT / ".github" / "workflows" / "update-news.yml"
+        return p.read_text(encoding="utf-8")
+
+    def test_update_data_step_has_its_own_timeout(self, workflow: str):
+        block = workflow.split("name: Update data", 1)[1][:600]
+        assert "timeout-minutes:" in block, (
+            "「Update data」没有步骤级超时；一旦卡死会耗尽 job 的 40 分钟预算，"
+            "后续步骤全部被 skip（事故 run 36890199782 即如此）"
+        )
+
+    def test_step_timeout_leaves_room_for_downstream(self, workflow: str):
+        """步骤超时必须显著小于 job 超时，否则等于没设。"""
+        import re as _re
+
+        job_m = _re.search(r"timeout-minutes:\s*(\d+)", workflow)
+        step_block = workflow.split("name: Update data", 1)[1][:600]
+        step_m = _re.search(r"timeout-minutes:\s*(\d+)", step_block)
+        assert job_m and step_m, "缺少可比较的超时配置"
+        job_to, step_to = int(job_m.group(1)), int(step_m.group(1))
+        assert step_to < job_to, (
+            f"步骤超时 {step_to}m 不小于 job 超时 {job_to}m，"
+            "下游步骤（校验/预渲染/提交）仍可能被饿死"
+        )
+
+    def test_job_timeout_fits_github_hard_limit(self, workflow: str):
+        """GitHub 单 job 硬上限 6 小时；这里远低于，但要确保别被误改成超限值。"""
+        import re as _re
+
+        job_m = _re.search(r"timeout-minutes:\s*(\d+)", workflow)
+        assert int(job_m.group(1)) <= 360
+
+
 class TestDeployWhitelist:
     """部署工作流只 cp 显式列出的文件，漏掉新产物 = 线上 404。"""
 

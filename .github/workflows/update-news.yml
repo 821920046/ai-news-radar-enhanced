@@ -82,6 +82,12 @@ jobs:
 
 
       - name: Update data
+        # 纵深防御：即使未来某处再引入无界等待，也只损失这一步（20 分钟），
+        # 而不是把整个 job 的 40 分钟预算吃光导致后续步骤全被 skip。
+        # 实测正常耗时 ~2 分钟；20 分钟给了 10x 余量。
+        # 背景：run 36890199782 曾在此步静默卡死 39 分钟（Google 兜底逐条串行 +
+        # 3 次重试 × 12s 超时 × 56 条），必须配合 translator.py 的 Google 熔断/预算修复。
+        timeout-minutes: 20
         env:
           OPENROUTER_KEYS: ${{ secrets.OPENROUTER_KEYS }}
           OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
