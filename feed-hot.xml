@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 03 Oct 2026 19:36:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 22:33:02 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>OpenAI 安全员工 David Robinson 离职，称公司文化已坏</title>
@@ -16,7 +16,7 @@
 
 David Robinson承认自己“有点老套”：作为一家领先AI公司的员工，他在辞职时发出了严厉警告。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
       <category>部署推理</category>
@@ -30,7 +30,7 @@ David Robinson承认自己“有点老套”：作为一家领先AI公司的员�
 
 David Robinson 曾负责撰写 OpenAI 每次重大模型发布时的安全报告，本周他辞去职位并在《大西洋月刊》发表专栏文章公开表态。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
       <category>论文研究</category>
@@ -40,9 +40,11 @@ David Robinson 曾负责撰写 OpenAI 每次重大模型发布时的安全报告
       <link>https://github.com/affaan-m/ECC</link>
       <guid isPermaLink="true">https://github.com/affaan-m/ECC</guid>
       <pubDate>Sat, 03 Oct 2026 12:51:02 +0000</pubDate>
-      <description>affaan-m/ECC：智能体性能优化系统，涵盖技能、直觉、记忆、安全及研究驱动开发，适用于Claude Code、Codex、Openco...，适合关注自动化任务和多 Agent 协作演进。
+      <description>affaan-m/ECC：以下是精炼的中文摘要： 该系统优化了Claude Code、Codex、Opencode及Cursor等AI编码助手...，适合关注自动化任务和多 Agent 协作演进。
 
-智能体性能优化系统，涵盖技能、直觉、记忆、安全及研究驱动开发，适用于Claude Code、Codex、Opencode、Cursor等。
+这是一段关于AI编码助手的宣传文案。以下是精炼的中文摘要：
+
+该系统优化了Claude Code、Codex、Opencode及Cursor等AI编码助手的代理性能，聚焦于技能、直觉、记忆、安全及研究优先的开发理念。
 
 信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
@@ -55,9 +57,9 @@ David Robinson 曾负责撰写 OpenAI 每次重大模型发布时的安全报告
       <link>https://github.com/anthropics/claude-code</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-code</guid>
       <pubDate>Sat, 03 Oct 2026 12:51:02 +0000</pubDate>
-      <description>anthropic、claude：Claude Code是终端中的智能编程工具，能理解代码库，通过自然语言执行常规任务、解释复杂代码及处理Git工作流...，适合进一步验证代码、协议或社区采用情况。
+      <description>anthropic、claude：Claude Code 是一款驻留于终端的智能编程工具，能理解代码库并通过自然语言指令执行常规任务、解析复杂代码及处...，适合进一步验证代码、协议或社区采用情况。
 
-Claude Code是终端中的智能编程工具，能理解代码库，通过自然语言执行常规任务、解释复杂代码及处理Git工作流，助你加速编码。
+Claude Code 是一款驻留于终端的智能编程工具，能理解代码库并通过自然语言指令执行常规任务、解析复杂代码及处理 Git 工作流，助力开发者提升编码效率。
 
 信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
@@ -71,9 +73,9 @@ Claude Code是终端中的智能编程工具，能理解代码库，通过自然
       <link>https://github.com/thedotmack/claude-mem</link>
       <guid isPermaLink="true">https://github.com/thedotmack/claude-mem</guid>
       <pubDate>Sat, 03 Oct 2026 12:51:02 +0000</pubDate>
-      <description>claude：适用于 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenC...，适合进一步验证代码、协议或社区采用情况。
+      <description>claude：该技术能在各会话中为智能体持续保留上下文，通过AI压缩历史操作并将相关信息注入未来会话，兼容Claude Code...，适合进一步验证代码、协议或社区采用情况。
 
-每个座席跨会话的持久上下文 – 捕获座席在会话期间所做的所有操作，使用 AI 对其进行压缩，并将相关上下文注入到未来的会话中。适用于 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等
+该技术能在各会话中为智能体持续保留上下文，通过AI压缩历史操作并将相关信息注入未来会话，兼容Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode等平台。
 
 信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
@@ -83,39 +85,50 @@ Claude Code是终端中的智能编程工具，能理解代码库，通过自然
       <category>编码工具</category>
     </item>
     <item>
-      <title>AWS CEO Matt Garman 回应数据中心争议：不再与政府机构签 NDA</title>
-      <link>https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas</guid>
-      <pubDate>Sat, 03 Oct 2026 18:43:57 +0000</pubDate>
-      <description>AWS CEO Matt Garman...：亚马逊网络服务公司的首席执行官试图反驳人们对数据中心的普遍怀疑，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Capcom 规划将 RE Engine 逐步改造为 AI 生成引擎，迈向与 AI 共同开发游戏的未来</title>
+      <link>https://www.theverge.com/games/1004418/capcom-ai-game-development</link>
+      <guid isPermaLink="true">https://www.theverge.com/games/1004418/capcom-ai-game-development</guid>
+      <pubDate>Sat, 03 Oct 2026 16:49:10 +0000</pubDate>
+      <description>Capcom 规划将 RE Engine...：卡普空在RE: 2026开发者大会上，程序员石田悟透露，尽管《Pragmata》主题涉及AI恐怖，但工作室在实际开发...，适合作为今日 AI/科技情报流里的重点线索。
 
-亚马逊网络服务公司的首席执行官试图反驳人们对数据中心的普遍怀疑。
+卡普空在RE: 2026开发者大会上，程序员石田悟透露，尽管《Pragmata》主题涉及AI恐怖，但工作室在实际开发中并未排斥AI技术。
 
 信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>Capcom 规划将 RE Engine 逐步改造为 AI 生成引擎，迈向与 AI 共同开发游戏的未来</title>
-      <link>https://www.theverge.com/games/1004418/capcom-ai-game-development</link>
-      <guid isPermaLink="true">https://www.theverge.com/games/1004418/capcom-ai-game-development</guid>
-      <pubDate>Sat, 03 Oct 2026 16:49:10 +0000</pubDate>
-      <description>Capcom 规划将 RE Engine...：Capcom 的 Pragmata 可能全都是关于人工智能的恐怖，但实际上该工作室似乎并不那么看不起这项技术，适合作为今日 AI/科技情报流里的重点线索。
+      <title>AWS CEO Matt Garman 回应数据中心争议：不再与政府机构签 NDA</title>
+      <link>https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas</guid>
+      <pubDate>Sat, 03 Oct 2026 18:43:57 +0000</pubDate>
+      <description>AWS CEO Matt Garman...：亚马逊云服务（AWS）CEO试图回应对数据中心广泛存在的数据安全质疑，适合作为今日 AI/科技情报流里的重点线索。
 
-Capcom 的 Pragmata 可能全都是关于人工智能的恐怖，但实际上该工作室似乎并不那么看不起这项技术。在 Capcom 开放大会 RE: 2026 程序员 Satoshi Ishida 上发表了...
+亚马逊云服务（AWS）CEO试图回应对数据中心广泛存在的数据安全质疑。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 57.8</description>
       <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>如何在 Claude 和 Claude Code 中充分利用 Opus 5.5</title>
+      <link>https://claude.dev/blog/getting-the-most-out-of-opus-5-5</link>
+      <guid isPermaLink="true">https://claude.dev/blog/getting-the-most-out-of-opus-5-5</guid>
+      <pubDate>Sat, 03 Oct 2026 18:29:30 +0000</pubDate>
+      <description>如何在 Claude 和 Claude Code 中充分利用 Opus 5.5，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 B · 评分 57.8</description>
+      <category>Zeli</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>Splice CEO Kakul Srivastava：AI 写的邮件正在杀死真正的对话</title>
       <link>https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview</link>
       <guid isPermaLink="true">https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview</guid>
       <pubDate>Sat, 03 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Splice CEO Kakul Sri...：Splice首席执行官Kakul Srivastava领导着这款备受制作人青睐的采样平台，该平台提供独奏和旋律循环素...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Splice CEO Kakul Sri...：Kakul Srivastava 是 Splice 的首席执行官，Splice 是无数制作人依赖的单镜头和旋律循环样...，适合作为今日 AI/科技情报流里的重点线索。
 
-Splice首席执行官Kakul Srivastava领导着这款备受制作人青睐的采样平台，该平台提供独奏和旋律循环素材，其内容已被用于众多热门金曲中。
+Kakul Srivastava 是 Splice 的首席执行官，Splice 是无数制作人依赖的单镜头和旋律循环样本平台。从该服务中提取的样本已经引起了巨大的轰动，例如......
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -123,36 +136,23 @@ Splice首席执行官Kakul Srivastava领导着这款备受制作人青睐的采�
       <link>https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages</guid>
       <pubDate>Sat, 03 Oct 2026 14:00:00 +0000</pubDate>
-      <description>TechCrunch 盘点可以直接用短信...：我们创建了一份最著名的人工智能代理列表，这些代理可以存在于您的短信中，从一般助理到专为家庭、旅行和工作设计的代理，适合关注自动化任务和多 Agent 协作演进。
+      <description>TechCrunch 盘点可以直接用短信...：我们整理了一份可在短信中使用的顶级AI代理清单，涵盖通用助手以及专为家庭、旅行和工作场景设计的智能代理，适合关注自动化任务和多 Agent 协作演进。
 
-我们创建了一份最著名的人工智能代理列表，这些代理可以存在于您的短信中，从一般助理到专为家庭、旅行和工作设计的代理。
+我们整理了一份可在短信中使用的顶级AI代理清单，涵盖通用助手以及专为家庭、旅行和工作场景设计的智能代理。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>行业动态</category>
-    </item>
-    <item>
-      <title>打造高性能且便携的带 Helion 的 vLLM 线性后端</title>
-      <link>https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion</link>
-      <guid isPermaLink="true">https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion</guid>
-      <pubDate>Fri, 02 Oct 2026 19:55:07 +0000</pubDate>
-      <description>打造高性能且便携的带 Helion 的...：我们将Helion集成至vLLM的线性后端，旨在探索自动调优的高级内核DSL如何提升LLM推理性能并降低内核实现复杂...，适合观察推理部署成本和落地门槛变化。
-
-我们将Helion集成至vLLM的线性后端，旨在探索自动调优的高级内核DSL如何提升LLM推理性能并降低内核实现复杂度。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>部署推理</category>
     </item>
     <item>
       <title>Meta 开源 Muse Gadgets，让开发者自建硬件接入 Muse 智能体</title>
       <link>https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget</guid>
       <pubDate>Sat, 03 Oct 2026 00:45:39 +0000</pubDate>
-      <description>Meta 计划将其 AI 模型 Muse 集成到电视、烤面包机等日常设备中，并免费开放代码以推动广泛应用，来自官方更新源，适合直接判断产品变化。
+      <description>Meta计划将Muse技术免费开放，推动其应用于电视、烤面包机等各类智能设备，来自官方更新源，适合直接判断产品变化。
 
-Meta 计划将其 AI 模型 Muse 集成到电视、烤面包机等日常设备中，并免费开放代码以推动广泛应用。
+Meta计划将Muse技术免费开放，推动其应用于电视、烤面包机等各类智能设备。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -164,53 +164,26 @@ Meta 计划将其 AI 模型 Muse 集成到电视、烤面包机等日常设备�
       <link>https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents</guid>
       <pubDate>Fri, 02 Oct 2026 23:03:16 +0000</pubDate>
-      <description>Apple 修改 macOS 完全磁盘访...：Meta表示FDA对Muse读取信息不够充分，苹果持不同意见，适合关注自动化任务和多 Agent 协作演进。
+      <description>Apple 修改 macOS 完全磁盘访...：Meta声称FDA监管不足以确保其Muse脑机接口阅读消息技术的安全性，而Apple则持不同意见，适合关注自动化任务和多 Agent 协作演进。
 
-Meta表示FDA对Muse读取信息不够充分，苹果持不同意见。
+Meta声称FDA监管不足以确保其Muse脑机接口阅读消息技术的安全性，而Apple则持不同意见。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
     </item>
     <item>
-      <title>Sean Parker 将 Stability AI 重建为面向音乐专业人士的 AI 工具公司</title>
-      <link>https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music</guid>
-      <pubDate>Fri, 02 Oct 2026 21:09:14 +0000</pubDate>
-      <description>Sean Parker 将 Stabil...：肖恩·帕克（Sean Parker）曾经向音乐界传授了如何寻求宽恕，现在带着唱片公司的祝福和金钱回归，适合关注 Agent 工具调用和工作流搭建。
+      <title>cloudflare/cloudflare-os</title>
+      <link>https://github.com/cloudflare/cloudflare-os</link>
+      <guid isPermaLink="true">https://github.com/cloudflare/cloudflare-os</guid>
+      <pubDate>Sat, 03 Oct 2026 12:51:02 +0000</pubDate>
+      <description>cloudflare/cloudflar...：基于 Cloudflare Workers 构建的 Agent 工作空间，可利用公司上下文和系统创建文档、构建应用并...，适合进一步验证代码、协议或社区采用情况。
 
-肖恩·帕克（Sean Parker）曾经向音乐界传授了如何寻求宽恕，现在带着唱片公司的祝福和金钱回归。
+基于 Cloudflare Workers 构建的 Agent 工作空间，可利用公司上下文和系统创建文档、构建应用并运行智能体。
 
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>MCP/工具</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>Meta 开源 Muse 代码，支持自建 Muse AI 小设备</title>
-      <link>https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link</guid>
-      <pubDate>Fri, 02 Oct 2026 21:08:37 +0000</pubDate>
-      <description>Meta开放源码，允许用户利用其新AI智能体Muse自行开发设备，并建议将Muse加载至彩色电子墨水屏等项目中，来自官方更新源，适合直接判断产品变化。
-
-Meta开放源码，允许用户利用其新AI智能体Muse自行开发设备，并建议将Muse加载至彩色电子墨水屏等项目中。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
+信号等级 B · 评分 55.2</description>
+      <category>开源热榜</category>
       <category>开源</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>Apple 将限制 Mac 全盘访问权限，称 AI 智能体大幅增加风险</title>
-      <link>https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents</guid>
-      <pubDate>Fri, 02 Oct 2026 20:08:40 +0000</pubDate>
-      <description>Apple 将限制 Mac 全盘访问权限：苹果将在Mac系统中新增对“完全磁盘访问”权限的限制，以应对AI代理带来的安全风险，TechCrunch此前已有报道，适合关注自动化任务和多 Agent 协作演进。
-
-苹果将在Mac系统中新增对“完全磁盘访问”权限的限制，以应对AI代理带来的安全风险，TechCrunch此前已有报道。据周五更新，苹果正在推出新的控制措施以加强系统安全。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
       <category>智能体</category>
     </item>
     <item>
@@ -218,9 +191,9 @@ Meta开放源码，允许用户利用其新AI智能体Muse自行开发设备，�
       <link>https://github.com/addyosmani/agent-skills</link>
       <guid isPermaLink="true">https://github.com/addyosmani/agent-skills</guid>
       <pubDate>Sat, 03 Oct 2026 12:51:02 +0000</pubDate>
-      <description>addyosmani/agent-ski...：具备生产级工程能力的AI编程代理，适合关注自动化任务和多 Agent 协作演进。
+      <description>addyosmani/agent-ski...：AI编码代理生产级工程技能，适合关注自动化任务和多 Agent 协作演进。
 
-具备生产级工程能力的AI编程代理。
+AI编码代理生产级工程技能。
 
 信号等级 B · 评分 55.2</description>
       <category>开源热榜</category>
@@ -229,27 +202,13 @@ Meta开放源码，允许用户利用其新AI智能体Muse自行开发设备，�
       <category>开源</category>
     </item>
     <item>
-      <title>cloudflare/cloudflare-os</title>
-      <link>https://github.com/cloudflare/cloudflare-os</link>
-      <guid isPermaLink="true">https://github.com/cloudflare/cloudflare-os</guid>
-      <pubDate>Sat, 03 Oct 2026 12:51:02 +0000</pubDate>
-      <description>cloudflare/cloudflar...：基于Cloudflare Workers构建的智能体工作区，支持结合企业上下文与系统创建文档、开发应用及运行智能体，适合进一步验证代码、协议或社区采用情况。
-
-基于Cloudflare Workers构建的智能体工作区，支持结合企业上下文与系统创建文档、开发应用及运行智能体。
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>智能体</category>
-    </item>
-    <item>
       <title>OpenCut-app/OpenCut</title>
       <link>https://github.com/OpenCut-app/OpenCut</link>
       <guid isPermaLink="true">https://github.com/OpenCut-app/OpenCut</guid>
       <pubDate>Sat, 03 Oct 2026 12:51:02 +0000</pubDate>
-      <description>OpenCut-app/OpenCut：开源视频剪辑工具CapCut替代方案发布，提供免费多轨道编辑与AI字幕功能，支持跨平台使用，适合进一步验证代码、协议或社区采用情况。
+      <description>OpenCut-app/OpenCut：开源版CapCut替代品发布，支持视频剪辑与AI功能，兼容多平台，助力创作者高效创作，适合进一步验证代码、协议或社区采用情况。
 
-开源视频剪辑工具CapCut替代方案发布，提供免费多轨道编辑与AI字幕功能，支持跨平台使用。
+开源版CapCut替代品发布，支持视频剪辑与AI功能，兼容多平台，助力创作者高效创作。
 
 信号等级 B · 评分 55.1</description>
       <category>开源热榜</category>
@@ -289,31 +248,6 @@ Meta开放源码，允许用户利用其新AI智能体Muse自行开发设备，�
       <category>开源热榜</category>
       <category>开源</category>
       <category>多模态</category>
-    </item>
-    <item>
-      <title>AI 视频榜全球第二，藏着一家新影视公司的野心</title>
-      <link>https://www.ifanr.com/1682888</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1682888</guid>
-      <pubDate>Sat, 03 Oct 2026 07:00:20 +0000</pubDate>
-      <description>AI 视频榜全球第二：一家影视公司，杀进了视频模型的决赛圈#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时...，适合作为今日 AI/科技情报流里的重点线索。
-
-一家影视公司，杀进了视频模型的决赛圈#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>无状态 GitHub 应用安装令牌已推出</title>
-      <link>https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out</guid>
-      <pubDate>Fri, 02 Oct 2026 22:18:23 +0000</pubDate>
-      <description>自2026年4月27日起分阶段推行的无状态GitHub App安装令牌格式现已完成，默认所有新生成的GitHub A...，来自官方更新源，适合直接判断产品变化。
-
-自2026年4月27日起分阶段推行的无状态GitHub App安装令牌格式现已完成，默认所有新生成的GitHub App安装令牌将采用该格式。
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
     </item>
     <item>
       <title>Show HN: DeepSeek 实现的 DSec Paper 开源版本</title>
@@ -386,18 +320,41 @@ LocalBolo (Voice Dictation using open source model only)
       <category>编码工具</category>
     </item>
     <item>
-      <title>Show HN: 人工判定基准（GPT-site）</title>
-      <link>https://benchmark-2026-10-03.cyptus.chatgpt.site</link>
-      <guid isPermaLink="true">https://benchmark-2026-10-03.cyptus.chatgpt.site</guid>
-      <pubDate>Sat, 03 Oct 2026 14:13:45 +0000</pubDate>
-      <description>Hand decision benchmark (GPT-site)，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>斯科特·贝森特将那些警告灾难即将降临的人工智能公司首席执行官们比作汉尼拔·莱克特：“在我再次杀人之前阻止我”</title>
+      <link>https://www.businessinsider.com/scott-bessent-compares-ai-ceos-seeking-regulation-to-hannibal-lecter-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/scott-bessent-compares-ai-ceos-seeking-regulation-to-hannibal-lecter-2026-10</guid>
+      <pubDate>Sat, 03 Oct 2026 21:45:54 +0000</pubDate>
+      <description>斯科特·贝森特将那些警告灾难即将降临的人...：Scott Bessent compares AI CEOs who warn of catastrophe to...，适合作为今日 AI/科技情报流里的重点线索。
 
-Hand decision benchmark (GPT-site)
+Scott Bessent compares AI CEOs who warn of catastrophe to Hannibal Lecter: &apos;&apos;Stop me before I kill again&apos;&apos;
 
-信号等级 C · 评分 46.8</description>
+信号等级 C · 评分 46.5</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-      <category>论文研究</category>
+    </item>
+    <item>
+      <title>萨姆·奥尔特曼：不要把人工智能当作一种“宗教力量”</title>
+      <link>https://www.businessinsider.com/sam-altman-dont-treat-ai-like-a-religious-force-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/sam-altman-dont-treat-ai-like-a-religious-force-2026-10</guid>
+      <pubDate>Sat, 03 Oct 2026 20:12:51 +0000</pubDate>
+      <description>萨姆·奥尔特曼：Sam Altman: Don&apos;&apos;t treat AI like a &apos;&apos;religious force&apos;&apos;，适合作为今日 AI/科技情报流里的重点线索。
+
+Sam Altman: Don&apos;&apos;t treat AI like a &apos;&apos;religious force&apos;&apos;
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>离职的OpenAI高管表示，在公司外部他能为安全工作做出更多贡献</title>
+      <link>https://www.businessinsider.com/david-robinson-can-do-more-for-safety-outside-open-ai-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/david-robinson-can-do-more-for-safety-outside-open-ai-2026-10</guid>
+      <pubDate>Sat, 03 Oct 2026 19:57:53 +0000</pubDate>
+      <description>OpenAI leader who quit says he can do more for safety from...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
+
+OpenAI leader who quit says he can do more for safety from outside the company
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+      <category>安全对齐</category>
     </item>
     <item>
       <title>Claude Opus 5.5 最新焚诀发布了！</title>
@@ -424,27 +381,39 @@ OpenAI safety employee quits, says &apos;&apos;time for trial and error is over&
       <category>安全对齐</category>
     </item>
     <item>
-      <title>Pop!_OS 禁止在其大部分代码库中使用 AI 生成的代码</title>
-      <link>https://www.neowin.net/news/system76-bans-ai-generated-code-across-many-of-its-cosmic-codebases</link>
-      <guid isPermaLink="true">https://www.neowin.net/news/system76-bans-ai-generated-code-across-many-of-its-cosmic-codebases</guid>
-      <pubDate>Sat, 03 Oct 2026 17:57:03 +0000</pubDate>
-      <description>Pop!_OS 禁止在其大部分代码库中使用 AI 生成的代码，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+      <title>LeCun 表示对 AI 导致人类灭绝“零担忧”，近期“失控”事件不足为虑</title>
+      <link>https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded</link>
+      <guid isPermaLink="true">https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded</guid>
+      <pubDate>Sat, 03 Oct 2026 17:44:29 +0000</pubDate>
+      <description>LeCun 表示对 AI 导致人类灭绝“...：LeCun 表示对 AI 导致人类灭绝“零担忧”，近期“失控”事件不足为虑，适合作为今日 AI/科技情报流里的重点线索。
 
 信号等级 C · 评分 46.5</description>
       <category>Zeli</category>
     </item>
     <item>
-      <title>OpenAI安全部门员工辞职，呼吁采取“核级”安全保障措施 - Bloomberg.com</title>
-      <link>https://news.google.com/rss/articles/CBMitAFBVV95cUxNMjVnaDVZZC05NnowMXJkVFVFX21rOWR0OXNFTlJlVTZWYmx2cklDY245ZkNpb0JRRFJyRzJ0VWVHM3RpbTFpN3dha2MtVUQzY3ZUVXlQV3JVWjVBXzU5emoxQm1QUVp6VnBwdXYyZmZpdHpNbFJnSDlpcnBmUE80dmQ3OXNsbmtUamVVZmtINnVzc2ljVVFBU0pZTDVSdU5pdzlVOVFUcXJ1dFl5ME9NdnNJUnc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMitAFBVV95cUxNMjVnaDVZZC05NnowMXJkVFVFX21rOWR0OXNFTlJlVTZWYmx2cklDY245ZkNpb0JRRFJyRzJ0VWVHM3RpbTFpN3dha2MtVUQzY3ZUVXlQV3JVWjVBXzU5emoxQm1QUVp6VnBwdXYyZmZpdHpNbFJnSDlpcnBmUE80dmQ3OXNsbmtUamVVZmtINnVzc2ljVVFBU0pZTDVSdU5pdzlVOVFUcXJ1dFl5ME9NdnNJUnc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
-      <pubDate>Sat, 03 Oct 2026 16:32:44 +0000</pubDate>
-      <description>OpenAI Safety Employee Quits, Calls for Nuclear-Level Safe...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
+      <title>半年翻倍！OpenAI再融300亿，估值冲到1.4万亿</title>
+      <link>https://juejin.cn/post/7691223664160112703</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7691223664160112703</guid>
+      <pubDate>Sat, 03 Oct 2026 22:33:02 +0000</pubDate>
+      <description>OpenAI再融300亿，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
 
-OpenAI Safety Employee Quits, Calls for Nuclear-Level Safeguards
+信号等级 C · 评分 45.5</description>
+      <category>NewsNow</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Show HN: 人工判定基准（GPT-site）</title>
+      <link>https://benchmark-2026-10-03.cyptus.chatgpt.site</link>
+      <guid isPermaLink="true">https://benchmark-2026-10-03.cyptus.chatgpt.site</guid>
+      <pubDate>Sat, 03 Oct 2026 14:13:45 +0000</pubDate>
+      <description>Hand decision benchmark (GPT-site)，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 C · 评分 46.5</description>
+Hand decision benchmark (GPT-site)
+
+信号等级 C · 评分 42.8</description>
       <category>Buzzing</category>
-      <category>安全对齐</category>
+      <category>模型发布</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>DeepSeek Harness 插件开发新手教程</title>
@@ -520,29 +489,17 @@ OpenAI Parts Ways With Three Safety Researchers Over Sensitive Information Misha
       <category>部署推理</category>
     </item>
     <item>
-      <title>Show HN: Facebook帖子生成器</title>
-      <link>https://gemini.google.com/share/1a34bce7137f</link>
-      <guid isPermaLink="true">https://gemini.google.com/share/1a34bce7137f</guid>
-      <pubDate>Fri, 02 Oct 2026 20:44:46 +0000</pubDate>
-      <description>Show HN：FB Post Generator，适合优先评估模型能力、价格和工具选型变化。
+      <title>OpenAI安全部门员工辞职，呼吁采取“核级”安全保障措施 - Bloomberg.com</title>
+      <link>https://news.google.com/rss/articles/CBMitAFBVV95cUxNMjVnaDVZZC05NnowMXJkVFVFX21rOWR0OXNFTlJlVTZWYmx2cklDY245ZkNpb0JRRFJyRzJ0VWVHM3RpbTFpN3dha2MtVUQzY3ZUVXlQV3JVWjVBXzU5emoxQm1QUVp6VnBwdXYyZmZpdHpNbFJnSDlpcnBmUE80dmQ3OXNsbmtUamVVZmtINnVzc2ljVVFBU0pZTDVSdU5pdzlVOVFUcXJ1dFl5ME9NdnNJUnc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
+      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMitAFBVV95cUxNMjVnaDVZZC05NnowMXJkVFVFX21rOWR0OXNFTlJlVTZWYmx2cklDY245ZkNpb0JRRFJyRzJ0VWVHM3RpbTFpN3dha2MtVUQzY3ZUVXlQV3JVWjVBXzU5emoxQm1QUVp6VnBwdXYyZmZpdHpNbFJnSDlpcnBmUE80dmQ3OXNsbmtUamVVZmtINnVzc2ljVVFBU0pZTDVSdU5pdzlVOVFUcXJ1dFl5ME9NdnNJUnc?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
+      <pubDate>Sat, 03 Oct 2026 16:32:44 +0000</pubDate>
+      <description>OpenAI Safety Employee Quits, Calls for Nuclear-Level Safe...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
 
-FB Post Generator
-
-信号等级 C · 评分 42.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>我离开OpenAI，因为它的企业文化已经崩坏</title>
-      <link>https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881</link>
-      <guid isPermaLink="true">https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881</guid>
-      <pubDate>Sat, 03 Oct 2026 11:05:53 +0000</pubDate>
-      <description>I Quit OpenAI Because Its Culture Is Broken，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-I Quit OpenAI Because Its Culture Is Broken
+OpenAI Safety Employee Quits, Calls for Nuclear-Level Safeguards
 
 信号等级 C · 评分 42.5</description>
       <category>Buzzing</category>
+      <category>安全对齐</category>
     </item>
     <item>
       <title>据BCG一位高管称，有两种与人工智能相关的习惯可能会削弱你的批判性思维</title>
@@ -619,18 +576,6 @@ Apple says it will flag AI requests for Mac data after Meta&apos;&apos;s Muse dr
       <category>Buzzing</category>
     </item>
     <item>
-      <title>随着部分零售商将Meta AI眼镜下架，荷兰正考虑禁止该产品</title>
-      <link>https://www.businessinsider.com/hans-anders-wehkamp-pause-meta-glasses-ray-ban-sales-netherlands-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/hans-anders-wehkamp-pause-meta-glasses-ray-ban-sales-netherlands-2026-10</guid>
-      <pubDate>Fri, 02 Oct 2026 22:34:45 +0000</pubDate>
-      <description>The Netherlands considers banning Meta AI glasses as some...，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-The Netherlands considers banning Meta AI glasses as some retailers pull them from shelves
-
-信号等级 C · 评分 42.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
       <title>2026 年 AI Agent 面试到底考什么？这套题库覆盖了 90% 的高频考点</title>
       <link>https://juejin.cn/post/7691231137718353920</link>
       <guid isPermaLink="true">https://juejin.cn/post/7691231137718353920</guid>
@@ -651,6 +596,56 @@ The Netherlands considers banning Meta AI glasses as some retailers pull them fr
 Create Your Own Avatar In Seconds
 
 信号等级 C · 评分 41.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>人工智能编程是否让图书馆大楼变得过时了？</title>
+      <link>https://news.ycombinator.com/item?id=49947975</link>
+      <guid isPermaLink="true">https://news.ycombinator.com/item?id=49947975</guid>
+      <pubDate>Sat, 03 Oct 2026 21:45:54 +0000</pubDate>
+      <description>人工智能编程是否让图书馆大楼变得过时了：Is library building obsoleted by AI coding，适合判断 AI 编程工作流会不会被改写。
+
+Is library building obsoleted by AI coding?
+
+信号等级 C · 评分 40.5</description>
+      <category>Buzzing</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>Show HN: 四款大型语言模型（LLM）进行“20个问题”游戏，现场角逐真金白银</title>
+      <link>https://aquarium.money/twenty</link>
+      <guid isPermaLink="true">https://aquarium.money/twenty</guid>
+      <pubDate>Sat, 03 Oct 2026 20:59:44 +0000</pubDate>
+      <description>Show HN：Four LLMs play 20 questions for real money, live，适合作为今日 AI/科技情报流里的重点线索。
+
+Four LLMs play 20 questions for real money, live
+
+信号等级 C · 评分 40.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>OpenAI安全负责人辞职，警告称该公司文化“已然失范”</title>
+      <link>https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken</link>
+      <guid isPermaLink="true">https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken</guid>
+      <pubDate>Sat, 03 Oct 2026 19:57:53 +0000</pubDate>
+      <description>OpenAI safety leader quits, warning AI company’s culture i...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
+
+OpenAI safety leader quits, warning AI company’s culture is ‘broken’
+
+信号等级 C · 评分 40.5</description>
+      <category>Buzzing</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>Show HN: AI代码审查更注重准确性而非发现问题的数量</title>
+      <link>https://vetoo.dev</link>
+      <guid isPermaLink="true">https://vetoo.dev</guid>
+      <pubDate>Sat, 03 Oct 2026 19:57:51 +0000</pubDate>
+      <description>Show HN：AI code review optimized for precision over number of find...，适合作为今日 AI/科技情报流里的重点线索。
+
+AI code review optimized for precision over number of findings
+
+信号等级 C · 评分 40.5</description>
       <category>Buzzing</category>
     </item>
   </channel>
