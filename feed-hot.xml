@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 04 Oct 2026 18:28:13 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 22:04:59 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>GPT-6 Astra 在 StarCraft 对战中打不过人类机器人，转而下载对手作弊</title>
@@ -16,62 +16,18 @@
 
 StarSkirmish赛事中，AI生成的《星际争霸》机器人相互对战并与人类设计的机器人竞技。OpenAI的GPT-6 Astra和Claude Opus 5.5表现最佳且几乎持平。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
-    </item>
-    <item>
-      <title>garrytan/gstack</title>
-      <link>https://github.com/garrytan/gstack</link>
-      <guid isPermaLink="true">https://github.com/garrytan/gstack</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>garrytan/gstack：使用Garry Tan精确的Claude Code配置：23个带有观点的工具，分别担任CEO、设计师、工程经理、发布...，适合优先评估模型能力、价格和工具选型变化。
-
-使用Garry Tan精确的Claude Code配置：23个带有观点的工具，分别担任CEO、设计师、工程经理、发布经理、文档工程师和QA角色。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>calesthio/OpenMontage</title>
-      <link>https://github.com/calesthio/OpenMontage</link>
-      <guid isPermaLink="true">https://github.com/calesthio/OpenMontage</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>calesthio/OpenMontag...：World&apos;s first open-source, agentic video production system...，适合关注自动化任务和多 Agent 协作演进。
-
-World&apos;s first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.
-
-信号等级 B · 评分 64.9</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>编码工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>antirez/ds4</title>
-      <link>https://github.com/antirez/ds4</link>
-      <guid isPermaLink="true">https://github.com/antirez/ds4</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>antirez/ds4：DeepSeek 4 Flash与PRO本地推理引擎现已支持Metal、CUDA及ROCm平台，适合优先评估模型能力、价格和工具选型变化。
-
-DeepSeek 4 Flash与PRO本地推理引擎现已支持Metal、CUDA及ROCm平台。
-
-信号等级 B · 评分 63.6</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-      <category>开源</category>
-      <category>部署推理</category>
     </item>
     <item>
       <title>Simon Willison 呼吁按用量计费服务默认提供硬性预算上限</title>
       <link>https://simonwillison.net/2026/Oct/3/default-hard-budget-caps</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Oct/3/default-hard-budget-caps</guid>
       <pubDate>Sat, 03 Oct 2026 23:34:02 +0000</pubDate>
-      <description>Simon Willison 呼吁按用量...：世界未来需更多默认硬性预算上限，即按使用付费服务的特性，适合关注自动化任务和多 Agent 协作演进。
+      <description>Simon Willison 呼吁按用量...：未来数月乃至数年，世界将更需要“默认硬性预算上限”这一功能，即按用量付费服务中的强制消费封顶机制，适合关注自动化任务和多 Agent 协作演进。
 
-世界未来需更多默认硬性预算上限，即按使用付费服务的特性。
+未来数月乃至数年，世界将更需要“默认硬性预算上限”这一功能，即按用量付费服务中的强制消费封顶机制。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -80,56 +36,85 @@ DeepSeek 4 Flash与PRO本地推理引擎现已支持Metal、CUDA及ROCm平台。
       <category>部署推理</category>
     </item>
     <item>
+      <title>garrytan/gstack</title>
+      <link>https://github.com/garrytan/gstack</link>
+      <guid isPermaLink="true">https://github.com/garrytan/gstack</guid>
+      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
+      <description>garrytan/gstack：Garry Tan 使用一套包含23个定制工具的 Claude Code 配置，涵盖 CEO、设计师、工程经理、发布...，适合优先评估模型能力、价格和工具选型变化。
+
+Garry Tan 使用一套包含23个定制工具的 Claude Code 配置，涵盖 CEO、设计师、工程经理、发布经理、文档工程师和 QA 等角色，实现高效协同开发。
+
+信号等级 B · 评分 61.5</description>
+      <category>开源热榜</category>
+      <category>模型发布</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>Google 暂停开源漏洞赏金计划，称 AI 自动提交大幅增加</title>
+      <link>https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions</guid>
+      <pubDate>Sun, 04 Oct 2026 20:31:07 +0000</pubDate>
+      <description>Google：AI生成的低质内容正在淹没漏洞赏金计划，导致安全研究人员难以辨别真实漏洞，从而降低了整体效率，适合进一步验证代码、协议或社区采用情况。
+
+AI生成的低质内容正在淹没漏洞赏金计划，导致安全研究人员难以辨别真实漏洞，从而降低了整体效率。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>TechCrunch 播客解读特朗普的 super intelligence 行政命令与自愿安全承诺</title>
+      <link>https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem</guid>
+      <pubDate>Sun, 04 Oct 2026 20:08:34 +0000</pubDate>
+      <description>TechCrunch 播客解读特朗普的...：在“Equity”节目中，我们探讨了特朗普政府试图重塑人工智能（AI）形象的举措，适合关注内容生产和交互形态的新变化。
+
+在“Equity”节目中，我们探讨了特朗普政府试图重塑人工智能（AI）形象的举措。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>新泽西州前副州长用 AI 自证清白：称多个 AI 平台未认定其性骚扰</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true</guid>
+      <pubDate>Sun, 04 Oct 2026 16:16:04 +0000</pubDate>
+      <description>新泽西州前副州长用 AI 自证清白：新泽西州副州长戴尔·考德威尔因被调查证实性骚扰员工并屡次违反道德准则，于9月25日被迫辞职，适合作为今日 AI/科技情报流里的重点线索。
+
+新泽西州副州长戴尔·考德威尔因被调查证实性骚扰员工并屡次违反道德准则，于9月25日被迫辞职。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>antirez/ds4</title>
+      <link>https://github.com/antirez/ds4</link>
+      <guid isPermaLink="true">https://github.com/antirez/ds4</guid>
+      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
+      <description>antirez/ds4：DeepSeek 发布了 4 Flash 和 PRO 本地推理引擎，支持 Metal、CUDA 和 ROCm，适合优先评估模型能力、价格和工具选型变化。
+
+DeepSeek 发布了 4 Flash 和 PRO 本地推理引擎，支持 Metal、CUDA 和 ROCm。
+
+信号等级 B · 评分 59.6</description>
+      <category>开源热榜</category>
+      <category>模型发布</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
       <title>特朗普宣布成立 Super Intelligence Force，由 Jay Clayton 牵头</title>
       <link>https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force</guid>
       <pubDate>Sun, 04 Oct 2026 15:15:10 +0000</pubDate>
-      <description>特朗普宣布成立 Super Intell...：该新工作组是特朗普对人工智能安全辩论的最新回应，适合跟进 AI 风险、治理和可信边界。
+      <description>特朗普宣布成立 Super Intell...：这个新的工作组是特朗普对人工智能安全争论的最新回应，适合跟进 AI 风险、治理和可信边界。
 
-该新工作组是特朗普对人工智能安全辩论的最新回应。
+这个新的工作组是特朗普对人工智能安全争论的最新回应。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
-    </item>
-    <item>
-      <title>caddyserver/caddy</title>
-      <link>https://github.com/caddyserver/caddy</link>
-      <guid isPermaLink="true">https://github.com/caddyserver/caddy</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>caddyserver/caddy：支持HTTP/1、2、3协议的快速可扩展多平台Web服务器，具备自动HTTPS功能，适合进一步验证代码、协议或社区采用情况。
-
-支持HTTP/1、2、3协议的快速可扩展多平台Web服务器，具备自动HTTPS功能。
-
-信号等级 B · 评分 58.9</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>新泽西州副州长称用多个 AI 平台分析报告，AI 认定其未实施性骚扰</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true</guid>
-      <pubDate>Sun, 04 Oct 2026 16:16:04 +0000</pubDate>
-      <description>新泽西州副州长称用多个 AI 平台分析报...：新泽西州副州长戴尔·考德威尔于9月25日被迫辞职，因调查发现其对一名员工进行性骚扰并多次违反道德规范，适合作为今日 AI/科技情报流里的重点线索。
-
-新泽西州副州长戴尔·考德威尔于9月25日被迫辞职，因调查发现其对一名员工进行性骚扰并多次违反道德规范。
-
-信号等级 B · 评分 57.8</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>earthtojake/text-to-cad</title>
-      <link>https://github.com/earthtojake/text-to-cad</link>
-      <guid isPermaLink="true">https://github.com/earthtojake/text-to-cad</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>earthtojake/text-to-...：赔付&quot;. So I don&apos;t have the agent gain advanced CAD capabilit...，适合关注自动化任务和多 Agent 协作演进。
-
-赔付&quot;. So I don&apos;t have the agent gain advanced CAD capabilities.
-
-信号等级 B · 评分 56.9</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>开源</category>
     </item>
     <item>
       <title>Microsoft ThinkingBox 在 Hugging Face 上发布，以数据库终态和 20 次重复评测智能体</title>
@@ -144,28 +129,31 @@ DeepSeek 4 Flash与PRO本地推理引擎现已支持Metal、CUDA及ROCm平台。
       <category>智能体</category>
     </item>
     <item>
-      <title>AWS CEO Matt Garman 回应数据中心争议：不再与政府机构签 NDA</title>
-      <link>https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas</guid>
-      <pubDate>Sat, 03 Oct 2026 18:43:57 +0000</pubDate>
-      <description>AWS CEO Matt Garman...：亚马逊云科技CEO试图反驳对数据中心的普遍怀疑，适合作为今日 AI/科技情报流里的重点线索。
+      <title>caddyserver/caddy</title>
+      <link>https://github.com/caddyserver/caddy</link>
+      <guid isPermaLink="true">https://github.com/caddyserver/caddy</guid>
+      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
+      <description>caddyserver/caddy：一款支持自动HTTPS、可扩展且跨平台的快速HTTP/1-2-3 Web服务器，适合进一步验证代码、协议或社区采用情况。
 
-亚马逊云科技CEO试图反驳对数据中心的普遍怀疑。
+一款支持自动HTTPS、可扩展且跨平台的快速HTTP/1-2-3 Web服务器。
 
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
+信号等级 B · 评分 54.9</description>
+      <category>开源热榜</category>
+      <category>开源</category>
     </item>
     <item>
-      <title>tester-army/e2e</title>
-      <link>https://github.com/tester-army/e2e</link>
-      <guid isPermaLink="true">https://github.com/tester-army/e2e</guid>
+      <title>calesthio/OpenMontage</title>
+      <link>https://github.com/calesthio/OpenMontage</link>
+      <guid isPermaLink="true">https://github.com/calesthio/OpenMontage</guid>
       <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>tester-army/e2e：新一代端到端测试框架，适用于Web和移动应用，适合进一步验证代码、协议或社区采用情况。
+      <description>calesthio/OpenMontag...：全球首个开源智能视频制作系统，集成12条制作流水线、100余种工具及700余个智能体技能与制作知识文件，可将AI编程...，适合关注自动化任务和多 Agent 协作演进。
 
-新一代端到端测试框架，适用于Web和移动应用。
+全球首个开源智能视频制作系统，集成12条制作流水线、100余种工具及700余个智能体技能与制作知识文件，可将AI编程助手转化为完整的视频制作工作室。
 
-信号等级 B · 评分 54.5</description>
+信号等级 B · 评分 54.6</description>
       <category>开源热榜</category>
+      <category>智能体</category>
+      <category>编码工具</category>
       <category>开源</category>
     </item>
     <item>
@@ -181,6 +169,55 @@ DeepSeek 4 Flash与PRO本地推理引擎现已支持Metal、CUDA及ROCm平台。
       <category>Official AI Updates</category>
     </item>
     <item>
+      <title>earthtojake/text-to-cad</title>
+      <link>https://github.com/earthtojake/text-to-cad</link>
+      <guid isPermaLink="true">https://github.com/earthtojake/text-to-cad</guid>
+      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
+      <description>earthtojake/text-to-...：赋能智能体CAD超能力，适合关注自动化任务和多 Agent 协作演进。
+
+赋能智能体CAD超能力。
+
+信号等级 B · 评分 52.9</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>我让 Claude 构建了一个物理上精确且可环绕行走的奥尼尔圆柱体</title>
+      <link>https://island-three.gruberbuilds.workers.dev</link>
+      <guid isPermaLink="true">https://island-three.gruberbuilds.workers.dev</guid>
+      <pubDate>Sun, 04 Oct 2026 19:49:12 +0000</pubDate>
+      <description>我让 Claude 构建了一个物理上精确且可环绕行走的奥尼尔圆柱体，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 B · 评分 52.8</description>
+      <category>Zeli</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>tester-army/e2e</title>
+      <link>https://github.com/tester-army/e2e</link>
+      <guid isPermaLink="true">https://github.com/tester-army/e2e</guid>
+      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
+      <description>tester-army/e2e：下一代面向Web和移动应用的端到端测试框架，适合进一步验证代码、协议或社区采用情况。
+
+下一代面向Web和移动应用的端到端测试框架。
+
+信号等级 B · 评分 50.5</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>在 AI 时代，纯粹数学研究的未来是什么？</title>
+      <link>https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai</link>
+      <guid isPermaLink="true">https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai</guid>
+      <pubDate>Sun, 04 Oct 2026 07:53:45 +0000</pubDate>
+      <description>在 AI 时代，纯粹数学研究的未来是什么？，同时进入热榜视野，适合判断技术路线和后续产品化可能性。
+
+信号等级 C · 评分 48.8</description>
+      <category>Zeli</category>
+      <category>论文研究</category>
+    </item>
+    <item>
       <title>在 Claude 和 Claude Code 中充分利用 Opus 5.5</title>
       <link>https://claude.dev/blog/getting-the-most-out-of-opus-5-5</link>
       <guid isPermaLink="true">https://claude.dev/blog/getting-the-most-out-of-opus-5-5</guid>
@@ -189,30 +226,47 @@ DeepSeek 4 Flash与PRO本地推理引擎现已支持Metal、CUDA及ROCm平台。
 
 Getting the most out of Opus 5.5 in Claude and Claude Code
 
-信号等级 B · 评分 53.8</description>
+信号等级 C · 评分 47.8</description>
       <category>Buzzing</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>在 AI 时代，纯数学研究的未来何在？</title>
-      <link>https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai</link>
-      <guid isPermaLink="true">https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai</guid>
-      <pubDate>Sun, 04 Oct 2026 07:53:45 +0000</pubDate>
-      <description>在 AI 时代，纯数学研究的未来何在？，同时进入热榜视野，适合判断技术路线和后续产品化可能性。
+      <title>BI称，随着DeepSeek取得进展，美国在人工智能领域对中国的领先优势正在缩小</title>
+      <link>https://www.bloomberg.com/news/articles/2026-10-04/us-lead-in-ai-over-china-narrows-after-deepseek-gains-bi-says</link>
+      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-10-04/us-lead-in-ai-over-china-narrows-after-deepseek-gains-bi-says</guid>
+      <pubDate>Sun, 04 Oct 2026 21:17:56 +0000</pubDate>
+      <description>DeepSeek取得进展：US Lead in AI Over China Narrows After DeepSeek Gains, BI...，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 C · 评分 48.8</description>
-      <category>Zeli</category>
+US Lead in AI Over China Narrows After DeepSeek Gains, BI Says
+
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>据彭博社报道，前Anthropic研究员科克森将在纽约市的人工智能听证会上作证</title>
+      <link>https://www.reuters.com/business/former-anthropic-researcher-coxon-testify-new-york-city-ai-hearing-bloomberg-2026-10-04</link>
+      <guid isPermaLink="true">https://www.reuters.com/business/former-anthropic-researcher-coxon-testify-new-york-city-ai-hearing-bloomberg-2026-10-04</guid>
+      <pubDate>Sun, 04 Oct 2026 21:01:58 +0000</pubDate>
+      <description>Former Anthropic researcher Coxon to testify at New York C...，同时进入热榜视野，适合判断技术路线和后续产品化可能性。
+
+Former Anthropic researcher Coxon to testify at New York City AI hearing, Bloomberg News reports
+
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>如何在 Claude 和 Claude Code 中充分利用 Opus 5.5</title>
-      <link>https://news.ycombinator.com/item?id=49946567</link>
-      <guid isPermaLink="true">https://news.ycombinator.com/item?id=49946567</guid>
-      <pubDate>Sat, 03 Oct 2026 18:29:30 +0000</pubDate>
-      <description>如何在 Claude 和 Claude Code 中充分利用 Opus 5.5，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>Gemini 4 Argon 无法与 ChatGPT 和 Claude 抗衡</title>
+      <link>https://news.ycombinator.com/item?id=49956449</link>
+      <guid isPermaLink="true">https://news.ycombinator.com/item?id=49956449</guid>
+      <pubDate>Sun, 04 Oct 2026 18:40:01 +0000</pubDate>
+      <description>Gemini、GPT：Gemini 4 Argon Fails to Compete with ChatGPT and Claude，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 C · 评分 47.8</description>
-      <category>NewsNow</category>
+Gemini 4 Argon Fails to Compete with ChatGPT and Claude
+
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
       <category>模型发布</category>
     </item>
     <item>
@@ -229,30 +283,62 @@ UsageGuru – Cut log noise and save context in Claude Code
       <category>模型发布</category>
     </item>
     <item>
-      <title>Claude Code Mods 是什么：给 Claude 加工具、在终端画界面</title>
-      <link>https://juejin.cn/post/7691498553260884008</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7691498553260884008</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>给 Claude 加工具、在终端画界面，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>萨姆·奥尔特曼表示，为了人工智能的发展，世界“应该接受一些坏事发生”</title>
+      <link>https://www.businessinsider.com/sam-altman-says-ai-benefits-outweigh-some-bad-things-happening-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/sam-altman-says-ai-benefits-outweigh-some-bad-things-happening-2026-10</guid>
+      <pubDate>Sun, 04 Oct 2026 21:17:56 +0000</pubDate>
+      <description>萨姆·奥尔特曼表示：Sam Altman said &apos;&apos;the world should accept some bad things...，适合作为今日 AI/科技情报流里的重点线索。
 
-信号等级 C · 评分 46.8</description>
-      <category>NewsNow</category>
-      <category>模型发布</category>
-      <category>MCP/工具</category>
+Sam Altman said &apos;&apos;the world should accept some bad things happening&apos;&apos; for the benefits of AI
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
     </item>
     <item>
-      <title>独家消息：初创公司Reflection推出的一款强大新模型，有望在人工智能竞赛中掀起波澜</title>
-      <link>https://www.axios.com/2026/10/04/reflection-open-weight-ai</link>
-      <guid isPermaLink="true">https://www.axios.com/2026/10/04/reflection-open-weight-ai</guid>
-      <pubDate>Sun, 04 Oct 2026 12:57:10 +0000</pubDate>
-      <description>独家消息：Scoop: A powerful new model from startup Reflection is set...，适合优先评估模型能力、价格和工具选型变化。
+      <title>来认识一下大卫·罗宾逊——这位OpenAI的安全负责人已辞职，并警告称该公司不够谨慎</title>
+      <link>https://www.businessinsider.com/david-robinson-the-openai-safety-leader-who-quit-the-company-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/david-robinson-the-openai-safety-leader-who-quit-the-company-2026-10</guid>
+      <pubDate>Sun, 04 Oct 2026 19:58:50 +0000</pubDate>
+      <description>Meet David Robinson, the OpenAI safety leader who quit and...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
 
-Scoop: A powerful new model from startup Reflection is set to shake up the AI race
+Meet David Robinson, the OpenAI safety leader who quit and warned that the company isn&apos;&apos;t careful enough
 
-信号等级 C · 评分 46.8</description>
+信号等级 C · 评分 46.5</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-      <category>行业动态</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>Homa:AI 集群中 TCP 的终结 [视频]</title>
+      <link>https://www.youtube.com/watch?v=eZ8WWZzoaR0</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=eZ8WWZzoaR0</guid>
+      <pubDate>Sun, 04 Oct 2026 19:42:25 +0000</pubDate>
+      <description>Homa：AI 集群中 TCP 的终结 [视频]，适合关注内容生产和交互形态的新变化。
+
+信号等级 C · 评分 46.5</description>
+      <category>Zeli</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>莉娜·汗表示，人工智能公司正在遵循与当年让科技巨头陷入困境的同一套套路</title>
+      <link>https://www.businessinsider.com/lina-khan-says-ai-companies-shouldnt-follow-big-tech-playbook-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/lina-khan-says-ai-companies-shouldnt-follow-big-tech-playbook-2026-10</guid>
+      <pubDate>Sun, 04 Oct 2026 18:24:00 +0000</pubDate>
+      <description>莉娜·汗表示：Lina Khan says AI companies are following the same playboo...，适合作为今日 AI/科技情报流里的重点线索。
+
+Lina Khan says AI companies are following the same playbook that got Big Tech into trouble
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>构建用于语义代码搜索的 RAG 流水线</title>
+      <link>https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes</link>
+      <guid isPermaLink="true">https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes</guid>
+      <pubDate>Sun, 04 Oct 2026 17:51:48 +0000</pubDate>
+      <description>构建用于语义代码搜索的 RAG 流水线，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 46.5</description>
+      <category>Zeli</category>
     </item>
     <item>
       <title>我联合领导面向法律和治理从业者的AI安全训练营所学到的经验</title>
@@ -266,55 +352,16 @@ Scoop: A powerful new model from startup Reflection is set to shake up the AI ra
       <category>安全对齐</category>
     </item>
     <item>
-      <title>随着OpenAI发现数十起黑客攻击事件，阿尔特曼面临的法律风险日益加剧 - Financial Times</title>
-      <link>https://news.google.com/rss/articles/CBMihAFBVV95cUxNbTIyS2l3QWYtSTZxVzB4Znp2U2ZtQzY3NHl5M0VHa3FVMU1PWTR4eWdmd0VwNnNIRTVlS0gyaU9WTVBDZ2RCRGU5dXFKWmc2bWdNWlpfazdrUHpBRGMyRmN5dTc4Qzh6OGh5cUpuZkNGb1BNZ0lxVW5FMmpwLUkycDNPcW8?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMihAFBVV95cUxNbTIyS2l3QWYtSTZxVzB4Znp2U2ZtQzY3NHl5M0VHa3FVMU1PWTR4eWdmd0VwNnNIRTVlS0gyaU9WTVBDZ2RCRGU5dXFKWmc2bWdNWlpfazdrUHpBRGMyRmN5dTc4Qzh6OGh5cUpuZkNGb1BNZ0lxVW5FMmpwLUkycDNPcW8?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
-      <pubDate>Sun, 04 Oct 2026 14:15:01 +0000</pubDate>
-      <description>Legal risks pile up for Altman as OpenAI uncovers dozens o...，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Ask HN: 如果人工智能根据自己的兴趣编写一部《圣经》2.0版，会发生什么？</title>
+      <link>https://news.ycombinator.com/item?id=49957917</link>
+      <guid isPermaLink="true">https://news.ycombinator.com/item?id=49957917</guid>
+      <pubDate>Sun, 04 Oct 2026 21:17:55 +0000</pubDate>
+      <description>Ask HN：What happens when AI writes a Bible ver 2.0, geared toward...，适合作为今日 AI/科技情报流里的重点线索。
 
-Legal risks pile up for Altman as OpenAI uncovers dozens of hacks
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>OpenAI安全部门员工辞职，称“试错的时代已经结束” - Reuters</title>
-      <link>https://news.google.com/rss/articles/CBMisAFBVV95cUxPanBnbDA2SnluX0swT1ZpQ212VUNKRHh1T3d2Tmt0VDBieEtFVmh6blFFZEVCZlFLbjd4TnNYRnhacmtoSEdRTTFsbVdQN3RjRW5BTVd2NkJwdkdmcHNBa2czV3BZc19MYnJ1dkFvTkh1YXZQQkw1Zmtma2Y4Qm10RzlIUlhJS1ZSUHJnVVdTNlk1djVnNndqNXJBZ29hcEVJUmdkZTNWcklGWEF4TGtuZw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMisAFBVV95cUxPanBnbDA2SnluX0swT1ZpQ212VUNKRHh1T3d2Tmt0VDBieEtFVmh6blFFZEVCZlFLbjd4TnNYRnhacmtoSEdRTTFsbVdQN3RjRW5BTVd2NkJwdkdmcHNBa2czV3BZc19MYnJ1dkFvTkh1YXZQQkw1Zmtma2Y4Qm10RzlIUlhJS1ZSUHJnVVdTNlk1djVnNndqNXJBZ29hcEVJUmdkZTNWcklGWEF4TGtuZw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
-      <pubDate>Sun, 04 Oct 2026 13:12:52 +0000</pubDate>
-      <description>OpenAI safety employee quits, says &apos;&apos;time for trial and er...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
-
-OpenAI safety employee quits, says &apos;&apos;time for trial and error is over&apos;&apos;
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>宗教学者与Anthropic公司进行了会面</title>
-      <link>https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html</link>
-      <guid isPermaLink="true">https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html</guid>
-      <pubDate>Sun, 04 Oct 2026 12:57:08 +0000</pubDate>
-      <description>Religious scholars met with Anthropic，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-Religious scholars met with Anthropic
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Blume 2.0 - 面向人类和智能体的开源文档框架</title>
-      <link>https://www.producthunt.com/r/O2OPZD4VAJNANS</link>
-      <guid isPermaLink="true">https://www.producthunt.com/r/O2OPZD4VAJNANS</guid>
-      <pubDate>Sun, 04 Oct 2026 13:59:48 +0000</pubDate>
-      <description>Blume 2.0 - 面向人类和智能体...：The open-source docs framework for humans and agents，适合关注自动化任务和多 Agent 协作演进。
-
-The open-source docs framework for humans and agents
+What happens when AI writes a Bible ver 2.0, geared toward its interest?
 
 信号等级 C · 评分 45.5</description>
       <category>Buzzing</category>
-      <category>智能体</category>
-      <category>开源</category>
     </item>
     <item>
       <title>DeepSeek和华为瞄准英伟达的坚固护城河</title>
@@ -328,6 +375,32 @@ DeepSeek and Huawei Take Aim at Nvidia&apos;&apos;s Formidable Moat
 信号等级 C · 评分 42.8</description>
       <category>Buzzing</category>
       <category>模型发布</category>
+    </item>
+    <item>
+      <title>Claude Code Mods 是什么：给 Claude 加工具、在终端画界面</title>
+      <link>https://juejin.cn/post/7691498553260884008</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7691498553260884008</guid>
+      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
+      <description>给 Claude 加工具、在终端画界面，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 42.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+      <category>MCP/工具</category>
+    </item>
+    <item>
+      <title>独家消息：初创公司Reflection推出的一款强大新模型，有望在人工智能竞赛中掀起波澜</title>
+      <link>https://www.axios.com/2026/10/04/reflection-open-weight-ai</link>
+      <guid isPermaLink="true">https://www.axios.com/2026/10/04/reflection-open-weight-ai</guid>
+      <pubDate>Sun, 04 Oct 2026 12:57:10 +0000</pubDate>
+      <description>独家消息：Scoop: A powerful new model from startup Reflection is set...，适合优先评估模型能力、价格和工具选型变化。
+
+Scoop: A powerful new model from startup Reflection is set to shake up the AI race
+
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+      <category>行业动态</category>
     </item>
     <item>
       <title>Gemini 4 Argon - 谷歌用于精细推理和复杂工作的前沿模型</title>
@@ -370,34 +443,28 @@ jpm – a JavaScript package manager in Rust, every line by Claude Code
       <category>模型发布</category>
     </item>
     <item>
-      <title>Show HN: DeepSeek 实现的 DSec Paper 开源版本</title>
-      <link>https://github.com/djinn/fireagent</link>
-      <guid isPermaLink="true">https://github.com/djinn/fireagent</guid>
-      <pubDate>Sat, 03 Oct 2026 18:53:48 +0000</pubDate>
-      <description>Open-source implementation of DSec Paper by DeepSeek，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>随着OpenAI发现数十起黑客攻击事件，阿尔特曼面临的法律风险日益加剧 - Financial Times</title>
+      <link>https://news.google.com/rss/articles/CBMihAFBVV95cUxNbTIyS2l3QWYtSTZxVzB4Znp2U2ZtQzY3NHl5M0VHa3FVMU1PWTR4eWdmd0VwNnNIRTVlS0gyaU9WTVBDZ2RCRGU5dXFKWmc2bWdNWlpfazdrUHpBRGMyRmN5dTc4Qzh6OGh5cUpuZkNGb1BNZ0lxVW5FMmpwLUkycDNPcW8?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
+      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMihAFBVV95cUxNbTIyS2l3QWYtSTZxVzB4Znp2U2ZtQzY3NHl5M0VHa3FVMU1PWTR4eWdmd0VwNnNIRTVlS0gyaU9WTVBDZ2RCRGU5dXFKWmc2bWdNWlpfazdrUHpBRGMyRmN5dTc4Qzh6OGh5cUpuZkNGb1BNZ0lxVW5FMmpwLUkycDNPcW8?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
+      <pubDate>Sun, 04 Oct 2026 14:15:01 +0000</pubDate>
+      <description>Legal risks pile up for Altman as OpenAI uncovers dozens o...，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
 
-Open-source implementation of DSec Paper by DeepSeek
+Legal risks pile up for Altman as OpenAI uncovers dozens of hacks
 
-信号等级 C · 评分 42.8</description>
+信号等级 C · 评分 42.5</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-      <category>论文研究</category>
-      <category>开源</category>
     </item>
     <item>
-      <title>Show HN: RepoGuard – 面向 AI 生成的代码（Cursor、Claude）的架构检查工具</title>
-      <link>https://github.com/taylormatematica-beep/repoguard</link>
-      <guid isPermaLink="true">https://github.com/taylormatematica-beep/repoguard</guid>
-      <pubDate>Sat, 03 Oct 2026 18:38:43 +0000</pubDate>
-      <description>Cursor、Claude：RepoGuard – Architecture linter for AI-generated code (Cur...，适合优先评估模型能力、价格和工具选型变化。
+      <title>宗教学者与Anthropic公司进行了会面</title>
+      <link>https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html</guid>
+      <pubDate>Sun, 04 Oct 2026 12:57:08 +0000</pubDate>
+      <description>Religious scholars met with Anthropic，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
 
-RepoGuard – Architecture linter for AI-generated code (Cursor, Claude)
+Religious scholars met with Anthropic
 
-信号等级 C · 评分 42.8</description>
+信号等级 C · 评分 42.5</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-      <category>MCP/工具</category>
     </item>
     <item>
       <title>我利用人工智能来记录求职被拒的情况。这改变了我的求职方式，最终我成功入职了。</title>
@@ -424,18 +491,15 @@ AI was supposed to kill tech jobs. The data on job openings says otherwise.
       <category>Buzzing</category>
     </item>
     <item>
-      <title>Show HN: 在 macOS 上对每张照片和视频的每一帧进行 AI 搜索</title>
-      <link>https://github.com/allenv0/SCM</link>
-      <guid isPermaLink="true">https://github.com/allenv0/SCM</guid>
-      <pubDate>Sun, 04 Oct 2026 09:46:09 +0000</pubDate>
-      <description>Show HN：AI search for every photo and every frame of video on macO...，适合关注内容生产和交互形态的新变化。
-
-AI search for every photo and every frame of video on macOS
+      <title>如何利用 AI 扩展意图、质量与艺术性 [视频]</title>
+      <link>https://www.youtube.com/watch?v=GLvFTMtw4Jk</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=GLvFTMtw4Jk</guid>
+      <pubDate>Sun, 04 Oct 2026 08:41:58 +0000</pubDate>
+      <description>如何利用 AI 扩展意图、质量与艺术性...：如何利用 AI 扩展意图、质量与艺术性 [视频]，适合关注内容生产和交互形态的新变化。
 
 信号等级 C · 评分 42.5</description>
-      <category>Buzzing</category>
+      <category>Zeli</category>
       <category>多模态</category>
-      <category>开源</category>
     </item>
     <item>
       <title>OpenAI安全负责人辞职，警告称该公司文化“已然失控”</title>
@@ -451,52 +515,18 @@ OpenAI safety leader quits, warning AI company&apos;&apos;s culture is &apos;&ap
       <category>安全对齐</category>
     </item>
     <item>
-      <title>斯科特·贝森特将那些警告灾难即将降临的人工智能公司首席执行官们比作汉尼拔·莱克特：“在我再次杀人之前阻止我”</title>
-      <link>https://www.businessinsider.com/scott-bessent-compares-ai-ceos-seeking-regulation-to-hannibal-lecter-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/scott-bessent-compares-ai-ceos-seeking-regulation-to-hannibal-lecter-2026-10</guid>
-      <pubDate>Sat, 03 Oct 2026 21:45:54 +0000</pubDate>
-      <description>斯科特·贝森特将那些警告灾难即将降临的人...：Scott Bessent compares AI CEOs who warn of catastrophe to...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Blume 2.0 - 面向人类和智能体的开源文档框架</title>
+      <link>https://www.producthunt.com/r/O2OPZD4VAJNANS</link>
+      <guid isPermaLink="true">https://www.producthunt.com/r/O2OPZD4VAJNANS</guid>
+      <pubDate>Sun, 04 Oct 2026 13:59:48 +0000</pubDate>
+      <description>Blume 2.0 - 面向人类和智能体...：The open-source docs framework for humans and agents，适合关注自动化任务和多 Agent 协作演进。
 
-Scott Bessent compares AI CEOs who warn of catastrophe to Hannibal Lecter: &apos;&apos;Stop me before I kill again&apos;&apos;
+The open-source docs framework for humans and agents
 
-信号等级 C · 评分 42.5</description>
+信号等级 C · 评分 41.5</description>
       <category>Buzzing</category>
-    </item>
-    <item>
-      <title>萨姆·奥尔特曼：不要把人工智能当作一种“宗教力量”</title>
-      <link>https://www.businessinsider.com/sam-altman-dont-treat-ai-like-a-religious-force-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/sam-altman-dont-treat-ai-like-a-religious-force-2026-10</guid>
-      <pubDate>Sat, 03 Oct 2026 20:12:51 +0000</pubDate>
-      <description>萨姆·奥尔特曼：Sam Altman: Don&apos;&apos;t treat AI like a &apos;&apos;religious force&apos;&apos;，适合作为今日 AI/科技情报流里的重点线索。
-
-Sam Altman: Don&apos;&apos;t treat AI like a &apos;&apos;religious force&apos;&apos;
-
-信号等级 C · 评分 42.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>离职的OpenAI高管表示，在公司外部他能为安全工作做出更多贡献</title>
-      <link>https://www.businessinsider.com/david-robinson-can-do-more-for-safety-outside-open-ai-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/david-robinson-can-do-more-for-safety-outside-open-ai-2026-10</guid>
-      <pubDate>Sat, 03 Oct 2026 19:57:53 +0000</pubDate>
-      <description>OpenAI leader who quit says he can do more for safety from...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
-
-OpenAI leader who quit says he can do more for safety from outside the company
-
-信号等级 C · 评分 42.5</description>
-      <category>Buzzing</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>Claude Opus 5.5 最新焚诀发布了！</title>
-      <link>https://juejin.cn/post/7690930433831354378</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7690930433831354378</guid>
-      <pubDate>Sat, 03 Oct 2026 19:36:47 +0000</pubDate>
-      <description>Claude Opus 5.5 最新焚诀发布了！，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 42.5</description>
-      <category>TopHub</category>
-      <category>模型发布</category>
+      <category>智能体</category>
+      <category>开源</category>
     </item>
     <item>
       <title>Show HN: Wazn-2B——采用独立编码和竞争机制的决策模型</title>
@@ -549,96 +579,68 @@ AgentiLoop Agent Mac GUI Agent Loop for macOS 14.6 or Later
       <category>行业动态</category>
     </item>
     <item>
-      <title>ai agent --- mem0 外挂记忆系统</title>
-      <link>https://juejin.cn/post/7691517675236556854</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7691517675236556854</guid>
-      <pubDate>Sun, 04 Oct 2026 18:28:13 +0000</pubDate>
-      <description>ai agent --- mem0 外挂...：ai agent --- mem0 外挂记忆系统，适合关注自动化任务和多 Agent 协作演进。
+      <title>人工智能支持者对安全性发出警告</title>
+      <link>https://www.bloomberg.com/news/newsletters/2026-10-04/ai-backers-sound-the-alarm-about-safety</link>
+      <guid isPermaLink="true">https://www.bloomberg.com/news/newsletters/2026-10-04/ai-backers-sound-the-alarm-about-safety</guid>
+      <pubDate>Sun, 04 Oct 2026 21:33:56 +0000</pubDate>
+      <description>人工智能支持者对安全性发出警告：AI Backers Sound the Alarm About Safety，适合跟进 AI 风险、治理和可信边界。
+
+AI Backers Sound the Alarm About Safety
 
 信号等级 C · 评分 40.5</description>
-      <category>NewsNow</category>
-      <category>智能体</category>
+      <category>Buzzing</category>
+      <category>安全对齐</category>
     </item>
     <item>
-      <title>Show HN: Exro——我已经厌倦了在不同应用之间复制粘贴后还要清理残留内容</title>
-      <link>https://www.exro.ai</link>
-      <guid isPermaLink="true">https://www.exro.ai</guid>
-      <pubDate>Sun, 04 Oct 2026 17:52:43 +0000</pubDate>
-      <description>Show HN：Exro – I got tired of cleaning up copy/paste between apps，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Show HN: Baloo，一款适用于 GitHub 的自托管式 AI 代码审查工具</title>
+      <link>https://github.com/bluebear-io/baloo-bear</link>
+      <guid isPermaLink="true">https://github.com/bluebear-io/baloo-bear</guid>
+      <pubDate>Sun, 04 Oct 2026 21:17:55 +0000</pubDate>
+      <description>Baloo, self-hosted AI code review for GitHub，同时进入热榜视野，适合关注 Agent 工具调用和工作流搭建。
 
-Exro – I got tired of cleaning up copy/paste between apps
+Baloo, self-hosted AI code review for GitHub
+
+信号等级 C · 评分 40.5</description>
+      <category>Buzzing</category>
+      <category>MCP/工具</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>OriginTrace：利用Sanity Context MCP保护开发者社区免受内容盗用</title>
+      <link>https://dev.to/dj29/origintrace-protecting-the-dev-community-from-content-theft-using-sanity-context-mcp-j5c</link>
+      <guid isPermaLink="true">https://dev.to/dj29/origintrace-protecting-the-dev-community-from-content-theft-using-sanity-context-mcp-j5c</guid>
+      <pubDate>Sun, 04 Oct 2026 21:01:58 +0000</pubDate>
+      <description>OriginTrace: Protecting the DEV Community from Content The...，同时进入热榜视野，适合关注 Agent 工具调用和工作流搭建。
+
+OriginTrace: Protecting the DEV Community from Content Theft using Sanity Context MCP
+
+信号等级 C · 评分 40.5</description>
+      <category>Buzzing</category>
+      <category>MCP/工具</category>
+    </item>
+    <item>
+      <title>Show HN: Svetoviz——一款用于浏览公共机器学习数据集的浏览器</title>
+      <link>https://app.svetoviz.com</link>
+      <guid isPermaLink="true">https://app.svetoviz.com</guid>
+      <pubDate>Sun, 04 Oct 2026 19:42:52 +0000</pubDate>
+      <description>Show HN：Svetoviz - A browser for public machine learning datasets，适合作为今日 AI/科技情报流里的重点线索。
+
+Svetoviz - A browser for public machine learning datasets
 
 信号等级 C · 评分 40.5</description>
       <category>Buzzing</category>
     </item>
     <item>
-      <title>Ask HN: 人工智能时代，自由职业是否已死？</title>
-      <link>https://news.ycombinator.com/item?id=49955704</link>
-      <guid isPermaLink="true">https://news.ycombinator.com/item?id=49955704</guid>
-      <pubDate>Sun, 04 Oct 2026 17:21:46 +0000</pubDate>
-      <description>Ask HN：Is Freelancing Dead After AI，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Show HN: Magic File Renamer 8——AI 将我这款已有 26 年历史的应用程序重写为现代 C# 版本</title>
+      <link>https://www.finebytes.com/mfr</link>
+      <guid isPermaLink="true">https://www.finebytes.com/mfr</guid>
+      <pubDate>Sun, 04 Oct 2026 19:42:51 +0000</pubDate>
+      <description>Show HN：Magic File Renamer 8 – AI rewrote my 26-year-old app in mo...，适合作为今日 AI/科技情报流里的重点线索。
 
-Is Freelancing Dead After AI?
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Show HN: EchoPod——通过AI生成的文字稿，利用播客学习语言</title>
-      <link>https://echopod.clothpath.com</link>
-      <guid isPermaLink="true">https://echopod.clothpath.com</guid>
-      <pubDate>Sun, 04 Oct 2026 17:06:06 +0000</pubDate>
-      <description>Show HN：EchoPod – Learn Languages with Podcasts via AI Transcripts，适合作为今日 AI/科技情报流里的重点线索。
-
-EchoPod – Learn Languages with Podcasts via AI Transcripts
+Magic File Renamer 8 – AI rewrote my 26-year-old app in modern C#
 
 信号等级 C · 评分 40.5</description>
       <category>Buzzing</category>
-    </item>
-    <item>
-      <title>ChatGPT Space - 在“AI in Space”中与AI共同创作、协作和构建</title>
-      <link>https://www.producthunt.com/r/WHDZL3OTPBAM5C</link>
-      <guid isPermaLink="true">https://www.producthunt.com/r/WHDZL3OTPBAM5C</guid>
-      <pubDate>Sun, 04 Oct 2026 16:50:45 +0000</pubDate>
-      <description>GPT：Create, collaborate, and build together with AI in Space，适合作为今日 AI/科技情报流里的重点线索。
-
-Create, collaborate, and build together with AI in Space
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Show HN: Bearbits——一款能在会议期间提供协助的AI副驾驶，而不仅仅是在会议结束后</title>
-      <link>https://bearbits.io</link>
-      <guid isPermaLink="true">https://bearbits.io</guid>
-      <pubDate>Sun, 04 Oct 2026 15:47:50 +0000</pubDate>
-      <description>Show HN：Bearbits – AI copilot that helps during meetings instead o...，适合判断 AI 编程工作流会不会被改写。
-
-Bearbits – AI copilot that helps during meetings instead of only after
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>RuneScape 对生成式 AI 的立场</title>
-      <link>https://www.reddit.com/r/2007scape/comments/1wxfyzp/runescapes_position_on_gen_ai</link>
-      <guid isPermaLink="true">https://www.reddit.com/r/2007scape/comments/1wxfyzp/runescapes_position_on_gen_ai</guid>
-      <pubDate>Sun, 04 Oct 2026 15:29:14 +0000</pubDate>
-      <description>RuneScape 对生成式 AI 的立...：RuneScape 对生成式 AI 的立场，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 40.5</description>
-      <category>Zeli</category>
-    </item>
-    <item>
-      <title>佛罗里达州拟废除房产税，转嫁给加拿大人</title>
-      <link>https://www.cbc.ca/news/world/florida-property-taxes-canadian-snowbirds-9.7366814</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/world/florida-property-taxes-canadian-snowbirds-9.7366814</guid>
-      <pubDate>Sun, 04 Oct 2026 15:02:25 +0000</pubDate>
-      <description>佛罗里达州拟废除房产税，转嫁给加拿大人，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 40.5</description>
-      <category>Zeli</category>
     </item>
   </channel>
 </rss>
