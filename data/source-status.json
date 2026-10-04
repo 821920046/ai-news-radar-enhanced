@@ -1,36 +1,28 @@
 {
-  "generated_at": "2026-10-04T02:13:31.926639Z",
+  "generated_at": "2026-10-04T08:57:13.403695Z",
   "sites": [
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 53,
+      "duration_ms": 64,
       "error": "403 Client Error: Forbidden for url: https://r.jina.ai/https://aibreakfast.beehiiv.com/"
     },
     {
       "site_id": "followbuilders",
       "site_name": "Follow Builders",
       "ok": true,
-      "item_count": 37,
-      "duration_ms": 266,
+      "item_count": 27,
+      "duration_ms": 86,
       "error": null
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 52,
-      "duration_ms": 878,
-      "error": null
-    },
-    {
-      "site_id": "bestblogs",
-      "site_name": "BestBlogs",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 2608,
+      "item_count": 48,
+      "duration_ms": 843,
       "error": null
     },
     {
@@ -38,7 +30,15 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 2655,
+      "duration_ms": 2378,
+      "error": null
+    },
+    {
+      "site_id": "bestblogs",
+      "site_name": "BestBlogs",
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 2634,
       "error": null
     },
     {
@@ -46,7 +46,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 3163,
+      "duration_ms": 3067,
       "error": null
     },
     {
@@ -54,7 +54,7 @@
       "site_name": "开源热榜",
       "ok": true,
       "item_count": 30,
-      "duration_ms": 4097,
+      "duration_ms": 4749,
       "error": null
     },
     {
@@ -62,7 +62,7 @@
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 5837,
+      "duration_ms": 5730,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))"
     },
     {
@@ -70,23 +70,23 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 7626,
+      "duration_ms": 8935,
       "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 3031,
-      "duration_ms": 10431,
+      "item_count": 2963,
+      "duration_ms": 9935,
       "error": null
     },
     {
-      "site_id": "aihot",
-      "site_name": "AI HOT",
+      "site_id": "official_ai",
+      "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 500,
-      "duration_ms": 11120,
+      "item_count": 527,
+      "duration_ms": 11717,
       "error": null
     },
     {
@@ -94,32 +94,32 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 129,
-      "duration_ms": 11857,
-      "error": null
-    },
-    {
-      "site_id": "official_ai",
-      "site_name": "Official AI Updates",
-      "ok": true,
-      "item_count": 528,
-      "duration_ms": 16257,
+      "duration_ms": 12132,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 336,
-      "duration_ms": 20899,
+      "item_count": 335,
+      "duration_ms": 21115,
       "error": null
+    },
+    {
+      "site_id": "aihot",
+      "site_name": "AI HOT",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 24950,
+      "error": "525 Server Error: SSL Handshake Failed with Origin Server for url: https://aihot.virxact.com/api/public/items?mode=all&take=100&cursor=eyJhIjoxNzkwOTg3OTk0ODY2LCJpIjoicWh6YW56MzhoZzNuNnl3bWZ4enpkaGh5ciJ9"
     },
     {
       "site_id": "opmlrss",
       "site_name": "OPML RSS",
       "ok": true,
       "partial_failures": 0,
-      "item_count": 51,
-      "duration_ms": 201,
+      "item_count": 48,
+      "duration_ms": 1324,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -129,15 +129,16 @@
       "replaced_feed_count": 0
     }
   ],
-  "successful_sites": 13,
+  "successful_sites": 12,
   "failed_sites": [
     "aibreakfast",
-    "aihubtoday"
+    "aihubtoday",
+    "aihot"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5864,
-  "items_before_topic_filter": 4083,
-  "items_in_24h": 391,
+  "fetched_raw_items": 5277,
+  "items_before_topic_filter": 3840,
+  "items_in_24h": 348,
   "ai_processing": {
     "tldr_items": 0
   },
