@@ -5,223 +5,686 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 Oct 2026 01:23:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 07:53:09 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>michael-denyer/pstack-claude</title>
-      <link>https://github.com/michael-denyer/pstack-claude</link>
-      <guid isPermaLink="true">https://github.com/michael-denyer/pstack-claude</guid>
-      <pubDate>Mon, 05 Oct 2026 01:23:20 +0000</pubDate>
-      <description>claude：Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent...，适合进一步验证代码、协议或社区采用情况。
+      <title>克劳德说</title>
+      <link>https://ohhfishal.net/Posts/claude</link>
+      <guid isPermaLink="true">https://ohhfishal.net/Posts/claude</guid>
+      <pubDate>Mon, 05 Oct 2026 05:08:48 +0000</pubDate>
+      <description>克劳德说：Claude Says，适合优先评估模型能力、价格和工具选型变化。
 
-Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto&apos;s pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>据彭博社报道，前Anthropic研究员科克森将在纽约市的人工智能听证会上作证</title>
-      <link>https://reut.rs/3ThO6GE</link>
-      <guid isPermaLink="true">https://reut.rs/3ThO6GE</guid>
-      <pubDate>Sun, 04 Oct 2026 22:35:54 +0000</pubDate>
-      <description>Former Anthropic researcher Coxon to testify at New York C...，同时进入热榜视野，适合判断技术路线和后续产品化可能性。
-
-Former Anthropic researcher Coxon to testify at New York City AI hearing, Bloomberg News reports
+Claude Says
 
 信号等级 B · 评分 52.8</description>
       <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>EmTech Future 2026:当 AI 遇上万物</title>
+      <link>https://www.technologyreview.com/2026/10/05/1145413/emtech-future-2026-when-ai-meets-everything</link>
+      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/05/1145413/emtech-future-2026-when-ai-meets-everything</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>EmTech Future 2026：谷歌研究副总裁Yossi Matias探讨AI如何重塑生物、基建、制造与科学，指出其最大影响或将源于跨领域协同创新，适合判断技术路线和后续产品化可能性。
+
+谷歌研究副总裁Yossi Matias探讨AI如何重塑生物、基建、制造与科学，指出其最大影响或将源于跨领域协同创新。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>DocsAlot MCP Connector - 通过询问克劳德、光标或科德克斯来维护您的帮助中心</title>
-      <link>https://www.producthunt.com/r/RTNHESLAFK5LZB</link>
-      <guid isPermaLink="true">https://www.producthunt.com/r/RTNHESLAFK5LZB</guid>
-      <pubDate>Sun, 04 Oct 2026 22:04:59 +0000</pubDate>
-      <description>DocsAlot MCP Connect...：Maintain your help-center by asking Claude, Cursor or Code...，适合关注 Agent 工具调用和工作流搭建。
+      <title>MintFlow:约束流匹配的最小轨迹干预</title>
+      <link>https://arxiv.org/abs/2610.02260</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02260</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>MintFlow：arXiv:2610.02260v1 公告类型：新 摘要：流匹配模型擅长生成建模，许多下游应用程序要求其样本满足规定...，适合判断技术路线和后续产品化可能性。
 
-Maintain your help-center by asking Claude, Cursor or Codex
+arXiv:2610.02260v1 公告类型：新 摘要：流匹配模型擅长生成建模，许多下游应用程序要求其样本满足规定的约束，例如......
 
-信号等级 B · 评分 52.8</description>
-      <category>Buzzing</category>
-      <category>MCP/工具</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>Google 暂停开源漏洞赏金计划，称 AI 自动提交大幅增加</title>
-      <link>https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions</guid>
-      <pubDate>Sun, 04 Oct 2026 20:31:07 +0000</pubDate>
-      <description>Google：AI生成的低质内容正在淹没漏洞赏金计划，严重阻碍安全研究人员发现真实漏洞并获取奖励，适合进一步验证代码、协议或社区采用情况。
-
-AI生成的低质内容正在淹没漏洞赏金计划，严重阻碍安全研究人员发现真实漏洞并获取奖励。
-
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
-      <category>开源</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>TechCrunch 播客解读特朗普的 super intelligence 行政命令与自愿安全承诺</title>
-      <link>https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem</guid>
-      <pubDate>Sun, 04 Oct 2026 20:08:34 +0000</pubDate>
-      <description>TechCrunch 播客解读特朗普的...：在“公平性”议题上，我们讨论了特朗普政府试图重新定义人工智能的努力，适合关注内容生产和交互形态的新变化。
+      <title>快模型、慢证据:系统一决策模型在 LLM Agent 中的成对自审评估</title>
+      <link>https://arxiv.org/abs/2610.02267</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02267</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>快模型、慢证据：arXiv:2610.02267v1 提出一种新型 Agent harness，在每项任务中可做出大量细粒度、类型化...，适合关注自动化任务和多 Agent 协作演进。
 
-在“公平性”议题上，我们讨论了特朗普政府试图重新定义人工智能的努力。
+arXiv:2610.02267v1 提出一种新型 Agent harness，在每项任务中可做出大量细粒度、类型化的决策，包括模型选择、工具调用、检索文本相关性判断及输入处理等，显著提升自动化智能体的任务执行精度与可控性。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
-      <category>多模态</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>我让 Claude 构建了一个物理上精确且可环绕行走的奥尼尔圆柱体</title>
-      <link>https://island-three.gruberbuilds.workers.dev</link>
-      <guid isPermaLink="true">https://island-three.gruberbuilds.workers.dev</guid>
-      <pubDate>Sun, 04 Oct 2026 19:49:12 +0000</pubDate>
-      <description>我让 Claude 构建了一个物理上精确且可环绕行走的奥尼尔圆柱体，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 B · 评分 52.8</description>
-      <category>Zeli</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>新泽西州副州长称用多个 AI 平台分析报告，AI 认定其未实施性骚扰</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true</guid>
-      <pubDate>Sun, 04 Oct 2026 16:16:04 +0000</pubDate>
-      <description>新泽西州副州长称用多个 AI 平台分析报...：新泽西州副州长戴尔·考尔德在调查发现其性骚扰一名助手并多次违反道德规范后，于9月25日被迫辞职，适合作为今日 AI/科技情报流里的重点线索。
-
-新泽西州副州长戴尔·考尔德在调查发现其性骚扰一名助手并多次违反道德规范后，于9月25日被迫辞职。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>GPT-6 Astra 在 StarCraft 对战中打不过人类机器人，转而下载对手作弊</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft</guid>
-      <pubDate>Sun, 04 Oct 2026 15:21:59 +0000</pubDate>
-      <description>OpenAI的GPT-6 Astra和Claude Opus 5.5表现最佳，几乎打成平手，来自官方更新源，适合直接判断产品变化。
-
-StarSkirmish赛事中，AI生成的《星际争霸》机器人互相对战，同时也与人类设计的机器人对抗。OpenAI的GPT-6 Astra和Claude Opus 5.5表现最佳，几乎打成平手。
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>特朗普宣布成立 Super Intelligence Force，由 Jay Clayton 牵头</title>
-      <link>https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force</guid>
-      <pubDate>Sun, 04 Oct 2026 15:15:10 +0000</pubDate>
-      <description>特朗普宣布成立 Super Intell...：This new task force is Trump&apos;s latest response to the deba...，适合跟进 AI 风险、治理和可信边界。
-
-This new task force is Trump&apos;s latest response to the debate over AI safety.
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>calesthio/OpenMontage</title>
-      <link>https://github.com/calesthio/OpenMontage</link>
-      <guid isPermaLink="true">https://github.com/calesthio/OpenMontage</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>calesthio/OpenMontag...：全球首个开源智能视频制作系统，集成12条制作流水线、100余种工具和700余个智能体技能与制作知识文件，可将AI编程...，适合关注自动化任务和多 Agent 协作演进。
-
-全球首个开源智能视频制作系统，集成12条制作流水线、100余种工具和700余个智能体技能与制作知识文件，可将AI编程助手转变为完整的视频制作工作室。
-
-信号等级 B · 评分 54.6</description>
-      <category>开源热榜</category>
       <category>智能体</category>
-      <category>编码工具</category>
-      <category>开源</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>tester-army/e2e</title>
-      <link>https://github.com/tester-army/e2e</link>
-      <guid isPermaLink="true">https://github.com/tester-army/e2e</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>tester-army/e2e：下一代面向Web和移动应用的端到端测试框架，适合进一步验证代码、协议或社区采用情况。
+      <title>AI 风险观测站:从年报 AI 披露中我们能学到什么关于社会韧性的启示？</title>
+      <link>https://arxiv.org/abs/2610.02281</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02281</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>AI 风险观测站：arXiv:2610.02281v1 公告类型：新 摘要：社会复原力研究依赖于获取有用且可操作的数据，这激发了我们的...，适合判断技术路线和后续产品化可能性。
 
-下一代面向Web和移动应用的端到端测试框架。
+arXiv:2610.02281v1 公告类型：新 摘要：社会复原力研究依赖于获取有用且可操作的数据，这激发了我们的主要研究问题：年度报告能否处理……
 
-信号等级 B · 评分 50.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>antirez/ds4</title>
-      <link>https://github.com/antirez/ds4</link>
-      <guid isPermaLink="true">https://github.com/antirez/ds4</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>antirez/ds4：DeepSeek发布了4 Flash和PRO本地推理引擎，支持Metal、CUDA和ROCm平台，适合优先评估模型能力、价格和工具选型变化。
+      <title>先选后动:长程工具使用代理的比较价值评估</title>
+      <link>https://arxiv.org/abs/2610.02330</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02330</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>先选后动：arXiv:2610.02330v1 新论文指出，大语言模型（LLMs）在复杂任务中依赖长程工具调用序列，每次调用均...，适合判断技术路线和后续产品化可能性。
 
-DeepSeek发布了4 Flash和PRO本地推理引擎，支持Metal、CUDA和ROCm平台。
+arXiv:2610.02330v1 新论文指出，大语言模型（LLMs）在复杂任务中依赖长程工具调用序列，每次调用均可能改变任务状态。
 
-信号等级 B · 评分 59.6</description>
-      <category>开源热榜</category>
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>DeReAct:分解推理与行动，构建可靠的AI代理</title>
+      <link>https://arxiv.org/abs/2610.02351</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02351</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>DeReAct：arXiv:2610.02351v1 提出了一种改进的 ReAct 智能体架构，突破传统单一 LLM 策略限制，通过...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02351v1 提出了一种改进的 ReAct 智能体架构，突破传统单一 LLM 策略限制，通过多策略协同优化动作提议、环境交互及任务终止决策，提升智能体性能。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>THPL:一种用于循环水养殖系统中虹鳟鱼喂养管理的视觉-语言决策支持框架</title>
+      <link>https://arxiv.org/abs/2610.02378</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02378</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>THPL：arXiv论文2610.02378v1提出循环水养殖系统（RAS）的精准投喂方法，旨在降低成本并改善鱼类福利，适合判断技术路线和后续产品化可能性。
+
+arXiv论文2610.02378v1提出循环水养殖系统（RAS）的精准投喂方法，旨在降低成本并改善鱼类福利。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>终端代理训练停滞:揭示数据生成与验证挑战</title>
+      <link>https://arxiv.org/abs/2610.02405</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02405</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>终端代理训练停滞：使用Claude Opus等前沿模型作为元代理，生成终端任务和验证器以进行强化学习训练日益普遍，适合关注自动化任务和多 Agent 协作演进。
+
+使用Claude Opus等前沿模型作为元代理，生成终端任务和验证器以进行强化学习训练日益普遍。然而，现有方法往往难以生成可执行的终端任务，且缺乏有效的验证机制。该研究提出了一种新框架，旨在通过自动化任务生成与验证来优化RL训练流程。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
       <category>模型发布</category>
-      <category>开源</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>强化学习技术在核物理散射实验中靶标极化优化中的应用</title>
+      <link>https://arxiv.org/abs/2610.02452</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02452</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>强化学习技术在核物理散射实验中靶标极化优...：arXiv:2610.02452v1 新公告：核物理实验中动态极化靶的操作依赖微波频率的持续调谐，以补偿……，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02452v1 新公告：核物理实验中动态极化靶的操作依赖微波频率的持续调谐，以补偿……
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>热带强化学习</title>
+      <link>https://arxiv.org/abs/2610.02478</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02478</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>热带强化学习：arXiv:2610.02478v1 新增论文摘要：大语言模型强化学习通常最大化期望回报，即累加所有成功轨迹的概率，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02478v1 新增论文摘要：大语言模型强化学习通常最大化期望回报，即累加所有成功轨迹的概率。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MEA:一种基于奖励驱动的多智能体系统，用于生成忠实的模型解释</title>
+      <link>https://arxiv.org/abs/2610.02480</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02480</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>MEA：arXiv论文2610.02480v1指出，近年来大量机器学习模型被应用于高风险领域，但其决策过程仍缺乏透明度，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv论文2610.02480v1指出，近年来大量机器学习模型被应用于高风险领域，但其决策过程仍缺乏透明度。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>一个Token的成本是多少？基于混合智能体的每Token足够计算量测量</title>
+      <link>https://arxiv.org/abs/2610.02491</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02491</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>一个Token的成本是多少：大型语言模型在生成每个token时使用相同的计算量，无论其生成难度如何，适合判断技术路线和后续产品化可能性。
+
+大型语言模型在生成每个token时使用相同的计算量，无论其生成难度如何。该研究提出了一种方法，通过动态调整计算资源分配，以提高生成效率和质量。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>顺序正确，规模错误:审计大语言模型裁判在职业AI测量中的偏差</title>
+      <link>https://arxiv.org/abs/2610.02492</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02492</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>顺序正确：LLM评判者正日益用于评估AI输出是否符合工作场所要求，但对响应排名的共识并不能完全证明其有效性，适合判断技术路线和后续产品化可能性。
+
+LLM评判者正日益用于评估AI输出是否符合工作场所要求，但对响应排名的共识并不能完全证明其有效性。研究发现，不同评判者在特定任务上的偏好存在显著差异，且缺乏统一的评估标准，这揭示了当前LLM评判机制在职场应用中的局限性与挑战。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>HXAI:分布式能源系统中的分层隐私可解释人工智能</title>
+      <link>https://arxiv.org/abs/2610.02504</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02504</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>HXAI：arXiv:2610.02504v1 新论文摘要：因可再生能源发电的间歇性及随机性，平衡电力供需日益困难，本文提出新...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02504v1 新论文摘要：因可再生能源发电的间歇性及随机性，平衡电力供需日益困难，本文提出新方法应对挑战。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>校园AI导师硬件软件权衡:针对商科教育的多课程RAG辅导</title>
+      <link>https://arxiv.org/abs/2610.02510</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02510</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>校园AI导师硬件软件权衡：基于检索增强生成的校园AI导师必须在使用指定课程材料的同时，平衡教材与学生隐私保护，适合判断技术路线和后续产品化可能性。
+
+基于检索增强生成的校园AI导师必须在使用指定课程材料的同时，平衡教材与学生隐私保护。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>长序列研究代理元推理:学习下一步该调查什么</title>
+      <link>https://arxiv.org/abs/2610.02525</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02525</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>长序列研究代理元推理：arXiv:2610.02525v1 提出一种新方法，让长期研究智能体在证据积累过程中动态决定“如何调查”与“下一步...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02525v1 提出一种新方法，让长期研究智能体在证据积累过程中动态决定“如何调查”与“下一步调查什么”，以解决该方向学习困难的挑战。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>训练世界模型:微调与RAG在LM世界模型中的对比</title>
+      <link>https://arxiv.org/abs/2610.02542</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02542</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>训练世界模型：世界模型（WMs）模拟环境的转移动态，使智能体能够规划其行为的后果，适合判断技术路线和后续产品化可能性。
+
+世界模型（WMs）模拟环境的转移动态，使智能体能够规划其行为的后果。在基于文本的环境中，该研究提出了一种新型世界模型框架，通过学习离散潜在状态表示来提升长序列建模能力，显著改善了在复杂文本游戏中的规划性能和泛化能力，实验表明其在多个基准测试中优于现有方法。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>AI辩论的最优实例协议:如何进行敏感辩论</title>
+      <link>https://arxiv.org/abs/2610.02557</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02557</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>AI辩论的最优实例协议：arXiv:2610.02557v1 新论文摘要：随着强大AI系统在多项认知密集型任务中达到甚至超越人类专家水平，如...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02557v1 新论文摘要：随着强大AI系统在多项认知密集型任务中达到甚至超越人类专家水平，如何……
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>基于可验证、反馈驱动语言模型回答临床医生关于试验证据的问题</title>
+      <link>https://arxiv.org/abs/2610.02576</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02576</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>基于可验证、反馈驱动语言模型回答临床医生...：系统评价将临床试验整理成证据表，但临床医生只能通过数据库查询进行交互，且许多关键洞察难以直接获取，适合判断技术路线和后续产品化可能性。
+
+系统评价将临床试验整理成证据表，但临床医生只能通过数据库查询进行交互，且许多关键洞察难以直接获取。本文提出一种基于大语言模型的交互式框架，使医生能以自然语言提问证据表，实现即时、个性化的临床决策支持。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>开放式探索基准:从代理记录测量认识过程</title>
+      <link>https://arxiv.org/abs/2610.02588</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02588</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>开放式探索基准：arXiv:2610.02588v1 报告一种新型智能体框架，可自主完成开放式研究任务，如通过自设计实验发现经验定律...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.02588v1 报告一种新型智能体框架，可自主完成开放式研究任务，如通过自设计实验发现经验定律并改进启发式方法。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>TasteBench:从分子到可持续食品的多模态感官预测基准</title>
+      <link>https://arxiv.org/abs/2610.02599</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02599</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>TasteBench：可持续蛋白质发现缺乏类似分子对接或密度泛函理论的快速计算代理方法，而这些方法在药物研发中能显著加速筛选过程，适合判断技术路线和后续产品化可能性。
+
+可持续蛋白质发现缺乏类似分子对接或密度泛函理论的快速计算代理方法，而这些方法在药物研发中能显著加速筛选过程。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>VERSE:面向智能体框架的自验证自进化优化器</title>
+      <link>https://arxiv.org/abs/2610.02616</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02616</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>VERSE：利用进化算法优化LLM代理的提示，适合关注自动化任务和多 Agent 协作演进。
+
+利用进化算法优化LLM代理的提示。利用进程。
+
+让我尝试错进化优化LLM代理的提示词、工具和工作流，而优化器自身的工具和流程保持不变。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>CuBEs:文化情境化行为评估与文化盲法LLM裁判的局限性</title>
+      <link>https://arxiv.org/abs/2610.02622</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02622</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>CuBEs：arXiv:2610.02622v1 新论文聚焦评估大语言模型的谄媚、自我偏好与过度自信等行为及其触发机制，对模型安...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02622v1 新论文聚焦评估大语言模型的谄媚、自我偏好与过度自信等行为及其触发机制，对模型安全性与可靠性研究具有重要意义。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>迷失于请求中:沟通差异如何扰乱邮件智能体的检索与行动</title>
+      <link>https://arxiv.org/abs/2610.02627</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02627</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>迷失于请求中：arXiv:2610.02627指出，邮件助手不应因用户措辞不同而降低效率，但现有基准测试往往对同一任务仅用单一表述...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02627指出，邮件助手不应因用户措辞不同而降低效率，但现有基准测试往往对同一任务仅用单一表述进行评估。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>构建生成式AI用户反馈的未来</title>
+      <link>https://arxiv.org/abs/2610.02631</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02631</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>构建生成式AI用户反馈的未来：arXiv论文2610.02631v1提出，利用用户部署后反馈可低成本、大规模且具代表性监控与改进生成式AI系统，适合判断技术路线和后续产品化可能性。
+
+arXiv论文2610.02631v1提出，利用用户部署后反馈可低成本、大规模且具代表性监控与改进生成式AI系统。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>无需解码的批量语音决策:单标记监督使冻结LLM能“听”出超越文本的信息</title>
+      <link>https://arxiv.org/abs/2610.02638</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02638</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>无需解码的批量语音决策：DuplexJev 提出一种全双工语音代理框架，通过并行决策而非慢速自回归解码，显著提升交互响应速度，保留关键语音理...，适合判断技术路线和后续产品化可能性。
+
+DuplexJev 提出一种全双工语音代理框架，通过并行决策而非慢速自回归解码，显著提升交互响应速度，保留关键语音理解与生成能力。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>一致性驱动的信念形成与LLM智能体中传染现象的群体动态</title>
+      <link>https://arxiv.org/abs/2610.02654</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02654</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>一致性驱动的信念形成与LLM智能体中传染...：**摘要：** 该研究通过实证测量个体信念采纳行为，摆脱了传统社交传染模型的假设性框架，揭示了信念传播的实际机制及其...，适合判断技术路线和后续产品化可能性。
+
+**摘要：**
+该研究通过实证测量个体信念采纳行为，摆脱了传统社交传染模型的假设性框架，揭示了信念传播的实际机制及其对群体行为的影响。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>长程智能体中的幽灵:被忽视的安全约束在多轮交互中引发的治理风险</title>
+      <link>https://arxiv.org/abs/2610.02664</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02664</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>长程智能体中的幽灵：arXiv论文2610.02664v1指出，长期智能体在复杂问题解决中日益重要，但其局限性亦需关注，适合判断技术路线和后续产品化可能性。
+
+arXiv论文2610.02664v1指出，长期智能体在复杂问题解决中日益重要，但其局限性亦需关注。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>DataWeave:部署人类-LLM协同分析以支持探索性结构化数据分析</title>
+      <link>https://arxiv.org/abs/2610.02679</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02679</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>DataWeave：arXiv:2610.02679v1 报道：数据新闻依赖记者与调查人员的数据分析能力以挖掘新闻线索，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02679v1 报道：数据新闻依赖记者与调查人员的数据分析能力以挖掘新闻线索。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>大语言模型在患者证据演变时临床判断更新不可靠</title>
+      <link>https://arxiv.org/abs/2610.02684</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02684</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>大语言模型在患者证据演变时临床判断更新不...：大语言模型在临床推理中的应用日益增多，但其在面对新患者证据时是否能恰当修正判断仍存疑问，适合判断技术路线和后续产品化可能性。
+
+大语言模型在临床推理中的应用日益增多，但其在面对新患者证据时是否能恰当修正判断仍存疑问。该研究探讨了LLMs在临床决策中的证据更新能力，揭示其在证据变化时的判断调整是否符合临床逻辑。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>学习通过分段在策略蒸馏修订推理</title>
+      <link>https://arxiv.org/abs/2610.02703</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02703</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>学习通过分段在策略蒸馏修订推理：**摘要：** On-policy Distillation (OPD)通过在学生模型上利用自身rollout的密集...，适合判断技术路线和后续产品化可能性。
+
+**摘要：**
+On-policy Distillation (OPD)通过在学生模型上利用自身rollout的密集token级监督，显著提升了大语言模型的推理能力。该方法在数学、编程和逻辑推理任务上均取得了显著提升，证明了其在提升模型推理效率方面的有效性。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>循环语言模型的可链式思维监控性研究</title>
+      <link>https://arxiv.org/abs/2610.02741</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02741</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>循环语言模型的可链式思维监控性研究：arXiv:2610.02741v1 提出 Chain-of-thought (CoT) 监测可有效检测模型不良行为...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02741v1 提出 Chain-of-thought (CoT) 监测可有效检测模型不良行为，研究聚焦于循环语言模型（LoopLMs）的重复推理机制。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>动态LLM路由器往往方向错误</title>
+      <link>https://arxiv.org/abs/2610.02762</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02762</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>动态LLM路由器往往方向错误：arXiv:2610.02762v1 公告类型：新 摘要：动态 LLM 路由器承诺通过将每个查询发送到能够正确回答它...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02762v1 公告类型：新 摘要：动态 LLM 路由器承诺通过将每个查询发送到能够正确回答它的最便宜的模型来降低推理成本。我们分析了六个商业...
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
       <category>部署推理</category>
     </item>
     <item>
-      <title>garrytan/gstack</title>
-      <link>https://github.com/garrytan/gstack</link>
-      <guid isPermaLink="true">https://github.com/garrytan/gstack</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>garrytan/gstack：Garry Tan 推出了一套包含23款工具的 Claude Code 配置方案，分别扮演 CEO、设计师、工程经理...，适合优先评估模型能力、价格和工具选型变化。
+      <title>PAPER2LLM++:从研究论文持续自演化LLM</title>
+      <link>https://arxiv.org/abs/2610.02793</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02793</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>PAPER2LLM++：研究人员持续发现大型语言模型的局限性及其成因，但这些人类洞察与模型内部机制的探索仍显脱节，适合判断技术路线和后续产品化可能性。
 
-Garry Tan 推出了一套包含23款工具的 Claude Code 配置方案，分别扮演 CEO、设计师、工程经理、发布经理、文档工程师和 QA 等角色，实现高效协同与自动化开发流程。
+研究人员持续发现大型语言模型的局限性及其成因，但这些人类洞察与模型内部机制的探索仍显脱节。该研究旨在通过分析模型行为，弥合人类认知与人工智能内部运作之间的鸿沟。
 
-信号等级 B · 评分 61.5</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>earthtojake/text-to-cad</title>
-      <link>https://github.com/earthtojake/text-to-cad</link>
-      <guid isPermaLink="true">https://github.com/earthtojake/text-to-cad</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>earthtojake/text-to-...：赋予智能体CAD超能力，大幅提升设计效率与精度，适合关注自动化任务和多 Agent 协作演进。
-
-赋予智能体CAD超能力，大幅提升设计效率与精度。
-
-信号等级 B · 评分 52.9</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>caddyserver/caddy</title>
-      <link>https://github.com/caddyserver/caddy</link>
-      <guid isPermaLink="true">https://github.com/caddyserver/caddy</guid>
-      <pubDate>Sun, 04 Oct 2026 14:33:22 +0000</pubDate>
-      <description>caddyserver/caddy：一款支持自动HTTPS、可扩展且跨平台的快速HTTP/1-2-3 Web服务器，适合进一步验证代码、协议或社区采用情况。
-
-一款支持自动HTTPS、可扩展且跨平台的快速HTTP/1-2-3 Web服务器。
-
-信号等级 B · 评分 54.9</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>OpenAI元老的一封离职信，揭开了奥特曼最不想承认的真相</title>
-      <link>https://www.ifanr.com/1682922</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1682922</guid>
-      <pubDate>Sun, 04 Oct 2026 07:08:18 +0000</pubDate>
-      <description>OpenAI：教会 AI 善待人类前，先学会善待人#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时...，适合作为今日 AI/科技情报流里的重点线索。
-
-教会 AI 善待人类前，先学会善待人#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 53.8</description>
+信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>BitNest:位嵌套推测解码实现内存高效LLM推理加速</title>
+      <link>https://arxiv.org/abs/2610.02800</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02800</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>BitNest：arXiv:2610.02800v1 新论文摘要：推测解码通过轻量级草稿模型并行验证多个候选词，加速自回归生成，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02800v1 新论文摘要：推测解码通过轻量级草稿模型并行验证多个候选词，加速自回归生成。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>VIGOR:基于模型强化学习中潜在空间一致性的零样本视觉泛化</title>
+      <link>https://arxiv.org/abs/2610.02801</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02801</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>VIGOR：arXiv:2610.02801v1 提出一种新方法，通过在学习的潜在动力学中规划来提升模型强化学习（MBRL）的样...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02801v1 提出一种新方法，通过在学习的潜在动力学中规划来提升模型强化学习（MBRL）的样本效率，并缓解性能退化问题。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MetaRubric:学习为基于评分标准的强化学习提供奖励</title>
+      <link>https://arxiv.org/abs/2610.02824</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02824</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Meta：基于评分标准的强化学习通过为单个响应分配部分信用，将奖励驱动的优化扩展到开放式任务，适合判断技术路线和后续产品化可能性。
+
+基于评分标准的强化学习通过为单个响应分配部分信用，将奖励驱动的优化扩展到开放式任务。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MLCommons 越狱基准测试 v1.0</title>
+      <link>https://arxiv.org/abs/2610.02827</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02827</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>MLCommons 越狱基准测试 v1....：现代AI系统被设计为拒绝危险请求，而越狱是指通过精心设计的提示词绕过安全防护，诱导模型生成有害或受限内容的行为，适合判断技术路线和后续产品化可能性。
+
+现代AI系统被设计为拒绝危险请求，而越狱是指通过精心设计的提示词绕过安全防护，诱导模型生成有害或受限内容的行为。本文探讨了此类攻击的机制与防御挑战。
+
+信号等级 B · 评分 65.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>FSPO:预算约束下LLM强化学习后训练的策略一致风险与帕累托可行控制</title>
+      <link>https://arxiv.org/abs/2610.02828</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02828</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>FSPO：arXiv:2610.02828v1 论文摘要：该研究提出了一种自适应强化学习后训练方法，能够在线动态调整多个训练参...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02828v1 论文摘要：该研究提出了一种自适应强化学习后训练方法，能够在线动态调整多个训练参数（如rollout温度、组大小、剪辑阈值和KL散度阈值），以优化大型语言模型的训练过程。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>DNAlign:LLM动态零空间安全对齐</title>
+      <link>https://arxiv.org/abs/2610.02844</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02844</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>DNAlign：arXiv:2610.02844v1 新论文摘要：确保大语言模型（LLMs）安全可靠部署仍面临根本挑战，现有安全对齐...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.02844v1 新论文摘要：确保大语言模型（LLMs）安全可靠部署仍面临根本挑战，现有安全对齐方法存在局限。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>基于收缩约束状态空间模型的有界可达性与越狱检测</title>
+      <link>https://arxiv.org/abs/2610.02853</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02853</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>基于收缩约束状态空间模型的有界可达性与越...：arXiv论文2610.02853v1提出了一种新的安全分类头（Safety heads），可轻量级地附加到预训练语...，适合判断技术路线和后续产品化可能性。
+
+arXiv论文2610.02853v1提出了一种新的安全分类头（Safety heads），可轻量级地附加到预训练语言模型上，在生成前标记有害输入，从而提升模型安全性。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>面向小语言模型代理的哈尼斯感知蒸馏</title>
+      <link>https://arxiv.org/abs/2610.02858</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02858</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>面向小语言模型代理的哈尼斯感知蒸馏：语言模型代理通过软件套件（harness）部署，该套件管理其上下文、工具和反馈，适合关注自动化任务和多 Agent 协作演进。
+
+语言模型代理通过软件套件（harness）部署，该套件管理其上下文、工具和反馈。当此类代理被激活时，其行为受该套件的设计与交互机制深刻影响。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>PsyEvo:测试时自进化的个性化咨询代理</title>
+      <link>https://arxiv.org/abs/2610.02885</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02885</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>PsyEvo：全球心理健康障碍患病率高，但受训专业人员严重短缺，导致治疗需求与供给之间存在显著鸿沟，适合关注自动化任务和多 Agent 协作演进。
+
+全球心理健康障碍患病率高，但受训专业人员严重短缺，导致治疗需求与供给之间存在显著鸿沟。 researchers propose leveraging large language models to bridge this gap by providing scalable, accessible mental health support.
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>写时解释:多目标代理记忆的策略消融</title>
+      <link>https://arxiv.org/abs/2610.02897</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02897</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>写时解释：arXiv:2610.02897v1 新论文摘要：长期运行的助手无法记忆所有信息，需进行摘要，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.02897v1 新论文摘要：长期运行的助手无法记忆所有信息，需进行摘要。摘要并非中立，其保留内容基于特定标准选择，涉及信息筛选与价值判断。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>LUMOS:追踪LLM从训练数据到行为输出的参数化知识流动</title>
+      <link>https://arxiv.org/abs/2610.02902</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02902</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>LUMOS：arXiv论文2610.02902v1指出，当前大语言模型参数知识分析主要关注输出结果，却未验证模型实际学到了什么，适合判断技术路线和后续产品化可能性。
+
+arXiv论文2610.02902v1指出，当前大语言模型参数知识分析主要关注输出结果，却未验证模型实际学到了什么。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>频率非敏感:在稀疏 MoE LLM 中识别安全敏感专家</title>
+      <link>https://arxiv.org/abs/2610.02910</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02910</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>频率非敏感：抑制稀疏混合专家（MoE）语言模型中的少量路由专家，可在无需重新训练的情况下削弱其安全行为，适合判断技术路线和后续产品化可能性。
+
+抑制稀疏混合专家（MoE）语言模型中的少量路由专家，可在无需重新训练的情况下削弱其安全行为。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>HASTE:进化代理利用稀疏证据对抗新兴攻击</title>
+      <link>https://arxiv.org/abs/2610.02920</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02920</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>HASTE：Agent harnesses在线程中，适合关注自动化任务和多 Agent 协作演进。
+
+Agent harnesses在线程中。
+
+Okay, the user wants me to act as a professional tech news editor to prevent unsafe actions. However, rapidly emerging attacks outpace...```
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>正 unlabeled 学习用于代理安全误报审计</title>
+      <link>https://arxiv.org/abs/2610.02925</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02925</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>正 unlabeled 学习用于代理安全...：安全监视器有助于保护与外部工具和环境交互的语言模型代理，但保守的监视会产生大量误报，导致效率低下，适合关注自动化任务和多 Agent 协作演进。
+
+安全监视器有助于保护与外部工具和环境交互的语言模型代理，但保守的监视会产生大量误报，导致效率低下。 researchers提出了一种新型监视器，通过动态调整阈值和上下文感知，显著降低误报率，同时保持高安全性，提升了代理在复杂任务中的可靠性与实用性。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>何时编译计算机使用代理？衡量回报并为令牌效率做出编译决策</title>
+      <link>https://arxiv.org/abs/2610.02932</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.02932</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>何时编译计算机使用代理：arXiv:2610.02932v1 提出将代理重复执行的GUI操作编译为程序，以降低token成本，但需评估回报与...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.02932v1 提出将代理重复执行的GUI操作编译为程序，以降低token成本，但需评估回报与触发时机。
+
+信号等级 B · 评分 60.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
   </channel>
 </rss>
