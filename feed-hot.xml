@@ -5,684 +5,682 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 06 Oct 2026 02:42:37 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 09:34:32 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Gemini Call for Me 或扩展至亲友通话，可代发&quot;晚到 15 分钟&quot;消息</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors</guid>
       <pubDate>Mon, 05 Oct 2026 23:09:55 +0000</pubDate>
-      <description>谷歌或将“帮我打电话”AI功能扩展至个人通讯，Android Authority在Phone应用中发现“Gemini...，来自官方更新源，适合直接判断产品变化。
+      <description>Gemini：Google may be expanding its &quot;Call for Me&quot; AI feature beyon...，适合优先评估模型能力、价格和工具选型变化。
 
-谷歌或将“帮我打电话”AI功能扩展至个人通讯，Android Authority在Phone应用中发现“Gemini Calling”引导界面，暗示用户未来可让Gemini代为拨打电话、发送信息给亲友。
+Google may be expanding its &quot;Call for Me&quot; AI feature beyond business calls so you can use it to send messages to friends and family. Android Authority reports finding a &quot;Gemini Calling&quot; introductory...
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 68.5</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>MCP 智能体通信协议曝结构性缺陷，Google 等五机构确认相关漏洞</title>
-      <link>https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp</link>
-      <guid isPermaLink="true">https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp</guid>
-      <pubDate>Mon, 05 Oct 2026 22:26:35 +0000</pubDate>
-      <description>Google：新协议中的信任缺陷导致恶意提示在代理间传播，适合关注 Agent 工具调用和工作流搭建。
+      <title>编程MOOC中生成式AI使用的理解:课程背景与学习者特征的作用</title>
+      <link>https://arxiv.org/abs/2610.04447</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04447</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>编程MOOC中生成式AI使用的理解：arXiv:2610.04447v1 Announce Type: new Abstract: The increa...，适合判断技术路线和后续产品化可能性。
 
-新协议中的信任缺陷导致恶意提示在代理间传播。
+arXiv:2610.04447v1 Announce Type: new Abstract: The increasing availability of generative artificial intelligence (GenAI) tools, such as ChatGPT and code-completion assistants, raises questions about...
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
-      <category>MCP/工具</category>
-      <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>快模型、慢证据:系统一决策模型在 LLM Agent 中的成对自审评估</title>
-      <link>https://arxiv.org/abs/2610.02267</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02267</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>快模型、慢证据：arXiv:2610.02267v1 Announce Type: new Abstract: Agent harn...，适合关注自动化任务和多 Agent 协作演进。
+      <title>基于开源大型语言模型，在归档规模跨模态自主构建放射学报告</title>
+      <link>https://arxiv.org/abs/2610.04541</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04541</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>基于开源大型语言模型：arXiv:2610.04541v1 Announce Type: new Abstract: Purpose: T...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: which model to call, which tool to use, whether retrieved text is relevant, whether an input...
+arXiv:2610.04541v1 Announce Type: new Abstract: Purpose: To develop and evaluate an open-weight large language model (LLM) pipeline that converts an entire archive of free-text radiology reports into...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>AI 风险观测站:从年报 AI 披露中我们能学到什么关于社会韧性的启示？</title>
-      <link>https://arxiv.org/abs/2610.02281</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02281</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>AI 风险观测站：arXiv:2610.02281v1 Announce Type: new Abstract: Societal r...，适合判断技术路线和后续产品化可能性。
+      <title>MemTrace: State-Consistent Memory for Long-Horizon Coding Agents</title>
+      <link>https://arxiv.org/abs/2610.04838</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04838</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>MemTrace：arXiv:2610.04838v1 Announce Type: new Abstract: As coding...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and actionable data, which motivates our main research question: Can annual reports, processed...
+arXiv:2610.04838v1 Announce Type: new Abstract: As coding agents take on long-horizon software evolution tasks spanning multiple files and stages, longer execution trajectories introduce two coupled...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
+      <category>编码工具</category>
     </item>
     <item>
-      <title>终端代理训练停滞:揭示数据生成与验证挑战</title>
-      <link>https://arxiv.org/abs/2610.02405</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02405</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>终端代理训练停滞：arXiv:2610.02405v1 Announce Type: new Abstract: Using a fr...，适合关注自动化任务和多 Agent 协作演进。
+      <title>SpecFold: Folding Multi-Branch Redundancy for Faster Speculative Decoding in Diffusion Language Models</title>
+      <link>https://arxiv.org/abs/2610.04875</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04875</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>SpecFold：arXiv:2610.04875v1 Announce Type: new Abstract: Diffusion...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02405v1 Announce Type: new Abstract: Using a frontier model like Claude Opus as a meta-agent to generate terminal tasks and verifiers for RL training is increasingly common. Yet a runnable...
+arXiv:2610.04875v1 Announce Type: new Abstract: Diffusion large language models (DLLMs) generate text through iterative block denoising, and multi-branch speculative decoding accelerates this process...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>BACAM: Behavior-Aware Continual Agent Merging for Multi-Turn Interaction</title>
+      <link>https://arxiv.org/abs/2610.04966</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04966</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>BACAM：arXiv:2610.04966v1 Announce Type: new Abstract: Model merg...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.04966v1 Announce Type: new Abstract: Model merging offers a way to integrate the capabilities of specialized experts, but existing agent merging methods typically require all of them to be...
+
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
-      <category>模型发布</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>强化学习技术在核物理散射实验中靶标极化优化中的应用</title>
-      <link>https://arxiv.org/abs/2610.02452</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02452</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>强化学习技术在核物理散射实验中靶标极化优...：arXiv:2610.02452v1 Announce Type: new Abstract: The operat...，适合判断技术路线和后续产品化可能性。
+      <title>Runtime Authorization of Self-Generated Subgoals in Long-Horizon Tool-Using AI Agents</title>
+      <link>https://arxiv.org/abs/2610.04975</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04975</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Runtime Authorizatio...：arXiv:2610.04975v1 Announce Type: new Abstract: Long-horiz...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02452v1 Announce Type: new Abstract: The operation of dynamically polarized targets in nuclear physics experiments relies on continuous tuning of the microwave frequency to compensate for...
+arXiv:2610.04975v1 Announce Type: new Abstract: Long-horizon tool-using AI agents create subgoals, replan, delegate work, and compose sibling results. Per-tool permission checks cannot establish that...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>一个Token的成本是多少？基于混合智能体的每Token足够计算量测量</title>
-      <link>https://arxiv.org/abs/2610.02491</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02491</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>一个Token的成本是多少：arXiv:2610.02491v1 Announce Type: new Abstract: Large lang...，适合判断技术路线和后续产品化可能性。
+      <title>Why, Where, How: Taxonomy-guided Error Grounding for Code Repair in NL2SQL</title>
+      <link>https://arxiv.org/abs/2610.05060</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05060</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Why：arXiv:2610.05060v1 Announce Type: new Abstract: SQL querie...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02491v1 Announce Type: new Abstract: Large language models spend the same amount of computation on every token they generate, regardless of how difficult each token is to produce. Methods...
+arXiv:2610.05060v1 Announce Type: new Abstract: SQL queries that large language models write from natural language questions can execute successfully yet produce incorrect results, so execution alone...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>CuBEs:文化情境化行为评估与文化盲法LLM裁判的局限性</title>
-      <link>https://arxiv.org/abs/2610.02622</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02622</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>CuBEs：arXiv:2610.02622v1 Announce Type: new Abstract: Evaluating...，适合判断技术路线和后续产品化可能性。
+      <title>Look Before You Leap: Thermodynamic Arbitration of Parametric and Non-Parametric Knowledge in LLM Agents via Self-Regulating Memory Architectures</title>
+      <link>https://arxiv.org/abs/2610.05223</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05223</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Look Before You Leap：arXiv:2610.05223v1 Announce Type: new Abstract: The archit...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02622v1 Announce Type: new Abstract: Evaluating the occurrence and triggers of large language model (LLM) behaviors - such as sycophancy, self-preference, or over-confidence - is critical...
+arXiv:2610.05223v1 Announce Type: new Abstract: The architecture of modern LLMs consists of a profound cognitive polarization. LLMs possess implicit intuition encoded in their parameters, yet rely on...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>DataWeave:部署人类-LLM协同分析以支持探索性结构化数据分析</title>
-      <link>https://arxiv.org/abs/2610.02679</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02679</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>DataWeave：arXiv:2610.02679v1 Announce Type: new Abstract: Data journ...，适合判断技术路线和后续产品化可能性。
+      <title>GFGE: Unifying Explainable AI Methods through an Interpretation Framework</title>
+      <link>https://arxiv.org/abs/2610.05225</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05225</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>GFGE：arXiv:2610.05225v1 Announce Type: new Abstract: Explainabl...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02679v1 Announce Type: new Abstract: Data journalism, the practice of using data analysis to surface newsworthy stories, depends increasingly on the ability of reporters and investigative...
+arXiv:2610.05225v1 Announce Type: new Abstract: Explainable artificial intelligence (XAI) encompasses methods that draw on different sources of information and address different explanatory needs. A...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>学习通过分段在策略蒸馏修订推理</title>
-      <link>https://arxiv.org/abs/2610.02703</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02703</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>学习通过分段在策略蒸馏修订推理：arXiv:2610.02703v1 Announce Type: new Abstract: On-policy...，适合判断技术路线和后续产品化可能性。
+      <title>AgentDiscover: Autonomous Discovery with Minimal Search Scaffolding</title>
+      <link>https://arxiv.org/abs/2610.05334</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05334</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>AgentDiscover：arXiv:2610.05334v1 Announce Type: new Abstract: Frameworks...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.02703v1 Announce Type: new Abstract: On-policy distillation (OPD) improves large language model reasoning by training students on their own rollouts with dense token-wise supervision from...
+arXiv:2610.05334v1 Announce Type: new Abstract: Frameworks that use large language models for scientific discovery typically rely on a fixed, human-designed algorithm that decides what the model sees...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>CASE: Cost-Aware Stopping for Efficient Long-Video Agents</title>
+      <link>https://arxiv.org/abs/2610.05400</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05400</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>CASE：arXiv:2610.05400v1 Announce Type: new Abstract: Long-video...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.05400v1 Announce Type: new Abstract: Long-video agents can actively gather question-relevant evidence, but they typically leave a central decision implicit: when has the agent seen enough...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>PharmAgent: Constraint-Aware Search with Frozen Language Models for Molecular Optimization</title>
+      <link>https://arxiv.org/abs/2610.05431</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05431</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>PharmAgent：arXiv:2610.05431v1 Announce Type: new Abstract: Molecular...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.05431v1 Announce Type: new Abstract: Molecular optimization must improve target activity and satisfy developability constraints within limited evaluation budgets. Classical methods require...
+
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>动态LLM路由器往往方向错误</title>
-      <link>https://arxiv.org/abs/2610.02762</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02762</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>动态LLM路由器往往方向错误：arXiv:2610.02762v1 Announce Type: new Abstract: Dynamic LL...，适合判断技术路线和后续产品化可能性。
+      <title>AI Safety via Debate is Compromised by Cognitive Biases</title>
+      <link>https://arxiv.org/abs/2610.05461</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05461</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>AI Safety via Debate...：arXiv:2610.05461v1 Announce Type: new Abstract: Reinforcem...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02762v1 Announce Type: new Abstract: Dynamic LLM routers promise to cut inference costs by sending each query to the cheapest model that can answer it correctly. We analyze six commercial...
+arXiv:2610.05461v1 Announce Type: new Abstract: Reinforcement learning from human feedback (RLHF) has played a central role in making large language models responsive to human instructions. However,...
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>PAPER2LLM++:从研究论文持续自演化LLM</title>
-      <link>https://arxiv.org/abs/2610.02793</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02793</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>PAPER2LLM++：arXiv:2610.02793v1 Announce Type: new Abstract: Research o...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02793v1 Announce Type: new Abstract: Research on LLMs continually uncovers model limitations, their causes, and potential solutions. Yet these human discoveries remain largely disconnected...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>BitNest:位嵌套推测解码实现内存高效LLM推理加速</title>
-      <link>https://arxiv.org/abs/2610.02800</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02800</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>BitNest：arXiv:2610.02800v1 Announce Type: new Abstract: Speculativ...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02800v1 Announce Type: new Abstract: Speculative decoding accelerates autoregressive generation by using a lightweight draft to propose multiple tokens for parallel verification. However,...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>DNAlign:LLM动态零空间安全对齐</title>
-      <link>https://arxiv.org/abs/2610.02844</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02844</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>DNAlign：arXiv:2610.02844v1 Announce Type: new Abstract: Ensuring t...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02844v1 Announce Type: new Abstract: Ensuring the safe and reliable deployment of large language models (LLMs) remains a fundamental challenge. Existing safety alignment approaches either...
-
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>安全对齐</category>
     </item>
     <item>
-      <title>频率非敏感:在稀疏 MoE LLM 中识别安全敏感专家</title>
-      <link>https://arxiv.org/abs/2610.02910</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02910</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>频率非敏感：arXiv:2610.02910v1 Announce Type: new Abstract: Suppressin...，适合判断技术路线和后续产品化可能性。
+      <title>DelegationBench: Measuring When AI Agents Should Ask Before Acting</title>
+      <link>https://arxiv.org/abs/2610.05532</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05532</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>DelegationBench：arXiv:2610.05532v1 Announce Type: new Abstract: AI agents...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02910v1 Announce Type: new Abstract: Suppressing a small set of routed experts can weaken the safety behavior of a sparse Mixture-of-Experts (MoE) language model without retraining. Which...
+arXiv:2610.05532v1 Announce Type: new Abstract: AI agents that send emails, edit files, and make purchases must decide when to act on their own and when to check with the user first. This decision is...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>DREAM: Dynamic Resolution Assignment For Multimodal Multi-agent Debate</title>
+      <link>https://arxiv.org/abs/2610.05615</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05615</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>DREAM：arXiv:2610.05615v1 Announce Type: new Abstract: Multi-agen...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.05615v1 Announce Type: new Abstract: Multi-agent debate (MAD) has emerged as an effective paradigm to improve the reasoning capabilities of large language models (LLMs) and is increasingly...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>A Framework for Automated Multi-Source Satellite Data Analytics and LLM-Based Report Generation</title>
+      <link>https://arxiv.org/abs/2610.05625</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05625</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>A Framework for Auto...：arXiv:2610.05625v1 Announce Type: new Abstract: This paper...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.05625v1 Announce Type: new Abstract: This paper presents the workflow for building an automated ArcGIS Pro tool using ArcPy to extract the Land Surface Temperature (LST) from Landsat 7, 8...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Do Time-Series QA Systems Read the Time Series? Evidence Use and Reasoning Reliability</title>
+      <link>https://arxiv.org/abs/2610.05686</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05686</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Do Time-Series QA Sy...：arXiv:2610.05686v1 Announce Type: new Abstract: In recent...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.05686v1 Announce Type: new Abstract: In recent years, time-series question answering (QA) systems have made significant progress. However, generating a correct answer does not show whether...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Toward AI Trustworthiness: Finding Analytically Proven Forward-Invariant Sets for AI-Controlled Systems</title>
+      <link>https://arxiv.org/abs/2610.05689</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05689</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Toward AI Trustworth...：arXiv:2610.05689v1 Announce Type: new Abstract: Neural-net...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.05689v1 Announce Type: new Abstract: Neural-network (NN) controllers are increasingly used in nonlinear control systems, but their highly nonlinear behavior makes them difficult to explain...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Mining Agent Skills from Production Traces</title>
+      <link>https://arxiv.org/abs/2610.05777</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05777</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Mining Agent Skills...：arXiv:2610.05777v1 Announce Type: new Abstract: Agent skil...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.05777v1 Announce Type: new Abstract: Agent skills that record procedural instructions are increasingly mined from execution traces rather than curated by hand. Skill-mining pipelines often...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Topology-Conditioned Backdoors: Language Models That Insert Vulnerabilities When They Infer They Are in a Multi-Agent System</title>
+      <link>https://arxiv.org/abs/2610.05793</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05793</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Topology-Conditioned...：arXiv:2610.05793v1 Announce Type: new Abstract: A language...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.05793v1 Announce Type: new Abstract: A language model may behave safely in a single-agent evaluation yet produce vulnerable code when its context suggests that it is part of a multi-agent...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Measurement-First Auditing of Agentic Leaderboards: Contamination Susceptibility, Matched-Control Re-evaluation, and Scorer Validation</title>
+      <link>https://arxiv.org/abs/2610.05830</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05830</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Measurement-First Au...：arXiv:2610.05830v1 Announce Type: new Abstract: Agentic le...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.05830v1 Announce Type: new Abstract: Agentic leaderboards increasingly evaluate systems on public benchmarks whose task statements and solution-bearing artifacts can remain accessible. We...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Request Order Matters: Cache-History Sensitivity in Selective KV-Cache Reuse for Rolling Agents</title>
+      <link>https://arxiv.org/abs/2610.05833</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05833</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Request Order Matter...：arXiv:2610.05833v1 Announce Type: new Abstract: Long-runni...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.05833v1 Announce Type: new Abstract: Long-running agents repeatedly call an LLM while retaining most of their document window, evicting old documents, and appending new ones. These rolling...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MiniCorp: The Last Mile of the AI Agent Firm</title>
+      <link>https://arxiv.org/abs/2610.05912</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05912</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>MiniCorp：arXiv:2610.05912v1 Announce Type: new Abstract: The last m...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.05912v1 Announce Type: new Abstract: The last mile toward enterprise AGI is a company that runs itself. Training and adapting such agents require longitudinal enterprise data, which remain...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>OntoInk: Interactive Ontology Visualization, Validation, and Reasoning</title>
+      <link>https://arxiv.org/abs/2610.05945</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05945</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>OntoInk：arXiv:2610.05945v1 Announce Type: new Abstract: Ontology d...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.05945v1 Announce Type: new Abstract: Ontology documentation, visualization, and validation are usually carried out with separate tools. This split workflow slows down development and makes...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>On Impact of Loss Function on the Performance of Neural Networks in Melanoma Diagnosis</title>
+      <link>https://arxiv.org/abs/2610.06139</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.06139</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>On Impact of Loss Fu...：arXiv:2610.06139v1 Announce Type: new Abstract: Melanoma i...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.06139v1 Announce Type: new Abstract: Melanoma is the deadliest type of skin cancer, whose early diagnosis is crucial for patients&apos; survival. Image classification using deep learning models...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>Capability-Driven Self-Evolution of Agent Memory</title>
+      <link>https://arxiv.org/abs/2610.06361</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.06361</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Capability-Driven Se...：arXiv:2610.06361v1 Announce Type: new Abstract: Memory sel...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.06361v1 Announce Type: new Abstract: Memory self-evolution uses task feedback to iteratively improve executable memory programs that store and retrieve information from past interactions....
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>What Did the Agent Actually Do? Evidence-Grounded Oversight for Long-Horizon Agents</title>
+      <link>https://arxiv.org/abs/2610.06406</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.06406</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>What Did the Agent A...：arXiv:2610.06406v1 Announce Type: new Abstract: As agents...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.06406v1 Announce Type: new Abstract: As agents take on long-horizon tasks, users shift from making individual decisions to overseeing autonomous execution. Yet the volume of agent activity...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>HERA: Harness-Environment Co-Evolution for Reliable Agentic Abstention</title>
+      <link>https://arxiv.org/abs/2610.06563</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.06563</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>HERA：arXiv:2610.06563v1 Announce Type: new Abstract: Large lang...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.06563v1 Announce Type: new Abstract: Large language model (LLM) agents are increasingly capable of acting in complex tool-use environments, yet they often fail to recognize when tasks are...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Language models can notice an impossible engineering problem yet still report it as solved</title>
+      <link>https://arxiv.org/abs/2610.06668</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.06668</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Language models can...：arXiv:2610.06668v1 Announce Type: new Abstract: Language m...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.06668v1 Announce Type: new Abstract: Language models draft engineering calculations, but answer accuracy does not show whether they reject an impossible problem. We tested 14 models on 30...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>The Pushback Paradox: A Two-Probe Diagnostic for Language Model Compliance</title>
+      <link>https://arxiv.org/abs/2610.06673</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.06673</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>The Pushback Paradox：arXiv:2610.06673v1 Announce Type: new Abstract: Are langua...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.06673v1 Announce Type: new Abstract: Are language models compliant with user instructions? A model that always complies can be stopped but also exploited, while one that always resists can...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Back to the Future: Rethinking EDA Infrastructure for Agentic Systems in Chip Design Verification</title>
+      <link>https://arxiv.org/abs/2610.06790</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.06790</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Back to the Future：arXiv:2610.06790v1 Announce Type: new Abstract: The unprec...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.06790v1 Announce Type: new Abstract: The unprecedented computational scale of modern artificial intelligence depends on complex, multi-billion-transistor Systems-on-Chip, yet the workflows...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Beyond Private Training: The New Landscape of AI Privacy</title>
+      <link>https://arxiv.org/abs/2609.19456</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2609.19456</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Beyond Private Train...：arXiv:2609.19456v1 Announce Type: cross Abstract: Retrieva...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2609.19456v1 Announce Type: cross Abstract: Retrieval-augmented systems increasingly rely on vector indexes that may retain deleted items in their search graph. Existing deletion interfaces can...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>OceanMind: A multi-agent AI system for ocean diagnosis</title>
+      <link>https://arxiv.org/abs/2610.03780</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.03780</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>OceanMind：arXiv:2610.03780v1 Announce Type: cross Abstract: Time-dep...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.03780v1 Announce Type: cross Abstract: Time-dependent, three-dimensional (3D) oceanic multi-variables define coherent states of the evolving ocean to facilitate ocean diagnosis and advance...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Beware EviLLM: Enabling Vulnerability Injection via Large Language Models</title>
+      <link>https://arxiv.org/abs/2610.03857</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.03857</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Beware EviLLM：arXiv:2610.03857v1 Announce Type: cross Abstract: Advances...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.03857v1 Announce Type: cross Abstract: Advances in large language models (LLMs) have enabled AI-driven code generation from natural language specifications, introducing new attack surfaces...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Dependable AI-Assisted Engineering: A Formal Framework for AI Participation and Assurance in Safety-Critical Workflows</title>
+      <link>https://arxiv.org/abs/2610.04084</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04084</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Dependable AI-Assist...：arXiv:2610.04084v1 Announce Type: cross Abstract: Generati...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.04084v1 Announce Type: cross Abstract: Generative AI can produce engineering artefacts, but generation alone does not determine whether or how those artefacts should enter safety-critical...
+
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>安全对齐</category>
     </item>
     <item>
-      <title>ReFract:基于文本世界模型的语言模型代理视角感知基准测试</title>
-      <link>https://arxiv.org/abs/2610.03356</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03356</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>ReFract：arXiv:2610.03356v1 Announce Type: new Abstract: Large Lang...，适合判断技术路线和后续产品化可能性。
+      <title>SEER: Self-Evolving Event Reasoning and Retrieval for Time Series Forecasting</title>
+      <link>https://arxiv.org/abs/2610.04109</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04109</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>SEER：arXiv:2610.04109v1 Announce Type: cross Abstract: Real-wor...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.03356v1 Announce Type: new Abstract: Large Language Model (LLM) agents are increasingly deployed in high-stakes settings such as industrial maintenance and equipment fault troubleshooting,...
+arXiv:2610.04109v1 Announce Type: cross Abstract: Real-world time series are frequently driven by exogenous events and structural shifts, rendering conventional forecasting based solely on historical...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>跨境变得可疑:算法域外性与AI驱动的金融监控</title>
-      <link>https://arxiv.org/abs/2610.03425</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03425</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>跨境变得可疑：arXiv:2610.03425v1 Announce Type: new Abstract: Suspicion...，适合判断技术路线和后续产品化可能性。
+      <title>Agent Reliability Profiles in Financial Services</title>
+      <link>https://arxiv.org/abs/2610.04123</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04123</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Agent Reliability Pr...：arXiv:2610.04123v1 Announce Type: cross Abstract: AI agent...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.03425v1 Announce Type: new Abstract: Suspicion is an important, yet elusive concept in anti-money laundering and counter-terrorist financing (AML/CFT), which allows for intervention below...
+arXiv:2610.04123v1 Announce Type: cross Abstract: AI agents can take actions. At times, those actions can go beyond what is intended. Agent reliability can be defined as assurance that an agent will...
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>插队:利用LLM调度中的长度预测</title>
-      <link>https://arxiv.org/abs/2610.03430</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03430</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>插队：arXiv:2610.03430v1 Announce Type: new Abstract: Efficient...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03430v1 Announce Type: new Abstract: Efficient request scheduling is increasingly important for reducing completion time in large language model (LLM) serving. Size-based policies such as...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>HyperBrowseComp:网页浏览代理的多语言多模态压力测试</title>
-      <link>https://arxiv.org/abs/2610.03574</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03574</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>HyperBrowseComp：arXiv:2610.03574v1 Announce Type: new Abstract: We introdu...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03574v1 Announce Type: new Abstract: We introduce HyperBrowseComp, a multilingual and multimodal browsing benchmark comprising 423 manually authored and human-validated questions across 13...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>NeutronGym:面向LLM代理的物理分级中子仪器设计</title>
-      <link>https://arxiv.org/abs/2610.03631</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03631</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>NeutronGym：arXiv:2610.03631v1 Announce Type: new Abstract: Designing...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03631v1 Announce Type: new Abstract: Designing a scientific instrument tests whether language-model agents can do physics rather than recall it, provided the grading cannot be argued with....
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>大型语言模型了解哥伦比亚法律吗？哥伦比亚法律体系可靠性基准测试</title>
-      <link>https://arxiv.org/abs/2610.03639</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03639</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>大型语言模型了解哥伦比亚法律吗：arXiv:2610.03639v1 Announce Type: new Abstract: Large lang...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03639v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly used to support legal practice, education, and research, yet their reliability in national legal systems...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>CONTRA:发现并评估用于选择性澄清的行为改变问题，以提升LLM代码生成</title>
-      <link>https://arxiv.org/abs/2610.01769</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.01769</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>CONTRA：arXiv:2610.01769v1 Announce Type: cross Abstract: Coding a...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.01769v1 Announce Type: cross Abstract: Coding agents can generate code that appears correct but implements behavior the user never intended. This mismatch can arise when an agent silently...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>RxnOptBench:基准测试大语言模型在有机方法学中反应条件优化的能力</title>
-      <link>https://arxiv.org/abs/2610.02242</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02242</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>RxnOptBench：arXiv:2610.02242v1 Announce Type: cross Abstract: Chemical...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02242v1 Announce Type: cross Abstract: Chemical reaction-condition optimization -- choosing the catalyst, ligand, solvent, reagent, temperature, time, and atmosphere that jointly maximize...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>利用大语言模型克服解释性结构建模的挑战</title>
-      <link>https://arxiv.org/abs/2610.02254</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02254</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>利用大语言模型克服解释性结构建模的挑战：arXiv:2610.02254v1 Announce Type: cross Abstract: Interpre...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02254v1 Announce Type: cross Abstract: Interpretive Structural Modeling (ISM) is a well-known process for multi-criteria decision making. The success of ISM over other methodologies is its...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>DeskForge:来自桌面环境的密集监督，用于计算机使用代理的训练</title>
-      <link>https://arxiv.org/abs/2610.02320</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02320</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>DeskForge：arXiv:2610.02320v1 Announce Type: cross Abstract: Computer...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02320v1 Announce Type: cross Abstract: Computer-use agents need to reliably ground action targets in complex desktop scenes, where multiple applications, overlapping windows, and visually...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>自动化HCI原则的应用:按需UI构建、人机交互空间思考与HCI未来</title>
-      <link>https://arxiv.org/abs/2610.02369</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02369</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>自动化HCI原则的应用：arXiv:2610.02369v1 Announce Type: cross Abstract: Human-co...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02369v1 Announce Type: cross Abstract: Human-computer interaction (HCI) is in the middle of a transition: large language models can now generate functional user interfaces (UIs) on demand...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Coco:硬件-软件协同设计生命周期的代理式副驾驶</title>
-      <link>https://arxiv.org/abs/2610.02376</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02376</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Coco：arXiv:2610.02376v1 Announce Type: cross Abstract: Co-desig...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.02376v1 Announce Type: cross Abstract: Co-designing ML models and the accelerators that run them is an unusual reasoning task: architects must draw confident, high-stakes conclusions about...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>基于定理级符号验证器的反例生成:当模仿有害而强化可修复</title>
-      <link>https://arxiv.org/abs/2610.02444</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02444</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>基于定理级符号验证器的反例生成：arXiv:2610.02444v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02444v1 Announce Type: cross Abstract: Large language models often solve a theorem forward yet fail to disprove a closely related false one: a falsification gap that supervised fine-tuning...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>多保真策略梯度:稳定数据稀缺环境下的强化学习</title>
-      <link>https://arxiv.org/abs/2610.02505</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02505</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>多保真策略梯度：arXiv:2610.02505v1 Announce Type: cross Abstract: Policy g...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02505v1 Announce Type: cross Abstract: Policy gradient methods for on-policy reinforcement learning (RL) can become unstable when expensive, scarce target-domain data yield noisy gradient...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>OpenGameEval:基于有状态游戏引擎评估代理编程与探索能力</title>
-      <link>https://arxiv.org/abs/2610.02563</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02563</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>OpenGameEval：arXiv:2610.02563v1 Announce Type: cross Abstract: We prese...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.02563v1 Announce Type: cross Abstract: We present OpenGameEval, a benchmark and evaluation framework for agentic game development inside Roblox Studio. It runs language models as agents in...
-
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>WebUIProof:基于UI-Agent执行基准测试的WebUI代码生成器评估</title>
-      <link>https://arxiv.org/abs/2610.02617</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02617</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>WebUIProof：arXiv:2610.02617v1 Announce Type: cross Abstract: Evaluati...，适合关注自动化任务和多 Agent 协作演进。
+      <title>PB-GRPO: Learning Socially Adaptive LLM Agents from Persona-Driven Simulation with Preference-Batched GRPO</title>
+      <link>https://arxiv.org/abs/2610.04132</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04132</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>PB-GRPO：arXiv:2610.04132v1 Announce Type: cross Abstract: Building...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02617v1 Announce Type: cross Abstract: Evaluating WebUI code generation at scale is difficult: outputs may compile and look plausible yet fail under user interaction, and prior benchmarks...
+arXiv:2610.04132v1 Announce Type: cross Abstract: Building LLMs that behave well socially, not merely correctly, requires Building LLMs that behave well socially, not merely correctly, requires more...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Trajectory-Derived Confidence for Reliable, Resource-Aware Clinical Text-to-SQL Agents</title>
+      <link>https://arxiv.org/abs/2610.04156</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04156</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Trajectory-Derived C...：arXiv:2610.04156v1 Announce Type: cross Abstract: LLM agen...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.04156v1 Announce Type: cross Abstract: LLM agents for clinical text-to-SQL applications reason autonomously over multiple steps but cannot assess whether their own reasoning or outputs can...
+
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Adaptive Operator Selection in Bilevel Large Neighborhood Search for Electric Autonomous Dial-a-Ride Problem under Uncertainty</title>
+      <link>https://arxiv.org/abs/2610.04219</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04219</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Adaptive Operator Se...：arXiv:2610.04219v1 Announce Type: cross Abstract: The elec...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.04219v1 Announce Type: cross Abstract: The electric autonomous dial-a-ride problem (EADARP) extends the classical dial-a-ride problem by incorporating battery and charging constraints for...
+
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>预期遗憾:通过预测与现实差距实现自校准强化学习</title>
-      <link>https://arxiv.org/abs/2610.02740</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02740</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>预期遗憾：arXiv:2610.02740v1 Announce Type: cross Abstract: Reinforc...，适合判断技术路线和后续产品化可能性。
+      <title>Benchmarking Psychological Dynamics in Generative Agents</title>
+      <link>https://arxiv.org/abs/2610.04246</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04246</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Benchmarking Psychol...：arXiv:2610.04246v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02740v1 Announce Type: cross Abstract: Reinforcement learning for long-horizon agents relies on purely retrospective training signals: credit is assigned only after observing environmental...
+arXiv:2610.04246v1 Announce Type: cross Abstract: Large language models (LLMs) are increasingly deployed to simulate human behavior, acting as computational replicas of human subjects. Yet the lived...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>通过因果不变掩码揭示多模态大语言模型中的认知不确定性</title>
-      <link>https://arxiv.org/abs/2610.02887</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02887</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>通过因果不变掩码揭示多模态大语言模型中的...：arXiv:2610.02887v1 Announce Type: cross Abstract: Multimod...，适合判断技术路线和后续产品化可能性。
+      <title>Questioning the Questions: Sustaining Self-Evolution in Reasoning Models</title>
+      <link>https://arxiv.org/abs/2610.04299</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04299</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Questioning the Ques...：arXiv:2610.04299v1 Announce Type: cross Abstract: Self-evo...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.02887v1 Announce Type: cross Abstract: Multimodal Large Language Models (MLLMs) suffer from hallucinations, creating a critical need for Uncertainty Quantification (UQ) to ensure reliable...
+arXiv:2610.04299v1 Announce Type: cross Abstract: Self-evolving reasoning models learn from their own generated questions, yet repeated self-training can lead to performance collapse. In this paper,...
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>通过组合偏好与评分奖励微调前沿文本到图像模型</title>
-      <link>https://arxiv.org/abs/2610.02967</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02967</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>通过组合偏好与评分奖励微调前沿文本到图像...：arXiv:2610.02967v1 Announce Type: cross Abstract: Recent t...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02967v1 Announce Type: cross Abstract: Recent text-to-image generation models have achieved remarkable visual quality, but improving them through post-training remains challenging because...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Sentry:在测试时学习从LLM智能体故障中恢复</title>
-      <link>https://arxiv.org/abs/2610.02994</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02994</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Sentry：arXiv:2610.02994v1 Announce Type: cross Abstract: LLM agen...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.02994v1 Announce Type: cross Abstract: LLM agents often fail mid-task due to invalid tool calls, repeated actions, or poorly grounded reasoning, and learning from these failures is a path...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>AvoKV-E:面向长推理的载荷感知KV缓存驱逐</title>
-      <link>https://arxiv.org/abs/2610.03007</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03007</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>AvoKV-E：arXiv:2610.03007v1 Announce Type: cross Abstract: Long-out...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03007v1 Announce Type: cross Abstract: Long-output reasoning shifts the KV-cache bottleneck from the fixed prompt to the generated trace. Existing reasoning-cache eviction methods largely...
-
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>OmniAct3D:利用基础几何与证据驱动推理实现全景3D检测</title>
-      <link>https://arxiv.org/abs/2610.03015</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03015</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>OmniAct3D：arXiv:2610.03015v1 Announce Type: cross Abstract: Accurate...，适合判断技术路线和后续产品化可能性。
+      <title>Coupling Noisy Pairwise Knowledge to the DAG Posterior for Causal Discovery</title>
+      <link>https://arxiv.org/abs/2610.04559</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04559</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Coupling Noisy Pairw...：arXiv:2610.04559v1 Announce Type: cross Abstract: External...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.03015v1 Announce Type: cross Abstract: Accurate 3D detection is essential for mobile embodied agents, while Vision Foundation Models (VFMs) offer transferable visual and geometric priors....
+arXiv:2610.04559v1 Announce Type: cross Abstract: External causal reports can improve structure learning from limited observations, but their reliability varies across sources and variable pairs. We...
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>WebFovea:当模型正确但点击错误——面向实时网站视觉智能体的可靠往返交互</title>
-      <link>https://arxiv.org/abs/2610.03036</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03036</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>WebFovea：arXiv:2610.03036v1 Announce Type: cross Abstract: We prese...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.03036v1 Announce Type: cross Abstract: We present WebFovea, a vision-based web agent that placed 2nd in the WebRetriever Challenge 2026 with a final score of 57.0 out of 100. The challenge...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Foresight:无需重训练即可在流式VLM中规划未来感知</title>
-      <link>https://arxiv.org/abs/2610.03123</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03123</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Foresight：arXiv:2610.03123v1 Announce Type: cross Abstract: Existing...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03123v1 Announce Type: cross Abstract: Existing streaming vision-language models (VLMs) continuously perceive and reason over visual streams, but their computational pathways remain fixed...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>基于无标签人类B细胞库的跨病毒家族广谱中和抗体发现的多模态推理</title>
-      <link>https://arxiv.org/abs/2610.03160</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03160</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>基于无标签人类B细胞库的跨病毒家族广谱中...：arXiv:2610.03160v1 Announce Type: cross Abstract: Discover...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03160v1 Announce Type: cross Abstract: Discovering broadly neutralizing antibodies (bnAbs) from human natural immune repertoires remains a fundamental challenge in immunology, hindered by:...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>只有当证据表明时才行动:教导LLM调查员何时终结案件</title>
-      <link>https://arxiv.org/abs/2610.03190</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03190</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>只有当证据表明时才行动：arXiv:2610.03190v1 Announce Type: cross Abstract: Accident...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03190v1 Announce Type: cross Abstract: Accident, defect and outage investigations end with a decision that ordinary question answering never faces: whether the evidence gathered so far is...
-
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>受损却正确:视觉语言模型为何在内部自我欺骗</title>
-      <link>https://arxiv.org/abs/2610.03445</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03445</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>受损却正确：arXiv:2610.03445v1 Announce Type: cross Abstract: A target...，适合判断技术路线和后续产品化可能性。
+      <title>From Probe Scores to Alarm Policies: Operational Validity of Activation Monitors for Language-Model Agents</title>
+      <link>https://arxiv.org/abs/2610.04575</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04575</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>From Probe Scores to...：arXiv:2610.04575v1 Announce Type: cross Abstract: Activati...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.03445v1 Announce Type: cross Abstract: A targeted adversarial perturbation can drive a vision-language model&apos;s (VLM&apos;s) teacher-forced training loss for a fixed target caption to near zero,...
+arXiv:2610.04575v1 Announce Type: cross Abstract: Activation probes can predict safety-relevant properties of language models with high area under the receiver-operating-characteristic curve (AUROC),...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
-      <category>多模态</category>
+      <category>安全对齐</category>
     </item>
     <item>
-      <title>MobiAgent:用于长周期移动操作的双循环递归策略自我改进</title>
-      <link>https://arxiv.org/abs/2610.03476</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03476</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>MobiAgent：arXiv:2610.03476v1 Announce Type: cross Abstract: Long-hor...，适合判断技术路线和后续产品化可能性。
+      <title>Viva La Vida: Verification and Accumulation Failures in Multi-Agent Proof Search</title>
+      <link>https://arxiv.org/abs/2610.04829</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04829</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Viva La Vida：arXiv:2610.04829v1 Announce Type: cross Abstract: When an...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.03476v1 Announce Type: cross Abstract: Long-horizon mobile manipulation presents significant challenges due to compounding execution errors and capacity interference between locomotion and...
+arXiv:2610.04829v1 Announce Type: cross Abstract: When an agentic prover works on an open problem, there is no proof assistant to fall back on: its verifier and lemma library are ultimately language...
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>智能体安全基准中威胁保持型表征敏感性分析</title>
-      <link>https://arxiv.org/abs/2610.03585</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03585</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>智能体安全基准中威胁保持型表征敏感性分析：arXiv:2610.03585v1 Announce Type: cross Abstract: Security...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.03585v1 Announce Type: cross Abstract: Security benchmarks for LLM-based agents often report the attack success rate (ASR) as a measure of model robustness and use these scores to compare...
-
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>How Artificial Intelligence LLM Engines Shape the Global Conflict Information Environment</title>
-      <link>https://arxiv.org/abs/2607.14197</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2607.14197</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>How Artificial Intel...：arXiv:2607.14197v2 Announce Type: replace Abstract: Artifi...，适合判断技术路线和后续产品化可能性。
+      <title>Enhancing Long-Video VLM Embeddings with Query-Aware Streaming Latent Reasoning</title>
+      <link>https://arxiv.org/abs/2610.04864</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04864</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Enhancing Long-Video...：arXiv:2610.04864v1 Announce Type: cross Abstract: Long-vid...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2607.14197v2 Announce Type: replace Abstract: Artificial Intelligence (AI) answer engines now field a growing share of the questions that analysts, scholars, and the public ask about issues of...
+arXiv:2610.04864v1 Announce Type: cross Abstract: Long-video embedding requires capturing sparse query-relevant evidence under a limited visual-token budget. Uniform sampling can miss brief events in...
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Reach or Solve? Deep Diving into Agentic RL Gains with Checkpoint Handoffs</title>
-      <link>https://arxiv.org/abs/2609.19636</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.19636</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Reach or Solve：arXiv:2609.19636v2 Announce Type: replace Abstract: Reinfo...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2609.19636v2 Announce Type: replace Abstract: Reinforcement learning (RL) is widely used to improve language-model agents, and its gains are usually measured by final task success. However, an...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Recoverability Has a Law: The ERR Measure for Tool-Augmented Agents</title>
-      <link>https://arxiv.org/abs/2601.22352</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2601.22352</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Recoverability Has a...：arXiv:2601.22352v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2601.22352v2 Announce Type: replace-cross Abstract: Language model agents often appear capable of self-recovery after failing tool call executions, yet this behavior lacks a formal explanation....
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>The Effective Depth Paradox: Topology and Trainability in Deep CNNs</title>
-      <link>https://arxiv.org/abs/2602.13298</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.13298</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>The Effective Depth...：arXiv:2602.13298v4 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2602.13298v4 Announce Type: replace-cross Abstract: This paper presents a controlled comparative study of convolutional neural network (CNN) topology and image classification performance across...
-
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
     </item>
     <item>
-      <title>Goldilocks RL: Tuning Task Difficulty to Escape Sparse Rewards for Reasoning</title>
-      <link>https://arxiv.org/abs/2602.14868</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.14868</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Goldilocks RL：arXiv:2602.14868v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+      <title>Greedy Local Learning for Language Model Pretraining: Gaps and Objective Design</title>
+      <link>https://arxiv.org/abs/2610.04867</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.04867</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Greedy Local Learnin...：arXiv:2610.04867v1 Announce Type: cross Abstract: Greedy b...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2602.14868v3 Announce Type: replace-cross Abstract: Reinforcement learning has emerged as a powerful paradigm for unlocking reasoning capabilities in language models. However, relying on sparse...
+arXiv:2610.04867v1 Announce Type: cross Abstract: Greedy block-wise local learning splits a network into gradient-isolated blocks trained by local auxiliary losses, deleting the backward pass between...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Rhetorical Questions in LLM Representations: A Linear Probing Study</title>
-      <link>https://arxiv.org/abs/2604.14128</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2604.14128</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Rhetorical Questions...：arXiv:2604.14128v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+      <title>Tracing a Sparse Emotion-Control Circuit in LLM-Based Text-to-Speech</title>
+      <link>https://arxiv.org/abs/2610.05080</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05080</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Tracing a Sparse Emo...：arXiv:2610.05080v1 Announce Type: cross Abstract: LLM-base...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2604.14128v3 Announce Type: replace-cross Abstract: Rhetorical questions are asked not to seek information but to persuade or signal stance. How large language models internally represent them...
+arXiv:2610.05080v1 Announce Type: cross Abstract: LLM-based text-to-speech (TTS) models can generate emotionally expressive speech, but how reference emotion is routed through the model and realized...
 
-信号等级 B · 评分 62.5</description>
+信号等级 B · 评分 66.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>Direction-Conditioned Policies for Online Goal-Conditioned Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2610.05087</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.05087</guid>
+      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Direction-Conditione...：arXiv:2610.05087v1 Announce Type: cross Abstract: Contrast...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.05087v1 Announce Type: cross Abstract: Contrastive Reinforcement Learning (CRL) learns representations that estimate goal reachability, yet its policy remains conditioned on raw goals and...
+
+信号等级 B · 评分 66.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
