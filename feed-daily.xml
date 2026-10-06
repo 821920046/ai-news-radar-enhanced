@@ -5,29 +5,56 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 Oct 2026 22:59:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 02:42:37 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Gemini Call for Me 或扩展至亲友通话，可代发&quot;晚到 15 分钟&quot;消息</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors</guid>
+      <pubDate>Mon, 05 Oct 2026 23:09:55 +0000</pubDate>
+      <description>谷歌或将“帮我打电话”AI功能扩展至个人通讯，Android Authority在Phone应用中发现“Gemini...，来自官方更新源，适合直接判断产品变化。
+
+谷歌或将“帮我打电话”AI功能扩展至个人通讯，Android Authority在Phone应用中发现“Gemini Calling”引导界面，暗示用户未来可让Gemini代为拨打电话、发送信息给亲友。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+    </item>
     <item>
       <title>M-Abozaid/esp32-c3-adblock</title>
       <link>https://github.com/M-Abozaid/esp32-c3-adblock</link>
       <guid isPermaLink="true">https://github.com/M-Abozaid/esp32-c3-adblock</guid>
       <pubDate>Mon, 05 Oct 2026 22:59:11 +0000</pubDate>
-      <description>M-Abozaid/esp32-c3-a...：在$2的ESP32-C3（无PSRAM）上实现Pi-hole级DNS广告拦截器，将537k个域名存储为40位FNV-...，适合进一步验证代码、协议或社区采用情况。
+      <description>M-Abozaid/esp32-c3-a...：一款类Pi-hole的DNS广告拦截工具运行在仅售2美元的ESP32-C3芯片上（无PSRAM），将53.7万个域名...，适合进一步验证代码、协议或社区采用情况。
 
-在$2的ESP32-C3（无PSRAM）上实现Pi-hole级DNS广告拦截器，将537k个域名存储为40位FNV-1a哈希值于flash中，采用二分搜索；支持UDP DNS sinkhole及Web仪表盘。
+一款类Pi-hole的DNS广告拦截工具运行在仅售2美元的ESP32-C3芯片上（无PSRAM），将53.7万个域名以40位FNV-1a哈希形式存入Flash并采用二分查找，实现UDP DNS拦截与网页仪表盘管理。
 
 信号等级 B · 评分 53.6</description>
       <category>开源热榜</category>
       <category>开源</category>
     </item>
     <item>
-      <title>Google 等机构智能体漏洞暴露 MCP 结构性缺陷</title>
+      <title>秘密扫描新增对 Lovable、Supabase 等工具的检测器</title>
+      <link>https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more</link>
+      <guid isPermaLink="true">https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more</guid>
+      <pubDate>Mon, 05 Oct 2026 22:42:14 +0000</pubDate>
+      <description>秘密扫描新增对 Lovable、Supa...：秘密扫描功能现已支持检测来自 Lovable Labs、Pydantic Services Inc. 和 Supab...，适合进一步验证代码、协议或社区采用情况。
+
+秘密扫描功能现已支持检测来自 Lovable Labs、Pydantic Services Inc. 和 Supabase 的新密钥类型，并新增合作伙伴加入秘密扫描联盟。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>MCP 智能体通信协议曝结构性缺陷，Google 等五机构确认相关漏洞</title>
       <link>https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp</guid>
       <pubDate>Mon, 05 Oct 2026 22:26:35 +0000</pubDate>
-      <description>Google：新协议中的信任漏洞使恶意提示可在智能体间传播，适合关注 Agent 工具调用和工作流搭建。
+      <description>Google：新协议中的信任缺陷导致恶意提示在代理间传播，适合关注 Agent 工具调用和工作流搭建。
 
-新协议中的信任漏洞使恶意提示可在智能体间传播。
+新协议中的信任缺陷导致恶意提示在代理间传播。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -40,9 +67,9 @@
       <link>https://pytorch.org/blog/evolution-of-the-pytorch-media-processing-landscape</link>
       <guid isPermaLink="true">https://pytorch.org/blog/evolution-of-the-pytorch-media-processing-landscape</guid>
       <pubDate>Mon, 05 Oct 2026 20:45:50 +0000</pubDate>
-      <description>PyTorch 媒体处理生态的演进：如需解码或编码图像、视频、音频等媒体，推荐使用TorchCodec，适合关注内容生产和交互形态的新变化。
+      <description>PyTorch 媒体处理生态的演进：摘要：若需解码或编码图像、视频、音频等多媒体数据，应使用 TorchCodec，适合关注内容生产和交互形态的新变化。
 
-如需解码或编码图像、视频、音频等媒体，推荐使用TorchCodec；若需进行媒体变换，则图像和视频处理可选用TorchVision。
+摘要：若需解码或编码图像、视频、音频等多媒体数据，应使用 TorchCodec；若需对多媒体进行变换处理，图像和视频则应使用 TorchVision。
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
@@ -53,11 +80,11 @@
       <link>https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu</guid>
       <pubDate>Mon, 05 Oct 2026 20:36:48 +0000</pubDate>
-      <description>OpenAI、GPT：为遵守欧盟《人工智能法案》，OpenAI 将在欧盟对 ChatGPT 和 Codex 生成的文本添加隐形水印，但编辑...，适合判断 AI 编程工作流会不会被改写。
+      <description>OpenAI、GPT：OpenAI计划在欧盟对ChatGPT和Codex文本进行水印标记，以符合AI法案要求，适合判断 AI 编程工作流会不会被改写。
 
-为遵守欧盟《人工智能法案》，OpenAI 将在欧盟对 ChatGPT 和 Codex 生成的文本添加隐形水印，但编辑可能降低水印的可检测性。
+OpenAI计划在欧盟对ChatGPT和Codex文本进行水印标记，以符合AI法案要求。该公司警告，编辑行为可能会削弱这些不可见标记的可检测性。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>编码工具</category>
     </item>
@@ -66,11 +93,11 @@
       <link>https://www.theverge.com/ai-artificial-intelligence/1005075/nolla-health-acne-ai-prescriptions</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1005075/nolla-health-acne-ai-prescriptions</guid>
       <pubDate>Mon, 05 Oct 2026 20:14:57 +0000</pubDate>
-      <description>初创公司 Nolla Health 在犹...：犹他州居民现可通过医疗初创公司Nolla Health的AI应用扫描面部获取痤疮治疗处方，适合判断资金、客户和生态格局的变化。
+      <description>初创公司 Nolla Health 在犹...：犹他州居民现可通过Nolla Health应用扫描面部，利用AI获取痤疮治疗处方，适合判断资金、客户和生态格局的变化。
 
-犹他州居民现可通过医疗初创公司Nolla Health的AI应用扫描面部获取痤疮治疗处方。
+犹他州居民现可通过Nolla Health应用扫描面部，利用AI获取痤疮治疗处方。该初创公司于周一宣布，用户仅需拍照即可获得个性化皮肤护理方案。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
@@ -79,11 +106,11 @@
       <link>https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost</guid>
       <pubDate>Mon, 05 Oct 2026 19:33:53 +0000</pubDate>
-      <description>Reflection 发布首款开源权重模...：Reflection旨向企业和主权国家推出未来模型，主打“AI工厂”产品，让机构能够构建本地化、定制化的AI系统，适合进一步验证代码、协议或社区采用情况。
+      <description>Reflection 发布首款开源权重模...：Reflection 正将其 Beam 及未来模型面向企业和主权国家推出，主打“AI 工厂”产品，使机构能够构建定制...，适合进一步验证代码、协议或社区采用情况。
 
-Reflection旨向企业和主权国家推出未来模型，主打“AI工厂”产品，让机构能够构建本地化、定制化的AI系统。
+Reflection 正将其 Beam 及未来模型面向企业和主权国家推出，主打“AI 工厂”产品，使机构能够构建定制化的本地化 AI 系统。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>开源</category>
       <category>模型发布</category>
@@ -94,11 +121,11 @@ Reflection旨向企业和主权国家推出未来模型，主打“AI工厂”�
       <link>https://www.theverge.com/ai-artificial-intelligence/1004933/ai-math-openai-breakthrough-solution</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004933/ai-math-openai-breakthrough-solution</guid>
       <pubDate>Mon, 05 Oct 2026 19:28:59 +0000</pubDate>
-      <description>AI 接管数学界引发的争议风波：过去一年，OpenAI、Anthropic等机构在诸多长期未解的数学难题上取得突破，部分成果远超当前研究预期，适合判断技术路线和后续产品化可能性。
+      <description>AI 接管数学界引发的争议风波：过去一年，OpenAI、Anthropic 等实验室在多个长期未解的数学问题上取得突破，部分成果远超研究人员对当前模...，适合判断技术路线和后续产品化可能性。
 
-过去一年，OpenAI、Anthropic等机构在诸多长期未解的数学难题上取得突破，部分成果远超当前研究预期。
+过去一年，OpenAI、Anthropic 等实验室在多个长期未解的数学问题上取得突破，部分成果远超研究人员对当前模型的预期。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -107,11 +134,11 @@ Reflection旨向企业和主权国家推出未来模型，主打“AI工厂”�
       <link>https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage</link>
       <guid isPermaLink="true">https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage</guid>
       <pubDate>Mon, 05 Oct 2026 19:05:19 +0000</pubDate>
-      <description>OpenAI：维基媒体基金会确认，其已发现部分AI代理在访问第三方网站和服务时存在数据泄露问题，正采取措施加强防护，适合关注 Agent 工具调用和工作流搭建。
+      <description>OpenAI：维基媒体基金会确认，已发现AI代理在未经授权的情况下访问其托管的第三方网站和服务，包括维基百科，适合关注 Agent 工具调用和工作流搭建。
 
-维基媒体基金会确认，其已发现部分AI代理在访问第三方网站和服务时存在数据泄露问题，正采取措施加强防护。
+维基媒体基金会确认，已发现AI代理在未经授权的情况下访问其托管的第三方网站和服务，包括维基百科。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>MCP/工具</category>
       <category>智能体</category>
@@ -121,11 +148,11 @@ Reflection旨向企业和主权国家推出未来模型，主打“AI工厂”�
       <link>https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account</guid>
       <pubDate>Mon, 05 Oct 2026 18:54:30 +0000</pubDate>
-      <description>Instinct 将 AI 智能体引入群...：Instinct推出群聊功能，允许好友共同使用其AI代理完成行程规划、拼车安排和活动协调等任务，公司表示个人账户仍保...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Instinct 将 AI 智能体引入群...：Instinct推出了支持多人协作的AI Agent群聊，用户可共同规划行程、组织拼车或协调活动，适合关注自动化任务和多 Agent 协作演进。
 
-Instinct推出群聊功能，允许好友共同使用其AI代理完成行程规划、拼车安排和活动协调等任务，公司表示个人账户仍保持独立。
+Instinct推出了支持多人协作的AI Agent群聊，用户可共同规划行程、组织拼车或协调活动。公司表示个人账户将保持独立。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>行业动态</category>
@@ -135,11 +162,11 @@ Instinct推出群聊功能，允许好友共同使用其AI代理完成行程规�
       <link>https://techcrunch.com/2026/10/05/tiktok-rolls-out-an-ai-shopping-assistant-and-one-click-checkout</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/tiktok-rolls-out-an-ai-shopping-assistant-and-one-click-checkout</guid>
       <pubDate>Mon, 05 Oct 2026 18:29:00 +0000</pubDate>
-      <description>TikTok 推出 AI 购物助手和一键...：TikTok 将其新推出的 Shopping Assistant 描述为一款对话式 AI 代理，旨在帮助用户发现并购...，适合关注自动化任务和多 Agent 协作演进。
+      <description>TikTok 推出 AI 购物助手和一键...：TikTok推出购物助手，一款对话式AI，旨在帮助用户发现并购买商品，适合关注自动化任务和多 Agent 协作演进。
 
-TikTok 将其新推出的 Shopping Assistant 描述为一款对话式 AI 代理，旨在帮助用户发现并购买商品。
+TikTok推出购物助手，一款对话式AI，旨在帮助用户发现并购买商品。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
     </item>
@@ -148,11 +175,11 @@ TikTok 将其新推出的 Shopping Assistant 描述为一款对话式 AI 代理�
       <link>https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act</guid>
       <pubDate>Mon, 05 Oct 2026 18:08:39 +0000</pubDate>
-      <description>OpenAI、GPT：OpenAI正在向欧盟用户推出一种不可见的机器可读水印技术，用于ChatGPT和Codex，旨在检测AI生成的文本，适合判断 AI 编程工作流会不会被改写。
+      <description>OpenAI、GPT：OpenAI推出文本水印技术textGrain，首批仅面向欧盟用户，该技术可隐形嵌入机器可读水印，且匹配或超越现有方...，适合判断 AI 编程工作流会不会被改写。
 
-OpenAI正在向欧盟用户推出一种不可见的机器可读水印技术，用于ChatGPT和Codex，旨在检测AI生成的文本。该名为textGrain的系统在检测方面效果显著，有助于区分人类与机器创作的内容。
+OpenAI推出文本水印技术textGrain，首批仅面向欧盟用户，该技术可隐形嵌入机器可读水印，且匹配或超越现有方案。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>编码工具</category>
     </item>
@@ -161,11 +188,11 @@ OpenAI正在向欧盟用户推出一种不可见的机器可读水印技术，�
       <link>https://techcrunch.com/2026/10/05/hot-girl-hotline-is-like-dear-abby-for-the-ai-era</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/hot-girl-hotline-is-like-dear-abby-for-the-ai-era</guid>
       <pubDate>Mon, 05 Oct 2026 17:29:22 +0000</pubDate>
-      <description>两姐妹推出 Hot Girl Hotli...：由两姐妹创立的Hot Girl Hotline利用AI为年轻女性提供个性化约会与情感建议，强调安全与避免情感依赖，适合跟进 AI 风险、治理和可信边界。
+      <description>两姐妹推出 Hot Girl Hotli...：Hot Girl Hotline由两位姐妹创立，利用AI为年轻女性提供个性化约会与情感建议，重点关注安全性并避免情感...，适合跟进 AI 风险、治理和可信边界。
 
-由两姐妹创立的Hot Girl Hotline利用AI为年轻女性提供个性化约会与情感建议，强调安全与避免情感依赖。
+Hot Girl Hotline由两位姐妹创立，利用AI为年轻女性提供个性化约会与情感建议，重点关注安全性并避免情感依赖。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
     </item>
@@ -174,9 +201,9 @@ OpenAI正在向欧盟用户推出一种不可见的机器可读水印技术，�
       <link>https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr</guid>
       <pubDate>Mon, 05 Oct 2026 16:55:42 +0000</pubDate>
-      <description>OpenAI、GPT：OpenAI公关在《名利场》记者Mark Guiducci提及ChatGPT用户自杀事件后，试图转移对CEO Sam...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>OpenAI、GPT：OpenAI公关试图引导CEO萨姆·奥特曼避开《名利场》记者关于ChatGPT用户自杀的提问，当记者坚持追问时，奥特...，适合作为今日 AI/科技情报流里的重点线索。
 
-OpenAI公关在《名利场》记者Mark Guiducci提及ChatGPT用户自杀事件后，试图转移对CEO Sam Altman的采访话题。当Guiducci当面质问Altman时……
+OpenAI公关试图引导CEO萨姆·奥特曼避开《名利场》记者关于ChatGPT用户自杀的提问，当记者坚持追问时，奥特曼回应称公司正与专家合作评估AI风险。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -186,11 +213,26 @@ OpenAI公关在《名利场》记者Mark Guiducci提及ChatGPT用户自杀事件
       <link>https://www.theverge.com/ai-artificial-intelligence/1004811/openai-altman-bad-things-ai-tradeoff</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004811/openai-altman-bad-things-ai-tradeoff</guid>
       <pubDate>Mon, 05 Oct 2026 16:44:21 +0000</pubDate>
-      <description>OpenAI：山姆·奥尔特曼认为AI的益处将非常巨大，以至于“世界应该接受过程中发生的一些坏事”，他指出黑客攻击、诈骗等“其他坏事...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>OpenAI：Here&apos;s a thinking process: 1. **Analyze User Request:** -...，适合作为今日 AI/科技情报流里的重点线索。
 
-山姆·奥尔特曼认为AI的益处将非常巨大，以至于“世界应该接受过程中发生的一些坏事”，他指出黑客攻击、诈骗等“其他坏事”是这一过程中的代价。
+Here&apos;s a thinking process:
 
-信号等级 B · 评分 56.0</description>
+1.  **Analyze User Request:**
+   - Role: Professional tech news editor
+   - Task: Translate/describe an English article snippet into a concise Chinese summary (1-2 sentences, max 100 words)
+   - Requirements: 
+     a) Preserve key data and proper nouns
+     b) Natural fluent translation
+     c) Output only the translation result
+   - Input text: &quot;Sam Altman thinks that the benefits of AI will be so great that &apos;the world should accept some bad things happening&apos; along the way. The OpenAI CEO pointed to hacks, scams, and &apos;other bad things&apos; as...&quot;
+
+2.  **Identify Key Elements:**
+   - Sam Altman (萨姆·奥特曼)
+   - OpenAI CEO (OpenAI首席执行官)
+   - Benefits of AI (AI的利益/好处)
+   - &quot;the world should accept some
+
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -198,9 +240,9 @@ OpenAI公关在《名利场》记者Mark Guiducci提及ChatGPT用户自杀事件
       <link>https://techcrunch.com/2026/10/05/hackerranks-ai-interviewer-offers-a-glimpse-into-what-job-interviews-could-become</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/hackerranks-ai-interviewer-offers-a-glimpse-into-what-job-interviews-could-become</guid>
       <pubDate>Mon, 05 Oct 2026 16:43:35 +0000</pubDate>
-      <description>HackerRank 的 AI 面试官...：HackerRank的AI面试官已累计完成超50万次面试，Snowflake、Snorkel和Capgemini等企...，适合关注自动化任务和多 Agent 协作演进。
+      <description>HackerRank 的 AI 面试官...：HackerRank的AI面试官已进行超50万次面试，Snowflake、Snorkel和Capgemini为早期测...，适合关注自动化任务和多 Agent 协作演进。
 
-HackerRank的AI面试官已累计完成超50万次面试，Snowflake、Snorkel和Capgemini等企业为早期测试用户。
+HackerRank的AI面试官已进行超50万次面试，Snowflake、Snorkel和Capgemini为早期测试方。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -211,9 +253,9 @@ HackerRank的AI面试官已累计完成超50万次面试，Snowflake、Snorkel�
       <link>https://github.com/DuarteSantos8/openGym</link>
       <guid isPermaLink="true">https://github.com/DuarteSantos8/openGym</guid>
       <pubDate>Mon, 05 Oct 2026 16:34:23 +0000</pubDate>
-      <description>DuarteSantos8/openGy...：这是一款自托管健身与体重追踪应用，支持训练计划管理、锻炼日志记录（含超级组、热身与有氧），可查看肌肉训练、疲劳及退训...，适合进一步验证代码、协议或社区采用情况。
+      <description>DuarteSantos8/openGy...：自托管健身与体重追踪工具：支持规划训练计划、记录训练（含超级组、热身、有氧），可视化肌肉训练、疲劳与退化状态，支持从...，适合进一步验证代码、协议或社区采用情况。
 
-这是一款自托管健身与体重追踪应用，支持训练计划管理、锻炼日志记录（含超级组、热身与有氧），可查看肌肉训练、疲劳及退训状态，并可从FitNotes/Strong/Hevy导入数据。支持通行证登录，强调“数据由你掌控，托管在你的服务器上”。
+自托管健身与体重追踪工具：支持规划训练计划、记录训练（含超级组、热身、有氧），可视化肌肉训练、疲劳与退化状态，支持从 FitNotes、Strong、Hevy 导入数据，提供 passkey 登录，数据完全掌握在您自己的服务器上。
 
 信号等级 B · 评分 51.0</description>
       <category>开源热榜</category>
@@ -224,9 +266,9 @@ HackerRank的AI面试官已累计完成超50万次面试，Snowflake、Snorkel�
       <link>https://github.com/boykopovar/AnyPS5</link>
       <guid isPermaLink="true">https://github.com/boykopovar/AnyPS5</guid>
       <pubDate>Mon, 05 Oct 2026 16:34:23 +0000</pubDate>
-      <description>boykopovar/AnyPS5：自动将PS5可执行文件移植到Linux和Windows的工具，适合进一步验证代码、协议或社区采用情况。
+      <description>boykopovar/AnyPS5：这是一款用于自动将PS5可执行文件移植至Linux和Windows的工具，适合进一步验证代码、协议或社区采用情况。
 
-自动将PS5可执行文件移植到Linux和Windows的工具。
+这是一款用于自动将PS5可执行文件移植至Linux和Windows的工具。
 
 信号等级 B · 评分 51.3</description>
       <category>开源热榜</category>
@@ -237,9 +279,9 @@ HackerRank的AI面试官已累计完成超50万次面试，Snowflake、Snorkel�
       <link>https://github.com/msitarzewski/agency-agents</link>
       <guid isPermaLink="true">https://github.com/msitarzewski/agency-agents</guid>
       <pubDate>Mon, 05 Oct 2026 16:34:23 +0000</pubDate>
-      <description>msitarzewski/agency-...：指尖上的全能AI代理团队：涵盖前端专家、Reddit社区运营高手、创意注入者与现实检验者，每个代理均具专业技能、独特...，适合关注自动化任务和多 Agent 协作演进。
+      <description>msitarzewski/agency-...：从前端开发专家到Reddit社区高手，从创意激发者到现实校验员，各具专长的AI代理团队尽在掌握，适合关注自动化任务和多 Agent 协作演进。
 
-指尖上的全能AI代理团队：涵盖前端专家、Reddit社区运营高手、创意注入者与现实检验者，每个代理均具专业技能、独特人格、标准化流程及可验证的交付成果。
+从前端开发专家到Reddit社区高手，从创意激发者到现实校验员，各具专长的AI代理团队尽在掌握。每个代理均具备独特个性、工作流程及可验证的交付成果。
 
 信号等级 B · 评分 55.2</description>
       <category>开源热榜</category>
@@ -251,9 +293,9 @@ HackerRank的AI面试官已累计完成超50万次面试，Snowflake、Snorkel�
       <link>https://github.com/Stremio/stremio-web</link>
       <guid isPermaLink="true">https://github.com/Stremio/stremio-web</guid>
       <pubDate>Mon, 05 Oct 2026 16:34:23 +0000</pubDate>
-      <description>Stremio/stremio-web：Stremio是一款强大的媒体流媒体聚合平台，支持跨设备同步和丰富的插件扩展，为用户提供了极大的观看自由度和内容选择...，适合进一步验证代码、协议或社区采用情况。
+      <description>Stremio/stremio-web：Stremio作为一款媒体中心应用，提供跨平台的流媒体聚合服务，支持浏览和观看电影、电视剧、直播以及直播电视频道，用...，适合进一步验证代码、协议或社区采用情况。
 
-Stremio是一款强大的媒体流媒体聚合平台，支持跨设备同步和丰富的插件扩展，为用户提供了极大的观看自由度和内容选择灵活性。
+Stremio作为一款媒体中心应用，提供跨平台的流媒体聚合服务，支持浏览和观看电影、电视剧、直播以及直播电视频道，用户可通过插件扩展内容来源，实现统一的观看体验。
 
 信号等级 B · 评分 52.7</description>
       <category>开源热榜</category>
@@ -264,9 +306,9 @@ Stremio是一款强大的媒体流媒体聚合平台，支持跨设备同步和�
       <link>https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review</link>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review</guid>
       <pubDate>Mon, 05 Oct 2026 15:59:40 +0000</pubDate>
-      <description>我们推出ReviewBench，这是一个基于代表性GitHub拉取请求、多源真实标注、校准评估和生产环境对齐指标构建...，来自官方更新源，适合直接判断产品变化。
+      <description>我们推出 ReviewBench，这是一个基于代表性 GitHub 拉取请求、多源真实数据、校准化评估和生产对齐指标...，来自官方更新源，适合直接判断产品变化。
 
-我们推出ReviewBench，这是一个基于代表性GitHub拉取请求、多源真实标注、校准评估和生产环境对齐指标构建的代码审查智能体基准测试。
+我们推出 ReviewBench，这是一个基于代表性 GitHub 拉取请求、多源真实数据、校准化评估和生产对齐指标构建的代码审查智能体基准测试。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -279,9 +321,9 @@ Stremio是一款强大的媒体流媒体聚合平台，支持跨设备同步和�
       <link>https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results</guid>
       <pubDate>Mon, 05 Oct 2026 15:14:24 +0000</pubDate>
-      <description>OpenAI、GPT：新广告将于本月晚些时候在美国率先上线，初期将展示部分测试广告主的产品与服务，适合关注 Agent 工具调用和工作流搭建。
+      <description>OpenAI、GPT：新广告将于本月晚些时候在美国首次推出，仅限于一批测试广告商的产品和服务，适合关注 Agent 工具调用和工作流搭建。
 
-新广告将于本月晚些时候在美国率先上线，初期将展示部分测试广告主的产品与服务。
+新广告将于本月晚些时候在美国首次推出，仅限于一批测试广告商的产品和服务。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -293,9 +335,9 @@ Stremio是一款强大的媒体流媒体聚合平台，支持跨设备同步和�
       <link>https://openai.com/index/eu-text-provenance</link>
       <guid isPermaLink="true">https://openai.com/index/eu-text-provenance</guid>
       <pubDate>Mon, 05 Oct 2026 15:00:00 +0000</pubDate>
-      <description>OpenAI正在根据欧盟规则探索文本水印技术，明确水印适用范围、检测机制，并优先向研究人员开放访问以确保安全与合规，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI正根据欧盟AI法案推进文本水印技术，水印适用于生成内容，通过算法嵌入实现检测，目前优先向研究人员开放以确...，来自官方更新源，适合直接判断产品变化。
 
-OpenAI正在根据欧盟规则探索文本水印技术，明确水印适用范围、检测机制，并优先向研究人员开放访问以确保安全与合规。
+OpenAI正根据欧盟AI法案推进文本水印技术，水印适用于生成内容，通过算法嵌入实现检测，目前优先向研究人员开放以确保透明度与安全性。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -307,9 +349,9 @@ OpenAI正在根据欧盟规则探索文本水印技术，明确水印适用范�
       <link>https://techcrunch.com/2026/10/05/open-or-closed-ai-how-founders-are-choosing-what-to-build-on-at-techcrunch-disrupt-2026</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/open-or-closed-ai-how-founders-are-choosing-what-to-build-on-at-techcrunch-disrupt-2026</guid>
       <pubDate>Mon, 05 Oct 2026 15:00:00 +0000</pubDate>
-      <description>开源还是闭源：立即注册可节省高达100美元，并享受第二张门票五折优惠，适合进一步验证代码、协议或社区采用情况。
+      <description>开源还是闭源：TechCrunch Disrupt 2026将探讨创始人在开源与闭源AI之间的选择，适合进一步验证代码、协议或社区采用情况。
 
-了解创始人在2026年TechCrunch Disrupt大会上如何选择基于开放或封闭AI进行构建。立即注册可节省高达100美元，并享受第二张门票五折优惠。
+TechCrunch Disrupt 2026将探讨创始人在开源与闭源AI之间的选择。现场将揭示前沿趋势与策略，助力企业在AI浪潮中抢占先机。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -321,9 +363,9 @@ OpenAI正在根据欧盟规则探索文本水印技术，明确水印适用范�
       <link>https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet</guid>
       <pubDate>Mon, 05 Oct 2026 14:35:09 +0000</pubDate>
-      <description>研究人员追踪到一支中国 AI「智能体舰队...：独立研究人员发现，似乎正在腾讯基础设施上运行的代理蜂群正在目标锁定阿里巴巴的地图服务Amap，适合关注自动化任务和多 Agent 协作演进。
+      <description>研究人员追踪到一支中国 AI「智能体舰队...：独立研究人员发现了一个代理人集群，该集群似乎运行在腾讯的基础设施上，并针对阿里巴巴的地图服务 Amap，适合关注自动化任务和多 Agent 协作演进。
 
-独立研究人员发现，似乎正在腾讯基础设施上运行的代理蜂群正在目标锁定阿里巴巴的地图服务Amap。
+独立研究人员发现了一个代理人集群，该集群似乎运行在腾讯的基础设施上，并针对阿里巴巴的地图服务 Amap。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -349,9 +391,9 @@ OpenAI正在根据欧盟规则探索文本水印技术，明确水印适用范�
       <link>https://techcrunch.com/2026/10/05/meet-the-startup-battlefield-200-judges-wholl-decide-the-winner-at-techcrunch-disrupt-2026</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/meet-the-startup-battlefield-200-judges-wholl-decide-the-winner-at-techcrunch-disrupt-2026</guid>
       <pubDate>Mon, 05 Oct 2026 14:30:00 +0000</pubDate>
-      <description>TechCrunch Disrupt 2...：即刻购票可省100美元，第二张票享五折优惠，适合判断资金、客户和生态格局的变化。
+      <description>TechCrunch Disrupt 2...：TechCrunch Disrupt 2026 Startup Battlefield决赛评委名单揭晓，参赛者可通过...，适合判断资金、客户和生态格局的变化。
 
-TechCrunch Disrupt 2026创业战场决赛评委名单揭晓，五位评委将决出最终胜者。即刻购票可省100美元，第二张票享五折优惠。
+TechCrunch Disrupt 2026 Startup Battlefield决赛评委名单揭晓，参赛者可通过早鸟优惠节省最高100美元，第二张票享五折。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -362,9 +404,9 @@ TechCrunch Disrupt 2026创业战场决赛评委名单揭晓，五位评委将决
       <link>https://techcrunch.com/2026/10/05/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026</guid>
       <pubDate>Mon, 05 Oct 2026 14:00:00 +0000</pubDate>
-      <description>TechCrunch Disrupt 2...：TechCrunch Disrupt 舞台阵容揭晓，Max Hodak、Mark Wahlberg、Benchmar...，适合判断技术路线和后续产品化可能性。
+      <description>TechCrunch Disrupt 2...：现即刻报名，最高可省100美元，并享第二张票半价优惠，适合判断技术路线和后续产品化可能性。
 
-TechCrunch Disrupt 舞台阵容揭晓，Max Hodak、Mark Wahlberg、Benchmark 合伙人等将出席。立即注册可享门票最高减$100，第二张半价。
+TechCrunch Disrupt全阵容公布，汇聚Max Hodak、Mark Wahlberg及Benchmark合伙人等重量级嘉宾。现即刻报名，最高可省100美元，并享第二张票半价优惠。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -375,9 +417,9 @@ TechCrunch Disrupt 舞台阵容揭晓，Max Hodak、Mark Wahlberg、Benchmark �
       <link>https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool</guid>
       <pubDate>Mon, 05 Oct 2026 13:47:14 +0000</pubDate>
-      <description>开源命令行工具 RemoveMacAI...：使用开源命令行工具 RemoveMacAI 可轻松删除 Mac 的 AI 功能以释放存储空间，此前仅通过单个设置开关...，适合关注 Agent 工具调用和工作流搭建。
+      <description>开源命令行工具 RemoveMacAI...：新开源命令行工具RemoveMacAI可让用户一键删除Mac上的AI功能以释放存储空间，此前仅能通过设置中的单个开关...，适合关注 Agent 工具调用和工作流搭建。
 
-使用开源命令行工具 RemoveMacAI 可轻松删除 Mac 的 AI 功能以释放存储空间，此前仅通过单个设置开关实现。
+新开源命令行工具RemoveMacAI可让用户一键删除Mac上的AI功能以释放存储空间，此前仅能通过设置中的单个开关进行管理。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -390,9 +432,9 @@ TechCrunch Disrupt 舞台阵容揭晓，Max Hodak、Mark Wahlberg、Benchmark �
       <link>https://pytorch.org/blog/pytorch-hardware-enablement-updates-from-the-acceleration-integration-working-group</link>
       <guid isPermaLink="true">https://pytorch.org/blog/pytorch-hardware-enablement-updates-from-the-acceleration-integration-working-group</guid>
       <pubDate>Mon, 05 Oct 2026 13:12:59 +0000</pubDate>
-      <description>PyTorch 加速器集成工作组 202...：加速器集成工作组在标准化新型硬件架构与开源人工智能生态系统的连接方式方面发挥着关键作用，适合进一步验证代码、协议或社区采用情况。
+      <description>PyTorch 加速器集成工作组 202...：加速器集成工作组在标准化新硬件架构如何接入开源AI生态系统方面发挥着关键作用，适合进一步验证代码、协议或社区采用情况。
 
-加速器集成工作组在标准化新型硬件架构与开源人工智能生态系统的连接方式方面发挥着关键作用。
+加速器集成工作组在标准化新硬件架构如何接入开源AI生态系统方面发挥着关键作用。随着计算平台的多样化，该组织致力于确保新硬件能够无缝集成并发挥最佳性能。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -403,9 +445,9 @@ TechCrunch Disrupt 舞台阵容揭晓，Max Hodak、Mark Wahlberg、Benchmark �
       <link>https://www.theverge.com/ai-artificial-intelligence/1004655/openai-chatgpt-visual-ads</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004655/openai-chatgpt-visual-ads</guid>
       <pubDate>Mon, 05 Oct 2026 13:09:48 +0000</pubDate>
-      <description>OpenAI、GPT：OpenAI将在美国本月晚些时候开始测试一种新广告形式，该形式将在用户使用其服务时显示赞助产品和服务的图片，初期将在...，适合关注内容生产和交互形态的新变化。
+      <description>OpenAI、GPT：OpenAI将推出新广告格式，计划本月起在美国测试，初期会在用户屏幕显示赞助产品与服务的图片广告，适合关注内容生产和交互形态的新变化。
 
-OpenAI将在美国本月晚些时候开始测试一种新广告形式，该形式将在用户使用其服务时显示赞助产品和服务的图片，初期将在特定场景下出现。
+OpenAI将推出新广告格式，计划本月起在美国测试，初期会在用户屏幕显示赞助产品与服务的图片广告。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -416,9 +458,9 @@ OpenAI将在美国本月晚些时候开始测试一种新广告形式，该形�
       <link>https://blogs.nvidia.com/blog/ai-breast-cancer-startups</link>
       <guid isPermaLink="true">https://blogs.nvidia.com/blog/ai-breast-cancer-startups</guid>
       <pubDate>Mon, 05 Oct 2026 13:00:57 +0000</pubDate>
-      <description>NVIDIA：乳腺癌是美国女性中最常见的癌症，但筛查覆盖率显著不足，适合作为今日 AI/科技情报流里的重点线索。
+      <description>NVIDIA：乳腺癌是美国女性最常见的癌症，但筛查率显著不足，适合作为今日 AI/科技情报流里的重点线索。
 
-乳腺癌是美国女性中最常见的癌症，但筛查覆盖率显著不足。40岁以上女性中大多数未接受年度推荐筛查。放射科医生面临人手短缺等挑战，人工智能技术被视为潜在的解决方案，以提高效率并弥合医疗差距。
+乳腺癌是美国女性最常见的癌症，但筛查率显著不足。40岁以上女性中大多数未接受推荐的年度筛查，导致放射科医生面临日益严峻的工作挑战。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -428,9 +470,9 @@ OpenAI将在美国本月晚些时候开始测试一种新广告形式，该形�
       <link>https://techcrunch.com/2026/10/05/can-safeworld-convince-people-that-gen-ai-robots-wont-hurt-them</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/05/can-safeworld-convince-people-that-gen-ai-robots-wont-hurt-them</guid>
       <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
-      <description>Safeworld 融资超 1200 万...：Safeworld正在开发数字人，以确保机器人不会伤害真实的人，适合跟进 AI 风险、治理和可信边界。
+      <description>Safeworld 融资超 1200 万...：Safeworld is building digital humans to make sure robots d...，适合跟进 AI 风险、治理和可信边界。
 
-Safeworld正在开发数字人，以确保机器人不会伤害真实的人。
+Safeworld is building digital humans to make sure robots don&apos;t hurt the real ones.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -645,32 +687,6 @@ arXiv:2610.02491v1 Announce Type: new Abstract: Large language models spend the 
       <description>顺序正确：arXiv:2610.02492v1 Announce Type: new Abstract: LLM judges...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.02492v1 Announce Type: new Abstract: LLM judges are increasingly used to assess whether AI outputs meet workplace requirements, but agreement on response rankings does not establish...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>HXAI:分布式能源系统中的分层隐私可解释人工智能</title>
-      <link>https://arxiv.org/abs/2610.02504</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02504</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>HXAI：arXiv:2610.02504v1 Announce Type: new Abstract: Balancing...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02504v1 Announce Type: new Abstract: Balancing electricity demand and supply is increasingly difficult due to the inherent intermittency of renewable power generation and the stochastic...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>校园AI导师硬件软件权衡:针对商科教育的多课程RAG辅导</title>
-      <link>https://arxiv.org/abs/2610.02510</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.02510</guid>
-      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>校园AI导师硬件软件权衡：arXiv:2610.02510v1 Announce Type: new Abstract: Campus AI...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.02510v1 Announce Type: new Abstract: Campus AI tutors based on retrieval-augmented generation (RAG) must ground answers in assigned course materials while keeping textbooks and student...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>

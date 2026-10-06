@@ -5,49 +5,34 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 Oct 2026 22:59:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 02:42:37 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Google 等机构智能体漏洞暴露 MCP 结构性缺陷</title>
+      <title>Gemini Call for Me 或扩展至亲友通话，可代发&quot;晚到 15 分钟&quot;消息</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors</guid>
+      <pubDate>Mon, 05 Oct 2026 23:09:55 +0000</pubDate>
+      <description>谷歌或将“帮我打电话”AI功能扩展至个人通讯，Android Authority在Phone应用中发现“Gemini...，来自官方更新源，适合直接判断产品变化。
+
+谷歌或将“帮我打电话”AI功能扩展至个人通讯，Android Authority在Phone应用中发现“Gemini Calling”引导界面，暗示用户未来可让Gemini代为拨打电话、发送信息给亲友。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>MCP 智能体通信协议曝结构性缺陷，Google 等五机构确认相关漏洞</title>
       <link>https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp</guid>
       <pubDate>Mon, 05 Oct 2026 22:26:35 +0000</pubDate>
-      <description>Google：新协议中的信任漏洞使恶意提示可在智能体间传播，适合关注 Agent 工具调用和工作流搭建。
+      <description>Google：新协议中的信任缺陷导致恶意提示在代理间传播，适合关注 Agent 工具调用和工作流搭建。
 
-新协议中的信任漏洞使恶意提示可在智能体间传播。
+新协议中的信任缺陷导致恶意提示在代理间传播。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>MCP/工具</category>
       <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Reflection 发布首款开源权重模型 Beam，主打低推理成本对标中国开源模型</title>
-      <link>https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost</guid>
-      <pubDate>Mon, 05 Oct 2026 19:33:53 +0000</pubDate>
-      <description>Reflection 发布首款开源权重模...：Reflection旨向企业和主权国家推出未来模型，主打“AI工厂”产品，让机构能够构建本地化、定制化的AI系统，适合进一步验证代码、协议或社区采用情况。
-
-Reflection旨向企业和主权国家推出未来模型，主打“AI工厂”产品，让机构能够构建本地化、定制化的AI系统。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>模型发布</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>AI 接管数学界引发的争议风波</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1004933/ai-math-openai-breakthrough-solution</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1004933/ai-math-openai-breakthrough-solution</guid>
-      <pubDate>Mon, 05 Oct 2026 19:28:59 +0000</pubDate>
-      <description>AI 接管数学界引发的争议风波：过去一年，OpenAI、Anthropic等机构在诸多长期未解的数学难题上取得突破，部分成果远超当前研究预期，适合判断技术路线和后续产品化可能性。
-
-过去一年，OpenAI、Anthropic等机构在诸多长期未解的数学难题上取得突破，部分成果远超当前研究预期。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
@@ -415,7 +400,7 @@ arXiv:2610.02505v1 Announce Type: cross Abstract: Policy gradient methods for on
       <category>论文研究</category>
     </item>
     <item>
-      <title>OpenGameEval: Benchmarking Agentic Programming and Exploration in a Stateful Game Engine</title>
+      <title>OpenGameEval:基于有状态游戏引擎评估代理编程与探索能力</title>
       <link>https://arxiv.org/abs/2610.02563</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.02563</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -429,7 +414,7 @@ arXiv:2610.02563v1 Announce Type: cross Abstract: We present OpenGameEval, a ben
       <category>论文研究</category>
     </item>
     <item>
-      <title>WebUIProof: Benchmarking WebUI Code Generators with UI-Agent Execution Harness</title>
+      <title>WebUIProof:基于UI-Agent执行基准测试的WebUI代码生成器评估</title>
       <link>https://arxiv.org/abs/2610.02617</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.02617</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -443,11 +428,11 @@ arXiv:2610.02617v1 Announce Type: cross Abstract: Evaluating WebUI code generati
       <category>论文研究</category>
     </item>
     <item>
-      <title>Prospective Hindsight: Self-Calibrating Reinforcement Learning via Prediction-Reality Gaps</title>
+      <title>预期遗憾:通过预测与现实差距实现自校准强化学习</title>
       <link>https://arxiv.org/abs/2610.02740</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.02740</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Prospective Hindsigh...：arXiv:2610.02740v1 Announce Type: cross Abstract: Reinforc...，适合判断技术路线和后续产品化可能性。
+      <description>预期遗憾：arXiv:2610.02740v1 Announce Type: cross Abstract: Reinforc...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.02740v1 Announce Type: cross Abstract: Reinforcement learning for long-horizon agents relies on purely retrospective training signals: credit is assigned only after observing environmental...
 
@@ -456,11 +441,11 @@ arXiv:2610.02740v1 Announce Type: cross Abstract: Reinforcement learning for lon
       <category>论文研究</category>
     </item>
     <item>
-      <title>Revealing Epistemic Uncertainty in MLLMs via Causal-Invariant Masking</title>
+      <title>通过因果不变掩码揭示多模态大语言模型中的认知不确定性</title>
       <link>https://arxiv.org/abs/2610.02887</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.02887</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Revealing Epistemic...：arXiv:2610.02887v1 Announce Type: cross Abstract: Multimod...，适合判断技术路线和后续产品化可能性。
+      <description>通过因果不变掩码揭示多模态大语言模型中的...：arXiv:2610.02887v1 Announce Type: cross Abstract: Multimod...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.02887v1 Announce Type: cross Abstract: Multimodal Large Language Models (MLLMs) suffer from hallucinations, creating a critical need for Uncertainty Quantification (UQ) to ensure reliable...
 
@@ -470,11 +455,11 @@ arXiv:2610.02887v1 Announce Type: cross Abstract: Multimodal Large Language Mode
       <category>多模态</category>
     </item>
     <item>
-      <title>Post-Training Frontier Text-to-Image Models by Composing Preference and Rubric Rewards</title>
+      <title>通过组合偏好与评分奖励微调前沿文本到图像模型</title>
       <link>https://arxiv.org/abs/2610.02967</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.02967</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Post-Training Fronti...：arXiv:2610.02967v1 Announce Type: cross Abstract: Recent t...，适合判断技术路线和后续产品化可能性。
+      <description>通过组合偏好与评分奖励微调前沿文本到图像...：arXiv:2610.02967v1 Announce Type: cross Abstract: Recent t...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.02967v1 Announce Type: cross Abstract: Recent text-to-image generation models have achieved remarkable visual quality, but improving them through post-training remains challenging because...
 
@@ -484,7 +469,7 @@ arXiv:2610.02967v1 Announce Type: cross Abstract: Recent text-to-image generatio
       <category>多模态</category>
     </item>
     <item>
-      <title>Sentry: Learning to Recover from LLM Agent Failures at Test Time</title>
+      <title>Sentry:在测试时学习从LLM智能体故障中恢复</title>
       <link>https://arxiv.org/abs/2610.02994</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.02994</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -498,7 +483,7 @@ arXiv:2610.02994v1 Announce Type: cross Abstract: LLM agents often fail mid-task
       <category>论文研究</category>
     </item>
     <item>
-      <title>AvoKV-E: Payload-Aware KV Cache Eviction for Long Reasoning</title>
+      <title>AvoKV-E:面向长推理的载荷感知KV缓存驱逐</title>
       <link>https://arxiv.org/abs/2610.03007</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03007</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -511,7 +496,7 @@ arXiv:2610.03007v1 Announce Type: cross Abstract: Long-output reasoning shifts t
       <category>论文研究</category>
     </item>
     <item>
-      <title>OmniAct3D: Leveraging Foundation Geometry and Evidence-Grounded Reasoning for Panoramic 3D Detection</title>
+      <title>OmniAct3D:利用基础几何与证据驱动推理实现全景3D检测</title>
       <link>https://arxiv.org/abs/2610.03015</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03015</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -525,7 +510,7 @@ arXiv:2610.03015v1 Announce Type: cross Abstract: Accurate 3D detection is essen
       <category>多模态</category>
     </item>
     <item>
-      <title>WebFovea: When the Model Is Right but the Click Is Wrong -- Reliable Round Trips for Vision-Based Web Agents on Live Websites</title>
+      <title>WebFovea:当模型正确但点击错误——面向实时网站视觉智能体的可靠往返交互</title>
       <link>https://arxiv.org/abs/2610.03036</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03036</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -540,7 +525,7 @@ arXiv:2610.03036v1 Announce Type: cross Abstract: We present WebFovea, a vision-
       <category>多模态</category>
     </item>
     <item>
-      <title>Foresight: planning future perception in streaming VLMs without retraining</title>
+      <title>Foresight:无需重训练即可在流式VLM中规划未来感知</title>
       <link>https://arxiv.org/abs/2610.03123</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03123</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -554,11 +539,11 @@ arXiv:2610.03123v1 Announce Type: cross Abstract: Existing streaming vision-lang
       <category>多模态</category>
     </item>
     <item>
-      <title>Multimodal reasoning for broadly neutralizing antibody discovery from label-free human B cell repertoires across virus families</title>
+      <title>基于无标签人类B细胞库的跨病毒家族广谱中和抗体发现的多模态推理</title>
       <link>https://arxiv.org/abs/2610.03160</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03160</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Multimodal reasoning...：arXiv:2610.03160v1 Announce Type: cross Abstract: Discover...，适合判断技术路线和后续产品化可能性。
+      <description>基于无标签人类B细胞库的跨病毒家族广谱中...：arXiv:2610.03160v1 Announce Type: cross Abstract: Discover...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.03160v1 Announce Type: cross Abstract: Discovering broadly neutralizing antibodies (bnAbs) from human natural immune repertoires remains a fundamental challenge in immunology, hindered by:...
 
@@ -568,11 +553,11 @@ arXiv:2610.03160v1 Announce Type: cross Abstract: Discovering broadly neutralizi
       <category>多模态</category>
     </item>
     <item>
-      <title>Not Until the Evidence Says So: Teaching LLM Investigators When to Close a Case</title>
+      <title>只有当证据表明时才行动:教导LLM调查员何时终结案件</title>
       <link>https://arxiv.org/abs/2610.03190</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03190</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Not Until the Eviden...：arXiv:2610.03190v1 Announce Type: cross Abstract: Accident...，适合判断技术路线和后续产品化可能性。
+      <description>只有当证据表明时才行动：arXiv:2610.03190v1 Announce Type: cross Abstract: Accident...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.03190v1 Announce Type: cross Abstract: Accident, defect and outage investigations end with a decision that ordinary question answering never faces: whether the evidence gathered so far is...
 
@@ -581,11 +566,11 @@ arXiv:2610.03190v1 Announce Type: cross Abstract: Accident, defect and outage in
       <category>论文研究</category>
     </item>
     <item>
-      <title>Corrupted but Correct: Why Vision-Language Models Lie to Themselves Internally</title>
+      <title>受损却正确:视觉语言模型为何在内部自我欺骗</title>
       <link>https://arxiv.org/abs/2610.03445</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03445</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Corrupted but Correc...：arXiv:2610.03445v1 Announce Type: cross Abstract: A target...，适合判断技术路线和后续产品化可能性。
+      <description>受损却正确：arXiv:2610.03445v1 Announce Type: cross Abstract: A target...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.03445v1 Announce Type: cross Abstract: A targeted adversarial perturbation can drive a vision-language model&apos;s (VLM&apos;s) teacher-forced training loss for a fixed target caption to near zero,...
 
@@ -595,7 +580,7 @@ arXiv:2610.03445v1 Announce Type: cross Abstract: A targeted adversarial perturb
       <category>多模态</category>
     </item>
     <item>
-      <title>MobiAgent: Dual-Loop Recursive Policy Self-Improvement for Long-Horizon Mobile Manipulation</title>
+      <title>MobiAgent:用于长周期移动操作的双循环递归策略自我改进</title>
       <link>https://arxiv.org/abs/2610.03476</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03476</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
@@ -608,11 +593,11 @@ arXiv:2610.03476v1 Announce Type: cross Abstract: Long-horizon mobile manipulati
       <category>论文研究</category>
     </item>
     <item>
-      <title>Threat-Preserving Representation Sensitivity in Agent-Security Benchmarks</title>
+      <title>智能体安全基准中威胁保持型表征敏感性分析</title>
       <link>https://arxiv.org/abs/2610.03585</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.03585</guid>
       <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Threat-Preserving Re...：arXiv:2610.03585v1 Announce Type: cross Abstract: Security...，适合关注自动化任务和多 Agent 协作演进。
+      <description>智能体安全基准中威胁保持型表征敏感性分析：arXiv:2610.03585v1 Announce Type: cross Abstract: Security...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.03585v1 Announce Type: cross Abstract: Security benchmarks for LLM-based agents often report the attack success rate (ASR) as a measure of model robustness and use these scores to compare...
 
@@ -683,6 +668,19 @@ arXiv:2602.13298v4 Announce Type: replace-cross Abstract: This paper presents a 
       <description>Goldilocks RL：arXiv:2602.14868v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2602.14868v3 Announce Type: replace-cross Abstract: Reinforcement learning has emerged as a powerful paradigm for unlocking reasoning capabilities in language models. However, relying on sparse...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Rhetorical Questions in LLM Representations: A Linear Probing Study</title>
+      <link>https://arxiv.org/abs/2604.14128</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.14128</guid>
+      <pubDate>Mon, 05 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Rhetorical Questions...：arXiv:2604.14128v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2604.14128v3 Announce Type: replace-cross Abstract: Rhetorical questions are asked not to seek information but to persuade or signal stance. How large language models internally represent them...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
