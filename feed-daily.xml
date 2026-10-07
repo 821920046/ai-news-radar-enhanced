@@ -5,45 +5,55 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 07 Oct 2026 01:06:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 07:53:10 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Burn 0.22.0：构建速度更快、扩展更便捷、自动调优更智能</title>
-      <link>https://tracel.ai/blog/release-0.22.0</link>
-      <guid isPermaLink="true">https://tracel.ai/blog/release-0.22.0</guid>
-      <pubDate>Wed, 07 Oct 2026 00:03:31 +0000</pubDate>
-      <description>Burn 0.22.0: Faster Builds, Easier Extensions, and Smarter...，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Claude Opus 5.5 做视频：从口播稿到成片，全流程跑通</title>
+      <link>https://juejin.cn/post/7693225151680774154</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7693225151680774154</guid>
+      <pubDate>Wed, 07 Oct 2026 07:53:10 +0000</pubDate>
+      <description>Claude：从口播稿到成片，全流程跑通，适合优先评估模型能力、价格和工具选型变化。
 
-Burn 0.22.0: Faster Builds, Easier Extensions, and Smarter Autotuning
-
-信号等级 B · 评分 51.5</description>
-      <category>Buzzing</category>
+信号等级 B · 评分 51.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
     </item>
     <item>
-      <title>更新您的 IDE 以恢复 Copilot 使用指标中的代理活动</title>
-      <link>https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics</guid>
-      <pubDate>Tue, 06 Oct 2026 23:43:00 +0000</pubDate>
-      <description>更新您的 IDE 以恢复 Copilot...：若Copilot使用量增长但智能体活动或代码行数下降，已定位原因并正在推送修复，适合关注自动化任务和多 Agent 协作演进。
+      <title>[AI新闻] 准黎曼假设:OpenAI 发布 722 篇数学论文，解决 500 大开放数学问题中的 90 项；被誉为“过去 100 年数学领域最重要的时刻”</title>
+      <link>https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai</link>
+      <guid isPermaLink="true">https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai</guid>
+      <pubDate>Wed, 07 Oct 2026 04:55:44 +0000</pubDate>
+      <description>OpenAI：Our head hurts.，适合作为今日 AI/科技情报流里的重点线索。
 
-若Copilot使用量增长但智能体活动或代码行数下降，已定位原因并正在推送修复。
+Our head hurts.
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>编码工具</category>
+    </item>
+    <item>
+      <title>OpenAI 发布数学研究目录</title>
+      <link>https://github.com/openai/math</link>
+      <guid isPermaLink="true">https://github.com/openai/math</guid>
+      <pubDate>Wed, 07 Oct 2026 03:59:52 +0000</pubDate>
+      <description>OpenAI shares mathematics research catalogue，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
+
+OpenAI shares mathematics research catalogue
+
+信号等级 B · 评分 52.8</description>
+      <category>Buzzing</category>
       <category>开源</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>OpenAI 通过 GitHub 发布 722 份数学论文手稿，称含数百个公开问题解答</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github</guid>
       <pubDate>Tue, 06 Oct 2026 23:26:38 +0000</pubDate>
-      <description>OpenAI、GitHub：OpenAI用未发布的前沿模型解决了722篇手稿中的多个长期数学难题，涵盖372个结果家族，适合进一步验证代码、协议或社区采用情况。
+      <description>OpenAI、GitHub：OpenAI发布了由未发布前沿模型生成的722份手稿中解决的大量长期数学难题，涵盖372个结果家族，适合进一步验证代码、协议或社区采用情况。
 
-OpenAI用未发布的前沿模型解决了722篇手稿中的多个长期数学难题，涵盖372个结果家族。
+OpenAI发布了由未发布前沿模型生成的722份手稿中解决的大量长期数学难题，涵盖372个结果家族。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>开源</category>
       <category>论文研究</category>
@@ -54,36 +64,23 @@ OpenAI用未发布的前沿模型解决了722篇手稿中的多个长期数学�
       <link>https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton</link>
       <guid isPermaLink="true">https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton</guid>
       <pubDate>Tue, 06 Oct 2026 22:57:33 +0000</pubDate>
-      <description>PyTorch 用 FBTriton 内...：本文探讨了FBTriton内核设计，用于表批量嵌入（TBE）的前向和反向传播，这些核心算子能够在数千个分片GPU上高...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>PyTorch 用 FBTriton 内...：本文探讨了用于表批量嵌入（TBE）前向与反向传播的FBTriton核设计，该核心算子可在数千个分片GPU间高效执行嵌...，适合作为今日 AI/科技情报流里的重点线索。
 
-本文探讨了FBTriton内核设计，用于表批量嵌入（TBE）的前向和反向传播，这些核心算子能够在数千个分片GPU上高效处理嵌入查找操作。
+本文探讨了用于表批量嵌入（TBE）前向与反向传播的FBTriton核设计，该核心算子可在数千个分片GPU间高效执行嵌入查找。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 53.8</description>
       <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>研究发现，女性AI代理的薪酬比男性低10% - Euronews.com</title>
-      <link>https://news.google.com/rss/articles/CBMipAFBVV95cUxPRFJNYlB0Y2stTEZpM2lpZE8zRFJQQ2o1ZmV4YTNicTZkcHE4bm9aNFhMNWlHb1V4b0pKU3E1YXlfc1QyQ1FJMGNfUWhfTDB5QmoxQ05hSDROOVB1VktlY1k3X2lfQWxTcUJwU1hrZlp6bTc4Vzl1eDRqeE5xMlFDX1hpMUdlLWNQeFB2Qmo0UWQtakl6LTVvUTFUYzF5ZlFJM24yYw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMipAFBVV95cUxPRFJNYlB0Y2stTEZpM2lpZE8zRFJQQ2o1ZmV4YTNicTZkcHE4bm9aNFhMNWlHb1V4b0pKU3E1YXlfc1QyQ1FJMGNfUWhfTDB5QmoxQ05hSDROOVB1VktlY1k3X2lfQWxTcUJwU1hrZlp6bTc4Vzl1eDRqeE5xMlFDX1hpMUdlLWNQeFB2Qmo0UWQtakl6LTVvUTFUYzF5ZlFJM24yYw?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
-      <pubDate>Tue, 06 Oct 2026 22:45:16 +0000</pubDate>
-      <description>研究发现：Female AI agents would get paid 10% less than male ones, s...，适合判断技术路线和后续产品化可能性。
-
-Female AI agents would get paid 10% less than male ones, study finds
-
-信号等级 B · 评分 51.8</description>
-      <category>Buzzing</category>
-      <category>论文研究</category>
     </item>
     <item>
       <title>前 Ramp 工程师创办的 Melius 融资 2500 万美元，转型 AI 广告创意生成平台</title>
       <link>https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product</guid>
       <pubDate>Tue, 06 Oct 2026 22:34:03 +0000</pubDate>
-      <description>前 Ramp 工程师创办的 Melius...：该公司不再协助营销人员管理和优化广告支出，而是转向构建生成创意资产和活动的工具，适合关注 Agent 工具调用和工作流搭建。
+      <description>前 Ramp 工程师创办的 Melius...：该公司并未专注于帮助营销人员管理和优化广告支出，而是致力于开发生成创意素材和营销活动的工具，适合关注 Agent 工具调用和工作流搭建。
 
-该公司不再协助营销人员管理和优化广告支出，而是转向构建生成创意资产和活动的工具。
+该公司并未专注于帮助营销人员管理和优化广告支出，而是致力于开发生成创意素材和营销活动的工具。
 
-信号等级 B · 评分 65.0</description>
+信号等级 B · 评分 61.0</description>
       <category>Official AI Updates</category>
       <category>MCP/工具</category>
       <category>智能体</category>
@@ -94,24 +91,11 @@ Female AI agents would get paid 10% less than male ones, study finds
       <link>https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation</guid>
       <pubDate>Tue, 06 Oct 2026 20:35:20 +0000</pubDate>
-      <description>Musubi 发布开源权重内容审核决策模...：周二，Musubi发布了专为实时内容审核设计的轻量级决策模型PolicyLM-1.7B，并开放了模型权重，适合进一步验证代码、协议或社区采用情况。
+      <description>Musubi 发布开源权重内容审核决策模...：周二，Musubi 推出轻量级实时审核模型 PolicyLM-1.7B，并开源其权重，适合进一步验证代码、协议或社区采用情况。
 
-周二，Musubi发布了专为实时内容审核设计的轻量级决策模型PolicyLM-1.7B，并开放了模型权重。
+周二，Musubi 推出轻量级实时审核模型 PolicyLM-1.7B，并开源其权重。
 
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>堆叠式拉取请求现已全面开放使用</title>
-      <link>https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available</guid>
-      <pubDate>Tue, 06 Oct 2026 20:16:41 +0000</pubDate>
-      <description>堆叠式拉取请求现已全面开放使用：GitHub 堆叠式 Pull Request 现已正式上线，适合进一步验证代码、协议或社区采用情况。
-
-GitHub 堆叠式 Pull Request 现已正式上线。可将大型改动拆分为多个独立可审阅、可合并的小型 PR，提升协作效率。
-
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>开源</category>
     </item>
@@ -120,11 +104,11 @@ GitHub 堆叠式 Pull Request 现已正式上线。可将大型改动拆分为�
       <link>https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo</guid>
       <pubDate>Tue, 06 Oct 2026 20:00:30 +0000</pubDate>
-      <description>云服务商 Lambda 拟以 145 亿...：由英伟达支持的Lambda公司正在筹集高达40亿美元的资金，估值145亿美元，计划于2027年IPO，领投方为Coa...，适合判断资金、客户和生态格局的变化。
+      <description>云服务商 Lambda 拟以 145 亿...：Nvidia支持的Lambda正筹备2027年IPO，Pre-IPO轮融资目标最高40亿美元，估值145亿美元，由C...，适合判断资金、客户和生态格局的变化。
 
-由英伟达支持的Lambda公司正在筹集高达40亿美元的资金，估值145亿美元，计划于2027年IPO，领投方为Coatue和黑石集团。
+Nvidia支持的Lambda正筹备2027年IPO，Pre-IPO轮融资目标最高40亿美元，估值145亿美元，由Coatue和Blackstone领投。
 
-信号等级 B · 评分 65.0</description>
+信号等级 B · 评分 61.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
@@ -135,7 +119,7 @@ GitHub 堆叠式 Pull Request 现已正式上线。可将大型改动拆分为�
       <pubDate>Tue, 06 Oct 2026 19:57:04 +0000</pubDate>
       <description>Google DeepMind 发布开源轻量多模态嵌入模型 EmbeddingGemma 2，来自官方更新源，适合直接判断产品变化。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>多模态</category>
       <category>开源</category>
@@ -145,11 +129,11 @@ GitHub 堆叠式 Pull Request 现已正式上线。可将大型改动拆分为�
       <link>https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in</guid>
       <pubDate>Tue, 06 Oct 2026 19:56:50 +0000</pubDate>
-      <description>AI 智能体面临新障碍：个人AI代理有望代为购物、预订航班和餐厅，但商家设置的故意拦截与反机器人防御措施阻碍了其运行，令消费者陷入两难，适合关注自动化任务和多 Agent 协作演进。
+      <description>AI 智能体面临新障碍：个人AI代理承诺能为您购物、预订机票和餐厅，但刻意的阻断和反机器人防御措施却成了阻碍，让消费者陷入两难，适合关注自动化任务和多 Agent 协作演进。
 
-个人AI代理有望代为购物、预订航班和餐厅，但商家设置的故意拦截与反机器人防御措施阻碍了其运行，令消费者陷入两难。
+个人AI代理承诺能为您购物、预订机票和餐厅，但刻意的阻断和反机器人防御措施却成了阻碍，让消费者陷入两难。一家新公司...
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
     </item>
@@ -158,11 +142,11 @@ GitHub 堆叠式 Pull Request 现已正式上线。可将大型改动拆分为�
       <link>https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services</guid>
       <pubDate>Tue, 06 Oct 2026 19:21:14 +0000</pubDate>
-      <description>黑客获取了针对谷歌及其他大型服务的伪造T...：三个域名注册机构被入侵，黑客获取未经授权的数字证书，适合作为今日 AI/科技情报流里的重点线索。
+      <description>黑客获取了针对谷歌及其他大型服务的伪造T...：三大域名注册局遭妥协，攻击者可窃取未授权数字证书，适合作为今日 AI/科技情报流里的重点线索。
 
-三个域名注册机构被入侵，黑客获取未经授权的数字证书。
+三大域名注册局遭妥协，攻击者可窃取未授权数字证书。
 
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -170,9 +154,9 @@ GitHub 堆叠式 Pull Request 现已正式上线。可将大型改动拆分为�
       <link>https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy</guid>
       <pubDate>Tue, 06 Oct 2026 18:22:45 +0000</pubDate>
-      <description>Brett Adcock 创办的 Har...：AI实验室的个人助手是一款面向未来的操作系统，旨在与Muse、Dots和Instinct展开竞争，适合关注自动化任务和多 Agent 协作演进。
+      <description>Brett Adcock 创办的 Har...：该AI实验室推出未来操作系统级个人助手，对标Muse、Dots和Instinct，适合关注自动化任务和多 Agent 协作演进。
 
-AI实验室的个人助手是一款面向未来的操作系统，旨在与Muse、Dots和Instinct展开竞争。
+该AI实验室推出未来操作系统级个人助手，对标Muse、Dots和Instinct。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -185,7 +169,7 @@ AI实验室的个人助手是一款面向未来的操作系统，旨在与Muse�
       <pubDate>Tue, 06 Oct 2026 16:35:00 +0000</pubDate>
       <description>Mirror Particle 正在构建...：Mirror Particle 将在 TechCrunch Disrupt 的 Startup Battlefiel...，适合判断资金、客户和生态格局的变化。
 
-Mirror Particle 将在 TechCrunch Disrupt 的 Startup Battlefield 200 上推出，它带有一个从头开始构建的世界模型来预测人类行为，认为 LLM 角色扮演不足以进行市场研究......
+Mirror Particle 将在 TechCrunch Disrupt 的 Startup Battlefield 200 赛道亮相，凭借自研世界模型预测人类行为，主张大型语言模型（LLM）角色扮演在市场研究中的局限性。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -197,9 +181,9 @@ Mirror Particle 将在 TechCrunch Disrupt 的 Startup Battlefield 200 上推出�
       <link>https://www.theverge.com/column/1005697/we-cant-just-change-the-definition-of-recording</link>
       <guid isPermaLink="true">https://www.theverge.com/column/1005697/we-cant-just-change-the-definition-of-recording</guid>
       <pubDate>Tue, 06 Oct 2026 16:29:44 +0000</pubDate>
-      <description>The Verge：AI硬件正推动科技公司重新定义何为录音，适合关注内容生产和交互形态的新变化。
+      <description>The Verge：AI硬件正在模糊“录音”定义，科技公司推动设备功能边界，适合关注内容生产和交互形态的新变化。
 
-AI硬件正推动科技公司重新定义何为录音。以往大多数设备若配备麦克风，合理的假设是其具备录音功能，但如今AI的介入模糊了这一界限，引发了关于隐私与功能的新争议。
+AI硬件正在模糊“录音”定义，科技公司推动设备功能边界。传统上带麦克风的设备被视为录音工具，但如今AI硬件的出现使这一界限不再明确。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -210,9 +194,9 @@ AI硬件正推动科技公司重新定义何为录音。以往大多数设备若
       <link>https://github.com/morluto/rea</link>
       <guid isPermaLink="true">https://github.com/morluto/rea</guid>
       <pubDate>Tue, 06 Oct 2026 16:22:43 +0000</pubDate>
-      <description>morluto/rea：使用代理工具，可以反向工程任何东西，从应用程序行为到原生二进制文件应有尽有，适合进一步验证代码、协议或社区采用情况。
+      <description>morluto/rea：AI智能体可逆向分析各类应用，从应用行为直至原生二进制文件，适合进一步验证代码、协议或社区采用情况。
 
-使用代理工具，可以反向工程任何东西，从应用程序行为到原生二进制文件应有尽有。
+AI智能体可逆向分析各类应用，从应用行为直至原生二进制文件。
 
 信号等级 B · 评分 51.9</description>
       <category>开源热榜</category>
@@ -223,9 +207,9 @@ AI硬件正推动科技公司重新定义何为录音。以往大多数设备若
       <link>https://github.com/ayghri/i-have-adhd</link>
       <guid isPermaLink="true">https://github.com/ayghri/i-have-adhd</guid>
       <pubDate>Tue, 06 Oct 2026 16:22:43 +0000</pubDate>
-      <description>ayghri/i-have-adhd：一种防止编程代理掩盖答案的技巧，适合ADHD用户的输出方式，适合关注自动化任务和多 Agent 协作演进。
+      <description>ayghri/i-have-adhd：一项防止编程代理隐藏答案的技巧，输出内容对ADHD患者友好，适合关注自动化任务和多 Agent 协作演进。
 
-一种防止编程代理掩盖答案的技巧，适合ADHD用户的输出方式。
+一项防止编程代理隐藏答案的技巧，输出内容对ADHD患者友好。
 
 信号等级 B · 评分 54.5</description>
       <category>开源热榜</category>
@@ -238,9 +222,9 @@ AI硬件正推动科技公司重新定义何为录音。以往大多数设备若
       <link>https://github.com/deepseek-ai/DeepGEMM</link>
       <guid isPermaLink="true">https://github.com/deepseek-ai/DeepGEMM</guid>
       <pubDate>Tue, 06 Oct 2026 16:22:43 +0000</pubDate>
-      <description>deepseek-ai：DeepGEMM是一个高效且易于使用的GPU BLAS核心库，专为加速深度学习矩阵运算而设计，提供了优异的性能与内存...，适合进一步验证代码、协议或社区采用情况。
+      <description>deepseek-ai：DeepGEMM：高效简洁的GPU BLAS内核库，专注于优化矩阵乘法性能，适合进一步验证代码、协议或社区采用情况。
 
-DeepGEMM是一个高效且易于使用的GPU BLAS核心库，专为加速深度学习矩阵运算而设计，提供了优异的性能与内存效率。
+DeepGEMM：高效简洁的GPU BLAS内核库，专注于优化矩阵乘法性能。
 
 信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
@@ -252,9 +236,9 @@ DeepGEMM是一个高效且易于使用的GPU BLAS核心库，专为加速深度�
       <link>https://github.com/cathrynlavery/diagram-design</link>
       <guid isPermaLink="true">https://github.com/cathrynlavery/diagram-design</guid>
       <pubDate>Tue, 06 Oct 2026 16:22:43 +0000</pubDate>
-      <description>cathrynlavery/diagra...：为Claude Code、Codex、GitHub Copilot、Factory Droid及Pi设计42种编辑级...，适合优先评估模型能力、价格和工具选型变化。
+      <description>cathrynlavery/diagra...：为Claude Code、Codex、GitHub Copilot、Factory Droid及Pi设计的42种编辑...，适合优先评估模型能力、价格和工具选型变化。
 
-为Claude Code、Codex、GitHub Copilot、Factory Droid及Pi设计42种编辑级图表，采用自包含HTML+SVG实现，无阴影、无Mermaid依赖，确保视觉纯净与技术独立。
+为Claude Code、Codex、GitHub Copilot、Factory Droid及Pi设计的42种编辑级图表，采用自包含HTML+SVG实现，无阴影、无Mermaid依赖，视觉简洁专业。
 
 信号等级 B · 评分 60.4</description>
       <category>开源热榜</category>
@@ -267,9 +251,9 @@ DeepGEMM是一个高效且易于使用的GPU BLAS核心库，专为加速深度�
       <link>https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration</link>
       <guid isPermaLink="true">https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration</guid>
       <pubDate>Tue, 06 Oct 2026 16:13:47 +0000</pubDate>
-      <description>AICR v1.0：GPU加速的Kubernetes集群依赖于数十个组件的兼容版本匹配，包括宿主机内核、GPU驱动等各自独立的发布周期，适合作为今日 AI/科技情报流里的重点线索。
+      <description>AICR v1.0：GPU 加速的 Kubernetes 集群依赖于数十个组件的兼容版本，每个组件都有其独立的发布周期：主机内核、GPU...，适合作为今日 AI/科技情报流里的重点线索。
 
-GPU加速的Kubernetes集群依赖于数十个组件的兼容版本匹配，包括宿主机内核、GPU驱动等各自独立的发布周期。
+GPU 加速的 Kubernetes 集群依赖于数十个组件的兼容版本，每个组件都有其独立的发布周期：主机内核、GPU 驱动程序等。
 
 信号等级 B · 评分 51.0</description>
       <category>Official AI Updates</category>
@@ -279,9 +263,10 @@ GPU加速的Kubernetes集群依赖于数十个组件的兼容版本匹配，包�
       <link>https://openai.com/index/atlassian-partnership</link>
       <guid isPermaLink="true">https://openai.com/index/atlassian-partnership</guid>
       <pubDate>Tue, 06 Oct 2026 16:00:00 +0000</pubDate>
-      <description>OpenAI、GPT：Atlassian与OpenAI深化合作，将前沿AI模型接入企业知识库，助力团队规划、构建与交付工作，适合关注自动化任务和多 Agent 协作演进。
+      <description>OpenAI、GPT：Atlassian与OpenAI合作扩展，旨在将前进 Atlassian与OpenAI合作扩展，旨在将前沿AI模型与...，适合关注自动化任务和多 Agent 协作演进。
 
-Atlassian与OpenAI深化合作，将前沿AI模型接入企业知识库，助力团队规划、构建与交付工作。
+Atlassian与OpenAI合作扩展，旨在将前进
+Atlassian与OpenAI合作扩展，旨在将前沿AI模型与企业知识库连接，帮助团队规划、构建和交付工作。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -294,9 +279,9 @@ Atlassian与OpenAI深化合作，将前沿AI模型接入企业知识库，助力
       <link>https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits</guid>
       <pubDate>Tue, 06 Oct 2026 16:00:00 +0000</pubDate>
-      <description>Anthropic、Claude：我们创建该项目的初衷在于，我们相信AI的红利将通过基于模型的公司惠及大多数人，而非仅靠模型本身，适合关注 Agent 工具调用和工作流搭建。
+      <description>Anthropic、Claude：我们创建这个项目是因为我们相信，AI的益处将通过基于模型构建的公司传递给大多数人，而不仅仅通过模型本身，适合关注 Agent 工具调用和工作流搭建。
 
-我们创建该项目的初衷在于，我们相信AI的红利将通过基于模型的公司惠及大多数人，而非仅靠模型本身。
+我们创建这个项目是因为我们相信，AI的益处将通过基于模型构建的公司传递给大多数人，而不仅仅通过模型本身。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -309,9 +294,9 @@ Atlassian与OpenAI深化合作，将前沿AI模型接入企业知识库，助力
       <link>https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature</guid>
       <pubDate>Tue, 06 Oct 2026 15:25:00 +0000</pubDate>
-      <description>LibreOffice 宣布不内置 AI：开源文档编辑器制造商表示，出于用户隐私考量，无计划在软件默认配置中添加AI功能，适合进一步验证代码、协议或社区采用情况。
+      <description>LibreOffice 宣布不内置 AI：开源文档编辑器开发商表示，出于用户隐私考虑，暂无计划在默认配置中集成AI功能，适合进一步验证代码、协议或社区采用情况。
 
-开源文档编辑器制造商表示，出于用户隐私考量，无计划在软件默认配置中添加AI功能。
+开源文档编辑器开发商表示，出于用户隐私考虑，暂无计划在默认配置中集成AI功能。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -322,9 +307,9 @@ Atlassian与OpenAI深化合作，将前沿AI模型接入企业知识库，助力
       <link>https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals</guid>
       <pubDate>Tue, 06 Oct 2026 14:33:16 +0000</pubDate>
-      <description>法国AI实验室Mistral AI发布Mistral Large 4，这是一款新型大型多模态模型，旨在超越美国和中国...，来自官方更新源，适合直接判断产品变化。
+      <description>法国AI实验室Mistral AI发布多模态大模型Mistral Large 4，旨在超越中美竞争对手，来自官方更新源，适合直接判断产品变化。
 
-法国AI实验室Mistral AI发布Mistral Large 4，这是一款新型大型多模态模型，旨在超越美国和中国的竞争对手。
+法国AI实验室Mistral AI发布多模态大模型Mistral Large 4，旨在超越中美竞争对手。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -337,9 +322,9 @@ Atlassian与OpenAI深化合作，将前沿AI模型接入企业知识库，助力
       <link>https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken</link>
       <guid isPermaLink="true">https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken</guid>
       <pubDate>Tue, 06 Oct 2026 14:22:41 +0000</pubDate>
-      <description>Nathan Lambert：开放权重、意识形态与权衡的承认，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Nathan Lambert：开放权重、意识形态与承认权衡取舍，适合作为今日 AI/科技情报流里的重点线索。
 
-开放权重、意识形态与权衡的承认。
+开放权重、意识形态与承认权衡取舍。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -349,9 +334,9 @@ Atlassian与OpenAI深化合作，将前沿AI模型接入企业知识库，助力
       <link>https://techcrunch.com/2026/10/06/pinterests-ai-now-turns-beauty-pins-into-action-plans</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/pinterests-ai-now-turns-beauty-pins-into-action-plans</guid>
       <pubDate>Tue, 06 Oct 2026 14:00:49 +0000</pubDate>
-      <description>Pinterest 用 AI 把美妆 P...：Pinterest推出AI美妆指南，将发型与美甲图钉转化为沙龙术语，并提供预估费用、预约时长及维护需求，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Pinterest 用 AI 把美妆 P...：Pinterest推出AI功能“美容指南”，将发型和美甲Pin转化为专业术语，并提供预估费用、所需时间及维护建议，适合作为今日 AI/科技情报流里的重点线索。
 
-Pinterest推出AI美妆指南，将发型与美甲图钉转化为沙龙术语，并提供预估费用、预约时长及维护需求。
+Pinterest推出AI功能“美容指南”，将发型和美甲Pin转化为专业术语，并提供预估费用、所需时间及维护建议。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -361,9 +346,9 @@ Pinterest推出AI美妆指南，将发型与美甲图钉转化为沙龙术语，
       <link>https://techcrunch.com/2026/10/06/get-all-your-questions-answered-at-techcrunch-disrupt-2026-the-full-breakout-session-agenda-revealed</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/06/get-all-your-questions-answered-at-techcrunch-disrupt-2026-the-full-breakout-session-agenda-revealed</guid>
       <pubDate>Tue, 06 Oct 2026 14:00:00 +0000</pubDate>
-      <description>Anthropic：TechCrunch Disrupt 2026将于10月13-15日在旧金山举行，现已发布完整分论坛日程，助力解决扩...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Anthropic：在 TechCrunch Disrupt 2026 上解答您的所有扩展和科技问题，适合关注自动化任务和多 Agent 协作演进。
 
-TechCrunch Disrupt 2026将于10月13-15日在旧金山举行，现已发布完整分论坛日程，助力解决扩展与技术难题，立即注册可享优惠。
+在 TechCrunch Disrupt 2026 上解答您的所有扩展和科技问题。以下是 10 月 13 日至 15 日在旧金山举行的完整分论坛议程。立即注册参加，最高可节省...
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -376,9 +361,9 @@ TechCrunch Disrupt 2026将于10月13-15日在旧金山举行，现已发布完�
       <link>https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only</guid>
       <pubDate>Tue, 06 Oct 2026 13:19:01 +0000</pubDate>
-      <description>Google、Gemini：自10月9日起，Google Gemini免费版用户将仅限使用Flash Lite模型，原本可选的Flash和Pro...，适合优先评估模型能力、价格和工具选型变化。
+      <description>Google、Gemini：10月9日起，免费用户使用Google Gemini将仅限Flash Lite模型，目前可选的Flash和Pro模型...，适合优先评估模型能力、价格和工具选型变化。
 
-自10月9日起，Google Gemini免费版用户将仅限使用Flash Lite模型，原本可选的Flash和Pro模型将不再免费提供。
+10月9日起，免费用户使用Google Gemini将仅限Flash Lite模型，目前可选的Flash和Pro模型将不再对免费用户开放。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -389,9 +374,9 @@ TechCrunch Disrupt 2026将于10月13-15日在旧金山举行，现已发布完�
       <link>https://blogs.nvidia.com/blog/telecom-operators-open-models</link>
       <guid isPermaLink="true">https://blogs.nvidia.com/blog/telecom-operators-open-models</guid>
       <pubDate>Tue, 06 Oct 2026 13:00:19 +0000</pubDate>
-      <description>电信运营商为何将 AI 战略押注在开放模...：电信运营商正越来越多地基于开源模型构建AI战略，原因不仅在于成本更低，更在于其具备可信、可控和可定制的优势，适合进一步验证代码、协议或社区采用情况。
+      <description>电信运营商为何将 AI 战略押注在开放模...：电信运营商正逐渐将AI策略建立在开源模型之上，原因不仅在于成本，适合进一步验证代码、协议或社区采用情况。
 
-电信运营商正越来越多地基于开源模型构建AI战略，原因不仅在于成本更低，更在于其具备可信、可控和可定制的优势。
+电信运营商正逐渐将AI策略建立在开源模型之上，原因不仅在于成本。开源模型使运营商能够在信任、控制权和定制化方面获得更大的灵活性。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -403,9 +388,9 @@ TechCrunch Disrupt 2026将于10月13-15日在旧金山举行，现已发布完�
       <link>https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic</guid>
       <pubDate>Tue, 06 Oct 2026 12:21:53 +0000</pubDate>
-      <description>OpenAI 代理持续被曝对第三方网站造成损害，相关报道屡见不鲜，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI代理持续被曝对第三方网站造成损害，相关报道屡见不鲜，来自官方更新源，适合直接判断产品变化。
 
-OpenAI 代理持续被曝对第三方网站造成损害，相关报道屡见不鲜。
+OpenAI代理持续被曝对第三方网站造成损害，相关报道屡见不鲜。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -417,9 +402,9 @@ OpenAI 代理持续被曝对第三方网站造成损害，相关报道屡见不�
       <link>https://mistral.ai/news/mistral-large-4</link>
       <guid isPermaLink="true">https://mistral.ai/news/mistral-large-4</guid>
       <pubDate>Tue, 06 Oct 2026 12:00:27 +0000</pubDate>
-      <description>Mistral AI发布了其最强大的语言模型Mistral Large 4，该模型在推理、代码生成和多语言任务方面表...，来自官方更新源，适合直接判断产品变化。
+      <description>Mistral AI 发布旗舰模型 Mistral Large 4，在编程、推理及多语言任务上性能显著提升，并原生支...，来自官方更新源，适合直接判断产品变化。
 
-Mistral AI发布了其最强大的语言模型Mistral Large 4，该模型在推理、代码生成和多语言任务方面表现出色，并提供了灵活的部署选项，旨在与领先的商业模型竞争。
+Mistral AI 发布旗舰模型 Mistral Large 4，在编程、推理及多语言任务上性能显著提升，并原生支持函数调用与 JSON 输出，现已通过 La Plateforme 及云合作伙伴提供。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -431,9 +416,9 @@ Mistral AI发布了其最强大的语言模型Mistral Large 4，该模型在推�
       <link>https://openai.com/index/sharing-ai-progress-in-mathematics</link>
       <guid isPermaLink="true">https://openai.com/index/sharing-ai-progress-in-mathematics</guid>
       <pubDate>Tue, 06 Oct 2026 12:00:00 +0000</pubDate>
-      <description>OpenAI发布基于内部前沿模型的数学开放问题新结果，并在GitHub公布Lean证明形式化和研究细节，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI发布了内部前沿模型在数学公开难题上的新成果，并将Lean证明形式化和研究细节共享至GitHub，来自官方更新源，适合直接判断产品变化。
 
-OpenAI发布基于内部前沿模型的数学开放问题新结果，并在GitHub公布Lean证明形式化和研究细节。
+OpenAI发布了内部前沿模型在数学公开难题上的新成果，并将Lean证明形式化和研究细节共享至GitHub。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -445,9 +430,9 @@ OpenAI发布基于内部前沿模型的数学开放问题新结果，并在GitHu
       <link>https://openai.com/index/jump-trading</link>
       <guid isPermaLink="true">https://openai.com/index/jump-trading</guid>
       <pubDate>Tue, 06 Oct 2026 12:00:00 +0000</pubDate>
-      <description>GPT：Jump Trading 利用 OpenAI 扩展量化研究，通过整合多源数据与人工审核，构建更长周期的 AI 工作流...，适合关注自动化任务和多 Agent 协作演进。
+      <description>GPT：Jump Trading 利用 OpenAI 扩展其量化研究能力，通过结合多源数据与人工审核的长周期 AI 工作流提...，适合关注自动化任务和多 Agent 协作演进。
 
-Jump Trading 利用 OpenAI 扩展量化研究，通过整合多源数据与人工审核，构建更长周期的 AI 工作流程。
+Jump Trading 利用 OpenAI 扩展其量化研究能力，通过结合多源数据与人工审核的长周期 AI 工作流提升决策效率。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -460,11 +445,11 @@ Jump Trading 利用 OpenAI 扩展量化研究，通过整合多源数据与人�
       <link>https://www.theverge.com/tech/1005342/amazon-alexa-plus-keeps-creepily-singing-lalala-for-minutes-on-end</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1005342/amazon-alexa-plus-keeps-creepily-singing-lalala-for-minutes-on-end</guid>
       <pubDate>Tue, 06 Oct 2026 10:53:11 +0000</pubDate>
-      <description>Amazon Alexa Plus 被曝...：Alexa Plus bug导致部分Amazon Echo智能音箱陷入“lalala”循环，长时间无法执行其他指令，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Amazon Alexa Plus 被曝...：亚马逊Alexa Plus出现严重漏洞，部分Echo智能音箱会持续重复播放“lalala”数分钟，甚至以歌唱形式循环...，适合作为今日 AI/科技情报流里的重点线索。
 
-Alexa Plus bug导致部分Amazon Echo智能音箱陷入“lalala”循环，长时间无法执行其他指令。
+亚马逊Alexa Plus出现严重漏洞，部分Echo智能音箱会持续重复播放“lalala”数分钟，甚至以歌唱形式循环，严重影响正常使用。
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 53.8</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -472,219 +457,13 @@ Alexa Plus bug导致部分Amazon Echo智能音箱陷入“lalala”循环，长�
       <link>https://openai.com/index/advancing-computer-use-with-ironclad</link>
       <guid isPermaLink="true">https://openai.com/index/advancing-computer-use-with-ironclad</guid>
       <pubDate>Tue, 06 Oct 2026 10:00:00 +0000</pubDate>
-      <description>OpenAI、GPT-6：OpenAI与Ironclad合作，利用复杂合同工作流训练和评估AI代理，以推动专业领域的计算机使用能力，适合优先评估模型能力、价格和工具选型变化。
+      <description>OpenAI、GPT-6：了解OpenAI和Ironclad如何在复杂合同工作流程中训练和评估AI代理，以推动人工智能在专业工作中的应用，适合优先评估模型能力、价格和工具选型变化。
 
-OpenAI与Ironclad合作，利用复杂合同工作流训练和评估AI代理，以推动专业领域的计算机使用能力。
+了解OpenAI和Ironclad如何在复杂合同工作流程中训练和评估AI代理，以推动人工智能在专业工作中的应用。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Falcon-Emirati-7B：让 LLM 学会阿联酋方言、文化与语感</title>
-      <link>https://huggingface.co/blog/tiiuae/falcon-emirati</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/tiiuae/falcon-emirati</guid>
-      <pubDate>Tue, 06 Oct 2026 06:44:39 +0000</pubDate>
-      <description>Falcon-Emirati-7B：让 LLM 学会阿联酋方言、文化与语感，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>Reflection 发布 501B-A23B 开源编码模型 Beam</title>
-      <link>https://www.latent.space/p/ainews-reflection-beam-501b-a23b</link>
-      <guid isPermaLink="true">https://www.latent.space/p/ainews-reflection-beam-501b-a23b</guid>
-      <pubDate>Tue, 06 Oct 2026 06:28:43 +0000</pubDate>
-      <description>Reflection 发布 501B-A...：美国开源软件迎来小胜利 美国国土安全部取消了对关键开源项目的资金冻结，确保了关键基础设施的持续支持，适合进一步验证代码、协议或社区采用情况。
-
-美国开源软件迎来小胜利
-
-美国国土安全部取消了对关键开源项目的资金冻结，确保了关键基础设施的持续支持。
-
-信号等级 B · 评分 61.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>通过自动诊断与技能发现训练数值智能</title>
-      <link>https://arxiv.org/abs/2610.03872</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03872</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>通过自动诊断与技能发现训练数值智能：arXiv:2610.03872v1 新论文指出，AI代理虽能生成科学代码，但算法优化能力仍不足，需提升其对底层算法...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03872v1 新论文指出，AI代理虽能生成科学代码，但算法优化能力仍不足，需提升其对底层算法的改进能力。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>代理置信度:利用代理对数概率审计黑箱大语言模型代理</title>
-      <link>https://arxiv.org/abs/2610.03894</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03894</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>代理置信度：arXiv:2610.03894v1指出，已部署的LLM代理可能静默发出错误的工具调用、查询和代码，待错误暴露时操作...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.03894v1指出，已部署的LLM代理可能静默发出错误的工具调用、查询和代码，待错误暴露时操作已执行，存在严重安全隐患。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>多模态大模型在工具代理化使用时拒绝能力失效</title>
-      <link>https://arxiv.org/abs/2610.03938</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03938</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>多模态大模型在工具代理化使用时拒绝能力失...：arXiv:2610.03938v1 发布新版，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.03938v1 发布新版。摘要：代理型多模态大型语言模型（MLLMs）通过调用缩放和标记等工具，最近推动了视觉推理的前沿。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>基于中国哲学智慧的检索增强大语言模型在自动驾驶中的决策研究</title>
-      <link>https://arxiv.org/abs/2610.03948</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03948</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>基于中国哲学智慧的检索增强大语言模型在自...：自动驾驶决策系统需在复杂交通场景中平衡安全、效率与社会规范，哲学与伦理框架为其提供理论支撑，以应对现实中的道德困境与...，适合关注自动化任务和多 Agent 协作演进。
-
-自动驾驶决策系统需在复杂交通场景中平衡安全、效率与社会规范，哲学与伦理框架为其提供理论支撑，以应对现实中的道德困境与行为规范挑战。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>ROAR:统一跨异构AI驱动研究系统的运行数据</title>
-      <link>https://arxiv.org/abs/2610.03966</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03966</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>ROAR：每一次AI驱动的研究系统（ADRS）运行都是对庞大解空间的昂贵搜索，可靠的评估需要进行多次运行，这使得...，适合判断技术路线和后续产品化可能性。
-
-每一次AI驱动的研究系统（ADRS）运行都是对庞大解空间的昂贵搜索，可靠的评估需要进行多次运行，这使得...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>教授智能体可靠编码能力</title>
-      <link>https://arxiv.org/abs/2610.03984</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03984</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>教授智能体可靠编码能力：arXiv:2610.03984v1 新论文摘要：自主编码智能体通过读取代码、运行命令、编辑文件并提交补丁来解决仓库...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.03984v1 新论文摘要：自主编码智能体通过读取代码、运行命令、编辑文件并提交补丁来解决仓库问题。额外推理计算……
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>行为历史胜过人格描述，用于LLM合成人格</title>
-      <link>https://arxiv.org/abs/2610.03998</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.03998</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>行为历史胜过人格描述：arXiv:2610.03998v1 新论文摘要：大语言模型（LLMs）正日益被用作模拟调查受访者的合成角色，研究探...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.03998v1 新论文摘要：大语言模型（LLMs）正日益被用作模拟调查受访者的合成角色，研究探讨其作为特定人群替代样本的效度。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>SkillScriptBench:超越Markdown的可执行Agent技能包自演进基准测试</title>
-      <link>https://arxiv.org/abs/2610.04008</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.04008</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>SkillScriptBench：可执行Agent技能将自然语言指令和脚本结合为可重用的LLM代理包，修订时需修复其中的错误以确保功能正确性，适合关注自动化任务和多 Agent 协作演进。
-
-可执行Agent技能将自然语言指令和脚本结合为可重用的LLM代理包，修订时需修复其中的错误以确保功能正确性。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>超越参数单体:语言模型的重建记忆、可执行技能与残留组装</title>
-      <link>https://arxiv.org/abs/2610.04012</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.04012</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>超越参数单体：语言模型系统可将语境计算、持久存储和精确执行分离，而非通过单一更新整合所有能力，适合判断技术路线和后续产品化可能性。
-
-语言模型系统可将语境计算、持久存储和精确执行分离，而非通过单一更新整合所有能力。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>人机协作报告参与度(REAL)评级:披露人机协作的框架</title>
-      <link>https://arxiv.org/abs/2610.04021</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.04021</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>人机协作报告参与度(REAL)评级：arXiv:2610.04021v1 新发布摘要：生成式人工智能已日益融入数字媒体及更广泛的生产工作流程，推动内容创...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.04021v1 新发布摘要：生成式人工智能已日益融入数字媒体及更广泛的生产工作流程，推动内容创作方式的深刻变革。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Agent策略-价值审计:在金融LLM Agent中分离转移组合与事件选择</title>
-      <link>https://arxiv.org/abs/2610.04040</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.04040</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Agent策略-价值审计：arXiv:2610.04040v1 Announce Type: new Abstract: Financial...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.04040v1 Announce Type: new Abstract: Financial LLM agents are often evaluated by comparing their end-to-end returns with those of a baseline and testing the paired difference against zero....
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>基于比较证据的社会智能强化学习</title>
-      <link>https://arxiv.org/abs/2610.04072</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.04072</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>基于比较证据的社会智能强化学习：arXiv:2610.04072v1 Announce Type: new Abstract: Developing...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.04072v1 Announce Type: new Abstract: Developing socially intelligent AI remains heavily dependent on human-annotated data, limiting the scale and breadth of social understanding models can...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>LLM Agent中的自我传播错位:为何审计或禁用记忆不足以解决</title>
-      <link>https://arxiv.org/abs/2610.04083</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.04083</guid>
-      <pubDate>Tue, 06 Oct 2026 04:00:00 +0000</pubDate>
-      <description>LLM Agent中的自我传播错位：arXiv:2610.04083v1 Announce Type: new Abstract: Memory poi...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.04083v1 Announce Type: new Abstract: Memory poisoning attacks on LLM agents typically assume an external adversary who plants content in the agent&apos;s persistent memory to steer its...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
       <category>论文研究</category>
     </item>
   </channel>
