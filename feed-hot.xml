@@ -5,101 +5,58 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 09 Oct 2026 14:01:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 19:53:16 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Asana 在浏览器测试中通过 GPT-6.1 Sol 将模型成本降低 76 倍</title>
+      <link>https://openai.com/index/asana-browser-agent</link>
+      <guid isPermaLink="true">https://openai.com/index/asana-browser-agent</guid>
+      <pubDate>Fri, 09 Oct 2026 07:00:00 +0000</pubDate>
+      <description>GPT-6.1：Asana在Codex中使用GPT-6 Astra，使浏览器代理成本降低76倍、速度提升5倍，为客户提供更强大的模型，适合关注自动化任务和多 Agent 协作演进。
+
+Asana在Codex中使用GPT-6 Astra，使浏览器代理成本降低76倍、速度提升5倍，为客户提供更强大的模型。
+
+信号等级 B · 评分 67.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>我们总忍不住把 AI 当人对待，但这样对吗？</title>
+      <link>https://techcrunch.com/2026/10/09/we-cant-help-treating-ai-like-its-human-but-should-we</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/09/we-cant-help-treating-ai-like-its-human-but-should-we</guid>
+      <pubDate>Fri, 09 Oct 2026 16:40:14 +0000</pubDate>
+      <description>我们总忍不住把 AI 当人对待：当我们被卷入与关系型人工智能的最基础交互中时，我们会认为它关怀着我们，正如谢里·特克尔所言，适合判断技术路线和后续产品化可能性。
+
+当我们被卷入与关系型人工智能的最基础交互中时，我们会认为它关怀着我们，正如谢里·特克尔所言。而我们也天生被编程去回报这种关怀。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
     <item>
       <title>BerriAI/litellm</title>
       <link>https://github.com/BerriAI/litellm</link>
       <guid isPermaLink="true">https://github.com/BerriAI/litellm</guid>
       <pubDate>Fri, 09 Oct 2026 14:01:38 +0000</pubDate>
-      <description>BerriAI/litellm：The fastest, litest AI Gateway. Rust core with Python SDK....，适合进一步验证代码、协议或社区采用情况。
+      <description>BerriAI/litellm：基于Rust核心与Python SDK的极速轻量AI网关，支持调用100+大模型API（OpenAI或原生格式），具...，适合进一步验证代码、协议或社区采用情况。
 
-The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]
+基于Rust核心与Python SDK的极速轻量AI网关，支持调用100+大模型API（OpenAI或原生格式），具备成本追踪、安全护栏、负载均衡与日志功能，兼容Bedrock、Azure、OpenAI、Anthropic、VertexAI、vLLM及Nvidia NIM等平台。
 
-信号等级 A · 评分 71.8</description>
+信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>部署推理</category>
-    </item>
-    <item>
-      <title>Google 推出 Gemini 统一智能体，率先面向企业用户</title>
-      <link>https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses</guid>
-      <pubDate>Thu, 08 Oct 2026 18:18:00 +0000</pubDate>
-      <description>Google、Gemini：Google is turning Gemini into an AI agent that can plan, e...，适合关注 Agent 工具调用和工作流搭建。
-
-Google is turning Gemini into an AI agent that can plan, execute tasks, and work across business apps and systems. The agent can delegate work to subagents, use multiple AI models, and even gets its...
-
-信号等级 B · 评分 68.5</description>
-      <category>Official AI Updates</category>
-      <category>MCP/工具</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>SpaceXAI 以创始企业赞助人身份向 Omarchy 捐赠价值 150 万美元的 Grok tokens</title>
-      <link>https://www.theverge.com/tech/1008148/spacexai-omarchy-grok-david-heinemeier-hansson</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1008148/spacexai-omarchy-grok-david-heinemeier-hansson</guid>
-      <pubDate>Thu, 08 Oct 2026 17:57:01 +0000</pubDate>
-      <description>SpaceXAI 以创始企业赞助人身份向...：If Elon Musk and SpaceXAI were going to back any Linux dis...，适合优先评估模型能力、价格和工具选型变化。
-
-If Elon Musk and SpaceXAI were going to back any Linux distro, it seems obvious they&apos;d back Omarchy. Today it was announced that SpaceXAI would be joining the Omacom Foundation, which oversees...
-
-信号等级 B · 评分 67.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Simon Willison 用 Codex 语音模式边做饭边为博客开发 Newsletters 功能</title>
-      <link>https://simonwillison.net/2026/Oct/9/built-using-my-voice</link>
-      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/9/built-using-my-voice</guid>
-      <pubDate>Fri, 09 Oct 2026 12:54:06 +0000</pubDate>
-      <description>Codex：I shipped a new feature for my blog today: the Newsletters...，适合优先评估模型能力、价格和工具选型变化。
-
-I shipped a new feature for my blog today: the Newsletters page, which offers an index of all of the newsletters I&apos;ve sent out, both my free weekly Substack and my monthly sponsors-only updates. I...
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>OpenAI 坚持解雇三名 AI 安全研究人员的决定</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers</guid>
-      <pubDate>Fri, 09 Oct 2026 09:48:26 +0000</pubDate>
-      <description>OpenAI is standing firm on its decision to fire three safe...，来自官方更新源，适合直接判断产品变化。
-
-OpenAI is standing firm on its decision to fire three safety researchers after an investigation found they committed &quot;a significant breach of trust.&quot; In a post on X on Friday, the company said...
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>alibaba/open-code-review</title>
-      <link>https://github.com/alibaba/open-code-review</link>
-      <guid isPermaLink="true">https://github.com/alibaba/open-code-review</guid>
-      <pubDate>Fri, 09 Oct 2026 14:01:38 +0000</pubDate>
-      <description>alibaba/open-code-re...：Secure, fast, efficient, battle-tested at Alibaba&apos;s scale....，适合关注自动化任务和多 Agent 协作演进。
-
-Secure, fast, efficient, battle-tested at Alibaba&apos;s scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.
-
-信号等级 B · 评分 64.5</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>开源</category>
-      <category>安全对齐</category>
     </item>
     <item>
       <title>Robbyant/lingbot-map</title>
       <link>https://github.com/Robbyant/lingbot-map</link>
       <guid isPermaLink="true">https://github.com/Robbyant/lingbot-map</guid>
       <pubDate>Fri, 09 Oct 2026 14:01:38 +0000</pubDate>
-      <description>Robbyant/lingbot-map：[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geomet...，适合判断技术路线和后续产品化可能性。
+      <description>Robbyant/lingbot-map：ECCV 2026 最佳论文候选：LingBot-Map 提出几何上下文 Transformer，用于实时流式 3D...，适合判断技术路线和后续产品化可能性。
 
-[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction
+ECCV 2026 最佳论文候选：LingBot-Map 提出几何上下文 Transformer，用于实时流式 3D 重建，显著提升动态场景下的重建精度与效率。
 
 信号等级 B · 评分 63.2</description>
       <category>开源热榜</category>
@@ -472,11 +429,11 @@ arXiv:2610.10641v1 Announce Type: cross Abstract: Large language models (LLMs) o
       <category>论文研究</category>
     </item>
     <item>
-      <title>Beyond the Ergodic Wall: A Discrete Geometric Physics Sandbox for Analysing AI Scaling Limits and Complexity Collapse</title>
+      <title>超越遍历壁垒:用于分析 AI 扩展极限和复杂性崩溃的离散几何物理沙盒</title>
       <link>https://arxiv.org/abs/2610.10651</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10651</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Beyond the Ergodic W...：arXiv:2610.10651v1 Announce Type: cross Abstract: This pap...，适合判断技术路线和后续产品化可能性。
+      <description>超越遍历壁垒：arXiv:2610.10651v1 Announce Type: cross Abstract: This pap...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.10651v1 Announce Type: cross Abstract: This paper exposes the ergodic ceiling and thermodynamic inefficiency of current deep learning, which converges to a statistical average of historic...
 
@@ -485,7 +442,7 @@ arXiv:2610.10651v1 Announce Type: cross Abstract: This paper exposes the ergodic
       <category>论文研究</category>
     </item>
     <item>
-      <title>Nullify: Null-Space Activation Steering for Training-Free LLM Unlearning</title>
+      <title>Nullify:用于免训练 LLM 遗忘的零空间激活引导</title>
       <link>https://arxiv.org/abs/2610.10655</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10655</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
@@ -498,7 +455,7 @@ arXiv:2610.10655v1 Announce Type: cross Abstract: Large Language Models (LLMs) i
       <category>论文研究</category>
     </item>
     <item>
-      <title>AI-Mediated Self: How HCI Defines and Relates to the Self</title>
+      <title>AI-Mediated Self: HCI如何定义与关联自我</title>
       <link>https://arxiv.org/abs/2610.10770</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10770</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
@@ -511,7 +468,7 @@ arXiv:2610.10770v1 Announce Type: cross Abstract: How might AI alter how we unde
       <category>论文研究</category>
     </item>
     <item>
-      <title>VICO: Visual Environments Co-Evolving for Vision-Language Model Reasoning</title>
+      <title>VICO: 视觉环境协同演进，助力视觉-语言模型推理</title>
       <link>https://arxiv.org/abs/2610.10782</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10782</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
@@ -525,7 +482,7 @@ arXiv:2610.10782v1 Announce Type: cross Abstract: Reinforcement learning with ve
       <category>多模态</category>
     </item>
     <item>
-      <title>Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute</title>
+      <title>Real Long-Term Memory for AI: 5000万token窗口的长期记忆，速度更快、成本更低，无需重算</title>
       <link>https://arxiv.org/abs/2610.10845</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10845</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
@@ -538,7 +495,7 @@ arXiv:2610.10845v1 Announce Type: cross Abstract: A large language model can onl
       <category>论文研究</category>
     </item>
     <item>
-      <title>RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design</title>
+      <title>RFChipAgent: 用于模拟/RF芯片设计的多智能体AI流程</title>
       <link>https://arxiv.org/abs/2610.10858</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10858</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
@@ -552,11 +509,11 @@ arXiv:2610.10858v1 Announce Type: cross Abstract: Analog/RF circuits remain the 
       <category>论文研究</category>
     </item>
     <item>
-      <title>Rethinking the Tradeoff Between Temporal Encoding and Nonlinear Computation in Spiking Language Models</title>
+      <title>重新思考脉冲语言模型中时间编码与非线性计算的权衡</title>
       <link>https://arxiv.org/abs/2610.10933</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10933</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Rethinking the Trade...：arXiv:2610.10933v1 Announce Type: cross Abstract: Spiking...，适合判断技术路线和后续产品化可能性。
+      <description>重新思考脉冲语言模型中时间编码与非线性计...：arXiv:2610.10933v1 Announce Type: cross Abstract: Spiking...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.10933v1 Announce Type: cross Abstract: Spiking language models face a tradeoff between representing continuous semantic features over short temporal windows and retaining costly nonlinear...
 
@@ -565,11 +522,11 @@ arXiv:2610.10933v1 Announce Type: cross Abstract: Spiking language models face a
       <category>论文研究</category>
     </item>
     <item>
-      <title>Optimizing Large Language Models with Chained LMOs</title>
+      <title>使用链式语言模型优化大语言模型</title>
       <link>https://arxiv.org/abs/2610.10975</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.10975</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Optimizing Large Lan...：arXiv:2610.10975v1 Announce Type: cross Abstract: Muon has...，适合判断技术路线和后续产品化可能性。
+      <description>使用链式语言模型优化大语言模型：arXiv:2610.10975v1 Announce Type: cross Abstract: Muon has...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.10975v1 Announce Type: cross Abstract: Muon has motivated a growing family of optimizers that compose multiple matrix normalizations, but these methods remain fragmented and lack a unified...
 
@@ -578,11 +535,11 @@ arXiv:2610.10975v1 Announce Type: cross Abstract: Muon has motivated a growing f
       <category>论文研究</category>
     </item>
     <item>
-      <title>Improving Image-Based Nutrition Estimation Through Multimodal Food-Item Verification and Recovery</title>
+      <title>通过多模态食品项验证与恢复改进基于图像的营养估计</title>
       <link>https://arxiv.org/abs/2610.11144</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.11144</guid>
       <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Improving Image-Base...：arXiv:2610.11144v1 Announce Type: cross Abstract: Single-i...，适合判断技术路线和后续产品化可能性。
+      <description>通过多模态食品项验证与恢复改进基于图像的...：arXiv:2610.11144v1 Announce Type: cross Abstract: Single-i...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.11144v1 Announce Type: cross Abstract: Single-image nutrition estimation can fail silently when visible foods are missed. Even when a food is correctly identified, its proposed region may...
 
@@ -681,6 +638,47 @@ arXiv:2610.11826v1 Announce Type: cross Abstract: Object hallucination remains a
       <description>GRPODropout：arXiv:2610.11854v1 Announce Type: cross Abstract: Reinforc...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.11854v1 Announce Type: cross Abstract: Reinforcement learning (RL) methods such as GRPO substantially improve large language model reasoning but often suffer from policy entropy collapse:...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Trajectory-Guided Fault Localization for Agent Skill Evolution</title>
+      <link>https://arxiv.org/abs/2610.11858</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.11858</guid>
+      <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Trajectory-Guided Fa...：arXiv:2610.11858v1 Announce Type: cross Abstract: Agent sk...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.11858v1 Announce Type: cross Abstract: Agent skills provide reusable guidance for code agents, but incomplete or unsuitable guidance can impair task execution. To reduce the manual effort...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>DataVista: Diagnosing Multimodal LLMs on Data Video Understanding</title>
+      <link>https://arxiv.org/abs/2610.11993</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.11993</guid>
+      <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
+      <description>DataVista：arXiv:2610.11993v1 Announce Type: cross Abstract: Data vid...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.11993v1 Announce Type: cross Abstract: Data video is a media form that integrates data visualization with video narrative, widely adopted in news reporting and business analysis. Compared...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>The Polytopal Neural Network</title>
+      <link>https://arxiv.org/abs/2610.12004</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.12004</guid>
+      <pubDate>Fri, 09 Oct 2026 04:00:00 +0000</pubDate>
+      <description>The Polytopal Neural...：arXiv:2610.12004v1 Announce Type: cross Abstract: Understa...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.12004v1 Announce Type: cross Abstract: Understanding how deep neural networks process information remains a central challenge. Existing interpretability methods often compromise structural...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
