@@ -1,36 +1,28 @@
 {
-  "generated_at": "2026-10-11T02:47:43.091370Z",
+  "generated_at": "2026-10-11T09:27:31.488598Z",
   "sites": [
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 80,
+      "duration_ms": 79,
       "error": "403 Client Error: Forbidden for url: https://r.jina.ai/https://aibreakfast.beehiiv.com/"
-    },
-    {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
-      "ok": true,
-      "item_count": 31,
-      "duration_ms": 219,
-      "error": null
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 47,
-      "duration_ms": 959,
+      "item_count": 51,
+      "duration_ms": 532,
       "error": null
     },
     {
-      "site_id": "techurls",
-      "site_name": "TechURLs",
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
       "ok": true,
-      "item_count": 405,
-      "duration_ms": 2903,
+      "item_count": 22,
+      "duration_ms": 777,
       "error": null
     },
     {
@@ -38,23 +30,23 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 2952,
+      "duration_ms": 2174,
       "error": null
     },
     {
-      "site_id": "aibase",
-      "site_name": "AIbase",
+      "site_id": "techurls",
+      "site_name": "TechURLs",
       "ok": true,
-      "item_count": 20,
-      "duration_ms": 2997,
+      "item_count": 405,
+      "duration_ms": 2809,
       "error": null
     },
     {
       "site_id": "oss_trending",
       "site_name": "开源热榜",
       "ok": true,
-      "item_count": 30,
-      "duration_ms": 4681,
+      "item_count": 22,
+      "duration_ms": 5258,
       "error": null
     },
     {
@@ -62,7 +54,7 @@
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 6191,
+      "duration_ms": 5747,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))"
     },
     {
@@ -70,15 +62,15 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 9746,
+      "duration_ms": 8709,
       "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 3019,
-      "duration_ms": 10691,
+      "item_count": 3015,
+      "duration_ms": 10217,
       "error": null
     },
     {
@@ -86,7 +78,7 @@
       "site_name": "AI HOT",
       "ok": true,
       "item_count": 500,
-      "duration_ms": 11439,
+      "duration_ms": 11822,
       "error": null
     },
     {
@@ -94,23 +86,31 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 123,
-      "duration_ms": 13043,
+      "duration_ms": 12178,
+      "error": null
+    },
+    {
+      "site_id": "aibase",
+      "site_name": "AIbase",
+      "ok": true,
+      "item_count": 20,
+      "duration_ms": 13001,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 323,
-      "duration_ms": 18615,
+      "item_count": 337,
+      "duration_ms": 20803,
       "error": null
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 904,
-      "duration_ms": 34155,
+      "item_count": 616,
+      "duration_ms": 74928,
       "error": null
     },
     {
@@ -119,7 +119,7 @@
       "ok": true,
       "partial_failures": 0,
       "item_count": 51,
-      "duration_ms": 696,
+      "duration_ms": 882,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -135,9 +135,9 @@
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 6198,
-  "items_before_topic_filter": 4471,
-  "items_in_24h": 485,
+  "fetched_raw_items": 5907,
+  "items_before_topic_filter": 4400,
+  "items_in_24h": 427,
   "ai_processing": {
     "tldr_items": 0
   },
