@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 19:37:58 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 23:29:56 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Liquid AI 发布 LFM2.5-24B-A2B：面向快速端侧智能体的 24B MoE 推理模型</title>
@@ -14,20 +14,32 @@
       <pubDate>Tue, 13 Oct 2026 17:05:48 +0000</pubDate>
       <description>Liquid AI 发布 LFM2.5-...：面向快速端侧智能体的 24B MoE 推理模型，适合进一步验证代码、协议或社区采用情况。
 
-信号等级 A · 评分 71.2</description>
+信号等级 B · 评分 67.2</description>
       <category>Official AI Updates</category>
       <category>开源</category>
       <category>智能体</category>
       <category>部署推理</category>
     </item>
     <item>
+      <title>Google DeepMind 发布 Gemini 4 Argon 并公布安全与防护细节</title>
+      <link>https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely</guid>
+      <pubDate>Tue, 13 Oct 2026 19:43:07 +0000</pubDate>
+      <description>Google DeepMind、Gemini：Google DeepMind 发布 Gemini 4 Argon 并公布安全与防护细节，适合跟进 AI 风险、治理和可信边界。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>模型发布</category>
+    </item>
+    <item>
       <title>Flox Intelligence 用 AI 让野生动物远离火车、机场和公路</title>
       <link>https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads</guid>
       <pubDate>Tue, 13 Oct 2026 18:30:00 +0000</pubDate>
-      <description>Flox Intelligence 用...：Flox的边缘设备可识别动物，并利用物种特异性声音将其驱离关键基础设施，适合观察推理部署成本和落地门槛变化。
+      <description>Flox Intelligence 用...：Flox的边缘设备可识别动物，并利用物种特异性声音驱离关键基础设施区域内的动物，适合观察推理部署成本和落地门槛变化。
 
-Flox的边缘设备可识别动物，并利用物种特异性声音将其驱离关键基础设施。
+Flox的边缘设备可识别动物，并利用物种特异性声音驱离关键基础设施区域内的动物。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -38,9 +50,9 @@ Flox的边缘设备可识别动物，并利用物种特异性声音将其驱离�
       <link>https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise</link>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise</guid>
       <pubDate>Tue, 13 Oct 2026 17:56:33 +0000</pubDate>
-      <description>GitHub的上下文感知密钥分类器提升了检测质量，加权接受率提升11.5%，扫描中位数执行时间缩短86%，来自官方更新源，适合直接判断产品变化。
+      <description>GitHub 推出上下文感知密钥分类器，提升检测质量，加权接受率提高11.5%，中位扫描执行时间减少86%，来自官方更新源，适合直接判断产品变化。
 
-GitHub的上下文感知密钥分类器提升了检测质量，加权接受率提升11.5%，扫描中位数执行时间缩短86%。
+GitHub 推出上下文感知密钥分类器，提升检测质量，加权接受率提高11.5%，中位扫描执行时间减少86%。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -54,7 +66,7 @@ GitHub的上下文感知密钥分类器提升了检测质量，加权接受率�
       <pubDate>Tue, 13 Oct 2026 16:01:58 +0000</pubDate>
       <description>Google DeepMind、Gemini：ERQA 基准得分 87%，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
       <category>部署推理</category>
@@ -68,7 +80,7 @@ GitHub的上下文感知密钥分类器提升了检测质量，加权接受率�
 
 TBD
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
@@ -77,11 +89,11 @@ TBD
       <link>https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon</guid>
       <pubDate>Tue, 13 Oct 2026 16:00:00 +0000</pubDate>
-      <description>Google、Gemini：谷歌推出Gemini 4 Argon模型，宣称其性能可与业界顶尖产品竞争，标志着其正式加入前沿AI竞赛，适合跟进 AI 风险、治理和可信边界。
+      <description>Google、Gemini：谷歌终结长期静默，正式发布备受期待的 Gemini 4 Argon 模型，宣称其性能可与行业内顶尖模型相媲美，适合跟进 AI 风险、治理和可信边界。
 
-谷歌推出Gemini 4 Argon模型，宣称其性能可与业界顶尖产品竞争，标志着其正式加入前沿AI竞赛。
+谷歌终结长期静默，正式发布备受期待的 Gemini 4 Argon 模型，宣称其性能可与行业内顶尖模型相媲美。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
       <category>模型发布</category>
@@ -91,37 +103,23 @@ TBD
       <link>https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription</guid>
       <pubDate>Tue, 13 Oct 2026 13:50:19 +0000</pubDate>
-      <description>新X订阅将X的付费功能与Grok、Cursor等AI工具整合，提供每月8至200美元不等的套餐，来自官方更新源，适合直接判断产品变化。
+      <description>新推出的X订阅服务将X的付费功能与Grok和Cursor等AI工具整合，提供从每月8美元至200美元不等的多种套餐选...，来自官方更新源，适合直接判断产品变化。
 
-新X订阅将X的付费功能与Grok、Cursor等AI工具整合，提供每月8至200美元不等的套餐。
+新推出的X订阅服务将X的付费功能与Grok和Cursor等AI工具整合，提供从每月8美元至200美元不等的多种套餐选择。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
       <category>编码工具</category>
-    </item>
-    <item>
-      <title>Pluto Security 融资 4200 万美元，瞄准企业员工 AI 使用带来的安全风险</title>
-      <link>https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache</guid>
-      <pubDate>Tue, 13 Oct 2026 17:18:25 +0000</pubDate>
-      <description>Pluto Security 融资 42...：在公司内部向所有人开放AI工具的问题在于，员工可能以意想不到的方式使用它们，这正逐步引发人们对企业面临新型、严重安全...，适合跟进 AI 风险、治理和可信边界。
-
-在公司内部向所有人开放AI工具的问题在于，员工可能以意想不到的方式使用它们，这正逐步引发人们对企业面临新型、严重安全漏洞的担忧。
-
-信号等级 B · 评分 65.0</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>行业动态</category>
     </item>
     <item>
       <title>TechCrunch Disrupt 2026 公布 Disrupt Stage 完整阵容：Benchmark 五位合伙人罕见同台</title>
       <link>https://techcrunch.com/2026/10/13/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/13/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026</guid>
       <pubDate>Tue, 13 Oct 2026 13:28:06 +0000</pubDate>
-      <description>TechCrunch Disrupt 2...：The full TechCrunch Disrupt Stage lineup revealed, featuri...，适合判断技术路线和后续产品化可能性。
+      <description>TechCrunch Disrupt 2...：TechCrunch Disrupt Stage公布完整阵容，包括Max Hodak、Mark Wahlberg及B...，适合判断技术路线和后续产品化可能性。
 
-The full TechCrunch Disrupt Stage lineup revealed, featuring Max Hodak, Mark Wahlberg, Benchmark partners, and more. Register now to save up to $100 on your pass and get a second at 50% off.
+TechCrunch Disrupt Stage公布完整阵容，包括Max Hodak、Mark Wahlberg及Benchmark合伙人等。现可注册获票，最高省$100并享第二张票半价优惠。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -132,9 +130,9 @@ The full TechCrunch Disrupt Stage lineup revealed, featuring Max Hodak, Mark Wah
       <link>https://openai.com/index/higgsfield-longer-videos-voice</link>
       <guid isPermaLink="true">https://openai.com/index/higgsfield-longer-videos-voice</guid>
       <pubDate>Tue, 13 Oct 2026 12:00:00 +0000</pubDate>
-      <description>Higgsfield brings creators longer videos with GPT-6 Astra...，来自官方更新源，适合直接判断产品变化。
+      <description>Higgsfield 通过 GPT-6 Astra 实现更长视频创作，借助 GPT-Image-2.5 提供精准视觉...，来自官方更新源，适合直接判断产品变化。
 
-Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.
+Higgsfield 通过 GPT-6 Astra 实现更长视频创作，借助 GPT-Image-2.5 提供精准视觉效果，并以 GPT-Live 为路径推动语音电影制作。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -156,13 +154,13 @@ Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with 
       <category>模型发布</category>
     </item>
     <item>
-      <title>NVIDIA 宣布对法国初创公司 Doctolib、Entalpic、Genesis AI 和 Pigment 进行新投资</title>
+      <title>从地球到轨道：法国生态携手 NVIDIA 规模化落地智能体计算</title>
       <link>https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing</link>
       <guid isPermaLink="true">https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing</guid>
       <pubDate>Tue, 13 Oct 2026 05:00:31 +0000</pubDate>
-      <description>NVIDIA：Companies in France are deploying agentic computing across...，适合关注自动化任务和多 Agent 协作演进。
+      <description>NVIDIA：法国公司正在跨航天、金融、公共部门和科学研究等多个行业部署代理计算，展示了该国生态系统在AI驱动创新方面的快速崛起，适合关注自动化任务和多 Agent 协作演进。
 
-Companies in France are deploying agentic computing across industries spanning space, financial services, the public sector and scientific research, demonstrating how the country’s ecosystem has...
+法国公司正在跨航天、金融、公共部门和科学研究等多个行业部署代理计算，展示了该国生态系统在AI驱动创新方面的快速崛起。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -177,9 +175,9 @@ Companies in France are deploying agentic computing across industries spanning s
       <link>https://www.anthropic.com/engineering/redesigning-source-control</link>
       <guid isPermaLink="true">https://www.anthropic.com/engineering/redesigning-source-control</guid>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Anthropic：As our merges per day grew more than tenfold, source contr...，适合关注 Agent 工具调用和工作流搭建。
+      <description>Anthropic：随着每日合并次数增长十倍，源代码管理成为最大的开发瓶颈，适合关注 Agent 工具调用和工作流搭建。
 
-As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.
+随着每日合并次数增长十倍，源代码管理成为最大的开发瓶颈。本文分享了我们在五个月内迁移至自研版本控制系统的经验。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -187,45 +185,190 @@ As our merges per day grew more than tenfold, source control became our biggest 
       <category>模型发布</category>
     </item>
     <item>
-      <title>Gemini 4 Argon is now available in Devin</title>
+      <title>Gemini 4 Argon 现已在 Devin 中提供</title>
       <link>https://devin.ai/blog/gemini-4-argon</link>
       <guid isPermaLink="true">https://devin.ai/blog/gemini-4-argon</guid>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Gemini 4 Argon is now live in Devin Desktop and Devin CLI...，来自官方更新源，适合直接判断产品变化。
+      <description>Gemini 4 Argon已上线Devin Desktop与CLI，截至2026年10月27日享75%折扣，来自官方更新源，适合直接判断产品变化。
 
-Gemini 4 Argon is now live in Devin Desktop and Devin CLI, at 75% off list price through October 27, 2026. On FrontierCode 1.1 it scores 60.5%, surpassing GPT-6.1 Sol and matching GPT-6 Sol, the...
+Gemini 4 Argon已上线Devin Desktop与CLI，截至2026年10月27日享75%折扣。在FrontierCode 1.1测试中得分60.5%，超越GPT-6.1 Sol，媲美GPT-6 Sol。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
     <item>
+      <title>Ollama 联合 Fly.io Sprites 推出 Ollama Connector，让智能体在沙箱中安全调用云端模型</title>
+      <link>https://ollama.com/blog/fly-io-sprites</link>
+      <guid isPermaLink="true">https://ollama.com/blog/fly-io-sprites</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>AI 代理现已可在 Fly.io 云计算机中安全调用 Ollama 的云端模型，来自官方更新源，适合直接判断产品变化。
+
+AI 代理现已可在 Fly.io 云计算机中安全调用 Ollama 的云端模型。
+
+信号等级 B · 评分 62.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+      <category>部署推理</category>
+    </item>
+    <item>
       <title>[AINews] Meta Muse Wonder &amp; Wonder Full:MSL 的 Claude 5.5 级前沿模型</title>
       <link>https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder</guid>
       <pubDate>Tue, 13 Oct 2026 09:37:04 +0000</pubDate>
-      <description>Meta、Claude：MSL&amp;#8217，适合优先评估模型能力、价格和工具选型变化。
+      <description>Meta、Claude：MSL作为前沿实验室的地位现已正式确立，适合优先评估模型能力、价格和工具选型变化。
 
-MSL&amp;#8217;s emergence as a frontier lab is finally complete.
+MSL作为前沿实验室的地位现已正式确立。
 
 信号等级 B · 评分 61.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
     <item>
+      <title>Pluto Security 融资 4200 万美元，瞄准企业员工 AI 使用带来的安全风险</title>
+      <link>https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache</guid>
+      <pubDate>Tue, 13 Oct 2026 17:18:25 +0000</pubDate>
+      <description>Pluto Security 融资 42...：公司普遍开放AI工具访问权限的问题在于，员工会出人意料地使用它们，适合跟进 AI 风险、治理和可信边界。
+
+公司普遍开放AI工具访问权限的问题在于，员工会出人意料地使用它们。这正在加剧企业对新型、巨大安全漏洞的担忧。
+
+信号等级 B · 评分 61.0</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>行业动态</category>
+    </item>
+    <item>
       <title>Gemini 4 Argon 已集成至 GitHub Copilot</title>
       <link>https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot</link>
       <guid isPermaLink="true">https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot</guid>
       <pubDate>Tue, 13 Oct 2026 18:39:56 +0000</pubDate>
-      <description>Gemini、GitHub：Google最新前沿模型Gemini 4 Argon现已在GitHub Copilot中普遍可用，专为复杂编码、代理...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Gemini、GitHub：Google最新前沿模型Gemini 4 Argon现已在GitHub Copilot中普遍可用，适合关注自动化任务和多 Agent 协作演进。
 
-Google最新前沿模型Gemini 4 Argon现已在GitHub Copilot中普遍可用，专为复杂编码、代理和推理任务而设计。早期测试显示其在处理复杂编程挑战方面表现出色。
+Google最新前沿模型Gemini 4 Argon现已在GitHub Copilot中普遍可用。该模型专为复杂编码、智能体和推理任务而设计。在早期测试中，Gemini 4展现出了卓越的性能。
 
 信号等级 B · 评分 60.2</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>模型发布</category>
       <category>编码工具</category>
+    </item>
+    <item>
+      <title>Science Corporation 完成 PRIMA 视力恢复芯片首例 Stargardt 病患者植入</title>
+      <link>https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient</guid>
+      <pubDate>Tue, 13 Oct 2026 23:13:31 +0000</pubDate>
+      <description>Science Corporation...：Neuralink前总裁兼联合创始人Max Hodak在TechCrunch Disrupt大会上介绍，公司与PRI...，适合关注内容生产和交互形态的新变化。
+
+Neuralink前总裁兼联合创始人Max Hodak在TechCrunch Disrupt大会上介绍，公司与PRIMA的合作正推动其向新型脑机接口迈进。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>Cerebras CEO：人人拥有家用个人 AI 助手的未来已不远</title>
+      <link>https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home</guid>
+      <pubDate>Tue, 13 Oct 2026 23:05:34 +0000</pubDate>
+      <description>Cerebras CEO Andrew Feldman predicts a future where person...，来自官方更新源，适合直接判断产品变化。
+
+Cerebras CEO Andrew Feldman predicts a future where personal AI assistants become as commonplace as household appliances, running partly on local devices and partly in the cloud.
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
+    </item>
+    <item>
+      <title>Industrial Next 用 AI 基础模型让工厂机器人几分钟切换任务</title>
+      <link>https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks</guid>
+      <pubDate>Tue, 13 Oct 2026 23:00:00 +0000</pubDate>
+      <description>Industrial Next 用 AI...：Industrial Next helps manufacturers automate complex, deli...，适合判断 AI 编程工作流会不会被改写。
+
+Industrial Next helps manufacturers automate complex, delicate tasks that have traditionally required human labor.
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>编码工具</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Cerebras CEO 反驳 AI 末日论：AI 领袖应少谈风险多讲潜力</title>
+      <link>https://techcrunch.com/2026/10/13/cerebras-ceo-pushes-back-on-ai-doomsday-warnings</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/cerebras-ceo-pushes-back-on-ai-doomsday-warnings</guid>
+      <pubDate>Tue, 13 Oct 2026 22:36:59 +0000</pubDate>
+      <description>Cerebras CEO 反驳 AI 末...：Cerebras CEO Andrew Feldman在TechCrunch Disrupt上呼吁AI领袖停止末日言...，适合作为今日 AI/科技情报流里的重点线索。
+
+Cerebras CEO Andrew Feldman在TechCrunch Disrupt上呼吁AI领袖停止末日言论，称行业过度聚焦风险正在掩盖AI的潜力。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Dyna Robotics 联合创始人 Jason Ma 深谈 Dyna-2 world-action 模型与小时级自主机器人</title>
+      <link>https://www.latent.space/p/dyna</link>
+      <guid isPermaLink="true">https://www.latent.space/p/dyna</guid>
+      <pubDate>Tue, 13 Oct 2026 22:25:55 +0000</pubDate>
+      <description>Dyna Robotics 联合创始人...：我们的首款机器人搭载Dyna首席科学家，探讨其在世界模型与物理AI前沿的重大布局，适合关注自动化任务和多 Agent 协作演进。
+
+我们的首款机器人搭载Dyna首席科学家，探讨其在世界模型与物理AI前沿的重大布局。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+    </item>
+    <item>
+      <title>OpenAI 工程师因在会议室安装窃听装置被捕</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device</guid>
+      <pubDate>Tue, 13 Oct 2026 20:45:25 +0000</pubDate>
+      <description>OpenAI称在其办公室发现一台隐藏的“复杂录音设备”，随后一名35岁员工阿卜杜勒拉赫曼·阿尔福赞被逮捕，来自官方更新源，适合直接判断产品变化。
+
+OpenAI称在其办公室发现一台隐藏的“复杂录音设备”，随后一名35岁员工阿卜杜勒拉赫曼·阿尔福赞被逮捕。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>法官命令 OpenAI 向 Apple 提交招聘面试记录以推进商业秘密诉讼</title>
+      <link>https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case</guid>
+      <pubDate>Tue, 13 Oct 2026 20:36:44 +0000</pubDate>
+      <description>联邦法官裁定，苹果公司可获取涉及前员工的OpenAI访谈材料，以及案件关键人物的私人消息和证词，来自官方更新源，适合直接判断产品变化。
+
+联邦法官裁定，苹果公司可获取涉及前员工的OpenAI访谈材料，以及案件关键人物的私人消息和证词。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Shopify 向更多 AI 智能体开放超 10 亿条商品目录</title>
+      <link>https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents</link>
+      <guid isPermaLink="true">https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents</guid>
+      <pubDate>Tue, 13 Oct 2026 19:42:42 +0000</pubDate>
+      <description>Shopify 向更多 AI 智能体开放...：Shopify宣布将允许AI智能体浏览并购买其商品列表，标志着其“代理式商务”战略的进一步扩展，适合关注自动化任务和多 Agent 协作演进。
+
+Shopify宣布将允许AI智能体浏览并购买其商品列表，标志着其“代理式商务”战略的进一步扩展。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+    </item>
+    <item>
+      <title>微软成立 Xbox Labs 探索 AI 驱动的游戏反编译移植与修改</title>
+      <link>https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration</link>
+      <guid isPermaLink="true">https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration</guid>
+      <pubDate>Tue, 13 Oct 2026 19:00:48 +0000</pubDate>
+      <description>微软：反编译与重编译技术正掀起复古游戏热潮，让玩家能将经典作品移植至新设备，甚至融合不同游戏代码创造新体验，适合作为今日 AI/科技情报流里的重点线索。
+
+反编译与重编译技术正掀起复古游戏热潮，让玩家能将经典作品移植至新设备，甚至融合不同游戏代码创造新体验。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
     </item>
     <item>
       <title>Meta 在 Facebook 推出 AI 功能 Your Algorithm，让用户用自然语言调整推荐算法</title>
@@ -244,110 +387,9 @@ Meta 宣布推出其新 AI 驱动功能“Your Algorithm”，该功能最初于
       <link>https://www.theverge.com/tech/1009128/ray-ban-meta-audio-glasses-review-smart-glasses-headphones-wearables</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1009128/ray-ban-meta-audio-glasses-review-smart-glasses-headphones-wearables</guid>
       <pubDate>Tue, 13 Oct 2026 18:00:00 +0000</pubDate>
-      <description>Meta：我正在公园里全速奔跑，音乐全开，轻松地超过了几个人，适合关注内容生产和交互形态的新变化。
+      <description>Meta：我跑步时耳机音量开到最大，几乎擦肩而过几位公园里的行人，适合关注内容生产和交互形态的新变化。
 
-我正在公园里全速奔跑，音乐全开，轻松地超过了几个人。第二天早晨，我对着点单的咖啡师微笑着点了一杯焦糖苹果味抹茶。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Laplace Intelligence 为机器人和自动驾驶汽车做自动化红队测试</title>
-      <link>https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world</guid>
-      <pubDate>Tue, 13 Oct 2026 17:30:00 +0000</pubDate>
-      <description>Laplace Intelligence...：密歇根大学孵化的Laplace Intelligence公司利用AI智能体与交互式仿真技术，在部署前对机器人和自动驾...，适合关注自动化任务和多 Agent 协作演进。
-
-密歇根大学孵化的Laplace Intelligence公司利用AI智能体与交互式仿真技术，在部署前对机器人和自动驾驶车辆进行压力测试。这家盈利初创企业正参与竞争……
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>Facebook 推出 AI 功能 Your Algorithm，可自定义信息流推荐</title>
-      <link>https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai</guid>
-      <pubDate>Tue, 13 Oct 2026 17:01:31 +0000</pubDate>
-      <description>Facebook 推出 AI 功能 Yo...：Meta推出“算法”功能，让用户可直接添加和管理想在Feed和Reels中看到的主题，适合作为今日 AI/科技情报流里的重点线索。
-
-Meta推出“算法”功能，让用户可直接添加和管理想在Feed和Reels中看到的主题。公司称，用户的推荐将在操作后“即刻”作出响应。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Google 让 vibe-code 的个人应用可直接在 Play Store 发布</title>
-      <link>https://www.theverge.com/tech/1009066/google-play-vibe-coded-android-apps-launch</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1009066/google-play-vibe-coded-android-apps-launch</guid>
-      <pubDate>Tue, 13 Oct 2026 17:00:00 +0000</pubDate>
-      <description>Google：谷歌宣布其AI Studio新增功能，允许用户无需连接电脑即可将自定义应用直接安装到手机上，简化了开发与测试流程，适合作为今日 AI/科技情报流里的重点线索。
-
-谷歌宣布其AI Studio新增功能，允许用户无需连接电脑即可将自定义应用直接安装到手机上，简化了开发与测试流程。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Mia Goth 方指 Instagram 放任 AI 伪造图像传播，账号已被移除</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce</guid>
-      <pubDate>Tue, 13 Oct 2026 16:42:51 +0000</pubDate>
-      <description>Mia Goth 方指 Instagra...：本月早些时候，传出女演员Mia Goth向演员兼导演Shia LaBeouf提起离婚诉求的消息，适合关注内容生产和交互形态的新变化。
-
-本月早些时候，传出女演员Mia Goth向演员兼导演Shia LaBeouf提起离婚诉求的消息。一条来自账号miagoth_（蓝色认证标记）的Instagram帖子证实了这一消息。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Satlyt 获 800 万美元种子轮，其卫星 AI 软件将随 SpaceX 火箭与 Google Project Suncatcher 同飞</title>
-      <link>https://techcrunch.com/2026/10/13/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites</guid>
-      <pubDate>Tue, 13 Oct 2026 16:30:00 +0000</pubDate>
-      <description>Google：Satlyt旨在成为轨道计算领域的“安卓”，提供兼容多家卫星的开放软件，与SpaceX封闭式、一体化的“iPhone...，适合作为今日 AI/科技情报流里的重点线索。
-
-Satlyt旨在成为轨道计算领域的“安卓”，提供兼容多家卫星的开放软件，与SpaceX封闭式、一体化的“iPhone”模式形成对比。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Epic Games 要求团队用 AI 生成代码和美术开发 Disney 射击游戏</title>
-      <link>https://www.theverge.com/games/1010097/epic-games-disney-project-ai-coding-art</link>
-      <guid isPermaLink="true">https://www.theverge.com/games/1010097/epic-games-disney-project-ai-coding-art</guid>
-      <pubDate>Tue, 13 Oct 2026 15:12:59 +0000</pubDate>
-      <description>Epic Games 要求团队用 AI...：据彭博社报道，Epic Games计划利用AI为一款未公布的迪士尼游戏生成代码和美术资源，该游戏原定于3月发布，现已...，适合作为今日 AI/科技情报流里的重点线索。
-
-据彭博社报道，Epic Games计划利用AI为一款未公布的迪士尼游戏生成代码和美术资源，该游戏原定于3月发布，现已推迟。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>TechCrunch Disrupt 2026 首日：Startup Battlefield 与六大行业舞台</title>
-      <link>https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1</guid>
-      <pubDate>Tue, 13 Oct 2026 14:00:00 +0000</pubDate>
-      <description>TechCrunch Disrupt 2...：TechCrunch Disrupt 2026今日正式开幕，10月13日旧金山Moscone West将迎来首日精彩...，适合判断资金、客户和生态格局的变化。
-
-TechCrunch Disrupt 2026今日正式开幕，10月13日旧金山Moscone West将迎来首日精彩议程，预计汇聚10,000+科技领袖，立即注册获取参会通行证。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>Nvidia DLSS 5 下月在《霍格沃茨之遗》正式亮相，效果已明显收敛</title>
-      <link>https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements</link>
-      <guid isPermaLink="true">https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements</guid>
-      <pubDate>Tue, 13 Oct 2026 13:55:45 +0000</pubDate>
-      <description>Nvidia在今年早些时候展示了DLSS 5，该技术立即被贴上“游戏AI”的标签，来自官方更新源，适合直接判断产品变化。
-
-Nvidia在今年早些时候展示了DLSS 5，该技术立即被贴上“游戏AI”的标签。对于玩家而言，Nvidia似乎偏离了初衷；作者个人也难以接受其过度依赖生成式AI的趋势。
+我跑步时耳机音量开到最大，几乎擦肩而过几位公园里的行人；第二天早上，我在点一杯焦糖苹果味抹茶时，对着咖啡师露出了笑容。
 
 信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
@@ -367,13 +409,13 @@ Nvidia在今年早些时候展示了DLSS 5，该技术立即被贴上“游戏AI
       <category>模型发布</category>
     </item>
     <item>
-      <title>Gemini 4 Argon now available on AI Gateway</title>
+      <title>Gemini 4 Argon 现已在 AI Gateway 上可用</title>
       <link>https://vercel.com/changelog/gemini-4-argon-now-available-on-ai-gateway</link>
       <guid isPermaLink="true">https://vercel.com/changelog/gemini-4-argon-now-available-on-ai-gateway</guid>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Gemini 4 Argon from Google is now available on AI Gateway....，来自官方更新源，适合直接判断产品变化。
+      <description>Google 的 Gemini 4 Argon 现已在 AI Gateway 上线，来自官方更新源，适合直接判断产品变化。
 
-Gemini 4 Argon from Google is now available on AI Gateway.Gemini 4 Argon is built for coding, agentic work, and complex reasoning. It has a 1M token context window, accepts text, image, PDF, and...
+Google 的 Gemini 4 Argon 现已在 AI Gateway 上线。该模型专为编码、代理工作及复杂推理而设计，具备 100 万 token 的上下文窗口，并支持文本、图像及 PDF 等多模态输入。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -382,25 +424,114 @@ Gemini 4 Argon from Google is now available on AI Gateway.Gemini 4 Argon is buil
       <category>编码工具</category>
     </item>
     <item>
-      <title>Google Play 支持私人 AI 生成应用直接在 Android 设备运行</title>
-      <link>https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you</guid>
-      <pubDate>Tue, 13 Oct 2026 17:00:00 +0000</pubDate>
-      <description>Google：谷歌正在简化使用 AI 构建和使用个人 Android 应用的流程，无需将其发布到 Play Store 供所有人使...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Laplace Intelligence 为机器人和自动驾驶汽车做自动化红队测试</title>
+      <link>https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world</guid>
+      <pubDate>Tue, 13 Oct 2026 17:30:00 +0000</pubDate>
+      <description>Laplace Intelligence...：密歇根大学衍生公司Laplace Intelligence利用AI代理和交互式模拟，在机器人和自动驾驶汽车部署前进行...，适合关注自动化任务和多 Agent 协作演进。
 
-谷歌正在简化使用 AI 构建和使用个人 Android 应用的流程，无需将其发布到 Play Store 供所有人使用。
+密歇根大学衍生公司Laplace Intelligence利用AI代理和交互式模拟，在机器人和自动驾驶汽车部署前进行压力测试。该盈利初创公司正参与激烈竞争。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Facebook 推出 AI 功能 Your Algorithm，可自定义信息流推荐</title>
+      <link>https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai</guid>
+      <pubDate>Tue, 13 Oct 2026 17:01:31 +0000</pubDate>
+      <description>Facebook 推出 AI 功能 Yo...：Meta表示，调整后推荐内容将立即响应，适合作为今日 AI/科技情报流里的重点线索。
+
+Facebook推出“你的算法”功能，允许用户直接添加和管理希望在信息流和Reels中看到的话题。Meta表示，调整后推荐内容将立即响应。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Google 让 vibe-code 的个人应用可直接在 Play Store 发布</title>
+      <link>https://www.theverge.com/tech/1009066/google-play-vibe-coded-android-apps-launch</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1009066/google-play-vibe-coded-android-apps-launch</guid>
+      <pubDate>Tue, 13 Oct 2026 17:00:00 +0000</pubDate>
+      <description>Google：谷歌宣布在美国推出AI Studio新功能，用户无需通过电脑连接手机即可安装自定义应用，适合作为今日 AI/科技情报流里的重点线索。
+
+谷歌宣布在美国推出AI Studio新功能，用户无需通过电脑连接手机即可安装自定义应用。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Instagram 认证账号传播 Mia Goth AI 伪造图，其经纪人批 Meta 保护失职</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce</guid>
+      <pubDate>Tue, 13 Oct 2026 16:42:51 +0000</pubDate>
+      <description>Meta：本月早些时候，女演员Mia Goth向Shia LaBeouf提起离婚诉讼，适合关注内容生产和交互形态的新变化。
+
+本月早些时候，女演员Mia Goth向Shia LaBeouf提起离婚诉讼。一条来自账号miagoth_的Instagram帖子（账号标有蓝色认证勾）证实了这一消息。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>Satlyt 获 800 万美元种子轮，其卫星 AI 软件将随 SpaceX 火箭与 Google Project Suncatcher 同飞</title>
+      <link>https://techcrunch.com/2026/10/13/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites</guid>
+      <pubDate>Tue, 13 Oct 2026 16:30:00 +0000</pubDate>
+      <description>Google：Satlyt旨在成为“轨道计算领域的安卓”，通过提供兼容多家卫星的开放软件，与SpaceX封闭式、一体化的“iPho...，适合作为今日 AI/科技情报流里的重点线索。
+
+Satlyt旨在成为“轨道计算领域的安卓”，通过提供兼容多家卫星的开放软件，与SpaceX封闭式、一体化的“iPhone模式”形成鲜明对比。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Epic Games 要求团队用 AI 生成代码和美术开发 Disney 射击游戏</title>
+      <link>https://www.theverge.com/games/1010097/epic-games-disney-project-ai-coding-art</link>
+      <guid isPermaLink="true">https://www.theverge.com/games/1010097/epic-games-disney-project-ai-coding-art</guid>
+      <pubDate>Tue, 13 Oct 2026 15:12:59 +0000</pubDate>
+      <description>Epic Games 要求团队用 AI...：Epic Games计划利用AI为一款未公开的迪士尼游戏生成代码和艺术内容，该项目原定于3月发布，但据彭博社报道已被...，适合作为今日 AI/科技情报流里的重点线索。
+
+Epic Games计划利用AI为一款未公开的迪士尼游戏生成代码和艺术内容，该项目原定于3月发布，但据彭博社报道已被推迟。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>TechCrunch Disrupt 2026 首日：Startup Battlefield 与六大行业舞台</title>
+      <link>https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1</guid>
+      <pubDate>Tue, 13 Oct 2026 14:00:00 +0000</pubDate>
+      <description>TechCrunch Disrupt 2...：TechCrunch Disrupt 2026今日正式开幕，首日将在旧金山Moscone West展开，届时将汇聚1...，适合判断资金、客户和生态格局的变化。
+
+TechCrunch Disrupt 2026今日正式开幕，首日将在旧金山Moscone West展开，届时将汇聚10,000多位科技领袖，不容错过，现在即刻注册获取通行证。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Nvidia DLSS 5 下月在《霍格沃茨之遗》正式亮相，效果已明显收敛</title>
+      <link>https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements</link>
+      <guid isPermaLink="true">https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements</guid>
+      <pubDate>Tue, 13 Oct 2026 13:55:45 +0000</pubDate>
+      <description>Nvidia：英伟达年初推出DLSS 5时，被称作“游戏生成式AI”，引发玩家质疑其过度炒作，认为其偏离了技术实用性，适合关注内容生产和交互形态的新变化。
+
+英伟达年初推出DLSS 5时，被称作“游戏生成式AI”，引发玩家质疑其过度炒作，认为其偏离了技术实用性。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
     </item>
     <item>
       <title>Amex 推出 Intent Intelligence Framework 防止 AI 智能体擅自购买</title>
       <link>https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases</guid>
       <pubDate>Tue, 13 Oct 2026 13:00:00 +0000</pubDate>
-      <description>Amex 推出 Intent Intel...：American Express is introducing a new framework designed t...，适合跟进 AI 风险、治理和可信边界。
+      <description>Amex 推出 Intent Intel...：美国运通推出新框架，确保AI代理仅执行用户授权的购买行为，以防止因AI驱动决策导致的昂贵错误和争议，适合跟进 AI 风险、治理和可信边界。
 
-American Express is introducing a new framework designed to ensure AI agents only make purchases their users have authorized, potentially preventing costly mistakes and disputes as AI-powered...
+美国运通推出新框架，确保AI代理仅执行用户授权的购买行为，以防止因AI驱动决策导致的昂贵错误和争议。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -412,9 +543,9 @@ American Express is introducing a new framework designed to ensure AI agents onl
       <link>https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look</guid>
       <pubDate>Tue, 13 Oct 2026 13:00:00 +0000</pubDate>
-      <description>Apple 发布首款智能家居屏 Home...：It&apos;s finally here: Apple&apos;s long-rumored smart display, the...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Apple 发布首款智能家居屏 Home...：苹果传闻已久的智能显示屏HomeView正式亮相，适合作为今日 AI/科技情报流里的重点线索。
 
-It&apos;s finally here: Apple&apos;s long-rumored smart display, the Apple HomeView, has arrived. I got a first look at the device in New York City this week, and it&apos;s gorgeous. The HomeView puts a small,...
+苹果传闻已久的智能显示屏HomeView正式亮相。该设备本周在纽约首次展出，外观精美。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -424,9 +555,9 @@ It&apos;s finally here: Apple&apos;s long-rumored smart display, the Apple HomeV
       <link>https://pytorch.org/blog/extending-inductor-for-the-ibm-spyre-accelerator</link>
       <guid isPermaLink="true">https://pytorch.org/blog/extending-inductor-for-the-ibm-spyre-accelerator</guid>
       <pubDate>Tue, 13 Oct 2026 12:45:30 +0000</pubDate>
-      <description>IBM Spyre 加速器的 torch...：TL，适合作为今日 AI/科技情报流里的重点线索。
+      <description>IBM Spyre 加速器的 torch...：PyTorch基础的IBM Spyre加速器软件栈已将torch.compile后端从全新编译的sendnn迁移至....，适合作为今日 AI/科技情报流里的重点线索。
 
-TL;DR The PyTorch-based software stack for IBM&amp;#8217;s Spyre accelerator recently moved its torch.compile backend from sendnn, a separate compilation stack built entirely from scratch, to...
+PyTorch基础的IBM Spyre加速器软件栈已将torch.compile后端从全新编译的sendnn迁移至... (此处省略因原文截断而导致的后续内容)
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -436,9 +567,9 @@ TL;DR The PyTorch-based software stack for IBM&amp;#8217;s Spyre accelerator rec
       <link>https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy</guid>
       <pubDate>Tue, 13 Oct 2026 12:23:42 +0000</pubDate>
-      <description>Character.AI 成立五年后申请...：The startup will sell some of its assets to Disney for $20...，适合判断资金、客户和生态格局的变化。
+      <description>Character.AI 成立五年后申请...：该公司将以2000万美元向迪士尼出售部分资产，适合判断资金、客户和生态格局的变化。
 
-The startup will sell some of its assets to Disney for $20 million.
+该公司将以2000万美元向迪士尼出售部分资产。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -449,21 +580,34 @@ The startup will sell some of its assets to Disney for $20 million.
       <link>https://www.theverge.com/ai-artificial-intelligence/1009802/character-ai-files-for-bankruptcy-disney</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1009802/character-ai-files-for-bankruptcy-disney</guid>
       <pubDate>Tue, 13 Oct 2026 10:32:23 +0000</pubDate>
-      <description>Character.AI 申请 Chap...：Character.AI, one of the first breakout startups of the ge...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Character.AI 申请 Chap...：Character.AI，生成式AI浪潮中的首批突破性创业公司之一，已申请破产并将部分资产出售给迪士尼，适合作为今日 AI/科技情报流里的重点线索。
 
-Character.AI, one of the first breakout startups of the generative AI boom, has filed for bankruptcy and is selling some of its assets to Disney. The company, which builds various online bots for...
+Character.AI，生成式AI浪潮中的首批突破性创业公司之一，已申请破产并将部分资产出售给迪士尼。该公司专注于构建各类在线机器人。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>MAI-Image-2.6 和 MAI-Image-2.6-Flash 现已在 AI Gateway 上可用</title>
+      <link>https://vercel.com/changelog/mai-image-2-6-and-mai-image-2-6-flash-now-available-on-ai-gateway</link>
+      <guid isPermaLink="true">https://vercel.com/changelog/mai-image-2-6-and-mai-image-2-6-flash-now-available-on-ai-gateway</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <description>MAI-Image-2.6 和 MAI-...：MAI-Image-2.6 and MAI-Image-2.6-Flash from Microsoft are n...，适合关注内容生产和交互形态的新变化。
+
+MAI-Image-2.6 and MAI-Image-2.6-Flash from Microsoft are now available on AI Gateway. Generate images from text or edit existing images through the AI SDK or the AI CLI, with one API key and no...
+
+信号等级 B · 评分 55.0</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
     </item>
     <item>
       <title>debpalash/VoiceStudio</title>
       <link>https://github.com/debpalash/VoiceStudio</link>
       <guid isPermaLink="true">https://github.com/debpalash/VoiceStudio</guid>
       <pubDate>Tue, 13 Oct 2026 12:18:23 +0000</pubDate>
-      <description>debpalash/VoiceStudi...：VoiceStudio is the open-source, fully-local ElevenLabs alt...，适合进一步验证代码、协议或社区采用情况。
+      <description>debpalash/VoiceStudi...：VoiceStudio 是开源的、完全本地化的 ElevenLabs 替代方案，支持 646 种语言的语音克隆、语音...，适合进一步验证代码、协议或社区采用情况。
 
-VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription &amp; audiobook creation in 646 languages.
+VoiceStudio 是开源的、完全本地化的 ElevenLabs 替代方案，支持 646 种语言的语音克隆、语音设计、视频配音、听写、转录和有声书制作。
 
 信号等级 B · 评分 54.6</description>
       <category>开源热榜</category>
@@ -471,79 +615,26 @@ VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice clo
       <category>多模态</category>
     </item>
     <item>
-      <title>Xbox 正式拥抱 AI 驱动游戏移植的混乱局面</title>
-      <link>https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration</link>
-      <guid isPermaLink="true">https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration</guid>
-      <pubDate>Tue, 13 Oct 2026 19:00:48 +0000</pubDate>
-      <description>Xbox 正式拥抱 AI 驱动游戏移植的...：借助反编译与重编译技术，复古游戏正迎来热潮，玩家得以将经典作品移植至新设备，或融合不同游戏代码，实现跨平台移植与创意...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>持续制宪大会:语言模型如何修订治理它们的文件</title>
+      <link>https://www.alignmentforum.org/posts/c9woewdY9ddsPqf3J/the-continual-constitutional-convention-how-language-models</link>
+      <guid isPermaLink="true">https://www.alignmentforum.org/posts/c9woewdY9ddsPqf3J/the-continual-constitutional-convention-how-language-models</guid>
+      <pubDate>Tue, 13 Oct 2026 22:19:04 +0000</pubDate>
+      <description>持续制宪大会：人类社会的价值观和规范随时间变化，常由道德分歧推动，适合跟进 AI 风险、治理和可信边界。
 
-借助反编译与重编译技术，复古游戏正迎来热潮，玩家得以将经典作品移植至新设备，或融合不同游戏代码，实现跨平台移植与创意混搭。
+人类社会的价值观和规范随时间变化，常由道德分歧推动；道德进步可通过解决这些分歧来理解。
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
+      <category>安全对齐</category>
     </item>
     <item>
       <title>审计 GitHub 代码质量发现的驳回与重新打开</title>
       <link>https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings</link>
       <guid isPermaLink="true">https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings</guid>
       <pubDate>Tue, 13 Oct 2026 17:58:36 +0000</pubDate>
-      <description>您现在可以在组织或企业审计日志中查看 GitHub 代码质量发现的手动驳回和重新打开操作，来自官方更新源，适合直接判断产品变化。
+      <description>现已支持在组织或企业审计日志中查看 GitHub Code Quality 发现项的手动驳回与重新开启记录，相关条目...，来自官方更新源，适合直接判断产品变化。
 
-您现在可以在组织或企业审计日志中查看 GitHub 代码质量发现的手动驳回和重新打开操作。这些发现可能出现在仓库默认分支或其他分支的审计记录中。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>秘密扫描默认阻断Anthropic密钥，并新增Salesforce支持</title>
-      <link>https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce</guid>
-      <pubDate>Tue, 13 Oct 2026 16:12:36 +0000</pubDate>
-      <description>密钥扫描功能现已支持检测来自 Salesforce、Anthropic 和 Cloudsmith 的新密钥类型，其中...，来自官方更新源，适合直接判断产品变化。
-
-密钥扫描功能现已支持检测来自 Salesforce、Anthropic 和 Cloudsmith 的新密钥类型，其中 Anthropic 的新密钥类型默认启用推送保护进行阻止。新增密钥扫描合作伙伴进一步扩展了安全覆盖范围。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>企业托管设置强制执行更新</title>
-      <link>https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates</guid>
-      <pubDate>Tue, 13 Oct 2026 15:20:10 +0000</pubDate>
-      <description>企业托管设置强制执行更新：企业管理员现可强制支持 GitHub Copilot 的客户端在启动时检索当前服务器管理的设置，而非依赖缓存策略，适合判断 AI 编程工作流会不会被改写。
-
-企业管理员现可强制支持 GitHub Copilot 的客户端在启动时检索当前服务器管理的设置，而非依赖缓存策略。此外，我们还新增了最低...
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-      <category>编码工具</category>
-      <category>开源</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>NVIDIA Run:ai 现作为 NVIDIA DSX AI Factory 平台的一部分开源</title>
-      <link>https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform</link>
-      <guid isPermaLink="true">https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform</guid>
-      <pubDate>Tue, 13 Oct 2026 14:19:40 +0000</pubDate>
-      <description>NVIDIA宣布将其Run:ai平台全面开源，旨在赋能客户、开发者及生态合作伙伴，以优化AI基础设施的管理与调度，来自官方更新源，适合直接判断产品变化。
-
-NVIDIA宣布将其Run:ai平台全面开源，旨在赋能客户、开发者及生态合作伙伴，以优化AI基础设施的管理与调度。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>改进对已撤回 Dependabot 警告的检测</title>
-      <link>https://github.blog/changelog/2026-10-13-improved-detection-for-withdrawn-dependabot-alerts</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-13-improved-detection-for-withdrawn-dependabot-alerts</guid>
-      <pubDate>Tue, 13 Oct 2026 14:03:57 +0000</pubDate>
-      <description>改进对已撤回 Dependabot 警告...：Dependabot现在能更轻松地检测已撤销的警报，适合进一步验证代码、协议或社区采用情况。
-
-Dependabot现在能更轻松地检测已撤销的警报。当警报所依据的漏洞或建议失效时，Dependabot会自动撤销并移除该警报。两项改进增强了这一功能。
+现已支持在组织或企业审计日志中查看 GitHub Code Quality 发现项的手动驳回与重新开启记录，相关条目可能出现在仓库默认分支中。
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
@@ -554,9 +645,9 @@ Dependabot现在能更轻松地检测已撤销的警报。当警报所依据的�
       <link>https://github.com/vercel-labs/skills</link>
       <guid isPermaLink="true">https://github.com/vercel-labs/skills</guid>
       <pubDate>Tue, 13 Oct 2026 12:18:23 +0000</pubDate>
-      <description>vercel-labs/skills：The open agent skills tool - npx skills，适合关注自动化任务和多 Agent 协作演进。
+      <description>vercel-labs/skills：开源代理技能工具npx skills发布，支持开发者快速集成AI能力，提升智能体开发效率，适合关注自动化任务和多 Agent 协作演进。
 
-The open agent skills tool - npx skills
+开源代理技能工具npx skills发布，支持开发者快速集成AI能力，提升智能体开发效率。
 
 信号等级 B · 评分 53.9</description>
       <category>开源热榜</category>
@@ -564,107 +655,17 @@ The open agent skills tool - npx skills
       <category>开源</category>
     </item>
     <item>
-      <title>谷歌表示，Gemini 4 Argon 是一款“性能强劲”的人工智能模型——目前正在逐步推出</title>
-      <link>https://www.businessinsider.com/google-gemini-4-argon-ai-model-public-release-cost-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/google-gemini-4-argon-ai-model-public-release-cost-2026-10</guid>
-      <pubDate>Tue, 13 Oct 2026 17:38:10 +0000</pubDate>
-      <description>Google says Gemini 4 Argon is a &apos;&apos;powerhouse&apos;&apos; AI model --...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>一名沙特男子被指控在OpenAI办公室安装“精密”的录音设备</title>
+      <link>https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&amp;at_campaign=rss</link>
+      <guid isPermaLink="true">https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&amp;at_campaign=rss</guid>
+      <pubDate>Tue, 13 Oct 2026 21:53:11 +0000</pubDate>
+      <description>OpenAI：Saudi man charged with planting &apos;&apos;sophisticated&apos;&apos; recordin...，适合判断技术路线和后续产品化可能性。
 
-Google says Gemini 4 Argon is a &apos;&apos;powerhouse&apos;&apos; AI model -- and it&apos;&apos;s rolling out now
+Saudi man charged with planting &apos;&apos;sophisticated&apos;&apos; recording device in OpenAI office
 
 信号等级 B · 评分 52.8</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>xtool-org/xtool</title>
-      <link>https://github.com/xtool-org/xtool</link>
-      <guid isPermaLink="true">https://github.com/xtool-org/xtool</guid>
-      <pubDate>Tue, 13 Oct 2026 12:18:23 +0000</pubDate>
-      <description>xtool-org/xtool：Cross-platform Xcode replacement. Build and deploy iOS app...，适合进一步验证代码、协议或社区采用情况。
-
-Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.
-
-信号等级 B · 评分 52.1</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>NVIDIA 官宣 RTX Spark 软件生态就绪，10 月 16 日笔记本上市</title>
-      <link>https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates</link>
-      <guid isPermaLink="true">https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates</guid>
-      <pubDate>Tue, 13 Oct 2026 12:00:49 +0000</pubDate>
-      <description>NVIDIA RTX Spark is a new beginning for the PC — a reinven...，来自官方更新源，适合直接判断产品变化。
-
-NVIDIA RTX Spark is a new beginning for the PC — a reinvention combining the capabilities of a gaming PC, a creative studio and a personal AI supercomputer into a single superchip. With up to 128GB...
-
-信号等级 B · 评分 52.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>预算搜索与过滤功能现已上线</title>
-      <link>https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available</guid>
-      <pubDate>Tue, 13 Oct 2026 12:06:09 +0000</pubDate>
-      <description>预算搜索与过滤功能现已上线：page in your GitHub billing settings now shows all of your...，适合进一步验证代码、协议或社区采用情况。
-
-The &amp;#8220;Budgets and alerts&amp;#8221; page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for&amp;#8230; The post...
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>Code scanning AI Scan metrics in security overview</title>
-      <link>https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview</guid>
-      <pubDate>Tue, 13 Oct 2026 12:03:17 +0000</pubDate>
-      <description>Code scanning AI Sca...：Organization and enterprise administrators can now observe...，适合进一步验证代码、协议或社区采用情况。
-
-Organization and enterprise administrators can now observe the impact of AI Scan for pull requests in security overview. New metrics show how many AI Scan findings were generated, resolved,...
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>AI 实验室从破产初创公司购买数据以训练模型</title>
-      <link>https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models</guid>
-      <pubDate>Tue, 13 Oct 2026 09:00:00 +0000</pubDate>
-      <description>AI 实验室从破产初创公司购买数据以训练...：When Keelan Miskell began winding down his crypto startup...，适合判断资金、客户和生态格局的变化。
-
-When Keelan Miskell began winding down his crypto startup this year, he didn’t think its data was worth much: the users were anonymous, the company just a few years old. But he’s since turned the...
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>Devin in Pylon: Driving faster Median Time To Fix</title>
-      <link>https://devin.ai/blog/devin-in-pylon</link>
-      <guid isPermaLink="true">https://devin.ai/blog/devin-in-pylon</guid>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Devin in Pylon：Support teams can now start Devin investigations directly...，适合作为今日 AI/科技情报流里的重点线索。
-
-Support teams can now start Devin investigations directly from Pylon, and engineers pick them up with the first pass of work already done.
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>客户遥测数据的用户归因与可配置采集；</title>
-      <link>https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture</guid>
-      <pubDate>Mon, 12 Oct 2026 22:38:00 +0000</pubDate>
-      <description>客户遥测数据的用户归因与可配置采集；：Enterprise administrators can now use telemetry in managed...，适合判断 AI 编程工作流会不会被改写。
-
-Enterprise administrators can now use telemetry in managed settings to attribute GitHub Copilot activity to a user without collecting their prompts, responses, or tool content. The...
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-      <category>编码工具</category>
-      <category>开源</category>
+      <category>论文研究</category>
     </item>
   </channel>
 </rss>
