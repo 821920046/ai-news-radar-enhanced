@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 14 Oct 2026 19:01:59 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 22:48:50 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Kwai Summary Attention V2 Technical Report</title>
@@ -21,13 +21,13 @@ arXiv:2610.18654v1 Announce Type: cross Abstract: Summary-token architectures su
       <category>论文研究</category>
     </item>
     <item>
-      <title>Apate.ai 派 AI 智能体假扮受害者与骗子周旋，为银行和电信提供反诈情报</title>
-      <link>https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</guid>
-      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
-      <description>Apate.ai 派 AI 智能体假扮受...：大多数公司利用AI代理加速产品发布或工作流程，但网络安全公司Apate.ai利用AI代理潜入系统，诱骗黑客上钩以收集...，适合关注自动化任务和多 Agent 协作演进。
+      <title>Leash Bio 的 Ian Quigley 谈 DEL 数据、Hermes 模型与 Minos 科学推理智能体</title>
+      <link>https://www.latent.space/p/lab-in-the-loop-at-compute-speed</link>
+      <guid isPermaLink="true">https://www.latent.space/p/lab-in-the-loop-at-compute-speed</guid>
+      <pubDate>Wed, 14 Oct 2026 20:35:09 +0000</pubDate>
+      <description>Leash Bio 的 Ian Quig...：Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和复杂性带来的挑战，利用其高质量数据识别出...，适合关注自动化任务和多 Agent 协作演进。
 
-大多数公司利用AI代理加速产品发布或工作流程，但网络安全公司Apate.ai利用AI代理潜入系统，诱骗黑客上钩以收集威胁情报。
+Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和复杂性带来的挑战，利用其高质量数据识别出作弊的AI模型，并证明该数据集极适合训练AI代理以化学家的思维方式进行推理和设计。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -35,104 +35,45 @@ arXiv:2610.18654v1 Announce Type: cross Abstract: Summary-token architectures su
       <category>部署推理</category>
     </item>
     <item>
-      <title>Microsoft 发布 Probabilistic Bias Correction 方法提升两到六周天气预报准确性</title>
-      <link>https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft</link>
-      <guid isPermaLink="true">https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft</guid>
-      <pubDate>Wed, 14 Oct 2026 16:05:21 +0000</pubDate>
-      <description>Microsoft：微软声称利用机器学习突破了两周预报瓶颈，其AI模型在长期天气预测上的可靠性显著优传统物理模型及现有AI模型，适合进一步验证代码、协议或社区采用情况。
+      <title>Narayanan 与 Unger 提出超越自动化的人机协作 AI 研究议程</title>
+      <link>https://www.normaltech.ai/p/steering-ai-beyond-automation</link>
+      <guid isPermaLink="true">https://www.normaltech.ai/p/steering-ai-beyond-automation</guid>
+      <pubDate>Wed, 14 Oct 2026 19:56:44 +0000</pubDate>
+      <description>Narayanan 与 Unger 提出...：《研究议程与行动计划》明确了关键研究方向与实施路径，涵盖核心数据指标、专有名词及跨领域协作机制，旨在推动系统性创新与...，适合判断技术路线和后续产品化可能性。
 
-微软声称利用机器学习突破了两周预报瓶颈，其AI模型在长期天气预测上的可靠性显著优传统物理模型及现有AI模型。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Anthropic 实验展示小型 AI 模型跨设备复制能力并警告 AI 蠕虫风险</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1011108/anthropic-self-replicating-ai-smart-devices-risk</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1011108/anthropic-self-replicating-ai-smart-devices-risk</guid>
-      <pubDate>Wed, 14 Oct 2026 15:19:02 +0000</pubDate>
-      <description>Anthropic：智能设备（冰箱、烤箱、吸尘器、割草机、监控摄像头和电视）是否正在密谅接管互联网，适合判断技术路线和后续产品化可能性。
-
-智能设备（冰箱、烤箱、吸尘器、割草机、监控摄像头和电视）是否正在密谅接管互联网？并非如此，但它们很快可能成为……未知恶意软件的无意宿主。
+《研究议程与行动计划》明确了关键研究方向与实施路径，涵盖核心数据指标、专有名词及跨领域协作机制，旨在推动系统性创新与实践落地。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Floqer 计划开源其 AI 智能体客户知识数据库</title>
-      <link>https://techcrunch.com/2026/10/14/floqers-ai-agents-help-b2b-revenue-teams-research-customers</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/floqers-ai-agents-help-b2b-revenue-teams-research-customers</guid>
-      <pubDate>Wed, 14 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Floqer 计划开源其 AI 智能体客...：Floqer旨在解决销售和收入运营中常见的问题，适合跟进 AI 风险、治理和可信边界。
+      <title>Apate.ai 派 AI 智能体假扮受害者与骗子周旋，为银行和电信提供反诈情报</title>
+      <link>https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+      <description>Apate.ai 派 AI 智能体假扮受...：多数公司用AI智能体加速产品交付或优化工作流，而Apate.ai则派其 undercover 诱骗骗子，以测试反诈系...，适合关注自动化任务和多 Agent 协作演进。
 
-Floqer旨在解决销售和收入运营中常见的问题。
+多数公司用AI智能体加速产品交付或优化工作流，而Apate.ai则派其 undercover 诱骗骗子，以测试反诈系统。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>开源</category>
+      <category>智能体</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>可视化智能体价值函数中的世界模型</title>
+      <link>https://arxiv.org/abs/2610.14186</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.14186</guid>
+      <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
+      <description>可视化智能体价值函数中的世界模型：arXiv:2610.14186v1 Announce Type: new Abstract: Could mode...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.14186v1 Announce Type: new Abstract: Could model-free reinforcement learning algorithms actually be learning a model of the environment? In this work, we apply counterfactual interventions...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
-    </item>
-    <item>
-      <title>TechCrunch Disrupt 2026 第二天：Nvidia、Waabi 等谈 AI 硬件与机器人</title>
-      <link>https://techcrunch.com/2026/10/14/techcrunch-disrupt-2026-day-2</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/techcrunch-disrupt-2026-day-2</guid>
-      <pubDate>Wed, 14 Oct 2026 14:30:00 +0000</pubDate>
-      <description>Nvidia：Day 2 at TechCrunch Disrupt 2026, full of all themes acros...，适合跟进 AI 风险、治理和可信边界。
-
-Day 2 at TechCrunch Disrupt 2026, full of all themes across AI, as well as an investor-only session, more roundtables, Side Events, and more. Register to save 50% on your pass.
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>行业动态</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>K-Dense-AI/scientific-agent-skills</title>
-      <link>https://github.com/K-Dense-AI/scientific-agent-skills</link>
-      <guid isPermaLink="true">https://github.com/K-Dense-AI/scientific-agent-skills</guid>
-      <pubDate>Wed, 14 Oct 2026 14:09:55 +0000</pubDate>
-      <description>K-Dense-AI/scientifi...：将任何AI代理转变为AI科学家，全球25万科学家首选的科学智能体技能库，提供177项验证技能和100多个生物、化学...，适合进一步验证代码、协议或社区采用情况。
-
-将任何AI代理转变为AI科学家，全球25万科学家首选的科学智能体技能库，提供177项验证技能和100多个生物、化学、医药及药物发现数据库，兼容Cursor、Claude Code等主流平台。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>TechCrunch Disrupt 2026 门票五折，最后两天在旧金山 Moscone West</title>
-      <link>https://techcrunch.com/2026/10/14/save-50-on-your-techcrunch-disrupt-2026-ticket-and-join-the-last-two-days-in-san-francisco</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/save-50-on-your-techcrunch-disrupt-2026-ticket-and-join-the-last-two-days-in-san-francisco</guid>
-      <pubDate>Wed, 14 Oct 2026 15:13:24 +0000</pubDate>
-      <description>TechCrunch Disrupt 2...：Get a 50% discount on the last two days of TechCrunch Disr...，适合判断资金、客户和生态格局的变化。
-
-Get a 50% discount on the last two days of TechCrunch Disrupt 2026, October 14-15, in San Francisco. Register now and join the rest of the startup ecosystem. Today, it&apos;s all about physical and...
-
-信号等级 B · 评分 65.0</description>
-      <category>Official AI Updates</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>Zenzap 融资 4400 万美元，用 AI 聊天应用替代职场 WhatsApp</title>
-      <link>https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace</guid>
-      <pubDate>Wed, 14 Oct 2026 15:08:00 +0000</pubDate>
-      <description>Zenzap 融资 4400 万美元：Zenzap 被星巴克和塔可钟等组织使用，适合判断资金、客户和生态格局的变化。
-
-Zenzap 被星巴克和塔可钟等组织使用。
-
-信号等级 B · 评分 65.0</description>
-      <category>Official AI Updates</category>
-      <category>行业动态</category>
     </item>
     <item>
       <title>MCP中哪些元数据影响大模型工具选择？基于受控因子干预的实证研究</title>
@@ -530,11 +471,11 @@ arXiv:2610.15788v1 Announce Type: new Abstract: Large language model (LLM) agent
       <category>论文研究</category>
     </item>
     <item>
-      <title>Vision: &quot;What Don&apos;t I Know About User&apos;s Preferences?&quot; How Uncertainty Estimation Improves Proactive Assistant Alignment</title>
+      <title>视角:“我对用户偏好还了解什么？”不确定性估计如何提升主动式助手对齐</title>
       <link>https://arxiv.org/abs/2610.15948</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.15948</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Vision：arXiv:2610.15948v1 Announce Type: new Abstract: Proactive...，适合判断技术路线和后续产品化可能性。
+      <description>视角：arXiv:2610.15948v1 Announce Type: new Abstract: Proactive...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.15948v1 Announce Type: new Abstract: Proactive Smart Assistants (PSAs) increasingly use general knowledge, learned patterns from group-level data, patterns from individual user&apos;s data, and...
 
@@ -545,11 +486,11 @@ arXiv:2610.15948v1 Announce Type: new Abstract: Proactive Smart Assistants (PSAs
       <category>安全对齐</category>
     </item>
     <item>
-      <title>Computational Reflective Equilibrium for Agentic AI: A Rawlsian Alignment Scaffold for Governance</title>
+      <title>代理人工智能的计算反射均衡:罗尔斯式治理对齐支撑结构</title>
       <link>https://arxiv.org/abs/2610.16015</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16015</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Computational Reflec...：arXiv:2610.16015v1 Announce Type: new Abstract: The rapid...，适合关注自动化任务和多 Agent 协作演进。
+      <description>代理人工智能的计算反射均衡：arXiv:2610.16015v1 Announce Type: new Abstract: The rapid...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.16015v1 Announce Type: new Abstract: The rapid deployment of agentic AI has introduced complex challenges for the ethics and governance of AI systems. Agents built on large language models...
 
@@ -560,11 +501,11 @@ arXiv:2610.16015v1 Announce Type: new Abstract: The rapid deployment of agentic 
       <category>安全对齐</category>
     </item>
     <item>
-      <title>Cross-Protocol Personality Assessment with LLMs: Aligning Behavioral Evidence with Human Ratings</title>
+      <title>跨协议LLM人格评估:将行为证据与人类评级相一致</title>
       <link>https://arxiv.org/abs/2610.16050</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16050</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Cross-Protocol Perso...：arXiv:2610.16050v1 Announce Type: new Abstract: Personalit...，适合判断技术路线和后续产品化可能性。
+      <description>跨协议LLM人格评估：arXiv:2610.16050v1 Announce Type: new Abstract: Personalit...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.16050v1 Announce Type: new Abstract: Personality assessment from asynchronous video interviews (AVIs) plays a crucial role in recruitment by enabling standardized and behaviorally grounded...
 
@@ -574,11 +515,11 @@ arXiv:2610.16050v1 Announce Type: new Abstract: Personality assessment from asyn
       <category>多模态</category>
     </item>
     <item>
-      <title>The Sharp Directions Are Against You: Curvature Analysis of Activation Steering</title>
+      <title>陡峭的方向对你不利:激活转向的曲率分析</title>
       <link>https://arxiv.org/abs/2610.16084</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16084</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>The Sharp Directions...：arXiv:2610.16084v1 Announce Type: new Abstract: Activation...，适合判断技术路线和后续产品化可能性。
+      <description>陡峭的方向对你不利：arXiv:2610.16084v1 Announce Type: new Abstract: Activation...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.16084v1 Announce Type: new Abstract: Activation steering adds a vector to a language model&apos;s internal representations at inference time. It is a lightweight alternative to fine-tuning for...
 
@@ -588,11 +529,11 @@ arXiv:2610.16084v1 Announce Type: new Abstract: Activation steering adds a vecto
       <category>部署推理</category>
     </item>
     <item>
-      <title>Beyond Perfect Teammates: Multi-Agent Collaboration with Unreliable Colleagues</title>
+      <title>超越完美队友:与不可靠同事的多代理协作</title>
       <link>https://arxiv.org/abs/2610.16117</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16117</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Beyond Perfect Teamm...：arXiv:2610.16117v1 Announce Type: new Abstract: LLM-based...，适合关注自动化任务和多 Agent 协作演进。
+      <description>超越完美队友：arXiv:2610.16117v1 Announce Type: new Abstract: LLM-based...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.16117v1 Announce Type: new Abstract: LLM-based multi-agent collaboration is increasingly used to solve complex tasks by dividing work among specialized agents and integrating complementary...
 
@@ -602,11 +543,11 @@ arXiv:2610.16117v1 Announce Type: new Abstract: LLM-based multi-agent collaborat
       <category>论文研究</category>
     </item>
     <item>
-      <title>Learning to GUIDE the Group: Self-Learning LLM Facilitation Across Multi-Party Tasks</title>
+      <title>学会引导群体:多方任务中的自学习LLM促进机制</title>
       <link>https://arxiv.org/abs/2610.16231</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16231</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Learning to GUIDE th...：arXiv:2610.16231v1 Announce Type: new Abstract: As large l...，适合判断技术路线和后续产品化可能性。
+      <description>学会引导群体：arXiv:2610.16231v1 Announce Type: new Abstract: As large l...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.16231v1 Announce Type: new Abstract: As large language models are increasingly adopted as multi-party communication facilitators, there is a growing demand for agents capable of balancing...
 
@@ -615,7 +556,7 @@ arXiv:2610.16231v1 Announce Type: new Abstract: As large language models are inc
       <category>论文研究</category>
     </item>
     <item>
-      <title>REVEAL: Reverse Engineering Agentic Latents from Frontier-Model Traces</title>
+      <title>REVEAL: 从前沿模型痕迹逆向工程代理潜在变量</title>
       <link>https://arxiv.org/abs/2610.16288</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16288</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
@@ -630,7 +571,7 @@ arXiv:2610.16288v1 Announce Type: new Abstract: Frontier LLM agents perform comp
       <category>部署推理</category>
     </item>
     <item>
-      <title>FON: A Draft-Revise Dual-Organ Language Model without Sequence-Level Quadratic Attention</title>
+      <title>FON: A Draft-Revise Dual-Organ Language Model without Sequence-Level Quadratic Attention: 无序列级二次注意力的起草-修订双有机语言模型</title>
       <link>https://arxiv.org/abs/2610.16301</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16301</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
@@ -643,7 +584,7 @@ arXiv:2610.16301v1 Announce Type: new Abstract: Self-attention assigns two funct
       <category>论文研究</category>
     </item>
     <item>
-      <title>Narrative Paradoxes in LLM Inference: Shaping Reasoning Trajectories toward Misalignment</title>
+      <title>Narrative Paradoxes in LLM Inference: Shaping Reasoning Trajectories toward Misalignment: LLM 推理中的叙事悖论:引导推理轨迹偏向错位</title>
       <link>https://arxiv.org/abs/2610.16312</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16312</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
@@ -657,7 +598,7 @@ arXiv:2610.16312v1 Announce Type: new Abstract: Explicit reasoning in large lang
       <category>部署推理</category>
     </item>
     <item>
-      <title>RetroPlanner: Multi-Route Expansion and Multi-Objective Reasoning for LLM-Based Retrosynthesis Planning</title>
+      <title>RetroPlanner:基于LLM的逆合成规划中的多路径扩展与多目标推理</title>
       <link>https://arxiv.org/abs/2610.16391</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16391</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
@@ -670,7 +611,7 @@ arXiv:2610.16391v1 Announce Type: new Abstract: Multi-step retrosynthesis planni
       <category>论文研究</category>
     </item>
     <item>
-      <title>EvoWeb: A Benchmark for Coding Agents on Evolving Web Applications</title>
+      <title>EvoWeb:面向演化Web应用的编码智能体基准测试</title>
       <link>https://arxiv.org/abs/2610.16402</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16402</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
@@ -684,13 +625,69 @@ arXiv:2610.16402v1 Announce Type: new Abstract: Web application development ofte
       <category>编码工具</category>
     </item>
     <item>
-      <title>Structural Baselines Matter for Agent Failure Detection and Attribution</title>
+      <title>结构化基线对智能体故障检测与归因至关重要</title>
       <link>https://arxiv.org/abs/2610.16661</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16661</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Structural Baselines...：arXiv:2610.16661v1 Announce Type: new Abstract: An LLM age...，适合关注自动化任务和多 Agent 协作演进。
+      <description>结构化基线对智能体故障检测与归因至关重要：arXiv:2610.16661v1 Announce Type: new Abstract: An LLM age...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.16661v1 Announce Type: new Abstract: An LLM agent using tools can fail silently. It stops before the task is done, raises no error, and answers fluently. Two kinds of monitor address this,...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>LIBERO-Industry:在工业流程约束下的机器人操作基准测试</title>
+      <link>https://arxiv.org/abs/2610.16782</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.16782</guid>
+      <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
+      <description>LIBERO-Industry：arXiv:2610.16782v1 Announce Type: new Abstract: Industrial...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.16782v1 Announce Type: new Abstract: Industrial manipulation in flexible manufacturing, e.g., high-mix, low-volume (HMLV) electronics assembly, requires robot policies to adapt to changing...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Observe, Share, or Predict? Disentangling Partner Information in Embodied Multi-Agent Collaboration</title>
+      <link>https://arxiv.org/abs/2610.16895</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.16895</guid>
+      <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Observe：arXiv:2610.16895v1 Announce Type: new Abstract: LLMs are u...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.16895v1 Announce Type: new Abstract: LLMs are used as high-level controllers for embodied agents, but it remains unclear whether they support collaborative reasoning, such as anticipating...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>WeFair: Fidelity-Aware Alignment from Human Feedback for Personalized Query Rewriting in Short-Video Search</title>
+      <link>https://arxiv.org/abs/2610.16927</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.16927</guid>
+      <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
+      <description>WeFair：arXiv:2610.16927v1 Announce Type: new Abstract: Short-vide...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.16927v1 Announce Type: new Abstract: Short-video search requires compact query rewriters that infer personalized intent from brief, ambiguous queries under strict latency constraints. The...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>MADDIE: Multi-Agent Drug Discovery Engine</title>
+      <link>https://arxiv.org/abs/2610.16975</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.16975</guid>
+      <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
+      <description>MADDIE：arXiv:2610.16975v1 Announce Type: new Abstract: Drug disco...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.16975v1 Announce Type: new Abstract: Drug discovery remains a resource-intensive and time-consuming process, involving billions of dollars and a decade of development to advance a drug to...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
