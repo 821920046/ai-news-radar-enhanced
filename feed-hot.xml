@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 14 Oct 2026 22:48:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 01:04:39 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Kwai Summary Attention V2 Technical Report</title>
@@ -21,13 +21,26 @@ arXiv:2610.18654v1 Announce Type: cross Abstract: Summary-token architectures su
       <category>论文研究</category>
     </item>
     <item>
+      <title>Gudea 利用 AI 帮助组织在社交媒体危机爆发前进行预防</title>
+      <link>https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Gudea 利用 AI 帮助组织在社交媒...：Every day, conversations unfold across social media and we...，适合关注内容生产和交互形态的新变化。
+
+Every day, conversations unfold across social media and websites around the world. A seemingly insignificant post—whether it involves AI-generated misinformation, hate speech, or a damaging rumor—can...
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+    </item>
+    <item>
       <title>Leash Bio 的 Ian Quigley 谈 DEL 数据、Hermes 模型与 Minos 科学推理智能体</title>
       <link>https://www.latent.space/p/lab-in-the-loop-at-compute-speed</link>
       <guid isPermaLink="true">https://www.latent.space/p/lab-in-the-loop-at-compute-speed</guid>
       <pubDate>Wed, 14 Oct 2026 20:35:09 +0000</pubDate>
-      <description>Leash Bio 的 Ian Quig...：Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和复杂性带来的挑战，利用其高质量数据识别出...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Leash Bio 的 Ian Quig...：Leash Bio 成功驯化了业界广泛畏惧的双向衔接体文库（DELs），并利用其生成的数据识别出作弊的药物设计模型，适合关注自动化任务和多 Agent 协作演进。
 
-Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和复杂性带来的挑战，利用其高质量数据识别出作弊的AI模型，并证明该数据集极适合训练AI代理以化学家的思维方式进行推理和设计。
+Leash Bio 成功驯化了业界广泛畏惧的双向衔接体文库（DELs），并利用其生成的数据识别出作弊的药物设计模型；同时，这些数据也为让 AI 代理像化学家一样思考提供了理想的训练材料。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -39,27 +52,28 @@ Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和
       <link>https://www.normaltech.ai/p/steering-ai-beyond-automation</link>
       <guid isPermaLink="true">https://www.normaltech.ai/p/steering-ai-beyond-automation</guid>
       <pubDate>Wed, 14 Oct 2026 19:56:44 +0000</pubDate>
-      <description>Narayanan 与 Unger 提出...：《研究议程与行动计划》明确了关键研究方向与实施路径，涵盖核心数据指标、专有名词及跨领域协作机制，旨在推动系统性创新与...，适合判断技术路线和后续产品化可能性。
+      <description>Narayanan 与 Unger 提出...：**针对生成式AI的研究路线图与行动计划** 该报告概述了生成式AI的快速发展及其潜在风险，提出了涵盖安全、伦理与治...，适合判断技术路线和后续产品化可能性。
 
-《研究议程与行动计划》明确了关键研究方向与实施路径，涵盖核心数据指标、专有名词及跨领域协作机制，旨在推动系统性创新与实践落地。
+**针对生成式AI的研究路线图与行动计划**
+
+该报告概述了生成式AI的快速发展及其潜在风险，提出了涵盖安全、伦理与治理的全面研究路线图，旨在指导各利益相关方采取切实可行的措施，确保技术健康、可持续地发展。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Apate.ai 派 AI 智能体假扮受害者与骗子周旋，为银行和电信提供反诈情报</title>
-      <link>https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</guid>
-      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
-      <description>Apate.ai 派 AI 智能体假扮受...：多数公司用AI智能体加速产品交付或优化工作流，而Apate.ai则派其 undercover 诱骗骗子，以测试反诈系...，适合关注自动化任务和多 Agent 协作演进。
+      <title>无约束 CTI-REALM 配合开源权重</title>
+      <link>https://arxiv.org/abs/2610.14180</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.14180</guid>
+      <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
+      <description>无约束 CTI-REALM 配合开源权重：arXiv:2610.14180v1 Announce Type: new Abstract: Organisati...，适合判断技术路线和后续产品化可能性。
 
-多数公司用AI智能体加速产品交付或优化工作流，而Apate.ai则派其 undercover 诱骗骗子，以测试反诈系统。
+arXiv:2610.14180v1 Announce Type: new Abstract: Organisations that want language-model agents for security work face a choice between open-weight models, which they can run and audit themselves, and...
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>部署推理</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>可视化智能体价值函数中的世界模型</title>
@@ -652,11 +666,11 @@ arXiv:2610.16782v1 Announce Type: new Abstract: Industrial manipulation in flexi
       <category>论文研究</category>
     </item>
     <item>
-      <title>Observe, Share, or Predict? Disentangling Partner Information in Embodied Multi-Agent Collaboration</title>
+      <title>观察、分享还是预测？解耦具身多智能体协作中的伙伴信息</title>
       <link>https://arxiv.org/abs/2610.16895</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16895</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Observe：arXiv:2610.16895v1 Announce Type: new Abstract: LLMs are u...，适合关注自动化任务和多 Agent 协作演进。
+      <description>观察、分享还是预测：arXiv:2610.16895v1 Announce Type: new Abstract: LLMs are u...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.16895v1 Announce Type: new Abstract: LLMs are used as high-level controllers for embodied agents, but it remains unclear whether they support collaborative reasoning, such as anticipating...
 
@@ -666,7 +680,7 @@ arXiv:2610.16895v1 Announce Type: new Abstract: LLMs are used as high-level cont
       <category>论文研究</category>
     </item>
     <item>
-      <title>WeFair: Fidelity-Aware Alignment from Human Feedback for Personalized Query Rewriting in Short-Video Search</title>
+      <title>WeFair:面向短视频搜索中个性化查询重写的保真度感知人类反馈对齐</title>
       <link>https://arxiv.org/abs/2610.16927</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.16927</guid>
       <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
@@ -679,20 +693,6 @@ arXiv:2610.16927v1 Announce Type: new Abstract: Short-video search requires comp
       <category>论文研究</category>
       <category>多模态</category>
       <category>安全对齐</category>
-    </item>
-    <item>
-      <title>MADDIE: Multi-Agent Drug Discovery Engine</title>
-      <link>https://arxiv.org/abs/2610.16975</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.16975</guid>
-      <pubDate>Wed, 14 Oct 2026 04:00:00 +0000</pubDate>
-      <description>MADDIE：arXiv:2610.16975v1 Announce Type: new Abstract: Drug disco...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.16975v1 Announce Type: new Abstract: Drug discovery remains a resource-intensive and time-consuming process, involving billions of dollars and a decade of development to advance a drug to...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
