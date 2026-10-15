@@ -1,25 +1,55 @@
 {
-  "generated_at": "2026-10-15T17:28:34.743739Z",
+  "generated_at": "2026-10-15T20:40:38.789677Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
   "window_days": 7,
   "latest_date": "2026-10-15",
-  "count_today": 2,
+  "count_today": 7,
   "updates_today": [
     {
       "date": "2026-10-15",
+      "title": "作者开源视频风格Skill chengfeng-video-styles，依托Opus 5.5，搭建起了一套可复用的AI视频生产工作流。内置16种成熟视频风格，还支持上传参考素材复刻全新视觉。流程也很巧妙，先生成多版3秒样片筛选风格，确认满意后再渲染全片，避免token浪费。来上手试试！",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
       "title": "作者实测了爆火开源逆向工具REA，仅用6分钟就让AI解析出飞书客户端架构并做出本地多开版本。文中复盘了REA短时间内爆火的底层原因，同时还整理了社区热议的争议点，包括工具价值、IP合规风险与使用边界。最后附上了实操安全提醒，可以帮你看懂AI逆向的能力上限，避开法律与安全陷阱。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
       "date": "2026-10-15",
+      "title": "作者利用Opus 5.5通过编写HTML动效网页截帧生成视频，无需AE、不用手动找图，仅靠几句指令就完成多款AI产品宣传片，还开源了整套制作Skill。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
       "title": "不少开发板项目明明代码没问题，最后却卡在内存：屏幕带不动、中文字库塞不下、断电后数据消失，甚至买完板子才发现没有 PSRAM。CY这篇文章把 Flash、SRAM 和 PSRAM 比作书柜、桌面和抽屉柜，和大家聊一下这三种存储。很适合刚接触嵌入式、准备做带屏设备的人读一遍，能省下不少返工时间。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "World Model 最近越来越火，但很多人只知道它能“预测未来”，再往下就容易被强化学习、隐空间和视频生成等概念劝退。这份三万字指南梳理了 220 多项研究、六类技术路线及机器人、自动驾驶、游戏等应用，也直面“视频逼真是否等于理解物理”的争议。适合刚入门的学生和想补全研究版图的开发者，用一篇建立完整认知框架。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Meta 全新 Muse Wonder 模型带来亮眼的 Active Memory 主动记忆能力，突破了传统 AI 仅存储对话文本的局限，能调取你的过往偏好，直接参与任务决策。老金以长跑规划、婚礼排座、T 恤定制演示为例，搭配 Active Focus 能力，跨工具执行时仍然可以持续守住你的个性化。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "GitHub 上一个叫 REA 的项目 Star 从 1.5 万冲到 23 万+，凭什么这么火？REA 全称 Reverse Engineer Anything——逆向一切。本文深入拆解了 REA 的工作机制与架构——逆向工程从\"人用工具\"切换到\"Agent 用工具\"，究竟是如何实现的。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 31,
+  "count_7d": 36,
   "updates_7d": [
+    {
+      "date": "2026-10-15",
+      "title": "作者开源视频风格Skill chengfeng-video-styles，依托Opus 5.5，搭建起了一套可复用的AI视频生产工作流。内置16种成熟视频风格，还支持上传参考素材复刻全新视觉。流程也很巧妙，先生成多版3秒样片筛选风格，确认满意后再渲染全片，避免token浪费。来上手试试！",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
     {
       "date": "2026-10-15",
       "title": "作者实测了爆火开源逆向工具REA，仅用6分钟就让AI解析出飞书客户端架构并做出本地多开版本。文中复盘了REA短时间内爆火的底层原因，同时还整理了社区热议的争议点，包括工具价值、IP合规风险与使用边界。最后附上了实操安全提醒，可以帮你看懂AI逆向的能力上限，避开法律与安全陷阱。",
@@ -27,7 +57,27 @@
     },
     {
       "date": "2026-10-15",
+      "title": "作者利用Opus 5.5通过编写HTML动效网页截帧生成视频，无需AE、不用手动找图，仅靠几句指令就完成多款AI产品宣传片，还开源了整套制作Skill。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
       "title": "不少开发板项目明明代码没问题，最后却卡在内存：屏幕带不动、中文字库塞不下、断电后数据消失，甚至买完板子才发现没有 PSRAM。CY这篇文章把 Flash、SRAM 和 PSRAM 比作书柜、桌面和抽屉柜，和大家聊一下这三种存储。很适合刚接触嵌入式、准备做带屏设备的人读一遍，能省下不少返工时间。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "World Model 最近越来越火，但很多人只知道它能“预测未来”，再往下就容易被强化学习、隐空间和视频生成等概念劝退。这份三万字指南梳理了 220 多项研究、六类技术路线及机器人、自动驾驶、游戏等应用，也直面“视频逼真是否等于理解物理”的争议。适合刚入门的学生和想补全研究版图的开发者，用一篇建立完整认知框架。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Meta 全新 Muse Wonder 模型带来亮眼的 Active Memory 主动记忆能力，突破了传统 AI 仅存储对话文本的局限，能调取你的过往偏好，直接参与任务决策。老金以长跑规划、婚礼排座、T 恤定制演示为例，搭配 Active Focus 能力，跨工具执行时仍然可以持续守住你的个性化。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "GitHub 上一个叫 REA 的项目 Star 从 1.5 万冲到 23 万+，凭什么这么火？REA 全称 Reverse Engineer Anything——逆向一切。本文深入拆解了 REA 的工作机制与架构——逆向工程从\"人用工具\"切换到\"Agent 用工具\"，究竟是如何实现的。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
