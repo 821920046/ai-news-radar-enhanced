@@ -5,29 +5,181 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 15 Oct 2026 06:41:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 12:16:05 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>我让 Gemini 4 当高管、DeepSeek 当员工，开了一家软件公司（Day 1）</title>
-      <link>https://juejin.cn/post/7696083307454038026</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7696083307454038026</guid>
-      <pubDate>Thu, 15 Oct 2026 06:41:23 +0000</pubDate>
-      <description>Gemini、DeepSeek：我让 Gemini 4 当高管、DeepSeek 当员工，开了一家软件公司（Day 1），适合优先评估模型能力、价格和工具选型变化。
+      <title>affaan-m/ECC</title>
+      <link>https://github.com/affaan-m/ECC</link>
+      <guid isPermaLink="true">https://github.com/affaan-m/ECC</guid>
+      <pubDate>Thu, 15 Oct 2026 12:16:05 +0000</pubDate>
+      <description>affaan-m/ECC：该系统通过整合技能、直觉、记忆、安全性和以研究为先的开发方法，优化代理性能，适用于Claude Code、Codex...，适合关注自动化任务和多 Agent 协作演进。
 
-信号等级 B · 评分 52.8</description>
-      <category>NewsNow</category>
+该系统通过整合技能、直觉、记忆、安全性和以研究为先的开发方法，优化代理性能，适用于Claude Code、Codex、Opencode、Cursor及更多平台。
+
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
       <category>模型发布</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>obra/superpowers</title>
+      <link>https://github.com/obra/superpowers</link>
+      <guid isPermaLink="true">https://github.com/obra/superpowers</guid>
+      <pubDate>Thu, 15 Oct 2026 12:16:05 +0000</pubDate>
+      <description>obra/superpowers：An agentic skills framework &amp; software development methodo...，适合关注自动化任务和多 Agent 协作演进。
+
+An agentic skills framework &amp; software development methodology that works.
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>xerj-org/xerj</title>
+      <link>https://github.com/xerj-org/xerj</link>
+      <guid isPermaLink="true">https://github.com/xerj-org/xerj</guid>
+      <pubDate>Thu, 15 Oct 2026 12:16:05 +0000</pubDate>
+      <description>xerj-org/xerj：单命令即可完成索引，支持搜索、RAG、安全审计与智能体记忆，比 grep 节省 40 倍 token，且兼容 Ela...，适合关注自动化任务和多 Agent 协作演进。
+
+XERJ 是 AI 搜索数据的新方案，其自动索引功能可让智能体高效访问代码、文档、日志和 PDF，无需像 grep/sed 那样消耗大量 token。单命令即可完成索引，支持搜索、RAG、安全审计与智能体记忆，比 grep 节省 40 倍 token，且兼容 Elasticsearch，现有客户端可直接使用。
+
+信号等级 B · 评分 55.3</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>JuliusBrussee/caveman</title>
+      <link>https://github.com/JuliusBrussee/caveman</link>
+      <guid isPermaLink="true">https://github.com/JuliusBrussee/caveman</guid>
+      <pubDate>Thu, 15 Oct 2026 12:16:05 +0000</pubDate>
+      <description>JuliusBrussee/cavema...：用原始人式表达减少65%令牌，病毒式技能加代理让编码Agent更高效，适合判断 AI 编程工作流会不会被改写。
+
+用原始人式表达减少65%令牌，病毒式技能加代理让编码Agent更高效。
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>编码工具</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>anthropics/claude-plugins-official</title>
+      <link>https://github.com/anthropics/claude-plugins-official</link>
+      <guid isPermaLink="true">https://github.com/anthropics/claude-plugins-official</guid>
+      <pubDate>Thu, 15 Oct 2026 12:16:05 +0000</pubDate>
+      <description>anthropic、claude：官方Anthropic管理的高质量Claude Code插件目录，适合进一步验证代码、协议或社区采用情况。
+
+官方Anthropic管理的高质量Claude Code插件目录。
+
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>ruvnet/ruflo</title>
+      <link>https://github.com/ruvnet/ruflo</link>
+      <guid isPermaLink="true">https://github.com/ruvnet/ruflo</guid>
+      <pubDate>Thu, 15 Oct 2026 12:16:05 +0000</pubDate>
+      <description>ruvnet/ruflo：具备自适应记忆、自学习智能、联邦制、向量RAG集成以及原生Claude Code/Codex/Hermes等集成，适合关注自动化任务和多 Agent 协作演进。
+
+原生智能体框架。部署智能多玩家群，协调自主工作流，并构建对话式AI系统。具备自适应记忆、自学习智能、联邦制、向量RAG集成以及原生Claude Code/Codex/Hermes等集成。
+
+信号等级 B · 评分 65.1</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>lightseekorg/tokenspeed</title>
+      <link>https://github.com/lightseekorg/tokenspeed</link>
+      <guid isPermaLink="true">https://github.com/lightseekorg/tokenspeed</guid>
+      <pubDate>Thu, 15 Oct 2026 12:16:05 +0000</pubDate>
+      <description>lightseekorg/tokensp...：TokenSpeed 是一款光速级大模型推理引擎，适合进一步验证代码、协议或社区采用情况。
+
+TokenSpeed 是一款光速级大模型推理引擎。
+
+信号等级 B · 评分 60.6</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>Surface Laptop Ultra 首发体验：是最强 Windows 笔记本，也是 AI 时代的全能本</title>
+      <link>https://www.ifanr.com/1684442</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1684442</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:02 +0000</pubDate>
+      <description>Surface Laptop Ultra...：纳德拉和老黄，能盘活 Windows on Arm 吗，适合作为今日 AI/科技情报流里的重点线索。
+
+纳德拉和老黄，能盘活 Windows on Arm 吗？#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>The Verge 实测 Eiliko 机器人玩具：68000 台设备数据可被任意访问并可远程劫持</title>
+      <link>https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab</guid>
+      <pubDate>Thu, 15 Oct 2026 11:00:00 +0000</pubDate>
+      <description>The Verge 实测 Eiliko...：新款数字宠物机器人Eiliko外观如棉花糖，能实时变换卡通表情以匹配用户情绪，但通过Wi-Fi对话时会发出电话铃声，适合作为今日 AI/科技情报流里的重点线索。
+
+新款数字宠物机器人Eiliko外观如棉花糖，能实时变换卡通表情以匹配用户情绪，但通过Wi-Fi对话时会发出电话铃声。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>[AINews] Modal 1亿美元年收入，16亿美元D轮融资，使其成为纽约最新AI基础设施独角兽，5个月内使用量和估值增长3倍，1年内增长15倍</title>
+      <link>https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d</link>
+      <guid isPermaLink="true">https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d</guid>
+      <pubDate>Thu, 15 Oct 2026 10:08:08 +0000</pubDate>
+      <description>Modal 1亿美元年收入：沙箱是唯一所需，适合判断资金、客户和生态格局的变化。
+
+沙箱是唯一所需。
+
+信号等级 B · 评分 59.0</description>
+      <category>Official AI Updates</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>NVIDIA 通过开放学习资源、合作与算力扩大欧洲科研界先进技术获取</title>
+      <link>https://blogs.nvidia.com/blog/ec-scientific-computing-pledge</link>
+      <guid isPermaLink="true">https://blogs.nvidia.com/blog/ec-scientific-computing-pledge</guid>
+      <pubDate>Thu, 15 Oct 2026 10:00:12 +0000</pubDate>
+      <description>NVIDIA：当前科学进步多，适合关注 Agent 工具调用和工作流搭建。
+
+当前科学进步多
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>MCP/工具</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>独家｜库克确认苹果国行 AI，10 月底上线测试版！</title>
+      <link>https://www.ifanr.com/1684431</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1684431</guid>
+      <pubDate>Thu, 15 Oct 2026 09:09:38 +0000</pubDate>
+      <description>独家：终于来了，适合作为今日 AI/科技情报流里的重点线索。
+
+终于来了！#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 B · 评分 51.0</description>
+      <category>Official AI Updates</category>
     </item>
     <item>
       <title>NVIDIA 与北欧如何展示区域级先进计算的落地路径</title>
       <link>https://blogs.nvidia.com/blog/nordics-technology-ecosystem</link>
       <guid isPermaLink="true">https://blogs.nvidia.com/blog/nordics-technology-ecosystem</guid>
       <pubDate>Thu, 15 Oct 2026 05:00:12 +0000</pubDate>
-      <description>NVIDIA：北欧国家已超越其他欧洲地区，成为大陆独角兽初创企业密度最高的地区，人均拥有的估值超过10亿美元的新兴企业数量居欧洲首...，适合判断资金、客户和生态格局的变化。
+      <description>NVIDIA：北欧国家已成为欧洲独角兽初创企业密度的领军者，人均拥有最多估值达10亿美元或以上的新兴公司，适合判断资金、客户和生态格局的变化。
 
-北欧国家已超越其他欧洲地区，成为大陆独角兽初创企业密度最高的地区，人均拥有的估值超过10亿美元的新兴企业数量居欧洲首位。 现在，一个关于北欧初创企业生态的新篇章正在
+北欧国家已成为欧洲独角兽初创企业密度的领军者，人均拥有最多估值达10亿美元或以上的新兴公司。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
       <category>部署推理</category>
@@ -37,11 +189,11 @@
       <link>https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform</guid>
       <pubDate>Thu, 15 Oct 2026 04:30:00 +0000</pubDate>
-      <description>Figma 发布 Figma Specs...：Figma is also releasing its code layers feature in open be...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Figma 发布 Figma Specs...：Figma 将其代码层功能推出公开Beta版，适合关注自动化任务和多 Agent 协作演进。
 
-Figma is also releasing its code layers feature in open beta.
+Figma 将其代码层功能推出公开Beta版。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
     </item>
@@ -50,50 +202,25 @@ Figma is also releasing its code layers feature in open beta.
       <link>https://arxiv.org/abs/2610.18835</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.18835</guid>
       <pubDate>Thu, 15 Oct 2026 04:00:00 +0000</pubDate>
-      <description>RoboSimStudio：arXiv:2610.18835v2 跨领域摘要：机器人与操作物体间交互的物理建模长期面临挑战，尤其涉及接触力学等复...，适合关注自动化任务和多 Agent 协作演进。
+      <description>RoboSimStudio：该研究提出了一种新方法，旨在精确建模机器人与其操作对象之间的物理交互，特别是解决了以往在接触力学建模方面的困难，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.18835v2 跨领域摘要：机器人与操作物体间交互的物理建模长期面临挑战，尤其涉及接触力学等复杂机制，当前模型仍难以精确捕捉真实动态。
+该研究提出了一种新方法，旨在精确建模机器人与其操作对象之间的物理交互，特别是解决了以往在接触力学建模方面的困难。
 
-信号等级 B · 评分 60.2</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>LFM2.5-24B-A2B：专为高速设备端代理而设计</title>
-      <link>https://www.liquid.ai/blog/lfm2-5-24b-a2b</link>
-      <guid isPermaLink="true">https://www.liquid.ai/blog/lfm2-5-24b-a2b</guid>
-      <pubDate>Thu, 15 Oct 2026 03:35:48 +0000</pubDate>
-      <description>LFM2.5-24B-A2B: Built for fast on-device agents，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-LFM2.5-24B-A2B: Built for fast on-device agents
-
-信号等级 B · 评分 51.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>GPT-5.6 Sol 又彻底变成“土豆”了</title>
-      <link>https://news.ycombinator.com/item?id=50098480</link>
-      <guid isPermaLink="true">https://news.ycombinator.com/item?id=50098480</guid>
-      <pubDate>Thu, 15 Oct 2026 02:47:51 +0000</pubDate>
-      <description>GPT-5.6 Sol has gone full potato again，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-GPT-5.6 Sol has gone full potato again
-
-信号等级 B · 评分 51.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Ricursive Intelligence 正押注 AI 设计芯片以应对算力危机</title>
+      <title>Ricursive Intelligence 押注 AI 设计芯片，以缓解算力危机</title>
       <link>https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis</guid>
       <pubDate>Thu, 15 Oct 2026 01:01:32 +0000</pubDate>
-      <description>Ricursive Intelligen...：创始人详述其初创公司正开发能够设计芯片、从迭代中学习并优化后续设计的AI，旨在实现芯片设计流程的自动化与加速，适合判断资金、客户和生态格局的变化。
+      <description>Ricursive Intelligen...：创始人详细介绍了其初创公司正在开发能够自行设计芯片、从每次迭代中学习并改进后续设计的AI，旨在实现芯片设计的全流程自...，适合判断资金、客户和生态格局的变化。
 
-创始人详述其初创公司正开发能够设计芯片、从迭代中学习并优化后续设计的AI，旨在实现芯片设计流程的自动化与加速。
+创始人详细介绍了其初创公司正在开发能够自行设计芯片、从每次迭代中学习并改进后续设计的AI，旨在实现芯片设计的全流程自动化与加速。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
@@ -111,38 +238,40 @@ GPT-5.6 Sol has gone full potato again
       <category>模型发布</category>
     </item>
     <item>
-      <title>Gudea 利用 AI 帮助组织在社交媒体危机爆发前进行预防</title>
+      <title>Gudea 用 AI 在社交媒体危机爆发前预警</title>
       <link>https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt</guid>
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Gudea 利用 AI 帮助组织在社交媒...：每天，全球社交媒体和网站上都在进行着无数对话，适合关注内容生产和交互形态的新变化。
+      <description>Gudea 用 AI 在社交媒体危机爆发...：每天，全球社交媒体和网站上都在进行着无数对话，适合关注内容生产和交互形态的新变化。
 
 每天，全球社交媒体和网站上都在进行着无数对话。一条看似微不足道的帖子——无论是AI生成的错误信息、仇恨言论还是有害谣言——都可能引发深远影响。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>多模态</category>
+      <category>行业动态</category>
     </item>
     <item>
-      <title>McKinsey 让求职者与虚拟 AI 客户进行模拟对练</title>
+      <title>麦肯锡将在部分初级岗位面试中使用 AI 模拟客户对话</title>
       <link>https://www.theverge.com/news/1011654/mckinsey-ai-client-interview</link>
       <guid isPermaLink="true">https://www.theverge.com/news/1011654/mckinsey-ai-client-interview</guid>
       <pubDate>Wed, 14 Oct 2026 22:53:31 +0000</pubDate>
-      <description>McKinsey 让求职者与虚拟 AI...：麦肯锡公司将在面试中引入AI模拟客户对话环节，要求候选人进行10分钟交流，以评估其沟通与应变能力，适合作为今日 AI/科技情报流里的重点线索。
+      <description>麦肯锡将在部分初级岗位面试中使用 AI...：麦肯锡公司将在面试中要求部分初级岗位候选人与客户的AI模拟进行10分钟对话，以评估其沟通和问题解决能力，适合关注 Agent 工具调用和工作流搭建。
 
-麦肯锡公司将在面试中引入AI模拟客户对话环节，要求候选人进行10分钟交流，以评估其沟通与应变能力。
+麦肯锡公司将在面试中要求部分初级岗位候选人与客户的AI模拟进行10分钟对话，以评估其沟通和问题解决能力。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
+      <category>MCP/工具</category>
     </item>
     <item>
       <title>OpenAI、Anthropic 与 Two Sigma 在 AIE NY 谈金融智能体的自主与安全边界</title>
       <link>https://www.latent.space/p/crossing-the-threshold</link>
       <guid isPermaLink="true">https://www.latent.space/p/crossing-the-threshold</guid>
       <pubDate>Wed, 14 Oct 2026 21:40:52 +0000</pubDate>
-      <description>OpenAI、Anthropic：At AI Engineer New York, frontier labs and financial firms...，适合跟进 AI 风险、治理和可信边界。
+      <description>OpenAI、Anthropic：在纽约AI工程师大会上，前沿实验室与金融机构探讨了如何在保持关键决策可控的前端，为代理赋予有用的自动化能力，适合跟进 AI 风险、治理和可信边界。
 
-At AI Engineer New York, frontier labs and financial firms explored how to give agents useful autonomy while keeping consequential decisions under control.
+在纽约AI工程师大会上，前沿实验室与金融机构探讨了如何在保持关键决策可控的前端，为代理赋予有用的自动化能力。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -155,11 +284,11 @@ At AI Engineer New York, frontier labs and financial firms explored how to give 
       <link>https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different</guid>
       <pubDate>Wed, 14 Oct 2026 21:30:33 +0000</pubDate>
-      <description>Flock CEO 称枪声检测麦克风只听...：在隐私倡导者（如ACLU）和公众对技术滥用日益担忧的背景下，Langley对Flock的评论引发关注，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Flock CEO 称枪声检测麦克风只听...：Langley的言论正值Flock公司面临隐私倡导者（如ACLU）及公众对其技术滥用的日益严格审查之际，适合作为今日 AI/科技情报流里的重点线索。
 
-在隐私倡导者（如ACLU）和公众对技术滥用日益担忧的背景下，Langley对Flock的评论引发关注。
+Langley的言论正值Flock公司面临隐私倡导者（如ACLU）及公众对其技术滥用的日益严格审查之际。
 
-信号等级 B · 评分 53.8</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -167,9 +296,9 @@ At AI Engineer New York, frontier labs and financial firms explored how to give 
       <link>https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety</guid>
       <pubDate>Wed, 14 Oct 2026 21:11:28 +0000</pubDate>
-      <description>OpenAI、GPT：OpenAI面临来自八个美国州的新一波诉讼，指控其损害儿童利益并误导客户关于ChatGPT的安全性，适合跟进 AI 风险、治理和可信边界。
+      <description>OpenAI、GPT：OpenAI面临美国8个州的新诉讼，指控其伤害儿童并误导客户关于ChatGPT的安全性，适合跟进 AI 风险、治理和可信边界。
 
-OpenAI面临来自八个美国州的新一波诉讼，指控其损害儿童利益并误导客户关于ChatGPT的安全性。
+OpenAI面临美国8个州的新诉讼，指控其伤害儿童并误导客户关于ChatGPT的安全性。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -180,9 +309,9 @@ OpenAI面临来自八个美国州的新一波诉讼，指控其损害儿童利�
       <link>https://www.latent.space/p/lab-in-the-loop-at-compute-speed</link>
       <guid isPermaLink="true">https://www.latent.space/p/lab-in-the-loop-at-compute-speed</guid>
       <pubDate>Wed, 14 Oct 2026 20:35:09 +0000</pubDate>
-      <description>Leash Bio 的 Ian Quig...：Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和复杂性带来的挑战，成功筛选出高质量数据...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Leash Bio 的 Ian Quig...：Leash Bio 通过创新方法驯化了令科学家头疼的 DELs（DNA编码文库）技术，利用其高质量数据识别出作弊的A...，适合关注自动化任务和多 Agent 协作演进。
 
-Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和复杂性带来的挑战，成功筛选出高质量数据，用于识别和惩罚作弊的AI模型；同时，这些丰富的化学反应数据也为训练AI代理提供了理想土壤，使其能够像真正的化学家一样进行推理和决策。
+Leash Bio 通过创新方法驯化了令科学家头疼的 DELs（DNA编码文库）技术，利用其高质量数据识别出作弊的AI模型，并证明这些数据正是AI代理学习像化学家一样思考的理想训练素材。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -194,34 +323,37 @@ Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和
       <link>https://www.normaltech.ai/p/steering-ai-beyond-automation</link>
       <guid isPermaLink="true">https://www.normaltech.ai/p/steering-ai-beyond-automation</guid>
       <pubDate>Wed, 14 Oct 2026 19:56:44 +0000</pubDate>
-      <description>Narayanan 与 Unger 提出...：《研究议程与行动计划》旨在明确未来研究方向与实施路径，聚焦关键技术突破与跨学科协作，推动创新成果落地，适合判断技术路线和后续产品化可能性。
+      <description>Narayanan 与 Unger 提出...：**针对生成式AI的研究路线图与行动计划** 该研究计划旨在通过建立安全、伦理和技术标准，指导生成式人工智能的负责任...，适合判断技术路线和后续产品化可能性。
 
-《研究议程与行动计划》旨在明确未来研究方向与实施路径，聚焦关键技术突破与跨学科协作，推动创新成果落地。
+**针对生成式AI的研究路线图与行动计划**
+
+该研究计划旨在通过建立安全、伦理和技术标准，指导生成式人工智能的负责任发展与部署，重点解决模型偏见、版权争议及系统可靠性等关键挑战。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>The Verge 文章《AI 竞赛重启》页面显示 404</title>
+      <title>The Verge 分析 Google 与 Meta 新模型让 AI 竞赛重新胶着</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on</guid>
       <pubDate>Wed, 14 Oct 2026 19:06:03 +0000</pubDate>
-      <description>The Verge 文章《AI 竞赛重启...：上周，Anthropic与OpenAI在AI竞赛中遥遥领先，凭借日益强大的模型将对手甩在身后，而谷歌则显得望尘莫及，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Google、Meta：上周，Anthropic与OpenAI在AI竞赛中遥遥领先，凭借日益强大的模型将对手甩在身后，而谷歌则显得遥不可及，适合优先评估模型能力、价格和工具选型变化。
 
-上周，Anthropic与OpenAI在AI竞赛中遥遥领先，凭借日益强大的模型将对手甩在身后，而谷歌则显得望尘莫及。
+上周，Anthropic与OpenAI在AI竞赛中遥遥领先，凭借日益强大的模型将对手甩在身后，而谷歌则显得遥不可及。
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>40 位总检察长介入 Character.AI 破产案，要求保护用户对话数据</title>
       <link>https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy</link>
       <guid isPermaLink="true">https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy</guid>
       <pubDate>Wed, 14 Oct 2026 18:47:54 +0000</pubDate>
-      <description>40 位总检察长介入 Character...：纽约州总检察长莱蒂西亚·詹姆斯揭露针对Character.AI的多州长期调查，该公司正在寻求在破产程序中要求对消费者...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>40 位总检察长介入 Character...：纽约州总检察长莱蒂蒂亚·詹姆斯披露，针对Character.AI的多年跨州调查已启动，旨在要求其在破产过程中对出售的...，适合作为今日 AI/科技情报流里的重点线索。
 
-纽约州总检察长莱蒂西亚·詹姆斯揭露针对Character.AI的多州长期调查，该公司正在寻求在破产程序中要求对消费者数据进行保护。
+纽约州总检察长莱蒂蒂亚·詹姆斯披露，针对Character.AI的多年跨州调查已启动，旨在要求其在破产过程中对出售的消费者数据实施保护措施。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -231,9 +363,9 @@ Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和
       <link>https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms</guid>
       <pubDate>Wed, 14 Oct 2026 18:23:46 +0000</pubDate>
-      <description>YouTube Music 推出 AI...：标签将出现在播放器页面，用于标注完全由AI生成或部分涉及AI的歌曲，例如AI参与作曲和人声，适合作为今日 AI/科技情报流里的重点线索。
+      <description>YouTube Music 推出 AI...：标签将出现在播放器页面，用于标注完全由AI生成或部分涉及AI（如作曲、人声）的歌曲，适合作为今日 AI/科技情报流里的重点线索。
 
-标签将出现在播放器页面，用于标注完全由AI生成或部分涉及AI的歌曲，例如AI参与作曲和人声。
+标签将出现在播放器页面，用于标注完全由AI生成或部分涉及AI（如作曲、人声）的歌曲。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -243,9 +375,9 @@ Leash Bio 通过优化 DEL（DNA编码文库）技术，克服了其高噪声和
       <link>https://www.theverge.com/ai-artificial-intelligence/1011369/youtube-music-ai-label</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1011369/youtube-music-ai-label</guid>
       <pubDate>Wed, 14 Oct 2026 18:22:56 +0000</pubDate>
-      <description>YouTube Music 为 AI 生...：YouTube将对使用AI“改编或全新生成”的音乐轨道添加“AI标签”，其流程与视频标签一致，适合作为今日 AI/科技情报流里的重点线索。
+      <description>YouTube Music 为 AI 生...：YouTube将对使用AI“改编或完全生成”的音乐轨道添加“由AI创作”标签，其做法与给视频贴标签的方式相似，适合作为今日 AI/科技情报流里的重点线索。
 
-YouTube将对使用AI“改编或全新生成”的音乐轨道添加“AI标签”，其流程与视频标签一致。该标签旨在提高透明度，但可能会引发争议。
+YouTube将对使用AI“改编或完全生成”的音乐轨道添加“由AI创作”标签，其做法与给视频贴标签的方式相似。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -255,9 +387,9 @@ YouTube将对使用AI“改编或全新生成”的音乐轨道添加“AI标签
       <link>https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence</guid>
       <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
-      <description>Apate.ai 派 AI 智能体假扮受...：大多数公司使用 AI 代理来加速产品交付或优化工作流程，适合关注自动化任务和多 Agent 协作演进。
+      <description>Apate.ai 派 AI 智能体假扮受...：多数企业用AI智能体加速产品交付或优化流程，而Apate.ai则派遣它们“卧底”以识别诈骗行为，适合关注自动化任务和多 Agent 协作演进。
 
-大多数公司使用 AI 代理来加速产品交付或优化工作流程。Apate.ai 则让它们化身“卧底”去体验诈骗。
+多数企业用AI智能体加速产品交付或优化流程，而Apate.ai则派遣它们“卧底”以识别诈骗行为。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -269,9 +401,9 @@ YouTube将对使用AI“改编或全新生成”的音乐轨道添加“AI标签
       <link>https://www.theverge.com/column/1011264/digital-twin-metabolism-ai-twin-health</link>
       <guid isPermaLink="true">https://www.theverge.com/column/1011264/digital-twin-metabolism-ai-twin-health</guid>
       <pubDate>Wed, 14 Oct 2026 17:00:00 +0000</pubDate>
-      <description>The Verge 评测员亲测 Twin...：这是《Verge》资深评论员Victoria Song每周发送的《Optimizer》新闻简报，专门剖析和评述那些号...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>The Verge 评测员亲测 Twin...：Verge资深评论家Victoria Song主笔的周刊《Optimizer》深度解析并探讨声称能改变生活的最新电子...，适合作为今日 AI/科技情报流里的重点线索。
 
-这是《Verge》资深评论员Victoria Song每周发送的《Optimizer》新闻简报，专门剖析和评述那些号称能改变生活的最新科技产品与小发明。
+Verge资深评论家Victoria Song主笔的周刊《Optimizer》深度解析并探讨声称能改变生活的最新电子产品与保健品。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -281,9 +413,9 @@ YouTube将对使用AI“改编或全新生成”的音乐轨道添加“AI标签
       <link>https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans</guid>
       <pubDate>Wed, 14 Oct 2026 16:43:24 +0000</pubDate>
-      <description>OpenAI 声称，一名前员工在加入苹果之前盗走了与产品计划相关的 100 多份文件，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI指控一名前员工在加入苹果前窃取了超过100份与其产品计划相关的文件，来自官方更新源，适合直接判断产品变化。
 
-OpenAI 声称，一名前员工在加入苹果之前盗走了与产品计划相关的 100 多份文件。OpenAI 在周三提交的文件中指控，这名未具名的员工发送了这些文件……
+OpenAI指控一名前员工在加入苹果前窃取了超过100份与其产品计划相关的文件。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -305,9 +437,9 @@ OpenAI 声称，一名前员工在加入苹果之前盗走了与产品计划相�
       <link>https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft</link>
       <guid isPermaLink="true">https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft</guid>
       <pubDate>Wed, 14 Oct 2026 16:05:21 +0000</pubDate>
-      <description>Microsoft：微软声称利用机器学习解决了传统物理预测和AI模型在两周后可靠性下降的难题，适合进一步验证代码、协议或社区采用情况。
+      <description>Microsoft：微软声称利用机器学习突破了两周预报瓶颈，其新模型在长期天气预报的可靠性上显著优于传统物理模型及新型AI模型，适合进一步验证代码、协议或社区采用情况。
 
-微软声称利用机器学习解决了传统物理预测和AI模型在两周后可靠性下降的难题。
+微软声称利用机器学习突破了两周预报瓶颈，其新模型在长期天气预报的可靠性上显著优于传统物理模型及新型AI模型。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -319,9 +451,9 @@ OpenAI 声称，一名前员工在加入苹果之前盗走了与产品计划相�
       <link>https://www.theverge.com/tech/1010928/android-scam-protection-enhanced-protection-google-messages</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1010928/android-scam-protection-enhanced-protection-google-messages</guid>
       <pubDate>Wed, 14 Oct 2026 16:00:00 +0000</pubDate>
-      <description>Google、Gemini：Android 正在推出新的防骗功能，旨在帮助用户更轻松地避免移动欺诈，包括在 Google Messages 中加...，适合优先评估模型能力、价格和工具选型变化。
+      <description>Google、Gemini：Android is introducing new scam defense features that aim...，适合优先评估模型能力、价格和工具选型变化。
 
-Android 正在推出新的防骗功能，旨在帮助用户更轻松地避免移动欺诈，包括在 Google Messages 中加强保护并增加额外的安全工具。
+Android is introducing new scam defense features that aim to make it easier for users to evade mobile fraud, including bolstered protection in Google Messages and additional safeguarding tools....
 
 信号等级 B · 评分 58.2</description>
       <category>Official AI Updates</category>
@@ -332,11 +464,11 @@ Android 正在推出新的防骗功能，旨在帮助用户更轻松地避免移
       <link>https://www.theverge.com/tech/1009086/square-kiosk</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1009086/square-kiosk</guid>
       <pubDate>Wed, 14 Oct 2026 16:00:00 +0000</pubDate>
-      <description>Square 推出 Square Kio...：Square推出新款硬件设备Square Kiosk，是一款配备触摸屏和AI语音交互功能的大型自助点单终端，外形呈胶...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Square 推出 Square Kio...：Square is launching new hardware: a big kiosk for ordering...，适合关注自动化任务和多 Agent 协作演进。
 
-Square推出新款硬件设备Square Kiosk，是一款配备触摸屏和AI语音交互功能的大型自助点单终端，外形呈胶囊状。
+Square is launching new hardware: a big kiosk for ordering things that has a touchscreen and lets you talk to an AI. It&apos;s called the Square Kiosk. Square says the Kiosk, which has a large pill shape,...
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
     </item>
@@ -345,9 +477,9 @@ Square推出新款硬件设备Square Kiosk，是一款配备触摸屏和AI语音
       <link>https://www.theverge.com/ai-artificial-intelligence/1011108/anthropic-self-replicating-ai-smart-devices-risk</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1011108/anthropic-self-replicating-ai-smart-devices-risk</guid>
       <pubDate>Wed, 14 Oct 2026 15:19:02 +0000</pubDate>
-      <description>Anthropic：智能设备大军（冰箱、烤箱、吸尘器、割草机、监控摄像头和电视）真的在阴谋接管互联网吗，适合判断技术路线和后续产品化可能性。
+      <description>Anthropic：Are legions of smart devices - fridges, ovens, vacuum clea...，适合判断技术路线和后续产品化可能性。
 
-智能设备大军（冰箱、烤箱、吸尘器、割草机、监控摄像头和电视）真的在阴谋接管互联网吗？不，但它们很快可能会成为……的不自觉宿主。
+Are legions of smart devices - fridges, ovens, vacuum cleaners, lawnmowers, security cameras, and TVs - conspiring to take over the internet? No. But they could soon be unwitting hosts to...
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -358,9 +490,9 @@ Square推出新款硬件设备Square Kiosk，是一款配备触摸屏和AI语音
       <link>https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music</guid>
       <pubDate>Wed, 14 Oct 2026 15:16:04 +0000</pubDate>
-      <description>Deezer 将推出 AI 生成音乐过滤...：Deezer表示，新切换功能将在今年年底前推出，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Deezer 将推出 AI 生成音乐过滤...：Deezer said that the new toggle will be rolled out by the...，适合作为今日 AI/科技情报流里的重点线索。
 
-Deezer表示，新切换功能将在今年年底前推出。
+Deezer said that the new toggle will be rolled out by the end of the year.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -370,9 +502,9 @@ Deezer表示，新切换功能将在今年年底前推出。
       <link>https://techcrunch.com/2026/10/14/save-50-on-your-techcrunch-disrupt-2026-ticket-and-join-the-last-two-days-in-san-francisco</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/save-50-on-your-techcrunch-disrupt-2026-ticket-and-join-the-last-two-days-in-san-francisco</guid>
       <pubDate>Wed, 14 Oct 2026 15:13:24 +0000</pubDate>
-      <description>TechCrunch Disrupt 2...：科技早报：TechCrunch Disrupt 2026 将于10月14-15日在旧金山举行，最后两天可享50%折扣...，适合判断资金、客户和生态格局的变化。
+      <description>TechCrunch Disrupt 2...：Get a 50% discount on the last two days of TechCrunch Disr...，适合判断资金、客户和生态格局的变化。
 
-科技早报：TechCrunch Disrupt 2026 将于10月14-15日在旧金山举行，最后两天可享50%折扣，现场将聚焦硬科技与实体经济新趋势。
+Get a 50% discount on the last two days of TechCrunch Disrupt 2026, October 14-15, in San Francisco. Register now and join the rest of the startup ecosystem. Today, it&apos;s all about physical and...
 
 信号等级 B · 评分 61.0</description>
       <category>Official AI Updates</category>
@@ -383,9 +515,9 @@ Deezer表示，新切换功能将在今年年底前推出。
       <link>https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace</guid>
       <pubDate>Wed, 14 Oct 2026 15:08:00 +0000</pubDate>
-      <description>Zenzap 融资 4400 万美元：Zenzap 被星巴克和塔可钟等组织使用，适合判断资金、客户和生态格局的变化。
+      <description>Zenzap 融资 4400 万美元：Zenzap is used by organizations including Starbucks and Ta...，适合判断资金、客户和生态格局的变化。
 
-Zenzap 被星巴克和塔可钟等组织使用。
+Zenzap is used by organizations including Starbucks and Taco Bell.
 
 信号等级 B · 评分 61.0</description>
       <category>Official AI Updates</category>
@@ -396,9 +528,9 @@ Zenzap 被星巴克和塔可钟等组织使用。
       <link>https://techcrunch.com/2026/10/14/floqers-ai-agents-help-b2b-revenue-teams-research-customers</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/floqers-ai-agents-help-b2b-revenue-teams-research-customers</guid>
       <pubDate>Wed, 14 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Floqer 计划开源其 AI 智能体客...：Floqer旨在解决销售和收入运营中常见的问题，适合跟进 AI 风险、治理和可信边界。
+      <description>Floqer 计划开源其 AI 智能体客...：The problem Floqer is trying to solve is familiar to anyon...，适合跟进 AI 风险、治理和可信边界。
 
-Floqer旨在解决销售和收入运营中常见的问题。
+The problem Floqer is trying to solve is familiar to anyone who has worked in sales or revenue operations.
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -412,11 +544,9 @@ Floqer旨在解决销售和收入运营中常见的问题。
       <link>https://techcrunch.com/2026/10/14/techcrunch-disrupt-2026-day-2</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/14/techcrunch-disrupt-2026-day-2</guid>
       <pubDate>Wed, 14 Oct 2026 14:30:00 +0000</pubDate>
-      <description>Nvidia：现场报名即享50%折扣，适合跟进 AI 风险、治理和可信边界。
+      <description>Nvidia：Day 2 at TechCrunch Disrupt 2026, full of all themes acros...，适合跟进 AI 风险、治理和可信边界。
 
-科技新闻编辑视角的翻译如下：
-
-TechCrunch Disrupt 2026 第二天的活动涵盖AI全貌，并设有仅限投资者的专属会议、多场圆桌论坛以及侧活动。现场报名即享50%折扣。
+Day 2 at TechCrunch Disrupt 2026, full of all themes across AI, as well as an investor-only session, more roundtables, Side Events, and more. Register to save 50% on your pass.
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -429,11 +559,11 @@ TechCrunch Disrupt 2026 第二天的活动涵盖AI全貌，并设有仅限投资
       <link>https://github.com/ifixai-ai/iFixAi</link>
       <guid isPermaLink="true">https://github.com/ifixai-ai/iFixAi</guid>
       <pubDate>Wed, 14 Oct 2026 14:09:55 +0000</pubDate>
-      <description>ifixai-ai/iFixAi：iFixAi 提供 AI Agent 独立审计，120秒内即可验证智能体是否按预期执行任务，保障 AI 经济中的可信...，适合进一步验证代码、协议或社区采用情况。
+      <description>ifixai-ai/iFixAi：Independent Auditing of AI Agents. Run by human or the age...，适合进一步验证代码、协议或社区采用情况。
 
-iFixAi 提供 AI Agent 独立审计，120秒内即可验证智能体是否按预期执行任务，保障 AI 经济中的可信性。
+Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.
 
-信号等级 B · 评分 55.2</description>
+信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>智能体</category>
@@ -443,9 +573,9 @@ iFixAi 提供 AI Agent 独立审计，120秒内即可验证智能体是否按预
       <link>https://github.com/vxcontrol/pentagi</link>
       <guid isPermaLink="true">https://github.com/vxcontrol/pentagi</guid>
       <pubDate>Wed, 14 Oct 2026 14:09:55 +0000</pubDate>
-      <description>vxcontrol/pentagi：完全自主的AI代理系统能够执行复杂的渗透测试任务，适合关注自动化任务和多 Agent 协作演进。
+      <description>vxcontrol/pentagi：Fully autonomous AI Agents system capable of performing co...，适合关注自动化任务和多 Agent 协作演进。
 
-完全自主的AI代理系统能够执行复杂的渗透测试任务。
+Fully autonomous AI Agents system capable of performing complex penetration testing tasks
 
 信号等级 B · 评分 53.6</description>
       <category>开源热榜</category>
@@ -457,9 +587,9 @@ iFixAi 提供 AI Agent 独立审计，120秒内即可验证智能体是否按预
       <link>https://github.com/NationalSecurityAgency/ghidra</link>
       <guid isPermaLink="true">https://github.com/NationalSecurityAgency/ghidra</guid>
       <pubDate>Wed, 14 Oct 2026 14:09:55 +0000</pubDate>
-      <description>NationalSecurityAgen...：Ghidra 是一款软件逆向工程（SRE）框架，适合进一步验证代码、协议或社区采用情况。
+      <description>NationalSecurityAgen...：Ghidra is a software reverse engineering (SRE) framework，适合进一步验证代码、协议或社区采用情况。
 
-Ghidra 是一款软件逆向工程（SRE）框架。
+Ghidra is a software reverse engineering (SRE) framework
 
 信号等级 B · 评分 55.1</description>
       <category>开源热榜</category>
@@ -483,11 +613,11 @@ Empowering everyone to build reliable and efficient software.
       <link>https://github.com/K-Dense-AI/scientific-agent-skills</link>
       <guid isPermaLink="true">https://github.com/K-Dense-AI/scientific-agent-skills</guid>
       <pubDate>Wed, 14 Oct 2026 14:09:55 +0000</pubDate>
-      <description>K-Dense-AI/scientifi...：全球25万+科学家使用的#1科学智能体技能库，含177项即用型验证技能和100+生物、化学、医药及药物发现数据库，兼...，适合进一步验证代码、协议或社区采用情况。
+      <description>K-Dense-AI/scientifi...：Turn any AI agent into an AI Scientist. The #1 Agent Skill...，适合进一步验证代码、协议或社区采用情况。
 
-将任何AI智能体转变为AI科学家。全球25万+科学家使用的#1科学智能体技能库，含177项即用型验证技能和100+生物、化学、医药及药物发现数据库，兼容Cursor、Claude Code、Codex等主流工具。
+Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.
 
-信号等级 B · 评分 61.5</description>
+信号等级 B · 评分 67.8</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>智能体</category>
@@ -512,9 +642,9 @@ WinUI app for building smaller, customized Windows 11 images.
       <link>https://github.com/HKUDS/CLI-Anything</link>
       <guid isPermaLink="true">https://github.com/HKUDS/CLI-Anything</guid>
       <pubDate>Wed, 14 Oct 2026 14:09:55 +0000</pubDate>
-      <description>HKUDS/CLI-Anything：CLI-Anything 旨在让所有软件成为原生支持代理（Agent-Native）的命令行界面工具，通过 CLI-...，适合关注自动化任务和多 Agent 协作演进。
+      <description>HKUDS/CLI-Anything：&quot;CLI-Anything: Making ALL Software Agent-Native&quot; -- CLI-Hu...，适合关注自动化任务和多 Agent 协作演进。
 
-CLI-Anything 旨在让所有软件成为原生支持代理（Agent-Native）的命令行界面工具，通过 CLI-Hub 实现统一接口，提升 AI 代理与传统软件的交互能力。
+&quot;CLI-Anything: Making ALL Software Agent-Native&quot; -- CLI-Hub: https://clianything.cc/
 
 信号等级 B · 评分 54.4</description>
       <category>开源热榜</category>
@@ -526,9 +656,9 @@ CLI-Anything 旨在让所有软件成为原生支持代理（Agent-Native）的�
       <link>https://github.com/nvm-sh/nvm</link>
       <guid isPermaLink="true">https://github.com/nvm-sh/nvm</guid>
       <pubDate>Wed, 14 Oct 2026 14:09:55 +0000</pubDate>
-      <description>nvm-sh/nvm：Node Version Manager (NVM) 是一个 POSIX 兼容的 Bash 脚本，用于管理多个活动的...，适合进一步验证代码、协议或社区采用情况。
+      <description>nvm-sh/nvm：Node Version Manager - POSIX-compliant bash script to mana...，适合进一步验证代码、协议或社区采用情况。
 
-Node Version Manager (NVM) 是一个 POSIX 兼容的 Bash 脚本，用于管理多个活动的 Node.js 版本。
+Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.
 
 信号等级 B · 评分 55.2</description>
       <category>开源热榜</category>
@@ -539,93 +669,13 @@ Node Version Manager (NVM) 是一个 POSIX 兼容的 Bash 脚本，用于管理�
       <link>https://www.theverge.com/games/1010751/epic-games-launcher-vibe-coded-ai-linux</link>
       <guid isPermaLink="true">https://www.theverge.com/games/1010751/epic-games-launcher-vibe-coded-ai-linux</guid>
       <pubDate>Wed, 14 Oct 2026 13:55:02 +0000</pubDate>
-      <description>Epic 发布 vibe coded 新...：Epic Games今日发布其PC游戏启动器的重大预览版更新，宣称新版本“速度更快”，并现已支持Linux系统，适合关注自动化任务和多 Agent 协作演进。
+      <description>Epic 发布 vibe coded 新...：Epic Games is announcing a big refresh of its PC games lau...，适合关注自动化任务和多 Agent 协作演进。
 
-Epic Games今日发布其PC游戏启动器的重大预览版更新，宣称新版本“速度更快”，并现已支持Linux系统。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>Anthropic 警告小型 AI 模型可能借 IoT 设备实现自我复制</title>
-      <link>https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices</link>
-      <guid isPermaLink="true">https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices</guid>
-      <pubDate>Wed, 14 Oct 2026 12:55:06 +0000</pubDate>
-      <description>Anthropic：“小型基于重量的复制器”可能开启计算机蠕虫的新一代，适合作为今日 AI/科技情报流里的重点线索。
-
-“小型基于重量的复制器”可能开启计算机蠕虫的新一代。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>SentinelOne 将恶意软件分析时间从周缩短至小时</title>
-      <link>https://openai.com/index/sentinelone</link>
-      <guid isPermaLink="true">https://openai.com/index/sentinelone</guid>
-      <pubDate>Wed, 14 Oct 2026 12:00:00 +0000</pubDate>
-      <description>SentinelOne 将恶意软件分析时...：With OpenAI Daybreak, SentinelOne cuts weeks of malware an...，适合作为今日 AI/科技情报流里的重点线索。
-
-With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Amp 借助 OpenAI 模型让 AI 智能体超越写代码</title>
-      <link>https://openai.com/index/amp-beyond-coding</link>
-      <guid isPermaLink="true">https://openai.com/index/amp-beyond-coding</guid>
-      <pubDate>Wed, 14 Oct 2026 12:00:00 +0000</pubDate>
-      <description>OpenAI：Amp凭借GPT-6 Astra、Ultrafast及GPT-Live-1等前沿技术，突破智能体边界，并推出“登录C...，适合关注自动化任务和多 Agent 协作演进。
-
-Amp凭借GPT-6 Astra、Ultrafast及GPT-Live-1等前沿技术，突破智能体边界，并推出“登录ChatGPT”功能。
+Epic Games is announcing a big refresh of its PC games launcher today in preview, saying that the new version is &quot;way faster&quot; and now supports Linux. But the company, which has been publicly making a...
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Scimplify 融资 2500 万美元，用 AI 平台 Scinode 挑战中国在关键材料领域的主导地位</title>
-      <link>https://techcrunch.com/2026/10/14/scimplify-raises-25m-to-challenge-chinas-grip-on-critical-materials-with-ai</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/14/scimplify-raises-25m-to-challenge-chinas-grip-on-critical-materials-with-ai</guid>
-      <pubDate>Wed, 14 Oct 2026 11:00:00 +0000</pubDate>
-      <description>Scimplify 融资 2500 万美...：Scimplify&apos;s annualized revenue run rate has tripled to $20...，适合关注自动化任务和多 Agent 协作演进。
-
-Scimplify&apos;s annualized revenue run rate has tripled to $200 million as it eyes U.S. expansion.
-
-信号等级 B · 评分 61.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>Block 如何借助 OpenAI 技术构建 AI 驱动的安全系统</title>
-      <link>https://openai.com/index/block-ai-powered-security</link>
-      <guid isPermaLink="true">https://openai.com/index/block-ai-powered-security</guid>
-      <pubDate>Wed, 14 Oct 2026 07:00:00 +0000</pubDate>
-      <description>Block is building AI-powered security with OpenAI. Its sec...，来自官方更新源，适合直接判断产品变化。
-
-Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes.
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Third Moment Research 如何用 GPT-6 与 Codex 同时运行 1 万个智能体 36 小时以上</title>
-      <link>https://openai.com/index/third-moment-research</link>
-      <guid isPermaLink="true">https://openai.com/index/third-moment-research</guid>
-      <pubDate>Wed, 14 Oct 2026 07:00:00 +0000</pubDate>
-      <description>GPT-6、Codex：With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for...，适合关注自动化任务和多 Agent 协作演进。
-
-With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
