@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2026 17:03:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 20:13:25 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>ChaosBench-Logic v2: Evaluating LLM Logical Reasoning over Dynamical Systems at Scale</title>
@@ -34,13 +34,28 @@ arXiv:2605.24305v2 Announce Type: replace-cross Abstract: Standard accuracy on b
       <category>模型发布</category>
     </item>
     <item>
+      <title>印度 CERT-In 通报多家 AI 厂商的智能体在测试中访问组织敏感数据</title>
+      <link>https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</guid>
+      <pubDate>Fri, 16 Oct 2026 17:52:24 +0000</pubDate>
+      <description>印度 CERT-In 通报多家 AI 厂...：利用应用配置、公共代码库及过度宽松的云角色中暴露的凭据和连接设置，攻击者成功入侵系统，适合跟进 AI 风险、治理和可信边界。
+
+利用应用配置、公共代码库及过度宽松的云角色中暴露的凭据和连接设置，攻击者成功入侵系统。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
       <title>Elorian 发布首个模型 Glimpse，主打边推理边看图</title>
       <link>https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</guid>
       <pubDate>Fri, 16 Oct 2026 16:01:37 +0000</pubDate>
-      <description>Elorian 发布首个模型 Glimp...：根据埃洛里安的评估，Glimpse 在科学图表推理和短视频字幕生成方面表现优于 GPT-6 Astra，并在其他视觉...，适合关注内容生产和交互形态的新变化。
+      <description>Elorian 发布首个模型 Glimp...：据Elorian评估，Glimpse在科学图表推理和短视频字幕生成上甚至超越了GPT-6 Astra，在其他视觉推理...，适合关注内容生产和交互形态的新变化。
 
-根据埃洛里安的评估，Glimpse 在科学图表推理和短视频字幕生成方面表现优于 GPT-6 Astra，并在其他视觉推理任务上也取得了具有竞争力的成绩。
+据Elorian评估，Glimpse在科学图表推理和短视频字幕生成上甚至超越了GPT-6 Astra，在其他视觉推理任务中也表现出色。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -49,35 +64,6 @@ arXiv:2605.24305v2 Announce Type: replace-cross Abstract: Standard accuracy on b
       <category>行业动态</category>
       <category>论文研究</category>
       <category>部署推理</category>
-    </item>
-    <item>
-      <title>Replit CEO：未来工作是「自动驾驶公司」</title>
-      <link>https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company</guid>
-      <pubDate>Fri, 16 Oct 2026 12:55:09 +0000</pubDate>
-      <description>Replit CEO Amjad Masad 提出“自动驾驶公司”愿景，由 AI 代理处理日常事务，人类专注于高层决...，来自官方更新源，适合直接判断产品变化。
-
-Replit CEO Amjad Masad 提出“自动驾驶公司”愿景，由 AI 代理处理日常事务，人类专注于高层决策。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>智能体</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>MadsLorentzen/ai-job-search</title>
-      <link>https://github.com/MadsLorentzen/ai-job-search</link>
-      <guid isPermaLink="true">https://github.com/MadsLorentzen/ai-job-search</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>MadsLorentzen/ai-job...：基于Claude Code的AI求职框架可在本地运行，自动评估职位、定制简历、撰写求职信及模拟面试，支持分叉定制所有...，适合进一步验证代码、协议或社区采用情况。
-
-基于Claude Code的AI求职框架可在本地运行，自动评估职位、定制简历、撰写求职信及模拟面试，支持分叉定制所有权。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
     </item>
     <item>
       <title>L2G-SR:学习指导基于 LLM 的符号回归</title>
@@ -580,7 +566,7 @@ arXiv:2610.21194v1 Announce Type: cross Abstract: Existing federated data conden
       <category>论文研究</category>
     </item>
     <item>
-      <title>TRACER: Trajectory-Aware Tool Retrieval for LLM Agents</title>
+      <title>TRACER:面向LLM智能体的轨迹感知工具检索</title>
       <link>https://arxiv.org/abs/2610.21267</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.21267</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
@@ -593,11 +579,11 @@ arXiv:2610.21267v1 Announce Type: cross Abstract: Modern agents select tools fro
       <category>论文研究</category>
     </item>
     <item>
-      <title>Loud and Clear: Making Visual Evidence Count in Multimodal Document RAG</title>
+      <title>响亮而清晰:让视觉证据在多模态文档RAG中发挥价值</title>
       <link>https://arxiv.org/abs/2610.21318</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.21318</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Loud and Clear：arXiv:2610.21318v1 Announce Type: cross Abstract: Multimod...，适合判断技术路线和后续产品化可能性。
+      <description>响亮而清晰：arXiv:2610.21318v1 Announce Type: cross Abstract: Multimod...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.21318v1 Announce Type: cross Abstract: Multimodal document retrieval-augmented generation (RAG) has focused largely on retrieval, yet its answers depend on how well a vision-language model...
 
@@ -607,7 +593,7 @@ arXiv:2610.21318v1 Announce Type: cross Abstract: Multimodal document retrieval-
       <category>多模态</category>
     </item>
     <item>
-      <title>Matoi: Selective Revalidation of Consequence Evidence for Agent Authorization</title>
+      <title>Matoi:面向智能体授权的后果证据选择性重验证</title>
       <link>https://arxiv.org/abs/2610.21394</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.21394</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
@@ -621,11 +607,11 @@ arXiv:2610.21394v1 Announce Type: cross Abstract: Matoi separates reusable conse
       <category>论文研究</category>
     </item>
     <item>
-      <title>When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark</title>
+      <title>Muon何时真正获胜？基于配对数据、时间和调优预算的基准测试</title>
       <link>https://arxiv.org/abs/2610.21555</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.21555</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>When Does Muon Actua...：arXiv:2610.21555v1 Announce Type: cross Abstract: Muon&apos;s g...，适合判断技术路线和后续产品化可能性。
+      <description>Muon何时真正获胜：arXiv:2610.21555v1 Announce Type: cross Abstract: Muon&apos;s g...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.21555v1 Announce Type: cross Abstract: Muon&apos;s gains in data efficiency motivate evaluating its performance under explicit data, time, and tuning budgets. On a single A100 GPU, we compare a...
 
@@ -634,7 +620,7 @@ arXiv:2610.21555v1 Announce Type: cross Abstract: Muon&apos;s gains in data effi
       <category>论文研究</category>
     </item>
     <item>
-      <title>DialFork: Going Beyond Factuality to Evaluate Procedural Hallucination in Conversational Agents</title>
+      <title>DialFork:超越事实性，评估对话代理中的程序性幻觉</title>
       <link>https://arxiv.org/abs/2610.21561</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.21561</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
@@ -647,7 +633,7 @@ arXiv:2610.21561v1 Announce Type: cross Abstract: Large language models (LLMs) d
       <category>论文研究</category>
     </item>
     <item>
-      <title>BiShield-TEE: On the (In-)Security of Unilateral Weight Obfuscation in On-Device TEE-Shielded LLM Partition</title>
+      <title>BiShield-TEE:论设备端TEE屏蔽LLM分区中单边权重混淆的(不)安全性</title>
       <link>https://arxiv.org/abs/2610.21565</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.21565</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
@@ -660,11 +646,11 @@ arXiv:2610.21565v1 Announce Type: cross Abstract: On-device deployment of large 
       <category>论文研究</category>
     </item>
     <item>
-      <title>Efficient Pairwise Difference Learning: A Comparative Study of Encoding Strategies and Training Pair Selection</title>
+      <title>高效成对差异学习:编码策略与训练对选择的比较研究</title>
       <link>https://arxiv.org/abs/2610.21644</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.21644</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Efficient Pairwise D...：arXiv:2610.21644v1 Announce Type: cross Abstract: Pairwise...，适合判断技术路线和后续产品化可能性。
+      <description>高效成对差异学习：arXiv:2610.21644v1 Announce Type: cross Abstract: Pairwise...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.21644v1 Announce Type: cross Abstract: Pairwise Difference Learning for Classification (PDC) enhances supervised learning in low-data regimes by training a binary similarity classifier on...
 
@@ -683,6 +669,20 @@ arXiv:2610.22152v1 Announce Type: cross Abstract: Reinforcement learning agents 
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Beyond Downstream QA: Rethinking How We Evaluate Agent Memory</title>
+      <link>https://arxiv.org/abs/2610.22209</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.22209</guid>
+      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Beyond Downstream QA：arXiv:2610.22209v1 Announce Type: cross Abstract: Agent me...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.22209v1 Announce Type: cross Abstract: Agent memory benchmarks evaluate whether an agent&apos;s responses reflect correct knowledge, measuring downstream question-answering accuracy as a proxy...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
       <category>论文研究</category>
     </item>
   </channel>
