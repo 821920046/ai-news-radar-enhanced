@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-15T23:24:32.857818Z",
+  "generated_at": "2026-10-16T02:08:42.742026Z",
   "sites": [
-    {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
-      "ok": true,
-      "item_count": 29,
-      "duration_ms": 132,
-      "error": null
-    },
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": true,
       "item_count": 9,
-      "duration_ms": 431,
+      "duration_ms": 788,
+      "error": null
+    },
+    {
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
+      "ok": true,
+      "item_count": 29,
+      "duration_ms": 1148,
       "error": null
     },
     {
@@ -22,7 +22,7 @@
       "site_name": "Zeli",
       "ok": true,
       "item_count": 68,
-      "duration_ms": 1140,
+      "duration_ms": 1437,
       "error": null
     },
     {
@@ -30,7 +30,7 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 2503,
+      "duration_ms": 1971,
       "error": null
     },
     {
@@ -38,7 +38,7 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 2730,
+      "duration_ms": 2622,
       "error": null
     },
     {
@@ -46,7 +46,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 3514,
+      "duration_ms": 3273,
       "error": null
     },
     {
@@ -54,7 +54,7 @@
       "site_name": "开源热榜",
       "ok": true,
       "item_count": 21,
-      "duration_ms": 5044,
+      "duration_ms": 3794,
       "error": null
     },
     {
@@ -62,7 +62,7 @@
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 6031,
+      "duration_ms": 6403,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))"
     },
     {
@@ -70,15 +70,7 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 9924,
-      "error": null
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 2959,
-      "duration_ms": 11385,
+      "duration_ms": 10223,
       "error": null
     },
     {
@@ -86,31 +78,39 @@
       "site_name": "AI HOT",
       "ok": true,
       "item_count": 500,
-      "duration_ms": 13548,
+      "duration_ms": 10907,
+      "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 3018,
+      "duration_ms": 11617,
       "error": null
     },
     {
       "site_id": "newsnow",
       "site_name": "NewsNow",
-      "ok": true,
-      "item_count": 122,
-      "duration_ms": 13670,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 19269,
+      "error": "HTTPSConnectionPool(host='newsnow.busiyi.world', port=443): Max retries exceeded with url: /api/s?id=hackernews (Caused by ResponseError('too many 500 error responses'))"
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 322,
-      "duration_ms": 21887,
+      "item_count": 355,
+      "duration_ms": 22588,
       "error": null
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 1468,
-      "duration_ms": 22037,
+      "item_count": 1469,
+      "duration_ms": 89660,
       "error": null
     },
     {
@@ -119,7 +119,7 @@
       "ok": true,
       "partial_failures": 0,
       "item_count": 51,
-      "duration_ms": 1082,
+      "duration_ms": 1768,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -129,14 +129,15 @@
       "replaced_feed_count": 0
     }
   ],
-  "successful_sites": 14,
+  "successful_sites": 13,
   "failed_sites": [
-    "aihubtoday"
+    "aihubtoday",
+    "newsnow"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 6719,
-  "items_before_topic_filter": 5927,
-  "items_in_24h": 1012,
+  "fetched_raw_items": 6690,
+  "items_before_topic_filter": 6056,
+  "items_in_24h": 986,
   "ai_processing": {
     "tldr_items": 0
   },
