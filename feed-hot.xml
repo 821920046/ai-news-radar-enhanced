@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2026 20:13:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 23:06:55 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>ChaosBench-Logic v2: Evaluating LLM Logical Reasoning over Dynamical Systems at Scale</title>
@@ -38,32 +38,15 @@ arXiv:2605.24305v2 Announce Type: replace-cross Abstract: Standard accuracy on b
       <link>https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</guid>
       <pubDate>Fri, 16 Oct 2026 17:52:24 +0000</pubDate>
-      <description>印度 CERT-In 通报多家 AI 厂...：利用应用配置、公共代码库及过度宽松的云角色中暴露的凭据和连接设置，攻击者成功入侵系统，适合跟进 AI 风险、治理和可信边界。
+      <description>印度 CERT-In 通报多家 AI 厂...：攻击者通过暴露在应用配置、公开代码仓库和过度宽松的云角色中的凭证和连接设置获取了入口，适合跟进 AI 风险、治理和可信边界。
 
-利用应用配置、公共代码库及过度宽松的云角色中暴露的凭据和连接设置，攻击者成功入侵系统。
+攻击者通过暴露在应用配置、公开代码仓库和过度宽松的云角色中的凭证和连接设置获取了入口。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
       <category>智能体</category>
       <category>论文研究</category>
-    </item>
-    <item>
-      <title>Elorian 发布首个模型 Glimpse，主打边推理边看图</title>
-      <link>https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</guid>
-      <pubDate>Fri, 16 Oct 2026 16:01:37 +0000</pubDate>
-      <description>Elorian 发布首个模型 Glimp...：据Elorian评估，Glimpse在科学图表推理和短视频字幕生成上甚至超越了GPT-6 Astra，在其他视觉推理...，适合关注内容生产和交互形态的新变化。
-
-据Elorian评估，Glimpse在科学图表推理和短视频字幕生成上甚至超越了GPT-6 Astra，在其他视觉推理任务中也表现出色。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>多模态</category>
-      <category>模型发布</category>
-      <category>行业动态</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
     </item>
     <item>
       <title>L2G-SR:学习指导基于 LLM 的符号回归</title>
@@ -659,11 +642,11 @@ arXiv:2610.21644v1 Announce Type: cross Abstract: Pairwise Difference Learning f
       <category>论文研究</category>
     </item>
     <item>
-      <title>Specification Gaming and a Constrained Reinforcement Learning Mitigation in a Cleaning Gridworld</title>
+      <title>清理网格世界中规格博弈及受限强化学习缓解方案</title>
       <link>https://arxiv.org/abs/2610.22152</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.22152</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Specification Gaming...：arXiv:2610.22152v1 Announce Type: cross Abstract: Reinforc...，适合判断技术路线和后续产品化可能性。
+      <description>清理网格世界中规格博弈及受限强化学习缓解...：arXiv:2610.22152v1 Announce Type: cross Abstract: Reinforc...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.22152v1 Announce Type: cross Abstract: Reinforcement learning agents optimize exactly the reward signal they are given, which can diverge sharply from an intended true objective when that...
 
@@ -672,17 +655,30 @@ arXiv:2610.22152v1 Announce Type: cross Abstract: Reinforcement learning agents 
       <category>论文研究</category>
     </item>
     <item>
-      <title>Beyond Downstream QA: Rethinking How We Evaluate Agent Memory</title>
+      <title>超越下游问答:重新思考智能体记忆的评估方式</title>
       <link>https://arxiv.org/abs/2610.22209</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.22209</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Beyond Downstream QA：arXiv:2610.22209v1 Announce Type: cross Abstract: Agent me...，适合关注自动化任务和多 Agent 协作演进。
+      <description>超越下游问答：arXiv:2610.22209v1 Announce Type: cross Abstract: Agent me...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.22209v1 Announce Type: cross Abstract: Agent memory benchmarks evaluate whether an agent&apos;s responses reflect correct knowledge, measuring downstream question-answering accuracy as a proxy...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>训练-free 策略的在线策略蒸馏</title>
+      <link>https://arxiv.org/abs/2610.22236</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.22236</guid>
+      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
+      <description>训练-free 策略的在线策略蒸馏：arXiv:2610.22236v1 Announce Type: cross Abstract: On-polic...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.22236v1 Announce Type: cross Abstract: On-policy distillation consolidates specialist models into one student at the price of rollouts, teacher passes and gradient steps for every teacher....
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
   </channel>
