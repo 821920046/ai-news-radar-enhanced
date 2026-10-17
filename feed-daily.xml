@@ -5,16 +5,16 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 02:01:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 07:17:07 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>sliday/resume-job-matcher</title>
       <link>https://github.com/sliday/resume-job-matcher</link>
       <guid isPermaLink="true">https://github.com/sliday/resume-job-matcher</guid>
       <pubDate>Sat, 17 Oct 2026 02:01:51 +0000</pubDate>
-      <description>sliday/resume-job-ma...：支持 Claude、GPT 或 OpenRouter，适合优先评估模型能力、价格和工具选型变化。
+      <description>sliday/resume-job-ma...：克劳德、GPT 或 OpenRouter，适合优先评估模型能力、价格和工具选型变化。
 
-TypeScript CLI 用于 AI 简历筛选：硬性约束在评分前过滤掉不符合条件的候选人，每个分数都附带对应的简历原文依据，嵌入式预筛选使大规模筛选成本低廉。支持 Claude、GPT 或 OpenRouter。
+用于 AI 简历筛选的 TypeScript CLI：硬约束在评分前将候选人排除在外，每个分数都会引用其背后的简历跨度，并且嵌入的预过滤器使大型池保持便宜。克劳德、GPT 或 OpenRouter。
 
 信号等级 B · 评分 50.5</description>
       <category>开源热榜</category>
@@ -42,7 +42,7 @@ Designing more efficient quantum circuits with Claude
 
 · 华为云下月调整 AI 专业服务价格，原型开发基础版升至 85.12 万元 · 17 岁研究员陈广宇离开 Kimi，否认将加入 Anthropic · 四部门要求车企规范产品宣传，不得诱导驾驶人忽视安全责任#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
 
-信号等级 B · 评分 60.2</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>安全对齐</category>
@@ -52,37 +52,24 @@ Designing more efficient quantum circuits with Claude
       <link>https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</guid>
       <pubDate>Fri, 16 Oct 2026 21:22:28 +0000</pubDate>
-      <description>Anthropic：该公司于8月与OpenAI达成合作，但从未有过不再合作的迹象，适合判断资金、客户和生态格局的变化。
+      <description>Anthropic：Replit 公司于 8 月宣布与 OpenAI 达成合作，但从未有任何迹象表明它已不再与该公司合作，适合判断资金、客户和生态格局的变化。
 
-Replit创始人马斯德表示，决定背后的原因包括成本等多方面因素。该公司于8月与OpenAI达成合作，但从未有过不再合作的迹象。
+Masad 表示，这一决定基于多个原因，包括成本因素。Replit 公司于 8 月宣布与 OpenAI 达成合作，但从未有任何迹象表明它已不再与该公司合作。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
-    </item>
-    <item>
-      <title>Claude Code 团队如何进行代码审查</title>
-      <link>https://claude.dev/blog/solving-code-review-at-anthropic</link>
-      <guid isPermaLink="true">https://claude.dev/blog/solving-code-review-at-anthropic</guid>
-      <pubDate>Fri, 16 Oct 2026 21:20:46 +0000</pubDate>
-      <description>How the Claude Code team does code review，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-How the Claude Code team does code review
-
-信号等级 B · 评分 52.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
     </item>
     <item>
       <title>OpenAI 披露内部模型入侵加密钱包并攻破更多网站</title>
       <link>https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</guid>
       <pubDate>Fri, 16 Oct 2026 20:59:01 +0000</pubDate>
-      <description>OpenAI：若这些行为由人类所为，本可能面临刑事指控，适合作为今日 AI/科技情报流里的重点线索。
+      <description>OpenAI：如果键盘背后是人类的话，这些行为可能会导致刑事指控，适合作为今日 AI/科技情报流里的重点线索。
 
-若这些行为由人类所为，本可能面临刑事指控。
+如果键盘背后是人类的话，这些行为可能会导致刑事指控。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -90,23 +77,11 @@ How the Claude Code team does code review
       <link>https://openai.com/index/itau-generative-ai</link>
       <guid isPermaLink="true">https://openai.com/index/itau-generative-ai</guid>
       <pubDate>Fri, 16 Oct 2026 19:00:00 +0000</pubDate>
-      <description>Itaú 如何为其整个客户群构建生成式...：With ia.i, a conversational interface, and the IARA govern...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Itaú 如何为其整个客户群构建生成式...：巴西伊塔乌银行（Itaú）通过对话式AI接口“ia.i”及IARA治理平台，将“AI First”战略应用于客户与员...，适合作为今日 AI/科技情报流里的重点线索。
 
-With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.
+巴西伊塔乌银行（Itaú）通过对话式AI接口“ia.i”及IARA治理平台，将“AI First”战略应用于客户与员工，推动其在强监管行业中的数字化转型。
 
 信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>圆桌会议:与AI设计病毒的创造者对话</title>
-      <link>https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-      <description>圆桌会议：Listen to the session or watch below Can AI design new lif...，适合作为今日 AI/科技情报流里的重点线索。
-
-Listen to the session or watch below Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose...
-
-信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -114,9 +89,9 @@ Listen to the session or watch below Can AI design new life forms? In 2025, Stan
       <link>https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</guid>
       <pubDate>Fri, 16 Oct 2026 17:52:24 +0000</pubDate>
-      <description>印度 CERT-In 通报多家 AI 厂...：The agents got in through credentials and connection setti...，适合跟进 AI 风险、治理和可信边界。
+      <description>印度 CERT-In 通报多家 AI 厂...：代理通过应用程序配置、公共代码存储库和过于宽松的云角色中暴露的凭据和连接设置进入，适合跟进 AI 风险、治理和可信边界。
 
-The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.
+代理通过应用程序配置、公共代码存储库和过于宽松的云角色中暴露的凭据和连接设置进入。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -129,9 +104,9 @@ The agents got in through credentials and connection settings left exposed in ap
       <link>https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</link>
       <guid isPermaLink="true">https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:46 +0000</pubDate>
-      <description>PyTorch 为 TorchTitan...：Why Zephon，适合作为今日 AI/科技情报流里的重点线索。
+      <description>PyTorch 为 TorchTitan...：模型在训练过程中所接触的数据是影响其性能的最强大杠杆之一，日常工作中通过精心设计数据流可以显著提升模型表现，适合作为今日 AI/科技情报流里的重点线索。
 
-Why Zephon? The data that a model sees during training is one of the most powerful levers we have for influencing how well it performs. Much of the day-to-day work... The post Bringing Elastically...
+模型在训练过程中所接触的数据是影响其性能的最强大杠杆之一，日常工作中通过精心设计数据流可以显著提升模型表现。Brining Elastically...（注：因原文被截断，仅翻译完整可理解部分，保留关键概念“Zephon”和核心论点。）
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -141,9 +116,9 @@ Why Zephon? The data that a model sees during training is one of the most powerf
       <link>https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</link>
       <guid isPermaLink="true">https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>NVIDIA：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
+      <description>NVIDIA前机器人平台产品营销负责人Amulya Vishwanath表示，机器人技术正处于“积木时代”，其核心在...，来自官方更新源，适合直接判断产品变化。
 
-Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
+NVIDIA前机器人平台产品营销负责人Amulya Vishwanath表示，机器人技术正处于“积木时代”，其核心在于基础构建模块如执行器等的组合与集成。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -154,9 +129,9 @@ Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’
       <link>https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</link>
       <guid isPermaLink="true">https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>Nvidia、GPT：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
+      <description>Nvidia、GPT：Amulya Vishwanath 花了七年时间领导 NVIDIA 机器人平台的产品营销，他表示机器人技术目前正处于...，适合跟进 AI 风险、治理和可信边界。
 
-Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
+Amulya Vishwanath 花了七年时间领导 NVIDIA 机器人平台的产品营销，他表示机器人技术目前正处于“乐高时代”，具有执行器等基本构建模块，...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -168,9 +143,9 @@ Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’
       <link>https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</guid>
       <pubDate>Fri, 16 Oct 2026 16:01:37 +0000</pubDate>
-      <description>Elorian 发布首个模型 Glimp...：According to Elorian&apos;s evaluations, Glimpse outperforms ev...，适合关注内容生产和交互形态的新变化。
+      <description>Elorian 发布首个模型 Glimp...：根据 Elorian 的评估，Glimpse 在科学图表推理和短视频字幕方面的表现甚至优于 GPT-6 Astra...，适合关注内容生产和交互形态的新变化。
 
-According to Elorian&apos;s evaluations, Glimpse outperforms even GPT-6 Astra on scientific chart reasoning and short-form video captioning, with competitive results on other visual reasoning tasks.
+根据 Elorian 的评估，Glimpse 在科学图表推理和短视频字幕方面的表现甚至优于 GPT-6 Astra，在其他视觉推理任务上也取得了有竞争力的结果。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -185,9 +160,9 @@ According to Elorian&apos;s evaluations, Glimpse outperforms even GPT-6 Astra on
       <link>https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</guid>
       <pubDate>Fri, 16 Oct 2026 15:33:49 +0000</pubDate>
-      <description>Vercel 数据显示 Jev 成为其史...：The data comes from Vercel&apos;s AI gateway, a unified API ser...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Vercel 数据显示 Jev 成为其史...：该数据源自Vercel的AI网关，一个类似OpenRouter的统一API服务，适合作为今日 AI/科技情报流里的重点线索。
 
-The data comes from Vercel&apos;s AI gateway, a unified API service similar to OpenRouter.
+该数据源自Vercel的AI网关，一个类似OpenRouter的统一API服务。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -197,9 +172,9 @@ The data comes from Vercel&apos;s AI gateway, a unified API service similar to O
       <link>https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</guid>
       <pubDate>Fri, 16 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;v...，来自官方更新源，适合直接判断产品变化。
+      <description>Nvidia 的 RTX Spark N1X 处理器终于问世了，我们一直在集体测试配备这款新“超级芯片”的强大笔记本...，来自官方更新源，适合直接判断产品变化。
 
-Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;ve been collectively testing a small fortune&apos;s worth of powerful laptops sporting this new &quot;superchip.&quot; RTX Spark is designed to be a...
+Nvidia 的 RTX Spark N1X 处理器终于问世了，我们一直在集体测试配备这款新“超级芯片”的强大笔记本电脑。 RTX Spark 被设计为...
 
 信号等级 B · 评分 52.0</description>
       <category>Official AI Updates</category>
@@ -324,360 +299,6 @@ Cursor plugin specification and official plugins
       <category>开源热榜</category>
       <category>开源</category>
       <category>部署推理</category>
-    </item>
-    <item>
-      <title>Vercel和Shopify让AI代理成为一等公民的购物者</title>
-      <link>https://vercel.com/blog/vercel-and-shopify-make-agents-first-class-shoppers</link>
-      <guid isPermaLink="true">https://vercel.com/blog/vercel-and-shopify-make-agents-first-class-shoppers</guid>
-      <pubDate>Fri, 16 Oct 2026 07:00:00 +0000</pubDate>
-      <description>Vercel和Shopify让AI代理成...：Agents already shop on the web, but they often use pages a...，适合作为今日 AI/科技情报流里的重点线索。
-
-Agents already shop on the web, but they often use pages and tools originally built for people and search engines. Building a better shopping experience for agents means treating them as first-class...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>世界不会等待:评估与教学代理在实时时钟下的表现</title>
-      <link>https://arxiv.org/abs/2610.20665</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20665</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>世界不会等待：arXiv:2610.20665v1 Announce Type: new Abstract: Large lang...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments,...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>阿尔法迪安娜:用于可验证推理任务的代理测量系统</title>
-      <link>https://arxiv.org/abs/2610.20675</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20675</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>阿尔法迪安娜：arXiv:2610.20675v1 Announce Type: new Abstract: Agents pai...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20675v1 Announce Type: new Abstract: Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory....
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>反事实邻域风险场:视觉语言模型证据引导的可选择安全性</title>
-      <link>https://arxiv.org/abs/2610.20679</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20679</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>反事实邻域风险场：arXiv:2610.20679v1 Announce Type: new Abstract: Representa...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>IneqAgent:利用符号计算在 Lean 中进行代理不等式证明</title>
-      <link>https://arxiv.org/abs/2610.20681</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20681</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>IneqAgent：arXiv:2610.20681v1 Announce Type: new Abstract: Formal ine...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20681v1 Announce Type: new Abstract: Formal inequality proving requires mathematical reasoning and exact computation, often connected through intermediate lemmas and goal reformulations....
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>L2G-SR:学习指导基于 LLM 的符号回归</title>
-      <link>https://arxiv.org/abs/2610.20685</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20685</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>L2G-SR：arXiv:2610.20685v1 Announce Type: new Abstract: Symbolic r...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20685v1 Announce Type: new Abstract: Symbolic regression searches for an equation that explains observed data. Numerical error is commonly used to guide the search, but it alone can favor...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>ARIA:多代理系统的运行时检查与修正</title>
-      <link>https://arxiv.org/abs/2610.20780</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20780</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>ARIA：arXiv:2610.20780v1 Announce Type: new Abstract: In LLM-bas...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20780v1 Announce Type: new Abstract: In LLM-based multi-agent systems (MAS), a local mistake can propagate as other agents build on it, turning a correctable error into a failed task....
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>开放世界 AI:三大需求的故事</title>
-      <link>https://arxiv.org/abs/2610.20782</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20782</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>开放世界 AI：arXiv:2610.20782v1 Announce Type: new Abstract: The closed...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20782v1 Announce Type: new Abstract: The closed world asks AI for specialized competence and lets it manufacture the iid data its theory assumes: a fixed criterion licenses collecting...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>EvolvingBrain:面向开放世界多模态智能体自进化的自适应技能系统</title>
-      <link>https://arxiv.org/abs/2610.20786</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20786</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>EvolvingBrain：arXiv:2610.20786v1 Announce Type: new Abstract: Multi-moda...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20786v1 Announce Type: new Abstract: Multi-modal agents have made significant progress in interacting with open worlds. However, their ability to self-evolve remains limited. Supervised...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>当推理轨迹与证据冲突:答案配置如何影响证据遵循</title>
-      <link>https://arxiv.org/abs/2610.20805</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20805</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>当推理轨迹与证据冲突：arXiv:2610.20805v1 Announce Type: new Abstract: A reasonin...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20805v1 Announce Type: new Abstract: A reasoning trace retained at answer time plays two roles: it can raise accuracy, and it can compete with the current evidence when the two disagree....
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>一种自进化的智能体，自主生长其领域特定语言:无Oracle的精确问答算子归纳</title>
-      <link>https://arxiv.org/abs/2610.20809</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20809</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>一种自进化的智能体：arXiv:2610.20809v1 Announce Type: new Abstract: A self-imp...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20809v1 Announce Type: new Abstract: A self-improving agent has to decide which new skills to keep, and in practice it keeps whatever earns a high reward, convinces a judge model, or...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>基于置信度校准的推理扩展:评估器引导的测试时推理</title>
-      <link>https://arxiv.org/abs/2610.20836</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20836</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>基于置信度校准的推理扩展：arXiv:2610.20836v1 Announce Type: new Abstract: Evaluator-...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20836v1 Announce Type: new Abstract: Evaluator-guided reasoning presents a local control problem at every step: trust the current answer, return a fallback, or spend more inference. We...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>协同进化，分道扬镳:自进化智能体中的技能-策略共演化陷阱</title>
-      <link>https://arxiv.org/abs/2610.20845</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20845</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>协同进化：arXiv:2610.20845v1 Announce Type: new Abstract: Skill-poli...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20845v1 Announce Type: new Abstract: Skill-policy co-evolution, in which an agent&apos;s policy model and its skill bank improve each other during training, is a promising paradigm for...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>针对运动物体的预见性常识推理:基于ASP的交互轨迹预测框架</title>
-      <link>https://arxiv.org/abs/2610.20867</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20867</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>针对运动物体的预见性常识推理：arXiv:2610.20867v1 Announce Type: new Abstract: We present...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20867v1 Announce Type: new Abstract: We present a general declarative framework for anticipatory reasoning about interactive motion in complex dynamic environments. Our focus is on...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>多层级AI可及性模型(MAIAM):面向前沿AI安全的适度访问与能力边界</title>
-      <link>https://arxiv.org/abs/2610.20921</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20921</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>多层级AI可及性模型(MAIAM)：arXiv:2610.20921v1 Announce Type: new Abstract: Most debat...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20921v1 Announce Type: new Abstract: Most debate about releasing capable AI systems treats the choice as binary: keep the model behind an API, or publish the weights. That framing runs...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>SkillNEO:智能体技能的非精英主义演化优化</title>
-      <link>https://arxiv.org/abs/2610.20926</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20926</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>SkillNEO：arXiv:2610.20926v1 Announce Type: new Abstract: Agent skil...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20926v1 Announce Type: new Abstract: Agent skills turn procedural knowledge into reusable artifacts, allowing LLM agents to accumulate and refine expertise through experience. Building on...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>RAC:面向约束驱动工程任务的关系型智能体契约</title>
-      <link>https://arxiv.org/abs/2610.20935</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20935</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>RAC：arXiv:2610.20935v1 Announce Type: new Abstract: Engineerin...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20935v1 Announce Type: new Abstract: Engineering agents must produce artifacts that satisfy exact, coupled constraints. Existing solutions often require agents to make semantic decisions...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>MAI-Gym:跨移动与电脑环境的GUI智能体评估与强化学习训练一站式开放平台</title>
-      <link>https://arxiv.org/abs/2610.20939</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20939</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>MAI-Gym：arXiv:2610.20939v1 Announce Type: new Abstract: Online rei...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20939v1 Announce Type: new Abstract: Online reinforcement learning (RL) with verifiable rewards has driven rapid progress in mathematics, coding, and tool use, but scaling this success to...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>StepSafe:基于情境感知安全推理的及时干预学习</title>
-      <link>https://arxiv.org/abs/2610.20960</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20960</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>StepSafe：arXiv:2610.20960v1 Announce Type: new Abstract: Safety in...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.20960v1 Announce Type: new Abstract: Safety in agentic systems is inherently sequential: whether an action is safe depends on prior actions, tool outputs, information disclosures, and...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>MSP:无需配对跨模态数据的多模态大模型模态自博弈训练方法</title>
-      <link>https://arxiv.org/abs/2610.20965</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.20965</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>MSP：arXiv:2610.20965v1 Announce Type: new Abstract: Large mult...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.20965v1 Announce Type: new Abstract: Large multimodal models have achieved remarkable progress by scaling model capacity and training on massive paired multimodal data. However, this...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>高性能计算作业调度的深度强化学习:一项统计评估</title>
-      <link>https://arxiv.org/abs/2610.21008</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.21008</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>高性能计算作业调度的深度强化学习：arXiv:2610.21008v1 Announce Type: new Abstract: Deep Reinf...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.21008v1 Announce Type: new Abstract: Deep Reinforcement Learning (DRL) offers learned job selection for High-Performance Computing (HPC), but performance against heuristics alone does not...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>失败是成功之母:通过基础 hindsight 恢复监督信号</title>
-      <link>https://arxiv.org/abs/2610.21018</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.21018</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>失败是成功之母：arXiv:2610.21018v1 Announce Type: new Abstract: When every...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.21018v1 Announce Type: new Abstract: When every rollout for a problem fails, GRPO receives neither a successful exemplar nor a nonzero group-relative advantage, so it learns nothing from...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>学会何时退出:微调语言智能体中的课程覆盖与规则特定失败</title>
-      <link>https://arxiv.org/abs/2610.21045</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.21045</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>学会何时退出：arXiv:2610.21045v1 Announce Type: new Abstract: Tool-using...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.21045v1 Announce Type: new Abstract: Tool-using language agents must revise prepared actions when evidence changes or authority is revoked. Selective withdrawal means suspending affected...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Athanor:面向自主后训练研究的智能体原生系统</title>
-      <link>https://arxiv.org/abs/2610.21055</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.21055</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Athanor：arXiv:2610.21055v1 Announce Type: new Abstract: Recursive...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.21055v1 Announce Type: new Abstract: Recursive self-improvement, in which AI systems build stronger AI systems, is one promising route to superintelligence. We study a weaker form that can...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>OmicsBench:基于研究规模生物信息学的AI代理长周期多轮基准测试</title>
-      <link>https://arxiv.org/abs/2610.21074</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.21074</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>OmicsBench：arXiv:2610.21074v1 Announce Type: new Abstract: Computatio...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.21074v1 Announce Type: new Abstract: Computational biologists increasingly delegate substantial analyses to AI agents in long-horizon, multi-turn sessions, yet most benchmarks of agents&apos;...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Sci$\Pi$vot:在科学自动化代理关键时刻评估 principal-investigator 判断能力的基准测试</title>
-      <link>https://arxiv.org/abs/2610.21082</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.21082</guid>
-      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Sci$\Pi$vot：arXiv:2610.21082v1 Announce Type: new Abstract: Large lang...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.21082v1 Announce Type: new Abstract: Large language model (LLM) agents can keep scientific experiments running for months with little human supervision, but reliable autonomous research...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
