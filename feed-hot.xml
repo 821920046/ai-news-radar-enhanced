@@ -5,18 +5,33 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 11:49:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 14:36:34 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>DeepSeek V4.1 Flash 1017 现已在 AI Gateway 上线</title>
+      <link>https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</link>
+      <guid isPermaLink="true">https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+      <description>DeepSeek V4.1 Flash 1017 已在 AI Gateway 上线，来自官方更新源，适合直接判断产品变化。
+
+DeepSeek V4.1 Flash 1017 已在 AI Gateway 上线。该版本为小幅更新，提升了推理、编码、智能体任务及图像理解能力。
+
+信号等级 B · 评分 67.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
     <item>
       <title>anthropics/claude-code</title>
       <link>https://github.com/anthropics/claude-code</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-code</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>anthropic、claude：Claude Code is an agentic coding tool that lives in your t...，适合进一步验证代码、协议或社区采用情况。
+      <description>anthropic、claude：Claude Code是一个集成于终端的智能编码助手，能够深度理解代码库，通过自然语言指令自动执行常规任务、解析复杂...，适合进一步验证代码、协议或社区采用情况。
 
-Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
+Claude Code是一个集成于终端的智能编码助手，能够深度理解代码库，通过自然语言指令自动执行常规任务、解析复杂代码并管理Git工作流，显著提升开发效率。
 
-信号等级 A · 评分 71.8</description>
+信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>智能体</category>
@@ -28,9 +43,9 @@ Claude Code is an agentic coding tool that lives in your terminal, understands y
       <link>https://github.com/stablyai/orca</link>
       <guid isPermaLink="true">https://github.com/stablyai/orca</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>stablyai/orca：Orca is the place for working with a fleet of agents (e.g....，适合关注自动化任务和多 Agent 协作演进。
+      <description>stablyai/orca：Orca 是一个用于管理代理舰队（如 Grok Bot、Codex）的平台，支持使用个人订阅运行任何编码代理，可在桌...，适合关注自动化任务和多 Agent 协作演进。
 
-Orca is the place for working with a fleet of agents (e.g. Grok Bot, Codex). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.
+Orca 是一个用于管理代理舰队（如 Grok Bot、Codex）的平台，支持使用个人订阅运行任何编码代理，可在桌面、移动端和远程运行时使用。
 
 信号等级 B · 评分 65.4</description>
       <category>开源热榜</category>
@@ -39,26 +54,13 @@ Orca is the place for working with a fleet of agents (e.g. Grok Bot, Codex). Run
       <category>编码工具</category>
     </item>
     <item>
-      <title>Replit CEO 称已不再与 Anthropic 合作</title>
-      <link>https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</guid>
-      <pubDate>Fri, 16 Oct 2026 21:22:28 +0000</pubDate>
-      <description>Anthropic：Masad said the decision was made for a number of different...，适合判断资金、客户和生态格局的变化。
-
-Masad said the decision was made for a number of different reasons, including cost. Replit announced a partnership with OpenAI in August, but there was never any indication that it was no longer with...
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>行业动态</category>
-    </item>
-    <item>
       <title>印度 CERT-In 通报多家 AI 厂商的智能体在测试中访问组织敏感数据</title>
       <link>https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</guid>
       <pubDate>Fri, 16 Oct 2026 17:52:24 +0000</pubDate>
-      <description>印度 CERT-In 通报多家 AI 厂...：The agents got in through credentials and connection setti...，适合跟进 AI 风险、治理和可信边界。
+      <description>印度 CERT-In 通报多家 AI 厂...：攻击者通过暴露在应用配置、公开代码仓库和过度宽松云角色中的凭证和连接设置获取了入口，适合跟进 AI 风险、治理和可信边界。
 
-The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.
+攻击者通过暴露在应用配置、公开代码仓库和过度宽松云角色中的凭证和连接设置获取了入口。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -71,9 +73,9 @@ The agents got in through credentials and connection settings left exposed in ap
       <link>https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</guid>
       <pubDate>Fri, 16 Oct 2026 16:01:37 +0000</pubDate>
-      <description>Elorian 发布首个模型 Glimp...：According to Elorian&apos;s evaluations, Glimpse outperforms ev...，适合关注内容生产和交互形态的新变化。
+      <description>Elorian 发布首个模型 Glimp...：根据Elorian的评估，Glimpse在科学图表推理和短视频字幕生成方面的表现甚至超越了GPT-6 Astra，在...，适合关注内容生产和交互形态的新变化。
 
-According to Elorian&apos;s evaluations, Glimpse outperforms even GPT-6 Astra on scientific chart reasoning and short-form video captioning, with competitive results on other visual reasoning tasks.
+根据Elorian的评估，Glimpse在科学图表推理和短视频字幕生成方面的表现甚至超越了GPT-6 Astra，在其他视觉推理任务上也取得了具有竞争力的成绩。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -84,57 +86,13 @@ According to Elorian&apos;s evaluations, Glimpse outperforms even GPT-6 Astra on
       <category>部署推理</category>
     </item>
     <item>
-      <title>Replit CEO：未来工作是「自动驾驶公司」</title>
-      <link>https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company</guid>
-      <pubDate>Fri, 16 Oct 2026 12:55:09 +0000</pubDate>
-      <description>Replit CEO Amjad Masad envisions a future of “self-driving...，来自官方更新源，适合直接判断产品变化。
-
-Replit CEO Amjad Masad envisions a future of “self-driving companies,” where AI agents handle day-to-day tasks and people focus on higher-level decisions.
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>智能体</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>MadsLorentzen/ai-job-search</title>
-      <link>https://github.com/MadsLorentzen/ai-job-search</link>
-      <guid isPermaLink="true">https://github.com/MadsLorentzen/ai-job-search</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>MadsLorentzen/ai-job...：The job search that runs on your machine. AI job applicati...，适合进一步验证代码、协议或社区采用情况。
-
-The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.
-
-信号等级 B · 评分 61.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>DeepSeek V4.1 Flash 1017 现已在 AI Gateway 上线</title>
-      <link>https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</link>
-      <guid isPermaLink="true">https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</guid>
-      <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
-      <description>DeepSeek V4.1 Flash 1017 is now available on AI Gateway.De...，来自官方更新源，适合直接判断产品变化。
-
-DeepSeek V4.1 Flash 1017 is now available on AI Gateway.DeepSeek V4.1 Flash 1017 is a minor update to DeepSeek V4.1 Flash that improves reasoning, coding, agentic tasks, and image understanding.The...
-
-信号等级 B · 评分 61.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
       <title>anomalyco/opencode</title>
       <link>https://github.com/anomalyco/opencode</link>
       <guid isPermaLink="true">https://github.com/anomalyco/opencode</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>anomalyco/opencode：The open source coding agent.，适合关注自动化任务和多 Agent 协作演进。
+      <description>anomalyco/opencode：开源编码代理，适合关注自动化任务和多 Agent 协作演进。
 
-The open source coding agent.
+开源编码代理。
 
 信号等级 B · 评分 59.2</description>
       <category>开源热榜</category>
@@ -147,9 +105,9 @@ The open source coding agent.
       <link>https://github.com/akitaonrails/ai-memory</link>
       <guid isPermaLink="true">https://github.com/akitaonrails/ai-memory</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>akitaonrails/ai-memo...：Solution for long term memory for agent coding CLIs and to...，适合进一步验证代码、协议或社区采用情况。
+      <description>akitaonrails/ai-memo...：一种面向Agent编码CLI的长期记忆解决方案，支持跨供应商Agent间的无缝交接，提升协作效率与上下文连续性，适合进一步验证代码、协议或社区采用情况。
 
-Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors
+一种面向Agent编码CLI的长期记忆解决方案，支持跨供应商Agent间的无缝交接，提升协作效率与上下文连续性。
 
 信号等级 B · 评分 59.2</description>
       <category>开源热榜</category>
@@ -172,25 +130,26 @@ Solution for long term memory for agent coding CLIs and to facilitate handoff be
       <category>安全对齐</category>
     </item>
     <item>
-      <title>圆桌会议:与AI设计病毒的创造者对话</title>
-      <link>https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-      <description>圆桌会议：Listen to the session or watch below Can AI design new lif...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Replit CEO 称已不再与 Anthropic 合作</title>
+      <link>https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</guid>
+      <pubDate>Fri, 16 Oct 2026 21:22:28 +0000</pubDate>
+      <description>Anthropic：Replit于8月宣布与OpenAI达成合作，但此前从未迹象表明其合作关系已终止，适合判断资金、客户和生态格局的变化。
 
-Listen to the session or watch below Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose...
+马萨德表示，该决定出于多种原因，包括成本因素。Replit于8月宣布与OpenAI达成合作，但此前从未迹象表明其合作关系已终止。
 
-信号等级 B · 评分 56.2</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
+      <category>行业动态</category>
     </item>
     <item>
       <title>OpenAI 披露内部模型入侵加密钱包并攻破更多网站</title>
       <link>https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</guid>
       <pubDate>Fri, 16 Oct 2026 20:59:01 +0000</pubDate>
-      <description>OpenAI：The actions could have resulted in criminal charges had hu...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>OpenAI：若这些行为由人类操作而非AI执行，本可能面临刑事指控，适合作为今日 AI/科技情报流里的重点线索。
 
-The actions could have resulted in criminal charges had humans been behind the keyboard.
+若这些行为由人类操作而非AI执行，本可能面临刑事指控。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -200,9 +159,9 @@ The actions could have resulted in criminal charges had humans been behind the k
       <link>https://openai.com/index/itau-generative-ai</link>
       <guid isPermaLink="true">https://openai.com/index/itau-generative-ai</guid>
       <pubDate>Fri, 16 Oct 2026 19:00:00 +0000</pubDate>
-      <description>Itaú 如何为其整个客户群构建生成式...：With ia.i, a conversational interface, and the IARA govern...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Itaú 如何为其整个客户群构建生成式...：Itaú正利用对话界面ia.i和IARA治理平台，在巴西受监管严格的行业中，将其AI First战略应用于客户和员工，适合作为今日 AI/科技情报流里的重点线索。
 
-With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.
+Itaú正利用对话界面ia.i和IARA治理平台，在巴西受监管严格的行业中，将其AI First战略应用于客户和员工。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -212,9 +171,9 @@ With ia.i, a conversational interface, and the IARA governance platform, Itaú i
       <link>https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</link>
       <guid isPermaLink="true">https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:46 +0000</pubDate>
-      <description>PyTorch 为 TorchTitan...：Why Zephon，适合作为今日 AI/科技情报流里的重点线索。
+      <description>PyTorch 为 TorchTitan...：为什么是泽芬，适合作为今日 AI/科技情报流里的重点线索。
 
-Why Zephon? The data that a model sees during training is one of the most powerful levers we have for influencing how well it performs. Much of the day-to-day work... The post Bringing Elastically...
+为什么是泽芬？模型在训练过程中看到的数据是影响其性能的最有力的杠杆之一。大部分日常工作......帖子带来弹性......
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -224,9 +183,9 @@ Why Zephon? The data that a model sees during training is one of the most powerf
       <link>https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</link>
       <guid isPermaLink="true">https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>NVIDIA：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
+      <description>Amulya Vishwanath，曾任NVIDIA机器人平台产品营销负责人七年，表示当前机器人行业正处于“乐高时代...，来自官方更新源，适合直接判断产品变化。
 
-Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
+Amulya Vishwanath，曾任NVIDIA机器人平台产品营销负责人七年，表示当前机器人行业正处于“乐高时代”，即基础构件如执行器等模块化组件正逐步成熟，为系统化集成奠定基础。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -237,9 +196,9 @@ Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’
       <link>https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</link>
       <guid isPermaLink="true">https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>Nvidia、GPT：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
+      <description>Nvidia、GPT：NVIDIA前机器人平台产品营销负责人Amulya Vishwanath指出，当前机器人技术处于“乐高时代”，基础组...，适合跟进 AI 风险、治理和可信边界。
 
-Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
+NVIDIA前机器人平台产品营销负责人Amulya Vishwanath指出，当前机器人技术处于“乐高时代”，基础组件如执行器等已趋于成熟。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -251,137 +210,45 @@ Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’
       <link>https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</guid>
       <pubDate>Fri, 16 Oct 2026 15:33:49 +0000</pubDate>
-      <description>Vercel 数据显示 Jev 成为其史...：The data comes from Vercel&apos;s AI gateway, a unified API ser...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Vercel 数据显示 Jev 成为其史...：数据来源于Vercel的AI网关，这是一个类似OpenRouter的统一API服务，适合作为今日 AI/科技情报流里的重点线索。
 
-The data comes from Vercel&apos;s AI gateway, a unified API service similar to OpenRouter.
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Mark Wahlberg 谈 AI 在电影中的&quot;正确用法&quot;，并愿以 AI 分身延续其银幕遗产</title>
-      <link>https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy</guid>
-      <pubDate>Fri, 16 Oct 2026 14:26:51 +0000</pubDate>
-      <description>Mark Wahlberg 谈 AI 在...：Actor and angel investor Mark Wahlberg says he&apos;s OK with u...，适合作为今日 AI/科技情报流里的重点线索。
-
-Actor and angel investor Mark Wahlberg says he&apos;s OK with using AI in filmmaking, provided it&apos;s used &quot;to enhance what you&apos;re doing.&quot;
+数据来源于Vercel的AI网关，这是一个类似OpenRouter的统一API服务。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>Meta 新商业条款被指或可免费爬取出版商内容训练 AI</title>
-      <link>https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers</guid>
-      <pubDate>Fri, 16 Oct 2026 14:02:40 +0000</pubDate>
-      <description>Meta&apos;s new terms appear to give it permission to crawl and...，来自官方更新源，适合直接判断产品变化。
+      <title>Meta 调整前沿模型策略，涵盖开源与闭源</title>
+      <link>https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open</link>
+      <guid isPermaLink="true">https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open</guid>
+      <pubDate>Sat, 17 Oct 2026 14:06:54 +0000</pubDate>
+      <description>Meta：美国开放权重模型回归，适合作为今日 AI/科技情报流里的重点线索。
 
-Meta&apos;s new terms appear to give it permission to crawl and scrape websites &quot;associated&quot; with the businesses that use its platforms - including online publishers, according to a report from Nieman...
+美国开放权重模型回归！最新发布，性能对标闭源模型，支持本地部署与自由微调。
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Veritas 将防伪芯片扩展至珠宝、奖杯与香水瓶</title>
-      <link>https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods</guid>
-      <pubDate>Fri, 16 Oct 2026 14:00:00 +0000</pubDate>
-      <description>Veritas 将防伪芯片扩展至珠宝、奖...：Counterfeiters are getting better at replicating brands&apos; m...，适合跟进 AI 风险、治理和可信边界。
-
-Counterfeiters are getting better at replicating brands&apos; marks and passing off dupes, known as &quot;superfakes,&quot; as genuine items. A startup called Veritas wants to tackle the problem with its own chip...
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>hmjz100/LinkSwift</title>
-      <link>https://github.com/hmjz100/LinkSwift</link>
-      <guid isPermaLink="true">https://github.com/hmjz100/LinkSwift</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>hmjz100/LinkSwift：基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克...，适合关注 Agent 工具调用和工作流搭建。
-
-一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘
-
-信号等级 B · 评分 53.4</description>
-      <category>开源热榜</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>sliday/resume-job-matcher</title>
-      <link>https://github.com/sliday/resume-job-matcher</link>
-      <guid isPermaLink="true">https://github.com/sliday/resume-job-matcher</guid>
-      <pubDate>Sat, 17 Oct 2026 02:01:51 +0000</pubDate>
-      <description>sliday/resume-job-ma...：TypeScript CLI for AI resume screening: hard constraints g...，适合优先评估模型能力、价格和工具选型变化。
-
-TypeScript CLI for AI resume screening: hard constraints gate candidates out before scoring, every score cites the resume span behind it, and an embedding pre-filter keeps large pools cheap. Claude, GPT, or OpenRouter.
-
-信号等级 B · 评分 52.8</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>cursor/plugins</title>
-      <link>https://github.com/cursor/plugins</link>
-      <guid isPermaLink="true">https://github.com/cursor/plugins</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>cursor：Cursor plugin specification and official plugins，适合判断 AI 编程工作流会不会被改写。
-
-Cursor plugin specification and official plugins
-
-信号等级 B · 评分 52.5</description>
-      <category>开源热榜</category>
-      <category>编码工具</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
     </item>
     <item>
       <title>The Verge 一周实测 Nvidia RTX Spark N1X 五款笔记本</title>
       <link>https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</guid>
       <pubDate>Fri, 16 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;v...，来自官方更新源，适合直接判断产品变化。
+      <description>Nvidia发布了RTX Spark N1X处理器，我们集体测试了大量搭载这款“超级芯片”的强劲笔记本，来自官方更新源，适合直接判断产品变化。
 
-Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;ve been collectively testing a small fortune&apos;s worth of powerful laptops sporting this new &quot;superchip.&quot; RTX Spark is designed to be a...
+Nvidia发布了RTX Spark N1X处理器，我们集体测试了大量搭载这款“超级芯片”的强劲笔记本。RTX Spark旨在重新定义移动端AI性能，提供卓越的游戏体验与生产力平衡。
 
 信号等级 B · 评分 52.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>android/skills</title>
-      <link>https://github.com/android/skills</link>
-      <guid isPermaLink="true">https://github.com/android/skills</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>android/skills，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
+      <title>圆桌会议:与AI设计病毒的创造者对话</title>
+      <link>https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</link>
+      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+      <description>圆桌会议：收听或观看以下会议：人工智能可以设计新的生命形式吗，适合作为今日 AI/科技情报流里的重点线索。
 
-信号等级 B · 评分 51.9</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>开源许可合规现已普遍可用</title>
-      <link>https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available</guid>
-      <pubDate>Fri, 16 Oct 2026 14:00:32 +0000</pubDate>
-      <description>开源许可合规现已普遍可用：Enterprises can now manage their dependencies&amp;#8217，适合进一步验证代码、协议或社区采用情况。
-
-Enterprises can now manage their dependencies&amp;#8217; licenses at scale with sophisticated, ruleset-based checks that enforce a centralized policy. Open source license compliance is now generally...
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>下载:失败的社交媒体禁令，以及延长宠物寿命的方法</title>
-      <link>https://www.technologyreview.com/2026/10/16/1146864/the-download-failed-social-media-bans-and-extending-pets-lives</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/16/1146864/the-download-failed-social-media-bans-and-extending-pets-lives</guid>
-      <pubDate>Fri, 16 Oct 2026 12:10:00 +0000</pubDate>
-      <description>下载：This is today&amp;#8217，适合作为今日 AI/科技情报流里的重点线索。
-
-This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. Kids are outsmarting social media bans. That’s...
+收听或观看以下会议：人工智能可以设计新的生命形式吗？ 2025 年，斯坦福大学博士生塞缪尔·金 (Samuel King) 使用生成式 AI 模型提出了一个初步答案……
 
 信号等级 C · 评分 50.0</description>
       <category>Official AI Updates</category>
@@ -426,45 +293,6 @@ Claude reveals ECDSA curve origins
       <category>模型发布</category>
     </item>
     <item>
-      <title>苹果机器学习研究：在 Mac Studio 上通过 MLX 运行 Muse Spark Open</title>
-      <link>https://machinelearning.apple.com/research/mlx-distributed-inference</link>
-      <guid isPermaLink="true">https://machinelearning.apple.com/research/mlx-distributed-inference</guid>
-      <pubDate>Fri, 16 Oct 2026 17:04:46 +0000</pubDate>
-      <description>苹果机器学习研究：Apple ML Research: Muse Spark Open with MLX on Mac Studio，适合判断技术路线和后续产品化可能性。
-
-Apple ML Research: Muse Spark Open with MLX on Mac Studio
-
-信号等级 C · 评分 48.8</description>
-      <category>Buzzing</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Show HN: rStation——让我们构建自己的AI群集，共同解决千禧年难题</title>
-      <link>https://rstation.ai</link>
-      <guid isPermaLink="true">https://rstation.ai</guid>
-      <pubDate>Fri, 16 Oct 2026 14:41:53 +0000</pubDate>
-      <description>Show HN：rStation – Let&apos;&apos;s build our own AI swarm to solve Millenni...，适合判断技术路线和后续产品化可能性。
-
-rStation – Let&apos;&apos;s build our own AI swarm to solve Millennium Problems
-
-信号等级 C · 评分 48.8</description>
-      <category>Buzzing</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Show HN: Gemini 4 Argon 玩《星际争霸》</title>
-      <link>https://starskirmish.com/bench/v0-2</link>
-      <guid isPermaLink="true">https://starskirmish.com/bench/v0-2</guid>
-      <pubDate>Fri, 16 Oct 2026 14:25:42 +0000</pubDate>
-      <description>Gemini 4 Argon plays StarCraft，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-Gemini 4 Argon plays StarCraft
-
-信号等级 C · 评分 48.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
       <title>美国90%的工作时间都花在了人工智能基准测试未能充分覆盖的任务上</title>
       <link>https://www.mercor.com/research/labor-index/benchmark-map</link>
       <guid isPermaLink="true">https://www.mercor.com/research/labor-index/benchmark-map</guid>
@@ -477,16 +305,44 @@ Gemini 4 Argon plays StarCraft
       <category>Buzzing</category>
     </item>
     <item>
-      <title>评论：AI引发的担忧、特朗普日渐式微的石油影响力以及“中国冲击2.0”：五张图表解读本周金融动态</title>
-      <link>https://reut.rs/47jMAaj</link>
-      <guid isPermaLink="true">https://reut.rs/47jMAaj</guid>
-      <pubDate>Fri, 16 Oct 2026 17:20:58 +0000</pubDate>
-      <description>评论：COMMENTARY: AI jitters, Trump&apos;&apos;s fading oil clout and Chin...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>人工智能本该让园丁们省点事。Anthropic的机器人研究却让我开始考虑除草了。</title>
+      <link>https://www.businessinsider.com/anthropic-ai-robots-gardening-jobs-automation-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/anthropic-ai-robots-gardening-jobs-automation-2026-10</guid>
+      <pubDate>Sat, 17 Oct 2026 14:04:05 +0000</pubDate>
+      <description>AI was supposed to spare gardeners. Anthropic&apos;&apos;s robot res...，同时进入热榜视野，适合判断技术路线和后续产品化可能性。
 
-COMMENTARY: AI jitters, Trump&apos;&apos;s fading oil clout and China shock 2.0: The financial week in five charts
+AI was supposed to spare gardeners. Anthropic&apos;&apos;s robot research has me thinking about pulling weeds.
 
-信号等级 C · 评分 47.5</description>
+信号等级 C · 评分 46.8</description>
       <category>Buzzing</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Ask HN: 如何阻止Gemini Live询问“想了解更多关于……的信息吗？”</title>
+      <link>https://news.ycombinator.com/item?id=50131248</link>
+      <guid isPermaLink="true">https://news.ycombinator.com/item?id=50131248</guid>
+      <pubDate>Sat, 17 Oct 2026 14:04:05 +0000</pubDate>
+      <description>How do I stop Gemini Live from asking.&quot;Would like to know...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+How do I stop Gemini Live from asking.&quot;Would like to know more about..?&quot;
+
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Show HN: Vramkit——适用于大型语言模型（LLM）推理的无损VRAM压缩技术，可在MacBook上运行</title>
+      <link>https://github.com/SRKRZ23/vramkit</link>
+      <guid isPermaLink="true">https://github.com/SRKRZ23/vramkit</guid>
+      <pubDate>Sat, 17 Oct 2026 13:48:20 +0000</pubDate>
+      <description>Show HN：Vramkit – lossless VRAM compression for LLM inference, on...，适合进一步验证代码、协议或社区采用情况。
+
+Vramkit – lossless VRAM compression for LLM inference, on a MacBook
+
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
+      <category>开源</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>Show HN: Claude Code，使用 thevibehosting.com 进行部署 您的应用运行在 Linux 根目录下</title>
@@ -503,55 +359,16 @@ Claude Code, deploy using thevibehosting.com Your app on root Linux
       <category>部署推理</category>
     </item>
     <item>
-      <title>NitroStack - 在同一平台上构建、测试和部署 MCP 服务器</title>
-      <link>https://www.producthunt.com/r/NFV7LZ6PHSL5AT</link>
-      <guid isPermaLink="true">https://www.producthunt.com/r/NFV7LZ6PHSL5AT</guid>
-      <pubDate>Sat, 17 Oct 2026 08:16:16 +0000</pubDate>
-      <description>NitroStack - 在同一平台上构...：Build, test, and deploy MCP servers in one place，适合关注 Agent 工具调用和工作流搭建。
+      <title>“随行翻译”服务</title>
+      <link>https://www.basis.ai/blog/ship-your-interpreters</link>
+      <guid isPermaLink="true">https://www.basis.ai/blog/ship-your-interpreters</guid>
+      <pubDate>Sat, 17 Oct 2026 14:20:25 +0000</pubDate>
+      <description>“随行翻译”服务：Ship Your Interpreter，适合作为今日 AI/科技情报流里的重点线索。
 
-Build, test, and deploy MCP servers in one place
+Ship Your Interpreter
 
-信号等级 C · 评分 46.8</description>
+信号等级 C · 评分 46.5</description>
       <category>Buzzing</category>
-      <category>MCP/工具</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>70 美金的 Beyond Compare，我让 Gemini 4 和 DeepSeek 造个开源免费版（Day 2）</title>
-      <link>https://juejin.cn/post/7696894428132294665</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7696894428132294665</guid>
-      <pubDate>Sat, 17 Oct 2026 07:17:07 +0000</pubDate>
-      <description>Gemini、DeepSeek：70 美金的 Beyond Compare，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 46.8</description>
-      <category>NewsNow</category>
-      <category>模型发布</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>从零手搓 RAG 系列之给大模型接上知识库</title>
-      <link>https://juejin.cn/post/7696354031849652259</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7696354031849652259</guid>
-      <pubDate>Sat, 17 Oct 2026 07:17:07 +0000</pubDate>
-      <description>从零手搓 RAG 系列之给大模型接上知识...：从零手搓 RAG 系列之给大模型接上知识库，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 46.8</description>
-      <category>NewsNow</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Chatway MCP - 让ChatGPT和Claude通过MCP回复客户支持工单</title>
-      <link>https://www.producthunt.com/r/3IXOP27GGFYKS2</link>
-      <guid isPermaLink="true">https://www.producthunt.com/r/3IXOP27GGFYKS2</guid>
-      <pubDate>Sat, 17 Oct 2026 07:12:07 +0000</pubDate>
-      <description>GPT和Claude通过MCP回复客户支持工单：Let ChatGPT &amp; Claude answer customer support tickets via M...，适合优先评估模型能力、价格和工具选型变化。
-
-Let ChatGPT &amp; Claude answer customer support tickets via MCP
-
-信号等级 C · 评分 46.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-      <category>MCP/工具</category>
     </item>
     <item>
       <title>WorkBuddy Intl 更新支持 DeepSeek-V4.1-Flash-1017，10 月 31 日前免费</title>
@@ -579,28 +396,68 @@ Anthropic&apos;&apos;s Clark says AI&apos;&apos;s impact accelerating quickly an
       <category>Buzzing</category>
     </item>
     <item>
-      <title>预售 16.98 万元起，MONA L05 攻入小鹏主品牌腹地</title>
-      <link>https://www.ifanr.com/1684729</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1684729</guid>
-      <pubDate>Fri, 16 Oct 2026 13:42:53 +0000</pubDate>
-      <description>预售 16.98 万元起：倒反天罡了，适合作为今日 AI/科技情报流里的重点线索。
+      <title>sliday/resume-job-matcher</title>
+      <link>https://github.com/sliday/resume-job-matcher</link>
+      <guid isPermaLink="true">https://github.com/sliday/resume-job-matcher</guid>
+      <pubDate>Sat, 17 Oct 2026 02:01:51 +0000</pubDate>
+      <description>sliday/resume-job-ma...：支持Claude、GPT或OpenRouter，适合优先评估模型能力、价格和工具选型变化。
 
-倒反天罡了。#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+TypeScript命令行工具用于AI简历筛选：硬性约束在评分前淘汰候选人，每个评分都标注对应的简历来源区间，嵌入预过滤使大规模简历库保持低成本。支持Claude、GPT或OpenRouter。
 
-信号等级 C · 评分 45.2</description>
-      <category>Official AI Updates</category>
+信号等级 C · 评分 46.5</description>
+      <category>开源热榜</category>
+      <category>模型发布</category>
     </item>
     <item>
-      <title>[AINews] 高端测试者 第一集</title>
-      <link>https://www.latent.space/p/ainews-high-taste-testers-ep-1</link>
-      <guid isPermaLink="true">https://www.latent.space/p/ainews-high-taste-testers-ep-1</guid>
-      <pubDate>Sat, 17 Oct 2026 07:47:38 +0000</pubDate>
-      <description>高端测试者 第一集：a quiet day lets us pilot a new show，适合作为今日 AI/科技情报流里的重点线索。
+      <title>NitroStack - 在同一平台上构建、测试和部署 MCP 服务器</title>
+      <link>https://www.producthunt.com/r/NFV7LZ6PHSL5AT</link>
+      <guid isPermaLink="true">https://www.producthunt.com/r/NFV7LZ6PHSL5AT</guid>
+      <pubDate>Sat, 17 Oct 2026 08:16:16 +0000</pubDate>
+      <description>NitroStack - 在同一平台上构...：Build, test, and deploy MCP servers in one place，适合关注 Agent 工具调用和工作流搭建。
 
-a quiet day lets us pilot a new show
+Build, test, and deploy MCP servers in one place
 
-信号等级 C · 评分 44.2</description>
-      <category>Official AI Updates</category>
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
+      <category>MCP/工具</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>70 美金的 Beyond Compare，我让 Gemini 4 和 DeepSeek 造个开源免费版（Day 2）</title>
+      <link>https://juejin.cn/post/7696894428132294665</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7696894428132294665</guid>
+      <pubDate>Sat, 17 Oct 2026 07:17:07 +0000</pubDate>
+      <description>Gemini、DeepSeek：70 美金的 Beyond Compare，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 42.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>从零手搓 RAG 系列之给大模型接上知识库</title>
+      <link>https://juejin.cn/post/7696354031849652259</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7696354031849652259</guid>
+      <pubDate>Sat, 17 Oct 2026 07:17:07 +0000</pubDate>
+      <description>从零手搓 RAG 系列之给大模型接上知识...：从零手搓 RAG 系列之给大模型接上知识库，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 42.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Chatway MCP - 让ChatGPT和Claude通过MCP回复客户支持工单</title>
+      <link>https://www.producthunt.com/r/3IXOP27GGFYKS2</link>
+      <guid isPermaLink="true">https://www.producthunt.com/r/3IXOP27GGFYKS2</guid>
+      <pubDate>Sat, 17 Oct 2026 07:12:07 +0000</pubDate>
+      <description>GPT和Claude通过MCP回复客户支持工单：Let ChatGPT &amp; Claude answer customer support tickets via M...，适合优先评估模型能力、价格和工具选型变化。
+
+Let ChatGPT &amp; Claude answer customer support tickets via MCP
+
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+      <category>MCP/工具</category>
     </item>
     <item>
       <title>Ask HN: 我应该使用Claude Code来制作一个替代版的Apple IIGS ROM吗？</title>
@@ -670,6 +527,143 @@ Dev Opportunity Radar #21: 500K Y Combinator Funding, Bolt Builders Week, and AI
 信号等级 C · 评分 42.8</description>
       <category>NewsNow</category>
       <category>模型发布</category>
+    </item>
+    <item>
+      <title>Claude揭示ECDSA曲线起源</title>
+      <link>https://news.ycombinator.com/item?id=50122800</link>
+      <guid isPermaLink="true">https://news.ycombinator.com/item?id=50122800</guid>
+      <pubDate>Fri, 16 Oct 2026 18:55:59 +0000</pubDate>
+      <description>Claude揭示ECDSA曲线起源，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 42.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>越狱版 PS5 上的 Llama.cpp：在主机上原生运行任何 GGUF 模型</title>
+      <link>https://github.com/cobanov/PS5LM</link>
+      <guid isPermaLink="true">https://github.com/cobanov/PS5LM</guid>
+      <pubDate>Fri, 16 Oct 2026 18:32:35 +0000</pubDate>
+      <description>Llama.cpp：在主机上原生运行任何 GGUF 模型，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 42.8</description>
+      <category>Zeli</category>
+      <category>模型发布</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>使用 Claude 设计更高效的量子电路</title>
+      <link>https://news.ycombinator.com/item?id=50121939</link>
+      <guid isPermaLink="true">https://news.ycombinator.com/item?id=50121939</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:18 +0000</pubDate>
+      <description>使用 Claude 设计更高效的量子电路，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 42.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>苹果机器学习研究：在 Mac Studio 上通过 MLX 运行 Muse Spark Open</title>
+      <link>https://machinelearning.apple.com/research/mlx-distributed-inference</link>
+      <guid isPermaLink="true">https://machinelearning.apple.com/research/mlx-distributed-inference</guid>
+      <pubDate>Fri, 16 Oct 2026 17:04:46 +0000</pubDate>
+      <description>苹果机器学习研究：Apple ML Research: Muse Spark Open with MLX on Mac Studio，适合判断技术路线和后续产品化可能性。
+
+Apple ML Research: Muse Spark Open with MLX on Mac Studio
+
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Show HN: 由智能体驱动的自治社区研究实验室</title>
+      <link>https://lemmapark.com</link>
+      <guid isPermaLink="true">https://lemmapark.com</guid>
+      <pubDate>Fri, 16 Oct 2026 16:17:43 +0000</pubDate>
+      <description>Show HN：Autonomous community research lab powered by agents，适合关注自动化任务和多 Agent 协作演进。
+
+Autonomous community research lab powered by agents
+
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Show HN: PocketConsole——通过 iPhone 在自己的服务器上运行 Claude Code</title>
+      <link>https://apps.apple.com/us/app/pocketconsole-code-from-phone/id6818196856</link>
+      <guid isPermaLink="true">https://apps.apple.com/us/app/pocketconsole-code-from-phone/id6818196856</guid>
+      <pubDate>Fri, 16 Oct 2026 16:17:43 +0000</pubDate>
+      <description>PocketConsole – Run Claude Code on your own server from yo...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+PocketConsole – Run Claude Code on your own server from your iPhone
+
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Show HN: Llmspeed——在购买硬件之前，先体验一下本地 LLM 的运行速度</title>
+      <link>https://llmspeed.dev</link>
+      <guid isPermaLink="true">https://llmspeed.dev</guid>
+      <pubDate>Sat, 17 Oct 2026 04:48:13 +0000</pubDate>
+      <description>Show HN：Llmspeed – feel how fast a local LLM runs before you buy t...，适合作为今日 AI/科技情报流里的重点线索。
+
+Llmspeed – feel how fast a local LLM runs before you buy the hardware
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>Anthropic在最新一轮芯片融资中为黑石提供了两位数的收益率</title>
+      <link>https://www.ft.com/content/cb4034e1-475f-40b9-a5f9-256e91aacb89?syn-25a6b1a6=1</link>
+      <guid isPermaLink="true">https://www.ft.com/content/cb4034e1-475f-40b9-a5f9-256e91aacb89?syn-25a6b1a6=1</guid>
+      <pubDate>Sat, 17 Oct 2026 01:04:27 +0000</pubDate>
+      <description>Anthropic offers Blackstone double-digit yield in latest c...，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
+
+Anthropic offers Blackstone double-digit yield in latest chip financing
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Anthropic 悄悄向立法者推介了其自主拟定的 AI 安全法案 - Politico</title>
+      <link>https://news.google.com/rss/articles/CBMieEFVX3lxTE0ydWVrbHdHeGNraEdTSHQ5eExwZ2lLRUU1U1BoVFJUTWNLenpWTXJOMHNnWnhaa0thQXlRbk1KdEliVVVGUEJXZWwtcWtUZE9Ielo2X05DaHJKSmJpd05rRl9vMWdQQUE4ZnVRRFBLQ3hlcm9FNG12bg?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
+      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMieEFVX3lxTE0ydWVrbHdHeGNraEdTSHQ5eExwZ2lLRUU1U1BoVFJUTWNLenpWTXJOMHNnWnhaa0thQXlRbk1KdEliVVVGUEJXZWwtcWtUZE9Ielo2X05DaHJKSmJpd05rRl9vMWdQQUE4ZnVRRFBLQ3hlcm9FNG12bg?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
+      <pubDate>Sat, 17 Oct 2026 01:04:27 +0000</pubDate>
+      <description>Anthropic quietly pitches its own AI safety bill to lawmak...，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
+
+Anthropic quietly pitches its own AI safety bill to lawmakers
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>你会让大型语言模型（LLM）既编写测试用例，又编写代码吗？</title>
+      <link>https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your</link>
+      <guid isPermaLink="true">https://lobste.rs/s/miwcai/do_you_let_llms_write_both_your_tests_your</guid>
+      <pubDate>Sat, 17 Oct 2026 01:04:27 +0000</pubDate>
+      <description>你会让大型语言模型（LLM）既编写测试用...：Do you let LLMs write both your tests and your code，适合作为今日 AI/科技情报流里的重点线索。
+
+Do you let LLMs write both your tests and your code?
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>FLUX 3 图片 克莱因</title>
+      <link>https://bfl.ai/blog/flux-3-image-klein</link>
+      <guid isPermaLink="true">https://bfl.ai/blog/flux-3-image-klein</guid>
+      <pubDate>Sat, 17 Oct 2026 00:48:15 +0000</pubDate>
+      <description>FLUX 3 图片 克莱因：FLUX 3 Image Klein，适合关注内容生产和交互形态的新变化。
+
+FLUX 3 Image Klein
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
+      <category>多模态</category>
     </item>
   </channel>
 </rss>

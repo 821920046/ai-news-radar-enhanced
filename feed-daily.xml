@@ -5,16 +5,28 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 11:49:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 14:36:34 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Meta 调整前沿模型策略，涵盖开源与闭源</title>
+      <link>https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open</link>
+      <guid isPermaLink="true">https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open</guid>
+      <pubDate>Sat, 17 Oct 2026 14:06:54 +0000</pubDate>
+      <description>Meta：美国开放权重模型回归，适合作为今日 AI/科技情报流里的重点线索。
+
+美国开放权重模型回归！最新发布，性能对标闭源模型，支持本地部署与自由微调。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+    </item>
     <item>
       <title>stablyai/orca</title>
       <link>https://github.com/stablyai/orca</link>
       <guid isPermaLink="true">https://github.com/stablyai/orca</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>stablyai/orca：Orca is the place for working with a fleet of agents (e.g....，适合关注自动化任务和多 Agent 协作演进。
+      <description>stablyai/orca：Orca 是一个用于管理代理舰队（如 Grok Bot、Codex）的平台，支持使用个人订阅运行任何编码代理，可在桌...，适合关注自动化任务和多 Agent 协作演进。
 
-Orca is the place for working with a fleet of agents (e.g. Grok Bot, Codex). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.
+Orca 是一个用于管理代理舰队（如 Grok Bot、Codex）的平台，支持使用个人订阅运行任何编码代理，可在桌面、移动端和远程运行时使用。
 
 信号等级 B · 评分 65.4</description>
       <category>开源热榜</category>
@@ -27,9 +39,9 @@ Orca is the place for working with a fleet of agents (e.g. Grok Bot, Codex). Run
       <link>https://github.com/anomalyco/opencode</link>
       <guid isPermaLink="true">https://github.com/anomalyco/opencode</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>anomalyco/opencode：The open source coding agent.，适合关注自动化任务和多 Agent 协作演进。
+      <description>anomalyco/opencode：开源编码代理，适合关注自动化任务和多 Agent 协作演进。
 
-The open source coding agent.
+开源编码代理。
 
 信号等级 B · 评分 59.2</description>
       <category>开源热榜</category>
@@ -42,11 +54,11 @@ The open source coding agent.
       <link>https://github.com/anthropics/claude-code</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-code</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>anthropic、claude：Claude Code is an agentic coding tool that lives in your t...，适合进一步验证代码、协议或社区采用情况。
+      <description>anthropic、claude：Claude Code是一个集成于终端的智能编码助手，能够深度理解代码库，通过自然语言指令自动执行常规任务、解析复杂...，适合进一步验证代码、协议或社区采用情况。
 
-Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
+Claude Code是一个集成于终端的智能编码助手，能够深度理解代码库，通过自然语言指令自动执行常规任务、解析复杂代码并管理Git工作流，显著提升开发效率。
 
-信号等级 A · 评分 71.8</description>
+信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>智能体</category>
@@ -58,28 +70,15 @@ Claude Code is an agentic coding tool that lives in your terminal, understands y
       <link>https://github.com/akitaonrails/ai-memory</link>
       <guid isPermaLink="true">https://github.com/akitaonrails/ai-memory</guid>
       <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
-      <description>akitaonrails/ai-memo...：Solution for long term memory for agent coding CLIs and to...，适合进一步验证代码、协议或社区采用情况。
+      <description>akitaonrails/ai-memo...：一种面向Agent编码CLI的长期记忆解决方案，支持跨供应商Agent间的无缝交接，提升协作效率与上下文连续性，适合进一步验证代码、协议或社区采用情况。
 
-Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors
+一种面向Agent编码CLI的长期记忆解决方案，支持跨供应商Agent间的无缝交接，提升协作效率与上下文连续性。
 
 信号等级 B · 评分 59.2</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>智能体</category>
       <category>编码工具</category>
-    </item>
-    <item>
-      <title>sliday/resume-job-matcher</title>
-      <link>https://github.com/sliday/resume-job-matcher</link>
-      <guid isPermaLink="true">https://github.com/sliday/resume-job-matcher</guid>
-      <pubDate>Sat, 17 Oct 2026 02:01:51 +0000</pubDate>
-      <description>sliday/resume-job-ma...：TypeScript CLI for AI resume screening: hard constraints g...，适合优先评估模型能力、价格和工具选型变化。
-
-TypeScript CLI for AI resume screening: hard constraints gate candidates out before scoring, every score cites the resume span behind it, and an embedding pre-filter keeps large pools cheap. Claude, GPT, or OpenRouter.
-
-信号等级 B · 评分 52.8</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
     </item>
     <item>
       <title>早报｜iPhone Duo开启预购，发货排到明年/特斯拉超跑发布会现场飞了/华为阔直板出货量超71万台</title>
@@ -100,11 +99,11 @@ TypeScript CLI for AI resume screening: hard constraints gate candidates out bef
       <link>https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</link>
       <guid isPermaLink="true">https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</guid>
       <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
-      <description>DeepSeek V4.1 Flash 1017 is now available on AI Gateway.De...，来自官方更新源，适合直接判断产品变化。
+      <description>DeepSeek V4.1 Flash 1017 已在 AI Gateway 上线，来自官方更新源，适合直接判断产品变化。
 
-DeepSeek V4.1 Flash 1017 is now available on AI Gateway.DeepSeek V4.1 Flash 1017 is a minor update to DeepSeek V4.1 Flash that improves reasoning, coding, agentic tasks, and image understanding.The...
+DeepSeek V4.1 Flash 1017 已在 AI Gateway 上线。该版本为小幅更新，提升了推理、编码、智能体任务及图像理解能力。
 
-信号等级 B · 评分 61.2</description>
+信号等级 B · 评分 67.2</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>模型发布</category>
@@ -115,11 +114,11 @@ DeepSeek V4.1 Flash 1017 is now available on AI Gateway.DeepSeek V4.1 Flash 1017
       <link>https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</guid>
       <pubDate>Fri, 16 Oct 2026 21:22:28 +0000</pubDate>
-      <description>Anthropic：Masad said the decision was made for a number of different...，适合判断资金、客户和生态格局的变化。
+      <description>Anthropic：Replit于8月宣布与OpenAI达成合作，但此前从未迹象表明其合作关系已终止，适合判断资金、客户和生态格局的变化。
 
-Masad said the decision was made for a number of different reasons, including cost. Replit announced a partnership with OpenAI in August, but there was never any indication that it was no longer with...
+马萨德表示，该决定出于多种原因，包括成本因素。Replit于8月宣布与OpenAI达成合作，但此前从未迹象表明其合作关系已终止。
 
-信号等级 B · 评分 62.2</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
@@ -128,9 +127,9 @@ Masad said the decision was made for a number of different reasons, including co
       <link>https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</guid>
       <pubDate>Fri, 16 Oct 2026 20:59:01 +0000</pubDate>
-      <description>OpenAI：The actions could have resulted in criminal charges had hu...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>OpenAI：若这些行为由人类操作而非AI执行，本可能面临刑事指控，适合作为今日 AI/科技情报流里的重点线索。
 
-The actions could have resulted in criminal charges had humans been behind the keyboard.
+若这些行为由人类操作而非AI执行，本可能面临刑事指控。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -140,23 +139,11 @@ The actions could have resulted in criminal charges had humans been behind the k
       <link>https://openai.com/index/itau-generative-ai</link>
       <guid isPermaLink="true">https://openai.com/index/itau-generative-ai</guid>
       <pubDate>Fri, 16 Oct 2026 19:00:00 +0000</pubDate>
-      <description>Itaú 如何为其整个客户群构建生成式...：With ia.i, a conversational interface, and the IARA govern...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Itaú 如何为其整个客户群构建生成式...：Itaú正利用对话界面ia.i和IARA治理平台，在巴西受监管严格的行业中，将其AI First战略应用于客户和员工，适合作为今日 AI/科技情报流里的重点线索。
 
-With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.
+Itaú正利用对话界面ia.i和IARA治理平台，在巴西受监管严格的行业中，将其AI First战略应用于客户和员工。
 
 信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>圆桌会议:与AI设计病毒的创造者对话</title>
-      <link>https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-      <description>圆桌会议：Listen to the session or watch below Can AI design new lif...，适合作为今日 AI/科技情报流里的重点线索。
-
-Listen to the session or watch below Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose...
-
-信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -164,9 +151,9 @@ Listen to the session or watch below Can AI design new life forms? In 2025, Stan
       <link>https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</guid>
       <pubDate>Fri, 16 Oct 2026 17:52:24 +0000</pubDate>
-      <description>印度 CERT-In 通报多家 AI 厂...：The agents got in through credentials and connection setti...，适合跟进 AI 风险、治理和可信边界。
+      <description>印度 CERT-In 通报多家 AI 厂...：攻击者通过暴露在应用配置、公开代码仓库和过度宽松云角色中的凭证和连接设置获取了入口，适合跟进 AI 风险、治理和可信边界。
 
-The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.
+攻击者通过暴露在应用配置、公开代码仓库和过度宽松云角色中的凭证和连接设置获取了入口。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -179,9 +166,9 @@ The agents got in through credentials and connection settings left exposed in ap
       <link>https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</link>
       <guid isPermaLink="true">https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:46 +0000</pubDate>
-      <description>PyTorch 为 TorchTitan...：Why Zephon，适合作为今日 AI/科技情报流里的重点线索。
+      <description>PyTorch 为 TorchTitan...：为什么是泽芬，适合作为今日 AI/科技情报流里的重点线索。
 
-Why Zephon? The data that a model sees during training is one of the most powerful levers we have for influencing how well it performs. Much of the day-to-day work... The post Bringing Elastically...
+为什么是泽芬？模型在训练过程中看到的数据是影响其性能的最有力的杠杆之一。大部分日常工作......帖子带来弹性......
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -191,9 +178,9 @@ Why Zephon? The data that a model sees during training is one of the most powerf
       <link>https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</link>
       <guid isPermaLink="true">https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>NVIDIA：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
+      <description>Amulya Vishwanath，曾任NVIDIA机器人平台产品营销负责人七年，表示当前机器人行业正处于“乐高时代...，来自官方更新源，适合直接判断产品变化。
 
-Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
+Amulya Vishwanath，曾任NVIDIA机器人平台产品营销负责人七年，表示当前机器人行业正处于“乐高时代”，即基础构件如执行器等模块化组件正逐步成熟，为系统化集成奠定基础。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -204,9 +191,9 @@ Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’
       <link>https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</link>
       <guid isPermaLink="true">https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>Nvidia、GPT：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
+      <description>Nvidia、GPT：NVIDIA前机器人平台产品营销负责人Amulya Vishwanath指出，当前机器人技术处于“乐高时代”，基础组...，适合跟进 AI 风险、治理和可信边界。
 
-Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
+NVIDIA前机器人平台产品营销负责人Amulya Vishwanath指出，当前机器人技术处于“乐高时代”，基础组件如执行器等已趋于成熟。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -218,9 +205,9 @@ Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’
       <link>https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</guid>
       <pubDate>Fri, 16 Oct 2026 16:01:37 +0000</pubDate>
-      <description>Elorian 发布首个模型 Glimp...：According to Elorian&apos;s evaluations, Glimpse outperforms ev...，适合关注内容生产和交互形态的新变化。
+      <description>Elorian 发布首个模型 Glimp...：根据Elorian的评估，Glimpse在科学图表推理和短视频字幕生成方面的表现甚至超越了GPT-6 Astra，在...，适合关注内容生产和交互形态的新变化。
 
-According to Elorian&apos;s evaluations, Glimpse outperforms even GPT-6 Astra on scientific chart reasoning and short-form video captioning, with competitive results on other visual reasoning tasks.
+根据Elorian的评估，Glimpse在科学图表推理和短视频字幕生成方面的表现甚至超越了GPT-6 Astra，在其他视觉推理任务上也取得了具有竞争力的成绩。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -235,9 +222,9 @@ According to Elorian&apos;s evaluations, Glimpse outperforms even GPT-6 Astra on
       <link>https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</guid>
       <pubDate>Fri, 16 Oct 2026 15:33:49 +0000</pubDate>
-      <description>Vercel 数据显示 Jev 成为其史...：The data comes from Vercel&apos;s AI gateway, a unified API ser...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Vercel 数据显示 Jev 成为其史...：数据来源于Vercel的AI网关，这是一个类似OpenRouter的统一API服务，适合作为今日 AI/科技情报流里的重点线索。
 
-The data comes from Vercel&apos;s AI gateway, a unified API service similar to OpenRouter.
+数据来源于Vercel的AI网关，这是一个类似OpenRouter的统一API服务。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -247,119 +234,12 @@ The data comes from Vercel&apos;s AI gateway, a unified API service similar to O
       <link>https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</guid>
       <pubDate>Fri, 16 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;v...，来自官方更新源，适合直接判断产品变化。
+      <description>Nvidia发布了RTX Spark N1X处理器，我们集体测试了大量搭载这款“超级芯片”的强劲笔记本，来自官方更新源，适合直接判断产品变化。
 
-Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;ve been collectively testing a small fortune&apos;s worth of powerful laptops sporting this new &quot;superchip.&quot; RTX Spark is designed to be a...
+Nvidia发布了RTX Spark N1X处理器，我们集体测试了大量搭载这款“超级芯片”的强劲笔记本。RTX Spark旨在重新定义移动端AI性能，提供卓越的游戏体验与生产力平衡。
 
 信号等级 B · 评分 52.0</description>
       <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Mark Wahlberg 谈 AI 在电影中的&quot;正确用法&quot;，并愿以 AI 分身延续其银幕遗产</title>
-      <link>https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy</guid>
-      <pubDate>Fri, 16 Oct 2026 14:26:51 +0000</pubDate>
-      <description>Mark Wahlberg 谈 AI 在...：Actor and angel investor Mark Wahlberg says he&apos;s OK with u...，适合作为今日 AI/科技情报流里的重点线索。
-
-Actor and angel investor Mark Wahlberg says he&apos;s OK with using AI in filmmaking, provided it&apos;s used &quot;to enhance what you&apos;re doing.&quot;
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Meta 新商业条款被指或可免费爬取出版商内容训练 AI</title>
-      <link>https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers</guid>
-      <pubDate>Fri, 16 Oct 2026 14:02:40 +0000</pubDate>
-      <description>Meta&apos;s new terms appear to give it permission to crawl and...，来自官方更新源，适合直接判断产品变化。
-
-Meta&apos;s new terms appear to give it permission to crawl and scrape websites &quot;associated&quot; with the businesses that use its platforms - including online publishers, according to a report from Nieman...
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Veritas 将防伪芯片扩展至珠宝、奖杯与香水瓶</title>
-      <link>https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods</guid>
-      <pubDate>Fri, 16 Oct 2026 14:00:00 +0000</pubDate>
-      <description>Veritas 将防伪芯片扩展至珠宝、奖...：Counterfeiters are getting better at replicating brands&apos; m...，适合跟进 AI 风险、治理和可信边界。
-
-Counterfeiters are getting better at replicating brands&apos; marks and passing off dupes, known as &quot;superfakes,&quot; as genuine items. A startup called Veritas wants to tackle the problem with its own chip...
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>Replit CEO：未来工作是「自动驾驶公司」</title>
-      <link>https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company</guid>
-      <pubDate>Fri, 16 Oct 2026 12:55:09 +0000</pubDate>
-      <description>Replit CEO Amjad Masad envisions a future of “self-driving...，来自官方更新源，适合直接判断产品变化。
-
-Replit CEO Amjad Masad envisions a future of “self-driving companies,” where AI agents handle day-to-day tasks and people focus on higher-level decisions.
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>智能体</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>MadsLorentzen/ai-job-search</title>
-      <link>https://github.com/MadsLorentzen/ai-job-search</link>
-      <guid isPermaLink="true">https://github.com/MadsLorentzen/ai-job-search</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>MadsLorentzen/ai-job...：The job search that runs on your machine. AI job applicati...，适合进一步验证代码、协议或社区采用情况。
-
-The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.
-
-信号等级 B · 评分 61.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>hmjz100/LinkSwift</title>
-      <link>https://github.com/hmjz100/LinkSwift</link>
-      <guid isPermaLink="true">https://github.com/hmjz100/LinkSwift</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>hmjz100/LinkSwift：基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克...，适合关注 Agent 工具调用和工作流搭建。
-
-一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘
-
-信号等级 B · 评分 53.4</description>
-      <category>开源热榜</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>cursor/plugins</title>
-      <link>https://github.com/cursor/plugins</link>
-      <guid isPermaLink="true">https://github.com/cursor/plugins</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>cursor：Cursor plugin specification and official plugins，适合判断 AI 编程工作流会不会被改写。
-
-Cursor plugin specification and official plugins
-
-信号等级 B · 评分 52.5</description>
-      <category>开源热榜</category>
-      <category>编码工具</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>android/skills</title>
-      <link>https://github.com/android/skills</link>
-      <guid isPermaLink="true">https://github.com/android/skills</guid>
-      <pubDate>Fri, 16 Oct 2026 12:49:17 +0000</pubDate>
-      <description>android/skills，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 B · 评分 51.9</description>
-      <category>开源热榜</category>
-      <category>开源</category>
     </item>
   </channel>
 </rss>
