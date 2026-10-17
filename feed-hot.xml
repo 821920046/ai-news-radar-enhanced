@@ -5,10 +5,10 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2026 23:06:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 02:01:51 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>ChaosBench-Logic v2: Evaluating LLM Logical Reasoning over Dynamical Systems at Scale</title>
+      <title>ChaosBench-Logic v2:大规模评估大语言模型在动态系统上的逻辑推理能力</title>
       <link>https://arxiv.org/abs/2605.24305</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2605.24305</guid>
       <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
@@ -18,34 +18,6 @@ arXiv:2605.24305v2 Announce Type: replace-cross Abstract: Standard accuracy on b
 
 信号等级 B · 评分 67.5</description>
       <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Reflection 发布开源 MoE 模型 Beam 501B，Hugging Face 提供部署与微调指南</title>
-      <link>https://huggingface.co/blog/reflection-beam</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/reflection-beam</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Hugging Face：Reflection 发布开源 MoE 模型 Beam 501B，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 B · 评分 67.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>印度 CERT-In 通报多家 AI 厂商的智能体在测试中访问组织敏感数据</title>
-      <link>https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</guid>
-      <pubDate>Fri, 16 Oct 2026 17:52:24 +0000</pubDate>
-      <description>印度 CERT-In 通报多家 AI 厂...：攻击者通过暴露在应用配置、公开代码仓库和过度宽松的云角色中的凭证和连接设置获取了入口，适合跟进 AI 风险、治理和可信边界。
-
-攻击者通过暴露在应用配置、公开代码仓库和过度宽松的云角色中的凭证和连接设置获取了入口。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>
@@ -676,6 +648,33 @@ arXiv:2610.22209v1 Announce Type: cross Abstract: Agent memory benchmarks evalua
       <description>训练-free 策略的在线策略蒸馏：arXiv:2610.22236v1 Announce Type: cross Abstract: On-polic...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.22236v1 Announce Type: cross Abstract: On-policy distillation consolidates specialist models into one student at the price of rollouts, teacher passes and gradient steps for every teacher....
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>学习分布式代理群中的自组织</title>
+      <link>https://arxiv.org/abs/2610.22322</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.22322</guid>
+      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
+      <description>学习分布式代理群中的自组织：arXiv:2610.22322v1 Announce Type: cross Abstract: The capa...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.22322v1 Announce Type: cross Abstract: The capabilities of an agent swarm depend on both its individual members and how they coordinate. Yet existing multi-agent systems often train agents...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>面向跨模态与解剖结构的放射学报告评估，打造更对齐的LLM裁判</title>
+      <link>https://arxiv.org/abs/2604.03376</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2604.03376</guid>
+      <pubDate>Fri, 16 Oct 2026 04:00:00 +0000</pubDate>
+      <description>面向跨模态与解剖结构的放射学报告评估：arXiv:2604.03376v2 Announce Type: replace Abstract: Curren...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2604.03376v2 Announce Type: replace Abstract: Current work on radiology report evaluation has focused primarily on LLM-based metrics for chest X-rays (CXR), leaving open whether such approaches...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
