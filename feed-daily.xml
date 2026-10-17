@@ -5,32 +5,80 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 07:17:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 11:49:47 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>stablyai/orca</title>
+      <link>https://github.com/stablyai/orca</link>
+      <guid isPermaLink="true">https://github.com/stablyai/orca</guid>
+      <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
+      <description>stablyai/orca：Orca is the place for working with a fleet of agents (e.g....，适合关注自动化任务和多 Agent 协作演进。
+
+Orca is the place for working with a fleet of agents (e.g. Grok Bot, Codex). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.
+
+信号等级 B · 评分 65.4</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>anomalyco/opencode</title>
+      <link>https://github.com/anomalyco/opencode</link>
+      <guid isPermaLink="true">https://github.com/anomalyco/opencode</guid>
+      <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
+      <description>anomalyco/opencode：The open source coding agent.，适合关注自动化任务和多 Agent 协作演进。
+
+The open source coding agent.
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>编码工具</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>anthropics/claude-code</title>
+      <link>https://github.com/anthropics/claude-code</link>
+      <guid isPermaLink="true">https://github.com/anthropics/claude-code</guid>
+      <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
+      <description>anthropic、claude：Claude Code is an agentic coding tool that lives in your t...，适合进一步验证代码、协议或社区采用情况。
+
+Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
+
+信号等级 A · 评分 71.8</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>akitaonrails/ai-memory</title>
+      <link>https://github.com/akitaonrails/ai-memory</link>
+      <guid isPermaLink="true">https://github.com/akitaonrails/ai-memory</guid>
+      <pubDate>Sat, 17 Oct 2026 11:49:47 +0000</pubDate>
+      <description>akitaonrails/ai-memo...：Solution for long term memory for agent coding CLIs and to...，适合进一步验证代码、协议或社区采用情况。
+
+Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>智能体</category>
+      <category>编码工具</category>
+    </item>
     <item>
       <title>sliday/resume-job-matcher</title>
       <link>https://github.com/sliday/resume-job-matcher</link>
       <guid isPermaLink="true">https://github.com/sliday/resume-job-matcher</guid>
       <pubDate>Sat, 17 Oct 2026 02:01:51 +0000</pubDate>
-      <description>sliday/resume-job-ma...：克劳德、GPT 或 OpenRouter，适合优先评估模型能力、价格和工具选型变化。
+      <description>sliday/resume-job-ma...：TypeScript CLI for AI resume screening: hard constraints g...，适合优先评估模型能力、价格和工具选型变化。
 
-用于 AI 简历筛选的 TypeScript CLI：硬约束在评分前将候选人排除在外，每个分数都会引用其背后的简历跨度，并且嵌入的预过滤器使大型池保持便宜。克劳德、GPT 或 OpenRouter。
-
-信号等级 B · 评分 50.5</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>利用Claude设计更高效的量子电路</title>
-      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
-      <pubDate>Sat, 17 Oct 2026 01:52:14 +0000</pubDate>
-      <description>Designing more efficient quantum circuits with Claude，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-Designing more efficient quantum circuits with Claude
+TypeScript CLI for AI resume screening: hard constraints gate candidates out before scoring, every score cites the resume span behind it, and an embedding pre-filter keeps large pools cheap. Claude, GPT, or OpenRouter.
 
 信号等级 B · 评分 52.8</description>
-      <category>Buzzing</category>
+      <category>开源热榜</category>
       <category>模型发布</category>
     </item>
     <item>
@@ -48,15 +96,30 @@ Designing more efficient quantum circuits with Claude
       <category>安全对齐</category>
     </item>
     <item>
+      <title>DeepSeek V4.1 Flash 1017 现已在 AI Gateway 上线</title>
+      <link>https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</link>
+      <guid isPermaLink="true">https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+      <description>DeepSeek V4.1 Flash 1017 is now available on AI Gateway.De...，来自官方更新源，适合直接判断产品变化。
+
+DeepSeek V4.1 Flash 1017 is now available on AI Gateway.DeepSeek V4.1 Flash 1017 is a minor update to DeepSeek V4.1 Flash that improves reasoning, coding, agentic tasks, and image understanding.The...
+
+信号等级 B · 评分 61.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
       <title>Replit CEO 称已不再与 Anthropic 合作</title>
       <link>https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says</guid>
       <pubDate>Fri, 16 Oct 2026 21:22:28 +0000</pubDate>
-      <description>Anthropic：Replit 公司于 8 月宣布与 OpenAI 达成合作，但从未有任何迹象表明它已不再与该公司合作，适合判断资金、客户和生态格局的变化。
+      <description>Anthropic：Masad said the decision was made for a number of different...，适合判断资金、客户和生态格局的变化。
 
-Masad 表示，这一决定基于多个原因，包括成本因素。Replit 公司于 8 月宣布与 OpenAI 达成合作，但从未有任何迹象表明它已不再与该公司合作。
+Masad said the decision was made for a number of different reasons, including cost. Replit announced a partnership with OpenAI in August, but there was never any indication that it was no longer with...
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
@@ -65,9 +128,9 @@ Masad 表示，这一决定基于多个原因，包括成本因素。Replit 公�
       <link>https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites</guid>
       <pubDate>Fri, 16 Oct 2026 20:59:01 +0000</pubDate>
-      <description>OpenAI：如果键盘背后是人类的话，这些行为可能会导致刑事指控，适合作为今日 AI/科技情报流里的重点线索。
+      <description>OpenAI：The actions could have resulted in criminal charges had hu...，适合作为今日 AI/科技情报流里的重点线索。
 
-如果键盘背后是人类的话，这些行为可能会导致刑事指控。
+The actions could have resulted in criminal charges had humans been behind the keyboard.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -77,11 +140,23 @@ Masad 表示，这一决定基于多个原因，包括成本因素。Replit 公�
       <link>https://openai.com/index/itau-generative-ai</link>
       <guid isPermaLink="true">https://openai.com/index/itau-generative-ai</guid>
       <pubDate>Fri, 16 Oct 2026 19:00:00 +0000</pubDate>
-      <description>Itaú 如何为其整个客户群构建生成式...：巴西伊塔乌银行（Itaú）通过对话式AI接口“ia.i”及IARA治理平台，将“AI First”战略应用于客户与员...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Itaú 如何为其整个客户群构建生成式...：With ia.i, a conversational interface, and the IARA govern...，适合作为今日 AI/科技情报流里的重点线索。
 
-巴西伊塔乌银行（Itaú）通过对话式AI接口“ia.i”及IARA治理平台，将“AI First”战略应用于客户与员工，推动其在强监管行业中的数字化转型。
+With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.
 
 信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>圆桌会议:与AI设计病毒的创造者对话</title>
+      <link>https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</link>
+      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+      <description>圆桌会议：Listen to the session or watch below Can AI design new lif...，适合作为今日 AI/科技情报流里的重点线索。
+
+Listen to the session or watch below Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose...
+
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -89,9 +164,9 @@ Masad 表示，这一决定基于多个原因，包括成本因素。Replit 公�
       <link>https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity</guid>
       <pubDate>Fri, 16 Oct 2026 17:52:24 +0000</pubDate>
-      <description>印度 CERT-In 通报多家 AI 厂...：代理通过应用程序配置、公共代码存储库和过于宽松的云角色中暴露的凭据和连接设置进入，适合跟进 AI 风险、治理和可信边界。
+      <description>印度 CERT-In 通报多家 AI 厂...：The agents got in through credentials and connection setti...，适合跟进 AI 风险、治理和可信边界。
 
-代理通过应用程序配置、公共代码存储库和过于宽松的云角色中暴露的凭据和连接设置进入。
+The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -104,9 +179,9 @@ Masad 表示，这一决定基于多个原因，包括成本因素。Replit 公�
       <link>https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</link>
       <guid isPermaLink="true">https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:46 +0000</pubDate>
-      <description>PyTorch 为 TorchTitan...：模型在训练过程中所接触的数据是影响其性能的最强大杠杆之一，日常工作中通过精心设计数据流可以显著提升模型表现，适合作为今日 AI/科技情报流里的重点线索。
+      <description>PyTorch 为 TorchTitan...：Why Zephon，适合作为今日 AI/科技情报流里的重点线索。
 
-模型在训练过程中所接触的数据是影响其性能的最强大杠杆之一，日常工作中通过精心设计数据流可以显著提升模型表现。Brining Elastically...（注：因原文被截断，仅翻译完整可理解部分，保留关键概念“Zephon”和核心论点。）
+Why Zephon? The data that a model sees during training is one of the most powerful levers we have for influencing how well it performs. Much of the day-to-day work... The post Bringing Elastically...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -116,9 +191,9 @@ Masad 表示，这一决定基于多个原因，包括成本因素。Replit 公�
       <link>https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</link>
       <guid isPermaLink="true">https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>NVIDIA前机器人平台产品营销负责人Amulya Vishwanath表示，机器人技术正处于“积木时代”，其核心在...，来自官方更新源，适合直接判断产品变化。
+      <description>NVIDIA：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
 
-NVIDIA前机器人平台产品营销负责人Amulya Vishwanath表示，机器人技术正处于“积木时代”，其核心在于基础构建模块如执行器等的组合与集成。
+Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -129,9 +204,9 @@ NVIDIA前机器人平台产品营销负责人Amulya Vishwanath表示，机器人
       <link>https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</link>
       <guid isPermaLink="true">https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet</guid>
       <pubDate>Fri, 16 Oct 2026 16:30:00 +0000</pubDate>
-      <description>Nvidia、GPT：Amulya Vishwanath 花了七年时间领导 NVIDIA 机器人平台的产品营销，他表示机器人技术目前正处于...，适合跟进 AI 风险、治理和可信边界。
+      <description>Nvidia、GPT：Amulya Vishwanath, who spent seven years leading product m...，适合跟进 AI 风险、治理和可信边界。
 
-Amulya Vishwanath 花了七年时间领导 NVIDIA 机器人平台的产品营销，他表示机器人技术目前正处于“乐高时代”，具有执行器等基本构建模块，...
+Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators,...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -143,9 +218,9 @@ Amulya Vishwanath 花了七年时间领导 NVIDIA 机器人平台的产品营销
       <link>https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them</guid>
       <pubDate>Fri, 16 Oct 2026 16:01:37 +0000</pubDate>
-      <description>Elorian 发布首个模型 Glimp...：根据 Elorian 的评估，Glimpse 在科学图表推理和短视频字幕方面的表现甚至优于 GPT-6 Astra...，适合关注内容生产和交互形态的新变化。
+      <description>Elorian 发布首个模型 Glimp...：According to Elorian&apos;s evaluations, Glimpse outperforms ev...，适合关注内容生产和交互形态的新变化。
 
-根据 Elorian 的评估，Glimpse 在科学图表推理和短视频字幕方面的表现甚至优于 GPT-6 Astra，在其他视觉推理任务上也取得了有竞争力的结果。
+According to Elorian&apos;s evaluations, Glimpse outperforms even GPT-6 Astra on scientific chart reasoning and short-form video captioning, with competitive results on other visual reasoning tasks.
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -160,9 +235,9 @@ Amulya Vishwanath 花了七年时间领导 NVIDIA 机器人平台的产品营销
       <link>https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever</guid>
       <pubDate>Fri, 16 Oct 2026 15:33:49 +0000</pubDate>
-      <description>Vercel 数据显示 Jev 成为其史...：该数据源自Vercel的AI网关，一个类似OpenRouter的统一API服务，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Vercel 数据显示 Jev 成为其史...：The data comes from Vercel&apos;s AI gateway, a unified API ser...，适合作为今日 AI/科技情报流里的重点线索。
 
-该数据源自Vercel的AI网关，一个类似OpenRouter的统一API服务。
+The data comes from Vercel&apos;s AI gateway, a unified API service similar to OpenRouter.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -172,9 +247,9 @@ Amulya Vishwanath 花了七年时间领导 NVIDIA 机器人平台的产品营销
       <link>https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions</guid>
       <pubDate>Fri, 16 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Nvidia 的 RTX Spark N1X 处理器终于问世了，我们一直在集体测试配备这款新“超级芯片”的强大笔记本...，来自官方更新源，适合直接判断产品变化。
+      <description>Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;v...，来自官方更新源，适合直接判断产品变化。
 
-Nvidia 的 RTX Spark N1X 处理器终于问世了，我们一直在集体测试配备这款新“超级芯片”的强大笔记本电脑。 RTX Spark 被设计为...
+Nvidia&apos;s RTX Spark N1X processor is finally here, and we&apos;ve been collectively testing a small fortune&apos;s worth of powerful laptops sporting this new &quot;superchip.&quot; RTX Spark is designed to be a...
 
 信号等级 B · 评分 52.0</description>
       <category>Official AI Updates</category>
@@ -285,20 +360,6 @@ Cursor plugin specification and official plugins
 信号等级 B · 评分 51.9</description>
       <category>开源热榜</category>
       <category>开源</category>
-    </item>
-    <item>
-      <title>LibreSpark/LibreTV</title>
-      <link>https://github.com/LibreSpark/LibreTV</link>
-      <guid isPermaLink="true">https://github.com/LibreSpark/LibreTV</guid>
-      <pubDate>Fri, 16 Oct 2026 07:38:49 +0000</pubDate>
-      <description>LibreSpark/LibreTV：一分钟搭建影视站，支持Docker等部署方式，适合进一步验证代码、协议或社区采用情况。
-
-一分钟搭建影视站，支持Docker等部署方式
-
-信号等级 B · 评分 59.3</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>部署推理</category>
     </item>
   </channel>
 </rss>
