@@ -166,12 +166,13 @@ jobs:
           INDEX_TRANSLATE_MAX_TRIES: ${{ secrets.INDEX_TRANSLATE_MAX_TRIES }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
-          WEBHOOK_MODE: ${{ secrets.WEBHOOK_MODE }}
           WEBHOOK_HOTNESS_THRESHOLD: ${{ secrets.WEBHOOK_HOTNESS_THRESHOLD }}
           # 新闻推送（每日精选）已交给独立的 daily-digest.yml 工作流：
           # 它只发一条消息、约 30 秒，不会被 Actions 排队挤掉；而主流水线靠
           # cron 整点命中北京 07:00，排队超 1 小时就永久错过当天推送。
           # 这里显式关闭流水线内的发送路径 —— 两个发送方同时跑 = 同一天双推。
+          # （告警不走这里：失败告警由本工作流末尾的 Notify on failure 步骤
+          #   直接调 scripts/notify_ci.py 发送，与 WEBHOOK_MODE 无关。）
           WEBHOOK_MODE: none
         run: |
           if [ -f feeds/follow.opml ]; then
