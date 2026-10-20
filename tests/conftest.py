@@ -96,5 +96,36 @@ def _block_external_network(monkeypatch, request):
     yield
 
 
+@pytest.fixture(autouse=True)
+def _disable_index_translate_by_default(request, monkeypatch):
+    """测试期默认关闭 Index-Translate 阶段，需显式打开才启用。
+
+    它走**自己的** session 工厂（`_index_translate_session`），不会经过测试注入的
+    mock session。不禁用会同时踩三个坑：
+      1) 既有的 OpenRouter 路由池断言会静默变成 no-op —— 请求被 Index 阶段吃掉，
+         mock 的 `session.post` 一次都没被调用，而断言仍然"通过"；
+      2) 触发 `_block_external_network` 的 URL 层守卫，而那是 `RuntimeError`
+         而非 `RequestException` —— 异常会穿透 `_index_translate_post` 的
+         `except RequestException`，把整个 `add_bilingual_fields` 掀翻；
+      3) 即使被拦住也是真实外网尝试，违反「测试通过不依赖能否联网」。
+    """
+    if request.node.get_closest_marker("index_translate"):
+        yield  # 标记了就是要测它，由测试自行 patch 打开并 mock 网络
+        return
+    try:
+        from core.normalize import translator as _t
+    except Exception:  # pragma: no cover - 导入失败不该连带测试崩
+        yield
+        return
+    if hasattr(_t, "INDEX_TRANSLATE_ENABLED"):
+        monkeypatch.setattr(_t, "INDEX_TRANSLATE_ENABLED", False, raising=False)
+    yield
+
+
 def pytest_configure(config):
-    config.addinivalue_line("markers", "allow_network: 允许该测试发起真实外网访问")
+    config.addinivalue_line(
+        "markers", "index_translate: 该测试显式测试 Index-Translate 接入（自行 mock 网络）"
+    )
+    config.addinivalue_line(
+        "markers", "allow_network: 允许该测试发起真实外网访问"
+    )

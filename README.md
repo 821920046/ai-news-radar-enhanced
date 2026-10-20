@@ -111,7 +111,11 @@ ai-news-radar-enhanced/
 - **Python** 3.11+（CI 使用 3.11，本地 3.11–3.13 均可）
 - **pip** / 虚拟环境（venv 推荐）
 - 可选：**Docker** 20+、**Node**（仅当你的前端有构建步骤时）
-- 可选：**OpenRouter API Key**（启用 AI TLDR 摘要时需要）
+- 可选：**OpenRouter API Key**（AI TLDR 摘要需要；标题翻译无需任何 Key）
+
+> **标题翻译默认走 B站 Index-Translate 免费 API**（[bilibili/Index-Translate](https://github.com/bilibili/Index-Translate)，
+> OpenAI 兼容，35B-A3B，无需密钥），OpenRouter 池退居第二级兜底。因此**本项目的
+> 核心功能零配置即可运行**；没配 Key 时 AI 翻译仍可用，只有 AI TLDR 摘要会跳过。
 
 ---
 

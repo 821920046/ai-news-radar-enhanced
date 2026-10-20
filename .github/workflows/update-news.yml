@@ -132,6 +132,15 @@ jobs:
           AI_TRANSLATE_ENABLED: ${{ secrets.AI_TRANSLATE_ENABLED }}
           # 可选的调参逃生口；未配置该 secret 时留空 → 代码里的默认值生效
           AI_TRANSLATE_BUDGET_SECONDS: ${{ secrets.AI_TRANSLATE_BUDGET_SECONDS }}
+          # ── Index-Translate（B站免费翻译 API，首选后端）───────────────────
+          # 默认就在代码里启用（INDEX_TRANSLATE_ENABLED 默认 "1"）：免费、无需 key、
+          # GitHub runner 实测可达。这几个 secret 只是**逃生口/调参**，不是必需项。
+          INDEX_TRANSLATE_ENABLED: ${{ secrets.INDEX_TRANSLATE_ENABLED }}
+          INDEX_TRANSLATE_API_URL: ${{ secrets.INDEX_TRANSLATE_API_URL }}
+          INDEX_TRANSLATE_MODEL: ${{ secrets.INDEX_TRANSLATE_MODEL }}
+          INDEX_TRANSLATE_TIMEOUT: ${{ secrets.INDEX_TRANSLATE_TIMEOUT }}
+          INDEX_TRANSLATE_BUDGET_SECONDS: ${{ secrets.INDEX_TRANSLATE_BUDGET_SECONDS }}
+          INDEX_TRANSLATE_MAX_TRIES: ${{ secrets.INDEX_TRANSLATE_MAX_TRIES }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
           WEBHOOK_MODE: ${{ secrets.WEBHOOK_MODE }}

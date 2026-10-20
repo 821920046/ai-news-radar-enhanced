@@ -134,6 +134,76 @@ OPENROUTER_TIMEOUT = int(os.environ.get("OPENROUTER_TIMEOUT") or 30)
 OPENROUTER_REASONING = (os.environ.get("OPENROUTER_REASONING") or "off").strip().lower()
 
 # ---------------------------------------------------------------------------
+# Index-Translate（B站官方免费翻译 API）配置
+# ---------------------------------------------------------------------------
+# 2026-10-20：B站 Index LLM 团队开源的翻译模型家族（基于 Qwen3.5，Apache-2.0），
+# 并提供一个**完全 OpenAI 兼容的免费公共服务** https://index-translate.bilibili.com/v1 。
+# GitHub: https://github.com/bilibili/Index-Translate
+#
+# 为什么接它（全部实测，2026-10-20，不是宣传）：
+#   1) 免费且**无需 API Key**。OpenRouter 免费额度是**平台级 50 次/天**，多账号
+#      组池不能乘以账号数（官方原话 "we govern capacity globally"），这是当前
+#      AI 翻译的实际天花板；Index-Translate 不受该口径约束。
+#   2) 快：批量 8 条实测 2.8s / 8s / 13s（服务端负载波动大），OpenRouter 免费
+#      模型同样批量约 17s。
+#   3) 专门的翻译模型：术语保留、格式维持是它的设计目标，实测品牌名保留率更高。
+#   4) **GitHub runner 可达**（run 39412653380 实测：TLS 握手 0.108s，
+#      连发 8 次全部 200）。Google 兜底当年就是没过这一关——本地连通、
+#      runner 上 3 次 <0.4s 全失败，于是「兜底」根本不存在。
+#
+# 与 OpenRouter 池的关系：Index-Translate 是**首选**；它失败 / 不守格式 / 超预算
+# 时，标题交给 OpenRouter 池；最后才是 Google。三级都是普通 HTTP 调用，
+# 不引入任何常驻进程 / 数据库 / 付费服务，零成本架构不变。
+#
+# ⚠️ 它是**第三方公共服务，没有任何 SLA 承诺**（实测出现过偶发 504）。
+#    所以绝不能只依赖它：必须有 OpenRouter 兜底 + 单批重试 + 连续失败放弃
+#    + 墙上时钟预算。否则就是把 Google 兜底的坑再踩一遍。
+INDEX_TRANSLATE_API_URL = (
+    os.environ.get("INDEX_TRANSLATE_API_URL")
+    or "https://index-translate.bilibili.com/v1/chat/completions"
+)
+# 注意：API 的模型名是 Index-Translate-35B-A3B，**不带** `-preview` 后缀
+# （HuggingFace 权重名才是 IndexTeam/Index-Translate-35B-A3B-preview）。
+INDEX_TRANSLATE_MODEL = (
+    os.environ.get("INDEX_TRANSLATE_MODEL") or "Index-Translate-35B-A3B"
+)
+# 官方示例用这个 UA；服务端看起来不强制，但跟着官方走最稳。
+INDEX_TRANSLATE_USER_AGENT = "Index-Translate-Client/1.0"
+# 单条请求超时。实测 2.8-13s，偶发更长；留足余量但别拖到 job 超时。
+INDEX_TRANSLATE_TIMEOUT = int(os.environ.get("INDEX_TRANSLATE_TIMEOUT") or 45)
+# Index-Translate 阶段的墙上时钟子预算（秒）。它独占这份预算，剩余留给 OpenRouter。
+# 8 条/批实测 2.8-13s，80 条标题 = 10 批 ≈ 30-130s，180s 足够并含重试余量。
+INDEX_TRANSLATE_BUDGET_SECONDS = float(
+    os.environ.get("INDEX_TRANSLATE_BUDGET_SECONDS") or 180
+)
+# 单个批次在本阶段最多重试几次（换来的标题失败要退回队列重试，但不能死磕）
+INDEX_TRANSLATE_MAX_TRIES = max(1, int(os.environ.get("INDEX_TRANSLATE_MAX_TRIES") or 2))
+# 连续几次请求失败就放弃 Index-Translate 阶段，剩余标题转交 OpenRouter。
+# 实测偶发 504，给 3 次容错；再高就是在浪费墙上时钟。
+INDEX_TRANSLATE_MAX_CONSECUTIVE_FAILURES = max(
+    1, int(os.environ.get("INDEX_TRANSLATE_MAX_CONSECUTIVE_FAILURES") or 3)
+)
+# 默认启用。第三方免费服务随时可能撤下，所以留了逃生口，也保留了 OpenRouter 兜底。
+INDEX_TRANSLATE_ENABLED = (
+    os.environ.get("INDEX_TRANSLATE_ENABLED", "1").strip().lower()
+    not in {"0", "false", "no", "off", "none"}
+)
+
+# Index-Translate 专用的批量提示词。
+# 不能直接复用 AI_BATCH_TRANSLATE_SYSTEM_PROMPT：实测（2026-10-20）复用时
+# "Anthropic" 被音译成「安赛克」—— 原提示词只举例了 GPT-5/Claude/OpenAI，
+# 模型于是认为没点名的公司可以音译。所以这里把「不要音译」写死成显式约束。
+INDEX_TRANSLATE_BATCH_SYSTEM_PROMPT = (
+    "你是专业的中英科技新闻翻译官。将以下编号的英文标题逐条翻译成简洁准确的中文。\n"
+    "要求：\n"
+    "1) 公司名、产品名、模型名、技术术语、版本号一律保留英文原文"
+    "（如 Anthropic、Claude、GPT-5、OpenAI），不要音译成中文；\n"
+    "2) 译文自然流畅，符合中文新闻标题习惯；\n"
+    "3) 严格按原编号顺序输出，每行一条，格式：编号. 中文译文；\n"
+    "4) 直接输出结果，不要任何解释或额外内容。"
+)
+
+# ---------------------------------------------------------------------------
 # 全局熔断器 — 429/402/403 连续失败达阈值后切断所有 AI 翻译
 # ---------------------------------------------------------------------------
 
@@ -309,6 +379,267 @@ def _openrouter_session(session: requests.Session) -> requests.Session:
     429 必须原样暴露给路由池，才能判定「这个 key 的免费额度用完了」并换下一个 key。
     """
     return _no_retry_session(session)
+
+
+def _index_translate_session(session: requests.Session) -> requests.Session:
+    """Index-Translate 专用 session（禁用重试）。
+
+    与 `_openrouter_session` / `_google_session` 刻意分开：它是**另一个上游**，
+    共用工厂会让「给 OpenRouter 打补丁」顺手改到别处的行为，也让测试无法只拦住
+    其中一个。（`_no_retry_session` 的复用才是刻意共享的那一层。）
+    """
+    return _no_retry_session(session)
+
+
+def _index_translate_post(
+    session: requests.Session,
+    *,
+    system_prompt: str,
+    user_text: str,
+    max_tokens: int,
+    timeout: int = INDEX_TRANSLATE_TIMEOUT,
+    outcome: dict[str, Any] | None = None,
+) -> str | None:
+    """向 B站 Index-Translate 免费 API 发一次请求，返回 message.content；失败返回 None。
+
+    失败原因经 `outcome` 回传（status / http / body），让上层能区分「网络不可达」
+    「被限流」「服务端 5xx」并做不同处置 —— 否则又变成一行无信息 warning，
+    属于「不可观测 ⇒ 不可断言」。
+
+    注意：这里**没有** key / model 两个维度可以淘汰（不需要 key，模型只有一个），
+    所以 outcome 不需要参与 `_apply_route_outcome` 的淘汰逻辑；上层用
+    「单批重试 + 连续失败放弃」兜住。
+    """
+    headers = {
+        "Content-Type": "application/json",
+        "User-Agent": INDEX_TRANSLATE_USER_AGENT,
+    }
+    payload: dict[str, Any] = {
+        "model": INDEX_TRANSLATE_MODEL,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_text},
+        ],
+        "temperature": 0.0,
+        "max_tokens": max_tokens,
+        # 必须关掉思维链：否则 CoT 文本会混在译文里（该模型的模板默认会输出思考过程）。
+        # 官方示例与本地代理都硬编码了这一项，照抄。
+        "chat_template_kwargs": {"enable_thinking": False},
+    }
+
+    def _record(status: str, **extra: Any) -> None:
+        if outcome is not None:
+            outcome.update({"status": status, "model": INDEX_TRANSLATE_MODEL, **extra})
+
+    try:
+        resp = _index_translate_session(session).post(
+            INDEX_TRANSLATE_API_URL, headers=headers, json=payload, timeout=timeout
+        )
+    except requests.exceptions.RequestException as exc:
+        # 常规网络失败（连接被拒 / 超时 / DNS 失败）
+        logger.warning("[Index-Translate] 请求失败：%s", exc)
+        _record("network_error", error=str(exc)[:200])
+        return None
+    except Exception as exc:
+        # 兜底绝不抛给上层：任何意外（包括测试期 URL 层守卫抛出的 RuntimeError）
+        # 都只能算是「这一批没译出来」，绝不能把整轮翻译掀翻。
+        logger.warning("[Index-Translate] 请求出现非网络异常：%r", exc)
+        _record("unexpected_error", error=repr(exc)[:200])
+        return None
+
+    if resp.status_code == 200:
+        try:
+            data = resp.json()
+        except ValueError:
+            _record("bad_json", http=200)
+            return None
+        choices = data.get("choices") if isinstance(data, dict) else None
+        if not choices:
+            _record("empty", http=200)
+            return None
+        content = str((choices[0].get("message") or {}).get("content") or "").strip()
+        if not content:
+            _record("empty", http=200)
+            return None
+        _record("ok", http=200)
+        return content
+
+    # HTTP 层失败：把状态码和响应体都记下来。只记「非 200」等于又回到
+    # 「看不到原因的失败」—— body 里才有直接原因（限流 / 上游拥塞 / 参数错）。
+    body = (resp.text or "")[:300]
+    status_map = {429: "rate_limited", 400: "bad_request", 404: "not_found"}
+    status = status_map.get(resp.status_code, "server_error" if resp.status_code >= 500 else "http_error")
+    _record(status, http=resp.status_code, body=body)
+    logger.warning(
+        "[Index-Translate] HTTP %d（%s）；body=%s",
+        resp.status_code, status, body,
+    )
+    return None
+
+
+def _ai_translate_batch_index(
+    session: requests.Session,
+    titles: list[str],
+    *,
+    timeout: int = INDEX_TRANSLATE_TIMEOUT,
+    outcome: dict[str, Any] | None = None,
+) -> list[str | None]:
+    """用 Index-Translate 批量翻译标题，复用同一套编号解析器。
+
+    返回值与 `_ai_translate_batch` 完全对齐：成功给译文，失败给 None，
+    所以上层可以同一套代码处理两个后端。
+    """
+    if not titles:
+        return []
+
+    numbered_input = "\n".join(f"{i + 1}. {title}" for i, title in enumerate(titles))
+    content = _index_translate_post(
+        session,
+        system_prompt=INDEX_TRANSLATE_BATCH_SYSTEM_PROMPT,
+        user_text=numbered_input,
+        max_tokens=max(150 * len(titles), 512),
+        timeout=timeout,
+        outcome=outcome,
+    )
+    if content is None:
+        return [None] * len(titles)
+
+    parsed = _parse_batch_result(content, titles)
+    missing = sum(1 for item in parsed if not item)
+    if missing:
+        logger.warning(
+            "[Index-Translate] 返回了内容，但只解析出 %d/%d 条译文 —— 输出不符合"
+            "「编号. 译文」约定。原始输出（前 300 字符）：%s",
+            len(titles) - missing, len(titles), content[:300].replace("\n", "\\n"),
+        )
+    if outcome is not None:
+        wiped_out = missing == len(titles)
+        outcome["unparseable"] = len(titles) if wiped_out else 0
+        if wiped_out:
+            outcome["raw_head"] = content[:300]
+    return parsed
+
+
+def _run_index_translate_phase(
+    session: requests.Session,
+    pending: list[tuple[dict[str, Any], str]],
+    cache: dict[str, str],
+    *,
+    budget_seconds: float | None = None,
+) -> tuple[list[tuple[dict[str, Any], str]], int]:
+    """三级翻译链路的第一级：B站 Index-Translate 免费 API。
+
+    返回 (仍未译出的条目, 本轮成功条数)。调用方把剩余条目交给下一级
+    （OpenRouter 路由池），最后才是 Google 兜底。
+
+    `budget_seconds` 由调用方传入（通常已被总预算划走一份），默认取模块常量。
+    不传参而让本函数自己读常量的做法有个漏洞：当 `INDEX_TRANSLATE_BUDGET_SECONDS`
+    大于总 AI 预算时，外层扣掉了 OpenRouter 的份额，本阶段却仍按大额度计时 ——
+    两级各自的账都平，加起来就是超支。
+
+    四条约束，每条都是踩坑换来的：
+
+    1. **墙上时钟**：超限立即停并把剩余交下一级。worst_case = 批次数 × 重试 × 超时
+       —— 单批 45s × 2 次重试 × 10 批 = 900s，足够把 job 拖到超时被 kill、
+       其后所有步骤全 skip（run 36890199782 的 39 分钟就是这么来的）。
+    2. **连续失败放弃**：连续 `INDEX_TRANSLATE_MAX_CONSECUTIVE_FAILURES` 个批次
+       全军覆没就整体放弃。它是**第三方公共服务、无任何 SLA**（实测出现过 504），
+       死磕等于把预算烧在注定失败的上游上。
+    3. **单批重试上限**：某批全军覆没最多重试几次。服务端偶发 504，重试常能救回
+       整批 8 条 —— 比整批换后端便宜得多。
+    4. **成功即落缓存**：部分命中时已拿到的译文立刻写入 cache，绝不退回重译
+       （重复消耗额度），只把没译出的交给下一级。
+    """
+    if budget_seconds is None:
+        budget_seconds = INDEX_TRANSLATE_BUDGET_SECONDS
+    budget_seconds = max(0.0, float(budget_seconds))
+
+    total = len(pending)
+    logger.info(
+        "[Index-Translate] 阶段开始：%d 条待译，预算 %.0fs，每批 %d 条，"
+        "单批重试 %d 次，连续 %d 批失败即放弃",
+        total, budget_seconds, BATCH_SIZE,
+        INDEX_TRANSLATE_MAX_TRIES, INDEX_TRANSLATE_MAX_CONSECUTIVE_FAILURES,
+    )
+    deadline = time.monotonic() + budget_seconds
+    remaining: list[tuple[dict[str, Any], str]] = []
+    translated = 0
+    consecutive_failures = 0
+    stopped_reason = ""
+
+    index = 0
+    while index < len(pending):
+        if time.monotonic() >= deadline:
+            stopped_reason = f"触及 {budget_seconds:.0f}s 子预算"
+            break
+        if consecutive_failures >= INDEX_TRANSLATE_MAX_CONSECUTIVE_FAILURES:
+            stopped_reason = f"连续 {consecutive_failures} 批全军覆没"
+            break
+
+        batch = pending[index:index + BATCH_SIZE]
+        index += BATCH_SIZE
+
+        outcome: dict[str, Any] = {}
+        results: list[str | None] = [None] * len(batch)
+        exhausted_tries = False
+        for _attempt in range(INDEX_TRANSLATE_MAX_TRIES):
+            if time.monotonic() >= deadline:
+                stopped_reason = "重试途中触及子预算"
+                exhausted_tries = True
+                break
+            outcome = {}
+            results = _ai_translate_batch_index(
+                session, [title for _, title in batch], outcome=outcome
+            )
+            if any(results):
+                break  # 有进展就不再重试，剩余交给下一级
+        else:
+            # 重试耗尽仍全军覆没 —— 原因由下面的收尾统一记录，不能静默
+            exhausted_tries = True
+
+        hit, missed = 0, []
+        for (item, en_title), zh in zip(batch, results):
+            if zh:
+                cache[en_title] = zh
+                hit += 1
+            else:
+                missed.append((item, en_title))
+
+        if hit:
+            translated += hit
+            logger.info(
+                "[Index-Translate] 本批 %d 条成功 %d，累计 %d/%d",
+                len(batch), hit, translated, total,
+            )
+        else:
+            consecutive_failures += 1
+            if exhausted_tries:
+                logger.warning(
+                    "[Index-Translate] 本批 %d 条全军覆没（status=%s，http=%s），"
+                    "这 %d 条转交 OpenRouter 池",
+                    len(batch), outcome.get("status"), outcome.get("http", "-"), len(missed),
+                )
+        remaining.extend(missed)
+
+        if stopped_reason:
+            break
+        if index < len(pending):
+            # 免费公共服务，礼貌一点，也给 runner 留出余量
+            time.sleep(0.3)
+
+    if stopped_reason:
+        # ⚠️ break 时 index 之后的批次**还没被处理**，必须一并交出去，
+        # 否则这些标题会被静默丢掉（缓存里没有、Google 也可能不可达）。
+        remaining.extend(pending[index:])
+        logger.warning(
+            "[Index-Translate] 阶段中止（%s）：已译 %d 条，剩余 %d 条转交 OpenRouter 池",
+            stopped_reason, translated, len(remaining),
+        )
+    logger.info(
+        "[Index-Translate] 阶段结束：成功 %d 条，剩余 %d 条转交下一级",
+        translated, len(remaining),
+    )
+    return remaining, translated
 
 
 def translate_to_zh_cn(session: requests.Session, text: str) -> str | None:
@@ -1026,16 +1357,28 @@ def add_bilingual_fields(
     api_keys = _get_openrouter_keys()
     models = _get_openrouter_models()
     use_ai = bool(api_keys) and bool(models) and _ai_translate_enabled()
-    cursor = _RouteCursor(api_keys, models, AI_TRANSLATE_BUDGET_SECONDS) if use_ai else None
     current_key_idx = 0
     ai_translated_count = 0
     google_translated_count = 0
 
+    # 三级链路（Index-Translate → OpenRouter 池 → Google）共用**同一个**墙上时钟预算。
+    # 两级各自都不超，加起来仍能把 job 拖到超时被 kill（其后所有步骤全 skip）——
+    # 实测 Google 兜底当年就是这么把流水线卡死 39 分钟的。所以这里先划走
+    # Index-Translate 的子预算，OpenRouter 池只剩剩下的，二者之和恒定 ≤ AI 预算。
+    index_budget = (
+        min(AI_TRANSLATE_BUDGET_SECONDS, INDEX_TRANSLATE_BUDGET_SECONDS)
+        if INDEX_TRANSLATE_ENABLED
+        else 0.0
+    )
+    openrouter_budget = max(0.0, AI_TRANSLATE_BUDGET_SECONDS - index_budget)
+    cursor = _RouteCursor(api_keys, models, openrouter_budget) if use_ai else None
+
     if use_ai:
         logger.info(
-            "[Translate] AI 翻译已启用：%d 个 key × %d 个模型 = %d 条路由，预算 %.0fs，单批最多换 %d 条路由",
+            "[Translate] AI 翻译已启用：%d 个 key × %d 个模型 = %d 条路由，预算 %.0fs"
+            "（Index-Translate 先占 %.0fs），单批最多换 %d 条路由",
             len(api_keys), len(models), len(api_keys) * len(models),
-            AI_TRANSLATE_BUDGET_SECONDS, MAX_ROUTE_TRIES_PER_BATCH,
+            AI_TRANSLATE_BUDGET_SECONDS, index_budget, MAX_ROUTE_TRIES_PER_BATCH,
         )
     elif not api_keys:
         logger.info("[Translate] 未配置 OPENROUTER_KEYS，直接使用 Google Translate 兜底")
@@ -1072,6 +1415,30 @@ def add_bilingual_fields(
             pending_titles.append((item, title))
 
     # -----------------------------------------------------------------------
+    # 阶段 0：Index-Translate（B站免费翻译 API，首选后端）
+    # -----------------------------------------------------------------------
+    # 放在 OpenRouter 池之前，因为：免费无 key（不受平台级 50 次/天限制）、
+    # 专门的翻译模型（术语/格式保留更好）、且实测更快（8 条约 3-13s vs 17s）。
+    # 失败或不守格式的标题**不丢**，交给下一级 —— 三级链路，不是三选一。
+    openrouter_pending = pending_titles
+    if INDEX_TRANSLATE_ENABLED and pending_titles:
+        try:
+            openrouter_pending, index_done = _run_index_translate_phase(
+                session, pending_titles, cache, budget_seconds=index_budget
+            )
+            ai_translated_count += index_done
+        except Exception as exc:
+            # 本阶段绝不能让整轮翻译崩掉：任何异常都等价于「它没干活」，
+            # 退回全量标题由 OpenRouter 池接管（原路径，不受本次接入影响）。
+            logger.warning(
+                "[Index-Translate] 阶段异常，本次跳过，%d 条标题转交 OpenRouter 池：%r",
+                len(pending_titles), exc,
+            )
+            openrouter_pending = pending_titles
+    elif not INDEX_TRANSLATE_ENABLED:
+        logger.info("[Index-Translate] 已禁用（INDEX_TRANSLATE_ENABLED），标题直接走 OpenRouter 池")
+
+    # -----------------------------------------------------------------------
     # AI 批量翻译：key × model 轮询，逐条路由淘汰
     # -----------------------------------------------------------------------
     # v3.3 之前：单个模型 + 单个 key 游标，且**连续 3 次 HTTP 失败就全局熔断**。
@@ -1079,13 +1446,15 @@ def add_bilingual_fields(
     # （实测 run 36960192663：AI 翻译 0 条，全部降级 Google）。
     # 现在：每次失败只淘汰**出问题的那一维**（429→淘汰 key，400/404→淘汰 model），
     # 只要还有一条路由活着就继续翻；真正无路可走才熔断。
-    if use_ai and pending_titles and cursor is not None:
-        logger.info("[Translate] AI 批量翻译 %d 条标题...", len(pending_titles))
+    if use_ai and openrouter_pending and cursor is not None:
+        logger.info(
+            "[Translate] OpenRouter 池批量翻译剩余 %d 条标题...", len(openrouter_pending)
+        )
 
         # 用「待办队列」而不是固定切片：失败的条目**退回队列**，而不是直接丢弃。
         # 终止性由路由池保证 —— 每轮至少消耗一条路由，池子有限（keys × models），
         # 池空 / 预算耗尽 / 熔断三者任一都会让 while 退出。
-        queue: list[tuple[dict[str, Any], str]] = list(pending_titles)
+        queue: list[tuple[dict[str, Any], str]] = list(openrouter_pending)
 
         while queue:
             # 熔断检查：若已触发，立即停止批量翻译
