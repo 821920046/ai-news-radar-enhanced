@@ -44,7 +44,13 @@ jobs:
       # OpenRouter 会定期撤下 `:free` 变体（模型本体还在，只是不再免费）。撤下之后
       # AI 翻译链路会**静默失效** —— 「模型不存在」和「额度耗尽」在日志里长得几乎一样。
       # 实测 2026-10-02 发现内置模型链里的 5 个模型 `:free` 变体全部已下线，而流水线
-      # 一直在「正常」运行（AI 翻译 0 条，全部降级 Google）。
+      # 一直在「正常」运行（AI 翻译 0 条，全部降级 Google）；2026-10-20 复核时 8 个
+      # 配置模型里又有 2 个已下线。
+      #
+      # 本步骤只负责**报告**（可见、可判定）；**修复**已由 core/model_registry.py
+      # 在运行期自动完成 —— Update data 步骤里的 get_model_chain() 会先探测当前
+      # 在线且免费的模型，剔除死项并补位。所以退出码 1 不再意味着数据会断更，
+      # 但静态清单（人工排序）仍值得在方便时更新。
       #
       # 这里刻意**只告警、不阻断**：模型下线不该拖垮数据更新，但必须留下可见记录。
       # 退出码 2（网络不通 / 查不了）单独标注 —— 绝不把「无法确定」当成「没问题」。
@@ -61,7 +67,7 @@ jobs:
           set -e
           case "$CODE" in
             0) echo "::notice::OpenRouter 模型链全部在线且免费" ;;
-            1) echo "::warning::OpenRouter 模型链中有模型已下线或已不再免费，请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 与 config/*.yaml" ;;
+            1) echo "::warning::OpenRouter 模型链中有模型已下线或已不再免费。运行期已自动剔除并补位（见 Update data 步骤日志），方便时请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 与 config/*.yaml" ;;
             *) echo "::warning::无法确认 OpenRouter 模型可用性（网络/接口异常）—— 这不代表配置没问题，只是「查不了」" ;;
           esac
           if [ -s /tmp/or_check.txt ]; then
@@ -132,6 +138,14 @@ jobs:
           AI_TRANSLATE_ENABLED: ${{ secrets.AI_TRANSLATE_ENABLED }}
           # 可选的调参逃生口；未配置该 secret 时留空 → 代码里的默认值生效
           AI_TRANSLATE_BUDGET_SECONDS: ${{ secrets.AI_TRANSLATE_BUDGET_SECONDS }}
+          # ── OpenRouter 模型链运行期健康探测（core/model_registry.py）──────
+          # 在真正调用 OpenRouter 前先探测「现在哪些免费模型真的在线」：
+          # 剔除已下线/不再免费/非对话模型的配置项，并用在线免费模型补位。
+          # 默认开启，这几个 secret 只是逃生口/调参。
+          OPENROUTER_MODEL_PROBE: ${{ secrets.OPENROUTER_MODEL_PROBE }}
+          OPENROUTER_MODEL_PROBE_TARGET: ${{ secrets.OPENROUTER_MODEL_PROBE_TARGET }}
+          OPENROUTER_MODEL_PROBE_MAX_PER_PROVIDER: ${{ secrets.OPENROUTER_MODEL_PROBE_MAX_PER_PROVIDER }}
+          OPENROUTER_MODEL_PROBE_TIMEOUT: ${{ secrets.OPENROUTER_MODEL_PROBE_TIMEOUT }}
           # ── Index-Translate（B站免费翻译 API，首选后端）───────────────────
           # 默认就在代码里启用（INDEX_TRANSLATE_ENABLED 默认 "1"）：免费、无需 key、
           # GitHub runner 实测可达。这几个 secret 只是**逃生口/调参**，不是必需项。

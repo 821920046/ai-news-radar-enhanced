@@ -765,6 +765,12 @@ def atomic_write_text(file_path: Any, text: str, encoding: str = "utf-8") -> Non
 # 「找不到模型」和「没额度」在日志里都表现为一行 warning 而无人察觉。
 # 因此本清单**必须**定期用 `scripts/check_openrouter_models.py` 复核。
 #
+# 但「人工定期复核」只是兜底：真正兜住的是 `core/model_registry.py` 的**运行期**
+# 探测 —— `get_model_chain()` 每次返回前都会问一次 OpenRouter「现在哪些免费
+# 模型真的在线」，自动剔除已下线的配置项并用在线模型补位。所以本清单陈旧的最
+# 坏结果只是「链短一点」，不再是「100% 静默失效」。静态清单依然是优先级最高的
+# 候选（人工排序 > 自动补位），它值得被维护。
+#
 # 选型标准（针对本项目 EN→ZH 标题/摘要翻译 + TL;DR，短输出、要求严格按编号输出）：
 #   1) 中文生成质量（qwen / ling 母语级最强；gemma 多语言稳）
 #   2) 指令跟随（能否稳定只输出译文、不解释、不包引号）
@@ -831,7 +837,22 @@ def get_model_chain(explicit: "str | list[str] | None" = None) -> list[str]:
 
     live = [m for m in chain if m not in _DEAD_MODELS]
     # 即使全部被标记为 dead，也返回原链以便重试（避免误杀导致彻底失效）
-    return live or chain
+    resolved = live or chain
+
+    # 最后一环：运行期健康探测。OpenRouter 会定期撤下 `:free` 变体，静态配置
+    # 必然过期（2026-10-02 五个模型全下线、2026-10-20 又有两个下线）。
+    # 这里在真正调用前问一次「现在哪些免费模型真的能用」：剔掉死模型、
+    # 用在线免费模型补位。探测本身失败时原样返回 —— 它是优化，不是新单点。
+    # 详见 core/model_registry.py。
+    try:
+        from core.model_registry import resolve_model_chain
+
+        # exclude 传入本轮已用 400/404 证明不可用的模型：静态清单说它在线，
+        # 但运行时证据更强，否则它会被补位逻辑原样请回来。
+        return resolve_model_chain(resolved, exclude=_DEAD_MODELS)
+    except Exception as exc:  # pragma: no cover - 探针绝不该掀翻调用方
+        logger.warning("OpenRouter 模型链健康探测异常，保持配置原样：%s", exc)
+        return resolved
 
 
 def mark_model_dead(model: str) -> None:

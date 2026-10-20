@@ -117,6 +117,20 @@ ai-news-radar-enhanced/
 > OpenAI 兼容，35B-A3B，无需密钥），OpenRouter 池退居第二级兜底。因此**本项目的
 > 核心功能零配置即可运行**；没配 Key 时 AI 翻译仍可用，只有 AI TLDR 摘要会跳过。
 
+### 模型链自愈：OpenRouter 模型下线不再等于数据断更
+
+OpenRouter 会定期撤下 `:free` 变体（模型本体还在，只是不再免费），静态配置
+必然过期。本项目用两级机制应对：
+
+| 层级 | 位置 | 作用 |
+|---|---|---|
+| **运行期自愈** | `core/model_registry.py` | `get_model_chain()` 返回模型链前，先探测 `GET /api/v1/models`（公开端点、无需 Key、不耗额度）：剔除已下线 / 不再免费 / 非对话模型的配置项，并用**当前在线且免费**的模型补位到目标长度。 |
+| **CI 体检报告** | `scripts/check_openrouter_models.py` | 流水线第 6 步打印每个模型的在线状态与每个 Key 的免费额度余量，写进 job summary，退出码区分「有问题」(1) 与「查不了」(2)。 |
+
+自愈的三条边界：探测**失败时原样返回配置链**（自愈不是新单点）、结果**永不为空**、
+运行期已用 400/404 证明不可用的模型**不会被静态清单复活**。整轮探测最多
+2 次尝试 × 8s，且不消耗任何免费额度。
+
 ---
 
 ## 五、本地开发部署
@@ -398,6 +412,10 @@ curl http://localhost:8000/health
 | `DATA_STALE_HOURS` | `/health` 判定数据过期的小时阈值 | `6` |
 | `OPENROUTER_KEYS` | OpenRouter API Key（可多个，逗号分隔） | *secret* |
 | `OPENROUTER_MODEL` | TLDR 使用的模型 | 如 `google/gemini-flash-1.5` |
+| `OPENROUTER_MODEL_PROBE` | 模型链运行期健康探测总开关 | `1`（关：`0`） |
+| `OPENROUTER_MODEL_PROBE_TARGET` | 探测后模型链的目标长度（剔死 + 补位） | `8` |
+| `OPENROUTER_MODEL_PROBE_MAX_PER_PROVIDER` | 同一家托管方最多保留几个模型 | `2` |
+| `OPENROUTER_MODEL_PROBE_TIMEOUT` | 单次探测超时（秒） | `8` |
 | `AI_TLDR_ENABLED` | 是否启用 AI 摘要 | `true` / `false` |
 | `AI_TLDR_TOP_N` | 仅对前 N 条生成摘要 | `30` |
 | `AI_TLDR_MAX_WORKERS` | 摘要并发数 | `4` |

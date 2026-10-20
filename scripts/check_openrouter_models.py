@@ -10,6 +10,12 @@ OpenRouter 会定期撤下 `:free` 变体：模型本体还在（可以付费调
 真实事故：2026-10-02 核对时发现 `DEFAULT_OPENROUTER_MODELS` 里的 5 个模型
 （deepseek-chat-v3-0324 / qwen3-235b-a22b / glm-4.5-air / kimi-k2 / deepseek-r1）
 的 `:free` 变体**全部已下线**，整条链 100% 返回错误，而流水线一直在「正常」运行。
+2026-10-20 复核时又发现 8 个配置模型里有 2 个已下线。
+
+本脚本负责**报告**（CI 上可见、退出码可判定），而**修复**已由
+`core/model_registry.py` 在运行期自动完成：`get_model_chain()` 返回模型链前
+会探测当前在线且免费的模型，剔除死项并补位。两者关系是「体检报告 + 自愈」，
+缺一个都会退化成静默失效。
 
 退出码（刻意区分「有问题」和「查不了」）
 ---------------------------------------
@@ -57,9 +63,16 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-MODELS_API = "https://openrouter.ai/api/v1/models"
+# 「免费≠能翻译」的过滤器与端点常量从 core 导入：两处各写一份必然漂移
+# （本项目已有「4 处配置必须一致」的同类教训）。
+from core.model_registry import (  # noqa: E402
+    DEFAULT_TIMEOUT,
+    MODELS_API,
+    is_chat_capable,
+)
+
 KEY_API = "https://openrouter.ai/api/v1/key"
-TIMEOUT = 30
+TIMEOUT = DEFAULT_TIMEOUT
 
 
 def _load_configured_models() -> list[tuple[str, str]]:
@@ -144,29 +157,6 @@ def _fetch_free_models() -> tuple[dict[str, dict], dict[str, dict]]:
         except (TypeError, ValueError):
             continue
     return everything, free
-
-
-def is_chat_capable(entry: dict) -> bool:
-    """这个免费模型能不能用来做「文本进 → 文本出」的翻译。
-
-    「pricing 为 0」**不等于**「能翻译」。2026-10-02 的 21 个免费模型里混着非对话
-    模型，朴素筛选会把它们放进链里，而它们的失败方式极其隐蔽（返回音频/分类标签，
-    不是报错）：
-
-      - `google/lyria-3-*`：`output_modalities` 含 `audio` → 音乐生成模型；
-      - `nvidia/nemotron-3.5-content-safety:free`：安全**分类器**，输出标签而非译文。
-
-    因此除了「输出里必须有 text」，还要排除音频输出，并挡掉已知的垂类/审核模型名。
-    """
-    arch = entry.get("architecture") or {}
-    outputs = arch.get("output_modalities")
-    if isinstance(outputs, list):
-        if "audio" in outputs:
-            return False
-        if "text" not in outputs:
-            return False
-    mid = str(entry.get("id") or "").lower()
-    return not any(tag in mid for tag in ("content-safety", "moderation", "guard"))
 
 
 def classify(
@@ -347,7 +337,9 @@ def main() -> int:
                   f"（音乐/分类器等），来源：{origin}")
         if broken:
             print(
-                "\n请更新 core/utils.py:DEFAULT_OPENROUTER_MODELS 以及 config/sources.yaml、\n"
+                "\n运行期已由 core/model_registry.py 自愈（剔除 + 补位），数据不会因此断更；\n"
+                "但静态清单仍然是优先级最高的人工排序，方便时请更新\n"
+                "core/utils.py:DEFAULT_OPENROUTER_MODELS 以及 config/sources.yaml、\n"
                 "config/model_config.yaml 中的模型名。注意：「免费」不等于「能翻译」——\n"
                 "下面这些当前可用的免费模型里，输出含 audio 的是音乐模型、名字含\n"
                 "content-safety 的是审核分类器，都不能用于翻译：\n"
