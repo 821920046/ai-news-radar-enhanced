@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 Oct 2026 14:42:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 15:27:05 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>报告：美国化石燃料基建规模创十年新高，可再生能源增长放缓</title>
@@ -79,13 +79,27 @@ After drawing acquisition interest earlier this year, the Nvidia challenger rais
       <category>部署推理</category>
     </item>
     <item>
+      <title>Figma 联合创始人 Dylan Field 称 MCP 并非完美协议</title>
+      <link>https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol</guid>
+      <pubDate>Tue, 20 Oct 2026 14:13:32 +0000</pubDate>
+      <description>Figma 联合创始人 Dylan Fi...：Figma表示，计划在不暴露全部数据的前提下，尽可能支持更多标准，适合关注 Agent 工具调用和工作流搭建。
+
+Figma表示，计划在不暴露全部数据的前提下，尽可能支持更多标准。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>MCP/工具</category>
+      <category>模型发布</category>
+    </item>
+    <item>
       <title>美国下令联邦机构移除 DeepSeek AI 系统</title>
       <link>https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems</guid>
       <pubDate>Tue, 20 Oct 2026 13:07:24 +0000</pubDate>
-      <description>美国以国家安全为由，要求联邦民用机构移除DeepSeek产品及其技术衍生的第三方服务，来自官方更新源，适合直接判断产品变化。
+      <description>DeepSeek：The US has ordered federal civilian agencies to remove Dee...，适合跟进 AI 风险、治理和可信边界。
 
-美国以国家安全为由，要求联邦民用机构移除DeepSeek产品及其技术衍生的第三方服务。
+The US has ordered federal civilian agencies to remove DeepSeek products and third-party services built using its technology, citing national security concerns.
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -97,9 +111,9 @@ After drawing acquisition interest earlier this year, the Nvidia challenger rais
       <link>https://github.com/Graphify-Labs/graphify</link>
       <guid isPermaLink="true">https://github.com/Graphify-Labs/graphify</guid>
       <pubDate>Tue, 20 Oct 2026 12:04:30 +0000</pubDate>
-      <description>Graphify-Labs/graphi...：/graphify工具可将代码库及其文档、SQL schema、配置和PDF转化为可查询知识图谱，支持Claude...，适合优先评估模型能力、价格和工具选型变化。
+      <description>Graphify-Labs/graphi...：Graphify技能可将代码库、文档及PDF等转化为可查询的知识图谱，支持Claude Code等AI工具，采用本地...，适合优先评估模型能力、价格和工具选型变化。
 
-/graphify工具可将代码库及其文档、SQL schema、配置和PDF转化为可查询知识图谱，支持Claude Code、Cursor、Codex和Gemini CLI，通过本地确定性AST解析生成带解释的边，无需向量存储。
+Graphify技能可将代码库、文档及PDF等转化为可查询的知识图谱，支持Claude Code等AI工具，采用本地确定性AST解析，无需向量数据库。
 
 信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
@@ -112,9 +126,9 @@ After drawing acquisition interest earlier this year, the Nvidia challenger rais
       <link>https://github.com/anthropics/knowledge-work-plugins</link>
       <guid isPermaLink="true">https://github.com/anthropics/knowledge-work-plugins</guid>
       <pubDate>Tue, 20 Oct 2026 12:04:30 +0000</pubDate>
-      <description>anthropic：主要供知识工作者在 Claude Cowork 中使用的开源插件存储库，适合进一步验证代码、协议或社区采用情况。
+      <description>anthropic：开源插件仓库主要面向知识工作者，用于Claude Cowork环境，提升协作与效率，适合进一步验证代码、协议或社区采用情况。
 
-主要供知识工作者在 Claude Cowork 中使用的开源插件存储库
+开源插件仓库主要面向知识工作者，用于Claude Cowork环境，提升协作与效率。
 
 信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
@@ -126,9 +140,9 @@ After drawing acquisition interest earlier this year, the Nvidia challenger rais
       <link>https://github.com/vllm-project/vllm</link>
       <guid isPermaLink="true">https://github.com/vllm-project/vllm</guid>
       <pubDate>Tue, 20 Oct 2026 12:04:30 +0000</pubDate>
-      <description>vllm-project/vllm：这是一个高吞吐量且内存高效的LLM推理和服务引擎，适合进一步验证代码、协议或社区采用情况。
+      <description>vllm-project/vllm：一款针对大语言模型的高吞吐、内存高效推理与服务引擎，适合进一步验证代码、协议或社区采用情况。
 
-这是一个高吞吐量且内存高效的LLM推理和服务引擎。
+一款针对大语言模型的高吞吐、内存高效推理与服务引擎。
 
 信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
@@ -140,9 +154,9 @@ After drawing acquisition interest earlier this year, the Nvidia challenger rais
       <link>https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving</guid>
       <pubDate>Tue, 20 Oct 2026 13:00:00 +0000</pubDate>
-      <description>Eka Robotics 融资 1.5...：Eka Robotics 可能是第一个真正擅长拾取各种物体的机械臂，而且它非常流畅且像人类一样，令整个行业惊叹不已，适合判断资金、客户和生态格局的变化。
+      <description>Eka Robotics 融资 1.5...：Eka Robotics may be the first robotic arm that is actually...，适合判断资金、客户和生态格局的变化。
 
-Eka Robotics 可能是第一个真正擅长拾取各种物体的机械臂，而且它非常流畅且像人类一样，令整个行业惊叹不已。
+Eka Robotics may be the first robotic arm that is actually good at picking a wide range of objects up, and it is so smooth and human-like, it is wowing the industry.
 
 信号等级 B · 评分 65.0</description>
       <category>Official AI Updates</category>
@@ -161,6 +175,20 @@ DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同
       <category>开源热榜</category>
       <category>模型发布</category>
       <category>开源</category>
+    </item>
+    <item>
+      <title>少即是多:对智能体计算相较于其他架构选择的适用性进行第一性原理探索</title>
+      <link>https://arxiv.org/abs/2610.23921</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.23921</guid>
+      <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
+      <description>少即是多：arXiv:2610.23921v1 Announce Type: new Abstract: There is g...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.23921v1 Announce Type: new Abstract: There is growing interest in automating business activities with Agentic Artificial Intelligence (AI) due to latter&apos;s seeming ease of use. Never has it...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>SWECraft世界:通过模拟软件世界实现大规模智能体协作</title>
@@ -656,34 +684,6 @@ arXiv:2610.26215v1 Announce Type: new Abstract: Artificial intelligence (AI) has
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
-    </item>
-    <item>
-      <title>调度器是隐式检索器:异步性如何塑造搜索代理的证据获取过程</title>
-      <link>https://arxiv.org/abs/2610.26310</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.26310</guid>
-      <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>调度器是隐式检索器：arXiv:2610.26310v1 Announce Type: new Abstract: Language-m...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.26310v1 Announce Type: new Abstract: Language-model agents increasingly solve complex tasks through parallel reasoning and asynchronous information gathering. Controlled replay across two...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>VibeTraining-Bench:用于迭代系统改进的数据训练器工具包协同设计</title>
-      <link>https://arxiv.org/abs/2610.26342</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.26342</guid>
-      <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>VibeTraining-Bench：arXiv:2610.26342v1 Announce Type: new Abstract: Recursive...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.26342v1 Announce Type: new Abstract: Recursive self-improvement (RSI) requires agents to diagnose system bottlenecks and coordinate improvements across training and inference. We refer to...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
     </item>
   </channel>
 </rss>
