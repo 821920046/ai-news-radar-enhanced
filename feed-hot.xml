@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 Oct 2026 10:36:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 12:04:30 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>报告：美国化石燃料基建规模创十年新高，可再生能源增长放缓</title>
@@ -94,46 +94,61 @@ After drawing acquisition interest earlier this year, the Nvidia challenger rais
       <category>部署推理</category>
     </item>
     <item>
-      <title>这是你的智能体？动态环境下智能体系统的身份水印标记</title>
-      <link>https://arxiv.org/abs/2610.24382</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.24382</guid>
-      <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>这是你的智能体：arXiv:2610.24382v1 Announce Type: new Abstract: Agent syst...，适合关注自动化任务和多 Agent 协作演进。
+      <title>Graphify-Labs/graphify</title>
+      <link>https://github.com/Graphify-Labs/graphify</link>
+      <guid isPermaLink="true">https://github.com/Graphify-Labs/graphify</guid>
+      <pubDate>Tue, 20 Oct 2026 12:04:30 +0000</pubDate>
+      <description>Graphify-Labs/graphi...：它为 Claude Code、Cursor、Codex 和 Gemini CLI 提供 /graphify 技能，通...，适合优先评估模型能力、价格和工具选型变化。
 
-arXiv:2610.24382v1 Announce Type: new Abstract: Agent systems deployed in dynamic environments continuously update their memories, skills, and runtime configurations, leading to evolving trajectories...
+该工具可将包含文档、SQL 模式、配置和 PDF 的代码库转换为可查询的知识图谱。它为 Claude Code、Cursor、Codex 和 Gemini CLI 提供 /graphify 技能，通过本地确定性 AST 解析实现每条边的可解释性，且无需向量数据库。
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+      <category>开源</category>
     </item>
     <item>
-      <title>IF-MAP:基于影响函数的多智能体系统智能体优先级排序</title>
-      <link>https://arxiv.org/abs/2610.24383</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.24383</guid>
-      <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>IF-MAP：arXiv:2610.24383v1 Announce Type: new Abstract: Improving...，适合关注自动化任务和多 Agent 协作演进。
+      <title>anthropics/knowledge-work-plugins</title>
+      <link>https://github.com/anthropics/knowledge-work-plugins</link>
+      <guid isPermaLink="true">https://github.com/anthropics/knowledge-work-plugins</guid>
+      <pubDate>Tue, 20 Oct 2026 12:04:30 +0000</pubDate>
+      <description>anthropic：面向知识工作者的Claude Cowork开源插件仓库，提供丰富工具以提升工作效率，适合进一步验证代码、协议或社区采用情况。
 
-arXiv:2610.24383v1 Announce Type: new Abstract: Improving every agent in an LLM-based multi-agent system can be prohibitively costly, making it important to identify which agent should be prioritized...
+面向知识工作者的Claude Cowork开源插件仓库，提供丰富工具以提升工作效率。
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>模型发布</category>
     </item>
     <item>
-      <title>Hippo:无训练智能体自我进化的海马体重放机制</title>
-      <link>https://arxiv.org/abs/2610.24453</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.24453</guid>
-      <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Hippo：arXiv:2610.24453v1 Announce Type: new Abstract: Motivated...，适合关注自动化任务和多 Agent 协作演进。
+      <title>vllm-project/vllm</title>
+      <link>https://github.com/vllm-project/vllm</link>
+      <guid isPermaLink="true">https://github.com/vllm-project/vllm</guid>
+      <pubDate>Tue, 20 Oct 2026 12:04:30 +0000</pubDate>
+      <description>vllm-project/vllm：这是一个高吞吐量且内存高效的大型语言模型推理与服务引擎，适合进一步验证代码、协议或社区采用情况。
 
-arXiv:2610.24453v1 Announce Type: new Abstract: Motivated by recursive self-improvement (RSI), we study how LLM agents can learn through external memory without updating model parameters. Extracting...
+这是一个高吞吐量且内存高效的大型语言模型推理与服务引擎。
 
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>YuJunZhiXue/dsh-purge</title>
+      <link>https://github.com/YuJunZhiXue/dsh-purge</link>
+      <guid isPermaLink="true">https://github.com/YuJunZhiXue/dsh-purge</guid>
+      <pubDate>Tue, 20 Oct 2026 12:04:30 +0000</pubDate>
+      <description>YuJunZhiXue/dsh-purg...：DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词，适合优先评估模型能力、价格和工具选型变化。
+
+DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分
+
+信号等级 B · 评分 62.6</description>
+      <category>开源热榜</category>
+      <category>模型发布</category>
+      <category>开源</category>
     </item>
     <item>
       <title>HABIT-Bench:评估智能体记忆中基于纵向弱证据的习惯诱导能力</title>
@@ -534,11 +549,11 @@ arXiv:2610.26215v1 Announce Type: new Abstract: Artificial intelligence (AI) has
       <category>论文研究</category>
     </item>
     <item>
-      <title>The Scheduler Is a Hidden Retriever: How Asynchrony Shapes Evidence Acquisition in Search Agents</title>
+      <title>调度器是隐式检索器:异步性如何塑造搜索代理的证据获取过程</title>
       <link>https://arxiv.org/abs/2610.26310</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26310</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>The Scheduler Is a H...：arXiv:2610.26310v1 Announce Type: new Abstract: Language-m...，适合判断技术路线和后续产品化可能性。
+      <description>调度器是隐式检索器：arXiv:2610.26310v1 Announce Type: new Abstract: Language-m...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.26310v1 Announce Type: new Abstract: Language-model agents increasingly solve complex tasks through parallel reasoning and asynchronous information gathering. Controlled replay across two...
 
@@ -548,7 +563,7 @@ arXiv:2610.26310v1 Announce Type: new Abstract: Language-model agents increasing
       <category>行业动态</category>
     </item>
     <item>
-      <title>VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement</title>
+      <title>VibeTraining-Bench:用于迭代系统改进的数据训练器工具包协同设计</title>
       <link>https://arxiv.org/abs/2610.26342</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26342</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
@@ -562,7 +577,7 @@ arXiv:2610.26342v1 Announce Type: new Abstract: Recursive self-improvement (RSI)
       <category>部署推理</category>
     </item>
     <item>
-      <title>GAIDA: Generative AI for Human-in-the-Loop Document Annotation</title>
+      <title>GAIDA:用于人机协同文档标注的生成式AI</title>
       <link>https://arxiv.org/abs/2610.26362</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26362</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
@@ -575,7 +590,7 @@ arXiv:2610.26362v1 Announce Type: new Abstract: Document annotation is a fundame
       <category>论文研究</category>
     </item>
     <item>
-      <title>VeriCUA: Learning Proactive Verification for Reliable GUI Agent Rewards</title>
+      <title>VeriCUA:学习主动验证以实现可靠的 GUI 智能体奖励</title>
       <link>https://arxiv.org/abs/2610.26469</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26469</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
@@ -589,11 +604,11 @@ arXiv:2610.26469v1 Announce Type: new Abstract: Reinforcement learning for compu
       <category>论文研究</category>
     </item>
     <item>
-      <title>Breaking Diffusion: Parallel Reasoning with Draft Refinement</title>
+      <title>突破扩散模型:通过草稿精炼实现并行推理</title>
       <link>https://arxiv.org/abs/2610.26542</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26542</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Breaking Diffusion：arXiv:2610.26542v1 Announce Type: new Abstract: Drafting a...，适合判断技术路线和后续产品化可能性。
+      <description>突破扩散模型：arXiv:2610.26542v1 Announce Type: new Abstract: Drafting a...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.26542v1 Announce Type: new Abstract: Drafting an answer allows a reasoning model to reconsider each decision in the context of the others. Yet repeated diffusion denoising does not ensure...
 
@@ -603,7 +618,7 @@ arXiv:2610.26542v1 Announce Type: new Abstract: Drafting an answer allows a reas
       <category>多模态</category>
     </item>
     <item>
-      <title>BetaMem: Learning to Remember a Changing World for Embodied Agents</title>
+      <title>BetaMem:为具身智能体学习记忆不断变化的世界</title>
       <link>https://arxiv.org/abs/2610.26554</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26554</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
@@ -616,7 +631,7 @@ arXiv:2610.26554v1 Announce Type: new Abstract: Long-horizon embodied agents fac
       <category>论文研究</category>
     </item>
     <item>
-      <title>AllPath: Layered Verification for a Deployed, Self-Revising LLM Trading Agent under Human-Gated and Autonomous Regimes</title>
+      <title>AllPath:在人类监管与自主模式下，对已部署且能自我修正的 LLM 交易智能体进行分层验证</title>
       <link>https://arxiv.org/abs/2610.26662</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26662</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
@@ -630,11 +645,11 @@ arXiv:2610.26662v1 Announce Type: new Abstract: LLM trading agents are evaluated
       <category>论文研究</category>
     </item>
     <item>
-      <title>Agent World Model in the Wild: Computer-Use Agent Environment Synthesis</title>
+      <title>真实环境中的智能体世界模型:计算机使用智能体环境合成</title>
       <link>https://arxiv.org/abs/2610.26828</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.26828</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Agent World Model in...：arXiv:2610.26828v1 Announce Type: new Abstract: Agent lear...，适合关注自动化任务和多 Agent 协作演进。
+      <description>真实环境中的智能体世界模型：arXiv:2610.26828v1 Announce Type: new Abstract: Agent lear...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.26828v1 Announce Type: new Abstract: Agent learning is shifting from learning from human data toward learning through interaction with the world. However, scaling such learning directly in...
 
@@ -644,11 +659,11 @@ arXiv:2610.26828v1 Announce Type: new Abstract: Agent learning is shifting from 
       <category>论文研究</category>
     </item>
     <item>
-      <title>Context-Aware RGB-Thermal-Radar Obstacle Perception for Resource-Constrained ASVs</title>
+      <title>面向资源受限自主水面艇的上下文感知RGB-热成像-雷达障碍物感知技术</title>
       <link>https://arxiv.org/abs/2610.23873</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.23873</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Context-Aware RGB-Th...：arXiv:2610.23873v1 Announce Type: cross Abstract: Reliable...，适合关注自动化任务和多 Agent 协作演进。
+      <description>面向资源受限自主水面艇的上下文感知RGB...：arXiv:2610.23873v1 Announce Type: cross Abstract: Reliable...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.23873v1 Announce Type: cross Abstract: Reliable obstacle perception is challenging for small autonomous surface vessels (ASVs): reflections and glare confound visible-light cameras, vessel...
 
@@ -658,7 +673,7 @@ arXiv:2610.23873v1 Announce Type: cross Abstract: Reliable obstacle perception i
       <category>论文研究</category>
     </item>
     <item>
-      <title>EgoVine: Post-Training with Branching Experience Compiled from Real-World Videos</title>
+      <title>EgoVine:基于真实世界视频编译而成的分支化经验后训练方法</title>
       <link>https://arxiv.org/abs/2610.23907</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.23907</guid>
       <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
@@ -669,21 +684,6 @@ arXiv:2610.23907v1 Announce Type: cross Abstract: Real-world egocentric videos c
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
-    </item>
-    <item>
-      <title>When the Editing Intent Is Split: A Cross-Modal Jailbreak Attack for Large Image Editing Models</title>
-      <link>https://arxiv.org/abs/2610.23909</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.23909</guid>
-      <pubDate>Tue, 20 Oct 2026 04:00:00 +0000</pubDate>
-      <description>When the Editing Int...：arXiv:2610.23909v1 Announce Type: cross Abstract: Large im...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.23909v1 Announce Type: cross Abstract: Large image editing models increasingly infer editing intent from both textual and visual inputs, creating an underexplored safety risk when harmful...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-      <category>安全对齐</category>
     </item>
   </channel>
 </rss>
