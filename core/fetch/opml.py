@@ -319,8 +319,10 @@ def fetch_opml_rss(
     feed_statuses.sort(key=lambda x: str(x.get("feed_title") or x.get("feed_url") or ""))
     total_duration_ms = sum(int(s.get("duration_ms") or 0) for s in feed_statuses)
     ok_feeds = sum(1 for s in feed_statuses if s["ok"])
-    failed_feeds = sum(1 for s in feed_statuses if not s["ok"])
     skipped_feeds = sum(1 for s in feed_statuses if s.get("skipped"))
+    # 预算耗尽（skipped）不是抓取失败：混进 failed 会让「N feeds failed」
+    # 把「本轮没抓」也算成「抓失败」，看告警的人会去修根本没试过的 feed。
+    failed_feeds = sum(1 for s in feed_statuses if not s["ok"] and not s.get("skipped"))
     replaced_feeds = sum(1 for s in feed_statuses if s.get("replaced"))
 
     summary_status = {

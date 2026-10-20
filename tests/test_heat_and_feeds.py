@@ -184,6 +184,70 @@ class TestParticipantKey:
         assert participant_key({}) == "unknown"
 
 
+class TestMergedSourcesCountAsParticipants:
+    """dedup 合并掉的来源必须算参与者、不能被误判为「未跟上」。
+
+    背景（2026-10-20 对抗审查实锤）：去重把「5 家媒体同一标题」合并成一条后，
+    其它报道方的痕迹只剩 ``merged_sources``；而 heat 只数 ``item.site_id`` ——
+    于是参与者=1，事件从 hot_events 消失（热点榜取决于标题措辞多样性而非
+    真实跨源覆盖度）。更糟的是 ``detect_behind_sources`` 同样只数 site_id，
+    那 4 家会被误判「未跟上」，把已经观测到的事件趋势打成 unknown ——
+    正是「把已合并当成没抓到」的误报。
+    """
+
+    def _merged(self):
+        item = dict(mk("a", 1, name="A"))
+        item.update({
+            "title": "OpenAI launches GPT-6 reasoning model",
+            "url": "https://a.test/1",
+            "description": "OpenAI today launched GPT-6.",
+        })
+        item["merged_sources"] = [
+            {"site_id": "b", "site_name": "B", "source": "b", "url": "https://b.test/1"},
+            {"site_id": "c", "site_name": "C", "source": "c", "url": "https://c.test/1"},
+        ]
+        return item
+
+    def test_merged_sources_expand_into_participants(self):
+        engine = HeatEngine()
+        result = engine.compute([self._merged()], at=NOW)
+        assert result.participants == 3, "合并进来的两家也应各算一个参与者"
+
+    def test_merged_sources_show_up_in_source_names(self):
+        engine = HeatEngine()
+        result = engine.compute([self._merged()], at=NOW)
+        assert set(result.source_names) >= {"A", "B", "C"}, result.source_names
+
+    def test_merged_event_passes_multi_source_filter(self):
+        """合并后的事件必须能进 hot_events（participants >= 2）。"""
+        import tempfile
+
+        from core.trend_engine.trend_detector import TrendDetector
+
+        with tempfile.TemporaryDirectory() as td:
+            det = TrendDetector({"history_path": str(Path(td) / "trend_history.json")})
+            result = det.analyze([self._merged()], at=NOW,
+                                 expected_site_ids={"a", "b", "c"})
+        assert len(result["hot_events"]) == 1
+        assert result["hot_events"][0]["heat_participants"] == 3
+
+    def test_sites_hidden_by_merge_are_not_reported_behind(self):
+        merged = self._merged()
+        behind = detect_behind_sources([merged], all_site_ids={"a", "b", "c"})
+        assert behind == [], "b/c 的证据在 merged_sources 里，不能算未跟上"
+
+    def test_same_site_is_not_double_counted(self):
+        merged = dict(mk("a", 1))
+        merged["merged_sources"] = [{"site_id": "a", "site_name": "A"}]
+        assert HeatEngine().compute([merged], at=NOW).participants == 1
+
+    def test_owner_still_wins_over_merge_expansion(self):
+        """owner 是实体级归并，优先级高于按站点拆（与 participant_key 一致）。"""
+        merged = self._merged()
+        merged["owner"] = "openai"
+        assert HeatEngine().compute([merged], at=NOW).participants == 1
+
+
 class TestRankAndAnnotate:
 
     def test_single_source_group_is_filtered_out(self):

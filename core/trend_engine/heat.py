@@ -203,9 +203,16 @@ def detect_behind_sources(
 
     counts: dict[str, int] = {}
     for item in items:
-        sid = str(item.get("site_id") or "").strip()
-        if sid:
-            counts[sid] = counts.get(sid, 0) + 1
+        sids = [str(item.get("site_id") or "").strip()]
+        # 被去重合并掉的来源同样算「产出过证据」：它们的唯一痕迹在
+        # merged_sources 里。漏数会把「已合并」误判成「没抓到」，
+        # 进而把事件的趋势打成 unknown —— 正是本函数要防的那类误报。
+        for src in item.get("merged_sources") or []:
+            if isinstance(src, dict):
+                sids.append(str(src.get("site_id") or "").strip())
+        for sid in sids:
+            if sid:
+                counts[sid] = counts.get(sid, 0) + 1
 
     expected = {str(s).strip() for s in all_site_ids if str(s).strip()}
     behind = sorted(s for s in expected if counts.get(s, 0) < min_items)
@@ -252,29 +259,52 @@ class HeatEngine:
             if ts > at or ts <= window_start:
                 continue
 
-            key = participant_key(item)
-            if key == "unknown":
-                continue
-
             sid = str(item.get("site_id") or "").strip()
-            rec = out.get(key)
-            if rec is None:
-                out[key] = {
-                    "last_at": ts,
-                    "first_at": ts,
-                    "site_id": sid,
-                    "site_name": str(item.get("site_name") or sid),
-                    "first_party": bool(item.get("first_party")),
-                    "behind": sid in behind,
-                }
+            owner = str(item.get("owner") or item.get("owner_entity") or "").strip()
+            # 参与键集合。同一事件被去重合并成一条后，其它报道方的痕迹只在
+            # merged_sources 里 —— 不展开的话，「5 家媒体同一标题」合并后只剩
+            # 1 个参与者：事件从热点榜消失，heat_sources 也只剩一家。
+            # owner 优先（实体级归并）与 participant_key 的语义保持一致：
+            # 有 owner 时不再按站点拆。
+            keys: list[tuple[str, str, str]] = []
+            item_name = str(item.get("site_name") or sid)
+            if owner:
+                keys.append((f"owner:{owner}", sid, item_name))
             else:
-                if ts > rec["last_at"]:
-                    rec["last_at"] = ts
-                if ts < rec["first_at"]:
-                    rec["first_at"] = ts
-                # 任一时刻来自 behind 源，该参与者就不可比
-                rec["behind"] = rec["behind"] or (sid in behind)
-                rec["first_party"] = rec["first_party"] or bool(item.get("first_party"))
+                if sid:
+                    keys.append((f"site:{sid}", sid, item_name))
+                for src in item.get("merged_sources") or []:
+                    if not isinstance(src, dict):
+                        continue
+                    msid = str(src.get("site_id") or "").strip()
+                    if msid and msid != sid:
+                        keys.append((f"site:{msid}", msid,
+                                     str(src.get("site_name") or msid)))
+            if not keys:
+                key = participant_key(item)
+                keys.append((key, sid, item_name))
+
+            for key, rec_sid, rec_name in keys:
+                if key == "unknown":
+                    continue
+                rec = out.get(key)
+                if rec is None:
+                    out[key] = {
+                        "last_at": ts,
+                        "first_at": ts,
+                        "site_id": rec_sid,
+                        "site_name": rec_name,
+                        "first_party": bool(item.get("first_party")),
+                        "behind": rec_sid in behind,
+                    }
+                else:
+                    if ts > rec["last_at"]:
+                        rec["last_at"] = ts
+                    if ts < rec["first_at"]:
+                        rec["first_at"] = ts
+                    # 任一时刻来自 behind 源，该参与者就不可比
+                    rec["behind"] = rec["behind"] or (rec_sid in behind)
+                    rec["first_party"] = rec["first_party"] or bool(item.get("first_party"))
 
         return out
 

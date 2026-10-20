@@ -58,44 +58,49 @@ class _TmpDirMixin(unittest.TestCase):
         return Path(self.enterContext(tempfile.TemporaryDirectory()))
 
 
+def _run_pipeline(raws: list[RawItem], out_dir: Path, *, trend_on: bool = False):
+    """走真实 Pipeline.run，只替换网络与翻译两个副作用点。"""
+    calls: list[str] = []
+
+    def fake_collect_all(session, now):
+        calls.append("fetch")
+        return list(raws), []
+
+    def fake_translate(items_ai, items_all, session, cache, max_new_translations):
+        # 记录「翻译时看到的条目数」——这是本测试的核心断言
+        calls.append(f"translate:{len(items_ai)}:{len(items_all)}")
+        return items_ai, items_all, dict(cache)
+
+    def fake_dedupe(items):
+        calls.append(f"dedupe:{len(items)}")
+        # 走真实去重逻辑，只加一行记录
+        from core.dedup.deduplicator import dedupe_items_by_title_url
+
+        return dedupe_items_by_title_url(items)
+
+    with patch.object(mp, "collect_all", fake_collect_all), \
+            patch.object(mp, "add_bilingual_fields", fake_translate), \
+            patch.object(mp, "dedupe_items_by_title_url", fake_dedupe), \
+            patch.object(mp, "load_archive", lambda path: {}), \
+            patch.object(mp, "load_title_zh_cache", lambda path: {}), \
+            patch.object(mp, "safeguard_title_zh_cache", lambda *a, **k: None), \
+            patch.object(mp, "fetch_waytoagi_recent_7d",
+                         lambda *a, **k: {"count_7d": 0}), \
+            patch.object(mp, "maybe_send_news_notification", lambda items: True):
+        pipeline = mp.Pipeline({
+            "signal_score_enabled": False,
+            "ai_tldr_enabled": False,
+            "trend_engine_enabled": trend_on,
+        })
+        result = pipeline.run(output_dir=str(out_dir))
+    return result, calls
+
+
 class PipelineOrderTests(_TmpDirMixin):
     """去重在翻译之前；条目不足时翻译根本不该被调用。"""
 
-    def _run_pipeline(self, raws: list[RawItem], out_dir: Path):
-        calls: list[str] = []
-
-        def fake_collect_all(session, now):
-            calls.append("fetch")
-            return list(raws), []
-
-        def fake_translate(items_ai, items_all, session, cache, max_new_translations):
-            # 记录「翻译时看到的条目数」——这是本测试的核心断言
-            calls.append(f"translate:{len(items_ai)}:{len(items_all)}")
-            return items_ai, items_all, dict(cache)
-
-        def fake_dedupe(items):
-            calls.append(f"dedupe:{len(items)}")
-            # 走真实去重逻辑，只加一行记录
-            from core.dedup.deduplicator import dedupe_items_by_title_url
-
-            return dedupe_items_by_title_url(items)
-
-        with patch.object(mp, "collect_all", fake_collect_all), \
-                patch.object(mp, "add_bilingual_fields", fake_translate), \
-                patch.object(mp, "dedupe_items_by_title_url", fake_dedupe), \
-                patch.object(mp, "load_archive", lambda path: {}), \
-                patch.object(mp, "load_title_zh_cache", lambda path: {}), \
-                patch.object(mp, "safeguard_title_zh_cache", lambda *a, **k: None), \
-                patch.object(mp, "fetch_waytoagi_recent_7d",
-                             lambda *a, **k: {"count_7d": 0}), \
-                patch.object(mp, "maybe_send_news_notification", lambda items: True):
-            pipeline = mp.Pipeline({
-                "signal_score_enabled": False,
-                "ai_tldr_enabled": False,
-                "trend_engine_enabled": False,
-            })
-            result = pipeline.run(output_dir=str(out_dir))
-        return result, calls
+    def _run_pipeline(self, raws: list[RawItem], out_dir: Path, *, trend_on: bool = False):
+        return _run_pipeline(raws, out_dir, trend_on=trend_on)
 
     def test_dedup_runs_before_translation(self):
         """翻译看到的必须已经是去重后的列表。"""
@@ -208,6 +213,49 @@ class OpmlBudgetTests(unittest.TestCase):
         with patch.dict("os.environ", {}, clear=True):
             self.assertEqual(_rss_budget_seconds(), DEFAULT_RSS_BUDGET_SECONDS)
 
+    def test_skipped_feeds_are_not_counted_as_failures(self):
+        """预算耗尽的 feed 不能算进 failed（对抗审查实锤）。
+
+        原始症状：``summary_status`` 的 failed 计数把 ``skipped=True`` 的
+        feed 也算成抓失败，于是「N feeds failed」会把「本轮没抓」报成
+        「抓失败」，看告警的人会去修根本没试过的 feed。契约：
+        ok + failed + skipped == 总数，且 failed 不含 skipped。
+        """
+        from core.fetch.opml import fetch_opml_rss
+
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            opml = tmp / "subs.opml"
+            self._write_opml(opml, 24)
+
+            class _Resp:
+                status_code = 200
+                content = b"<?xml version='1.0'?><rss><channel><title>t</title></channel></rss>"
+
+                def raise_for_status(self):
+                    return None
+
+            class _Session:
+                def get(self, url, timeout=None, headers=None):
+                    time.sleep(0.25)
+                    return _Resp()
+
+            _, summary, statuses = fetch_opml_rss(
+                datetime.now(UTC), opml, session=_Session(), budget_seconds=0.1)
+
+            self.assertEqual(
+                summary["ok_feed_count"] + summary["failed_feed_count"]
+                + summary["skipped_feed_count"], len(statuses),
+                "ok + failed + skipped 必须等于 feed 总数",
+            )
+            self.assertGreater(summary["skipped_feed_count"], 0, "应有预算跳过的 feed")
+            self.assertLessEqual(
+                summary["failed_feed_count"], len(statuses) - summary["ok_feed_count"],
+                "failed 不应把 skipped 算进去",
+            )
+            self.assertIsNone(summary.get("error"),
+                              "只有 skipped 时不应报 'feeds failed'")
+
 
 class SnapshotConsistencyTests(_TmpDirMixin):
     """两个快照的 generated_at 必须同轮一致。"""
@@ -242,6 +290,53 @@ class SnapshotConsistencyTests(_TmpDirMixin):
         proc = self._run_validate(data_dir)
         self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
         self.assertNotIn("快照不同步", proc.stdout + proc.stderr)
+
+
+class TrendHistoryLocationTests(_TmpDirMixin):
+    """趋势历史必须跟随 output_dir，不能落到 CWD 的 data/ 下。
+
+    背景（2026-10-20 对抗审查实锤）：``TrendDetector.history_path`` 按
+    CWD / ``DATA_DIR`` 解析，于是 ``Pipeline.run(output_dir=<tmp>)`` 时
+    archive / 快照 / 翻译缓存都进 tmp，**只有趋势历史写进仓库的 data/**。
+    换 output_dir 的调用方（本地试跑、测试）因此读写彼此的状态，
+    「冷启动」判定也会失真。CI 之所以没暴露，只是因为工作流恰好用
+    --output-dir data 且 CWD 就是仓库根。
+    """
+
+    def test_trend_history_is_written_into_output_dir(self):
+        import os
+
+        out_dir = self.tmpdir()
+        cwd_history = ROOT / "data" / "trend_history.json"
+        pre_existing = cwd_history.exists()
+        pre_bytes = cwd_history.read_bytes() if pre_existing else None
+
+        raws = [
+            _raw("OpenAI launches GPT-6 reasoning model", "https://a.test/1"),
+            _raw("OpenAI debuts GPT-6 reasoning capabilities", "https://b.test/2"),
+            _raw("Anthropic ships Claude 5 enterprise", "https://c.test/3"),
+        ]
+        env = {k: v for k, v in os.environ.items()
+               if k not in {"DATA_DIR", "TREND_HISTORY_PATH"}}
+        try:
+            with patch.dict("os.environ", env, clear=True):
+                result, _ = _run_pipeline(raws, out_dir, trend_on=True)
+        finally:
+            if not pre_existing and cwd_history.exists():
+                cwd_history.unlink()
+            elif pre_existing and cwd_history.exists():
+                cwd_history.write_bytes(pre_bytes)
+
+        self.assertTrue(result.get("success"), f"流水线应成功：{result}")
+        self.assertTrue(
+            (out_dir / "trend_history.json").exists(),
+            "趋势历史必须写进 output_dir（其余状态都在那里）",
+        )
+        if not pre_existing:
+            self.assertFalse(
+                cwd_history.exists(),
+                "不得在 CWD 的 data/ 下留下趋势历史（会污染仓库工作区）",
+            )
 
 
 if __name__ == "__main__":

@@ -81,7 +81,14 @@ class Pipeline:
     def _get_trend_detector(self):
         if self._trend_detector is None:
             from core.trend_engine.trend_detector import TrendDetector
-            self._trend_detector = TrendDetector(self.config.get("trend_engine"))
+            cfg = dict(self.config.get("trend_engine") or {})
+            # 趋势历史必须跟随 output_dir。其余状态（archive / 快照 / 翻译缓存）
+            # 都以 output_dir 为准，只有它按 CWD（或 DATA_DIR）解析：换 output_dir
+            # 的调用方（本地试跑、测试）会读写彼此的状态，冷启动判定也会失真。
+            # 显式配置的 history_path 仍然优先。
+            if not cfg.get("history_path") and getattr(self, "_output_path", None) is not None:
+                cfg["history_path"] = str(self._output_path / "trend_history.json")
+            self._trend_detector = TrendDetector(cfg)
         return self._trend_detector
 
     def _get_editor_agent(self):
@@ -110,6 +117,8 @@ class Pipeline:
     ) -> dict[str, Any]:
         """Execute the full V3 pipeline and return a result summary."""
         setup_logging()
+        # 供 _get_trend_detector 推导 trend_history 路径（必须跟随 output_dir）
+        self._output_path = Path(output_dir)
         now = utc_now()
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
@@ -397,7 +406,12 @@ class Pipeline:
             "rss_opml": {
                 "enabled": bool(rss_opml), "feed_total": len(rss_feed_statuses),
                 "ok_feeds": sum(1 for s in rss_feed_statuses if s["ok"]),
-                "failed_feeds": [s.get("feed_url") for s in rss_feed_statuses if not s["ok"]],
+                # skipped（预算耗尽）与真的抓失败分开：前者是「本轮没抓」，
+                # 混进 failed_feeds 会让前端把没试过的 feed 报成失败。
+                "failed_feeds": [s.get("feed_url") for s in rss_feed_statuses
+                                 if not s["ok"] and not s.get("skipped")],
+                "skipped_feeds": [s.get("feed_url") for s in rss_feed_statuses
+                                  if s.get("skipped")],
             },
         }
 

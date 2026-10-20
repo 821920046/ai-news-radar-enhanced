@@ -29,17 +29,22 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
-def load_items(path: Path) -> list[dict[str, Any]]:
-    """从快照里取推送候选（与流水线用的同一批 items）。"""
+def load_items(path: Path) -> tuple[list[dict[str, Any]], str]:
+    """从快照里取推送候选（与流水线用的同一批 items）。
+
+    返回 ``(items, error)``。error 非空表示**读取/解析失败**，必须与
+    「快照里没有条目」区分开：后者是合法的无推送场景（返回 0），
+    前者是数据损坏 —— 当时就失败（返回 1），否则当日推送静默丢失，
+    而工作流只有 test -f 存在性检查，照样是绿的。
+    """
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
     except Exception as exc:
-        print(f"[digest] 无法读取 {path}: {exc}", file=sys.stderr)
-        return []
+        return [], f"无法读取 {path}: {exc}"
     if not isinstance(payload, dict):
-        return []
+        return [], f"{path} 顶层不是 JSON 对象"
     items = payload.get("items_ai") or payload.get("items") or []
-    return [i for i in items if isinstance(i, dict)]
+    return [i for i in items if isinstance(i, dict)], ""
 
 
 def main() -> int:
@@ -52,7 +57,11 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    items = load_items(Path(args.data))
+    items, error = load_items(Path(args.data))
+    if error:
+        # 数据损坏不是「没有新闻」：必须显式失败，让工作流变红。
+        print(f"[digest] {error}", file=sys.stderr)
+        return 1
     if not items:
         # 没有候选就不推：推一条空消息比不推更糟（训练用户忽略这个频道）。
         print("[digest] 快照里没有条目，本次不推送。")
