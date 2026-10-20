@@ -1,0 +1,53 @@
+name: Daily Digest Push
+
+# 「每日精选」是唯一面向用户的新闻推送，因此它的**可靠性**比流水线更重要。
+#
+# 为什么单独一个工作流：主流水线靠 cron 整点命中北京时间 07:00 来推送，
+# 一旦 Actions 排队超过 1 小时，当天推送就永久错过（没有补发、没有告警）。
+# 本工作流只 checkout + 读快照 + 发一条消息，大约 30 秒，几乎不可能被排队
+# 挤掉；23:30 UTC（北京 07:30）运行，给 23:00 那轮流水线留出提交快照的时间。
+#
+# 与主流水线的分工（重要）：主流水线内的同一条推送路径已设为
+# WEBHOOK_MODE=none，**发送方只能有一个**，否则同一天会推两次。
+on:
+  schedule:
+    - cron: "30 23 * * *" # 每天 23:30 UTC = 北京时间 07:30
+  workflow_dispatch: # 需要补推时手动触发
+
+permissions:
+  contents: read
+
+concurrency:
+  # 手动触发与定时的撞车没必要排队，后到的撤掉先到的（内容完全一样）
+  group: daily-digest-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "requirements.txt"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 快照由主流水线每小时提交到 main；这里读的就是最新一份。
+      - name: Send daily digest
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
+          # 强制发送：本工作流自己就是定时器，不需要再靠小时门控。
+          # 反过来说：**不要**在别处再开一条发送路径。
+          WEBHOOK_FORCE: "1"
+        run: |
+          test -f data/latest-24h.json || { echo "::error::main 上没有最新快照，先确认主流水线是否正常"; exit 1; }
+          python scripts/send_daily_digest.py --data data/latest-24h.json

@@ -116,6 +116,7 @@ class Pipeline:
 
         # ── Stage 1: Fetch ────────────────────────────────────────────────
         logger.info("[Pipeline] Stage 1/7: Fetching from all sources...")
+        fetch_started = time.monotonic()
         session = create_session()
         raw_items, statuses = collect_all(session, now)
         # OPML RSS (optional)
@@ -130,6 +131,16 @@ class Pipeline:
                 statuses.append(rss_summary)
 
         logger.info("[Pipeline] Fetched %d raw items from %d sources.", len(raw_items), len(statuses))
+        fetch_elapsed = time.monotonic() - fetch_started
+        if fetch_elapsed > 240:  # 4 分钟
+            # 抓取阶段自己没有硬预算（靠各源的 timeout + OPML 的 RSS_FETCH_BUDGET_SECONDS），
+            # 超过警戒线必须响一声：这一步变长会直接挤压后面每一步，最终撞上 job 的
+            # 20 分钟步超时 —— 而被 kill 的步骤之后的所有步骤都会被 skip。
+            logger.warning(
+                "[Pipeline] Stage 1 抓取耗时 %.1f 秒（超过 4 分钟警戒线）："
+                "可能有信源在反复超时，检查上面的 fetcher failed / retrying 日志。",
+                fetch_elapsed,
+            )
 
         # ── Stage 2: Normalize ─────────────────────────────────────────────
         logger.info("[Pipeline] Stage 2/7: Normalizing...")
@@ -225,35 +236,45 @@ class Pipeline:
         # AI filter
         latest_ai = [r for r in latest_all if is_ai_related_record(r)]
 
-        # ── Stage 3: Translate ─────────────────────────────────────────────
-        logger.info("[Pipeline] Stage 3/7: Translating titles...")
+        # ── Stage 3: Dedup + hotness（刻意放在翻译**之前**）────────────────
+        # 顺序是性能问题：翻译每轮只翻 max_new_translations（默认 80）条新标题，
+        # 而同一事件常被多个来源报道。先去重再翻译 = 每个独特事件只花 1 次配额；
+        # 反过来（旧顺序）则 5 个来源花 5 次，其中 4 条会在紧接着的合并里被扔掉，
+        # 独特条目因此被推迟到下一小时才拿到中文标题。
+        # 附带好处：去重时标题还都是抓取时的原文，不会出现「同一条事件一条英文、
+        # 一条中文」导致 bigram 相似度算不出来而漏合并。
+        logger.info("[Pipeline] Stage 3/7: Deduplicating...")
+        items_ai = dedupe_items_by_title_url(latest_ai)
+        items_all = dedupe_items_by_title_url(latest_all)
+
+        add_hotness_scores(items_ai)
+        add_hotness_scores(items_all)
+
+        # 条目数不足时提前收工，不要再烧翻译预算。
+        # 去重只会减少数量，所以「去重前 < 3」必然「去重后 < 3」，前移是安全的
+        # （旧代码把这次检查放在翻译之后，等于先花掉一整轮 AI 预算再宣布失败）。
+        if len(items_ai) < 3:
+            logger.error("[Pipeline] Too few AI items (%d), aborting.", len(items_ai))
+            return {"success": False, "error": "Too few AI items", "item_count": len(items_ai)}
+
+        # ── Stage 4: Translate ─────────────────────────────────────────────
+        # 只翻译去重后的条目：items_ai 为主，items_all 用于建立「已有中文标题」
+        # 的 URL 映射（已译过的直接复用，不重复消耗配额）。
+        logger.info("[Pipeline] Stage 4/7: Translating titles...")
         title_cache_path = output_path / "title-zh-cache.json"
         title_cache = load_title_zh_cache(title_cache_path)
         translate_start = time.monotonic()
         try:
-            latest_ai, latest_all, title_cache = add_bilingual_fields(
-                latest_ai, latest_all, session, title_cache, max_new_translations=max(0, int(translate_max_new)))
+            items_ai, items_all, title_cache = add_bilingual_fields(
+                items_ai, items_all, session, title_cache, max_new_translations=max(0, int(translate_max_new)))
             translate_elapsed = time.monotonic() - translate_start
             if translate_elapsed > 300:  # 5 分钟
-                logger.warning("[Pipeline] Stage 3 翻译耗时 %.1f 秒（超过 5 分钟警戒线），请检查 AI API 状态。", translate_elapsed)
+                logger.warning("[Pipeline] Stage 4 翻译耗时 %.1f 秒（超过 5 分钟警戒线），请检查 AI API 状态。", translate_elapsed)
             else:
-                logger.info("[Pipeline] Stage 3 翻译完成，耗时 %.1f 秒。", translate_elapsed)
+                logger.info("[Pipeline] Stage 4 翻译完成，耗时 %.1f 秒。", translate_elapsed)
         except Exception as exc:
             translate_elapsed = time.monotonic() - translate_start
-            logger.warning("[Pipeline] Stage 3 翻译异常（耗时 %.1f 秒），降级继续执行后续阶段: %s", translate_elapsed, exc)
-
-        # ── Stage 4: Dedup ─────────────────────────────────────────────────
-        logger.info("[Pipeline] Stage 4/7: Deduplicating...")
-        items_ai = dedupe_items_by_title_url(latest_ai)
-        items_all = dedupe_items_by_title_url(latest_all)
-
-        # Hotness
-        add_hotness_scores(items_ai)
-        add_hotness_scores(items_all)
-
-        if len(items_ai) < 3:
-            logger.error("[Pipeline] Too few AI items (%d), aborting.", len(items_ai))
-            return {"success": False, "error": "Too few AI items", "item_count": len(items_ai)}
+            logger.warning("[Pipeline] Stage 4 翻译异常（耗时 %.1f 秒），降级继续执行后续阶段: %s", translate_elapsed, exc)
 
         # ── Stage 5: Signal Score 2.0 ──────────────────────────────────────
         if self.signal_score_enabled:

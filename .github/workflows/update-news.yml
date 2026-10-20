@@ -101,6 +101,11 @@ jobs:
       # 之前注释里写着「由 pipeline-state 分支维护」，但**没有任何代码真正读写该
       # 分支**，所以归档在每次 runner 回收后即丢失，归档文件本身也冻结在 2026-08。
       # 这里补上真正的恢复逻辑。
+      #
+      # trend_history.json 曾经踩过同类的坑、且方向相反：Persist 步骤一直在**写**
+      # 它，Restore 却从来没恢复过 —— 单向阀。结果是趋势引擎每轮都从空历史开始，
+      # 「趋势上升/下降」的判定退化成噪声。所以这三个文件必须**成对**出现：
+      # 写进来的，就要能读回去。
       - name: Restore dedupe archive from pipeline-state
         run: |
           mkdir -p data
@@ -115,6 +120,10 @@ jobs:
             git show FETCH_HEAD:data/title-zh-cache.json > data/title-zh-cache.json 2>/dev/null \
               && echo "已恢复 title-zh-cache.json" \
               || rm -f data/title-zh-cache.json
+            # 趋势引擎的跨轮历史（BurstDetector 基线）。没有它，热度趋势方向不可信。
+            git show FETCH_HEAD:data/trend_history.json > data/trend_history.json 2>/dev/null \
+              && echo "已恢复 trend_history.json（$(wc -c < data/trend_history.json) 字节）" \
+              || echo "pipeline-state 上暂无 trend_history.json，趋势引擎将从空历史开始"
           else
             echo "pipeline-state 分支尚不存在，将从空归档开始"
           fi
@@ -159,11 +168,16 @@ jobs:
           WEBHOOK_TYPE: ${{ secrets.WEBHOOK_TYPE }}
           WEBHOOK_MODE: ${{ secrets.WEBHOOK_MODE }}
           WEBHOOK_HOTNESS_THRESHOLD: ${{ secrets.WEBHOOK_HOTNESS_THRESHOLD }}
+          # 新闻推送（每日精选）已交给独立的 daily-digest.yml 工作流：
+          # 它只发一条消息、约 30 秒，不会被 Actions 排队挤掉；而主流水线靠
+          # cron 整点命中北京 07:00，排队超 1 小时就永久错过当天推送。
+          # 这里显式关闭流水线内的发送路径 —— 两个发送方同时跑 = 同一天双推。
+          WEBHOOK_MODE: none
         run: |
           if [ -f feeds/follow.opml ]; then
-            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --rss-opml feeds/follow.opml
+            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --rss-opml feeds/follow.opml --trend-engine
           else
-            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3
+            python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 3 --trend-engine
           fi
 
       - name: Validate output

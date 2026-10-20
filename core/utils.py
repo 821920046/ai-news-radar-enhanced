@@ -785,17 +785,23 @@ def atomic_write_text(file_path: Any, text: str, encoding: str = "utf-8") -> Non
 #     - google/lyria-3-*（output_modalities 含 audio）= 音乐生成模型；
 #     - nvidia/nemotron-3.5-content-safety:free = 安全**分类器**，不产出译文。
 #   `scripts/check_openrouter_models.py` 会把这二者判为 not_a_chat_model。
-OPENROUTER_MODEL_CHAIN_VERIFIED_AT = "2026-10-02"
+#
+# 2026-10-20 复核说明：qwen3.8-27b 与 ling-3.0-flash-sante 的 `:free` 变体已下线
+# （`GET /api/v1/models` 实测 468 在线 / 20 免费），换成 minimax 与 thinkingmachines
+# 两家中文/多语言能力较强且 provider 未重叠的模型。**新模型的实际对话质量未经
+# 本地验证**（无 key 可用），若不合格会被 translator 的「连续不可解析即淘汰模型」
+# 机制自动踢出链，属于可接受的降级路径。
+OPENROUTER_MODEL_CHAIN_VERIFIED_AT = "2026-10-20"
 
 DEFAULT_OPENROUTER_MODELS = [
-    "qwen/qwen3.8-27b:free",                    # 通义千问：中文母语级，EN→ZH 最稳，27B 稠密
-    "inclusionai/ling-3.0-flash-sante:free",    # 蚂蚁 Ling 3.0 Flash：中文母语级 + 低延迟（独立 provider）
-    "google/gemma-4-31b-it:free",               # Gemma 4 31B：多语言强、指令跟随好
-    "google/gemma-4-26b-a4b-it:free",           # Gemma 4 26B A4B：MoE，3.8B 激活 → 快，质量接近 31B
-    "nvidia/nemotron-3-super-120b-a12b:free",   # Nemotron 3 Super：120B MoE / 12B 激活，综合能力最强
-    "nvidia/nemotron-3.5-lightning:free",       # Nemotron 3.5 Lightning：3B 激活 / 1M ctx，高吞吐兜底
-    "dots-studio/dots-3-note-preview:free",     # Dots 3 Note：再引入一家独立 provider，降低单点拥塞
-    "openrouter/free",                          # 官方「免费模型路由器」：最后一道兜底，自动挑一个可用免费模型
+    "minimax/minimax-m3.1-flash:free",             # MiniMax M3.1 Flash：中文母语厂商，1M 上下文
+    "thinkingmachines/inkling:free",               # Thinking Machines Inkling：1M 上下文，独立 provider
+    "google/gemma-4-31b-it:free",                  # Gemma 4 31B：多语言强、指令跟随好
+    "google/gemma-4-26b-a4b-it:free",              # Gemma 4 26B A4B：MoE，3.8B 激活，快
+    "nvidia/nemotron-3-super-120b-a12b:free",      # Nemotron 3 Super：120B MoE / 12B 激活
+    "nvidia/nemotron-3.5-lightning:free",          # Nemotron 3.5 Lightning：3B 激活，高吞吐兜底
+    "dots-studio/dots-3-note-preview:free",        # Dots 3 Note：再引入一家独立 provider，降低单点拥塞
+    "openrouter/free",                             # 官方「免费模型路由器」：最后一道兜底，自动挑一个可用免费模型
 ]
 
 # 本轮运行中被判定为不可用（HTTP 400/404，多为模型名错误/下线）的模型，跳过不再重试。

@@ -270,10 +270,16 @@ class ConfigSourcesAgreeTests(unittest.TestCase):
         )
 
     def test_chain_includes_a_chinese_native_model(self):
-        """EN→ZH 标题翻译，中文母语模型（qwen / ling）的质量与稳定性明显更好。"""
+        """EN→ZH 标题翻译，中文母语模型的质量与稳定性明显更好。
+
+        「中文母语厂商」不是固定的两个名字：2026-10-20 复核时 qwen / ling 的
+        `:free` 变体都已下线，换成 minimax。这里是**已知中文厂商**清单，
+        新模型上线时按厂商归属增删，而不是写死某两个模型名。
+        """
+        chinese_vendors = ("qwen/", "inclusionai/", "minimax/", "xingchen-agi/", "z-ai/", "moonshot/")
         joined = " ".join(DEFAULT_OPENROUTER_MODELS)
         self.assertTrue(
-            "qwen/" in joined or "inclusionai/" in joined,
+            any(v in joined for v in chinese_vendors),
             f"模型链里缺少中文母语模型：{DEFAULT_OPENROUTER_MODELS}",
         )
 

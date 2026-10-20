@@ -101,6 +101,20 @@ def main() -> int:
             errors.append(f"{all_path} 存在但没有条目（/hot 会返回 503）")
         else:
             print(f"[OK] 全量条目: {len(all_items)}")
+
+        # 两个快照是同一轮计算的产物，generated_at 必须一致。
+        # 它们是**分开**写的（先 slim 后 all），若上一轮在两次写之间崩了，
+        # 磁盘上就会留下「新 slim + 旧 all」的混搭 —— 前端 /hot 与首页会显示
+        # 两批不同时刻的数据，而任何单文件校验都查不出来。这里把它变成显式失败。
+        main_ts = payload.get("generated_at")
+        all_ts = all_payload.get("generated_at")
+        if main_ts and all_ts and str(main_ts) != str(all_ts):
+            errors.append(
+                f"快照不同步: latest-24h.json generated_at={main_ts} 但 "
+                f"latest-24h-all.json generated_at={all_ts}。"
+                "两个文件应同轮生成；出现混搭说明上一轮在两次写入之间中断，"
+                "需重跑流水线。"
+            )
     else:
         print(f"[WARN] 未找到 {all_path}（/hot 将回退到主文件）")
 

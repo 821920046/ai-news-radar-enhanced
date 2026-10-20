@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import logging
+import os
 import time
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -30,6 +31,30 @@ from core.utils import (
 )
 
 logger = logging.getLogger(__name__)
+
+# OPML 抓取的整体墙上时钟（秒）。
+#
+# 为什么需要它：单个 feed 有 timeout=12，但共享 session 带 urllib3 重试
+# （connect/read 各 3 次），单 feed 最坏可到 30s+；20 个 worker 并行、feed 数量
+# 又不设上限（--rss-max-feeds 0 = 全部）。实测过一次 Stage 1 被一个反复超时的
+# feed 拖掉 66 秒。若 OPML 有 200 个 feed，最坏 = (200/20) × 36 ≈ 6 分钟，
+# 而这一步没有自己的预算，只能靠 job 级 20 分钟兜底。
+#
+# 语义：预算耗尽后**不再发起**新请求，未抓的 feed 以 skipped 状态显式记录下来
+# （绝静默丢弃 —— 不可观测就不可断言），本轮少几个源，下一轮还有。
+DEFAULT_RSS_BUDGET_SECONDS = 180.0
+
+
+def _rss_budget_seconds() -> float:
+    raw = os.environ.get("RSS_FETCH_BUDGET_SECONDS")
+    if raw is None or not str(raw).strip():
+        return DEFAULT_RSS_BUDGET_SECONDS
+    try:
+        value = float(str(raw).strip())
+    except ValueError:
+        logger.warning("无效的 RSS_FETCH_BUDGET_SECONDS=%r，使用默认 %.0f", raw, DEFAULT_RSS_BUDGET_SECONDS)
+        return DEFAULT_RSS_BUDGET_SECONDS
+    return value if value > 0 else DEFAULT_RSS_BUDGET_SECONDS
 
 
 def parse_opml_subscriptions(opml_path: Path) -> list[dict[str, str]]:
@@ -81,6 +106,7 @@ def fetch_opml_rss(
     opml_path: Path,
     max_feeds: int = 0,
     session: requests.Session | None = None,
+    budget_seconds: float | None = None,
 ) -> tuple[list[RawItem], dict[str, Any], list[dict[str, Any]]]:
     """Fetch all feeds from an OPML file using a shared session with retry.
 
@@ -95,6 +121,9 @@ def fetch_opml_rss(
     session : requests.Session | None
         Shared session with retry configuration. If None, a new session is
         created internally via ``create_session()``.
+    budget_seconds : float | None
+        OPML 抓取的整体墙上时钟。None 时读环境变量 RSS_FETCH_BUDGET_SECONDS
+        （默认 180s）。耗尽后剩余 feed 记为 skipped，不再发起请求。
     """
     if session is None:
         session = create_session()
@@ -247,12 +276,45 @@ def fetch_opml_rss(
 
     if resolved_feeds:
         worker_count = min(20, max(4, len(resolved_feeds)))
+        budget = budget_seconds if budget_seconds is not None else _rss_budget_seconds()
+        started = time.monotonic()
+        pending = list(resolved_feeds)
+        # 按「波」提交而不是一次性全部 submit：每波结束后检查墙上时钟，
+        # 超预算就把剩下的标记为 skipped 并停止发起请求。
+        # 最坏耗时 = 预算 + 单波时长（一波内已在飞的请求不等它，也取消不掉）。
         with ThreadPoolExecutor(max_workers=worker_count) as executor:
-            futures = [executor.submit(fetch_single_feed, feed) for feed in resolved_feeds]
-            for future in as_completed(futures):
-                items, status = future.result()
-                out.extend(items)
-                feed_statuses.append(status)
+            while pending:
+                wave, pending = pending[:worker_count], pending[worker_count:]
+                futures = [executor.submit(fetch_single_feed, feed) for feed in wave]
+                for future in as_completed(futures):
+                    items, status = future.result()
+                    out.extend(items)
+                    feed_statuses.append(status)
+                if pending and (time.monotonic() - started) >= budget:
+                    logger.warning(
+                        "OPML RSS 抓取预算 %.0fs 已用尽，剩余 %d 个 feed 本轮不抓取"
+                        "（已记为 skipped，不是静默丢弃）",
+                        budget, len(pending),
+                    )
+                    for feed in pending:
+                        feed_url = feed.get("xml_url") or ""
+                        feed_statuses.append(
+                            {
+                                "site_id": f"opmlrss:{hashlib.sha1(feed_url.encode('utf-8')).hexdigest()[:10]}",
+                                "site_name": "OPML RSS",
+                                "feed_title": feed.get("title") or feed_url,
+                                "feed_url": feed.get("xml_url_original") or feed_url,
+                                "effective_feed_url": feed_url,
+                                "ok": False,
+                                "item_count": 0,
+                                "duration_ms": 0,
+                                "error": None,
+                                "skipped": True,
+                                "skip_reason": "rss_budget_exhausted",
+                                "replaced": False,
+                            }
+                        )
+                    break
 
     feed_statuses.sort(key=lambda x: str(x.get("feed_title") or x.get("feed_url") or ""))
     total_duration_ms = sum(int(s.get("duration_ms") or 0) for s in feed_statuses)

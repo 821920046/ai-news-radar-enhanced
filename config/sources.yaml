@@ -15,20 +15,22 @@ official_ai_feeds:
 # API 模型配置（可选，运行时从环境变量读取）
 # 默认模型链（按中文效果 / 速度 / 免费稳定性排序，前一个不可用/限流时自动回退到下一个）
 #
-# ⚠️ 这些 `:free` 模型会被 OpenRouter 定期撤下。2026-10-02 已复核：
-# 原先的 deepseek-chat-v3-0324 / qwen3-235b-a22b / glm-4.5-air / kimi-k2 / deepseek-r1
-# 的 `:free` 变体全部下线，整条链失效。改配置后请跑：
-#   python scripts/check_openrouter_models.py
-openrouter_default_model: "qwen/qwen3.8-27b:free"
+# ⚠️ 这些 `:free` 模型会被 OpenRouter 定期撤下，静态清单必然过期：
+#   2026-10-02 复核时原先 5 个模型全部下线；2026-10-20 复核时发现
+#   qwen3.8-27b / ling-3.0-flash-sante 也已下线，据此换成本清单。
+#   改配置后请跑：python scripts/check_openrouter_models.py
+#   真正兜底的是 core/model_registry.py：get_model_chain() 返回前会探测当前
+#   在线且免费的模型，自动剔除死项并补位 —— 本清单只是为了人工排序。
+openrouter_default_model: "minimax/minimax-m3.1-flash:free"
 openrouter_models:
-  - "qwen/qwen3.8-27b:free"                    # 通义千问：中文母语级，EN→ZH 最稳
-  - "inclusionai/ling-3.0-flash-sante:free"    # 蚂蚁 Ling 3.0 Flash：中文母语级 + 低延迟
-  - "google/gemma-4-31b-it:free"               # Gemma 4 31B：多语言强、指令跟随好
-  - "google/gemma-4-26b-a4b-it:free"           # Gemma 4 26B A4B：MoE，3.8B 激活，快
-  - "nvidia/nemotron-3-super-120b-a12b:free"   # Nemotron 3 Super：120B MoE / 12B 激活
-  - "nvidia/nemotron-3.5-lightning:free"       # Nemotron 3.5 Lightning：3B 激活，高吞吐兜底
-  - "dots-studio/dots-3-note-preview:free"     # Dots 3 Note：独立 provider，降低单点拥塞
-  - "openrouter/free"                          # 官方免费模型路由器，最后兜底
+  - "minimax/minimax-m3.1-flash:free"             # MiniMax M3.1 Flash：中文母语厂商，1M 上下文
+  - "thinkingmachines/inkling:free"               # Thinking Machines Inkling：1M 上下文，独立 provider
+  - "google/gemma-4-31b-it:free"                  # Gemma 4 31B：多语言强、指令跟随好
+  - "google/gemma-4-26b-a4b-it:free"              # Gemma 4 26B A4B：MoE，3.8B 激活，快
+  - "nvidia/nemotron-3-super-120b-a12b:free"      # Nemotron 3 Super：120B MoE / 12B 激活
+  - "nvidia/nemotron-3.5-lightning:free"          # Nemotron 3.5 Lightning：3B 激活，高吞吐兜底
+  - "dots-studio/dots-3-note-preview:free"        # Dots 3 Note：独立 provider，降低单点拥塞
+  - "openrouter/free"                             # 官方免费模型路由器，最后兜底
 embedding_model: "openai/text-embedding-3-small"
 
 # Pipeline 默认参数
