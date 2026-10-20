@@ -1,0 +1,87 @@
+name: Probe Index-Translate API
+
+# 一次性可达性探针：确认 GitHub Actions runner（海外 Azure）能否访问
+# https://index-translate.bilibili.com/v1 —— B站官方免费的 OpenAI 兼容翻译 API。
+#
+# 为什么必须单独验证：本项目已经栽过一次。Google 翻译兜底在本地连通、在
+# GitHub runner 上 3 次 <0.4s 全部连接失败 —— 于是「兜底」根本不存在，
+# AI 预算耗尽等于标题被永久丢掉。**没验证过的通路等于没有通路。**
+#
+# 这个探针刻意不 checkout 仓库、不装 Python 依赖：只发 HTTP，几十秒出结果，
+# 失败了立刻能看到，而不是等 20 分钟主流水线。
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "触发原因（留档用）"
+        required: false
+        default: "manual probe"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: probe-index-translate
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: DNS/TLS reachability
+        run: |
+          echo "=== date (runner local) ==="
+          date -u
+          echo "=== DNS ==="
+          getent hosts index-translate.bilibili.com || echo "DNS 解析失败"
+          echo "=== TLS handshake ==="
+          curl -sS -o /dev/null -m 30 \
+            -w "connect=%{time_connect}s tls=%{time_appconnect}s code=%{http_code}\n" \
+            https://index-translate.bilibili.com/v1/models || echo "TLS/连接失败"
+
+      - name: GET /v1/models
+        run: |
+          curl -sS -m 30 -w "\n[code=%{http_code} time=%{time_total}s]\n" \
+            https://index-translate.bilibili.com/v1/models | head -c 2000
+
+      - name: POST /v1/chat/completions (EN->ZH)
+        run: |
+          curl -sS -m 90 -w "\n[code=%{http_code} time=%{time_total}s]\n" \
+            https://index-translate.bilibili.com/v1/chat/completions \
+            -H "Content-Type: application/json" \
+            -H "User-Agent: Index-Translate-Client/1.0" \
+            -d '{
+              "model": "Index-Translate-35B-A3B",
+              "messages": [{"role": "user", "content": "将以下英文翻译为中文，直接输出译文：\nNVIDIA Announces New GPU Architecture"}],
+              "temperature": 0.0,
+              "max_tokens": 256,
+              "chat_template_kwargs": {"enable_thinking": false}
+            }' | head -c 2000
+
+      # 连续小批量请求：既验证稳定性，也顺带摸一下限流边界。
+      # 主流水线一次运行约需 10-15 次调用（80 条标题 / 每批 8 条 + 重试）。
+      - name: Burst of 6 requests (rate-limit probe)
+        run: |
+          ok=0; fail=0
+          for i in $(seq 1 6); do
+            out=$(curl -sS -m 90 -o /tmp/r$i.json -w "%{http_code} %{time_total}" \
+              https://index-translate.bilibili.com/v1/chat/completions \
+              -H "Content-Type: application/json" \
+              -H "User-Agent: Index-Translate-Client/1.0" \
+              -d '{
+                "model": "Index-Translate-35B-A3B",
+                "messages": [{"role": "user", "content": "将以下英文翻译为中文，直接输出译文：\nApple Silicon M5 Chip Benchmarks Leak Online"}],
+                "temperature": 0.0,
+                "max_tokens": 256,
+                "chat_template_kwargs": {"enable_thinking": false}
+              }' 2>/dev/null) || out="000 0"
+            code=${out%% *}; t=${out##* }
+            if [ "$code" = "200" ]; then ok=$((ok+1)); else fail=$((fail+1)); fi
+            echo "req#$i code=$code time=${t}s"
+          done
+          echo "=== burst result: $ok ok / $fail fail ==="
+          # 6 次里有 5 次以上失败就明确失败，让运行标红而不是混在日志里
+          [ "$fail" -ge 5 ] && exit 1
+          exit 0
