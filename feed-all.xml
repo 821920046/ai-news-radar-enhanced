@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>最近 24 小时全部内容，不筛不弃。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 Oct 2026 15:27:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 15:48:24 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-all.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Personal Agent 是什么？为什么大厂都抢着做？连 DeepSeek Bot 都来了。。</title>
@@ -69,9 +69,23 @@ Artificial Analysis 盘点上周美国开源权重模型在智能和参数效率
       <pubDate>Tue, 20 Oct 2026 15:19:48 +0000</pubDate>
       <description>ALTK-Evolve：无需前沿模型，凭借学习记忆登顶τ²-bench客服任务排行榜，适合进一步验证代码、协议或社区采用情况。
 
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>开源</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>麻省理工学院 AI 智能体社会实验在消费级硬件上依然成立</title>
+      <link>https://thenextweb.com/news/mit-swarmworld-agent-society-replication-open-weight-consumer-gpus</link>
+      <guid isPermaLink="true">https://thenextweb.com/news/mit-swarmworld-agent-society-replication-open-weight-consumer-gpus</guid>
+      <pubDate>Tue, 20 Oct 2026 15:18:03 +0000</pubDate>
+      <description>麻省理工学院 AI 智能体社会实验在消费...：麻省理工学院 AI 智能体社会实验在消费级硬件上依然成立，适合关注自动化任务和多 Agent 协作演进。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
+      <category>智能体</category>
     </item>
     <item>
       <title>VAST 开源实时生成渲染器 EdenLive，720p 下可达 24+ FPS</title>
@@ -87,6 +101,26 @@ VAST（@VASTAIResearch）开源实时生成渲染器 EdenLive，可将 3D blocko
       <category>开源</category>
     </item>
     <item>
+      <title>埃隆·马斯克的股票激励与 Anthropic 的公共资金只是权宜之计，未能解决 AI 最根本、最紧迫的问题</title>
+      <link>https://www.techradar.com/ai-platforms-assistants/elon-musks-stock-grants-and-anthropics-public-fund-are-band-aids-on-an-open-sore-and-do-not-address-ais-most-fundamental-and-pressing-problems</link>
+      <guid isPermaLink="true">https://www.techradar.com/ai-platforms-assistants/elon-musks-stock-grants-and-anthropics-public-fund-are-band-aids-on-an-open-sore-and-do-not-address-ais-most-fundamental-and-pressing-problems</guid>
+      <pubDate>Tue, 20 Oct 2026 15:13:32 +0000</pubDate>
+      <description>埃隆·马斯克的股票激励与 Anthropic 的公共资金只是权宜之计，未能解决 AI 最根本、最紧迫的问题，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
+    </item>
+    <item>
+      <title>据 Politico 报道，OpenAI 已不再坚持对中国芯片实施管控</title>
+      <link>https://thenextweb.com/news/openai-china-chip-export-controls-retreat-nvidia</link>
+      <guid isPermaLink="true">https://thenextweb.com/news/openai-china-chip-export-controls-retreat-nvidia</guid>
+      <pubDate>Tue, 20 Oct 2026 15:12:26 +0000</pubDate>
+      <description>据 Politico 报道，OpenAI 已不再坚持对中国芯片实施管控，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
+    </item>
+    <item>
       <title>黄仁勋访欧劝诫各国勿过度监管 AI，称否则将无法参与 AI 竞赛</title>
       <link>https://www.ithome.com/1/015/603.htm</link>
       <guid isPermaLink="true">https://www.ithome.com/1/015/603.htm</guid>
@@ -97,6 +131,19 @@ VAST（@VASTAIResearch）开源实时生成渲染器 EdenLive，可将 3D blocko
 
 信号等级 C · 评分 29.0</description>
       <category>AI HOT</category>
+    </item>
+    <item>
+      <title>Show HN: Penmentor – Claude 像老师一样批注你的手写数学题</title>
+      <link>https://github.com/AbdullahAlhariri/penmentor</link>
+      <guid isPermaLink="true">https://github.com/AbdullahAlhariri/penmentor</guid>
+      <pubDate>Tue, 20 Oct 2026 15:10:54 +0000</pubDate>
+      <description>Claude：Comments，适合优先评估模型能力、价格和工具选型变化。
+
+Comments
+
+信号等级 C · 评分 29.2</description>
+      <category>Info Flow</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>Bria Fibo 2.0 上线 fal</title>
@@ -117,12 +164,21 @@ fal 宣布 Bria Fibo 2.0 上线。该模型在 Artificial Analysis 排名开源�
       <link>https://news.ycombinator.com/item?id=50167583</link>
       <guid isPermaLink="true">https://news.ycombinator.com/item?id=50167583</guid>
       <pubDate>Tue, 20 Oct 2026 15:09:29 +0000</pubDate>
-      <description>Launch HN：Comments，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Launch HN：Respan (YC W24) – 基于插件构建的开源Rust AI网关，适合作为今日 AI/科技情报流里的重点线索。
 
-Comments
+信号等级 C · 评分 46.5</description>
+      <category>NewsNow</category>
+    </item>
+    <item>
+      <title>一个 AI 智能体加入顶级互联网研究员邮件列表，全员回复引发的混乱仍在持续</title>
+      <link>https://www.wired.com/story/an-ai-agent-joined-a-listserv-of-top-internet-researchers-the-reply-all-chaos-is-still-unfolding</link>
+      <guid isPermaLink="true">https://www.wired.com/story/an-ai-agent-joined-a-listserv-of-top-internet-researchers-the-reply-all-chaos-is-still-unfolding</guid>
+      <pubDate>Tue, 20 Oct 2026 15:07:43 +0000</pubDate>
+      <description>一个 AI 智能体加入顶级互联网研究员邮...：一个 AI 智能体加入顶级互联网研究员邮件列表，全员回复引发的混乱仍在持续，适合关注自动化任务和多 Agent 协作演进。
 
 信号等级 C · 评分 23.0</description>
-      <category>Info Flow</category>
+      <category>TechURLs</category>
+      <category>智能体</category>
     </item>
     <item>
       <title>Facebook现开始对每月发布超过2个链接的行为收费</title>
@@ -135,15 +191,50 @@ Comments
       <category>Zeli</category>
     </item>
     <item>
+      <title>为 AI 智能体构建云基础设施的 Daytona 在 FirstMark 领投的 B 轮融资中筹集了 6000 万美元，投后估值达 10 亿美元，总融资额升至 9100 万美元(Jeremy Kahn/Fortune)</title>
+      <link>https://www.techmeme.com/261020/p27</link>
+      <guid isPermaLink="true">https://www.techmeme.com/261020/p27</guid>
+      <pubDate>Tue, 20 Oct 2026 15:00:48 +0000</pubDate>
+      <description>为 AI 智能体构建云基础设施的 Day...：为 AI 智能体构建云基础设施的 Daytona 在 FirstMark 领投的 B 轮融资中筹集了 6000 万美...，适合判断资金、客户和生态格局的变化。
+
+信号等级 C · 评分 28.0</description>
+      <category>TechURLs</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Show HN: 在安全围栏内无人值守地运行 Claude Code，预算不到一美元</title>
+      <link>https://github.com/metahumansworld/SIwithin</link>
+      <guid isPermaLink="true">https://github.com/metahumansworld/SIwithin</guid>
+      <pubDate>Tue, 20 Oct 2026 15:00:34 +0000</pubDate>
+      <description>Claude：Comments，适合优先评估模型能力、价格和工具选型变化。
+
+Comments
+
+信号等级 C · 评分 29.2</description>
+      <category>Info Flow</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>我已在车内禁用了 Gemini，但 Android Auto 中的 Magic Cue 可能很快会改变我的想法</title>
+      <link>https://www.androidpolice.com/magic-cue-android-auto</link>
+      <guid isPermaLink="true">https://www.androidpolice.com/magic-cue-android-auto</guid>
+      <pubDate>Tue, 20 Oct 2026 15:00:10 +0000</pubDate>
+      <description>我已在车内禁用了 Gemini，但 Android Auto 中的 Magic Cue 可能很快会改变我的想法，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 25.2</description>
+      <category>TechURLs</category>
+      <category>模型发布</category>
+    </item>
+    <item>
       <title>Nscale与Anthropic正洽谈新的450亿美元AI云合作协议</title>
       <link>https://slashdot.org/story/26/10/20/0536218/nscale-anthropic-in-talks-for-new-45-billion-ai-cloud-deal</link>
       <guid isPermaLink="true">https://slashdot.org/story/26/10/20/0536218/nscale-anthropic-in-talks-for-new-45-billion-ai-cloud-deal</guid>
       <pubDate>Tue, 20 Oct 2026 15:00:00 +0000</pubDate>
-      <description>Anthropic：An anonymous reader quotes a report from Reuters: Nscale i...，适合优先评估模型能力、价格和工具选型变化。
+      <description>据路透社知情人士消息，Nscale正洽谈向Claude开发商Anthropic出售AI算力，新协议价值可能高达约45...，适合优先评估模型能力、价格和工具选型变化。
 
-An anonymous reader quotes a report from Reuters: Nscale is in talks to sell AI computing power to Claude maker Anthropic in a new deal that could be worth about $45 billion, a person familiar with...
+据路透社知情人士消息，Nscale正洽谈向Claude开发商Anthropic出售AI算力，新协议价值可能高达约450亿美元。
 
-信号等级 C · 评分 29.2</description>
+信号等级 C · 评分 35.2</description>
       <category>Info Flow</category>
       <category>模型发布</category>
     </item>
@@ -176,6 +267,17 @@ Gemini 4 Argon 打造了一个 3D 元素周期表，与 Tom Lehrer 的歌曲《T
       <category>模型发布</category>
     </item>
     <item>
+      <title>人工智能安全与网络安全本应联手，如今却势同水火</title>
+      <link>https://time.com/article/2026/10/20/ai-safety-cybersecurity</link>
+      <guid isPermaLink="true">https://time.com/article/2026/10/20/ai-safety-cybersecurity</guid>
+      <pubDate>Tue, 20 Oct 2026 14:51:01 +0000</pubDate>
+      <description>人工智能安全与网络安全本应联手，如今却势同水火，适合跟进 AI 风险、治理和可信边界。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
       <title>Show HN:VoidAccess – 开源暗网OSINT工具，从查询到图谱一步到位</title>
       <link>https://github.com/KatrielMoses/voidaccess</link>
       <guid isPermaLink="true">https://github.com/KatrielMoses/voidaccess</guid>
@@ -184,6 +286,26 @@ Gemini 4 Argon 打造了一个 3D 元素周期表，与 Tom Lehrer 的歌曲《T
 
 信号等级 C · 评分 40.5</description>
       <category>Zeli</category>
+    </item>
+    <item>
+      <title>Terra Security 推出“AI 原生网络安全”播客，首期嘉宾为亚马逊首席信息安全官</title>
+      <link>https://thenextweb.com/news/terra-security-ai-native-cybersecurity-podcast-cj-moses-amazon</link>
+      <guid isPermaLink="true">https://thenextweb.com/news/terra-security-ai-native-cybersecurity-podcast-cj-moses-amazon</guid>
+      <pubDate>Tue, 20 Oct 2026 14:45:17 +0000</pubDate>
+      <description>Terra Security 推出“AI...：Terra Security 推出“AI 原生网络安全”播客，首期嘉宾为亚马逊首席信息安全官，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
+    </item>
+    <item>
+      <title>黄仁轩致信欧洲:别再过度纠结人工智能，否则将被甩在身后</title>
+      <link>https://www.businessinsider.com/jensen-huang-warns-europe-move-faster-ai-risk-falling-behind-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/jensen-huang-warns-europe-move-faster-ai-risk-falling-behind-2026-10</guid>
+      <pubDate>Tue, 20 Oct 2026 14:42:54 +0000</pubDate>
+      <description>黄仁轩致信欧洲：别再过度纠结人工智能，否则将被甩在身后，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
     </item>
     <item>
       <title>刷短剧上头后，我用5090和ComfyUI部署MiniMax H3</title>
@@ -228,16 +350,6 @@ Gemini 4 Argon 打造了一个 3D 元素周期表，与 Tom Lehrer 的歌曲《T
       <category>TopHub</category>
     </item>
     <item>
-      <title>Altman 提出 AI 发展的三条「终局之路」：从国际监管到「一家独霸」</title>
-      <link>https://www.36kr.com/p/4034138694325121</link>
-      <guid isPermaLink="true">https://www.36kr.com/p/4034138694325121</guid>
-      <pubDate>Tue, 20 Oct 2026 14:42:33 +0000</pubDate>
-      <description>Altman 提出 AI 发展的三条「终...：从国际监管到「一家独霸」，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 8.0</description>
-      <category>TopHub</category>
-    </item>
-    <item>
       <title>我数了 647 条大厂前端 JD：AI 不再只是加分项</title>
       <link>https://juejin.cn/post/7698254253442793507</link>
       <guid isPermaLink="true">https://juejin.cn/post/7698254253442793507</guid>
@@ -246,6 +358,16 @@ Gemini 4 Argon 打造了一个 3D 元素周期表，与 Tom Lehrer 的歌曲《T
 
 信号等级 C · 评分 31.5</description>
       <category>NewsNow</category>
+    </item>
+    <item>
+      <title>Altman 提出 AI 发展的三条「终局之路」：从国际监管到「一家独霸」</title>
+      <link>https://www.36kr.com/p/4034138694325121</link>
+      <guid isPermaLink="true">https://www.36kr.com/p/4034138694325121</guid>
+      <pubDate>Tue, 20 Oct 2026 14:42:33 +0000</pubDate>
+      <description>Altman 提出 AI 发展的三条「终...：从国际监管到「一家独霸」，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 8.0</description>
+      <category>TopHub</category>
     </item>
     <item>
       <title>智能电视广告引不满，部分用户借助 Claude 等 AI 智能体清理广告和预装应用</title>
@@ -263,6 +385,17 @@ IT之家 10 月 20 日消息，据 TechCrunch、Mashable 当地时间 10 月 19 
       <category>MCP/工具</category>
     </item>
     <item>
+      <title>因安全争议引发反对，Anthropic 将重写其泄露的人工智能法案部分内容</title>
+      <link>https://thenextweb.com/news/anthropic-leaked-ai-safety-bill-backlash-frontier</link>
+      <guid isPermaLink="true">https://thenextweb.com/news/anthropic-leaked-ai-safety-bill-backlash-frontier</guid>
+      <pubDate>Tue, 20 Oct 2026 14:37:14 +0000</pubDate>
+      <description>因安全争议引发反对，Anthropic 将重写其泄露的人工智能法案部分内容，适合跟进 AI 风险、治理和可信边界。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
       <title>工程效率：放慢节奏，聚焦要事</title>
       <link>https://x.com/dexhorthy/status/2112553628481556568</link>
       <guid isPermaLink="true">https://x.com/dexhorthy/status/2112553628481556568</guid>
@@ -275,6 +408,16 @@ IT之家 10 月 20 日消息，据 TechCrunch、Mashable 当地时间 10 月 19 
       <category>AI HOT</category>
     </item>
     <item>
+      <title>Firefly 的人工智能软件可连接现有摄像头、无线电和传感器，以检测事件并协调实时响应，该公司近日完成 2000 万美元 A 轮融资(Chris Metinko/Axios)</title>
+      <link>https://www.techmeme.com/261020/p26</link>
+      <guid isPermaLink="true">https://www.techmeme.com/261020/p26</guid>
+      <pubDate>Tue, 20 Oct 2026 14:35:03 +0000</pubDate>
+      <description>Firefly 的人工智能软件可连接现有...：该公司近日完成 2000 万美元 A 轮融资(Chris Metinko/Axios)，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 28.0</description>
+      <category>TechURLs</category>
+    </item>
+    <item>
       <title>[推广] CDN3900U/P Ai 模型最低至 4 折 阿里腾讯华为火山国内站 7 折 阿里国际/GCP 可至 65 折 AWS 新号 65 折/老号无需迁移 85 折 腾讯国际 55 折 资源覆盖全球</title>
       <link>https://www.v2ex.com/t/1250449</link>
       <guid isPermaLink="true">https://www.v2ex.com/t/1250449</guid>
@@ -285,6 +428,21 @@ IT之家 10 月 20 日消息，据 TechCrunch、Mashable 当地时间 10 月 19 
 
 信号等级 C · 评分 19.0</description>
       <category>Info Flow</category>
+    </item>
+    <item>
+      <title>DeepSeek 开源 DeepInfer 推理框架，支撑 DeepSeek-V4.1-Flash 生产服务</title>
+      <link>https://www.marktechpost.com/2026/10/20/deepseek-deepinfer-open-source-inference-framework</link>
+      <guid isPermaLink="true">https://www.marktechpost.com/2026/10/20/deepseek-deepinfer-open-source-inference-framework</guid>
+      <pubDate>Tue, 20 Oct 2026 14:31:59 +0000</pubDate>
+      <description>DeepSeek、DeepSeek-V4.1-Flash：DeepSeek 以 Apache 2.0 许可证开源了支撑其生产服务的 DeepInfer 推理框架，并另以 MI...，适合优先评估模型能力、价格和工具选...。
+
+DeepSeek 以 Apache 2.0 许可证开源了支撑其生产服务的 DeepInfer 推理框架，并另以 MIT 许可证发布词元编解码层 deepseek-recipe。
+
+信号等级 C · 评分 34.2</description>
+      <category>AI HOT</category>
+      <category>模型发布</category>
+      <category>开源</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>Gemini 4 Argon 浏览器实时 3D 毛发物理</title>
@@ -365,6 +523,16 @@ ElevenLabs 发布 Eleven Realtime，一类新的语音到语音（Speech to Spee
       <category>多模态</category>
     </item>
     <item>
+      <title>一家韩国人工智能云公司的惨淡首秀正冲击芯片股</title>
+      <link>https://www.businessinsider.com/ai-elice-ipo-cloud-chip-stocks-mu-nvda-wdc-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/ai-elice-ipo-cloud-chip-stocks-mu-nvda-wdc-2026-10</guid>
+      <pubDate>Tue, 20 Oct 2026 14:24:04 +0000</pubDate>
+      <description>一家韩国人工智能云公司的惨淡首秀正冲击芯...：一家韩国人工智能云公司的惨淡首秀正冲击芯片股，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 23.0</description>
+      <category>TechURLs</category>
+    </item>
+    <item>
       <title>Grok Bot 新功能一览</title>
       <link>https://x.com/mattyp/status/2112550158885917122</link>
       <guid isPermaLink="true">https://x.com/mattyp/status/2112550158885917122</guid>
@@ -392,11 +560,11 @@ Grok Bot 有哪些新功能
       <category>模型发布</category>
     </item>
     <item>
-      <title>Spotify 一年内从推荐中移除超 5000 万首 AI 垃圾与 spam 歌曲</title>
+      <title>Spotify 已从推荐列表中下架 5000 万首人工智能生成的低质与垃圾音乐</title>
       <link>https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed</link>
       <guid isPermaLink="true">https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed</guid>
       <pubDate>Tue, 20 Oct 2026 14:18:37 +0000</pubDate>
-      <description>Spotify 一年内从推荐中移除超 5...：Spotify says it has removed more than 50 million songs con...，适合关注 Agent 工具调用和工作流搭建。
+      <description>Spotify 已从推荐列表中下架 50...：Spotify says it has removed more than 50 million songs con...，适合关注 Agent 工具调用和工作流搭建。
 
 Spotify says it has removed more than 50 million songs considered AI-generated slop or spam from user recommendations over the past year. That&apos;s according to an announcement on Tuesday, which says...
 
@@ -441,194 +609,6 @@ Spotify says it has removed more than 50 million songs considered AI-generated s
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
       <category>开源</category>
-    </item>
-    <item>
-      <title>Figma 联合创始人 Dylan Field 称 MCP 并非完美协议</title>
-      <link>https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol</guid>
-      <pubDate>Tue, 20 Oct 2026 14:13:32 +0000</pubDate>
-      <description>Figma 联合创始人 Dylan Fi...：Figma表示，计划在不暴露全部数据的前提下，尽可能支持更多标准，适合关注 Agent 工具调用和工作流搭建。
-
-Figma表示，计划在不暴露全部数据的前提下，尽可能支持更多标准。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>MCP/工具</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>CVE-2026-106173:FortiSIEM gRPC 路径遍历漏洞可导致远程代码执行</title>
-      <link>https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce</link>
-      <guid isPermaLink="true">https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce</guid>
-      <pubDate>Tue, 20 Oct 2026 14:10:39 +0000</pubDate>
-      <description>CVE-2026-106173：Comments，适合作为今日 AI/科技情报流里的重点线索。
-
-Comments
-
-信号等级 C · 评分 8.0</description>
-      <category>Info Flow</category>
-    </item>
-    <item>
-      <title>Rohan Paul 谈 Qwen3.8-27B RL post-train 的智能体表现：幻觉率从 30.4% 降至 15.1%</title>
-      <link>https://x.com/rohanpaul_ai/status/2112546482478023075</link>
-      <guid isPermaLink="true">https://x.com/rohanpaul_ai/status/2112546482478023075</guid>
-      <pubDate>Tue, 20 Oct 2026 14:08:25 +0000</pubDate>
-      <description>Qwen3.8-27B：Rohan Paul 观察到今年不少亮眼 Agent 结果来自小开源模型的 post-train，适合关注自动化任务和多 Agent 协作演进。
-
-Rohan Paul 观察到今年不少亮眼 Agent 结果来自小开源模型的 post-train。
-
-信号等级 C · 评分 34.2</description>
-      <category>AI HOT</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>DeepSeek 开源其运行 AI 模型的引擎 DeepInfer</title>
-      <link>https://thenextweb.com/news/deepseek-deepinfer-open-source-inference-engine</link>
-      <guid isPermaLink="true">https://thenextweb.com/news/deepseek-deepinfer-open-source-inference-engine</guid>
-      <pubDate>Tue, 20 Oct 2026 14:08:14 +0000</pubDate>
-      <description>DeepSeek 开源其运行 AI 模型的引擎 DeepInfer，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 29.2</description>
-      <category>TechURLs</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>DeepSeek 开源自研推理框架 DeepInfer</title>
-      <link>https://x.com/Yuchenj_UW/status/2112544687001342389</link>
-      <guid isPermaLink="true">https://x.com/Yuchenj_UW/status/2112544687001342389</guid>
-      <pubDate>Tue, 20 Oct 2026 14:01:17 +0000</pubDate>
-      <description>DeepSeek 宣布其自研推理框架 DeepInfer 现已完全开源，仓库地址为 github.com/deeps...，适合进一步验证代码、协议或社区采用情况。
-
-DeepSeek 宣布其自研推理框架 DeepInfer 现已完全开源，仓库地址为 github.com/deepseek-ai/DeepInfer。该框架支撑 DeepSeek-V4.1-Flash 的大规模服务，具备高吞吐和低延迟，分享生产级技术栈以帮助社区降低算力成本和能耗。作者 Yuchen Jin 转发并评论称这是真正的开放 AI。
-
-信号等级 C · 评分 35.2</description>
-      <category>AI HOT</category>
-      <category>开源</category>
-      <category>模型发布</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>PixVerse 柴犬女巫零食通道跳舞</title>
-      <link>https://x.com/PixVerse/status/2112544460311801883</link>
-      <guid isPermaLink="true">https://x.com/PixVerse/status/2112544460311801883</guid>
-      <pubDate>Tue, 20 Oct 2026 14:00:23 +0000</pubDate>
-      <description>PixVerse 柴犬女巫零食通道跳舞：柴犬女巫出现在零食货架通道里，开始跳起舞来 想用自己的角色来 remix 吗，适合作为今日 AI/科技情报流里的重点线索。
-
-柴犬女巫出现在零食货架通道里，开始跳起舞来
-
-想用自己的角色来 remix 吗？Canvas 链接在回复里
-
-信号等级 C · 评分 8.0</description>
-      <category>AI HOT</category>
-    </item>
-    <item>
-      <title>EMudhra 中间层 CA 遭入侵</title>
-      <link>https://emudhra.we-have-a-problem.com</link>
-      <guid isPermaLink="true">https://emudhra.we-have-a-problem.com</guid>
-      <pubDate>Tue, 20 Oct 2026 13:58:33 +0000</pubDate>
-      <description>EMudhra 中间层 CA 遭入侵，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 34.5</description>
-      <category>Zeli</category>
-    </item>
-    <item>
-      <title>消息人士称:在“跛脚鸭”会期前，OpenAI 已放弃主张对华实施严格的美国芯片出口管制，立场更贴近特朗普总统(Politico)</title>
-      <link>https://www.techmeme.com/261020/p25</link>
-      <guid isPermaLink="true">https://www.techmeme.com/261020/p25</guid>
-      <pubDate>Tue, 20 Oct 2026 13:55:03 +0000</pubDate>
-      <description>在“跛脚鸭”会期前，OpenAI 已放弃主张对华实施严格的美国芯片出口管制，立场更贴近特朗普总统(Politico)，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 23.0</description>
-      <category>TechURLs</category>
-    </item>
-    <item>
-      <title>受人工智能类股下跌和油价上涨影响，华尔街股市低开</title>
-      <link>https://www.reuters.com/pt/negocio/T4M5GAORKRMXZFC3FKNR7B63WU-2026-10-20</link>
-      <guid isPermaLink="true">https://www.reuters.com/pt/negocio/T4M5GAORKRMXZFC3FKNR7B63WU-2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 13:54:18 +0000</pubDate>
-      <description>受人工智能类股下跌和油价上涨影响：Wall Street abre em baixa com queda de ações de IA e alta...，适合作为今日 AI/科技情报流里的重点线索。
-
-Wall Street abre em baixa com queda de ações de IA e alta dos preços do petróleo
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>当你的浏览器开始替你发言时——究竟是谁同意的，是消费者还是人工智能？</title>
-      <link>https://www.reuters.com/legal/legalindustry/when-your-browser-starts-speaking-you-who-consented-consumer-or-ai--pracin-2026-10-20</link>
-      <guid isPermaLink="true">https://www.reuters.com/legal/legalindustry/when-your-browser-starts-speaking-you-who-consented-consumer-or-ai--pracin-2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 13:54:18 +0000</pubDate>
-      <description>当你的浏览器开始替你发言时——究竟是谁同...：When your browser starts speaking for you — who consented...，适合作为今日 AI/科技情报流里的重点线索。
-
-When your browser starts speaking for you — who consented, the consumer or the AI?
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Salesforce通过以56.6亿美元收购Braze，进一步加大对人工智能领域的投入</title>
-      <link>https://www.reuters.com/business/salesforce-acquire-braze-566-billion-deal-2026-10-20</link>
-      <guid isPermaLink="true">https://www.reuters.com/business/salesforce-acquire-braze-566-billion-deal-2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 13:54:18 +0000</pubDate>
-      <description>Salesforce通过以56.6亿美元...：Salesforce deepens AI bets with 5.66 billion Braze deal，适合判断资金、客户和生态格局的变化。
-
-Salesforce deepens AI bets with 5.66 billion Braze deal
-
-信号等级 C · 评分 45.5</description>
-      <category>Buzzing</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>受AI基础设施公司IPO表现不佳及SpaceX财报即将公布影响，股市走低</title>
-      <link>https://www.bloomberg.com/news/articles/2026-10-20/us-futures-slip-as-neocloud-ipo-elice-flops-spacex-results-loom</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-10-20/us-futures-slip-as-neocloud-ipo-elice-flops-spacex-results-loom</guid>
-      <pubDate>Tue, 20 Oct 2026 13:54:18 +0000</pubDate>
-      <description>受AI基础设施公司IPO表现不佳及Spa...：Stocks Slip as AI Infrastructure IPO Flops, SpaceX Results...，适合判断资金、客户和生态格局的变化。
-
-Stocks Slip as AI Infrastructure IPO Flops, SpaceX Results Loom
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>AI担忧引发国债上涨，股市下跌：市场综述</title>
-      <link>https://www.bloomberg.com/news/articles/2026-10-19/stock-market-today-dow-s-p-live-updates</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-10-19/stock-market-today-dow-s-p-live-updates</guid>
-      <pubDate>Tue, 20 Oct 2026 13:54:18 +0000</pubDate>
-      <description>AI担忧引发国债上涨：Stocks Fall as AI Worries Trigger Treasury Gains: Markets...，适合作为今日 AI/科技情报流里的重点线索。
-
-Stocks Fall as AI Worries Trigger Treasury Gains: Markets Wrap
-
-信号等级 C · 评分 36.8</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Show HN: 我制作了一款电子书阅读器，可以让你收听任意一页的内容</title>
-      <link>https://yedoo.ai</link>
-      <guid isPermaLink="true">https://yedoo.ai</guid>
-      <pubDate>Tue, 20 Oct 2026 13:54:17 +0000</pubDate>
-      <description>Show HN：I built an eBook reader that lets you listen to any page，适合作为今日 AI/科技情报流里的重点线索。
-
-I built an eBook reader that lets you listen to any page
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Show HN: TalkJS 推出的 Tori。真正实用的 AI 辅助工具</title>
-      <link>https://asktori.ai</link>
-      <guid isPermaLink="true">https://asktori.ai</guid>
-      <pubDate>Tue, 20 Oct 2026 13:54:16 +0000</pubDate>
-      <description>Show HN：Tori by TalkJS. AI support that&apos;&apos;s actually good，适合关注 Agent 工具调用和工作流搭建。
-
-Tori by TalkJS. AI support that&apos;&apos;s actually good
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-      <category>MCP/工具</category>
     </item>
   </channel>
 </rss>

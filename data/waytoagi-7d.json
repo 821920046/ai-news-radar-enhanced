@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-20T15:27:05.314655Z",
+  "generated_at": "2026-10-20T15:48:24.175154Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
   "window_days": 7,
   "latest_date": "2026-10-20",
-  "count_today": 4,
+  "count_today": 7,
   "updates_today": [
     {
       "date": "2026-10-20",
@@ -14,7 +14,17 @@
     },
     {
       "date": "2026-10-20",
+      "title": "想玩 ESP32，很多人还没动手就被 S3、C6、N16R8 和几百块开发板绕晕。这份新手指南给出了一个清晰的思路：先锁定想要实现的项目，再根据项目需求挑选开发板。文中还梳理了各个芯片的定位、多条硬件的搭建路线，以及高频踩坑点，帮你低成本给 Agent 装上实体硬件。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-20",
       "title": "你是不是也收藏了一大堆优质提示词，用时却总想不起来？作者借鉴了智能路由的思路，打造出名为“老爷爷”的Skill，内置25条原版未改动的思考类提示词。你只需描述当下难题，它就能自动匹配最合适的思考工具，全程保留原文约束，不会削弱提示效果。而且工具之间互不冲突、不会覆盖已有插件，可以帮你告别提示词吃灰！",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-20",
+      "title": "作者这篇文章拆解了代码渲染动画的底层逻辑，盘点了 HyperFrames、Remotion、rough.js、Manim、three.js、Blender 等 9 种方案，覆盖网页动效、手绘水彩、数学板书、地图路线和 3D 视频，而且还附上了原理、开源项目与选型建议。想用 AI 做视频起号、科普内容或宣传片，可以先从这篇找到适合自己的技术路线。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
@@ -26,9 +36,14 @@
       "date": "2026-10-20",
       "title": "从捏起一张薄纸、转动一枚硬币这类日常动作切入，CY这篇文章拆解了灵巧手背后的感知、传动与控制逻辑，帮你看懂演示视频、横向对比方案，快速判断一款灵巧手是否适配真实业务场景。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-20",
+      "title": "DeepSeek 最新开源推理框架 DeepInfer 与编解码组件 deepseek-recipe，揭秘了 V4.1 Flash 高性能推理背后的整套工程方案。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 37,
+  "count_7d": 40,
   "updates_7d": [
     {
       "date": "2026-10-20",
@@ -37,7 +52,17 @@
     },
     {
       "date": "2026-10-20",
+      "title": "想玩 ESP32，很多人还没动手就被 S3、C6、N16R8 和几百块开发板绕晕。这份新手指南给出了一个清晰的思路：先锁定想要实现的项目，再根据项目需求挑选开发板。文中还梳理了各个芯片的定位、多条硬件的搭建路线，以及高频踩坑点，帮你低成本给 Agent 装上实体硬件。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-20",
       "title": "你是不是也收藏了一大堆优质提示词，用时却总想不起来？作者借鉴了智能路由的思路，打造出名为“老爷爷”的Skill，内置25条原版未改动的思考类提示词。你只需描述当下难题，它就能自动匹配最合适的思考工具，全程保留原文约束，不会削弱提示效果。而且工具之间互不冲突、不会覆盖已有插件，可以帮你告别提示词吃灰！",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-20",
+      "title": "作者这篇文章拆解了代码渲染动画的底层逻辑，盘点了 HyperFrames、Remotion、rough.js、Manim、three.js、Blender 等 9 种方案，覆盖网页动效、手绘水彩、数学板书、地图路线和 3D 视频，而且还附上了原理、开源项目与选型建议。想用 AI 做视频起号、科普内容或宣传片，可以先从这篇找到适合自己的技术路线。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
@@ -48,6 +73,11 @@
     {
       "date": "2026-10-20",
       "title": "从捏起一张薄纸、转动一枚硬币这类日常动作切入，CY这篇文章拆解了灵巧手背后的感知、传动与控制逻辑，帮你看懂演示视频、横向对比方案，快速判断一款灵巧手是否适配真实业务场景。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-10-20",
+      "title": "DeepSeek 最新开源推理框架 DeepInfer 与编解码组件 deepseek-recipe，揭秘了 V4.1 Flash 高性能推理背后的整套工程方案。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
