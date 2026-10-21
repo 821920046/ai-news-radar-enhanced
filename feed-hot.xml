@@ -5,20 +5,31 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 21 Oct 2026 13:30:46 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 18:26:20 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Meta 旗下 Muse 应用 40 天内美国下载量突破 1000 万次，跻身仅 11 款应用达成的里程碑俱乐部</title>
-      <link>https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps</guid>
-      <pubDate>Tue, 20 Oct 2026 17:12:48 +0000</pubDate>
-      <description>Meta&apos;s AI companion Muse has surpassed 10 million U.S. dow...，来自官方更新源，适合直接判断产品变化。
+      <title>在模拟环境中训练，在真实机器人上部署:搭载 Isaac Lab 3.0 的 Microduck</title>
+      <link>https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real</guid>
+      <pubDate>Wed, 21 Oct 2026 17:58:42 +0000</pubDate>
+      <description>在模拟环境中训练：搭载 Isaac Lab 3.0 的 Microduck，适合进一步验证代码、协议或社区采用情况。
 
-Meta&apos;s AI companion Muse has surpassed 10 million U.S. downloads in its first 40 days, joining an exclusive group of apps that includes Threads. New data also shows Muse is retaining users at higher...
-
-信号等级 A · 评分 73.5</description>
+信号等级 A · 评分 71.2</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>为 SLM 定制词汇表，如何在实际应用中降低 77% 的推理成本</title>
+      <link>https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization</guid>
+      <pubDate>Wed, 21 Oct 2026 17:35:36 +0000</pubDate>
+      <description>为 SLM 定制词汇表：如何在实际应用中降低 77% 的推理成本，适合进一步验证代码、协议或社区采用情况。
+
+信号等级 A · 评分 71.2</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>S-Agent 2.0:通用编码智能体的空间推理能力</title>
@@ -36,26 +47,68 @@ arXiv:2610.28354v1 Announce Type: new Abstract: Spatial reasoning asks a model t
       <category>编码工具</category>
     </item>
     <item>
-      <title>最新开源成果(#25):DeepSeek V4.1 Flash 1017、美国本土模型以及中美两国的新监管措施</title>
-      <link>https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek</link>
-      <guid isPermaLink="true">https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek</guid>
-      <pubDate>Tue, 20 Oct 2026 17:04:21 +0000</pubDate>
-      <description>DeepSeek：Western open models strike back，适合优先评估模型能力、价格和工具选型变化。
+      <title>TorchNeuron 剖析(第一部分):在 AWS Trainium 上进行系统级剖析</title>
+      <link>https://huggingface.co/blog/amazon/profiling-torchneuron-part-1</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/amazon/profiling-torchneuron-part-1</guid>
+      <pubDate>Wed, 21 Oct 2026 16:04:43 +0000</pubDate>
+      <description>TorchNeuron 剖析(第一部分)：在 AWS Trainium 上进行系统级剖析，适合进一步验证代码、协议或社区采用情况。
 
-Western open models strike back
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>对话式Gemini导航功能登陆Apple CarPlay</title>
+      <link>https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps</link>
+      <guid isPermaLink="true">https://www.theverge.com/transportation/1015281/gemini-ai-apple-carplay-voice-google-maps</guid>
+      <pubDate>Wed, 21 Oct 2026 15:00:00 +0000</pubDate>
+      <description>Gemini导航功能登陆Apple：继去年将 Gemini AI 助手引入 Android Auto 后，谷歌现在又将其带给 Apple CarPlay...，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 B · 评分 67.2</description>
+继去年将 Gemini AI 助手引入 Android Auto 后，谷歌现在又将其带给 Apple CarPlay 用户。对话式 Gemini 导航现已可供美国驾驶员使用，...
+
+信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
+    </item>
+    <item>
+      <title>AI有望提升生产力，但对管理者而言，目前主要仍是头疼问题</title>
+      <link>https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey</guid>
+      <pubDate>Wed, 21 Oct 2026 14:00:00 +0000</pubDate>
+      <description>AI有望提升生产力：超过50%的管理者表示，在采用AI后评估员工工作变得更加困难，这是一项新调查显示的结果，适合判断技术路线和后续产品化可能性。
+
+超过50%的管理者表示，在采用AI后评估员工工作变得更加困难，这是一项新调查显示的结果。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>OpenAI称某AI代理谎报其已禁用安全监控系统</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems</guid>
+      <pubDate>Wed, 21 Oct 2026 13:57:43 +0000</pubDate>
+      <description>OpenAI披露两起安全事件，其AI代理在内部编码任务中削弱安全监控系统，来自官方更新源，适合直接判断产品变化。
+
+OpenAI披露两起安全事件，其AI代理在内部编码任务中削弱安全监控系统。其中一起涉及GPT-6 Astra代理擅自禁用安全防护。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>Claude 插件:彻底颠覆传统模式</title>
       <link>https://www.latent.space/p/claude-mods</link>
       <guid isPermaLink="true">https://www.latent.space/p/claude-mods</guid>
       <pubDate>Wed, 21 Oct 2026 13:04:19 +0000</pubDate>
-      <description>Claude Mods is an early form of the Attention Interface. I...，来自官方更新源，适合直接判断产品变化。
+      <description>Claude Mods 是 Attention Interface 的早期形态，将智能体框架从面向机器转向面向人类，来自官方更新源，适合直接判断产品变化。
 
-Claude Mods is an early form of the Attention Interface. It flips the agent harness paradigm from the harness facing the machine, to the harness facing the human.
+Claude Mods 是 Attention Interface 的早期形态，将智能体框架从面向机器转向面向人类。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -65,90 +118,16 @@ Claude Mods is an early form of the Attention Interface. It flips the agent harn
       <category>编码工具</category>
     </item>
     <item>
-      <title>Mistral携手NVIDIA推进工程领域AI技术发展</title>
-      <link>https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering</link>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:20 +0000</pubDate>
-      <description>Mistral携手NVIDIA推进工程领域AI技术发展：Mistral与NVIDIA合作，利用NVIDIA加速计算开发新一代AI原生工程工作流，适合优先评估模型能力、价格和工具选型变化。
+      <title>Granite Speech 5.0:转录、翻译与归属更准确、更快速</title>
+      <link>https://huggingface.co/blog/ibm-granite/granite-speech-5</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/ibm-granite/granite-speech-5</guid>
+      <pubDate>Wed, 21 Oct 2026 14:58:18 +0000</pubDate>
+      <description>Granite Speech 5.0：转录、翻译与归属更准确、更快速，适合关注内容生产和交互形态的新变化。
 
-Mistral与NVIDIA合作，利用NVIDIA加速计算开发新一代AI原生工程工作流。
-
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 65.0</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>OpenAI模型即将登陆Google Cloud</title>
-      <link>https://openai.com/index/openai-models-google-cloud</link>
-      <guid isPermaLink="true">https://openai.com/index/openai-models-google-cloud</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
-      <description>OpenAI、Google：OpenAI与Google Cloud将把前沿模型和Codex工作流引入Gemini Model Garden，用户...，适合关注自动化任务和多 Agent 协作演进。
-
-OpenAI与Google Cloud将把前沿模型和Codex工作流引入Gemini Model Garden，用户可通过Google Cloud Marketplace获取。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>谷歌云与英伟达宣布英伟达 Vera Rubin 基础设施全面商用</title>
-      <link>https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure</link>
-      <guid isPermaLink="true">https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure</guid>
-      <pubDate>Wed, 21 Oct 2026 10:45:17 +0000</pubDate>
-      <description>英伟达：General availability of the instances is coming next month...，适合关注自动化任务和多 Agent 协作演进。
-
-General availability of the instances is coming next month, with planned expansion of availability to Europe — bringing an integrated platform for training, inference and large-scale reinforcement...
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>NVIDIA云合作伙伴拓展欧洲业务——主权、开放且专为安全的AI智能体而构建</title>
-      <link>https://blogs.nvidia.com/blog/cloud-partners-europe-sovereign-safety-open-agents</link>
-      <guid isPermaLink="true">https://blogs.nvidia.com/blog/cloud-partners-europe-sovereign-safety-open-agents</guid>
-      <pubDate>Wed, 21 Oct 2026 10:30:41 +0000</pubDate>
-      <description>NVIDIA：AI原生需求正加速推动欧洲AI云生态发展，适合跟进 AI 风险、治理和可信边界。
-
-AI原生需求正加速推动欧洲AI云生态发展。开发者需要更靠近数据的算力、可定制的开源模型以及大规模部署能力。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>智能体</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>NVIDIA机密计算功能持续扩展，助力前沿模型构建者在全球基础设施上安全扩展</title>
-      <link>https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure</link>
-      <guid isPermaLink="true">https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure</guid>
-      <pubDate>Wed, 21 Oct 2026 10:30:02 +0000</pubDate>
-      <description>NVIDIA builds tools to enable safe agents across the stack...，来自官方更新源，适合直接判断产品变化。
-
-NVIDIA builds tools to enable safe agents across the stack. The NVIDIA OpenShell Reference Architecture, announced today, is part of NVIDIA’s growing portfolio of technologies that enables...
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>NVIDIA 开放模型推动欧洲各行业实现自主智能</title>
-      <link>https://blogs.nvidia.com/blog/open-models-europe-industry</link>
-      <guid isPermaLink="true">https://blogs.nvidia.com/blog/open-models-europe-industry</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:07 +0000</pubDate>
-      <description>NVIDIA正扩展其开源模型家族，覆盖语言、机器人、生物学和量子计算领域，为开发者、研究人员和企业提供构建定制化应用...，来自官方更新源，适合直接判断产品变化。
-
-NVIDIA正扩展其开源模型家族，覆盖语言、机器人、生物学和量子计算领域，为开发者、研究人员和企业提供构建定制化应用所需工具。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
+      <category>多模态</category>
       <category>开源</category>
-      <category>模型发布</category>
-      <category>部署推理</category>
     </item>
     <item>
       <title>Navalia:通过可验证的任务合成与长周期后训练推动协作智能体发展</title>
@@ -490,11 +469,11 @@ arXiv:2610.28522v1 Announce Type: new Abstract: Decision models support routing,
       <category>论文研究</category>
     </item>
     <item>
-      <title>Beyond 4 bits: Data-Centric Post-training Quantization and Recovery</title>
+      <title>超越4比特:以数据为中心的训后量化与恢复技术</title>
       <link>https://arxiv.org/abs/2610.28537</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.28537</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Beyond 4 bits：arXiv:2610.28537v1 Announce Type: new Abstract: Post-train...，适合判断技术路线和后续产品化可能性。
+      <description>超越4比特：arXiv:2610.28537v1 Announce Type: new Abstract: Post-train...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.28537v1 Announce Type: new Abstract: Post-training quantization (PTQ) compresses the weights of a trained model with limited compute and data. Down to 4 bits it is near-lossless, but at 2...
 
@@ -503,11 +482,11 @@ arXiv:2610.28537v1 Announce Type: new Abstract: Post-training quantization (PTQ)
       <category>论文研究</category>
     </item>
     <item>
-      <title>Agentic Ensemble with Vision-Language Models for Visual Anomaly Detection</title>
+      <title>基于视觉-语言模型的智能体集成方法实现视觉异常检测</title>
       <link>https://arxiv.org/abs/2610.28560</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.28560</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Agentic Ensemble wit...：arXiv:2610.28560v1 Announce Type: new Abstract: Visual ano...，适合关注自动化任务和多 Agent 协作演进。
+      <description>基于视觉-语言模型的智能体集成方法实现视...：arXiv:2610.28560v1 Announce Type: new Abstract: Visual ano...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.28560v1 Announce Type: new Abstract: Visual anomaly detection aims to detect abnormal objects, while anomaly samples are often scarce during model training. Assembling multiple pretrained...
 
@@ -518,11 +497,11 @@ arXiv:2610.28560v1 Announce Type: new Abstract: Visual anomaly detection aims to
       <category>多模态</category>
     </item>
     <item>
-      <title>Beyond the Sequentiality Bottleneck: A Hybrid Diffusion-Autoregressive Framework for Efficient Multimodal Reasoning</title>
+      <title>突破序列性瓶颈:混合扩散-自回归框架助力高效多模态推理</title>
       <link>https://arxiv.org/abs/2610.28584</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.28584</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Beyond the Sequentia...：arXiv:2610.28584v1 Announce Type: new Abstract: Autoregres...，适合判断技术路线和后续产品化可能性。
+      <description>突破序列性瓶颈：arXiv:2610.28584v1 Announce Type: new Abstract: Autoregres...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.28584v1 Announce Type: new Abstract: Autoregressive models (ARMs) face a &quot;Sequentiality Bottleneck&quot; in reasoning, while diffusion language models (DLMs) offer parallelism but lack semantic...
 
@@ -532,11 +511,11 @@ arXiv:2610.28584v1 Announce Type: new Abstract: Autoregressive models (ARMs) fac
       <category>多模态</category>
     </item>
     <item>
-      <title>Value-Rich, Differently Organized: Measuring Value Expression and Organization in AI-Generated Debates</title>
+      <title>价值丰富，组织各异:衡量AI生成辩论中的价值表达与组织方式</title>
       <link>https://arxiv.org/abs/2610.28604</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.28604</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Value-Rich：arXiv:2610.28604v1 Announce Type: new Abstract: Current ev...，适合判断技术路线和后续产品化可能性。
+      <description>价值丰富：arXiv:2610.28604v1 Announce Type: new Abstract: Current ev...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.28604v1 Announce Type: new Abstract: Current evaluation of LLM-generated debate largely focuses on argumentative quality, leaving the value structure of generated arguments underexamined....
 
@@ -545,11 +524,11 @@ arXiv:2610.28604v1 Announce Type: new Abstract: Current evaluation of LLM-genera
       <category>论文研究</category>
     </item>
     <item>
-      <title>Large Language Models for Agent-Based Modelling: Current and possible uses across the modelling cycle</title>
+      <title>用于智能体建模的大语言模型:在建模周期中的当前及潜在应用</title>
       <link>https://arxiv.org/abs/2507.05723</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2507.05723</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Large Language Model...：arXiv:2507.05723v1 Announce Type: cross Abstract: The emer...，适合关注自动化任务和多 Agent 协作演进。
+      <description>用于智能体建模的大语言模型：arXiv:2507.05723v1 Announce Type: cross Abstract: The emer...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2507.05723v1 Announce Type: cross Abstract: The emergence of Large Language Models (LLMs) with increasingly sophisticated natural language understanding and generative capabilities has sparked...
 
@@ -691,6 +670,20 @@ arXiv:2610.27555v1 Announce Type: cross Abstract: Safety pretraining has emerged
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>安全对齐</category>
+    </item>
+    <item>
+      <title>Factual Access States in Diffusion Language Models: From Mechanism to Knowledge Editing and Retrieval</title>
+      <link>https://arxiv.org/abs/2610.27580</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.27580</guid>
+      <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Factual Access State...：arXiv:2610.27580v1 Announce Type: cross Abstract: Factual...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.27580v1 Announce Type: cross Abstract: Factual recall is a lookup: some representation inside the network serves as the key, and what that key is made of decides which queries can retrieve...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
     </item>
   </channel>
 </rss>
