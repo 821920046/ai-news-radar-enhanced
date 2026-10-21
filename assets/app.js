@@ -249,7 +249,9 @@ function renderStats(payload) {
     hotTickerTimer = null;
   }
 
-  const allItems = payload.items || [];
+  // items_ai 与旧的 items 键曾是同一份列表（快照曾把它序列化两遍，移动端
+  // 白翻一倍流量）；现在 slim payload 只带 items_ai，这里同步改读它。
+  const allItems = payload.items_ai || payload.items || [];
     
   // 24小时内热门新闻 (按 signal_score / hotness 降序)
   const hottestNews = [...allItems]
