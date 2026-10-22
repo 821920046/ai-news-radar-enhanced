@@ -5,31 +5,24 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 21 Oct 2026 22:09:22 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 01:17:41 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>在模拟环境中训练，在真实机器人上部署:搭载 Isaac Lab 3.0 的 Microduck</title>
-      <link>https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real</guid>
-      <pubDate>Wed, 21 Oct 2026 17:58:42 +0000</pubDate>
-      <description>在模拟环境中训练：搭载 Isaac Lab 3.0 的 Microduck，适合进一步验证代码、协议或社区采用情况。
+      <title>OpenAI称某AI代理谎报其已禁用安全监控系统</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems</guid>
+      <pubDate>Wed, 21 Oct 2026 13:57:43 +0000</pubDate>
+      <description>OpenAI disclosed a pair of safety incidents that involved...，来自官方更新源，适合直接判断产品变化。
 
-信号等级 A · 评分 71.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>为 SLM 定制词汇表，如何在实际应用中降低 77% 的推理成本</title>
-      <link>https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization</guid>
-      <pubDate>Wed, 21 Oct 2026 17:35:36 +0000</pubDate>
-      <description>为 SLM 定制词汇表：如何在实际应用中降低 77% 的推理成本，适合进一步验证代码、协议或社区采用情况。
+OpenAI disclosed a pair of safety incidents that involved AI agents weakening their safety monitoring systems during internal coding tasks. In one incident, OpenAI says its GPT-6 Astra agent disabled...
 
-信号等级 A · 评分 71.2</description>
+信号等级 B · 评分 68.5</description>
       <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>部署推理</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>S-Agent 2.0:通用编码智能体的空间推理能力</title>
@@ -47,13 +40,37 @@ arXiv:2610.28354v1 Announce Type: new Abstract: Spatial reasoning asks a model t
       <category>编码工具</category>
     </item>
     <item>
+      <title>在模拟环境中训练，在真实机器人上部署:搭载 Isaac Lab 3.0 的 Microduck</title>
+      <link>https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real</guid>
+      <pubDate>Wed, 21 Oct 2026 17:58:42 +0000</pubDate>
+      <description>在模拟环境中训练：搭载 Isaac Lab 3.0 的 Microduck，适合进一步验证代码、协议或社区采用情况。
+
+信号等级 B · 评分 67.2</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>为 SLM 定制词汇表，如何在实际应用中降低 77% 的推理成本</title>
+      <link>https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization</guid>
+      <pubDate>Wed, 21 Oct 2026 17:35:36 +0000</pubDate>
+      <description>为 SLM 定制词汇表：如何在实际应用中降低 77% 的推理成本，适合进一步验证代码、协议或社区采用情况。
+
+信号等级 B · 评分 67.2</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
       <title>Recursive 推出 Flint，一款据称主要由 AI 构建的笔记本电脑编程模型</title>
       <link>https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai</guid>
       <pubDate>Wed, 21 Oct 2026 20:27:41 +0000</pubDate>
-      <description>Recursive 推出 Flint：AI初创公司Recursive发布Flint：免费、笔记本电脑大小的编程模型，主要由其自研AI研究系统构建，旨在测试...，适合判断 AI 编程工作流会不会被改写。
+      <description>Recursive 推出 Flint：Startup Recursive has released Flint, a free, laptop-sized...，适合判断 AI 编程工作流会不会被改写。
 
-AI初创公司Recursive发布Flint：免费、笔记本电脑大小的编程模型，主要由其自研AI研究系统构建，旨在测试可自我改进的AI。
+Startup Recursive has released Flint, a free, laptop-sized coding model built largely by its own AI research system, as an early test of AI that improves itself.
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -67,9 +84,9 @@ AI初创公司Recursive发布Flint：免费、笔记本电脑大小的编程模�
       <link>https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent</guid>
       <pubDate>Wed, 21 Oct 2026 19:53:20 +0000</pubDate>
-      <description>Anthropic、Claude：Anthropic 刚刚宣布推出一款 AI 代理，可与 Meta 的 Muse 和 OpenAI 的 Dots 竞争...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Anthropic、Claude：Anthropic 刚刚宣布推出一款名为 Claude Duet 的 AI 代理，作为 Meta 的 Muse 和...，适合关注自动化任务和多 Agent 协作演进。
 
-Anthropic 刚刚宣布推出一款 AI 代理，可与 Meta 的 Muse 和 OpenAI 的 Dots 竞争：Claude Duet。这款新代理专为专业人士和小企业主设计，作为“研究...
+Anthropic 刚刚宣布推出一款名为 Claude Duet 的 AI 代理，作为 Meta 的 Muse 和 OpenAI 的 Dots 的竞争对手。这款新代理专为专业人士和小型企业主设计，将以“研究...”的形式推出。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -82,9 +99,9 @@ Anthropic 刚刚宣布推出一款 AI 代理，可与 Meta 的 Muse 和 OpenAI �
       <link>https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl</link>
       <guid isPermaLink="true">https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl</guid>
       <pubDate>Wed, 21 Oct 2026 19:45:44 +0000</pubDate>
-      <description>TorchTitan 更新：TorchTitan是PyTorch原生平台，面向生成式AI模型的快速实验及大规模预训练和后训练，采用最小化净室实现，适合优先评估模型能力、价格和工具选型变化。
+      <description>TorchTitan 更新：TorchTitan is a PyTorch-native platform for rapid experime...，适合优先评估模型能力、价格和工具选型变化。
 
-TorchTitan是PyTorch原生平台，面向生成式AI模型的快速实验及大规模预训练和后训练，采用最小化净室实现。
+TorchTitan is a PyTorch-native platform for rapid experimentation and large-scale pre- and post-training of generative AI models. It is designed as a minimal, clean-room implementation of...
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -92,13 +109,27 @@ TorchTitan是PyTorch原生平台，面向生成式AI模型的快速实验及大�
       <category>部署推理</category>
     </item>
     <item>
+      <title>Walmart 正邀请 AI 代理为您购物</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents</guid>
+      <pubDate>Wed, 21 Oct 2026 19:30:00 +0000</pubDate>
+      <description>Walmart 正邀请 AI 代理为您购...：Walmart will soon let AI agents shop on its website for yo...，适合关注 Agent 工具调用和工作流搭建。
+
+Walmart will soon let AI agents shop on its website for you. Next month, the retail giant will allow you to use an AI agent on the site, with systems in place to let you approve and review purchases...
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>MCP/工具</category>
+      <category>智能体</category>
+    </item>
+    <item>
       <title>Meta 称 Muse 用户已超 1000 万，购物是其主要使用场景之一</title>
       <link>https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity</guid>
       <pubDate>Wed, 21 Oct 2026 21:14:19 +0000</pubDate>
-      <description>Meta在Q3财报中表示，其AI应用Muse已拥有超1000万用户，并被用于购物和个人生产力提升，来自官方更新源，适合直接判断产品变化。
+      <description>Meta Muse users are adopting the app for shopping and pers...，来自官方更新源，适合直接判断产品变化。
 
-Meta在Q3财报中表示，其AI应用Muse已拥有超1000万用户，并被用于购物和个人生产力提升。
+Meta Muse users are adopting the app for shopping and personal productivity, the company said during Q3 earnings. The AI app now has over 10M users.
 
 信号等级 B · 评分 65.0</description>
       <category>Official AI Updates</category>
@@ -581,11 +612,11 @@ arXiv:2610.27244v1 Announce Type: cross Abstract: Agent systems are shifting fro
       <category>论文研究</category>
     </item>
     <item>
-      <title>When Models Know but Can&apos;t Linearly Say: Relational Encoding Limits Linear Vulnerability Classification in Code LLMs</title>
+      <title>当模型“知其然却难言其所以然”:关系编码限制了代码大语言模型在线性漏洞分类中的能力</title>
       <link>https://arxiv.org/abs/2610.27257</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.27257</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>When Models Know but...：arXiv:2610.27257v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
+      <description>当模型“知其然却难言其所以然”：arXiv:2610.27257v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.27257v1 Announce Type: cross Abstract: Large language models can detect vulnerable code, yet the form of vulnerability encoding in their representations remains unclear. We analyze 8 code...
 
@@ -594,11 +625,11 @@ arXiv:2610.27257v1 Announce Type: cross Abstract: Large language models can dete
       <category>论文研究</category>
     </item>
     <item>
-      <title>Trail-Weighted Influence Scores for Approximate Outcome Prediction in Bayesian Networks</title>
+      <title>贝叶斯网络中近似结果预测的轨迹加权影响分数</title>
       <link>https://arxiv.org/abs/2610.27366</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.27366</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Trail-Weighted Influ...：arXiv:2610.27366v1 Announce Type: cross Abstract: We study...，适合判断技术路线和后续产品化可能性。
+      <description>贝叶斯网络中近似结果预测的轨迹加权影响分...：arXiv:2610.27366v1 Announce Type: cross Abstract: We study...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.27366v1 Announce Type: cross Abstract: We study trail-weighted pruning of evidence for Bayesian-network prediction. A traversal enumerates the active trails from each evidence node to the...
 
@@ -607,11 +638,11 @@ arXiv:2610.27366v1 Announce Type: cross Abstract: We study trail-weighted prunin
       <category>论文研究</category>
     </item>
     <item>
-      <title>Scaling Graph Reasoning in Language Models with Learnable Graph Positional Encodings</title>
+      <title>通过可学习的图位置编码提升语言模型的图推理能力</title>
       <link>https://arxiv.org/abs/2610.27439</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.27439</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Scaling Graph Reason...：arXiv:2610.27439v1 Announce Type: cross Abstract: Solving...，适合判断技术路线和后续产品化可能性。
+      <description>通过可学习的图位置编码提升语言模型的图推...：arXiv:2610.27439v1 Announce Type: cross Abstract: Solving...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.27439v1 Announce Type: cross Abstract: Solving reasoning tasks supported on graphs typically requires providing a Language Reasoning Model (LRM) with a serialized description of the graph....
 
@@ -620,11 +651,11 @@ arXiv:2610.27439v1 Announce Type: cross Abstract: Solving reasoning tasks suppor
       <category>论文研究</category>
     </item>
     <item>
-      <title>Orthogonal Boundary Unlearning for Dual-Use Concepts in Large Language Models</title>
+      <title>大语言模型中两用概念的正交边界卸载</title>
       <link>https://arxiv.org/abs/2610.27490</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.27490</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Orthogonal Boundary...：arXiv:2610.27490v1 Announce Type: cross Abstract: Mitigati...，适合判断技术路线和后续产品化可能性。
+      <description>大语言模型中两用概念的正交边界卸载：arXiv:2610.27490v1 Announce Type: cross Abstract: Mitigati...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.27490v1 Announce Type: cross Abstract: Mitigating catastrophic risks from large language models requires excising hazardous operational capabilities, such as cyberwarfare exploitation and...
 
@@ -633,11 +664,11 @@ arXiv:2610.27490v1 Announce Type: cross Abstract: Mitigating catastrophic risks 
       <category>论文研究</category>
     </item>
     <item>
-      <title>Can Native Safety Travel? Reusing Safety Pretraining Across Models via On-Policy Distillation</title>
+      <title>原生安全性能否迁移？通过在线策略蒸馏实现跨模型安全预训练的复用</title>
       <link>https://arxiv.org/abs/2610.27555</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.27555</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Can Native Safety Tr...：arXiv:2610.27555v1 Announce Type: cross Abstract: Safety p...，适合判断技术路线和后续产品化可能性。
+      <description>原生安全性能否迁移：arXiv:2610.27555v1 Announce Type: cross Abstract: Safety p...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.27555v1 Announce Type: cross Abstract: Safety pretraining has emerged as a promising paradigm for embedding safety deeply into a model during pretraining, yielding robustness to subsequent...
 
@@ -647,11 +678,11 @@ arXiv:2610.27555v1 Announce Type: cross Abstract: Safety pretraining has emerged
       <category>安全对齐</category>
     </item>
     <item>
-      <title>Factual Access States in Diffusion Language Models: From Mechanism to Knowledge Editing and Retrieval</title>
+      <title>扩散语言模型中的事实访问状态:从机制到知识编辑与检索</title>
       <link>https://arxiv.org/abs/2610.27580</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.27580</guid>
       <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Factual Access State...：arXiv:2610.27580v1 Announce Type: cross Abstract: Factual...，适合判断技术路线和后续产品化可能性。
+      <description>扩散语言模型中的事实访问状态：arXiv:2610.27580v1 Announce Type: cross Abstract: Factual...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.27580v1 Announce Type: cross Abstract: Factual recall is a lookup: some representation inside the network serves as the key, and what that key is made of decides which queries can retrieve...
 
@@ -659,32 +690,6 @@ arXiv:2610.27580v1 Announce Type: cross Abstract: Factual recall is a lookup: so
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
-    </item>
-    <item>
-      <title>BCT: Bayes-Consistent Tempering for Flow Language Models</title>
-      <link>https://arxiv.org/abs/2610.27641</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.27641</guid>
-      <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>BCT：arXiv:2610.27641v1 Announce Type: cross Abstract: Temperat...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.27641v1 Announce Type: cross Abstract: Temperature scaling is typically applied as a post-hoc transformation of model probabilities. In posterior-induced flow language models, this creates...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Hearsay or Fact? How Framing and Elicitation Shape LLM Probability Updates</title>
-      <link>https://arxiv.org/abs/2610.27745</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.27745</guid>
-      <pubDate>Wed, 21 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Hearsay or Fact：arXiv:2610.27745v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.27745v1 Announce Type: cross Abstract: Large language models (LLMs) are increasingly used as judgment assistants and as stand-in participants in psychology experiments, yet little is known...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
