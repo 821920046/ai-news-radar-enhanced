@@ -5,21 +5,50 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 22 Oct 2026 18:21:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 22:09:34 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>据传，美国实施限制措施数日后，DeepSeek 已融资 150 亿美元</title>
-      <link>https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions</guid>
-      <pubDate>Thu, 22 Oct 2026 13:11:13 +0000</pubDate>
-      <description>据报，DeepSeek在美下令因国家安全顾虑移除其技术后不久，完成了一轮高达150亿美元的融资，创下中国融资纪录，来自官方更新源，适合直接判断产品变化。
+      <title>微软称其 AI 工具在疾病诊断方面比医生更出色</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1016690/suleyman-microsoft-diagnostic-orchestrator-science-medical-superintelligence</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1016690/suleyman-microsoft-diagnostic-orchestrator-science-medical-superintelligence</guid>
+      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
+      <description>微软：For years, AI leaders have touted healthcare as one of the...，适合进一步验证代码、协议或社区采用情况。
 
-据报，DeepSeek在美下令因国家安全顾虑移除其技术后不久，完成了一轮高达150亿美元的融资，创下中国融资纪录。
+For years, AI leaders have touted healthcare as one of the clearest examples of where their technology will improve lives. Now &quot;it is finally here,&quot; Microsoft AI CEO Mustafa Suleyman tells The Verge....
 
-信号等级 A · 评分 71.2</description>
+信号等级 A · 评分 72.5</description>
       <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>PHP:三个小写字母在网络世界引发混乱</title>
+      <link>https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down</guid>
+      <pubDate>Thu, 22 Oct 2026 15:12:27 +0000</pubDate>
+      <description>Two vulnerabilities found in the programming language PHP...，来自官方更新源，适合直接判断产品变化。
+
+Two vulnerabilities found in the programming language PHP put enormous swaths of the internet in danger. By some accounts, up to 70 percent of websites use PHP in some capacity. It powers Wikipedia,...
+
+信号等级 B · 评分 68.5</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
       <category>模型发布</category>
-      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Claude 并未发明蝎子抗毒血清</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom</guid>
+      <pubDate>Thu, 22 Oct 2026 12:21:07 +0000</pubDate>
+      <description>Claude：An investment research firm wanted to prove AI could revol...，适合跟进 AI 风险、治理和可信边界。
+
+An investment research firm wanted to prove AI could revolutionize drug development. So they teamed up with Anthropic to see whether an unreleased version of Claude could make scorpion antivenom. It...
+
+信号等级 B · 评分 68.5</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>模型发布</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>DPO 计算图的随机剪枝:训练速度提升 1.4 倍，峰值内存更低</title>
@@ -35,13 +64,108 @@ arXiv:2610.29538v1 Announce Type: cross Abstract: Direct preference optimization
       <category>论文研究</category>
     </item>
     <item>
+      <title>据传，美国实施限制措施数日后，DeepSeek 已融资 150 亿美元</title>
+      <link>https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions</guid>
+      <pubDate>Thu, 22 Oct 2026 13:11:13 +0000</pubDate>
+      <description>DeepSeek has reportedly raised $15 billion in one of China...，来自官方更新源，适合直接判断产品变化。
+
+DeepSeek has reportedly raised $15 billion in one of China&apos;s largest funding rounds, just days after the U.S. ordered federal agencies to remove its technology over national security concerns.
+
+信号等级 B · 评分 67.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Meta 重新开放 Muse 分享功能</title>
+      <link>https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts</guid>
+      <pubDate>Thu, 22 Oct 2026 20:24:04 +0000</pubDate>
+      <description>Meta has re-enabled Muse sharing after security researcher...，来自官方更新源，适合直接判断产品变化。
+
+Meta has re-enabled Muse sharing after security researchers had reported that public conversation links could be easy to find. The researchers said they had been able to find Muse pages like a...
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>随着决策模型竞争加剧，OpenAI 向其 Jev 竞品开放广泛使用</title>
+      <link>https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up</guid>
+      <pubDate>Thu, 22 Oct 2026 19:00:00 +0000</pubDate>
+      <description>OpenAI推出其决策模型，能否与原版Jev竞争尚待观察，来自官方更新源，适合直接判断产品变化。
+
+OpenAI推出其决策模型，能否与原版Jev竞争尚待观察。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>Canva 发布首款图像生成模型</title>
+      <link>https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model</guid>
+      <pubDate>Thu, 22 Oct 2026 19:00:00 +0000</pubDate>
+      <description>Canva 发布首款图像生成模型：Canva将其新图像模型开放给所有用户，承诺提供更优、更可定制的性能且成本更低，适合关注内容生产和交互形态的新变化。
+
+Canva将其新图像模型开放给所有用户，承诺提供更优、更可定制的性能且成本更低。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>借助 Decisions API 构建响应更灵敏的应用程序</title>
+      <link>https://openai.com/index/decisions-api</link>
+      <guid isPermaLink="true">https://openai.com/index/decisions-api</guid>
+      <pubDate>Thu, 22 Oct 2026 19:00:00 +0000</pubDate>
+      <description>借助 Decisions API 构建响...：Fast, focused, low-cost decisions for any application.，适合优先评估模型能力、价格和工具选型变化。
+
+Fast, focused, low-cost decisions for any application.
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>微软的 Mustafa Suleyman 表示，其 AI 在处理疑难病例时表现优于医生，正致力于实现“医疗超级智能”</title>
+      <link>https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence</guid>
+      <pubDate>Thu, 22 Oct 2026 18:43:53 +0000</pubDate>
+      <description>微软新的AI诊断系统在一项《Science》期刊研究中击败了普通医生处理疑难病例，来自官方更新源，适合直接判断产品变化。
+
+微软新的AI诊断系统在一项《Science》期刊研究中击败了普通医生处理疑难病例。但大部分性能提升源于其底层AI模型，而非...
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>在 Meta 构想的未来，我的 Muse 将能呼叫你的 Muse</title>
+      <link>https://www.theverge.com/tech/1016905/meta-earnings-fall-2026-muse-network</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1016905/meta-earnings-fall-2026-muse-network</guid>
+      <pubDate>Thu, 22 Oct 2026 18:15:00 +0000</pubDate>
+      <description>Meta：Mark Zuckerberg is barrelling toward a future in which an...，适合关注自动化任务和多 Agent 协作演进。
+
+Mark Zuckerberg is barrelling toward a future in which an autonomous network of AI agents will run our lives - shopping for us, working for us, talking to other people&apos;s AI agents for us. Are humans...
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+    </item>
+    <item>
       <title>隆重介绍 2026 年 PyTorch 基金会大使</title>
       <link>https://pytorch.org/blog/meet-the-2026-pytorch-foundation-ambassadors</link>
       <guid isPermaLink="true">https://pytorch.org/blog/meet-the-2026-pytorch-foundation-ambassadors</guid>
       <pubDate>Thu, 22 Oct 2026 17:44:52 +0000</pubDate>
-      <description>隆重介绍 2026 年 PyTorch...：开源AI的繁荣依赖于开发者、研究者、教育者和贡献者共同学习、构建、分享知识与协作贡献的社区生态，适合进一步验证代码、协议或社区采用情况。
+      <description>隆重介绍 2026 年 PyTorch...：开源AI在社区协作中蓬勃发展，开发者、研究人员、教育者和贡献者共同学习、构建、分享知识并贡献力量，适合进一步验证代码、协议或社区采用情况。
 
-开源AI的繁荣依赖于开发者、研究者、教育者和贡献者共同学习、构建、分享知识与协作贡献的社区生态。
+开源AI在社区协作中蓬勃发展，开发者、研究人员、教育者和贡献者共同学习、构建、分享知识并贡献力量。每个项目背后都有一个充满活力的社区推动其进步。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -62,112 +186,6 @@ Microsoft points the blame for ConnectWise&apos;s breach at a China-aligned hack
       <category>MCP/工具</category>
       <category>智能体</category>
       <category>论文研究</category>
-    </item>
-    <item>
-      <title>Uber要求全部3万名员工使用ChatGPT Work</title>
-      <link>https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work</guid>
-      <pubDate>Thu, 22 Oct 2026 16:00:00 +0000</pubDate>
-      <description>GPT：The ride-share giant previously deployed a much smaller pi...，适合关注自动化任务和多 Agent 协作演进。
-
-The ride-share giant previously deployed a much smaller pilot for ChatGPT Work but is now taking the enterprise agent company-wide.
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>PHP:三个小写字母在网络世界引发混乱</title>
-      <link>https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1016574/php2shell-security-vulnerability-websites-down</guid>
-      <pubDate>Thu, 22 Oct 2026 15:12:27 +0000</pubDate>
-      <description>据称多达70%的网站使用PHP，它支持维基百科等平台，来自官方更新源，适合直接判断产品变化。
-
-两个PHP编程语言漏洞使互联网巨大区域面临风险。据称多达70%的网站使用PHP，它支持维基百科等平台。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>超越林木覆盖:绘制全球森林类型图</title>
-      <link>https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types</guid>
-      <pubDate>Thu, 22 Oct 2026 14:30:24 +0000</pubDate>
-      <description>超越林木覆盖：A global map categorizing every 10-meter patch of land on...，适合判断技术路线和后续产品化可能性。
-
-A global map categorizing every 10-meter patch of land on Earth into distinct forest types.
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>你就是团队 — Anekha Sokhal，Moshi</title>
-      <link>https://www.latent.space/p/moshi</link>
-      <guid isPermaLink="true">https://www.latent.space/p/moshi</guid>
-      <pubDate>Thu, 22 Oct 2026 14:03:40 +0000</pubDate>
-      <description>你就是团队 — Anekha Sokha...：How Moshi turns market data into actionable insights, and...，适合优先评估模型能力、价格和工具选型变化。
-
-How Moshi turns market data into actionable insights, and why AI tools have to fit the trader&amp;#8217;s workflow.
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Claude Duet 应用是 Anthropic 对智能体的一次押注</title>
-      <link>https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents</guid>
-      <pubDate>Thu, 22 Oct 2026 13:53:26 +0000</pubDate>
-      <description>Claude、Anthropic：Claude Duet 现已通过白名单向 Pro 和 Max 计划用户开放，适合关注自动化任务和多 Agent 协作演进。
-
-Claude Duet 现已通过白名单向 Pro 和 Max 计划用户开放。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>luongnv89/claude-howto</title>
-      <link>https://github.com/luongnv89/claude-howto</link>
-      <guid isPermaLink="true">https://github.com/luongnv89/claude-howto</guid>
-      <pubDate>Thu, 22 Oct 2026 13:32:00 +0000</pubDate>
-      <description>claude：《Claude Code可视化实战指南》从基础概念讲起，通过丰富示例和可直接复制的模板，带你快速掌握从基础用法到高级...，适合进一步验证代码、协议或社区采用情况。
-
-《Claude Code可视化实战指南》从基础概念讲起，通过丰富示例和可直接复制的模板，带你快速掌握从基础用法到高级智能体的应用技巧，即学即用。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>OlmoEarth v1.3:面向全球的最先进嵌入模型</title>
-      <link>https://huggingface.co/blog/allenai/olmoearth-v1-3</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/allenai/olmoearth-v1-3</guid>
-      <pubDate>Thu, 22 Oct 2026 16:11:31 +0000</pubDate>
-      <description>OlmoEarth v1.3：面向全球的最先进嵌入模型，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 B · 评分 65.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>Nirva 为其专属听音吊坠融资 3300 万美元</title>
-      <link>https://techcrunch.com/2026/10/22/nirva-raises-33m-for-a-pendant-that-only-listens-to-you</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/22/nirva-raises-33m-for-a-pendant-that-only-listens-to-you</guid>
-      <pubDate>Thu, 22 Oct 2026 13:26:52 +0000</pubDate>
-      <description>Nirva 为其专属听音吊坠融资 330...：Nirva will ship its $249 ambient AI pendant by the end of...，适合判断资金、客户和生态格局的变化。
-
-Nirva will ship its $249 ambient AI pendant by the end of the year.
-
-信号等级 B · 评分 65.0</description>
-      <category>Official AI Updates</category>
-      <category>行业动态</category>
     </item>
     <item>
       <title>人工智能的隐藏存储账单:推理过程会留下什么</title>
@@ -664,19 +682,6 @@ arXiv:2610.29458v1 Announce Type: cross Abstract: Agent harnesses have become a 
       <description>LLM 从何处学会推荐 AI：arXiv:2610.29785v1 Announce Type: cross Abstract: Asked wh...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.29785v1 Announce Type: cross Abstract: Asked what to study, which career to pursue, or what product to build, large language models (LLMs) often recommend AI-related options. We ask where...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>S-EDL: Eliciting Self-Evidence from Sequence Likelihoods for Semantic Calibration of LLMs</title>
-      <link>https://arxiv.org/abs/2610.29832</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.29832</guid>
-      <pubDate>Thu, 22 Oct 2026 04:00:00 +0000</pubDate>
-      <description>S-EDL：arXiv:2610.29832v1 Announce Type: cross Abstract: Calibrat...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.29832v1 Announce Type: cross Abstract: Calibrating large language models (LLMs) in open-ended generation is uniquely challenging because many distinct token sequences can express the same...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
