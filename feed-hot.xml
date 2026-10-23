@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 Oct 2026 18:07:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 21:52:36 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>An alignment assessment of the UK AISI cybertesting incident</title>
@@ -23,7 +23,7 @@ In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real p
       <category>论文研究</category>
     </item>
     <item>
-      <title>DGA$_2$D: Directed Graph-Guided Automated Algorithm Design with Large Language Models</title>
+      <title>DGA$_2$D:基于大型语言模型的有向图引导自动化算法设计</title>
       <link>https://arxiv.org/abs/2608.00700</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2608.00700</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
@@ -33,6 +33,20 @@ arXiv:2608.00700v2 Announce Type: replace Abstract: The rapid development of Lar
 
 信号等级 B · 评分 67.5</description>
       <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Jack Dorsey 旗下的 Block 开发出一款 AI 模型，它能像笨拙的新朋友一样与你交谈</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech</guid>
+      <pubDate>Fri, 23 Oct 2026 19:32:39 +0000</pubDate>
+      <description>Jack Dorsey 旗下的 Bloc...：Jack Dorsey 的 Block 宣布了一个名为 Dessa 的人工智能模型，该模型“从头开始只接受人类对话”...，适合跟进 AI 风险、治理和可信边界。
+
+Jack Dorsey 的 Block 宣布了一个名为 Dessa 的人工智能模型，该模型“从头开始只接受人类对话”的训练，并且为了展示该模型，Block 分享了它与人类的聊天记录，这些聊天记录可以...
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
       <category>论文研究</category>
     </item>
     <item>
@@ -49,18 +63,17 @@ arXiv:2608.00700v2 Announce Type: replace Abstract: The rapid development of Lar
       <category>论文研究</category>
     </item>
     <item>
-      <title>SnailSploit/Claude-Red</title>
-      <link>https://github.com/SnailSploit/Claude-Red</link>
-      <guid isPermaLink="true">https://github.com/SnailSploit/Claude-Red</guid>
-      <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>claude-red 是一个专为 Claude 技能系统设计的进攻性安全技能库，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
+      <title>信念相同，策略不同:学习 LLM 推理中可复用的早停表示</title>
+      <link>https://arxiv.org/abs/2610.30450</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.30450</guid>
+      <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
+      <description>信念相同：arXiv:2610.30450v1 Announce Type: new Abstract: Reasoning...，适合判断技术路线和后续产品化可能性。
 
-claude-red 是一个专为 Claude 技能系统设计的进攻性安全技能库。每项技能都是一个结构化的 SKILL.md 文件，为 Claude 提供针对特定攻击面的专家级方法——从 SQLi 到 shellcode，从 EDR 规避到漏洞利用开发。
+arXiv:2610.30450v1 Announce Type: new Abstract: Reasoning LLMs often continue reasoning after reaching a correct answer, wasting computation and sometimes replacing it with an incorrect one. Deciding...
 
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>从单智能体环境到多智能体事件世界:LLM 能成为事件世界模型吗？</title>
@@ -642,7 +655,7 @@ arXiv:2610.31646v1 Announce Type: cross Abstract: Many recent open-weight langua
       <category>论文研究</category>
     </item>
     <item>
-      <title>TRCA: Transition-wise Rubric Credit Assignment for Long-horizon LLM Agents</title>
+      <title>TRCA:面向长周期语言模型智能体的过渡式评分标准分配</title>
       <link>https://arxiv.org/abs/2608.16156</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2608.16156</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
@@ -655,7 +668,7 @@ arXiv:2608.16156v2 Announce Type: replace Abstract: Long-horizon large language 
       <category>论文研究</category>
     </item>
     <item>
-      <title>MemMux: Runtime Verification and Honest Resource Attribution for Fleets of Parallel Coding Agents</title>
+      <title>MemMux:并行编码智能体集群的运行时验证与诚实资源分配</title>
       <link>https://arxiv.org/abs/2610.07257</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.07257</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
@@ -668,19 +681,6 @@ arXiv:2610.07257v2 Announce Type: replace Abstract: Developers increasingly run 
       <category>智能体</category>
       <category>论文研究</category>
       <category>编码工具</category>
-    </item>
-    <item>
-      <title>Stop Drawing Scientific Claims from LLM Social Simulations Without Robustness Audits</title>
-      <link>https://arxiv.org/abs/2605.18890</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.18890</guid>
-      <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Stop Drawing Scienti...：arXiv:2605.18890v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.18890v2 Announce Type: replace-cross Abstract: The scientific claims drawn from LLM social simulations should be no stronger than the robustness audits that support them. Generative agents...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
