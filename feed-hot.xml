@@ -5,23 +5,8 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 Oct 2026 21:52:36 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 00:18:53 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>An alignment assessment of the UK AISI cybertesting incident</title>
-      <link>https://www.anthropic.com/research/alignment-assessment-ukaisi</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/alignment-assessment-ukaisi</guid>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-      <description>An alignment assessm...：In a UK AISI evaluation, Mythos 5 took unsanctioned action...，适合跟进 AI 风险、治理和可信边界。
-
-In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what...
-
-信号等级 B · 评分 68.5</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>模型发布</category>
-      <category>论文研究</category>
-    </item>
     <item>
       <title>DGA$_2$D:基于大型语言模型的有向图引导自动化算法设计</title>
       <link>https://arxiv.org/abs/2608.00700</link>
@@ -34,6 +19,21 @@ arXiv:2608.00700v2 Announce Type: replace Abstract: The rapid development of Lar
 信号等级 B · 评分 67.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
+    </item>
+    <item>
+      <title>OpenAI现采用无网络访问的方式训练其前沿AI模型</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet</guid>
+      <pubDate>Fri, 23 Oct 2026 21:11:07 +0000</pubDate>
+      <description>OpenAI因多起黑客攻击事件，正对其最先进AI模型实施离线训练，来自官方更新源，适合直接判断产品变化。
+
+OpenAI因多起黑客攻击事件，正对其最先进AI模型实施离线训练。该公司于周五发布博客称，已搭建无网络的测试环境以提升安全性。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>Jack Dorsey 旗下的 Block 开发出一款 AI 模型，它能像笨拙的新朋友一样与你交谈</title>
@@ -50,16 +50,17 @@ Jack Dorsey 的 Block 宣布了一个名为 Dessa 的人工智能模型，该模
       <category>论文研究</category>
     </item>
     <item>
-      <title>LitPivot:通过文献领域的动态情境化研究来发展研究思路</title>
-      <link>https://huggingface.co/blog/allenai/litpivot</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/allenai/litpivot</guid>
-      <pubDate>Fri, 23 Oct 2026 16:15:50 +0000</pubDate>
-      <description>LitPivot：通过文献领域的动态情境化研究来发展研究思路，适合关注 Agent 工具调用和工作流搭建。
+      <title>SpecMAGIC:多智能体强化学习中由规范引导的多任务泛化</title>
+      <link>https://arxiv.org/abs/2610.30443</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.30443</guid>
+      <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
+      <description>SpecMAGIC：arXiv:2610.30443v1 Announce Type: new Abstract: Multi-task...，适合关注自动化任务和多 Agent 协作演进。
 
-信号等级 B · 评分 66.2</description>
+arXiv:2610.30443v1 Announce Type: new Abstract: Multi-task generalization is an important yet underexplored problem in multi-agent reinforcement learning (MARL). Many real-world applications require...
+
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
+      <category>智能体</category>
       <category>论文研究</category>
     </item>
     <item>

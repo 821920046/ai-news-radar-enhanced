@@ -5,19 +5,74 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 Oct 2026 21:52:36 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 00:18:53 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>使用指标 API 新增 OpenCode 等工具的使用数据</title>
+      <link>https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode</link>
+      <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode</guid>
+      <pubDate>Fri, 23 Oct 2026 23:42:03 +0000</pubDate>
+      <description>使用指标 API 新增 OpenCode...：Copilot 使用指标 API 现在可以报告开发人员在 Copilot 中使用的更多工具的模型使用情况，包括以前在...，适合判断 AI 编程工作流会不会被改写。
+
+Copilot 使用指标 API 现在可以报告开发人员在 Copilot 中使用的更多工具的模型使用情况，包括以前在您的...中未捕获的 OpenCode 等工具。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+      <category>编码工具</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>OpenAI 称将不再使用实时互联网数据训练其 AI 模型，并指出此举存在“重大风险”</title>
+      <link>https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks</guid>
+      <pubDate>Fri, 23 Oct 2026 23:05:49 +0000</pubDate>
+      <description>在一名工程师表示该解决方案行不通几周后，OpenAI 将切断前沿模型与互联网的连接，来自官方更新源，适合直接判断产品变化。
+
+在一名工程师表示该解决方案行不通几周后，OpenAI 将切断前沿模型与互联网的连接。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>圣诞季最火玩具？英伟达CEO把玩可爱Microduck机器人，2万台售罄</title>
+      <link>https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell</guid>
+      <pubDate>Fri, 23 Oct 2026 21:59:19 +0000</pubDate>
+      <description>英伟达：机器人跺着小脚，发出微小的 R2-D2 声音，坐下来，倒地“小睡”，然后根据语音指令进行翻跟斗，适合作为今日 AI/科技情报流里的重点线索。
+
+机器人跺着小脚，发出微小的 R2-D2 声音，坐下来，倒地“小睡”，然后根据语音指令进行翻跟斗。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>用GitHub Copilot in Teams将通知转换为代码</title>
+      <link>https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams</link>
+      <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams</guid>
+      <pubDate>Fri, 23 Oct 2026 21:29:58 +0000</pubDate>
+      <description>GitHub Teams 应用将通知与 Copilot 集成，助团队在对话中直接将问题转化为代码修复，加速代码交付，来自官方更新源，适合直接判断产品变化。
+
+GitHub Teams 应用将通知与 Copilot 集成，助团队在对话中直接将问题转化为代码修复，加速代码交付。可在频道中接收通知。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+      <category>编码工具</category>
+      <category>开源</category>
+    </item>
     <item>
       <title>OpenAI现采用无网络访问的方式训练其前沿AI模型</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet</guid>
       <pubDate>Fri, 23 Oct 2026 21:11:07 +0000</pubDate>
-      <description>在发生一系列流氓黑客事件后，OpenAI 现在正在无需连接互联网的情况下训练其最先进的人工智能模型，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI因多起黑客攻击事件，正对其最先进AI模型实施离线训练，来自官方更新源，适合直接判断产品变化。
 
-在发生一系列流氓黑客事件后，OpenAI 现在正在无需连接互联网的情况下训练其最先进的人工智能模型。 OpenAI 在周五的博客文章中表示，它构建了一个离线测试环境......
+OpenAI因多起黑客攻击事件，正对其最先进AI模型实施离线训练。该公司于周五发布博客称，已搭建无网络的测试环境以提升安全性。
 
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>Kimi K3.1 在“人工分析”中得分为 55，位于帕累托线上</title>
@@ -63,9 +118,9 @@ Jack Dorsey 的 Block 宣布了一个名为 Dessa 的人工智能模型，该模
       <link>https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026</guid>
       <pubDate>Fri, 23 Oct 2026 19:06:23 +0000</pubDate>
-      <description>从 Toast 到 Bessemer：TechCrunch与Fidelity Private Shares联合主办的全天活动，不仅聚焦融资与AI，更深入探...，适合判断资金、客户和生态格局的变化。
+      <description>从 Toast 到 Bessemer：此次全天活动由 TechCrunch 与 Fidelity Private Shares 合作主办，不仅限于筹款和人...，适合判断资金、客户和生态格局的变化。
 
-TechCrunch与Fidelity Private Shares联合主办的全天活动，不仅聚焦融资与AI，更深入探讨获取客户、组建团队、优化路演等创业实战议题。
+此次全天活动由 TechCrunch 与 Fidelity Private Shares 合作主办，不仅限于筹款和人工智能，还探讨了寻找客户、建立团队、加强宣传等方面的现实......
 
 信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
@@ -76,9 +131,9 @@ TechCrunch与Fidelity Private Shares联合主办的全天活动，不仅聚焦�
       <link>https://github.blog/changelog/2026-10-23-emu-deletions-fix</link>
       <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-emu-deletions-fix</guid>
       <pubDate>Fri, 23 Oct 2026 18:56:18 +0000</pubDate>
-      <description>EMU 删除修复方案：2026 年 6 月 1 日至 6 月 13 日期间，一些通过 SCIM 取消配置的企业管理用户帐户被错误删除，而不...，适合进一步验证代码、协议或社区采用情况。
+      <description>EMU 删除修复方案：2026年6月1日至13日，部分通过SCIM停用的企业托管用户账户被错误删除，而非按预期暂停并脱敏处理，适合进一步验证代码、协议或社区采用情况。
 
-2026 年 6 月 1 日至 6 月 13 日期间，一些通过 SCIM 取消配置的企业管理用户帐户被错误删除，而不是按预期被暂停和混淆。作为...
+2026年6月1日至13日，部分通过SCIM停用的企业托管用户账户被错误删除，而非按预期暂停并脱敏处理。
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
@@ -97,26 +152,15 @@ Goldman Sachs sees AI-fueled layoffs displacing nearly 10% of workers in the com
       <category>Buzzing</category>
     </item>
     <item>
-      <title>当我说 Claude 搭配 GLM-5.3-Flash 太好用了，同事却提醒我：你可能正在失去对代码的掌控</title>
-      <link>https://juejin.cn/post/7699017769225928744</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7699017769225928744</guid>
-      <pubDate>Fri, 23 Oct 2026 18:07:43 +0000</pubDate>
-      <description>Claude：你可能正在失去对代码的掌控，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 B · 评分 51.8</description>
-      <category>NewsNow</category>
-      <category>模型发布</category>
-    </item>
-    <item>
       <title>借助全球性能调优工具，将 NVIDIA TensorRT 性能优化扩展至单一构建路径之外(第二部分)</title>
       <link>https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2</link>
       <guid isPermaLink="true">https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2</guid>
       <pubDate>Fri, 23 Oct 2026 17:27:52 +0000</pubDate>
-      <description>Global Performance Tuner 是 NVIDIA TensorRT 11.1 中发布的一项自动性能...，来自官方更新源，适合直接判断产品变化。
+      <description>NVIDIA TensorRT 11.1推出的Global Performance Tuner是一项自动性能调优功能...，来自官方更新源，适合直接判断产品变化。
 
-Global Performance Tuner 是 NVIDIA TensorRT 11.1 中发布的一项自动性能调整功能。它提供自动、准确感知和...
+NVIDIA TensorRT 11.1推出的Global Performance Tuner是一项自动性能调优功能，提供自动化、精度感知的优化。
 
-信号等级 B · 评分 60.2</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>部署推理</category>
     </item>
@@ -129,7 +173,7 @@ Global Performance Tuner 是 NVIDIA TensorRT 11.1 中发布的一项自动性能
 
 我们给 iPhone Duo 打分为 7 分/10 分。但这并不总是我们计划的分数，而且可能不会永远是正确的分数。这就是审查和评估关于……的重大新想法的挑战。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
       <category>智能体</category>
@@ -139,11 +183,11 @@ Global Performance Tuner 是 NVIDIA TensorRT 11.1 中发布的一项自动性能
       <link>https://openai.com/index/scaling-storage-one-billion-users-part-two</link>
       <guid isPermaLink="true">https://openai.com/index/scaling-storage-one-billion-users-part-two</guid>
       <pubDate>Fri, 23 Oct 2026 17:00:00 +0000</pubDate>
-      <description>GPT：了解 OpenAI 如何通过可靠的多租户、全局缓存和 Azure Cosmos DB 扩展 Habitat，为 Ch...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>OpenAI利用Azure Cosmos DB实现了可靠的多租户架构和全球缓存，显著提升了ChatGPT的读取性能...，来自官方更新源，适合直接判断产品变化。
 
-了解 OpenAI 如何通过可靠的多租户、全局缓存和 Azure Cosmos DB 扩展 Habitat，为 ChatGPT 提供 12 倍的更快读取速度。
+OpenAI利用Azure Cosmos DB实现了可靠的多租户架构和全球缓存，显著提升了ChatGPT的读取性能，实现了12倍的速度提升。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -151,26 +195,13 @@ Global Performance Tuner 是 NVIDIA TensorRT 11.1 中发布的一项自动性能
       <link>https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update</guid>
       <pubDate>Fri, 23 Oct 2026 16:52:55 +0000</pubDate>
-      <description>Google：谷歌更新隐私政策，若用户启用个性化AI功能，其个人数据将可能用于定向广告推送，适合关注 Agent 工具调用和工作流搭建。
+      <description>Google：谷歌更新隐私政策，若用户使用个性化AI功能，其个人数据将被用于投放定向广告，适合关注 Agent 工具调用和工作流搭建。
 
-谷歌更新隐私政策，若用户启用个性化AI功能，其个人数据将可能用于定向广告推送。该变动由Android系统更新引发关注。
+谷歌更新隐私政策，若用户使用个性化AI功能，其个人数据将被用于投放定向广告。该变更由Android社区发现，引发对数据隐私的新一轮关注。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>MCP/工具</category>
-    </item>
-    <item>
-      <title>瑞典政府机构将禁止使用ChatGPT和Claude</title>
-      <link>https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet</link>
-      <guid isPermaLink="true">https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet</guid>
-      <pubDate>Fri, 23 Oct 2026 16:26:53 +0000</pubDate>
-      <description>GPT和Claude：Swedish government offices to ban ChatGPT and Claude，适合优先评估模型能力、价格和工具选型变化。
-
-Swedish government offices to ban ChatGPT and Claude
-
-信号等级 B · 评分 52.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
     </item>
     <item>
       <title>LitPivot:通过文献领域的动态情境化研究来发展研究思路</title>
@@ -179,7 +210,7 @@ Swedish government offices to ban ChatGPT and Claude
       <pubDate>Fri, 23 Oct 2026 16:15:50 +0000</pubDate>
       <description>LitPivot：通过文献领域的动态情境化研究来发展研究思路，适合关注 Agent 工具调用和工作流搭建。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>MCP/工具</category>
       <category>开源</category>
@@ -190,34 +221,21 @@ Swedish government offices to ban ChatGPT and Claude
       <link>https://latent.space/p/ai-is-getting-good-at-math</link>
       <guid isPermaLink="true">https://latent.space/p/ai-is-getting-good-at-math</guid>
       <pubDate>Fri, 23 Oct 2026 15:19:48 +0000</pubDate>
-      <description>AI 为何在数学方面越来越强：AI 模型正在解决更多数学问题，适合作为今日 AI/科技情报流里的重点线索。
+      <description>AI 为何在数学方面越来越强：AI 模型在解决数学问题方面表现日益出色，它们的成功中正在显现出一种模式，这有助于预测它们接下来能解决哪些问题，适合作为今日 AI/科技情报流里的重点线索。
 
-AI 模型正在解决更多数学问题。它们成功的模式正在显现，这有助于我们预测它们接下来将解决哪些问题。
+AI 模型在解决数学问题方面表现日益出色，它们的成功中正在显现出一种模式，这有助于预测它们接下来能解决哪些问题。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>GitHub Apps 的企业版安装现已全面开放</title>
-      <link>https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available</guid>
-      <pubDate>Fri, 23 Oct 2026 15:03:30 +0000</pubDate>
-      <description>Installing GitHub Apps on your enterprise is now generally...，来自官方更新源，适合直接判断产品变化。
-
-Installing GitHub Apps on your enterprise is now generally available. You can replace classic PATs with GitHub Apps in more of your enterprise and organization automation with the expanded API&amp;#8230;...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
     </item>
     <item>
       <title>因出版商反对AI抓取，Meta推迟实施新的业务条款</title>
       <link>https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping</guid>
       <pubDate>Fri, 23 Oct 2026 14:47:41 +0000</pubDate>
-      <description>Meta因出版商担忧其新商业条款可能允许为AI训练抓取新闻网站数据，决定暂缓执行该条款，来自官方更新源，适合直接判断产品变化。
+      <description>据 Fast 早些时候报道，在出版商担心他们可能允许该公司抓取新闻网站进行人工智能培训后，Meta 推迟了新业务条款...，来自官方更新源，适合直接判断产品变化。
 
-Meta因出版商担忧其新商业条款可能允许为AI训练抓取新闻网站数据，决定暂缓执行该条款。
+据 Fast 早些时候报道，在出版商担心他们可能允许该公司抓取新闻网站进行人工智能培训后，Meta 推迟了新业务条款的执行。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -240,9 +258,9 @@ Meta因出版商担忧其新商业条款可能允许为AI训练抓取新闻网�
       <link>https://github.com/NVIDIA/OpenShell</link>
       <guid isPermaLink="true">https://github.com/NVIDIA/OpenShell</guid>
       <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>NVIDIA：OpenShell是一个安全、私密的自主AI代理运行时，适合关注自动化任务和多 Agent 协作演进。
+      <description>NVIDIA：OpenShell 是自主 AI 代理的安全、私有运行时，适合关注自动化任务和多 Agent 协作演进。
 
-OpenShell是一个安全、私密的自主AI代理运行时。
+OpenShell 是自主 AI 代理的安全、私有运行时。
 
 信号等级 B · 评分 53.0</description>
       <category>开源热榜</category>
@@ -254,9 +272,9 @@ OpenShell是一个安全、私密的自主AI代理运行时。
       <link>https://github.com/SnailSploit/Claude-Red</link>
       <guid isPermaLink="true">https://github.com/SnailSploit/Claude-Red</guid>
       <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>claude-red 是一个专为 Claude 技能系统设计的进攻性安全技能库，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
+      <description>claude-red是一个专为Claude技能系统设计的精选攻击安全技能库，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
 
-claude-red 是一个专为 Claude 技能系统设计的进攻性安全技能库。每项技能都是一个结构化的 SKILL.md 文件，为 Claude 提供针对特定攻击面的专家级方法——从 SQLi 到 shellcode，从 EDR 规避到漏洞利用开发。
+claude-red是一个专为Claude技能系统设计的精选攻击安全技能库。每个技能均为结构化的SKILL.md文件，旨在通过专家级方法论为特定攻击面（从SQL注入到shellcode，从EDR规避到利用开发）对Claude进行训练。
 
 信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
@@ -268,9 +286,9 @@ claude-red 是一个专为 Claude 技能系统设计的进攻性安全技能库�
       <link>https://github.com/OpenBMB/VoxCPM</link>
       <guid isPermaLink="true">https://github.com/OpenBMB/VoxCPM</guid>
       <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>OpenBMB/VoxCPM：VoxCPM2：用于多语言语音生成、创意语音设计和逼真克隆的无分词器 TTS，适合进一步验证代码、协议或社区采用情况。
+      <description>OpenBMB/VoxCPM：VoxCPM2是一款无需分词器的多语言TTS模型，支持语音生成、创意配音与高保真语音克隆，适合进一步验证代码、协议或社区采用情况。
 
-VoxCPM2：用于多语言语音生成、创意语音设计和逼真克隆的无分词器 TTS
+VoxCPM2是一款无需分词器的多语言TTS模型，支持语音生成、创意配音与高保真语音克隆。
 
 信号等级 B · 评分 54.1</description>
       <category>开源热榜</category>
@@ -282,9 +300,9 @@ VoxCPM2：用于多语言语音生成、创意语音设计和逼真克隆的无�
       <link>https://github.com/nodejs/node</link>
       <guid isPermaLink="true">https://github.com/nodejs/node</guid>
       <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>nodejs/node：Node.js JavaScript 运行时✨🐢🚀✨，适合进一步验证代码、协议或社区采用情况。
+      <description>nodejs/node：Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，适用于服务器端开发，适合进一步验证代码、协议或社区采用情况。
 
-Node.js JavaScript 运行时✨🐢🚀✨
+Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，适用于服务器端开发。
 
 信号等级 B · 评分 55.2</description>
       <category>开源热榜</category>
@@ -295,9 +313,9 @@ Node.js JavaScript 运行时✨🐢🚀✨
       <link>https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port</guid>
       <pubDate>Fri, 23 Oct 2026 12:00:00 +0000</pubDate>
-      <description>复古游戏正被AI全面渗透：最近，复古电子游戏无处不在——尤其是在它们不应该出现的地方，适合关注 Agent 工具调用和工作流搭建。
+      <description>复古游戏正被AI全面渗透：近期复古游戏无处不在，甚至出现在意料之外的地方：网页浏览器中的《光环》、iPhone上的《风之杖》、混合现实里的《任...，适合关注 Agent 工具调用和工作流搭建。
 
-最近，复古电子游戏无处不在——尤其是在它们不应该出现的地方。网络浏览器中的光环、iPhone 上的风之杖、混合现实中的任天堂明星大乱斗。过去...
+近期复古游戏无处不在，甚至出现在意料之外的地方：网页浏览器中的《光环》、iPhone上的《风之杖》、混合现实里的《任天堂明星大乱斗》。过去……
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -322,9 +340,9 @@ Node.js JavaScript 运行时✨🐢🚀✨
       <link>https://openai.com/index/securing-our-frontier-model-training-environment</link>
       <guid isPermaLink="true">https://openai.com/index/securing-our-frontier-model-training-environment</guid>
       <pubDate>Fri, 23 Oct 2026 10:00:00 +0000</pubDate>
-      <description>保障我们的前沿模型训练环境安全：OpenAI详细阐述了加强前沿模型训练与评估安全防护的措施，涵盖了离线环境和高算力红队测试，适合跟进 AI 风险、治理和可信边界。
+      <description>保障我们的前沿模型训练环境安全：OpenAI公布加强前沿模型训练与评估的隔离措施，包括离线环境和高算力红队测试，以防范潜在风险，适合跟进 AI 风险、治理和可信边界。
 
-OpenAI详细阐述了加强前沿模型训练与评估安全防护的措施，涵盖了离线环境和高算力红队测试。
+OpenAI公布加强前沿模型训练与评估的隔离措施，包括离线环境和高算力红队测试，以防范潜在风险。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -337,9 +355,9 @@ OpenAI详细阐述了加强前沿模型训练与评估安全防护的措施，�
       <link>https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>英伟达：出行平台 inDrive 计划于2027年上半年在哈萨克斯坦首都测试 Pony.ai 的自动驾驶出租车，适合跟进 AI 风险、治理和可信边界。
+      <description>英伟达：inDrive计划于2027年上半年开始在哈萨克斯坦首都测试小马智行的机器人出租车，适合跟进 AI 风险、治理和可信边界。
 
-出行平台 inDrive 计划于2027年上半年在哈萨克斯坦首都测试 Pony.ai 的自动驾驶出租车。
+inDrive计划于2027年上半年开始在哈萨克斯坦首都测试小马智行的机器人出租车。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -350,9 +368,9 @@ OpenAI详细阐述了加强前沿模型训练与评估安全防护的措施，�
       <link>https://arxiv.org/abs/2610.30151</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30151</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>说声“你好”的代价：每一次AI代理间的交互始于握手：发起方需定位对手、了解其能力并建立连接，适合关注自动化任务和多 Agent 协作演进。
+      <description>说声“你好”的代价：arXiv:2610.30151v1 公告类型：新 摘要：AI 代理之间的每次交互都以握手开始：发起代理必须找到其对...，适合关注自动化任务和多 Agent 协作演进。
 
-每一次AI代理间的交互始于握手：发起方需定位对手、了解其能力并建立连接。该研究提出一种新型协议，旨在通过标准化的“握手”机制，提升跨代理协作的效率与安全性。
+arXiv:2610.30151v1 公告类型：新 摘要：AI 代理之间的每次交互都以握手开始：发起代理必须找到其对应方，了解它可以做什么，并建立...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -364,9 +382,9 @@ OpenAI详细阐述了加强前沿模型训练与评估安全防护的措施，�
       <link>https://arxiv.org/abs/2610.30157</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30157</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>MCP 与 CLI 之于 AI 智能体：arXiv:2610.30157v1 公告类型：新 摘要：AI 代理需要接口来与文件、API、数据库和云服务等外部系...，适合关注自动化任务和多 Agent 协作演进。
+      <description>MCP 与 CLI 之于 AI 智能体：arXiv:2610.30157v1指出，AI智能体需通过文件、API、数据库及云服务等接口与外部系统交互，当前存在...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.30157v1 公告类型：新 摘要：AI 代理需要接口来与文件、API、数据库和云服务等外部系统进行交互。两种相互竞争的范式...
+arXiv:2610.30157v1指出，AI智能体需通过文件、API、数据库及云服务等接口与外部系统交互，当前存在两种相互竞争的架构范式。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -379,9 +397,9 @@ arXiv:2610.30157v1 公告类型：新 摘要：AI 代理需要接口来与文件
       <link>https://arxiv.org/abs/2610.30170</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30170</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>借助 AI 代理建模框架加速加拿大全国野...：加拿大野火频发，需定期绘制全国灾害图以指导燃料管理和土地利用等主动减灾措施，适合判断技术路线和后续产品化可能性。
+      <description>借助 AI 代理建模框架加速加拿大全国野...：arXiv:2610.30170v1 公告类型：新 摘要：加拿大不断增加的野火活动需要频繁的国家灾害测绘，以指导主动...，适合判断技术路线和后续产品化可能性。
 
-加拿大野火频发，需定期绘制全国灾害图以指导燃料管理和土地利用等主动减灾措施。arXiv:2610.30170v1新论文提出相关框架。
+arXiv:2610.30170v1 公告类型：新 摘要：加拿大不断增加的野火活动需要频繁的国家灾害测绘，以指导主动缓解措施，包括燃料管理、土地利用……
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -392,9 +410,9 @@ arXiv:2610.30157v1 公告类型：新 摘要：AI 代理需要接口来与文件
       <link>https://arxiv.org/abs/2610.30173</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30173</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>具备可微信念函数层的神经网络：arXiv:2610.30173v1 新论文摘要：Yager 1987年提出的组合规则 $\boxplus$ 基于认...，适合判断技术路线和后续产品化可能性。
+      <description>具备可微信念函数层的神经网络：arXiv:2610.30173v1 Announce Type: new Abstract: Yager&apos;s 19...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.30173v1 新论文摘要：Yager 1987年提出的组合规则 $\boxplus$ 基于认知论基础，主张在高度冲突下应将基本信任分配至无知而非直接冲突项。
+arXiv:2610.30173v1 Announce Type: new Abstract: Yager&apos;s 1987 rule of combination $\boxplus$ was proposed on epistemic grounds: under high conflict, mass should be redistributed to ignorance rather...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -405,9 +423,9 @@ arXiv:2610.30173v1 新论文摘要：Yager 1987年提出的组合规则 $\boxplu
       <link>https://arxiv.org/abs/2610.30205</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30205</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>适得其反的游戏反馈：arXiv:2610.30205v1 公告类型：新摘要：当 LLM 代理的移动失败时，工具会将移动和失败消息写入记录...，适合关注自动化任务和多 Agent 协作演进。
+      <description>适得其反的游戏反馈：arXiv:2610.30205v1 Announce Type: new Abstract: When an LL...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.30205v1 公告类型：新摘要：当 LLM 代理的移动失败时，工具会将移动和失败消息写入记录中并再次询问。在工具调用中，这个记录...
+arXiv:2610.30205v1 Announce Type: new Abstract: When an LLM agent&apos;s move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -420,9 +438,9 @@ arXiv:2610.30205v1 公告类型：新摘要：当 LLM 代理的移动失败时�
       <link>https://arxiv.org/abs/2610.30277</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30277</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>借助人机发现循环突破列莫尔问题中的高次数...：arXiv:2610.30277v1 新论文指出，尽管AI在数学推理上进展迅速，但许多开放问题依赖仅通过深层结构揭示...，适合判断技术路线和后续产品化可能性。
+      <description>借助人机发现循环突破列莫尔问题中的高次数...：arXiv:2610.30277v1 Announce Type: new Abstract: While arti...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.30277v1 新论文指出，尽管AI在数学推理上进展迅速，但许多开放问题依赖仅通过深层结构揭示的特性。
+arXiv:2610.30277v1 Announce Type: new Abstract: While artificial intelligence has made rapid progress in mathematical reasoning, many open problems depend on structure that is revealed only through...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -433,9 +451,9 @@ arXiv:2610.30277v1 新论文指出，尽管AI在数学推理上进展迅速，�
       <link>https://arxiv.org/abs/2610.30351</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30351</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>路由与生成：arXiv:2610.30351v1 指出，大语言模型常对所有任务一概进行复杂推理，导致简单任务过度思考、困难任务思...，适合判断技术路线和后续产品化可能性。
+      <description>路由与生成：arXiv:2610.30351v1 Announce Type: new Abstract: Large lang...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2610.30351v1 指出，大语言模型常对所有任务一概进行复杂推理，导致简单任务过度思考、困难任务思考不足。
+arXiv:2610.30351v1 Announce Type: new Abstract: Large language models often apply complex reasoning indiscriminately, leading to overthinking on simple tasks and underthinking on harder ones. We...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -446,9 +464,9 @@ arXiv:2610.30351v1 指出，大语言模型常对所有任务一概进行复杂�
       <link>https://arxiv.org/abs/2610.30429</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30429</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>RoleFlow：arXiv：2610.30429v1 公告类型：新摘要：基于大型语言模型（LLM）的多智能体系统通常依赖于预定义的协...，适合关注自动化任务和多 Agent 协作演进。
+      <description>RoleFlow：arXiv:2610.30429v1 Announce Type: new Abstract: Large lang...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv：2610.30429v1 公告类型：新摘要：基于大型语言模型（LLM）的多智能体系统通常依赖于预定义的协作结构，限制了它们对不断发展的任务的适应性......
+arXiv:2610.30429v1 Announce Type: new Abstract: Large language model (LLM) based multi-agent systems often rely on predefined collaboration structures, limiting their adaptability to evolving task...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -460,9 +478,9 @@ arXiv：2610.30429v1 公告类型：新摘要：基于大型语言模型（LLM�
       <link>https://arxiv.org/abs/2610.30436</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30436</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>6G 通信系统中的安全智能体 AI 与多...：arXiv:2610.30436v1 新论文指出，第六代（6G）通信系统将通过深度融合，支持沉浸式、意图驱动和低时延...，适合关注自动化任务和多 Agent 协作演进。
+      <description>6G 通信系统中的安全智能体 AI 与多...：arXiv:2610.30436v1 Announce Type: new Abstract: Sixth-gene...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.30436v1 新论文指出，第六代（6G）通信系统将通过深度融合，支持沉浸式、意图驱动和低时延关键服务。
+arXiv:2610.30436v1 Announce Type: new Abstract: Sixth-generation (6G) communication systems are expected to support immersive, intent-driven, and latency-critical services through tight integration...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -475,11 +493,11 @@ arXiv:2610.30436v1 新论文指出，第六代（6G）通信系统将通过深�
       <link>https://arxiv.org/abs/2610.30443</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.30443</guid>
       <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>SpecMAGIC：arXiv:2610.30443v1 公告类型：新 摘要：多任务泛化是多智能体强化学习（MARL）中一个重要但尚未充...，适合关注自动化任务和多 Agent 协作演进。
+      <description>SpecMAGIC：arXiv:2610.30443v1 Announce Type: new Abstract: Multi-task...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2610.30443v1 公告类型：新 摘要：多任务泛化是多智能体强化学习（MARL）中一个重要但尚未充分研究的问题。许多现实世界的应用程序需要...
+arXiv:2610.30443v1 Announce Type: new Abstract: Multi-task generalization is an important yet underexplored problem in multi-agent reinforcement learning (MARL). Many real-world applications require...
 
-信号等级 B · 评分 56.2</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -660,19 +678,6 @@ arXiv:2610.30660v1 Announce Type: new Abstract: Open-world geographic artificial
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>解构多语言LLM中的鲁棒性与阿谀倾向</title>
-      <link>https://arxiv.org/abs/2610.30696</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.30696</guid>
-      <pubDate>Fri, 23 Oct 2026 04:00:00 +0000</pubDate>
-      <description>解构多语言LLM中的鲁棒性与阿谀倾向：arXiv:2610.30696v1 Announce Type: new Abstract: When a mul...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.30696v1 Announce Type: new Abstract: When a multilingual LLM agrees with a user&apos;s false premise, is it being sycophantic, or does it simply not know better in that language? Current...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
   </channel>
