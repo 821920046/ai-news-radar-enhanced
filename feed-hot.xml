@@ -5,36 +5,90 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 24 Oct 2026 05:27:10 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 10:25:19 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>OpenAI现采用无网络访问的方式训练其前沿AI模型</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet</guid>
       <pubDate>Fri, 23 Oct 2026 21:11:07 +0000</pubDate>
-      <description>在发生一系列流氓黑客事件后，OpenAI 现在正在无需连接互联网的情况下训练其最先进的人工智能模型，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI is now training its most advanced AI models without...，来自官方更新源，适合直接判断产品变化。
 
-在发生一系列流氓黑客事件后，OpenAI 现在正在无需连接互联网的情况下训练其最先进的人工智能模型。 OpenAI 在周五的博客文章中表示，它构建了一个离线测试环境......
+OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment...
 
-信号等级 B · 评分 62.2</description>
+信号等级 B · 评分 68.5</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
       <category>智能体</category>
       <category>部署推理</category>
     </item>
     <item>
+      <title>SnailSploit/Claude-Red</title>
+      <link>https://github.com/SnailSploit/Claude-Red</link>
+      <guid isPermaLink="true">https://github.com/SnailSploit/Claude-Red</guid>
+      <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
+      <description>Claude：claude-red is a curated library of offensive security skil...，适合进一步验证代码、协议或社区采用情况。
+
+claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.
+
+信号等级 B · 评分 67.8</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>一位开发者让电视服用了 Claude，这是它系统发生的变化</title>
+      <link>https://www.ifanr.com/1685473</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1685473</guid>
+      <pubDate>Sat, 24 Oct 2026 10:10:44 +0000</pubDate>
+      <description>Claude：欢迎来到「大逆向时代」#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合优先评估模型能力、价格和工具选型变化。
+
+欢迎来到「大逆向时代」#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>[AINews] Kimi 3.1 Pro 104BA-2.8T:Fable-5.1-Class 开源权重模型将闭源 AI 领先优势缩短至 1 个月……并推出速度提升 2-3 倍的 Pro Highspeed API</title>
+      <link>https://latent.space/p/ainews-kimi-31</link>
+      <guid isPermaLink="true">https://latent.space/p/ainews-kimi-31</guid>
+      <pubDate>Sat, 24 Oct 2026 07:18:29 +0000</pubDate>
+      <description>Kimi 3.1 Pro 104BA-2...：We have Fable at home... or so we are being told by paid s...，适合关注内容生产和交互形态的新变化。
+
+We have Fable at home... or so we are being told by paid shills
+
+信号等级 B · 评分 65.0</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+    </item>
+    <item>
       <title>Jack Dorsey 旗下的 Block 开发出一款 AI 模型，它能像笨拙的新朋友一样与你交谈</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech</guid>
       <pubDate>Fri, 23 Oct 2026 19:32:39 +0000</pubDate>
-      <description>Jack Dorsey 旗下的 Bloc...：Jack Dorsey 的 Block 宣布了一个名为 Dessa 的人工智能模型，该模型“从头开始只接受人类对话”...，适合跟进 AI 风险、治理和可信边界。
+      <description>Jack Dorsey 旗下的 Bloc...：Jack Dorsey的Block公司发布了一款名为Dessa的AI模型，该模型完全基于人类对话从零训练，并展示了其...，适合跟进 AI 风险、治理和可信边界。
 
-Jack Dorsey 的 Block 宣布了一个名为 Dessa 的人工智能模型，该模型“从头开始只接受人类对话”的训练，并且为了展示该模型，Block 分享了它与人类的聊天记录，这些聊天记录可以...
+Jack Dorsey的Block公司发布了一款名为Dessa的AI模型，该模型完全基于人类对话从零训练，并展示了其与人类的聊天记录以示其能力。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>安全对齐</category>
       <category>论文研究</category>
+    </item>
+    <item>
+      <title>iPhone Duo 本应是一款 iPad</title>
+      <link>https://www.theverge.com/podcast/1017447/iphone-duo-ipad-review-score-vergecast</link>
+      <guid isPermaLink="true">https://www.theverge.com/podcast/1017447/iphone-duo-ipad-review-score-vergecast</guid>
+      <pubDate>Fri, 23 Oct 2026 17:00:18 +0000</pubDate>
+      <description>iPhone Duo 本应是一款 iPa...：We gave the iPhone Duo a 7 /10. But that wasn&apos;t always the...，适合跟进 AI 风险、治理和可信边界。
+
+We gave the iPhone Duo a 7 /10. But that wasn&apos;t always the score we planned, and it might not be the right score forever. Such are the challenges of reviewing - and assessing - a big, new idea about...
+
+信号等级 B · 评分 62.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
     </item>
     <item>
       <title>LitPivot:通过文献领域的动态情境化研究来发展研究思路</title>
@@ -50,54 +104,13 @@ Jack Dorsey 的 Block 宣布了一个名为 Dessa 的人工智能模型，该模
       <category>论文研究</category>
     </item>
     <item>
-      <title>保障我们的前沿模型训练环境安全</title>
-      <link>https://openai.com/index/securing-our-frontier-model-training-environment</link>
-      <guid isPermaLink="true">https://openai.com/index/securing-our-frontier-model-training-environment</guid>
-      <pubDate>Fri, 23 Oct 2026 10:00:00 +0000</pubDate>
-      <description>保障我们的前沿模型训练环境安全：OpenAI 解释了我们如何加强对前沿模型训练和评估的遏制，包括离线环境和高计算红队，适合跟进 AI 风险、治理和可信边界。
-
-OpenAI 解释了我们如何加强对前沿模型训练和评估的遏制，包括离线环境和高计算红队。
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>SnailSploit/Claude-Red</title>
-      <link>https://github.com/SnailSploit/Claude-Red</link>
-      <guid isPermaLink="true">https://github.com/SnailSploit/Claude-Red</guid>
-      <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>Claude-red 是专为 Claude 技能系统打造的 offensive security 技能库，每个技能以...，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
-
-Claude-red 是专为 Claude 技能系统打造的 offensive security 技能库，每个技能以结构化 SKILL.md 文件呈现，涵盖 SQLi、shellcode、EDR 逃逸及漏洞利用开发等攻击面，为模型提供专家级方法论指导。
-
-信号等级 B · 评分 61.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>实测 Kimi K3.1 Pro，国模终于继续卷旗舰</title>
-      <link>https://www.ifanr.com/1685684</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1685684</guid>
-      <pubDate>Sat, 24 Oct 2026 02:07:19 +0000</pubDate>
-      <description>实测 Kimi K3.1 Pro：大而美的 Kimi 回来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
-
-大而美的 Kimi 回来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 59.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
       <title>借助全球性能调优工具，将 NVIDIA TensorRT 性能优化扩展至单一构建路径之外(第二部分)</title>
       <link>https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2</link>
       <guid isPermaLink="true">https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2</guid>
       <pubDate>Fri, 23 Oct 2026 17:27:52 +0000</pubDate>
-      <description>NVIDIA TensorRT 11.1发布了全局性能调优功能，该功能能够自动、精准地优化模型性能，显著提升推理吞吐...，来自官方更新源，适合直接判断产品变化。
+      <description>NVIDIA TensorRT 11.1 推出自动性能调优功能 Global Performance Tuner，可...，来自官方更新源，适合直接判断产品变化。
 
-NVIDIA TensorRT 11.1发布了全局性能调优功能，该功能能够自动、精准地优化模型性能，显著提升推理吞吐量与延迟表现。
+NVIDIA TensorRT 11.1 推出自动性能调优功能 Global Performance Tuner，可实现自动、精度感知的性能优化。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -108,21 +121,9 @@ NVIDIA TensorRT 11.1发布了全局性能调优功能，该功能能够自动、
       <link>https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks</guid>
       <pubDate>Fri, 23 Oct 2026 23:05:49 +0000</pubDate>
-      <description>在一名工程师表示该解决方案行不通几周后，OpenAI 将切断前沿模型与互联网的连接，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI将在其工程师称该方案无效数周后，切断前沿模型与互联网的连接，来自官方更新源，适合直接判断产品变化。
 
-在一名工程师表示该解决方案行不通几周后，OpenAI 将切断前沿模型与互联网的连接。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>圣诞季最火玩具？英伟达CEO把玩可爱Microduck机器人，2万台售罄</title>
-      <link>https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell</guid>
-      <pubDate>Fri, 23 Oct 2026 21:59:19 +0000</pubDate>
-      <description>英伟达：这些机器人在语音指令下会小步 stomping、发出类似R2-D2的声响，还能倒立、翻跟头，甚至“小睡”后倒地不动，适合作为今日 AI/科技情报流里的重点线索。
-
-这些机器人在语音指令下会小步 stomping、发出类似R2-D2的声响，还能倒立、翻跟头，甚至“小睡”后倒地不动。
+OpenAI将在其工程师称该方案无效数周后，切断前沿模型与互联网的连接。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -132,36 +133,22 @@ NVIDIA TensorRT 11.1发布了全局性能调优功能，该功能能够自动、
       <link>https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026</guid>
       <pubDate>Fri, 23 Oct 2026 19:06:23 +0000</pubDate>
-      <description>从 Toast 到 Bessemer：TechCrunch联合Fidelity Private Shares主办的全天活动，不仅探讨融资与AI，更聚焦客户...，适合判断资金、客户和生态格局的变化。
+      <description>从 Toast 到 Bessemer：TechCrunch联合Fidelity Private Shares举办全天活动，探讨融资与AI之外的创业核心议题...，适合判断资金、客户和生态格局的变化。
 
-TechCrunch联合Fidelity Private Shares主办的全天活动，不仅探讨融资与AI，更聚焦客户获取、团队建设及融资路演等创业实战议题。
+TechCrunch联合Fidelity Private Shares举办全天活动，探讨融资与AI之外的创业核心议题，包括客户获取、团队搭建及路演优化等实战策略。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
     <item>
-      <title>iPhone Duo 本应是一款 iPad</title>
-      <link>https://www.theverge.com/podcast/1017447/iphone-duo-ipad-review-score-vergecast</link>
-      <guid isPermaLink="true">https://www.theverge.com/podcast/1017447/iphone-duo-ipad-review-score-vergecast</guid>
-      <pubDate>Fri, 23 Oct 2026 17:00:18 +0000</pubDate>
-      <description>iPhone Duo 本应是一款 iPa...：我们给iPhone Duo打了7分/10分，适合跟进 AI 风险、治理和可信边界。
-
-我们给iPhone Duo打了7分/10分。但这并非我们原本计划的分数，且其评分可能随时间而变。这正是评测“大新意”所面临的挑战。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>智能体</category>
-    </item>
-    <item>
       <title>快速扩展在线存储，为超过 10 亿 ChatGPT 用户提供支持(第二部分)</title>
       <link>https://openai.com/index/scaling-storage-one-billion-users-part-two</link>
       <guid isPermaLink="true">https://openai.com/index/scaling-storage-one-billion-users-part-two</guid>
       <pubDate>Fri, 23 Oct 2026 17:00:00 +0000</pubDate>
-      <description>GPT：了解 OpenAI 如何通过可靠的多租户、全局缓存和 Azure Cosmos DB 扩展 Habitat，为 Ch...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>GPT：Learn how OpenAI scaled Habitat with reliable multi-tenanc...，适合作为今日 AI/科技情报流里的重点线索。
 
-了解 OpenAI 如何通过可靠的多租户、全局缓存和 Azure Cosmos DB 扩展 Habitat，为 ChatGPT 提供 12 倍的更快读取速度。
+Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -171,9 +158,9 @@ TechCrunch联合Fidelity Private Shares主办的全天活动，不仅探讨融�
       <link>https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update</guid>
       <pubDate>Fri, 23 Oct 2026 16:52:55 +0000</pubDate>
-      <description>Google：谷歌更新了其隐私政策，这可能意味着如果您使用个性化人工智能功能，您将开始看到基于您的个人数据的有针对性的广告，适合关注 Agent 工具调用和工作流搭建。
+      <description>Google has updated its privacy policy in a way that could...，来自官方更新源，适合直接判断产品变化。
 
-谷歌更新了其隐私政策，这可能意味着如果您使用个性化人工智能功能，您将开始看到基于您的个人数据的有针对性的广告。 Android 发现的更新...
+Google has updated its privacy policy in a way that could mean you&apos;ll start seeing targeted ads based on your personal data if you&apos;re using personalized AI features. The update, spotted by Android...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -184,9 +171,9 @@ TechCrunch联合Fidelity Private Shares主办的全天活动，不仅探讨融�
       <link>https://latent.space/p/ai-is-getting-good-at-math</link>
       <guid isPermaLink="true">https://latent.space/p/ai-is-getting-good-at-math</guid>
       <pubDate>Fri, 23 Oct 2026 15:19:48 +0000</pubDate>
-      <description>AI 为何在数学方面越来越强：人工智能模型正在解决更多的数学问题，适合作为今日 AI/科技情报流里的重点线索。
+      <description>AI 为何在数学方面越来越强：AI models are solving more mathematical problems. A patter...，适合作为今日 AI/科技情报流里的重点线索。
 
-人工智能模型正在解决更多的数学问题。他们的成功中正在出现一种模式，可以帮助我们预测他们下一步将解决哪些问题。
+AI models are solving more mathematical problems. A pattern is emerging in their successes that could help us predict which problems they’ll solve next.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -196,9 +183,9 @@ TechCrunch联合Fidelity Private Shares主办的全天活动，不仅探讨融�
       <link>https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping</guid>
       <pubDate>Fri, 23 Oct 2026 14:47:41 +0000</pubDate>
-      <description>Meta推迟执行新商业条款，因出版商担忧该条款可能允许其抓取新闻网站内容用于AI训练，来自官方更新源，适合直接判断产品变化。
+      <description>Meta因出版商担忧新条款可能让其抓取新闻站点用于AI训练，推迟执行新业务条款，Fast...，来自官方更新源，适合直接判断产品变化。
 
-Meta推迟执行新商业条款，因出版商担忧该条款可能允许其抓取新闻网站内容用于AI训练。
+Meta因出版商担忧新条款可能让其抓取新闻站点用于AI训练，推迟执行新业务条款，Fast...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -208,9 +195,9 @@ Meta推迟执行新商业条款，因出版商担忧该条款可能允许其抓�
       <link>https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port</guid>
       <pubDate>Fri, 23 Oct 2026 12:00:00 +0000</pubDate>
-      <description>复古游戏正被AI全面渗透：最近，复古电子游戏无处不在——尤其是在它们不应该出现的地方，适合关注 Agent 工具调用和工作流搭建。
+      <description>复古游戏正被AI全面渗透：复古游戏正突破平台限制，如《光环》在浏览器运行、《塞尔达传说：风之律克》登陆iPhone、《超级大乱斗》登陆混合现实...，适合关注 Agent 工具调用和工作流搭建。
 
-最近，复古电子游戏无处不在——尤其是在它们不应该出现的地方。网络浏览器中的光环、iPhone 上的风之杖、混合现实中的任天堂明星大乱斗。过去...
+复古游戏正突破平台限制，如《光环》在浏览器运行、《塞尔达传说：风之律克》登陆iPhone、《超级大乱斗》登陆混合现实设备。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -218,39 +205,38 @@ Meta推迟执行新商业条款，因出版商担忧该条款可能允许其抓�
       <category>多模态</category>
     </item>
     <item>
-      <title>[人工智能新闻] 黑色十月</title>
-      <link>https://latent.space/p/ainews-black-october</link>
-      <guid isPermaLink="true">https://latent.space/p/ainews-black-october</guid>
-      <pubDate>Fri, 23 Oct 2026 10:09:29 +0000</pubDate>
-      <description>黑色十月：网络攻击仍在继续，适合关注 Agent 工具调用和工作流搭建。
-
-网络攻击仍在继续。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>MCP/工具</category>
-    </item>
-    <item>
       <title>nodejs/node</title>
       <link>https://github.com/nodejs/node</link>
       <guid isPermaLink="true">https://github.com/nodejs/node</guid>
       <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>nodejs/node：Node.js JavaScript 运行时✨🐢🚀✨，适合进一步验证代码、协议或社区采用情况。
+      <description>nodejs/node：Node.js 是基于 Chrome V8 引擎的 JavaScript 运行时，显著提升服务器端性能与开发效率，适合进一步验证代码、协议或社区采用情况。
 
-Node.js JavaScript 运行时✨🐢🚀✨
+Node.js 是基于 Chrome V8 引擎的 JavaScript 运行时，显著提升服务器端性能与开发效率。
 
 信号等级 B · 评分 55.2</description>
       <category>开源热榜</category>
       <category>开源</category>
     </item>
     <item>
+      <title>实测 Kimi K3.1 Pro，国模终于继续卷旗舰</title>
+      <link>https://www.ifanr.com/1685684</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1685684</guid>
+      <pubDate>Sat, 24 Oct 2026 02:07:19 +0000</pubDate>
+      <description>实测 Kimi K3.1 Pro：大而美的 Kimi 回来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
+
+大而美的 Kimi 回来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 B · 评分 55.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
       <title>OpenBMB/VoxCPM</title>
       <link>https://github.com/OpenBMB/VoxCPM</link>
       <guid isPermaLink="true">https://github.com/OpenBMB/VoxCPM</guid>
       <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>OpenBMB/VoxCPM：VoxCPM2实现多语言语音生成、创意声音设计及真实克隆，采用无需分词的端到端TTS技术，显著提升跨语言语音质量与克...，适合进一步验证代码、协议或社区采用情况。
+      <description>OpenBMB/VoxCPM：VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Genera...，适合进一步验证代码、协议或社区采用情况。
 
-VoxCPM2实现多语言语音生成、创意声音设计及真实克隆，采用无需分词的端到端TTS技术，显著提升跨语言语音质量与克隆真实性。
+VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning
 
 信号等级 B · 评分 54.1</description>
       <category>开源热榜</category>
@@ -258,68 +244,43 @@ VoxCPM2实现多语言语音生成、创意声音设计及真实克隆，采用�
       <category>多模态</category>
     </item>
     <item>
-      <title>iPhone Duo 2 提前曝光：FaceID、操作按钮都要回来了？</title>
-      <link>https://www.ifanr.com/1685622</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1685622</guid>
-      <pubDate>Sat, 24 Oct 2026 04:10:44 +0000</pubDate>
-      <description>iPhone Duo 2 提前曝光：还没捂热呢#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
+      <title>圣诞季最火玩具？英伟达CEO把玩可爱Microduck机器人，2万台售罄</title>
+      <link>https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell</guid>
+      <pubDate>Fri, 23 Oct 2026 21:59:19 +0000</pubDate>
+      <description>英伟达：这些机器人用小脚“砰砰”跑动、发出类似R2-D2的声响，听到指令后还能坐下、“睡觉”装死，或翻跟斗，适合作为今日 AI/科技情报流里的重点线索。
 
-还没捂热呢#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+这些机器人用小脚“砰砰”跑动、发出类似R2-D2的声响，听到指令后还能坐下、“睡觉”装死，或翻跟斗。
 
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 53.8</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>突发！iPhone Duo 支持微信平板登录，可与手机、电脑同时在线</title>
-      <link>https://www.ifanr.com/1685714</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1685714</guid>
-      <pubDate>Sat, 24 Oct 2026 03:25:33 +0000</pubDate>
-      <description>突发：来了来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
+      <title>当我说 Claude 搭配 GLM-5.3-Flash 太好用了，同事却提醒我：你可能正在失去对代码的掌控</title>
+      <link>https://juejin.cn/post/7699017769225928744</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7699017769225928744</guid>
+      <pubDate>Sat, 24 Oct 2026 10:25:19 +0000</pubDate>
+      <description>Claude：你可能正在失去对代码的掌控，适合优先评估模型能力、价格和工具选型变化。
 
-来了来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>使用指标 API 新增 OpenCode 等工具的使用数据</title>
-      <link>https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode</guid>
-      <pubDate>Fri, 23 Oct 2026 23:42:03 +0000</pubDate>
-      <description>使用指标 API 新增 OpenCode...：Copilot 使用指标 API 现在可以报告开发人员在 Copilot 中使用的更多工具的模型使用情况，包括以前在...，适合判断 AI 编程工作流会不会被改写。
-
-Copilot 使用指标 API 现在可以报告开发人员在 Copilot 中使用的更多工具的模型使用情况，包括以前在您的...中未捕获的 OpenCode 等工具。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-      <category>编码工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>早报｜微信初步适配iPhone Duo，仍不能平板登录/全球PC出货下降21%/何刚出任华为董事</title>
-      <link>https://www.ifanr.com/1685660</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1685660</guid>
-      <pubDate>Sat, 24 Oct 2026 00:26:49 +0000</pubDate>
-      <description>早报：· 黄仁勋：对长鑫合作持开放态度，不认为 2029 年内存会过剩 · 沃尔沃汽车拟全球裁减约 2500 个岗位 ·...，适合作为今日 AI/科技情报流里的重点线索。
-
-· 黄仁勋：对长鑫合作持开放态度，不认为 2029 年内存会过剩 · 沃尔沃汽车拟全球裁减约 2500 个岗位 · 华为 Pura90 Plus 开启预订#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 53.0</description>
-      <category>Official AI Updates</category>
+信号等级 B · 评分 53.1</description>
+      <category>TopHub</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>NVIDIA/OpenShell</title>
       <link>https://github.com/NVIDIA/OpenShell</link>
       <guid isPermaLink="true">https://github.com/NVIDIA/OpenShell</guid>
       <pubDate>Fri, 23 Oct 2026 13:08:20 +0000</pubDate>
-      <description>NVIDIA：OpenShell 是面向自主 AI 智能体的安全、私密运行时，适合关注自动化任务和多 Agent 协作演进。
+      <description>NVIDIA 开源 OpenShell，为自主 AI 代理提供安全私密运行时环境，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
 
-OpenShell 是面向自主 AI 智能体的安全、私密运行时。
+NVIDIA 开源 OpenShell，为自主 AI 代理提供安全私密运行时环境。
 
 信号等级 B · 评分 53.0</description>
       <category>开源热榜</category>
-      <category>智能体</category>
+      <category>AI代理</category>
       <category>开源</category>
+      <category>运行时环境</category>
+      <category>智能体</category>
     </item>
     <item>
       <title>Claude Code 接入 DeepSeek V4.1 与 MiniMax M3.1 实测：200+ TPS 下的代码准确率与 Token 账单</title>
@@ -346,13 +307,51 @@ OpenShell 是面向自主 AI 智能体的安全、私密运行时。
       <category>开源</category>
     </item>
     <item>
+      <title>iPhone Duo 2 提前曝光：FaceID、操作按钮都要回来了？</title>
+      <link>https://www.ifanr.com/1685622</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1685622</guid>
+      <pubDate>Sat, 24 Oct 2026 04:10:44 +0000</pubDate>
+      <description>iPhone Duo 2 提前曝光：还没捂热呢#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
+
+还没捂热呢#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 C · 评分 50.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>突发！iPhone Duo 支持微信平板登录，可与手机、电脑同时在线</title>
+      <link>https://www.ifanr.com/1685714</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1685714</guid>
+      <pubDate>Sat, 24 Oct 2026 03:25:33 +0000</pubDate>
+      <description>突发：来了来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
+
+来了来了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 C · 评分 50.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>使用指标 API 新增 OpenCode 等工具的使用数据</title>
+      <link>https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode</link>
+      <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode</guid>
+      <pubDate>Fri, 23 Oct 2026 23:42:03 +0000</pubDate>
+      <description>使用指标 API 新增 OpenCode...：The Copilot usage metrics API now reports model usage from...，适合判断 AI 编程工作流会不会被改写。
+
+The Copilot usage metrics API now reports model usage from more of the tools your developers use with Copilot, including tools like OpenCode that weren&amp;#8217;t previously captured in your...
+
+信号等级 C · 评分 50.0</description>
+      <category>Official AI Updates</category>
+      <category>编码工具</category>
+      <category>开源</category>
+    </item>
+    <item>
       <title>用GitHub Copilot in Teams将通知转换为代码</title>
       <link>https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams</link>
       <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams</guid>
       <pubDate>Fri, 23 Oct 2026 21:29:58 +0000</pubDate>
-      <description>GitHub 推出 Teams 新应用，整合通知与 Copilot 功能，助力团队在会话中快速将问题转化为修复方案并...，来自官方更新源，适合直接判断产品变化。
+      <description>The new GitHub app in Teams brings notifications and Copil...，来自官方更新源，适合直接判断产品变化。
 
-GitHub 推出 Teams 新应用，整合通知与 Copilot 功能，助力团队在会话中快速将问题转化为修复方案并加速代码交付。
+The new GitHub app in Teams brings notifications and Copilot together, helping teams turn issues into fixes and ship code faster without leaving the conversation. Get notified in channels,...
 
 信号等级 C · 评分 50.0</description>
       <category>Official AI Updates</category>
@@ -364,9 +363,9 @@ GitHub 推出 Teams 新应用，整合通知与 Copilot 功能，助力团队在
       <link>https://vercel.com/blog/how-vercel-agent-accesses-production-safely</link>
       <guid isPermaLink="true">https://vercel.com/blog/how-vercel-agent-accesses-production-safely</guid>
       <pubDate>Fri, 23 Oct 2026 20:29:00 +0000</pubDate>
-      <description>Vercel Agent 如何安全地访问...：在生产系统上工作的代理需要获得许可才能执行操作，适合关注自动化任务和多 Agent 协作演进。
+      <description>Vercel Agent 如何安全地访问...：An agent working on production systems needs permission to...，适合关注自动化任务和多 Agent 协作演进。
 
-在生产系统上工作的代理需要获得许可才能执行操作。像“修复此部署”这样的请求不会预先告诉您它将采取哪些操作或需要什么访问权限。授予代理...
+An agent working on production systems needs permission to act. A request like “fix this deployment” doesn’t tell you upfront which actions it will take or what access it will need. Grant agents...
 
 信号等级 C · 评分 50.0</description>
       <category>Official AI Updates</category>
@@ -377,9 +376,9 @@ GitHub 推出 Teams 新应用，整合通知与 Copilot 功能，助力团队在
       <link>https://github.blog/changelog/2026-10-23-emu-deletions-fix</link>
       <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-emu-deletions-fix</guid>
       <pubDate>Fri, 23 Oct 2026 18:56:18 +0000</pubDate>
-      <description>EMU 删除修复方案：在2026年6月1日至6月13日期间，部分通过SCIM注销的企业管理用户账户被错误删除，而非按预期暂停并隐藏，适合进一步验证代码、协议或社区采用情况。
+      <description>EMU 删除修复方案：Between June 1 and June 13, 2026, some Enterprise Managed...，适合进一步验证代码、协议或社区采用情况。
 
-在2026年6月1日至6月13日期间，部分通过SCIM注销的企业管理用户账户被错误删除，而非按预期暂停并隐藏。
+Between June 1 and June 13, 2026, some Enterprise Managed User accounts that were deprovisioned through SCIM were incorrectly deleted instead of being suspended and obfuscated as expected. As...
 
 信号等级 C · 评分 50.0</description>
       <category>Official AI Updates</category>
@@ -390,9 +389,9 @@ GitHub 推出 Teams 新应用，整合通知与 Copilot 功能，助力团队在
       <link>https://github.blog/changelog/2026-10-23-public-monitoring-adds-triage-validity-api-and-webhooks</link>
       <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-public-monitoring-adds-triage-validity-api-and-webhooks</guid>
       <pubDate>Fri, 23 Oct 2026 17:17:58 +0000</pubDate>
-      <description>公共监控新增分类、有效性、API 和 W...：公共监控现具备警报管理功能，如自动有效性检查，助力大规模分类与修复泄露的密钥，适合进一步验证代码、协议或社区采用情况。
+      <description>公共监控新增分类、有效性、API 和 W...：公共监控现增添自动有效性检查等警报管理功能，助力大规模分级处理泄露密钥，适合进一步验证代码、协议或社区采用情况。
 
-公共监控现具备警报管理功能，如自动有效性检查，助力大规模分类与修复泄露的密钥。支持警报忽略、时间线追踪等操作。
+公共监控现增添自动有效性检查等警报管理功能，助力大规模分级处理泄露密钥。
 
 信号等级 C · 评分 50.0</description>
       <category>Official AI Updates</category>
@@ -403,9 +402,9 @@ GitHub 推出 Teams 新应用，整合通知与 Copilot 功能，助力团队在
       <link>https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available</link>
       <guid isPermaLink="true">https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available</guid>
       <pubDate>Fri, 23 Oct 2026 15:03:30 +0000</pubDate>
-      <description>现在可以在您的企业上安装 GitHub 应用程序，来自官方更新源，适合直接判断产品变化。
+      <description>GitHub Apps现已普遍可用，企业可用其替代经典PAT，通过扩展的API实现更广泛的自动化，来自官方更新源，适合直接判断产品变化。
 
-现在可以在您的企业上安装 GitHub 应用程序。您可以使用扩展的 API 在更多的企业和组织自动化中用 GitHub 应用程序替换经典的 PAT……
+GitHub Apps现已普遍可用，企业可用其替代经典PAT，通过扩展的API实现更广泛的自动化。
 
 信号等级 C · 评分 50.0</description>
       <category>Official AI Updates</category>
@@ -416,35 +415,23 @@ GitHub 推出 Teams 新应用，整合通知与 Copilot 功能，助力团队在
       <link>https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation</link>
       <guid isPermaLink="true">https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation</guid>
       <pubDate>Fri, 23 Oct 2026 14:58:32 +0000</pubDate>
-      <description>利用 AI 代理在模拟环境中教“Micr...：训练机器人穿越障碍赛道需要的不仅是行走策略，它必须感知周围环境、保持平衡并实时调整动作，适合作为今日 AI/科技情报流里的重点线索。
+      <description>利用 AI 代理在模拟环境中教“Micr...：训练机器人穿越障碍不仅需行走策略，还需感知环境、保持平衡并实时调整动作，适合作为今日 AI/科技情报流里的重点线索。
 
-训练机器人穿越障碍赛道需要的不仅是行走策略，它必须感知周围环境、保持平衡并实时调整动作。
-
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>实测 iPhone Duo 微信适配版：适配好了吗，体验怎么样？</title>
-      <link>https://www.ifanr.com/1685575</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1685575</guid>
-      <pubDate>Fri, 23 Oct 2026 09:52:47 +0000</pubDate>
-      <description>实测 iPhone Duo 微信适配版：微信终于适配 iPhone Duo，适合作为今日 AI/科技情报流里的重点线索。
-
-微信终于适配 iPhone Duo ！#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+训练机器人穿越障碍不仅需行走策略，还需感知环境、保持平衡并实时调整动作。
 
 信号等级 C · 评分 50.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>Windsurf 3.11.216</title>
-      <link>https://docs.devin.ai/desktop/changelog</link>
-      <guid isPermaLink="true">https://docs.devin.ai/desktop/changelog</guid>
-      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Windsurf 3.11.216：修复了组织角色没有 Devin Cloud 会话权限的成员可以再次查看、打开和启动 Devin Local 会话的问...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>早报｜微信初步适配iPhone Duo，仍不能平板登录/全球PC出货下降21%/何刚出任华为董事</title>
+      <link>https://www.ifanr.com/1685660</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1685660</guid>
+      <pubDate>Sat, 24 Oct 2026 00:26:49 +0000</pubDate>
+      <description>早报：· 黄仁勋：对长鑫合作持开放态度，不认为 2029 年内存会过剩 · 沃尔沃汽车拟全球裁减约 2500 个岗位 ·...，适合作为今日 AI/科技情报流里的重点线索。
 
-修复了组织角色没有 Devin Cloud 会话权限的成员可以再次查看、打开和启动 Devin Local 会话的问题。在 Windows 上，devin 可在新终端（PowerShell、命令提示符...
+· 黄仁勋：对长鑫合作持开放态度，不认为 2029 年内存会过剩 · 沃尔沃汽车拟全球裁减约 2500 个岗位 · 华为 Pura90 Plus 开启预订#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
 
-信号等级 C · 评分 49.2</description>
+信号等级 C · 评分 49.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -458,42 +445,6 @@ Swedish government offices to ban ChatGPT and Claude
 
 信号等级 C · 评分 48.8</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>OpenAI 与波兰的 NASK 合作开展人工智能安全研究</title>
-      <link>https://reut.rs/4BgT1sh</link>
-      <guid isPermaLink="true">https://reut.rs/4BgT1sh</guid>
-      <pubDate>Fri, 23 Oct 2026 07:35:01 +0000</pubDate>
-      <description>OpenAI and Poland’s NASK collaborate on AI safety research，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
-
-OpenAI and Poland’s NASK collaborate on AI safety research
-
-信号等级 C · 评分 48.8</description>
-      <category>Buzzing</category>
-      <category>安全对齐</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>当我说 Claude 搭配 GLM-5.3-Flash 太好用了，同事却提醒我：你可能正在失去对代码的掌控</title>
-      <link>https://juejin.cn/post/7699017769225928744</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7699017769225928744</guid>
-      <pubDate>Fri, 23 Oct 2026 18:07:43 +0000</pubDate>
-      <description>Claude：你可能正在失去对代码的掌控，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 47.8</description>
-      <category>NewsNow</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>DeepSeek 突发上线 V4.1-1017：552B 稀疏架构仅激活 16B，白菜价背后的工程奇迹</title>
-      <link>https://juejin.cn/post/7698552541928734735</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7698552541928734735</guid>
-      <pubDate>Fri, 23 Oct 2026 07:03:45 +0000</pubDate>
-      <description>DeepSeek：552B 稀疏架构仅激活 16B，白菜价背后的工程奇迹，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 47.8</description>
-      <category>NewsNow</category>
       <category>模型发布</category>
     </item>
     <item>
@@ -521,18 +472,6 @@ Goldman Sachs sees AI-fueled layoffs displacing nearly 10% of workers in the com
       <category>Buzzing</category>
     </item>
     <item>
-      <title>在得克萨斯州，同一项AI请求产生的二氧化碳排放量是瑞典的8.5倍</title>
-      <link>https://berget.ai/en/blog/per-request-co2-press-release</link>
-      <guid isPermaLink="true">https://berget.ai/en/blog/per-request-co2-press-release</guid>
-      <pubDate>Fri, 23 Oct 2026 08:37:42 +0000</pubDate>
-      <description>在得克萨斯州：The same AI request emits 8.5 times more CO2 in Texas than...，适合作为今日 AI/科技情报流里的重点线索。
-
-The same AI request emits 8.5 times more CO2 in Texas than in Sweden
-
-信号等级 C · 评分 47.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
       <title>为什么你的 Claude Code 还在转圈等，别人的已经干完三件事了？</title>
       <link>https://juejin.cn/post/7698999578180747291</link>
       <guid isPermaLink="true">https://juejin.cn/post/7698999578180747291</guid>
@@ -544,17 +483,89 @@ The same AI request emits 8.5 times more CO2 in Texas than in Sweden
       <category>模型发布</category>
     </item>
     <item>
-      <title>Show HN: Inference Cooperative，由用户治理的人工智能</title>
-      <link>https://inference.coop</link>
-      <guid isPermaLink="true">https://inference.coop</guid>
-      <pubDate>Sat, 24 Oct 2026 03:45:45 +0000</pubDate>
-      <description>Show HN：Inference Cooperative, user-governed AI，适合观察推理部署成本和落地门槛变化。
+      <title>德克萨斯州就产品安全问题起诉OpenAI和萨姆·阿尔特曼 - Politico</title>
+      <link>https://news.google.com/rss/articles/CBMikAFBVV95cUxPcm00d0JOd3dfc2ROWW5vaklsUk9MWDZXN1hLNWNwMWllNmZ1N2p5WGQ2VVUtOTlzQUdlUDZOcFB1WUpVcWE3WVcxZk16b09BNHZlcHJjWkVYZVNIdE1lbWFJWHRNOGIxbWR2cHFUazdsakh4NnBMcmhyUVdGbzVKNk1Mc001NjhzT09pNFdGanA?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
+      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMikAFBVV95cUxPcm00d0JOd3dfc2ROWW5vaklsUk9MWDZXN1hLNWNwMWllNmZ1N2p5WGQ2VVUtOTlzQUdlUDZOcFB1WUpVcWE3WVcxZk16b09BNHZlcHJjWkVYZVNIdE1lbWFJWHRNOGIxbWR2cHFUazdsakh4NnBMcmhyUVdGbzVKNk1Mc001NjhzT09pNFdGanA?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
+      <pubDate>Sat, 24 Oct 2026 10:05:38 +0000</pubDate>
+      <description>Texas sues OpenAI, Sam Altman over product safety，同时进入热榜视野，适合跟进 AI 风险、治理和可信边界。
 
-Inference Cooperative, user-governed AI
+Texas sues OpenAI, Sam Altman over product safety
 
-信号等级 C · 评分 46.8</description>
+信号等级 C · 评分 46.5</description>
       <category>Buzzing</category>
-      <category>部署推理</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>博士学位让我找到了梦想中的工作。这就是为什么我在41岁时攻读MBA，以便在人工智能时代实现职业升级。</title>
+      <link>https://www.businessinsider.com/phd-grad-intel-doing-mba-missing-skills-ai-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/phd-grad-intel-doing-mba-missing-skills-ai-2026-10</guid>
+      <pubDate>Sat, 24 Oct 2026 09:16:59 +0000</pubDate>
+      <description>博士学位让我找到了梦想中的工作：A Ph.D. led me to my dream job. Here&apos;&apos;s why I&apos;&apos;m doing an...，适合作为今日 AI/科技情报流里的重点线索。
+
+A Ph.D. led me to my dream job. Here&apos;&apos;s why I&apos;&apos;m doing an MBA at 41 to level up in the age of AI.
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>我对Canva的新款AI图片生成器进行了全面测试。结果喜忧参半。</title>
+      <link>https://www.businessinsider.com/canva-craft-new-ai-image-generation-tool-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/canva-craft-new-ai-image-generation-tool-2026-10</guid>
+      <pubDate>Sat, 24 Oct 2026 09:16:59 +0000</pubDate>
+      <description>我对Canva的新款AI图片生成器进行了...：I put Canva&apos;&apos;s new AI image generator through its paces. T...，适合关注内容生产和交互形态的新变化。
+
+I put Canva&apos;&apos;s new AI image generator through its paces. The results were a mixed bag.
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>JetBrains 推出 ThinkRail</title>
+      <link>https://thinkrail.ai</link>
+      <guid isPermaLink="true">https://thinkrail.ai</guid>
+      <pubDate>Sat, 24 Oct 2026 08:08:42 +0000</pubDate>
+      <description>JetBrains 推出 ThinkRa...：JetBrains 推出 ThinkRail，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 46.5</description>
+      <category>Zeli</category>
+    </item>
+    <item>
+      <title>随着人们对人工智能驱动的网络攻击的担忧日益加剧，Moonshot在新款Kimi机型中限制了黑客攻击能力</title>
+      <link>https://reut.rs/4BpsJnJ</link>
+      <guid isPermaLink="true">https://reut.rs/4BpsJnJ</guid>
+      <pubDate>Sat, 24 Oct 2026 06:38:46 +0000</pubDate>
+      <description>随着人们对人工智能驱动的网络攻击的担忧日...：Moonshot curbs hacking ability in new Kimi model as fears...，适合作为今日 AI/科技情报流里的重点线索。
+
+Moonshot curbs hacking ability in new Kimi model as fears grow over AI-powered cyberattacks
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>德国警方称，在纳粹“鹰巢”招待所被大火吞噬之际，一名嫌疑人已被逮捕 - Reuters</title>
+      <link>https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbVZ0LWhGcGF5OWJmMVlpUndFTFgtVGhySFg3aUpZSDk1MGVGOWpvNmozNzR5SVg0eU1lbExKaGJtTmk0VGtDWEFZSnNpMFZTd0xFUU85cmk0RFFuWDVJTDVseVJsRm5ZeWtzNmFMZENRWDJSOGJrT1lUTDV3Y2NKMS1QRzBEWGhMWDZfaTVsVlRqb2pEWWZvMndSaV9HU3gwbHh5b1JBVFhMRHZ4RTE0cy1zNGptUEVtTThaY003bFctUQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
+      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbVZ0LWhGcGF5OWJmMVlpUndFTFgtVGhySFg3aUpZSDk1MGVGOWpvNmozNzR5SVg0eU1lbExKaGJtTmk0VGtDWEFZSnNpMFZTd0xFUU85cmk0RFFuWDVJTDVseVJsRm5ZeWtzNmFMZENRWDJSOGJrT1lUTDV3Y2NKMS1QRzBEWGhMWDZfaTVsVlRqb2pEWWZvMndSaV9HU3gwbHh5b1JBVFhMRHZ4RTE0cy1zNGptUEVtTThaY003bFctUQ?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
+      <pubDate>Sat, 24 Oct 2026 06:38:46 +0000</pubDate>
+      <description>德国警方称：Suspect arrested as fire engulfs Nazi guest house &apos;&apos;Eagle&apos;...，适合作为今日 AI/科技情报流里的重点线索。
+
+Suspect arrested as fire engulfs Nazi guest house &apos;&apos;Eagle&apos;&apos;s Nest&apos;&apos;, German police say
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>保障我们的前沿模型训练环境安全</title>
+      <link>https://openai.com/index/securing-our-frontier-model-training-environment</link>
+      <guid isPermaLink="true">https://openai.com/index/securing-our-frontier-model-training-environment</guid>
+      <pubDate>Sat, 24 Oct 2026 06:38:45 +0000</pubDate>
+      <description>保障我们的前沿模型训练环境安全：Securing our frontier model training environment，适合跟进 AI 风险、治理和可信边界。
+
+Securing our frontier model training environment
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+      <category>安全对齐</category>
     </item>
     <item>
       <title>美国中期选举中人工智能竞选广告的兴起</title>
@@ -569,81 +580,65 @@ The rise of AI election ads in US midterms campaign
       <category>Buzzing</category>
     </item>
     <item>
-      <title>Show HN: 我把Photoshop的控制权交给了克劳德</title>
-      <link>https://github.com/kathan3009/photoshop-mcp</link>
-      <guid isPermaLink="true">https://github.com/kathan3009/photoshop-mcp</guid>
-      <pubDate>Fri, 23 Oct 2026 21:42:53 +0000</pubDate>
-      <description>Show HN：I gave Claude control of Photoshop，适合优先评估模型能力、价格和工具选型变化。
+      <title>深入解读 Claude Duet 如何处理安全、隐私与防护:https://t.co/li45PvRyyM</title>
+      <link>https://x.com/claudeai/status/2113736176737845353</link>
+      <guid isPermaLink="true">https://x.com/claudeai/status/2113736176737845353</guid>
+      <pubDate>Fri, 23 Oct 2026 20:55:50 +0000</pubDate>
+      <description>Claude：https://t.co/li45PvRyyM，适合优先评估模型能力、价格和工具选型变化。
 
-I gave Claude control of Photoshop
+信号等级 C · 评分 46.5</description>
+      <category>Follow Builders</category>
+      <category>模型发布</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>OpenAI正筹备新一轮300亿美元融资，估值达1.25万亿美元，为即将进行的IPO做准备 - TechCrunch</title>
+      <link>https://news.google.com/rss/articles/CBMinwFBVV95cUxON0lOUndGcjRBanppZmhpM1o2blEzanc5WEpHeU5PQi1HUFYzZ3pod2pvY3JIdm5BTnI2RDYzTlg1ZGd1QkhxSGR2OTB6UEFkNElQbkkwYk1sclEtdG1pMzFYRnl6Nlo3ZUlwb1hEaFM2WlRHRmNjcE1nblA1c202RzNwLUlhVnhLZVlFc2NSakpLdUcwRTJhVS1MYVdkSVU?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
+      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMinwFBVV95cUxON0lOUndGcjRBanppZmhpM1o2blEzanc5WEpHeU5PQi1HUFYzZ3pod2pvY3JIdm5BTnI2RDYzTlg1ZGd1QkhxSGR2OTB6UEFkNElQbkkwYk1sclEtdG1pMzFYRnl6Nlo3ZUlwb1hEaFM2WlRHRmNjcE1nblA1c202RzNwLUlhVnhLZVlFc2NSakpLdUcwRTJhVS1MYVdkSVU?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
+      <pubDate>Sat, 24 Oct 2026 06:06:45 +0000</pubDate>
+      <description>OpenAI working on new 30B raise at 1.25T valuation ahead o...，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
+
+OpenAI working on new 30B raise at 1.25T valuation ahead of IPO
+
+信号等级 C · 评分 45.5</description>
+      <category>Buzzing</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Windsurf 3.11.216</title>
+      <link>https://docs.devin.ai/desktop/changelog</link>
+      <guid isPermaLink="true">https://docs.devin.ai/desktop/changelog</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Windsurf 3.11.216：Fixed Members whose org role has no Devin Cloud session pe...，适合作为今日 AI/科技情报流里的重点线索。
+
+Fixed Members whose org role has no Devin Cloud session permissions can see, open and start Devin Local sessions again. On Windows, devin is available in a new terminal (PowerShell, Command Prompt,...
+
+信号等级 C · 评分 45.2</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>印度政府网站仍在提供已被撤销的eMudhra证书</title>
+      <link>https://captnemo.in/blog/2026/10/23/emsign-revoked-gov-in</link>
+      <guid isPermaLink="true">https://captnemo.in/blog/2026/10/23/emsign-revoked-gov-in</guid>
+      <pubDate>Sat, 24 Oct 2026 04:05:02 +0000</pubDate>
+      <description>印度政府网站仍在提供已被撤销的eMudh...：印度政府网站仍在提供已被撤销的eMudhra证书，适合观察推理部署成本和落地门槛变化。
+
+信号等级 C · 评分 42.8</description>
+      <category>Zeli</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>Show HN: Inference Cooperative，由用户治理的人工智能</title>
+      <link>https://inference.coop</link>
+      <guid isPermaLink="true">https://inference.coop</guid>
+      <pubDate>Sat, 24 Oct 2026 03:45:45 +0000</pubDate>
+      <description>Show HN：Inference Cooperative, user-governed AI，适合观察推理部署成本和落地门槛变化。
+
+Inference Cooperative, user-governed AI
 
 信号等级 C · 评分 42.8</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>926 步、两次前额叶切除术和零次轻推：在 Gemini、Claude 和 GPT-OSS 上对“承诺机器”进行飞行测试</title>
-      <link>https://dev.to/gde/926-steps-two-lobotomies-and-zero-nudges-flight-testing-the-commitment-machine-across-gemini-55ca</link>
-      <guid isPermaLink="true">https://dev.to/gde/926-steps-two-lobotomies-and-zero-nudges-flight-testing-the-commitment-machine-across-gemini-55ca</guid>
-      <pubDate>Fri, 23 Oct 2026 20:55:04 +0000</pubDate>
-      <description>Gemini、Claude：926 Steps, Two Lobotomies, and Zero Nudges: Flight-Testing...，适合优先评估模型能力、价格和工具选型变化。
-
-926 Steps, Two Lobotomies, and Zero Nudges: Flight-Testing the Commitment Machine Across Gemini, Claude, and GPT-OSS
-
-信号等级 C · 评分 42.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Tell HN: Claude CLI 无法再退出，即使按下 CTRL-C 也不行</title>
-      <link>https://news.ycombinator.com/item?id=50214693</link>
-      <guid isPermaLink="true">https://news.ycombinator.com/item?id=50214693</guid>
-      <pubDate>Fri, 23 Oct 2026 20:22:46 +0000</pubDate>
-      <description>Claude CLI doesn&apos;&apos;t exit anymore, not even with CTRL-C，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-Claude CLI doesn&apos;&apos;t exit anymore, not even with CTRL-C
-
-信号等级 C · 评分 42.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>开发者机会雷达第22期：Basis 5万美元奖学金、Perplexity AI 研究奖学金以及巴塞罗那足球俱乐部数据分析黑客马拉松</title>
-      <link>https://dev.to/devengers/dev-opportunity-radar-22-50k-basis-fellowship-perplexity-ai-research-fellowship-and-fc-4806</link>
-      <guid isPermaLink="true">https://dev.to/devengers/dev-opportunity-radar-22-50k-basis-fellowship-perplexity-ai-research-fellowship-and-fc-4806</guid>
-      <pubDate>Fri, 23 Oct 2026 20:06:55 +0000</pubDate>
-      <description>Perplexity：Dev Opportunity Radar #22: 50K Basis Fellowship, Perplexit...，适合判断技术路线和后续产品化可能性。
-
-Dev Opportunity Radar #22: 50K Basis Fellowship, Perplexity AI Research Fellowship, and FC Barcelona Analytics Hackathon
-
-信号等级 C · 评分 42.8</description>
-      <category>Buzzing</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>DeepSeek 又出王炸，用 DeepInfer 搭建自己的服务是不是很容易？</title>
-      <link>https://juejin.cn/post/7698799059633979446</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7698799059633979446</guid>
-      <pubDate>Fri, 23 Oct 2026 18:07:43 +0000</pubDate>
-      <description>DeepSeek 又出王炸，用 DeepInfer 搭建自己的服务是不是很容易？，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 42.8</description>
-      <category>NewsNow</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Moonshot 推出自其“DeepSeek时刻”以来的首次 AI 升级</title>
-      <link>https://www.bloomberg.com/news/articles/2026-10-23/moonshot-debuts-first-ai-upgrade-since-its-own-deepseek-moment</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-10-23/moonshot-debuts-first-ai-upgrade-since-its-own-deepseek-moment</guid>
-      <pubDate>Fri, 23 Oct 2026 17:41:07 +0000</pubDate>
-      <description>DeepSeek时刻：Moonshot Debuts First AI Upgrade Since Its Own DeepSeek Mo...，适合优先评估模型能力、价格和工具选型变化。
-
-Moonshot Debuts First AI Upgrade Since Its Own DeepSeek Moment
-
-信号等级 C · 评分 42.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
+      <category>部署推理</category>
     </item>
   </channel>
 </rss>
