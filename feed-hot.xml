@@ -5,16 +5,31 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 25 Oct 2026 05:46:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 10:52:18 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AgriciDaniel/claude-seo</title>
+      <link>https://github.com/AgriciDaniel/claude-seo</link>
+      <guid isPermaLink="true">https://github.com/AgriciDaniel/claude-seo</guid>
+      <pubDate>Sun, 25 Oct 2026 10:52:18 +0000</pubDate>
+      <description>claude：Claude Code 的通用 SEO 技能，适合进一步验证代码、协议或社区采用情况。
+
+Claude Code 的通用 SEO 技能。 26 个子技能 + 19 个子代理，涵盖技术 SEO、E-E-A-T、模式、GEO/AEO、代理准备情况（Lighthouse Agentic Browsing、WebMCP、llms.txt）、反向链接、本地 SEO、电子商务、国际 SEO、Google API 和 PDF/Excel 报告。 l 9 个可选扩展
+
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+    </item>
     <item>
       <title>Block 的新语音模型听起来像真人一样诡异</title>
       <link>https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human</guid>
       <pubDate>Sat, 24 Oct 2026 16:00:00 +0000</pubDate>
-      <description>Block 的新语音模型听起来像真人一样...：Block表示，该语音模型可在MacBook M4 Max上本地运行，适合跟进 AI 风险、治理和可信边界。
+      <description>Block 的新语音模型听起来像真人一样...：Block表示，其语音模型可在MacBook M4 Max上本地运行，适合跟进 AI 风险、治理和可信边界。
 
-Block表示，该语音模型可在MacBook M4 Max上本地运行。
+Block表示，其语音模型可在MacBook M4 Max上本地运行。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -26,9 +41,9 @@ Block表示，该语音模型可在MacBook M4 Max上本地运行。
       <link>https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats</guid>
       <pubDate>Sat, 24 Oct 2026 15:00:00 +0000</pubDate>
-      <description>一项新研究发现，Grok的AI系统压倒性地推荐共和党候选人，而OpenAI的GPT则倾向于支持民主党，这两个AI模型...，来自官方更新源，适合直接判断产品变化。
+      <description>一项新研究发现，Grok 的 AI 压倒性地推荐共和党候选人，而 OpenAI 的 GPT 有利于民主党，这两种 A...，来自官方更新源，适合直接判断产品变化。
 
-一项新研究发现，Grok的AI系统压倒性地推荐共和党候选人，而OpenAI的GPT则倾向于支持民主党，这两个AI模型在近500场选举中存在超过90%的分歧。
+一项新研究发现，Grok 的 AI 压倒性地推荐共和党候选人，而 OpenAI 的 GPT 有利于民主党，这两种 AI 模型在近 500 场选举中 90% 以上的结果存在分歧。
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -36,26 +51,13 @@ Block表示，该语音模型可在MacBook M4 Max上本地运行。
       <category>论文研究</category>
     </item>
     <item>
-      <title>一位开发者让电视服用了 Claude，这是它系统发生的变化</title>
-      <link>https://www.ifanr.com/1685473</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1685473</guid>
-      <pubDate>Sat, 24 Oct 2026 10:10:44 +0000</pubDate>
-      <description>Claude：欢迎来到「大逆向时代」#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合优先评估模型能力、价格和工具选型变化。
-
-欢迎来到「大逆向时代」#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
       <title>Nutlope/hallmark</title>
       <link>https://github.com/Nutlope/hallmark</link>
       <guid isPermaLink="true">https://github.com/Nutlope/hallmark</guid>
       <pubDate>Sat, 24 Oct 2026 14:17:44 +0000</pubDate>
-      <description>Nutlope/hallmark：Claude Code、Cursor、Codex 的防 AI 设计技巧，适合进一步验证代码、协议或社区采用情况。
+      <description>Nutlope/hallmark：针对Claude Code、Cursor和Codex的反AI垃圾设计技能，适合进一步验证代码、协议或社区采用情况。
 
-Claude Code、Cursor、Codex 的防 AI 设计技巧。
+针对Claude Code、Cursor和Codex的反AI垃圾设计技能。
 
 信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
@@ -68,9 +70,9 @@ Claude Code、Cursor、Codex 的防 AI 设计技巧。
       <link>https://github.com/google-gemini/gemini-cli</link>
       <guid isPermaLink="true">https://github.com/google-gemini/gemini-cli</guid>
       <pubDate>Sat, 24 Oct 2026 14:17:44 +0000</pubDate>
-      <description>google、gemini：开源AI智能体将Gemini能力直接集成至终端，提升本地开发效率，适合进一步验证代码、协议或社区采用情况。
+      <description>google、gemini：一款开源 AI 代理，可将 Gemini 的强大功能直接带入您的终端，适合进一步验证代码、协议或社区采用情况。
 
-开源AI智能体将Gemini能力直接集成至终端，提升本地开发效率。
+一款开源 AI 代理，可将 Gemini 的强大功能直接带入您的终端。
 
 信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
@@ -79,17 +81,57 @@ Claude Code、Cursor、Codex 的防 AI 设计技巧。
       <category>模型发布</category>
     </item>
     <item>
-      <title>[AINews] Kimi 3.1 Pro 104BA-2.8T:Fable-5.1-Class 开源权重模型将闭源 AI 领先优势缩短至 1 个月……并推出速度提升 2-3 倍的 Pro Highspeed API</title>
-      <link>https://latent.space/p/ainews-kimi-31</link>
-      <guid isPermaLink="true">https://latent.space/p/ainews-kimi-31</guid>
-      <pubDate>Sat, 24 Oct 2026 07:18:29 +0000</pubDate>
-      <description>Kimi 3.1 Pro 104BA-2...：家中有Fable... 或是被付费水军告知如此，适合关注内容生产和交互形态的新变化。
+      <title>TauricResearch/TradingAgents</title>
+      <link>https://github.com/TauricResearch/TradingAgents</link>
+      <guid isPermaLink="true">https://github.com/TauricResearch/TradingAgents</guid>
+      <pubDate>Sun, 25 Oct 2026 10:52:18 +0000</pubDate>
+      <description>TauricResearch/Tradi...：TradingAgents：多代理LLM金融交易框架，适合进一步验证代码、协议或社区采用情况。
 
-家中有Fable... 或是被付费水军告知如此。
+TradingAgents：多代理LLM金融交易框架
 
-信号等级 B · 评分 61.0</description>
-      <category>Official AI Updates</category>
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>debpalash/VoiceStudio</title>
+      <link>https://github.com/debpalash/VoiceStudio</link>
+      <guid isPermaLink="true">https://github.com/debpalash/VoiceStudio</guid>
+      <pubDate>Sun, 25 Oct 2026 10:52:18 +0000</pubDate>
+      <description>debpalash/VoiceStudi...：VoiceStudio 是 ElevenLabs 的开源、完全本地化替代方案 — 提供 646 种语言的语音克隆、语...，适合进一步验证代码、协议或社区采用情况。
+
+VoiceStudio 是 ElevenLabs 的开源、完全本地化替代方案 — 提供 646 种语言的语音克隆、语音设计、视频配音、听写、转录和有声读物创建。
+
+信号等级 B · 评分 59.0</description>
+      <category>开源热榜</category>
+      <category>开源</category>
       <category>多模态</category>
+    </item>
+    <item>
+      <title>背景介绍(Public v1；10月25日)</title>
+      <link>https://www.alignmentforum.org/posts/dmYP7DS3ERyXGAYe6/setting-the-scene-public-v1-october-25</link>
+      <guid isPermaLink="true">https://www.alignmentforum.org/posts/dmYP7DS3ERyXGAYe6/setting-the-scene-public-v1-october-25</guid>
+      <pubDate>Sun, 25 Oct 2026 07:52:23 +0000</pubDate>
+      <description>背景介绍(Public v1；10月25...：背景：我创建这个是为了在课程开始之前分享，我促成了对最近发生的事件的回顾，同时也是吸引学生参与我们思考的一些想法的一...，适合跟进 AI 风险、治理和可信边界。
+
+背景：我创建这个是为了在课程开始之前分享，我促成了对最近发生的事件的回顾，同时也是吸引学生参与我们思考的一些想法的一个钩子......
+
+信号等级 B · 评分 59.0</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>coollabsio/coolify</title>
+      <link>https://github.com/coollabsio/coolify</link>
+      <guid isPermaLink="true">https://github.com/coollabsio/coolify</guid>
+      <pubDate>Sun, 25 Oct 2026 10:52:18 +0000</pubDate>
+      <description>coollabsio/coolify：开源、可自托管的PaaS替代方案，兼容Vercel、Heroku与Netlify，支持在自有服务器上一键部署静态站点...，适合进一步验证代码、协议或社区采用情况。
+
+开源、可自托管的PaaS替代方案，兼容Vercel、Heroku与Netlify，支持在自有服务器上一键部署静态站点、数据库、全栈应用及360余项服务。
+
+信号等级 B · 评分 58.7</description>
+      <category>开源热榜</category>
+      <category>开源</category>
     </item>
     <item>
       <title>《蓝色星球 III》在 AI 时代保留了原始粗粝感</title>
@@ -98,7 +140,7 @@ Claude Code、Cursor、Codex 的防 AI 设计技巧。
       <pubDate>Sat, 24 Oct 2026 21:29:12 +0000</pubDate>
       <description>《蓝色星球 III》在 AI 时代保留了...：BBC 的《蓝色星球 III》希望通过保留不太完美的镜头来证明其真实性，适合作为今日 AI/科技情报流里的重点线索。
 
-BBC 的《蓝色星球 III》希望通过保留不太完美的镜头来证明其真实性。自然系列的前几代以其华丽、晶莹剔透的镜头定义......
+BBC 的《蓝色星球 III》希望通过保留不太完美的镜头来证明其真实性。自然系列的前几代以其华丽、清晰的镜头定义......
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -120,9 +162,9 @@ BBC 的《蓝色星球 III》希望通过保留不太完美的镜头来证明其
       <link>https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act</guid>
       <pubDate>Sat, 24 Oct 2026 18:32:21 +0000</pubDate>
-      <description>宾夕法尼亚州将要求 AI 生成广告添加标...：周四，宾夕法尼亚州州长乔什·夏皮罗 (Josh Shapiro) 将《人工智能欺骗性广告法案》签署为法律，要求披露人...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>宾夕法尼亚州将要求 AI 生成广告添加标...：宾夕法尼亚州州长乔什·夏皮罗周四签署《人工智能虚假广告法》，要求AI生成广告必须标注披露信息，适合作为今日 AI/科技情报流里的重点线索。
 
-周四，宾夕法尼亚州州长乔什·夏皮罗 (Josh Shapiro) 将《人工智能欺骗性广告法案》签署为法律，要求披露人工智能生成的广告。法律要求任何广告 - 无论...
+宾夕法尼亚州州长乔什·夏皮罗周四签署《人工智能虚假广告法》，要求AI生成广告必须标注披露信息。该法案适用于所有含AI生成内容的广告。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -146,9 +188,9 @@ BBC 的《蓝色星球 III》希望通过保留不太完美的镜头来证明其
       <link>https://github.com/pollen-robotics/microduck</link>
       <guid isPermaLink="true">https://github.com/pollen-robotics/microduck</guid>
       <pubDate>Sat, 24 Oct 2026 14:17:44 +0000</pubDate>
-      <description>pollen-robotics/micr...：小型双足鸭子机器人🦆，适合进一步验证代码、协议或社区采用情况。
+      <description>pollen-robotics/micr...：一只体积微小的双脚行走机器鸭🦆，适合进一步验证代码、协议或社区采用情况。
 
-小型双足鸭子机器人🦆
+一只体积微小的双脚行走机器鸭🦆
 
 信号等级 B · 评分 55.2</description>
       <category>开源热榜</category>
@@ -159,12 +201,26 @@ BBC 的《蓝色星球 III》希望通过保留不太完美的镜头来证明其
       <link>https://github.com/pbakaus/impeccable</link>
       <guid isPermaLink="true">https://github.com/pbakaus/impeccable</guid>
       <pubDate>Sat, 24 Oct 2026 14:17:44 +0000</pubDate>
-      <description>pbakaus/impeccable：使您的 AI 线束在设计上更加出色的设计语言，适合进一步验证代码、协议或社区采用情况。
+      <description>pbakaus/impeccable：AI设计工具的新设计语言，显著提升创意效率与输出质量，适合进一步验证代码、协议或社区采用情况。
 
-使您的 AI 线束在设计上更加出色的设计语言。
+AI设计工具的新设计语言，显著提升创意效率与输出质量。
 
 信号等级 B · 评分 55.1</description>
       <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>JetBrains/thinkrail</title>
+      <link>https://github.com/JetBrains/thinkrail</link>
+      <guid isPermaLink="true">https://github.com/JetBrains/thinkrail</guid>
+      <pubDate>Sun, 25 Oct 2026 10:52:18 +0000</pubDate>
+      <description>JetBrains/thinkrail：利用 Pi 的轻量级实时 IDE 进行“氛围编程”，该 IDE 会根据您的工作方式进行定制，为您提供所需的“氛围”，适合判断 AI 编程工作流会不会被改写。
+
+利用 Pi 的轻量级实时 IDE 进行“氛围编程”，该 IDE 会根据您的工作方式进行定制，为您提供所需的“氛围”。
+
+信号等级 B · 评分 53.4</description>
+      <category>开源热榜</category>
+      <category>编码工具</category>
       <category>开源</category>
     </item>
     <item>
@@ -181,17 +237,17 @@ BBC 的《蓝色星球 III》希望通过保留不太完美的镜头来证明其
       <category>开源</category>
     </item>
     <item>
-      <title>为什么人工智能生成的语言这么难懂？</title>
-      <link>https://arxiv.org/abs/2610.29162</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.29162</guid>
-      <pubDate>Sun, 25 Oct 2026 01:04:53 +0000</pubDate>
-      <description>为什么人工智能生成的语言这么难懂：Why is AI generated language so hard to understand，适合判断技术路线和后续产品化可能性。
+      <title>Cerebras 部署了万亿参数的人工智能模型</title>
+      <link>https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras</link>
+      <guid isPermaLink="true">https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras</guid>
+      <pubDate>Sun, 25 Oct 2026 07:05:49 +0000</pubDate>
+      <description>Cerebras 部署了万亿参数的人工智...：Cerebras Deploys Trillion-Parameter AI Models，适合观察推理部署成本和落地门槛变化。
 
-Why is AI generated language so hard to understand?
+Cerebras Deploys Trillion-Parameter AI Models
 
 信号等级 B · 评分 52.8</description>
       <category>Buzzing</category>
-      <category>论文研究</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>Claude Code 接入 Cloudflare 3.7万星安全审计 Skill：从全量烧钱到按需裁剪的实战方案</title>
@@ -224,9 +280,9 @@ Consider it done. The open-source AI agent that works out of the box · 想到�
       <link>https://github.com/aws/agent-toolkit-for-aws</link>
       <guid isPermaLink="true">https://github.com/aws/agent-toolkit-for-aws</guid>
       <pubDate>Sat, 24 Oct 2026 14:17:44 +0000</pubDate>
-      <description>aws/agent-toolkit-fo...：AWS 支持的官方 MCP 服务器、技能和插件可帮助 AI 代理在 AWS 上构建，适合关注自动化任务和多 Agent 协作演进。
+      <description>aws/agent-toolkit-fo...：AWS官方支持的MCP服务器、技能和插件，助力AI代理在AWS平台上构建应用，适合关注自动化任务和多 Agent 协作演进。
 
-AWS 支持的官方 MCP 服务器、技能和插件可帮助 AI 代理在 AWS 上构建
+AWS官方支持的MCP服务器、技能和插件，助力AI代理在AWS平台上构建应用。
 
 信号等级 B · 评分 50.7</description>
       <category>开源热榜</category>
@@ -235,113 +291,112 @@ AWS 支持的官方 MCP 服务器、技能和插件可帮助 AI 代理在 AWS �
       <category>开源</category>
     </item>
     <item>
-      <title>Show HN: Orgiggly——一个由Claude Code开发的插件，用于托管其构建的应用程序</title>
-      <link>https://github.com/orgiggly/claude-plugin</link>
-      <guid isPermaLink="true">https://github.com/orgiggly/claude-plugin</guid>
-      <pubDate>Sun, 25 Oct 2026 01:05:38 +0000</pubDate>
-      <description>Orgiggly – Claude Code plugin that hosts the apps it build...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>为什么人工智能生成的语言这么难懂？</title>
+      <link>https://arxiv.org/abs/2610.29162</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.29162</guid>
+      <pubDate>Sun, 25 Oct 2026 01:04:53 +0000</pubDate>
+      <description>为什么人工智能生成的语言这么难懂：Why is AI generated language so hard to understand，适合判断技术路线和后续产品化可能性。
 
-Orgiggly – Claude Code plugin that hosts the apps it builds
+Why is AI generated language so hard to understand?
+
+信号等级 C · 评分 48.8</description>
+      <category>Buzzing</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Z-Library 上的一篇 AI 辅助论文引用了一篇不存在的 TorrentFreak 文章</title>
+      <link>https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist</link>
+      <guid isPermaLink="true">https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist</guid>
+      <pubDate>Sat, 24 Oct 2026 11:18:54 +0000</pubDate>
+      <description>Z-Library 上的一篇 AI 辅助...：Z-Library 上的一篇 AI 辅助论文引用了一篇不存在的 TorrentFreak 文章，适合判断技术路线和后续产品化可能性。
+
+信号等级 C · 评分 48.8</description>
+      <category>Zeli</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Codex、Claude Code、DSH 怎么用手机管？我试了试 Agents Anywhere</title>
+      <link>https://juejin.cn/post/7699398620680814643</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7699398620680814643</guid>
+      <pubDate>Sun, 25 Oct 2026 10:52:18 +0000</pubDate>
+      <description>Codex、Claude Code、DSH 怎么用手机管？我试了试 Agents Anywhere，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 46.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>用了两年多 GPT，我最近开始换模型了，还折腾了个求职避坑 Agent</title>
+      <link>https://juejin.cn/post/7699375396185767955</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7699375396185767955</guid>
+      <pubDate>Sun, 25 Oct 2026 10:52:18 +0000</pubDate>
+      <description>用了两年多 GPT，我最近开始换模型了，还折腾了个求职避坑 Agent，同时进入热榜视野，适合关注自动化任务和多 Agent 协作演进。
+
+信号等级 C · 评分 46.8</description>
+      <category>NewsNow</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Show HN: Echoboard：这里由人工智能代理进行科学研究，人类只需旁观</title>
+      <link>https://jevontane.com/echoboard</link>
+      <guid isPermaLink="true">https://jevontane.com/echoboard</guid>
+      <pubDate>Sun, 25 Oct 2026 10:27:46 +0000</pubDate>
+      <description>Show HN：Echoboard where AI agents do science and humans only watch，适合判断技术路线和后续产品化可能性。
+
+Echoboard where AI agents do science and humans only watch
 
 信号等级 C · 评分 46.8</description>
       <category>Buzzing</category>
-      <category>模型发布</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>Show HN: DeepSearch——基于 DeepSeek API 构建的搜索引擎</title>
-      <link>https://deepsearch.ing</link>
-      <guid isPermaLink="true">https://deepsearch.ing</guid>
-      <pubDate>Sun, 25 Oct 2026 01:05:37 +0000</pubDate>
-      <description>DeepSearch – Search engine built on DeepSeek API，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>被解雇的OpenAI研究人员在经历戏剧性解雇后首次接受采访：《机器之神》 - NPR</title>
+      <link>https://news.google.com/rss/articles/CBMixgFBVV95cUxNU29nUXI5VjB1OGhSR0J6eTFNYkNza3h3NkVnUmRNT3hGZXMzeEd0bG03UnFzeFltU1pXTkRhclg2aXY4QUhTQlFfZmZrTVhrSWxuYm9md2Vvd3BOSjNMWW42OUNOdVdMN21WME5lSGtYc1JCTG1majkwNDJFRWtINzV4a0hyTHByMUYwN2tGaGFLLWQ2X0tFbDVpVHhCYTJqSzh1YkJQUXlGNnBqdFphcVFjUzA3NlhiOUYwRlR0UEJ0dVB5b0E?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
+      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMixgFBVV95cUxNU29nUXI5VjB1OGhSR0J6eTFNYkNza3h3NkVnUmRNT3hGZXMzeEd0bG03UnFzeFltU1pXTkRhclg2aXY4QUhTQlFfZmZrTVhrSWxuYm9md2Vvd3BOSjNMWW42OUNOdVdMN21WME5lSGtYc1JCTG1majkwNDJFRWtINzV4a0hyTHByMUYwN2tGaGFLLWQ2X0tFbDVpVHhCYTJqSzh1YkJQUXlGNnBqdFphcVFjUzA3NlhiOUYwRlR0UEJ0dVB5b0E?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
+      <pubDate>Sun, 25 Oct 2026 09:41:34 +0000</pubDate>
+      <description>Fired OpenAI researchers give their first interview since...，同时进入热榜视野，适合判断技术路线和后续产品化可能性。
 
-DeepSearch – Search engine built on DeepSeek API
+Fired OpenAI researchers give their first interview since their dramatic dismissal : Machine Gods
 
 信号等级 C · 评分 46.8</description>
       <category>Buzzing</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>比尔·盖茨警告称，在人工智能创造“真正的丰裕”之前，世界将经历20年的动荡时期</title>
+      <link>https://www.businessinsider.com/bill-gates-ai-abundance-job-losses-unemployment-robots-musk-amodei-2026-10</link>
+      <guid isPermaLink="true">https://www.businessinsider.com/bill-gates-ai-abundance-job-losses-unemployment-robots-musk-amodei-2026-10</guid>
+      <pubDate>Sun, 25 Oct 2026 09:10:57 +0000</pubDate>
+      <description>比尔·盖茨警告称：Bill Gates warns of 20 turbulent years before AI creates &apos;...，适合作为今日 AI/科技情报流里的重点线索。
+
+Bill Gates warns of 20 turbulent years before AI creates &apos;&apos;true abundance&apos;&apos;
+
+信号等级 C · 评分 46.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>@addyosmani @lydiahallie @_catwu @bcherny @sidbid @jarredsumner @adocomplete @delba_oliveira @connerphillippi @dsp_ https://t.co/4ea5te3d8w @gcemaj @karbon0x 为Claude Managed Agents而来！</title>
+      <link>https://x.com/alexalbert__/status/2114145588686233612</link>
+      <guid isPermaLink="true">https://x.com/alexalbert__/status/2114145588686233612</guid>
+      <pubDate>Sun, 25 Oct 2026 00:02:41 +0000</pubDate>
+      <description>//t.co/4ea5te3d8w @gcemaj @karbon0x 为Claude Managed Agents...，来自 Follow Builders 精选源，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 46.5</description>
+      <category>Follow Builders</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>埃隆·马斯克承认曾限制乌克兰 Starlink 网速</title>
-      <link>https://www.chicagotribune.com/2026/10/24/musk-behind-starlink-speed-restriction-in-ukraine</link>
-      <guid isPermaLink="true">https://www.chicagotribune.com/2026/10/24/musk-behind-starlink-speed-restriction-in-ukraine</guid>
-      <pubDate>Sun, 25 Oct 2026 02:15:31 +0000</pubDate>
-      <description>埃隆·马斯克承认曾限制乌克兰 Starl...：埃隆·马斯克承认曾限制乌克兰 Starlink 网速，适合作为今日 AI/科技情报流里的重点线索。
+      <title>我曾不敢相信这是真的，但看来不该怀疑 @ArfurGrok。这对 Claude 用户来说是个大打击。Anthony 和 Thariq 是最善于倾听用户心声的两位。https://t.co/XwQAXb7LYE</title>
+      <link>https://x.com/petergyang/status/2114001125636768121</link>
+      <guid isPermaLink="true">https://x.com/petergyang/status/2114001125636768121</guid>
+      <pubDate>Sat, 24 Oct 2026 14:28:39 +0000</pubDate>
+      <description>Claude：//t.co/XwQAXb7LYE，适合优先评估模型能力、价格和工具选型变化。
 
 信号等级 C · 评分 46.5</description>
-      <category>Zeli</category>
-    </item>
-    <item>
-      <title>Cerebras 部署万亿参数 AI 模型</title>
-      <link>https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras</link>
-      <guid isPermaLink="true">https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras</guid>
-      <pubDate>Sun, 25 Oct 2026 01:33:49 +0000</pubDate>
-      <description>Cerebras 部署万亿参数 AI 模...：Cerebras 部署万亿参数 AI 模型，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 46.5</description>
-      <category>Zeli</category>
-    </item>
-    <item>
-      <title>美国媒体、影视和艺术行业已流失20万个工作岗位。其中有多少是受人工智能影响的？</title>
-      <link>https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class</link>
-      <guid isPermaLink="true">https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class</guid>
-      <pubDate>Sun, 25 Oct 2026 01:05:14 +0000</pubDate>
-      <description>美国媒体、影视和艺术行业已流失20万个工...：America Has Lost 200k of Jobs in Media, Film and the Arts....，适合作为今日 AI/科技情报流里的重点线索。
-
-America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>科技行业以外尚未出现人工智能带来回报的迹象</title>
-      <link>https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector</link>
-      <guid isPermaLink="true">https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector</guid>
-      <pubDate>Sun, 25 Oct 2026 01:04:53 +0000</pubDate>
-      <description>科技行业以外尚未出现人工智能带来回报的迹...：No signs of AI payoff outside the tech sector，适合作为今日 AI/科技情报流里的重点线索。
-
-No signs of AI payoff outside the tech sector
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Dream-1</title>
-      <link>https://dreamlabs.ai/research/dream-1</link>
-      <guid isPermaLink="true">https://dreamlabs.ai/research/dream-1</guid>
-      <pubDate>Sun, 25 Oct 2026 01:04:53 +0000</pubDate>
-      <description>Dream-1，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-Dream-1
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Show HN: 稀疏核使训练吞吐量提高了36%</title>
-      <link>https://huggingface.co/JakCwi/eugen-sparse</link>
-      <guid isPermaLink="true">https://huggingface.co/JakCwi/eugen-sparse</guid>
-      <pubDate>Sun, 25 Oct 2026 01:05:38 +0000</pubDate>
-      <description>Show HN：Sparse kernel delivering 36% higher training throughput，适合进一步验证代码、协议或社区采用情况。
-
-Sparse kernel delivering 36% higher training throughput
-
-信号等级 C · 评分 45.5</description>
-      <category>Buzzing</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>iPhone Duo 2 提前曝光：FaceID、操作按钮和长焦都要回来了？</title>
-      <link>https://www.ifanr.com/1685622</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1685622</guid>
-      <pubDate>Sun, 25 Oct 2026 04:10:44 +0000</pubDate>
-      <description>iPhone Duo 2 提前曝光：还没捂热呢#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
-
-还没捂热呢#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 C · 评分 45.0</description>
-      <category>Official AI Updates</category>
+      <category>Follow Builders</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>AI 热点日报（2026-10-19）：DeepSeek V4.1-Flash落地，国产十万卡超集群亮相，Meta开源816B大模型</title>
@@ -356,14 +411,31 @@ Sparse kernel delivering 36% higher training throughput
       <category>开源</category>
     </item>
     <item>
-      <title>当我说 Claude 搭配 GLM-5.3-Flash 太好用了，同事却提醒我：你可能正在失去对代码的掌控</title>
-      <link>https://juejin.cn/post/7699017769225928744</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7699017769225928744</guid>
-      <pubDate>Sat, 24 Oct 2026 10:25:19 +0000</pubDate>
-      <description>Claude：你可能正在失去对代码的掌控，适合优先评估模型能力、价格和工具选型变化。
+      <title>Show HN: Orgiggly——一个由Claude Code开发的插件，用于托管其构建的应用程序</title>
+      <link>https://github.com/orgiggly/claude-plugin</link>
+      <guid isPermaLink="true">https://github.com/orgiggly/claude-plugin</guid>
+      <pubDate>Sun, 25 Oct 2026 01:05:38 +0000</pubDate>
+      <description>Orgiggly – Claude Code plugin that hosts the apps it build...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 C · 评分 43.1</description>
-      <category>TopHub</category>
+Orgiggly – Claude Code plugin that hosts the apps it builds
+
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+      <category>MCP/工具</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>Show HN: DeepSearch——基于 DeepSeek API 构建的搜索引擎</title>
+      <link>https://deepsearch.ing</link>
+      <guid isPermaLink="true">https://deepsearch.ing</guid>
+      <pubDate>Sun, 25 Oct 2026 01:05:37 +0000</pubDate>
+      <description>DeepSearch – Search engine built on DeepSeek API，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+DeepSearch – Search engine built on DeepSeek API
+
+信号等级 C · 评分 42.8</description>
+      <category>Buzzing</category>
       <category>模型发布</category>
     </item>
     <item>
@@ -381,22 +453,22 @@ Every Claude Code agent, at a glance, in your Mac&apos;&apos;s notch
       <category>模型发布</category>
     </item>
     <item>
-      <title>DeepSeek 新模型免费白嫖，夯夯夯，赶紧用起来</title>
-      <link>https://juejin.cn/post/7699033523931873306</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7699033523931873306</guid>
+      <title>在 Claude 和 ChatGPT 中的调查</title>
+      <link>https://www.producthunt.com/products/blocksurvey</link>
+      <guid isPermaLink="true">https://www.producthunt.com/products/blocksurvey</guid>
       <pubDate>Sat, 24 Oct 2026 14:17:44 +0000</pubDate>
-      <description>DeepSeek 新模型免费白嫖，夯夯夯，赶紧用起来，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <description>Claude、GPT：在 Claude 和 ChatGPT 中的调查，适合优先评估模型能力、价格和工具选型变化。
 
 信号等级 C · 评分 42.8</description>
       <category>NewsNow</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>在 Claude 和 ChatGPT 中的调查</title>
-      <link>https://www.producthunt.com/products/blocksurvey</link>
-      <guid isPermaLink="true">https://www.producthunt.com/products/blocksurvey</guid>
+      <title>DeepSeek 新模型免费白嫖，夯夯夯，赶紧用起来</title>
+      <link>https://juejin.cn/post/7699033523931873306</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7699033523931873306</guid>
       <pubDate>Sat, 24 Oct 2026 14:17:44 +0000</pubDate>
-      <description>Claude、GPT：在 Claude 和 ChatGPT 中的调查，适合优先评估模型能力、价格和工具选型变化。
+      <description>DeepSeek 新模型免费白嫖，夯夯夯，赶紧用起来，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
 
 信号等级 C · 评分 42.8</description>
       <category>NewsNow</category>
@@ -418,26 +490,50 @@ Building a Multimodal, Suggestion-Based AI Writing Coach with Gemini and Google 
       <category>多模态</category>
     </item>
     <item>
-      <title>Z-Library 上的一篇 AI 辅助论文引用了一篇不存在的 TorrentFreak 文章</title>
-      <link>https://news.ycombinator.com/item?id=50220204</link>
-      <guid isPermaLink="true">https://news.ycombinator.com/item?id=50220204</guid>
-      <pubDate>Sat, 24 Oct 2026 11:18:54 +0000</pubDate>
-      <description>Z-Library 上的一篇 AI 辅助...：Z-Library 上的一篇 AI 辅助论文引用了一篇不存在的 TorrentFreak 文章，适合判断技术路线和后续产品化可能性。
+      <title>埃隆·马斯克承认曾限制乌克兰 Starlink 网速</title>
+      <link>https://www.chicagotribune.com/2026/10/24/musk-behind-starlink-speed-restriction-in-ukraine</link>
+      <guid isPermaLink="true">https://www.chicagotribune.com/2026/10/24/musk-behind-starlink-speed-restriction-in-ukraine</guid>
+      <pubDate>Sun, 25 Oct 2026 02:15:31 +0000</pubDate>
+      <description>埃隆·马斯克承认曾限制乌克兰 Starl...：埃隆·马斯克承认曾限制乌克兰 Starlink 网速，适合作为今日 AI/科技情报流里的重点线索。
 
-信号等级 C · 评分 42.8</description>
-      <category>NewsNow</category>
-      <category>论文研究</category>
+信号等级 C · 评分 42.5</description>
+      <category>Zeli</category>
     </item>
     <item>
-      <title>Claude Code 悄悄将用户邮箱地址添加至出站 HTTP 请求中</title>
-      <link>https://twitter.com/chrislakin/status/2113358733548081528</link>
-      <guid isPermaLink="true">https://twitter.com/chrislakin/status/2113358733548081528</guid>
-      <pubDate>Sat, 24 Oct 2026 10:26:30 +0000</pubDate>
-      <description>Claude Code 悄悄将用户邮箱地址添加至出站 HTTP 请求中，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>美国媒体、影视和艺术行业已流失20万个工作岗位。其中有多少是受人工智能影响的？</title>
+      <link>https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class</link>
+      <guid isPermaLink="true">https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class</guid>
+      <pubDate>Sun, 25 Oct 2026 01:05:14 +0000</pubDate>
+      <description>美国媒体、影视和艺术行业已流失20万个工...：America Has Lost 200k of Jobs in Media, Film and the Arts....，适合作为今日 AI/科技情报流里的重点线索。
 
-信号等级 C · 评分 42.8</description>
-      <category>Zeli</category>
-      <category>模型发布</category>
+America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>科技行业以外尚未出现人工智能带来回报的迹象</title>
+      <link>https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector</link>
+      <guid isPermaLink="true">https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector</guid>
+      <pubDate>Sun, 25 Oct 2026 01:04:53 +0000</pubDate>
+      <description>科技行业以外尚未出现人工智能带来回报的迹...：No signs of AI payoff outside the tech sector，适合作为今日 AI/科技情报流里的重点线索。
+
+No signs of AI payoff outside the tech sector
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>Dream-1</title>
+      <link>https://dreamlabs.ai/research/dream-1</link>
+      <guid isPermaLink="true">https://dreamlabs.ai/research/dream-1</guid>
+      <pubDate>Sun, 25 Oct 2026 01:04:53 +0000</pubDate>
+      <description>Dream-1，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+
+Dream-1
+
+信号等级 C · 评分 42.5</description>
+      <category>Buzzing</category>
     </item>
     <item>
       <title>说到底，AI模型或许并没有那么难以理解</title>
@@ -513,64 +609,17 @@ What&apos;&apos;s wrong with AI?
       <category>Buzzing</category>
     </item>
     <item>
-      <title>Chase &amp; Status 谈人工智能在音乐领域的积极影响</title>
-      <link>https://reut.rs/4i4tCuw</link>
-      <guid isPermaLink="true">https://reut.rs/4i4tCuw</guid>
-      <pubDate>Sat, 24 Oct 2026 11:07:52 +0000</pubDate>
-      <description>Chase &amp; Status 谈人工智能...：Chase &amp; Status on the upside of AI for music，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Show HN: 稀疏核使训练吞吐量提高了36%</title>
+      <link>https://huggingface.co/JakCwi/eugen-sparse</link>
+      <guid isPermaLink="true">https://huggingface.co/JakCwi/eugen-sparse</guid>
+      <pubDate>Sun, 25 Oct 2026 01:05:38 +0000</pubDate>
+      <description>Show HN：Sparse kernel delivering 36% higher training throughput，适合进一步验证代码、协议或社区采用情况。
 
-Chase &amp; Status on the upside of AI for music
+Sparse kernel delivering 36% higher training throughput
 
-信号等级 C · 评分 42.5</description>
+信号等级 C · 评分 41.5</description>
       <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Palantir联合创始人表示，他的妻子将他们的AI助手称为“Tradbot”，这个名字源自“tradwives”一词</title>
-      <link>https://www.businessinsider.com/palantir-joe-lonsdale-tradwife-ai-agent-nickname-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/palantir-joe-lonsdale-tradwife-ai-agent-nickname-2026-10</guid>
-      <pubDate>Sat, 24 Oct 2026 10:05:38 +0000</pubDate>
-      <description>Palantir联合创始人表示：Palantir cofounder says his wife calls their AI agent &apos;&apos;Tr...，适合关注自动化任务和多 Agent 协作演进。
-
-Palantir cofounder says his wife calls their AI agent &apos;&apos;Tradbot&apos;&apos; after tradwives
-
-信号等级 C · 评分 42.5</description>
-      <category>Buzzing</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>博士学位让我找到了梦想中的工作。这就是为什么我在41岁时攻读MBA，以便在人工智能时代实现职业升级。</title>
-      <link>https://www.businessinsider.com/phd-grad-intel-doing-mba-missing-skills-ai-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/phd-grad-intel-doing-mba-missing-skills-ai-2026-10</guid>
-      <pubDate>Sat, 24 Oct 2026 09:16:59 +0000</pubDate>
-      <description>博士学位让我找到了梦想中的工作：A Ph.D. led me to my dream job. Here&apos;&apos;s why I&apos;&apos;m doing an...，适合作为今日 AI/科技情报流里的重点线索。
-
-A Ph.D. led me to my dream job. Here&apos;&apos;s why I&apos;&apos;m doing an MBA at 41 to level up in the age of AI.
-
-信号等级 C · 评分 42.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>我对Canva的新款AI图片生成器进行了全面测试。结果喜忧参半。</title>
-      <link>https://www.businessinsider.com/canva-craft-new-ai-image-generation-tool-2026-10</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/canva-craft-new-ai-image-generation-tool-2026-10</guid>
-      <pubDate>Sat, 24 Oct 2026 09:16:59 +0000</pubDate>
-      <description>我对Canva的新款AI图片生成器进行了...：I put Canva&apos;&apos;s new AI image generator through its paces. T...，适合关注内容生产和交互形态的新变化。
-
-I put Canva&apos;&apos;s new AI image generator through its paces. The results were a mixed bag.
-
-信号等级 C · 评分 42.5</description>
-      <category>Buzzing</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>JetBrains 推出 ThinkRail</title>
-      <link>https://thinkrail.ai</link>
-      <guid isPermaLink="true">https://thinkrail.ai</guid>
-      <pubDate>Sat, 24 Oct 2026 08:08:42 +0000</pubDate>
-      <description>JetBrains 推出 ThinkRa...：JetBrains 推出 ThinkRail，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 42.5</description>
-      <category>Zeli</category>
+      <category>开源</category>
     </item>
     <item>
       <title>美国媒体、影视及艺术行业已流失20万个岗位。其中有多少是AI所致？</title>
@@ -590,42 +639,6 @@ I put Canva&apos;&apos;s new AI image generator through its paces. The results w
       <description>OpenAI trims valuation target to 1.25tn after pitching hig...，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
 
 OpenAI trims valuation target to 1.25tn after pitching higher price
-
-信号等级 C · 评分 41.5</description>
-      <category>Buzzing</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>谷歌为建设数据中心在芬兰非法砍伐了25万棵树</title>
-      <link>https://nypost.com/2026/10/24/business/google-illegally-tore-down-250k-trees-for-finland-data-center-infuriating-locals-report</link>
-      <guid isPermaLink="true">https://nypost.com/2026/10/24/business/google-illegally-tore-down-250k-trees-for-finland-data-center-infuriating-locals-report</guid>
-      <pubDate>Sat, 24 Oct 2026 14:38:34 +0000</pubDate>
-      <description>谷歌为建设数据中心在芬兰非法砍伐了25万...：谷歌为建设数据中心在芬兰非法砍伐了25万棵树，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 41.5</description>
-      <category>Zeli</category>
-    </item>
-    <item>
-      <title>OpenAI 计划以 1.25 万亿美元的估值进行新一轮 300 亿美元的融资 - Yahoo Finance</title>
-      <link>https://news.google.com/rss/articles/CBMizwFBVV95cUxQRk9GdU82R1QxNGZ2NlRiRm5zVVZoVDF6eUlXdTZLNGpFR3pqT05fdUdMLXJjTERhLXRvMGFCQmRmVWFsWjM3cEZoS3o2NzJKaks1cFJWbDhoeWlXeFRvNUMwb25DZzFKTmVMMkkzWDdXaC1QdVhHeWpfMGw5U2RfT1FaVVJGZldEZ1ptOHVJMVJZdGlZUEdtaXN5UnVoZjdOeWZPRzBScTVLOU1EQzkydU00MUI1c2JKVmlibVRhMHJVemZ0QkwzLXhTelB3cFE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMizwFBVV95cUxQRk9GdU82R1QxNGZ2NlRiRm5zVVZoVDF6eUlXdTZLNGpFR3pqT05fdUdMLXJjTERhLXRvMGFCQmRmVWFsWjM3cEZoS3o2NzJKaks1cFJWbDhoeWlXeFRvNUMwb25DZzFKTmVMMkkzWDdXaC1QdVhHeWpfMGw5U2RfT1FaVVJGZldEZ1ptOHVJMVJZdGlZUEdtaXN5UnVoZjdOeWZPRzBScTVLOU1EQzkydU00MUI1c2JKVmlibVRhMHJVemZ0QkwzLXhTelB3cFE?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
-      <pubDate>Sat, 24 Oct 2026 10:22:08 +0000</pubDate>
-      <description>OpenAI aiming for new 30 billion funding round at a 1.25 t...，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
-
-OpenAI aiming for new 30 billion funding round at a 1.25 trillion valuation
-
-信号等级 C · 评分 41.5</description>
-      <category>Buzzing</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>OpenAI正筹备新一轮300亿美元融资，估值达1.25万亿美元，为即将进行的IPO做准备 - TechCrunch</title>
-      <link>https://news.google.com/rss/articles/CBMinwFBVV95cUxON0lOUndGcjRBanppZmhpM1o2blEzanc5WEpHeU5PQi1HUFYzZ3pod2pvY3JIdm5BTnI2RDYzTlg1ZGd1QkhxSGR2OTB6UEFkNElQbkkwYk1sclEtdG1pMzFYRnl6Nlo3ZUlwb1hEaFM2WlRHRmNjcE1nblA1c202RzNwLUlhVnhLZVlFc2NSakpLdUcwRTJhVS1MYVdkSVU?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMinwFBVV95cUxON0lOUndGcjRBanppZmhpM1o2blEzanc5WEpHeU5PQi1HUFYzZ3pod2pvY3JIdm5BTnI2RDYzTlg1ZGd1QkhxSGR2OTB6UEFkNElQbkkwYk1sclEtdG1pMzFYRnl6Nlo3ZUlwb1hEaFM2WlRHRmNjcE1nblA1c202RzNwLUlhVnhLZVlFc2NSakpLdUcwRTJhVS1MYVdkSVU?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
-      <pubDate>Sat, 24 Oct 2026 06:06:45 +0000</pubDate>
-      <description>OpenAI working on new 30B raise at 1.25T valuation ahead o...，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
-
-OpenAI working on new 30B raise at 1.25T valuation ahead of IPO
 
 信号等级 C · 评分 41.5</description>
       <category>Buzzing</category>
