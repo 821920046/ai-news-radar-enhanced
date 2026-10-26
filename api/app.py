@@ -5,7 +5,9 @@
 - CORS 收紧：默认不再 allow_credentials；允许来源可通过环境变量 ALLOW_ORIGINS 配置。
 - 修复弃用的 datetime.utcnow() -> datetime.now(timezone.utc)。
 - /health 返回数据新鲜度（age_hours / stale）与源成功率。
-- /trends 优先读取趋势引擎产出的 data/trends.json，回退到按 tag 计数，并标注 source。
+- /trends 优先读取 latest-24h.json 的 hot_events（事件级热度），
+  其次才是「新鲜」的 data/trends.json，最后回退到按 tag 计数，并标注 source
+  与 data_age_hours / stale。**存在 ≠ 新鲜**：任何一份数据源都要过新鲜度闸门。
 - 读取失败有兜底，不会因坏文件 500。
 
 部署:
@@ -224,13 +226,56 @@ def daily_report_markdown():
 
 @app.get("/trends")
 def trends():
-    """返回趋势话题。优先趋势引擎产出，回退到按 tag 计数。"""
+    """返回趋势话题。
+
+    优先级（**新鲜度优先于「有没有文件」**）：
+
+    1. ``latest-24h.json`` 里的 ``hot_events`` —— 事件级热度，与页面同源；
+    2. ``data/trends.json`` —— 仅当它自身足够新鲜时才用；
+    3. 按 tag 计数兜底。
+
+    第 2 步的「新鲜度闸门」不是可选项：``trends.json`` 早已没有代码在写，
+    文件冻结在 2026-08-24，却因为「存在且非空」一直排在最前面被返回 ——
+    于是这个接口对外提供了两个月的旧数据。**存在 ≠ 新鲜**，这里必须显式
+    校验 ``generated_at``，否则「读到了文件」就会被当成「读到了当前趋势」。
+    """
+    payload = _load_json(DATA_DIR / "latest-24h.json")
+    payload_age = _hours_since(payload.get("generated_at")) if payload else None
+
+    # ── 1) 事件级热度（首选）───────────────────────────────────────────
+    hot_events = payload.get("hot_events") if payload else None
+    if isinstance(hot_events, list) and hot_events:
+        return {
+            "generated_at": payload.get("generated_at"),
+            # 数据年龄必须随响应一起给出：调用方要能自己判断这份趋势是不是
+            # 已经放了很久。只给 generated_at 而不给 age，等于把「换算」
+            # 和「判断」都推给消费方，多数消费方不会做。
+            "data_age_hours": round(payload_age, 2) if payload_age is not None else None,
+            "stale": payload_age is None or payload_age > STALE_HOURS,
+            "source": "hot_events",
+            "heat_rule": payload.get("heat_rule"),
+            "behind_sources": payload.get("heat_behind_sources") or [],
+            "trend_count": len(hot_events),
+            "trends": hot_events,
+        }
+
+    # ── 2) 旧版趋势引擎产物：只在新鲜时采信 ────────────────────────────
     engine_out = _load_json(DATA_DIR / "trends.json")
     if engine_out.get("trends"):
-        engine_out.setdefault("source", "trend_engine")
-        return engine_out
+        age = _hours_since(engine_out.get("generated_at"))
+        if age is not None and age <= STALE_HOURS:
+            engine_out.setdefault("source", "trend_engine")
+            engine_out["data_age_hours"] = round(age, 2)
+            engine_out["stale"] = False
+            return engine_out
+        logger.warning(
+            "/trends: 忽略 data/trends.json —— 已 %.1f 小时未更新（阈值 %.0f h），"
+            "该文件当前没有生产者，属遗留产物",
+            age if age is not None else float("nan"),
+            STALE_HOURS,
+        )
 
-    payload = _load_json(DATA_DIR / "latest-24h.json")
+    # ── 3) 按 tag 计数兜底 ────────────────────────────────────────────
     if not payload:
         raise HTTPException(status_code=503, detail="暂无数据")
 
@@ -257,6 +302,8 @@ def trends():
     )
     return {
         "generated_at": payload.get("generated_at"),
+        "data_age_hours": round(payload_age, 2) if payload_age is not None else None,
+        "stale": payload_age is None or payload_age > STALE_HOURS,
         "total_items": len(items),
         "trends": trend_list,
         "trend_count": len(trend_list),

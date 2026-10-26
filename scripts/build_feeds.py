@@ -261,11 +261,22 @@ def build_llms_txt(
         lines += ["当前热度榜（前 10）：", ""]
         for idx, ev in enumerate(hot_events[:10], 1):
             topic = ev.get("topic") or "未命名话题"
+            # 有代表条目时优先展示它。`topic` 是聚类生成的短语（「开源」
+            # 「模型发布」），单独看几乎不携带信息 —— 对 LLM 尤其如此：
+            # 它需要的是「哪件事」+「去哪读原文」，而不是一个分类词。
+            title = str(ev.get("title_zh") or ev.get("title") or "").strip()
+            url = str(ev.get("url") or "").strip()
             heat = ev.get("heat")
             participants = ev.get("heat_participants")
             trend = ev.get("heat_trend")
+            if title and title != topic:
+                label = f"{title}（{topic}）"
+            else:
+                label = topic
+            if url:
+                label = f"[{label}]({url})"
             lines.append(
-                f"{idx}. {topic} — 热度 {heat}，{participants} 个独立来源，趋势 {trend}"
+                f"{idx}. {label} — 热度 {heat}，{participants} 个独立来源，趋势 {trend}"
             )
         lines.append("")
 

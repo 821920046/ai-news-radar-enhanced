@@ -253,47 +253,117 @@ function renderStats(payload) {
   // 白翻一倍流量）；现在 slim payload 只带 items_ai，这里同步改读它。
   const allItems = payload.items_ai || payload.items || [];
     
-  // 24小时内热门新闻 (按 signal_score / hotness 降序)
-  const hottestNews = [...allItems]
-    .sort((a, b) => {
-      const ha = (a.hotness != null ? a.hotness : (a.stars != null ? a.stars : a.signal_score)) || 0;
-      const hb = (b.hotness != null ? b.hotness : (b.stars != null ? b.stars : b.signal_score)) || 0;
-      return hb - ha;
-    })
-    .slice(0, 15);
+  // ── 「当前热点」到底该显示什么 ────────────────────────────────────
+  // 第一性问题：**热点 ≠ 高分单篇**。
+  //
+  // 热点的语义是「多个独立信源在同一时间段里共同报道的同一件事」，这也正是
+  // 趋势引擎 heat-v1 的定义（48h 窗口 / 24h 半衰期 / 同源只算一次 / 至少 2
+  // 个独立来源）。payload.hot_events 就是这份结果。
+  //
+  // 旧实现却是「把 items_ai 按分数排序取前 15 条」—— 那不是热点。后果很具体：
+  // arXiv 每天一次性灌入近 200 篇 cs.AI 论文，分数集中在同两个值（60.2 /
+  // 66.5），published_at 又全是同一个合成时间戳；于是前 15 名里 13 席长期被
+  // 这些标题高度同质化的论文占满，看起来就像「热点一直没变」。
+  //
+  // 所以：优先渲染 hot_events；只有它缺失/为空时才回退到高分单篇，并在回退
+  // 路径上加来源多样性约束，避免单源批量灌入再次挤满榜单。
+  const HOT_ROW_LIMIT = 15;
+  //: 回退路径里同一信源最多占几席（hot_events 路径不需要，它天然多信源）
+  const PER_SITE_CAP = 3;
 
-  if (!hottestNews.length) return;
+  function hotEventRows(events) {
+    const rows = [];
+    for (const ev of events) {
+      if (!ev || typeof ev !== "object") continue;
+      const title = ev.title_zh || ev.title || ev.topic || "";
+      if (!title) continue;
+      const participants = Number(ev.heat_participants) || 0;
+      const trend = ev.heat_trend || "unknown";
+      // 「unknown」是「证据不完整、方向不可判定」，不是「下降」——
+      // 这里不给它任何箭头，绝不用视觉符号把「没抓到」说成「变冷了」。
+      const arrow =
+        trend === "up" ? "▲" : trend === "down" ? "▼" : trend === "new" ? "新" : "";
+      const heat = Number(ev.heat);
+      const parts = [];
+      if (participants > 0) parts.push(`${participants}源`);
+      if (Number.isFinite(heat) && heat > 0) parts.push(`热${heat}`);
+      if (arrow) parts.push(arrow);
+      rows.push({ title, url: ev.url || "", meta: parts.join(" · ") });
+    }
+    return rows;
+  }
+
+  function articleRows(items, limit) {
+    // 字段名必须与生产端一致：
+    //   hotness_score（core/pipeline 写入），不是 hotness
+    //   meta.stars_today / meta.total_stars（GitHub 热榜），不是 stars
+    // 写错的后果不是报错，而是两个分支永远不成立、排序恒等退化成
+    // signal_score，GitHub 热榜的 star 数被静默忽略。
+    const scoreOf = (it) => {
+      if (it.hotness_score != null) return Number(it.hotness_score) || 0;
+      const meta = it.meta || {};
+      if (meta.stars_today != null) return Number(meta.stars_today) || 0;
+      if (meta.total_stars != null) return Number(meta.total_stars) || 0;
+      return Number(it.signal_score) || 0;
+    };
+    const sorted = [...items].sort((a, b) => scoreOf(b) - scoreOf(a));
+    const perSite = new Map();
+    const rows = [];
+    for (const it of sorted) {
+      if (rows.length >= limit) break;
+      const title = it.title_zh || it.title || it.name || "";
+      if (!title) continue;
+      const sid = it.site_id || "";
+      const used = perSite.get(sid) || 0;
+      if (sid && used >= PER_SITE_CAP) continue;
+      perSite.set(sid, used + 1);
+      rows.push({
+        title,
+        url: it.url || "",
+        meta: relTimeShort(it.published_at || it.published || it.first_seen_at),
+      });
+    }
+    return rows;
+  }
+
+  const hotEvents = Array.isArray(payload.hot_events) ? payload.hot_events : [];
+  let hotRows = hotEventRows(hotEvents).slice(0, HOT_ROW_LIMIT);
+  //: 榜单口径，用于卡片副标题 —— 让读者知道自己在看哪一种榜单
+  let hotMode = "events";
+  if (!hotRows.length) {
+    hotRows = articleRows(allItems, HOT_ROW_LIMIT);
+    hotMode = "articles";
+  }
+
+  if (!hotRows.length) return;
 
   // 响应式行高：移动端使用更大行高避免文字重叠
   function getTickerRowHeight() {
     return window.innerWidth < 640 ? 40 : 28;
   }
 
-  function buildTickerItem(item, rank) {
-    const titleText = item.title_zh || item.title || item.name || "未命名";
-    const link = item.url || "#";
+  // row 已经是「渲染就绪」的结构 {title, url, meta}：
+  // 事件级热点与高分单篇走同一条渲染路径，差别只在数据怎么来。
+  function buildTickerItem(row, rank) {
     let rankColor = "color:#71717a";
     if (rank === 1) rankColor = "color:#f43f5e;font-weight:800";
     else if (rank === 2) rankColor = "color:#f59e0b;font-weight:800";
     else if (rank === 3) rankColor = "color:#eab308;font-weight:800";
 
-    const srcCount = item.source_count || (item.merged_sources ? item.merged_sources.length : 1);
-    const shortTimeStr = relTimeShort(item.published_at || item.published || item.first_seen_at);
-
     return `<li class="hot-ticker-row">
       <span class="hot-ticker-rank" style="${rankColor}">${rank}</span>
-      <a href="${escapeHtml(safeUrl(link))}" target="_blank" rel="noopener noreferrer" class="hot-ticker-title" title="${escapeHtml(titleText)}">${escapeHtml(titleText)}</a>
-      <span class="hot-ticker-meta">${shortTimeStr}</span>
+      <a href="${escapeHtml(safeUrl(row.url || "#"))}" target="_blank" rel="noopener noreferrer" class="hot-ticker-title" title="${escapeHtml(row.title)}">${escapeHtml(row.title)}</a>
+      <span class="hot-ticker-meta">${escapeHtml(row.meta || "")}</span>
     </li>`;
   }
 
-  const itemsHtml = hottestNews.map((item, idx) => buildTickerItem(item, idx + 1)).join("");
+  const itemsHtml = hotRows.map((row, idx) => buildTickerItem(row, idx + 1)).join("");
 
   // 无缝滚动需复制前2条到末尾
-  const copyCount = Math.min(hottestNews.length, 2);
+  const copyCount = Math.min(hotRows.length, 2);
   let copyHtml = "";
   for (let i = 0; i < copyCount; i++) {
-    copyHtml += buildTickerItem(hottestNews[i], i + 1);
+    copyHtml += buildTickerItem(hotRows[i], i + 1);
   }
 
   const rowH = getTickerRowHeight();
@@ -368,7 +438,9 @@ function renderStats(payload) {
           <span class="text-base text-orange-500 animate-pulse">🔥</span>
           <span class="text-sm font-extrabold text-zinc-100 tracking-wider">当前热点</span>
         </div>
-        <div class="text-[11px] text-zinc-500 font-medium">多信源热度 · 随时间消退</div>
+        <div class="text-[11px] text-zinc-500 font-medium">${
+          hotMode === "events" ? "多信源热度 · 随时间消退" : "高分单篇 · 暂无多源事件"
+        }</div>
       </div>
       
       <!-- 滚动区 Body -->
@@ -390,9 +462,9 @@ function renderStats(payload) {
   const container = document.getElementById("hotTickerContainer");
   const list = document.getElementById("hotTickerList");
 
-  if (container && list && hottestNews.length > 2) {
+  if (container && list && hotRows.length > 2) {
     let currentRowH = getTickerRowHeight();
-    const itemsCount = hottestNews.length;
+    const itemsCount = hotRows.length;
     let currentIndex = 0;
     let isTransitioning = false;
 

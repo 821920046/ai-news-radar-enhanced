@@ -11,7 +11,6 @@ on:
       - "data/latest-24h-all.json"
       - "data/source-status.json"
       - "data/waytoagi-7d.json"
-      - "data/trends.json"
       - "manifest.json"
       - "sw.js"
       - "robots.txt"
@@ -81,9 +80,15 @@ jobs:
           done
           cp -r assets/. _site/assets/
           # 关键 2：只发布前端真正会 fetch 的数据，archive.json / trend_history.json
-          # 这类 16MB+ 的历史文件不要进 artifact
+          # 这类 16MB+ 的历史文件不要进 artifact。
+          #
+          # trends.json 已从白名单移除：它**没有任何生产者**（冻结在 2026-08-24），
+          # 继续发布等于对外长期提供两个月前的趋势数据。事件级热点现在由
+          # latest-24h.json 的 hot_events 承载，/api/trends 也改为优先读它。
+          # 判断依据：一个产物如果没有代码在写它，就不该被部署 —— 「存在」
+          # 不能被当成「新鲜」。
           for f in latest-24h.json latest-24h-all.json source-status.json \
-                   waytoagi-7d.json trends.json; do
+                   waytoagi-7d.json; do
             [ -f "data/$f" ] && cp "data/$f" _site/data/ || true
           done
           # 关键 3：禁用 Jekyll，否则 _headers 等下划线开头的文件会被吞掉
@@ -309,7 +314,7 @@ jobs:
             exit 0
           fi
           s="https://news.my-tv.eu.cc"
-          payload=$(printf '{"files":["%s/","%s/index.html","%s/sw.js","%s/llms.txt","%s/feed-hot.xml","%s/feed-all.xml","%s/feed-daily.xml","%s/data/latest-24h.json","%s/data/latest-24h-all.json","%s/data/source-status.json","%s/data/waytoagi-7d.json","%s/data/trends.json"]}' "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s")
+          payload=$(printf '{"files":["%s/","%s/index.html","%s/sw.js","%s/llms.txt","%s/feed-hot.xml","%s/feed-all.xml","%s/feed-daily.xml","%s/data/latest-24h.json","%s/data/latest-24h-all.json","%s/data/source-status.json","%s/data/waytoagi-7d.json"]}' "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s" "$s")
           code=$(curl -sS -o /tmp/cf.json -w '%{http_code}' --max-time 60 \
             -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
             -H "Authorization: Bearer ${CF_API_TOKEN}" \

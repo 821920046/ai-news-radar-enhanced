@@ -19,6 +19,7 @@ from typing import Any, Iterable
 from core.trend_engine.clustering import TrendClustering
 from core.trend_engine.burst_detection import BurstDetector
 from core.trend_engine.heat import HeatEngine, detect_behind_sources
+from core.utils import event_time, parse_iso
 
 try:
     from core.utils import atomic_write_text
@@ -26,6 +27,58 @@ except Exception:  # pragma: no cover - fallback if utils unavailable
     atomic_write_text = None
 
 logger = logging.getLogger(__name__)
+
+
+def _item_event_time(item: dict[str, Any]) -> datetime | None:
+    """取条目的事件时间；不可解析时返回 None（不猜）。"""
+    try:
+        return event_time(item)
+    except Exception:
+        pass
+    return parse_iso(item.get("published_at")) or parse_iso(item.get("first_seen_at"))
+
+
+def _pick_representative(items: Iterable[dict[str, Any]]) -> dict[str, Any]:
+    """从事件簇里挑一条「代表条目」，供前端渲染成可点击的热点行。
+
+    为什么需要这一步
+    ----------------
+    `hot_events` 原本只有 ``topic`` / ``heat`` / ``heat_participants`` 这类
+    **聚合字段，没有 url**。前端拿到的是一串不可点击的标题，所以这份数据
+    虽然一直在算、一直在写进快照，却从来没被页面消费 —— 页面上的「当前
+    热点」只好退回「高分单篇」。补上代表条目，这个字段才真正可用。
+
+    挑选规则（都围绕「读者最可能想点开哪一条」）：
+
+    1. **必须有 url** —— 没有链接的条目无法成为可点击的热点行；
+    2. **优先有标题的** —— 只有 url 没有标题时，前端只能退回显示簇话题
+       （``topic``），而话题是聚类生成的短语，可能与那条链接的实际内容
+       对不上。宁可牺牲分数，也不要渲染出一条「标题与链接不符」的热点；
+    3. ``signal_score`` 高的优先 —— 更能代表这件事的主叙述；
+    4. 同分时取事件时间更新的 —— 更接近「现在正在发生」；
+    5. 事件时间不可解析的排在同分末尾 —— 与 heat.py「不可证明时间不计入
+       热度」同向：不知道时间的条目不该排在已知更新的前面。
+    """
+    best: dict[str, Any] | None = None
+    best_key: tuple[int, float, float] | None = None
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        if not str(item.get("url") or "").strip():
+            continue
+        has_title = bool(
+            str(item.get("title") or item.get("title_zh") or "").strip()
+        )
+        try:
+            score = float(item.get("signal_score") or 0.0)
+        except (TypeError, ValueError):
+            score = 0.0
+        ts = _item_event_time(item)
+        key = (0 if has_title else 1, -score, -(ts.timestamp() if ts else 0.0))
+        if best_key is None or key < best_key:
+            best = item
+            best_key = key
+    return best or {}
 
 
 class TrendDetector:
@@ -120,19 +173,35 @@ class TrendDetector:
         self._save_history(self.cluster_history)
 
         # 事件热度榜：只保留有多个独立来源的簇（单来源不算「事件热点」）
-        hot_events = [
-            {
-                "topic": c.get("topic", ""),
-                "heat": c.get("heat", 0.0),
-                "heat_trend": c.get("heat_trend", "unknown"),
-                "heat_participants": c.get("heat_participants", 0),
-                "heat_badges": c.get("heat_badges", []),
-                "heat_sources": c.get("heat_sources", []),
-                "size": c.get("size", 0),
-            }
-            for c in clusters
-            if int(c.get("heat_participants") or 0) >= 2
-        ]
+        #
+        # 除聚合字段外还带上**代表条目**（url / title / site_name / published_at）：
+        # 只有聚合字段时前端无法把它渲染成可点击的列表，这正是这份数据长期
+        # 「在算但没人用」的原因。见 _pick_representative 的注释。
+        hot_events: list[dict[str, Any]] = []
+        for c in clusters:
+            if int(c.get("heat_participants") or 0) < 2:
+                continue
+            rep = _pick_representative(c.get("items") or [])
+            hot_events.append(
+                {
+                    "topic": c.get("topic", ""),
+                    "heat": c.get("heat", 0.0),
+                    "heat_trend": c.get("heat_trend", "unknown"),
+                    "heat_participants": c.get("heat_participants", 0),
+                    "heat_badges": c.get("heat_badges", []),
+                    "heat_sources": c.get("heat_sources", []),
+                    "size": c.get("size", 0),
+                    "url": rep.get("url") or "",
+                    "title": rep.get("title") or "",
+                    "title_zh": rep.get("title_zh") or "",
+                    "title_en": rep.get("title_en") or "",
+                    "site_id": rep.get("site_id") or "",
+                    "site_name": rep.get("site_name") or "",
+                    "published_at": rep.get("published_at")
+                    or rep.get("first_seen_at")
+                    or "",
+                }
+            )
         hot_events.sort(key=lambda e: -float(e.get("heat") or 0.0))
 
         return {
