@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 26 Oct 2026 16:34:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 21:25:05 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>最小描述长度原则在无监督分离自改进科学智能体的法律级与统计级知识中发挥作用——并揭示其86%的发现属统计性质</title>
@@ -22,7 +22,7 @@ arXiv:2610.32245v1 Announce Type: new Abstract: AI systems that discover scienti
       <category>论文研究</category>
     </item>
     <item>
-      <title>EvoSkill v2: Fully Agentic Skill Evolution from Benchmark Adaptation to a Stateful Evolver</title>
+      <title>EvoSkill v2:从基准适应到状态化进化器的全自主智能体技能进化</title>
       <link>https://arxiv.org/abs/2610.25931</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.25931</guid>
       <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
@@ -36,13 +36,42 @@ arXiv:2610.25931v2 Announce Type: replace Abstract: EvoSkill v2 is a three-agent
       <category>论文研究</category>
     </item>
     <item>
-      <title>Anthropic 的 IPO 申请文件规划了利用 AI “彻底改变人类所有事业领域”的蓝图</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec</guid>
-      <pubDate>Mon, 26 Oct 2026 13:32:49 +0000</pubDate>
-      <description>Anthropic 已向美国证券交易委员会提交了 S-1 招股说明书，为 Claude 背后的公司做好准备，通过 I...，来自官方更新源，适合直接判断产品变化。
+      <title>Introducing GPT-6.1 Terra</title>
+      <link>https://openai.com/index/introducing-gpt-6-1-terra</link>
+      <guid isPermaLink="true">https://openai.com/index/introducing-gpt-6-1-terra</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description>GPT-6.1：Bringing fast and capable computer use to everyone，适合关注内容生产和交互形态的新变化。
 
-Anthropic 已向美国证券交易委员会提交了 S-1 招股说明书，为 Claude 背后的公司做好准备，通过 IPO 击败 OpenAI。在向 SEC 提交的文件中，Anthropic...
+Bringing fast and capable computer use to everyone
+
+信号等级 B · 评分 67.2</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+      <category>模型发布</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>使用 ExecuTorch 优化 Arm® 边缘设备上的流式语音识别</title>
+      <link>https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch</link>
+      <guid isPermaLink="true">https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch</guid>
+      <pubDate>Mon, 26 Oct 2026 18:27:27 +0000</pubDate>
+      <description>使用 ExecuTorch 优化 Arm...：当您对设备说话时，您希望在说话时出现文本，适合关注内容生产和交互形态的新变化。
+
+当您对设备说话时，您希望在说话时出现文本。这使得流式自动语音识别 (ASR) 成为与批量转录不同的挑战，其中模型......
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>Anthropic 首次公开募股申请揭示其留住企业客户的策略</title>
+      <link>https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked</guid>
+      <pubDate>Mon, 26 Oct 2026 16:49:42 +0000</pubDate>
+      <description>Anthropic 的 S-1 显示，其价值 10 万美元以上的客户中有一半以上现在同时使用 Claude 平台和第...，来自官方更新源，适合直接判断产品变化。
+
+Anthropic 的 S-1 显示，其价值 10 万美元以上的客户中有一半以上现在同时使用 Claude 平台和第一方应用程序，这是一种交叉销售手册，让人想起亚马逊，它正在使企业……
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
@@ -50,78 +79,87 @@ Anthropic 已向美国证券交易委员会提交了 S-1 招股说明书，为 C
       <category>行业动态</category>
     </item>
     <item>
-      <title>AI 能帮忙解决 COBOL 代码危机吗？</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic</guid>
-      <pubDate>Mon, 26 Oct 2026 13:15:00 +0000</pubDate>
-      <description>AI 能帮忙解决 COBOL 代码危机吗：全球的国税局、银行、航空公司和政府基础设施，都依赖着无人敢动的陈旧代码系统在运行，适合优先评估模型能力、价格和工具选型变化。
+      <title>我们最新的 AI 探索:绘制人类大脑图谱</title>
+      <link>https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks</link>
+      <guid isPermaLink="true">https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks</guid>
+      <pubDate>Mon, 26 Oct 2026 16:00:00 +0000</pubDate>
+      <description>我们最新的 AI 探索：AI Quests插图展示了一颗旋转的星球，上面有多个卡通角色挥手致意，顶部标有“AI Quests”字样，适合判断技术路线和后续产品化可能性。
 
-全球的国税局、银行、航空公司和政府基础设施，都依赖着无人敢动的陈旧代码系统在运行。
+AI Quests插图展示了一颗旋转的星球，上面有多个卡通角色挥手致意，顶部标有“AI Quests”字样。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>affaan-m/ECC</title>
-      <link>https://github.com/affaan-m/ECC</link>
-      <guid isPermaLink="true">https://github.com/affaan-m/ECC</guid>
-      <pubDate>Mon, 26 Oct 2026 15:12:25 +0000</pubDate>
-      <description>affaan-m/ECC：Claude Code、Codex、Opencode、Cursor 等的技能、直觉、记忆、安全性和研究优先的开发，适合关注自动化任务和多 Agent 协作演进。
-
-代理利用性能优化系统。 Claude Code、Codex、Opencode、Cursor 等的技能、直觉、记忆、安全性和研究优先的开发。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>模型发布</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>multica-ai/andrej-karpathy-skills</title>
-      <link>https://github.com/multica-ai/andrej-karpathy-skills</link>
-      <guid isPermaLink="true">https://github.com/multica-ai/andrej-karpathy-skills</guid>
-      <pubDate>Mon, 26 Oct 2026 15:12:25 +0000</pubDate>
-      <description>multica-ai/andrej-ka...：用于改进 Claude 代码行为的单个 CLAUDE.md 文件，源自 Andrej Karpathy 对 LLM...，适合进一步验证代码、协议或社区采用情况。
+      <title>GPT-6.1 Terra 登陆 GitHub Copilot</title>
+      <link>https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot</link>
+      <guid isPermaLink="true">https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot</guid>
+      <pubDate>Mon, 26 Oct 2026 19:15:53 +0000</pubDate>
+      <description>GPT-6.1、GitHub：OpenAI 的最新模型 GPT-6.1 Terra 现已在 GitHub Copilot 中全面发布，适合关注自动化任务和多 Agent 协作演进。
 
-用于改进 Claude 代码行为的单个 CLAUDE.md 文件，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。
+OpenAI 的最新模型 GPT-6.1 Terra 现已在 GitHub Copilot 中全面发布。它专为日常代理编码和终端工作而设计，成本低于 GPT-6.1 Sol。在……中……
 
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>alchaincyf/huashu-design</title>
-      <link>https://github.com/alchaincyf/huashu-design</link>
-      <guid isPermaLink="true">https://github.com/alchaincyf/huashu-design</guid>
-      <pubDate>Mon, 26 Oct 2026 15:12:25 +0000</pubDate>
-      <description>alchaincyf/huashu-de...：Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可...，适合关注自动化任务和多 Agent 协作演进。
-
-Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, Cursor &amp; any agent
-
-信号等级 B · 评分 63.8</description>
-      <category>开源热榜</category>
+信号等级 B · 评分 65.2</description>
+      <category>Official AI Updates</category>
       <category>智能体</category>
       <category>模型发布</category>
       <category>编码工具</category>
     </item>
     <item>
-      <title>NVIDIA/SkillSpector</title>
-      <link>https://github.com/NVIDIA/SkillSpector</link>
-      <guid isPermaLink="true">https://github.com/NVIDIA/SkillSpector</guid>
-      <pubDate>Mon, 26 Oct 2026 15:12:25 +0000</pubDate>
-      <description>NVIDIA：在安装之前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据泄露...，适合关注自动化任务和多 Agent 协作演进。
+      <title>Phronix:面向智能体的能力中心学习范式</title>
+      <link>https://arxiv.org/abs/2610.31789</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.31789</guid>
+      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
+      <description>Phronix：arXiv:2610.31789v1 Announce Type: new Abstract: Scientific...，适合判断技术路线和后续产品化可能性。
 
-AI 代理技能的安全扫描器。在安装之前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据泄露和供应链风险。
+arXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language model-based agents for performance engineering tasks such as instrumentation, analysis, and...
 
-信号等级 B · 评分 63.5</description>
-      <category>开源热榜</category>
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>勿忘所学:自我引导式修复将智能体错误转化为持久经验</title>
+      <link>https://arxiv.org/abs/2610.31846</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.31846</guid>
+      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
+      <description>勿忘所学：arXiv:2610.31846v1 Announce Type: new Abstract: Intelligen...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today&apos;s agents recover from a mistake only...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
       <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>TACS-RF:基于工具的射频与毫米波模块智能体电路合成技术</title>
+      <link>https://arxiv.org/abs/2610.31882</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.31882</guid>
+      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
+      <description>TACS-RF：arXiv:2610.31882v1 Announce Type: new Abstract: We present...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.31882v1 Announce Type: new Abstract: We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules. In this framework, a large-language-model (LLM)...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>超越策略内与策略外:LLM 智能体蒸馏应在何种层级上追随学生模型？</title>
+      <link>https://arxiv.org/abs/2610.31918</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.31918</guid>
+      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
+      <description>超越策略内与策略外：arXiv:2610.31918v1 Announce Type: new Abstract: Distilling...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.31918v1 Announce Type: new Abstract: Distilling interactive LLM agents requires choosing between teacher-generated demonstrations and student-generated experience, corresponding broadly to...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>CEMIR 与 FISER:基于推理与基于增强的语用意图识别方法比较研究</title>
@@ -601,11 +639,11 @@ arXiv:2610.24264v3 Announce Type: replace Abstract: As LLM-based agents are depl
       <category>论文研究</category>
     </item>
     <item>
-      <title>Bridging Exploration and Persona: Information-Directed Dueling for Test-Time Agent Personalization</title>
+      <title>连接探索与角色:用于测试时智能体个性化的信息导向对抗学习</title>
       <link>https://arxiv.org/abs/2610.24385</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.24385</guid>
       <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Bridging Exploration...：arXiv:2610.24385v2 Announce Type: replace Abstract: Effect...，适合关注自动化任务和多 Agent 协作演进。
+      <description>连接探索与角色：arXiv:2610.24385v2 Announce Type: replace Abstract: Effect...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.24385v2 Announce Type: replace Abstract: Effective test-time personalization requires LLM agents to adapt to query-dependent user preferences from lightweight interaction. We study persona...
 
@@ -615,11 +653,11 @@ arXiv:2610.24385v2 Announce Type: replace Abstract: Effective test-time personal
       <category>论文研究</category>
     </item>
     <item>
-      <title>On Orthogonal Recurrent Neural Networks Quantization</title>
+      <title>关于正交循环神经网络量化研究</title>
       <link>https://arxiv.org/abs/2402.04012</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2402.04012</guid>
       <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
-      <description>On Orthogonal Recurr...：arXiv:2402.04012v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+      <description>关于正交循环神经网络量化研究：arXiv:2402.04012v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2402.04012v3 Announce Type: replace-cross Abstract: In recent years, Orthogonal Recurrent Neural Networks (ORNNs) have gained popularity due to their ability to manage tasks involving long-term...
 
@@ -648,46 +686,6 @@ arXiv:2509.12196v3 Announce Type: replace-cross Abstract: Standard attention mec
       <description>Demo：arXiv:2512.08996v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2512.08996v3 Announce Type: replace-cross Abstract: Radiotherapy planning is a highly complex process that often varies significantly across institutions and individual planners. Most existing...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>TensorCommitments: A Lightweight Verifiable Inference for Large Language Models</title>
-      <link>https://arxiv.org/abs/2602.12630</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.12630</guid>
-      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
-      <description>TensorCommitments：arXiv:2602.12630v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2602.12630v3 Announce Type: replace-cross Abstract: Most large language models (LLMs) run on external clouds: users send a prompt, pay for inference, and must trust that the remote GPU executes...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>MoLS: SNR-Guided Module-Wise Learning-Rate Calibration for Large Language Models</title>
-      <link>https://arxiv.org/abs/2605.05794</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.05794</guid>
-      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
-      <description>MoLS：arXiv:2605.05794v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.05794v2 Announce Type: replace-cross Abstract: Large language models (LLMs) contain functionally distinct modules with heterogeneous gradient statistics. Although Adam(W) adapts updates at...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Deep Reasoning in General Purpose Agents via Structured Meta-Cognition</title>
-      <link>https://arxiv.org/abs/2605.11388</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.11388</guid>
-      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Meta：arXiv:2605.11388v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.11388v3 Announce Type: replace-cross Abstract: Humans intuitively solve complex problems by flexibly shifting among reasoning modes: they plan, execute, revise intermediate goals, resolve...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
