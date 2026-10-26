@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T15:12:25.063339Z",
+  "generated_at": "2026-10-26T16:34:00.111195Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
@@ -38,7 +38,7 @@
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 35,
+  "count_7d": 28,
   "updates_7d": [
     {
       "date": "2026-10-25",
@@ -178,41 +178,6 @@
     {
       "date": "2026-10-21",
       "title": "为什么模型读了海量资料，却连“给 6 岁孩子讲登月”都可能答非所问？关键在于，预训练只会让它学会预测下一个词，离真正会听指令、完成复杂推理，还差一次“岗前培训”。这篇文章解释了 RLHF、DPO、奖励模型等概念，读完你也能理顺预训练与后训练的分工。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "还在苦恼AI生成的官网模板化太严重、没有辨识度？Taste Skill 这套网页设计Skill，会帮你优先挖掘项目独有的故事细节，再匹配风格素材，还能跨设备自检页面问题。文中附上了多组对照案例，同时还给出了可直接复制的部署命令与任务提示词。快来上手试试！",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "想玩 ESP32，很多人还没动手就被 S3、C6、N16R8 和几百块开发板绕晕。这份新手指南给出了一个清晰的思路：先锁定想要实现的项目，再根据项目需求挑选开发板。文中还梳理了各个芯片的定位、多条硬件的搭建路线，以及高频踩坑点，帮你低成本给 Agent 装上实体硬件。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "你是不是也收藏了一大堆优质提示词，用时却总想不起来？作者借鉴了智能路由的思路，打造出名为“老爷爷”的Skill，内置25条原版未改动的思考类提示词。你只需描述当下难题，它就能自动匹配最合适的思考工具，全程保留原文约束，不会削弱提示效果。而且工具之间互不冲突、不会覆盖已有插件，可以帮你告别提示词吃灰！",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "作者这篇文章拆解了代码渲染动画的底层逻辑，盘点了 HyperFrames、Remotion、rough.js、Manim、three.js、Blender 等 9 种方案，覆盖网页动效、手绘水彩、数学板书、地图路线和 3D 视频，而且还附上了原理、开源项目与选型建议。想用 AI 做视频起号、科普内容或宣传片，可以先从这篇找到适合自己的技术路线。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "作者分享了用 Claude Code+Opus 5.5 快速跑通 AI 资讯竖屏短视频生产的完整实战链路，而且还对比了使用 DeepSeek 的效果差异，开源包含 18 套竖屏样式的视频风格 Skill，看完这些你也可以上手试试，做出有辨识度的科普资讯短视频。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "从捏起一张薄纸、转动一枚硬币这类日常动作切入，CY这篇文章拆解了灵巧手背后的感知、传动与控制逻辑，帮你看懂演示视频、横向对比方案，快速判断一款灵巧手是否适配真实业务场景。",
-      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "DeepSeek 最新开源推理框架 DeepInfer 与编解码组件 deepseek-recipe，揭秘了 V4.1 Flash 高性能推理背后的整套工程方案。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
