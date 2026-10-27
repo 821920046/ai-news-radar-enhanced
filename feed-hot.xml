@@ -5,8 +5,36 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 26 Oct 2026 21:25:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 01:13:23 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Anthropic 的 IPO 申请文件规划了利用 AI “彻底改变人类所有事业领域”的蓝图</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec</guid>
+      <pubDate>Mon, 26 Oct 2026 13:32:49 +0000</pubDate>
+      <description>Anthropic：The user wants a Chinese summary of the provided English t...，适合优先评估模型能力、价格和工具选型变化。
+
+The user wants a Chinese summary of the provided English text.
+Constraints:
+1. Professional tech news editor style.
+2. Concise (1-2 sentences, max 100 chars).
+3. Retain key data/proper nouns.
+4. Natural and fluent.
+5. Output ONLY the translation/summary.
+
+Input text: &quot;Anthropic has filed its S-1 prospectus with the Securities and Exchange Commission, preparing the company behind Claude to beat OpenAI to the punch with an IPO. In a filing with the SEC, Anthropic...&quot;
+
+The text cuts off, but the core info is: Anthropic filed S-1 with SEC, aiming for IPO before OpenAI.
+
+Drafting summary:
+Anthropic已向SEC提交S-1招股说明书，旨在抢在OpenAI前上市，成为首个IPO的大模型独角兽。 (46 chars) - Good.
+Or: Anthrop
+
+信号等级 B · 评分 68.5</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+      <category>行业动态</category>
+    </item>
     <item>
       <title>最小描述长度原则在无监督分离自改进科学智能体的法律级与统计级知识中发挥作用——并揭示其86%的发现属统计性质</title>
       <link>https://arxiv.org/abs/2610.32245</link>
@@ -36,73 +64,45 @@ arXiv:2610.25931v2 Announce Type: replace Abstract: EvoSkill v2 is a three-agent
       <category>论文研究</category>
     </item>
     <item>
-      <title>Introducing GPT-6.1 Terra</title>
-      <link>https://openai.com/index/introducing-gpt-6-1-terra</link>
-      <guid isPermaLink="true">https://openai.com/index/introducing-gpt-6-1-terra</guid>
-      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
-      <description>GPT-6.1：Bringing fast and capable computer use to everyone，适合关注内容生产和交互形态的新变化。
+      <title>GPT-6.1 Sol助力CodeRabbit提升复杂代码库的安全性</title>
+      <link>https://openai.com/index/gpt-6-1-sol-coderabbit-code-security</link>
+      <guid isPermaLink="true">https://openai.com/index/gpt-6-1-sol-coderabbit-code-security</guid>
+      <pubDate>Mon, 26 Oct 2026 13:45:00 +0000</pubDate>
+      <description>CodeRabbit利用GPT-6.1 Sol分析复杂代码库中的安全风险，其安全代理协助开发者审查发现的问题及建议的...，来自官方更新源，适合直接判断产品变化。
 
-Bringing fast and capable computer use to everyone
+CodeRabbit利用GPT-6.1 Sol分析复杂代码库中的安全风险，其安全代理协助开发者审查发现的问题及建议的修复方案。
 
 信号等级 B · 评分 67.2</description>
       <category>Official AI Updates</category>
-      <category>多模态</category>
-      <category>模型发布</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>使用 ExecuTorch 优化 Arm® 边缘设备上的流式语音识别</title>
-      <link>https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch</link>
-      <guid isPermaLink="true">https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch</guid>
-      <pubDate>Mon, 26 Oct 2026 18:27:27 +0000</pubDate>
-      <description>使用 ExecuTorch 优化 Arm...：当您对设备说话时，您希望在说话时出现文本，适合关注内容生产和交互形态的新变化。
-
-当您对设备说话时，您希望在说话时出现文本。这使得流式自动语音识别 (ASR) 成为与批量转录不同的挑战，其中模型......
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>多模态</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>Anthropic 首次公开募股申请揭示其留住企业客户的策略</title>
-      <link>https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked</guid>
-      <pubDate>Mon, 26 Oct 2026 16:49:42 +0000</pubDate>
-      <description>Anthropic 的 S-1 显示，其价值 10 万美元以上的客户中有一半以上现在同时使用 Claude 平台和第...，来自官方更新源，适合直接判断产品变化。
-
-Anthropic 的 S-1 显示，其价值 10 万美元以上的客户中有一半以上现在同时使用 Claude 平台和第一方应用程序，这是一种交叉销售手册，让人想起亚马逊，它正在使企业……
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>我们最新的 AI 探索:绘制人类大脑图谱</title>
-      <link>https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks</link>
-      <guid isPermaLink="true">https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks</guid>
-      <pubDate>Mon, 26 Oct 2026 16:00:00 +0000</pubDate>
-      <description>我们最新的 AI 探索：AI Quests插图展示了一颗旋转的星球，上面有多个卡通角色挥手致意，顶部标有“AI Quests”字样，适合判断技术路线和后续产品化可能性。
-
-AI Quests插图展示了一颗旋转的星球，上面有多个卡通角色挥手致意，顶部标有“AI Quests”字样。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>GPT-6.1 Terra 登陆 GitHub Copilot</title>
-      <link>https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot</guid>
-      <pubDate>Mon, 26 Oct 2026 19:15:53 +0000</pubDate>
-      <description>GPT-6.1、GitHub：OpenAI 的最新模型 GPT-6.1 Terra 现已在 GitHub Copilot 中全面发布，适合关注自动化任务和多 Agent 协作演进。
-
-OpenAI 的最新模型 GPT-6.1 Terra 现已在 GitHub Copilot 中全面发布。它专为日常代理编码和终端工作而设计，成本低于 GPT-6.1 Sol。在……中……
-
-信号等级 B · 评分 65.2</description>
-      <category>Official AI Updates</category>
+      <category>安全对齐</category>
       <category>智能体</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Cohere称阿里巴巴Qwen模型曾试图向北京发送文件</title>
+      <link>https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing</guid>
+      <pubDate>Tue, 27 Oct 2026 01:12:21 +0000</pubDate>
+      <description>阿里、Qwen模型曾试图向北京发送文件：一个人工智能模型表示它不会使用任何工具，然后尝试将一些东西发送到北京的服务器，虽然研究人员表示这可能是一个训练怪癖而...，适合优先评估模型能力、价格和工具选型变化。
+
+一个人工智能模型表示它不会使用任何工具，然后尝试将一些东西发送到北京的服务器，虽然研究人员表示这可能是一个训练怪癖而不是间谍活动，但整个事情已经……
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Greptile借助GPT-6 Astra将漏洞检测提升至代码审查之上</title>
+      <link>https://openai.com/index/greptile-code-review-codex-astra</link>
+      <guid isPermaLink="true">https://openai.com/index/greptile-code-review-codex-astra</guid>
+      <pubDate>Mon, 26 Oct 2026 22:00:00 +0000</pubDate>
+      <description>Greptile 如何使用 GPT-6 Astra 来测试用户工作流程，使用 Daybreak 来增强安全性，使用...，来自官方更新源，适合直接判断产品变化。
+
+Greptile 如何使用 GPT-6 Astra 来测试用户工作流程，使用 Daybreak 来增强安全性，使用 Codex 来减少返工。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>MCP/工具</category>
       <category>模型发布</category>
       <category>编码工具</category>
     </item>
@@ -666,11 +666,11 @@ arXiv:2402.04012v3 Announce Type: replace-cross Abstract: In recent years, Ortho
       <category>论文研究</category>
     </item>
     <item>
-      <title>Dynamic Relational Priming Improves Transformer in Multivariate Time Series</title>
+      <title>动态关系预训练可提升Transformer在多变量时间序列中的性能</title>
       <link>https://arxiv.org/abs/2509.12196</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2509.12196</guid>
       <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Dynamic Relational P...：arXiv:2509.12196v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+      <description>动态关系预训练可提升Transforme...：arXiv:2509.12196v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2509.12196v3 Announce Type: replace-cross Abstract: Standard attention mechanisms in transformers employ static token representations that remain unchanged across all pair-wise computations in...
 
@@ -679,17 +679,31 @@ arXiv:2509.12196v3 Announce Type: replace-cross Abstract: Standard attention mec
       <category>论文研究</category>
     </item>
     <item>
-      <title>Demo: Generative AI helps Radiotherapy Planning with User Preference</title>
+      <title>演示:生成式AI结合用户偏好辅助放疗规划</title>
       <link>https://arxiv.org/abs/2512.08996</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2512.08996</guid>
       <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Demo：arXiv:2512.08996v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+      <description>演示：arXiv:2512.08996v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2512.08996v3 Announce Type: replace-cross Abstract: Radiotherapy planning is a highly complex process that often varies significantly across institutions and individual planners. Most existing...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
+    </item>
+    <item>
+      <title>TensorCommitments:一种适用于大语言模型的轻量级可验证推理方案</title>
+      <link>https://arxiv.org/abs/2602.12630</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2602.12630</guid>
+      <pubDate>Mon, 26 Oct 2026 04:00:00 +0000</pubDate>
+      <description>TensorCommitments：arXiv:2602.12630v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2602.12630v3 Announce Type: replace-cross Abstract: Most large language models (LLMs) run on external clouds: users send a prompt, pay for inference, and must trust that the remote GPU executes...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>部署推理</category>
     </item>
   </channel>
 </rss>
