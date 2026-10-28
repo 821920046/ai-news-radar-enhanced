@@ -5,48 +5,20 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 28 Oct 2026 17:57:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 22:27:45 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Chrome 增强版自动填充功能现可从 Gmail 提取信息，帮助用户填写表单</title>
-      <link>https://www.theverge.com/tech/1020626/chrome-enhanced-autofill-gmail-forms-gemini-personal-intelligence</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1020626/chrome-enhanced-autofill-gmail-forms-gemini-personal-intelligence</guid>
-      <pubDate>Wed, 28 Oct 2026 17:00:00 +0000</pubDate>
-      <description>Chrome 增强版自动填充功能现可从...：Following improvements made to Chrome&apos;s enhanced autofill...，适合优先评估模型能力、价格和工具选型变化。
+      <title>PyTorch 2.15 版本发布博客</title>
+      <link>https://pytorch.org/blog/pytorch-2-15-release-blog</link>
+      <guid isPermaLink="true">https://pytorch.org/blog/pytorch-2-15-release-blog</guid>
+      <pubDate>Wed, 28 Oct 2026 17:44:20 +0000</pubDate>
+      <description>PyTorch 2.15 版本发布博客：我们很高兴地宣布 PyTorch® 2.15 发布（发行说明），适合观察推理部署成本和落地门槛变化。
 
-Following improvements made to Chrome&apos;s enhanced autofill last year that included your name, passport number, email address, and physical addresses sourced from your Google Accounts and services like...
+我们很高兴地宣布 PyTorch® 2.15 发布（发行说明）！ PyTorch 2.15 版本有以下变化： 重写的 NCCL 后端成为默认，带有飞行记录器……
 
-信号等级 A · 评分 72.5</description>
+信号等级 A · 评分 71.2</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>研究人员对 OpenAI 对其突破性技术设置访问壁垒的做法日益不满</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics</guid>
-      <pubDate>Tue, 27 Oct 2026 20:48:58 +0000</pubDate>
-      <description>On Monday, OpenAI announced impressive breakthroughs in ma...，来自官方更新源，适合直接判断产品变化。
-
-On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings. But despite...
-
-信号等级 B · 评分 68.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Anthropic 如何安全地交付全球排名第一的 LLM:分离“大脑”与“双手”</title>
-      <link>https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands</link>
-      <guid isPermaLink="true">https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands</guid>
-      <pubDate>Tue, 27 Oct 2026 18:40:19 +0000</pubDate>
-      <description>Anthropic：Katelyn Lesse and Angela Jiang join Latent Space to explai...，适合跟进 AI 风险、治理和可信边界。
-
-Katelyn Lesse and Angela Jiang join Latent Space to explain the engineering behind the Claude Platform: launching Opus 5.5, separating the model’s “brain” from the agent’s “hands,” scaling APIs, and...
-
-信号等级 B · 评分 68.5</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-      <category>智能体</category>
-      <category>模型发布</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>PailitaoMMSearch2.0 技术报告:将生成式检索扩展至统一端到端多模态搜索</title>
@@ -77,6 +49,51 @@ arXiv:2610.18420v2 Announce Type: replace-cross Abstract: We present Agaram 2.5B
       <category>MCP/工具</category>
     </item>
     <item>
+      <title>谷歌推出Gemini 4 Carbon，网络安全能力实现“显著飞跃”</title>
+      <link>https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier</guid>
+      <pubDate>Wed, 28 Oct 2026 20:03:00 +0000</pubDate>
+      <description>谷歌发布了最新的前沿模型 Gemini 4 Carbon，在编码、代理任务和网络安全方面提供了“显着收益”，来自官方更新源，适合直接判断产品变化。
+
+谷歌发布了最新的前沿模型 Gemini 4 Carbon，在编码、代理任务和网络安全方面提供了“显着收益”。在周三的一份声明中，谷歌强调了 Carbon 的...
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>Anthropic推出新工具，帮助企业看清AI支出实际换来什么</title>
+      <link>https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying</guid>
+      <pubDate>Wed, 28 Oct 2026 19:19:58 +0000</pubDate>
+      <description>Anthropic：在计划IPO前，前沿实验室披露用户在其模型上的消费情况，揭示具体支出数据，适合关注 Agent 工具调用和工作流搭建。
+
+在计划IPO前，前沿实验室披露用户在其模型上的消费情况，揭示具体支出数据。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>MCP/工具</category>
+      <category>模型发布</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>Wiz首席技术官谈PHP2Shell与即将到来的“漏洞末日”</title>
+      <link>https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse</link>
+      <guid isPermaLink="true">https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse</guid>
+      <pubDate>Wed, 28 Oct 2026 19:05:46 +0000</pubDate>
+      <description>Wiz首席技术官谈PHP2Shell与即...：上周，作为约70%网站后端支撑的开源语言，PHP曝出两个关键漏洞，迫使组织紧急修补，适合进一步验证代码、协议或社区采用情况。
+
+尽管PHP漏洞热度已退，但修复工作远未结束。上周，作为约70%网站后端支撑的开源语言，PHP曝出两个关键漏洞，迫使组织紧急修补。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>论文研究</category>
+    </item>
+    <item>
       <title>Gemini 4 Carbon:我们的下一代前沿模型</title>
       <link>https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model</link>
       <guid isPermaLink="true">https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model</guid>
@@ -90,51 +107,39 @@ arXiv:2610.18420v2 Announce Type: replace-cross Abstract: We present Agaram 2.5B
       <category>模型发布</category>
     </item>
     <item>
+      <title>Chrome 增强版自动填充功能现可从 Gmail 提取信息，帮助用户填写表单</title>
+      <link>https://www.theverge.com/tech/1020626/chrome-enhanced-autofill-gmail-forms-gemini-personal-intelligence</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1020626/chrome-enhanced-autofill-gmail-forms-gemini-personal-intelligence</guid>
+      <pubDate>Wed, 28 Oct 2026 17:00:00 +0000</pubDate>
+      <description>Chrome 增强版自动填充功能现可从...：Chrome 今年进一步优化了自动填充功能，将从 Google 账户及相关服务（如 Google Pay）中提取的姓...，适合优先评估模型能力、价格和工具选型变化。
+
+Chrome 今年进一步优化了自动填充功能，将从 Google 账户及相关服务（如 Google Pay）中提取的姓名、护照号、电子邮件及物理地址等敏感信息，整合至自动填充功能中。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
+    </item>
+    <item>
       <title>随着 AI 智能体重塑网络，Google 向更多应用开放 Gemini 和搜索功能</title>
       <link>https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps</guid>
       <pubDate>Wed, 28 Oct 2026 17:00:00 +0000</pubDate>
-      <description>Google、Gemini：A new developer platform will let businesses bring their s...，适合优先评估模型能力、价格和工具选型变化。
+      <description>Google、Gemini：谷歌推出新开发者平台，允许企业将服务接入其AI体验，或将改变消费者发现和使用应用的方式，适合优先评估模型能力、价格和工具选型变化。
 
-A new developer platform will let businesses bring their services to Google&apos;s AI experiences, potentially changing how consumers discover and use apps.
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>10 月:氛围感游戏开发的转折点</title>
-      <link>https://simonwillison.net/2026/Oct/28/vibe-game-development</link>
-      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/28/vibe-game-development</guid>
-      <pubDate>Wed, 28 Oct 2026 13:55:15 +0000</pubDate>
-      <description>10 月：I&apos;ve written before about how November 2025 was an inflect...，适合优先评估模型能力、价格和工具选型变化。
-
-I&apos;ve written before about how November 2025 was an inflection point for coding agents - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became...
+谷歌推出新开发者平台，允许企业将服务接入其AI体验，或将改变消费者发现和使用应用的方式。
 
 信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
-      <category>编码工具</category>
     </item>
     <item>
-      <title>NVIDIA Nemotron 3.5 Transcribe 与 Granary v2:可通过提示进行智能多语种转录与适配</title>
-      <link>https://huggingface.co/blog/nvidia/nemotron-transcribe-granary</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/nvidia/nemotron-transcribe-granary</guid>
-      <pubDate>Wed, 28 Oct 2026 14:58:17 +0000</pubDate>
-      <description>NVIDIA：可通过提示进行智能多语种转录与适配，适合进一步验证代码、协议或社区采用情况。
+      <title>微软公布 Azure 实际营收:332 亿美元</title>
+      <link>https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion</guid>
+      <pubDate>Wed, 28 Oct 2026 21:58:32 +0000</pubDate>
+      <description>微软从未披露过Azure的季度收入（以美元为单位），来自官方更新源，适合直接判断产品变化。
 
-信号等级 B · 评分 65.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>Artificial Analysis v5 与基准测试的两难困境</title>
-      <link>https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers</link>
-      <guid isPermaLink="true">https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers</guid>
-      <pubDate>Wed, 28 Oct 2026 12:58:39 +0000</pubDate>
-      <description>Artificial Analysis...：A sort of review of the benchmarking industry and what&apos;s m...，适合作为今日 AI/科技情报流里的重点线索。
-
-A sort of review of the benchmarking industry and what&apos;s missing.
+微软从未披露过Azure的季度收入（以美元为单位）。但这是我们第一次看到它距离击败市场上最大的竞争对手 AWS 有多近。
 
 信号等级 B · 评分 65.0</description>
       <category>Official AI Updates</category>
