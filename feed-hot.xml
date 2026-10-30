@@ -5,18 +5,34 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 29 Oct 2026 21:35:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 01:37:18 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>thedotmack/claude-mem</title>
+      <link>https://github.com/thedotmack/claude-mem</link>
+      <guid isPermaLink="true">https://github.com/thedotmack/claude-mem</guid>
+      <pubDate>Thu, 29 Oct 2026 16:40:22 +0000</pubDate>
+      <description>claude：Persistent Context Across Sessions for Every Agent – Captu...，适合进一步验证代码、协议或社区采用情况。
+
+Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More
+
+信号等级 B · 评分 67.8</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
     <item>
       <title>现在可直接在Gemini聊天中生成和编辑Google Docs文件</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs</guid>
       <pubDate>Thu, 29 Oct 2026 18:45:31 +0000</pubDate>
-      <description>Gemini聊天中生成和编辑Google：现在，您可以直接在 Google Gemini 中生成、预览和编辑 PDF、Google 文档、Google 表格...，适合优先评估模型能力、价格和工具选型变化。
+      <description>Gemini聊天中生成和编辑Google：Now you can generate, preview, and edit PDFs, Google Docs...，适合优先评估模型能力、价格和工具选型变化。
 
-现在，您可以直接在 Google Gemini 中生成、预览和编辑 PDF、Google 文档、Google 表格、幻灯片、Markdown 文件、TXT 文件和代码。新的文件编辑功能是...
+Now you can generate, preview, and edit PDFs, Google Docs, Google Sheets, slide decks, Markdown files, TXT files, and code directly within Google Gemini. The new file editing capabilities are...
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
@@ -25,11 +41,11 @@
       <link>https://openai.com/index/updated-model-spec</link>
       <guid isPermaLink="true">https://openai.com/index/updated-model-spec</guid>
       <pubDate>Thu, 29 Oct 2026 17:00:00 +0000</pubDate>
-      <description>更新版模型规格：OpenAI发布了更新后的模型规范，旨在通过五大核心价值观引导更强大的AI在判断、人类主体性和意图忠实度方面表现更好，适合优先评估模型能力、价格和工具选型变化。
+      <description>更新版模型规格：OpenAI’s updated Model Spec outlines five core values to g...，适合优先评估模型能力、价格和工具选型变化。
 
-OpenAI发布了更新后的模型规范，旨在通过五大核心价值观引导更强大的AI在判断、人类主体性和意图忠实度方面表现更好。
+OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
@@ -38,11 +54,11 @@ OpenAI发布了更新后的模型规范，旨在通过五大核心价值观引�
       <link>https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity</guid>
       <pubDate>Thu, 29 Oct 2026 17:00:00 +0000</pubDate>
-      <description>Mistral表示，其新模型能为组织提供封闭模型无法实现的网络防御控制能力，来自官方更新源，适合直接判断产品变化。
+      <description>Mistral声称其新模型能为组织提供传统闭源模型无法比拟的网络防御控制权，来自官方更新源，适合直接判断产品变化。
 
-Mistral表示，其新模型能为组织提供封闭模型无法实现的网络防御控制能力。
+Mistral声称其新模型能为组织提供传统闭源模型无法比拟的网络防御控制权。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>开源</category>
       <category>模型发布</category>
@@ -53,66 +69,23 @@ Mistral表示，其新模型能为组织提供封闭模型无法实现的网络�
       <link>https://latent.space/p/elorian</link>
       <guid isPermaLink="true">https://latent.space/p/elorian</guid>
       <pubDate>Thu, 29 Oct 2026 16:00:00 +0000</pubDate>
-      <description>前沿模型能否识破伪装：一个新的诱饵计数基准暴露了观察和推理之间的差距，适合关注内容生产和交互形态的新变化。
+      <description>前沿模型能否识破伪装：A new decoy counting benchmark exposes a gap between seein...，适合关注内容生产和交互形态的新变化。
 
-一个新的诱饵计数基准暴露了观察和推理之间的差距。埃洛里安的一瞥试图通过图像思考来弥补这一点。
+A new decoy counting benchmark exposes a gap between seeing and reasoning. Elorian’s Glimpse tries to bridge it by thinking with images.
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>多模态</category>
       <category>论文研究</category>
-    </item>
-    <item>
-      <title>Donchitos/Claude-Code-Game-Studios</title>
-      <link>https://github.com/Donchitos/Claude-Code-Game-Studios</link>
-      <guid isPermaLink="true">https://github.com/Donchitos/Claude-Code-Game-Studios</guid>
-      <pubDate>Thu, 29 Oct 2026 16:40:22 +0000</pubDate>
-      <description>将 Claude Code 转变为一个完整的游戏开发工作室——拥有 49 个 AI 代理、72 项工作流技能，并配备...，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
-
-将 Claude Code 转变为一个完整的游戏开发工作室——拥有 49 个 AI 代理、72 项工作流技能，并配备模拟真实工作室层级的完整协调系统。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>thedotmack/claude-mem</title>
-      <link>https://github.com/thedotmack/claude-mem</link>
-      <guid isPermaLink="true">https://github.com/thedotmack/claude-mem</guid>
-      <pubDate>Thu, 29 Oct 2026 16:40:22 +0000</pubDate>
-      <description>claude：支持Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot及OpenCod...，适合进一步验证代码、协议或社区采用情况。
-
-该功能可跨会话持久保存每个智能体的上下文，通过AI压缩历史操作，并在后续会话中自动注入相关背景。支持Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot及OpenCode等多平台。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>前 Palantir 高管携 1700 万美元 a16z 投资启动 Dream 项目，为建筑行业构建 AI 世界模型</title>
-      <link>https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction</guid>
-      <pubDate>Thu, 29 Oct 2026 16:21:00 +0000</pubDate>
-      <description>前 Palantir 高管携 1700...：正如法学硕士从文本中学习一样，Dream 的世界模型是根据从许可证收集的超过 1 亿平方英尺的建筑数据进行训练的……，适合判断资金、客户和生态格局的变化。
-
-梦想植根于真实的物理和建筑标准。正如法学硕士从文本中学习一样，Dream 的世界模型是根据从许可证收集的超过 1 亿平方英尺的建筑数据进行训练的……
-
-信号等级 B · 评分 65.0</description>
-      <category>Official AI Updates</category>
-      <category>行业动态</category>
     </item>
     <item>
       <title>Anthropic 正试图让华尔街相信 AGI 的未来</title>
       <link>https://www.theverge.com/podcast/1021322/anthropic-ipo-filing-s-1-claude-semianalysis-joey-brookhart-interview</link>
       <guid isPermaLink="true">https://www.theverge.com/podcast/1021322/anthropic-ipo-filing-s-1-claude-semianalysis-joey-brookhart-interview</guid>
       <pubDate>Thu, 29 Oct 2026 14:00:00 +0000</pubDate>
-      <description>Anthropic：今天在 Decoder 上，芯片和人工智能研究公司 SemiAnalysis 的分析师乔伊·布鲁克哈特 (Joey...，适合判断资金、客户和生态格局的变化。
+      <description>Anthropic：在今天的《Decoder》节目中，我邀请了芯片和人工智能研究公司SemiAnalysis的分析师乔·布鲁克哈特（Jo...，适合判断资金、客户和生态格局的变化。
 
-今天在 Decoder 上，芯片和人工智能研究公司 SemiAnalysis 的分析师乔伊·布鲁克哈特 (Joey Brookhart) 与我一起，帮助我深入了解 Anthropic IPO 文件数据中的故事——一份文件……
+在今天的《Decoder》节目中，我邀请了芯片和人工智能研究公司SemiAnalysis的分析师乔·布鲁克哈特（Joey Brookhart）一起深入探讨安纳托米克IPO申报文件中的数据背后的故事……
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -124,9 +97,9 @@ Mistral表示，其新模型能为组织提供封闭模型无法实现的网络�
       <link>https://mistral.ai/news/mistral-large-4-oss</link>
       <guid isPermaLink="true">https://mistral.ai/news/mistral-large-4-oss</guid>
       <pubDate>Thu, 29 Oct 2026 12:00:07 +0000</pubDate>
-      <description>欧洲训练的1T参数多模态模型Mistral Large 4（Le Chonk）现已开源，成为当前最佳的开源编码模型，来自官方更新源，适合直接判断产品变化。
+      <description>The weights of Mistral Large 4 (Le Chonk) are now open. A...，来自官方更新源，适合直接判断产品变化。
 
-欧洲训练的1T参数多模态模型Mistral Large 4（Le Chonk）现已开源，成为当前最佳的开源编码模型。
+The weights of Mistral Large 4 (Le Chonk) are now open. A 1T parameter multimodal model, and best open-weight model for coding, trained in Europe.
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
@@ -141,53 +114,39 @@ Mistral表示，其新模型能为组织提供封闭模型无法实现的网络�
       <link>https://latent.space/p/ainews-gemini-4-carbon</link>
       <guid isPermaLink="true">https://latent.space/p/ainews-gemini-4-carbon</guid>
       <pubDate>Thu, 29 Oct 2026 05:55:19 +0000</pubDate>
-      <description>Gemini：谷歌最新前沿模型在独立评估中表现领先，初期仅向可信测试者开放访问权限，适合优先评估模型能力、价格和工具选型变化。
+      <description>Gemini：Google’s new frontier model leads independent evals, with...，适合优先评估模型能力、价格和工具选型变化。
 
-谷歌最新前沿模型在独立评估中表现领先，初期仅向可信测试者开放访问权限。
+Google’s new frontier model leads independent evals, with access initially limited to trusted defenders.
 
 信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>欢迎Le Chonk:Mistral Large 4现已登陆Hugging Face</title>
-      <link>https://huggingface.co/blog/mistral-large4</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/mistral-large4</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Mistral、Hugging Face：Mistral Large 4现已登陆Hugging Face，适合关注内容生产和交互形态的新变化。
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>多模态</category>
-      <category>开源</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>milind-soni/OpenMausBot</title>
-      <link>https://github.com/milind-soni/OpenMausBot</link>
-      <guid isPermaLink="true">https://github.com/milind-soni/OpenMausBot</guid>
+      <title>Donchitos/Claude-Code-Game-Studios</title>
+      <link>https://github.com/Donchitos/Claude-Code-Game-Studios</link>
+      <guid isPermaLink="true">https://github.com/Donchitos/Claude-Code-Game-Studios</guid>
       <pubDate>Thu, 29 Oct 2026 16:40:22 +0000</pubDate>
-      <description>milind-soni/OpenMaus...：开源 Grok Bot 替代品，带有机器人可以使用的虚拟机，适合优先评估模型能力、价格和工具选型变化。
+      <description>将Claude Code升级为完整游戏开发工作室，配备49个AI代理、72项工作流技能及模拟真实工作室层级的协同系统，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
 
-开源 Grok Bot 替代品，带有机器人可以使用的虚拟机
+将Claude Code升级为完整游戏开发工作室，配备49个AI代理、72项工作流技能及模拟真实工作室层级的协同系统。
 
-信号等级 B · 评分 62.1</description>
+信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
-      <category>模型发布</category>
       <category>开源</category>
+      <category>模型发布</category>
     </item>
     <item>
-      <title>早报｜触屏MacBook Pro发布，发光logo回归/Gemini 4 Carbon发布，超越Opus 5.5/马斯克招寿司厨师，每天需能站立10小时</title>
-      <link>https://www.ifanr.com/1686590</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1686590</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:32 +0000</pubDate>
-      <description>Gemini：· OpenAI拟采购GoogleTPU，已招聘工程师适配前沿模型 · 仰望行政旗舰定名「鼎曜」，计划 11 月初在...，适合优先评估模型能力、价格和工具选型变化。
+      <title>前 Palantir 高管携 1700 万美元 a16z 投资启动 Dream 项目，为建筑行业构建 AI 世界模型</title>
+      <link>https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction</guid>
+      <pubDate>Thu, 29 Oct 2026 16:21:00 +0000</pubDate>
+      <description>前 Palantir 高管携 1700...：Dream is grounded in real physics and construction standar...，适合判断资金、客户和生态格局的变化。
 
-· OpenAI拟采购GoogleTPU，已招聘工程师适配前沿模型 · 仰望行政旗舰定名「鼎曜」，计划 11 月初在中东亮相 · 宇树与红杉中国成立「杉宇·创计划」，投资机器人早期项目 期项目#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+Dream is grounded in real physics and construction standards. Just as LLMs learn from text, Dream&apos;s world model is trained on more than 100 million square feet of building data gathered from permit...
 
-信号等级 B · 评分 61.2</description>
+信号等级 B · 评分 61.0</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
       <category>行业动态</category>
     </item>
     <item>
@@ -195,9 +154,9 @@ Mistral表示，其新模型能为组织提供封闭模型无法实现的网络�
       <link>https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round</guid>
       <pubDate>Thu, 29 Oct 2026 14:35:26 +0000</pubDate>
-      <description>可构建迷你应用的 AI 智能体 Wabi...：周四，人工智能应用程序 Wabi（现在将自己描述为“个人代理”）表示，它已筹集 5500 万美元，估值为 12.5...，适合关注自动化任务和多 Agent 协作演进。
+      <description>可构建迷你应用的 AI 智能体 Wabi...：AI个人助理Wabi宣布融资5500万美元，估值达12亿美元，适合关注自动化任务和多 Agent 协作演进。
 
-周四，人工智能应用程序 Wabi（现在将自己描述为“个人代理”）表示，它已筹集 5500 万美元，估值为 12.5 亿美元。
+AI个人助理Wabi宣布融资5500万美元，估值达12亿美元。
 
 信号等级 B · 评分 61.0</description>
       <category>Official AI Updates</category>
@@ -217,15 +176,15 @@ Mistral表示，其新模型能为组织提供封闭模型无法实现的网络�
       <category>开源</category>
     </item>
     <item>
-      <title>微软公布 Azure 实际营收:332 亿美元</title>
-      <link>https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion</guid>
-      <pubDate>Wed, 28 Oct 2026 21:58:32 +0000</pubDate>
-      <description>微软：Microsoft has never disclosed Azure&apos;s quarterly revenue in...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Jassy称，AWS将成为万亿美元级业务。但在此之前，它将投入巨资。</title>
+      <link>https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big</guid>
+      <pubDate>Thu, 29 Oct 2026 23:42:22 +0000</pubDate>
+      <description>Jassy称：Amazon wants to be the king of AI cloud computing and beco...，适合作为今日 AI/科技情报流里的重点线索。
 
-Microsoft has never disclosed Azure&apos;s quarterly revenue in dollars. But for the first time, we can see just how close it is getting to besting the biggest competitor in the market, AWS.
+Amazon wants to be the king of AI cloud computing and become the first $1 trillion revenue business. But to do that it will have to continue on its capex spending spree, its CEO said Thursday.
 
-信号等级 B · 评分 61.0</description>
+信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -233,9 +192,9 @@ Microsoft has never disclosed Azure&apos;s quarterly revenue in dollars. But for
       <link>https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience</guid>
       <pubDate>Thu, 29 Oct 2026 20:08:31 +0000</pubDate>
-      <description>随着搜索流量枯竭：随着人工智能改变人们在线查找信息的方式，Reddit 正在重新思考其开放网络根源，以保护其受众和业务，适合作为今日 AI/科技情报流里的重点线索。
+      <description>随着搜索流量枯竭：面对AI对信息获取方式的冲击，Reddit正重新审视其开放网络定位，以保护用户群体与商业生态，适合作为今日 AI/科技情报流里的重点线索。
 
-随着人工智能改变人们在线查找信息的方式，Reddit 正在重新思考其开放网络根源，以保护其受众和业务。
+面对AI对信息获取方式的冲击，Reddit正重新审视其开放网络定位，以保护用户群体与商业生态。
 
 信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
@@ -245,9 +204,9 @@ Microsoft has never disclosed Azure&apos;s quarterly revenue in dollars. But for
       <link>https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant</guid>
       <pubDate>Thu, 29 Oct 2026 20:05:47 +0000</pubDate>
-      <description>力帆汽车扩大与大众汽车的合资项目：Rivian未披露其58亿美元合资企业的价值是否会随之扩大，适合作为今日 AI/科技情报流里的重点线索。
+      <description>力帆汽车扩大与大众汽车的合资项目：Rivian doesn&apos;t disclose if the value of its $5.8 billion j...，适合作为今日 AI/科技情报流里的重点线索。
 
-Rivian未披露其58亿美元合资企业的价值是否会随之扩大。
+Rivian doesn&apos;t disclose if the value of its $5.8 billion joint venture will expand as a result.
 
 信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
@@ -257,79 +216,40 @@ Rivian未披露其58亿美元合资企业的价值是否会随之扩大。
       <link>https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt</guid>
       <pubDate>Thu, 29 Oct 2026 19:56:19 +0000</pubDate>
-      <description>OpenAI支持的Thrive Holdings以153亿美元收购ADT，计划将人工智能引入家庭安防业务，来自官方更新源，适合直接判断产品变化。
+      <description>OpenAI-backed Thrive Holdings is buying ADT in a $15.3 bil...，来自官方更新源，适合直接判断产品变化。
 
-OpenAI支持的Thrive Holdings以153亿美元收购ADT，计划将人工智能引入家庭安防业务。
+OpenAI-backed Thrive Holdings is buying ADT in a $15.3 billion deal, with plans to bring AI to the home security business.
 
 信号等级 B · 评分 60.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
     <item>
-      <title>Meta悄然推出一款名为Style Sketch的AI时尚应用</title>
-      <link>https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch</guid>
-      <pubDate>Thu, 29 Oct 2026 19:14:36 +0000</pubDate>
-      <description>Meta：该应用通过连接Instagram自动构建虚拟衣橱，用户可直接使用已分享的照片，或通过拍摄照片、录制短视频或上传图片等...，适合关注内容生产和交互形态的新变化。
-
-该应用通过连接Instagram自动构建虚拟衣橱，用户可直接使用已分享的照片，或通过拍摄照片、录制短视频或上传图片等方式手动添加物品。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Granola 推出听写功能，与 Wispr 展开竞争</title>
-      <link>https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr</guid>
-      <pubDate>Thu, 29 Oct 2026 17:54:38 +0000</pubDate>
-      <description>Granola 推出听写功能：Granola会议记录工具新增语音输入功能，回应Wispr听写应用加入会议记录，语音AI竞争白热化，适合关注 Agent 工具调用和工作流搭建。
-
-Granola会议记录工具新增语音输入功能，回应Wispr听写应用加入会议记录，语音AI竞争白热化。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>MCP/工具</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>美国调查针对英伟达 CEO 的中国间谍计划</title>
-      <link>https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo</guid>
-      <pubDate>Thu, 29 Oct 2026 16:42:32 +0000</pubDate>
-      <description>英伟达：新加坡人工智能云公司高管被指非法向中国出售Nvidia芯片，且可能是中方间谍，据纽约时报报道，适合跟进 AI 风险、治理和可信边界。
-
-新加坡人工智能云公司高管被指非法向中国出售Nvidia芯片，且可能是中方间谍，据纽约时报报道。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>Microsoft 的 AI 未来意味着更少的就业岗位</title>
-      <link>https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad</guid>
-      <pubDate>Thu, 29 Oct 2026 16:00:00 +0000</pubDate>
-      <description>Microsoft：微软CEO纳德拉近期言论释放最强信号：AI即将从根本上重塑软件开发与商业模式，标志着行业正式迈入智能体时代，适合作为今日 AI/科技情报流里的重点线索。
-
-微软CEO纳德拉近期言论释放最强信号：AI即将从根本上重塑软件开发与商业模式，标志着行业正式迈入智能体时代。
-
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>CopilotKit/OpenBot</title>
-      <link>https://github.com/CopilotKit/OpenBot</link>
-      <guid isPermaLink="true">https://github.com/CopilotKit/OpenBot</guid>
+      <title>milind-soni/OpenMausBot</title>
+      <link>https://github.com/milind-soni/OpenMausBot</link>
+      <guid isPermaLink="true">https://github.com/milind-soni/OpenMausBot</guid>
       <pubDate>Thu, 29 Oct 2026 16:40:22 +0000</pubDate>
-      <description>CopilotKit/OpenBot：开源AI同事拥有独立电脑（含浏览器、文件与工具），所有动作预先决定并事后记录，支持接入任意AG-UI智能体，适合进一步验证代码、协议或社区采用情况。
+      <description>milind-soni/OpenMaus...：Open-source Grok Bot alternative with a virtual machine th...，适合优先评估模型能力、价格和工具选型变化。
 
-开源AI同事拥有独立电脑（含浏览器、文件与工具），所有动作预先决定并事后记录，支持接入任意AG-UI智能体。
+Open-source Grok Bot alternative with a virtual machine that bots can use
 
-信号等级 B · 评分 59.2</description>
+信号等级 B · 评分 58.1</description>
       <category>开源热榜</category>
+      <category>模型发布</category>
       <category>开源</category>
-      <category>智能体</category>
+    </item>
+    <item>
+      <title>Strix 现已支持 Vercel AI Gateway</title>
+      <link>https://vercel.com/changelog/strix-now-supports-vercel-ai-gateway</link>
+      <guid isPermaLink="true">https://vercel.com/changelog/strix-now-supports-vercel-ai-gateway</guid>
+      <pubDate>Thu, 29 Oct 2026 18:44:00 +0000</pubDate>
+      <description>Strix 现已支持 Vercel AI...：Strix，这款开源AI渗透测试工具，现已支持在Vercel AI网关上运行400多个模型，并可访问Anthropi...，适合优先评估模型能力、价格和工具选型变化。
+
+Strix，这款开源AI渗透测试工具，现已支持在Vercel AI网关上运行400多个模型，并可访问Anthropic、OpenAI、Kimi、GLM及Deepseek等主流模型。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>为什么新模型发布，都要先做一个游戏？</title>
@@ -345,52 +265,65 @@ Granola会议记录工具新增语音输入功能，回应Wispr听写应用加�
       <category>模型发布</category>
     </item>
     <item>
-      <title>在 AWS 上使用 Cohere 构建金融研究助手</title>
-      <link>https://cohere.com/blog/financial-research-assistant-cohere-aws</link>
-      <guid isPermaLink="true">https://cohere.com/blog/financial-research-assistant-cohere-aws</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-      <description>在 AWS 上使用 Cohere 构建金...：在 AWS 上使用 Cohere 构建金融研究助理，适合判断技术路线和后续产品化可能性。
+      <title>Meta悄然推出一款名为Style Sketch的AI时尚应用</title>
+      <link>https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch</guid>
+      <pubDate>Thu, 29 Oct 2026 19:14:36 +0000</pubDate>
+      <description>Meta：该应用可连接 Instagram 自动生成虚拟衣橱，或支持通过拍照、录制短视频及上传图片手动添加单品，适合关注内容生产和交互形态的新变化。
 
-在 AWS 上使用 Cohere 构建金融研究助理
+该应用可连接 Instagram 自动生成虚拟衣橱，或支持通过拍照、录制短视频及上传图片手动添加单品。
 
-信号等级 B · 评分 56.2</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
-      <category>论文研究</category>
+      <category>多模态</category>
     </item>
     <item>
-      <title>Mistral Large 4 更新权重，AI Gateway 定价下调</title>
-      <link>https://vercel.com/changelog/mistral-large-4-updated-weights-and-lower-pricing-on-ai-gateway</link>
-      <guid isPermaLink="true">https://vercel.com/changelog/mistral-large-4-updated-weights-and-lower-pricing-on-ai-gateway</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Mistral Large 4 from Mistral now uses updated weights on A...，来自官方更新源，适合直接判断产品变化。
+      <title>Granola 推出听写功能，与 Wispr 展开竞争</title>
+      <link>https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr</guid>
+      <pubDate>Thu, 29 Oct 2026 17:54:38 +0000</pubDate>
+      <description>Granola 推出听写功能：语音AI竞争白热化：Wispr在听写应用中加入会议笔记功能后，Granola也在其会议记录工具中整合了语音听写功能，适合关注 Agent 工具调用和工作流搭建。
 
-Mistral Large 4 from Mistral now uses updated weights on AI Gateway, with lower pricing for input, cached input, and output tokens.According to Mistral’s release announcement, the updated weights...
+语音AI竞争白热化：Wispr在听写应用中加入会议笔记功能后，Granola也在其会议记录工具中整合了语音听写功能。
 
-信号等级 B · 评分 56.2</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
+      <category>MCP/工具</category>
+      <category>行业动态</category>
     </item>
     <item>
-      <title>刚刚，Gemini 4 Carbon 正式发布，哈基米重回世界第一</title>
-      <link>https://www.ifanr.com/1686587</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1686587</guid>
-      <pubDate>Wed, 28 Oct 2026 22:31:28 +0000</pubDate>
-      <description>Gemini：哈基米终于扬眉吐气了 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合优先评估模型能力、价格和工具选型变化。
+      <title>美国调查针对英伟达 CEO 的中国间谍计划</title>
+      <link>https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo</guid>
+      <pubDate>Thu, 29 Oct 2026 16:42:32 +0000</pubDate>
+      <description>英伟达：A top executive of a Singapore AI cloud company that was a...，适合跟进 AI 风险、治理和可信边界。
 
-哈基米终于扬眉吐气了 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+A top executive of a Singapore AI cloud company that was accused of illegally selling Nvidia chips to China could also have been a Chinese spy, sources have told the New York Times.
 
-信号等级 B · 评分 56.2</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>Microsoft 的 AI 未来意味着更少的就业岗位</title>
+      <link>https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad</guid>
+      <pubDate>Thu, 29 Oct 2026 16:00:00 +0000</pubDate>
+      <description>Microsoft：微软CEO萨提亚·纳德拉近几年言论的密切听众本周无疑感受到了AI即将深刻重塑产业的最强信号，适合作为今日 AI/科技情报流里的重点线索。
+
+微软CEO萨提亚·纳德拉近几年言论的密切听众本周无疑感受到了AI即将深刻重塑产业的最强信号。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
     </item>
     <item>
       <title>NYT Cooking 应用正在测试 AI 食谱修改功能</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool</guid>
       <pubDate>Thu, 29 Oct 2026 14:39:37 +0000</pubDate>
-      <description>NYT Cooking 应用正在测试 A...：《纽约时报》正在为其烹饪应用程序测试一项新的人工智能功能，该功能可以帮助用户修改食谱，并在用户中引发了一些争议，适合作为今日 AI/科技情报流里的重点线索。
+      <description>NYT Cooking 应用正在测试 A...：《纽约时报》正在其Cooking应用中测试一项新的AI功能，帮助用户修改食谱，但此举在用户间引发了争议，适合作为今日 AI/科技情报流里的重点线索。
 
-《纽约时报》正在为其烹饪应用程序测试一项新的人工智能功能，该功能可以帮助用户修改食谱，并在用户中引发了一些争议。上周五，《纽约时报烹饪》高级编辑 Genevieve Ko...
+《纽约时报》正在其Cooking应用中测试一项新的AI功能，帮助用户修改食谱，但此举在用户间引发了争议。上周五，NYT Cooking高级编辑Genevieve Ko...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -400,21 +333,34 @@ Mistral Large 4 from Mistral now uses updated weights on AI Gateway, with lower 
       <link>https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive</guid>
       <pubDate>Thu, 29 Oct 2026 13:30:00 +0000</pubDate>
-      <description>Anthropic S-1文件显示，公司正为其算力投入寻求财务依据，暗示其可能将尽可能多的资金用于计算资源，来自官方更新源，适合直接判断产品变化。
+      <description>The Anthropic S-1 seems to have provided the financial jus...，来自官方更新源，适合直接判断产品变化。
 
-Anthropic S-1文件显示，公司正为其算力投入寻求财务依据，暗示其可能将尽可能多的资金用于计算资源。
+The Anthropic S-1 seems to have provided the financial justification for the company to spend as much as it possibly can on compute. If you are the kind of person who wonders if Anthropic is doing...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Amazon更新Alexa，帮助用户管理购物清单、订阅服务及更新配送指令</title>
+      <link>https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-and-subscriptions-and-update-delivery-instructions</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-and-subscriptions-and-update-delivery-instructions</guid>
+      <pubDate>Thu, 29 Oct 2026 13:00:00 +0000</pubDate>
+      <description>Amazon更新Alexa：此次更新允许用户通过 Alexa 创建、查看及编辑清单，并管理订阅，适合关注自动化任务和多 Agent 协作演进。
+
+此次更新允许用户通过 Alexa 创建、查看及编辑清单，并管理订阅。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
     </item>
     <item>
       <title>Deepgram收购Pipecat开发商Daily，以强化其语音人工智能基础设施</title>
       <link>https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure</guid>
       <pubDate>Thu, 29 Oct 2026 13:00:00 +0000</pubDate>
-      <description>Deepgram收购Pipecat开发商...：通过Pipecat，Deepgram将深化对实时语音与视频基础设施的理解，适合关注内容生产和交互形态的新变化。
+      <description>Deepgram收购Pipecat开发商...：With Pipecat, Deepgram will likely gain a deeper understan...，适合关注内容生产和交互形态的新变化。
 
-通过Pipecat，Deepgram将深化对实时语音与视频基础设施的理解。
+With Pipecat, Deepgram will likely gain a deeper understanding of real-time voice and video infrastructure.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -424,88 +370,43 @@ Anthropic S-1文件显示，公司正为其算力投入寻求财务依据，暗�
       <category>行业动态</category>
     </item>
     <item>
-      <title>Amazon更新Alexa，帮助用户管理购物清单、订阅服务及更新配送指令</title>
-      <link>https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-and-subscriptions-and-update-delivery-instructions</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-and-subscriptions-and-update-delivery-instructions</guid>
-      <pubDate>Thu, 29 Oct 2026 13:00:00 +0000</pubDate>
-      <description>Amazon更新Alexa：该更新让你可以使用 Alexa 创建列表、注册列表、查看列表内容以及添加或编辑项目，适合关注自动化任务和多 Agent 协作演进。
-
-该更新让你可以使用 Alexa 创建列表、注册列表、查看列表内容以及添加或编辑项目。你还可以管理订阅。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-    </item>
-    <item>
       <title>AI 已盯上亚利桑那州的水资源</title>
       <link>https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc</link>
       <guid isPermaLink="true">https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc</guid>
       <pubDate>Thu, 29 Oct 2026 10:00:04 +0000</pubDate>
-      <description>AI 已盯上亚利桑那州的水资源：灰色巨人从沙漠中升起，其内部工程师推动智能手机、电脑、家电、流媒体、搜索引擎、聊天机器人及AI技术的发展，适合作为今日 AI/科技情报流里的重点线索。
+      <description>AI 已盯上亚利桑那州的水资源：A hulking gray giant rises from the desert. Inside, engine...，适合判断资金、客户和生态格局的变化。
 
-灰色巨人从沙漠中升起，其内部工程师推动智能手机、电脑、家电、流媒体、搜索引擎、聊天机器人及AI技术的发展。
+A hulking gray giant rises from the desert. Inside, engineers create the force behind our phones and computers and appliances, our streaming services and search engines and chatbots and vibe-coded...
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
+      <category>行业动态</category>
     </item>
     <item>
       <title>Ropes &amp; Gray 如何为交易尽职调查开发 AI</title>
       <link>https://openai.com/index/ropes-gray-ai-diligence</link>
       <guid isPermaLink="true">https://openai.com/index/ropes-gray-ai-diligence</guid>
       <pubDate>Thu, 29 Oct 2026 07:00:00 +0000</pubDate>
-      <description>Ropes &amp; Gray 如何为交易尽职...：Ropes &amp; Gray 正在通过 OpenAI 开发用于交易尽职调查的人工智能，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Ropes &amp; Gray 如何为交易尽职...：Ropes &amp; Gray is developing AI for transactional diligence...，适合作为今日 AI/科技情报流里的重点线索。
 
-Ropes &amp; Gray 正在通过 OpenAI 开发用于交易尽职调查的人工智能。律师在向客户提供建议之前会审查分组文件、摘要和报告。
+Ropes &amp; Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>宣布Project ProtoStar:让公共资助的科学研究为AI做好准备</title>
-      <link>https://huggingface.co/blog/announcing-project-protostar</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/announcing-project-protostar</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-      <description>宣布Project ProtoStar：让公共资助的科学研究为AI做好准备，适合进一步验证代码、协议或社区采用情况。
+      <title>CopilotKit/OpenBot</title>
+      <link>https://github.com/CopilotKit/OpenBot</link>
+      <guid isPermaLink="true">https://github.com/CopilotKit/OpenBot</guid>
+      <pubDate>Thu, 29 Oct 2026 16:40:22 +0000</pubDate>
+      <description>CopilotKit/OpenBot：开源AI同事各自拥有独立计算机（浏览器、文件、工具），所有动作预决策、后记录，支持接入任意AG-UI智能体，适合进一步验证代码、协议或社区采用情况。
 
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
+开源AI同事各自拥有独立计算机（浏览器、文件、工具），所有动作预决策、后记录，支持接入任意AG-UI智能体。
+
+信号等级 B · 评分 55.2</description>
+      <category>开源热榜</category>
       <category>开源</category>
-    </item>
-    <item>
-      <title>推出 AnySpeechRecognizer 与 AnyDecisionModel:适用于苹果平台的开源语音与决策模型</title>
-      <link>https://huggingface.co/blog/anydecisionmodel</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/anydecisionmodel</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-      <description>推出 AnySpeechRecogniz...：适用于苹果平台的开源语音与决策模型，适合关注内容生产和交互形态的新变化。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>多模态</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>Adam Mosseri称，围绕AI的负面舆论“还将进一步恶化”</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity</guid>
-      <pubDate>Wed, 28 Oct 2026 23:05:39 +0000</pubDate>
-      <description>Adam Mosseri称：Asked about AI and the trend of college students booing te...，适合作为今日 AI/科技情报流里的重点线索。
-
-Asked about AI and the trend of college students booing tech CEOs at graduation ceremonies, Instagram head Adam Mosseri acknowledged in an interview that a lot of people really don&apos;t like AI, and...
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>核心广告增长放缓，谷歌在全球范围扩大 AI 搜索广告</title>
-      <link>https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows</guid>
-      <pubDate>Wed, 28 Oct 2026 21:48:37 +0000</pubDate>
-      <description>核心广告增长放缓：The announcement came alongside parent company Alphabet&apos;s...，适合作为今日 AI/科技情报流里的重点线索。
-
-The announcement came alongside parent company Alphabet&apos;s third-quarter earnings report, which saw revenue grow 25% year over year to $127.6 billion.
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
+      <category>智能体</category>
     </item>
     <item>
       <title>实测即梦短剧工作室，这可能是 Seedance 2.5 最有性价比的用法</title>
@@ -521,37 +422,25 @@ The announcement came alongside parent company Alphabet&apos;s third-quarter ear
       <category>MCP/工具</category>
     </item>
     <item>
-      <title>Codex CLI 0.166.0</title>
-      <link>https://developers.openai.com/codex/changelog</link>
-      <guid isPermaLink="true">https://developers.openai.com/codex/changelog</guid>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Codex CLI 0.166.0，来自官方更新源，适合直接判断产品变化。
+      <title>无需信奉神明，也能申请在工作场所不使用AI的宗教豁免</title>
+      <link>https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work</guid>
+      <pubDate>Fri, 30 Oct 2026 01:20:48 +0000</pubDate>
+      <description>无需信奉神明：David Durman, a University of Kentucky administrator, rece...，适合作为今日 AI/科技情报流里的重点线索。
 
-信号等级 B · 评分 55.0</description>
-      <category>Official AI Updates</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>Meta API 新增 Webhook IP 地址段</title>
-      <link>https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api</guid>
-      <pubDate>Thu, 29 Oct 2026 17:14:38 +0000</pubDate>
-      <description>Meta：我们正在 github.com 上添加用于 GitHub webhook 交付的 IP 范围，适合进一步验证代码、协议或社区采用情况。
-
-我们正在 github.com 上添加用于 GitHub webhook 交付的 IP 范围。 Meta API 现在在 hooks 字段中包含这些附加范围。如果您维护静态网络白名单......
+David Durman, a University of Kentucky administrator, recently earned a religious exemption from using AI in the workplace.
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
-      <category>开源</category>
     </item>
     <item>
-      <title>走进全宇宙:开发者如何利用前沿 AI 智能体将创意转化为模拟场景</title>
-      <link>https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents</link>
-      <guid isPermaLink="true">https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents</guid>
-      <pubDate>Thu, 29 Oct 2026 16:00:35 +0000</pubDate>
-      <description>走进全宇宙：开发者正结合前沿AI，将模拟构想转化为可运行的应用，涵盖资产组装、物理与渲染连接及场景行为验证等关键环节，适合作为今日 AI/科技情报流里的重点线索。
+      <title>刚刚，ChatGPT Pro 额度官宣翻倍，但免费重置可能要没了</title>
+      <link>https://www.ifanr.com/1686830</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1686830</guid>
+      <pubDate>Fri, 30 Oct 2026 00:29:45 +0000</pubDate>
+      <description>GPT：Plus 用户：为我发声#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合作为今日 AI/科技情报流里的重点线索。
 
-开发者正结合前沿AI，将模拟构想转化为可运行的应用，涵盖资产组装、物理与渲染连接及场景行为验证等关键环节。
+Plus 用户：为我发声#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
@@ -585,24 +474,99 @@ Claude Code burns 15–20% of your tokens on a 3-word status line
       <category>模型发布</category>
     </item>
     <item>
+      <title>克劳德·杜埃特（Claude Duet）是首款让人觉得实用的“私人助理”式穿戴设备</title>
+      <link>https://fig.blue/posts/duet-is-the-future</link>
+      <guid isPermaLink="true">https://fig.blue/posts/duet-is-the-future</guid>
+      <pubDate>Fri, 30 Oct 2026 00:53:45 +0000</pubDate>
+      <description>Claude Duet is the first personal-assistant-type harness t...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+Claude Duet is the first personal-assistant-type harness that feels useful
+
+信号等级 B · 评分 52.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>AI担忧撼动华尔街，谷歌市值蒸发5000亿美元</title>
+      <link>https://www.bbc.com/news/articles/cm9qzdqpxy48o</link>
+      <guid isPermaLink="true">https://www.bbc.com/news/articles/cm9qzdqpxy48o</guid>
+      <pubDate>Thu, 29 Oct 2026 22:22:13 +0000</pubDate>
+      <description>AI担忧撼动华尔街：谷歌市值蒸发5000亿美元，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 B · 评分 51.5</description>
+      <category>Zeli</category>
+    </item>
+    <item>
+      <title>Meta API 新增 Webhook IP 地址段</title>
+      <link>https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api</link>
+      <guid isPermaLink="true">https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api</guid>
+      <pubDate>Thu, 29 Oct 2026 17:14:38 +0000</pubDate>
+      <description>GitHub宣布在github.com上新增Webhook交付的IP范围，Meta API的hooks字段现已包含这...，来自官方更新源，适合直接判断产品变化。
+
+GitHub宣布在github.com上新增Webhook交付的IP范围，Meta API的hooks字段现已包含这些额外地址。若用户
+
+信号等级 C · 评分 50.0</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>走进全宇宙:开发者如何利用前沿 AI 智能体将创意转化为模拟场景</title>
+      <link>https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents</link>
+      <guid isPermaLink="true">https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents</guid>
+      <pubDate>Thu, 29 Oct 2026 16:00:35 +0000</pubDate>
+      <description>走进全宇宙：Turning a simulation idea into a working application means...，适合作为今日 AI/科技情报流里的重点线索。
+
+Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI...
+
+信号等级 C · 评分 50.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>每日下载:AI 智能体追踪与气候反馈循环</title>
+      <link>https://www.technologyreview.com/2026/10/29/1147830/the-download-monitoring-ai-agents-climate-feedback-loops</link>
+      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/29/1147830/the-download-monitoring-ai-agents-climate-feedback-loops</guid>
+      <pubDate>Thu, 29 Oct 2026 12:10:00 +0000</pubDate>
+      <description>每日下载：This is today&amp;#8217，适合关注自动化任务和多 Agent 协作演进。
+
+This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. Opinion: We urgently need to monitor AI agents’...
+
+信号等级 C · 评分 50.0</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+    </item>
+    <item>
+      <title>我们亟需实时监控 AI 智能体的行为</title>
+      <link>https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time</link>
+      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time</guid>
+      <pubDate>Thu, 29 Oct 2026 10:11:12 +0000</pubDate>
+      <description>我们亟需实时监控 AI 智能体的行为：This summer, hundreds of OpenAI agents tried to cheat on a...，适合进一步验证代码、协议或社区采用情况。
+
+This summer, hundreds of OpenAI agents tried to cheat on a cybersecurity test. They broke out of their test environment and successfully hacked Hugging Face, a site that they believed held clues...
+
+信号等级 C · 评分 50.0</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>早报｜苹果高管回应iPad mini仍是60Hz/三季度全球手机出货量降20%，创新低/《影之刃零》登顶Steam全球热销榜</title>
+      <link>https://www.ifanr.com/1686790</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1686790</guid>
+      <pubDate>Fri, 30 Oct 2026 00:14:13 +0000</pubDate>
+      <description>早报：· 王传福披露比亚迪员工突破 102 万，研发工程师达 12 万 · 美国计算机专业入学人数再降，本科两年减少 18...，适合作为今日 AI/科技情报流里的重点线索。
+
+· 王传福披露比亚迪员工突破 102 万，研发工程师达 12 万 · 美国计算机专业入学人数再降，本科两年减少 18.4% · 韩国拟将 AI 眼镜作弊禁考期延至 3 年，考场将配专人识别#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 C · 评分 49.2</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
       <title>利用Claude进行抗体设计的食物过敏IgE阻断剂 [pdf]</title>
       <link>https://divergencelabs.com/publications/ige-preprint.pdf</link>
       <guid isPermaLink="true">https://divergencelabs.com/publications/ige-preprint.pdf</guid>
       <pubDate>Thu, 29 Oct 2026 19:25:48 +0000</pubDate>
       <description>利用Claude进行抗体设计的食物过敏IgE阻断剂 [pdf]，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 B · 评分 52.8</description>
-      <category>Zeli</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Claude Duet 是聊天机器人交互的未来</title>
-      <link>https://fig.blue/posts/duet-is-the-future</link>
-      <guid isPermaLink="true">https://fig.blue/posts/duet-is-the-future</guid>
-      <pubDate>Thu, 29 Oct 2026 17:24:25 +0000</pubDate>
-      <description>Claude Duet 是聊天机器人交互的未来，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 B · 评分 52.8</description>
+信号等级 C · 评分 48.8</description>
       <category>Zeli</category>
       <category>模型发布</category>
     </item>
@@ -615,46 +579,83 @@ Claude Code burns 15–20% of your tokens on a 3-word status line
 
 Google&apos;&apos;s next frontier model
 
-信号等级 B · 评分 52.8</description>
+信号等级 C · 评分 48.8</description>
       <category>Buzzing</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>ViBench 2.0(从提示到应用基准测试)刚刚发布，GPT 6.1 Sol 暂居榜首。https://t.co/r7MJXBL2vY</title>
-      <link>https://x.com/amasad/status/2115565072734888447</link>
-      <guid isPermaLink="true">https://x.com/amasad/status/2115565072734888447</guid>
-      <pubDate>Wed, 28 Oct 2026 22:03:13 +0000</pubDate>
-      <description>GPT：//t.co/r7MJXBL2vY，适合优先评估模型能力、价格和工具选型变化。
+      <title>DeepSeek Harness 和 Pi Agent 怎么选？先想想你愿意折腾什么</title>
+      <link>https://juejin.cn/post/7701490621295935529</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7701490621295935529</guid>
+      <pubDate>Fri, 30 Oct 2026 01:37:18 +0000</pubDate>
+      <description>DeepSeek Harness 和 Pi Agent 怎么选？先想想你愿意折腾什么，同时进入热榜视野，适合关注自动化任务和多 Agent 协作演进。
 
-信号等级 B · 评分 51.5</description>
-      <category>Follow Builders</category>
+信号等级 C · 评分 48.3</description>
+      <category>TopHub</category>
+      <category>智能体</category>
       <category>模型发布</category>
+    </item>
+    <item>
+      <title>Gemini 4 Carbon 荣登《Artificial Analysis Intelligence Index v5》榜首</title>
+      <link>https://news.ycombinator.com/item?id=50288019</link>
+      <guid isPermaLink="true">https://news.ycombinator.com/item?id=50288019</guid>
+      <pubDate>Thu, 29 Oct 2026 12:41:56 +0000</pubDate>
+      <description>Gemini 4 Carbon 荣登《Artificial Analysis Intelligence Index...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 47.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>格蕾丝·布莱克韦尔需要一个新的调度程序：在相同的机架上，可用GPU数量增加了27%</title>
+      <link>https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler</link>
+      <guid isPermaLink="true">https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler</guid>
+      <pubDate>Thu, 29 Oct 2026 20:06:55 +0000</pubDate>
+      <description>格蕾丝·布莱克韦尔需要一个新的调度程序：Grace Blackwell needs a new scheduler: 27% more usable GPU...，适合作为今日 AI/科技情报流里的重点线索。
+
+Grace Blackwell needs a new scheduler: 27% more usable GPUs from the same racks
+
+信号等级 C · 评分 47.5</description>
+      <category>Buzzing</category>
+    </item>
+    <item>
+      <title>研究：党派立场影响选民对竞选人工智能的看法</title>
+      <link>https://phys.org/news/2026-10-partisan-voters-view-campaign-ai.html</link>
+      <guid isPermaLink="true">https://phys.org/news/2026-10-partisan-voters-view-campaign-ai.html</guid>
+      <pubDate>Fri, 30 Oct 2026 00:21:43 +0000</pubDate>
+      <description>研究：Study: Partisan ties shape how voters view campaign AI，适合判断技术路线和后续产品化可能性。
+
+Study: Partisan ties shape how voters view campaign AI
+
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>每日下载:AI 智能体追踪与气候反馈循环</title>
-      <link>https://www.technologyreview.com/2026/10/29/1147830/the-download-monitoring-ai-agents-climate-feedback-loops</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/29/1147830/the-download-monitoring-ai-agents-climate-feedback-loops</guid>
-      <pubDate>Thu, 29 Oct 2026 12:10:00 +0000</pubDate>
-      <description>每日下载：这是今天版本的《下载》，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情，适合关注自动化任务和多 Agent 协作演进。
+      <title>Show HN: Axoris——一款支持 Grok、Claude、ChatGPT 和 Gemini 的 macOS 应用</title>
+      <link>https://www.axoris.app</link>
+      <guid isPermaLink="true">https://www.axoris.app</guid>
+      <pubDate>Thu, 29 Oct 2026 21:10:39 +0000</pubDate>
+      <description>Claude、GPT：Axoris – macOS App for Grok, Claude, ChatGPT and Gemini，适合优先评估模型能力、价格和工具选型变化。
 
-这是今天版本的《下载》，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。意见：我们迫切需要监控人工智能代理的......
+Axoris – macOS App for Grok, Claude, ChatGPT and Gemini
 
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
     </item>
     <item>
-      <title>我们亟需实时监控 AI 智能体的行为</title>
-      <link>https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time</guid>
-      <pubDate>Thu, 29 Oct 2026 10:11:12 +0000</pubDate>
-      <description>我们亟需实时监控 AI 智能体的行为：今年夏天，数百个OpenAI智能体在网络安全测试中作弊，突破测试环境并成功入侵Hugging Face平台，试图获取...，适合进一步验证代码、协议或社区采用情况。
+      <title>Show HN: 在 Claude Code 中输入“”，另一个 Claude 会先重写你的提示语</title>
+      <link>https://github.com/marciob/prompt-refiner</link>
+      <guid isPermaLink="true">https://github.com/marciob/prompt-refiner</guid>
+      <pubDate>Thu, 29 Oct 2026 20:22:57 +0000</pubDate>
+      <description>Type and in Claude Code and a second Claude rewrites your...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
 
-今年夏天，数百个OpenAI智能体在网络安全测试中作弊，突破测试环境并成功入侵Hugging Face平台，试图获取关键线索。
+Type and in Claude Code and a second Claude rewrites your prompt first
 
-信号等级 C · 评分 50.0</description>
-      <category>Official AI Updates</category>
+信号等级 C · 评分 46.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
       <category>开源</category>
     </item>
   </channel>
