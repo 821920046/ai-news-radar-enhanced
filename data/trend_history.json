@@ -1,2379 +1,5 @@
 [
   {
-    "date": "2026-10-22T22:12:34.865056+00:00",
-    "clusters": [
-      {
-        "topic": "行业动态",
-        "size": 8
-      },
-      {
-        "topic": "智能体",
-        "size": 8
-      },
-      {
-        "topic": "智能体 · 多模态",
-        "size": 7
-      },
-      {
-        "topic": "论文研究 · 部署推理",
-        "size": 6
-      },
-      {
-        "topic": "多模态 · 论文研究",
-        "size": 5
-      },
-      {
-        "topic": "模型发布",
-        "size": 5
-      },
-      {
-        "topic": "编码工具 · 安全对齐",
-        "size": 5
-      },
-      {
-        "topic": "编码工具",
-        "size": 4
-      },
-      {
-        "topic": "模型发布 · 智能体",
-        "size": 4
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 4
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 4
-      },
-      {
-        "topic": "编码工具 · 模型发布",
-        "size": 3
-      },
-      {
-        "topic": "Arc 将于 2026 年 12 月 22 日停止服务",
-        "size": 3
-      },
-      {
-        "topic": "行业动态",
-        "size": 3
-      },
-      {
-        "topic": "模型发布 · MCP/工具",
-        "size": 3
-      },
-      {
-        "topic": "智能体 · MCP/工具",
-        "size": 3
-      },
-      {
-        "topic": "智能体 · 开源",
-        "size": 3
-      },
-      {
-        "topic": "编码工具 · 开源",
-        "size": 3
-      },
-      {
-        "topic": "开源 · 智能体",
-        "size": 3
-      },
-      {
-        "topic": "安全对齐 · 论文研究",
-        "size": 3
-      },
-      {
-        "topic": "智能体 · 部署推理",
-        "size": 3
-      },
-      {
-        "topic": "安全对齐 · MCP/工具",
-        "size": 3
-      },
-      {
-        "topic": "论文研究 · 智能体",
-        "size": 3
-      },
-      {
-        "topic": "论文研究",
-        "size": 3
-      },
-      {
-        "topic": "每一种人工智能模型对人类都持同样的“有争议”的看法",
-        "size": 2
-      },
-      {
-        "topic": "模型发布",
-        "size": 2
-      },
-      {
-        "topic": "开源 · 部署推理",
-        "size": 2
-      },
-      {
-        "topic": "安全对齐 · 智能体",
-        "size": 2
-      },
-      {
-        "topic": "行业动态",
-        "size": 2
-      },
-      {
-        "topic": "前 OpenAI 科学主管创立 Warp Science，旨在用机器人自动化湿实",
-        "size": 2
-      },
-      {
-        "topic": "美国联合航空CEO呼吁征收国家财富税",
-        "size": 2
-      },
-      {
-        "topic": "亚马逊将其Kindle Unlimited订阅服务更名为Kindle+，并扩大有",
-        "size": 2
-      },
-      {
-        "topic": "智能体",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · 编码工具",
-        "size": 2
-      },
-      {
-        "topic": "英伟达推出 Minerva，用于检测巨型 AI 数据中心中的故障部件",
-        "size": 2
-      },
-      {
-        "topic": "MCP/工具 · 智能体",
-        "size": 2
-      },
-      {
-        "topic": "文件显示:7 月至 9 月期间，英伟达、Anthropic 和 OpenAI 的",
-        "size": 2
-      },
-      {
-        "topic": "乔恩·格雷驳斥了关于人工智能泡沫的警告，称需求呈“抛物线式”增长 - Bloom",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · 论文研究",
-        "size": 2
-      },
-      {
-        "topic": "模型发布 · 编码工具",
-        "size": 2
-      },
-      {
-        "topic": "行业动态 · 安全对齐",
-        "size": 2
-      },
-      {
-        "topic": "安全对齐",
-        "size": 2
-      },
-      {
-        "topic": "智能体",
-        "size": 2
-      },
-      {
-        "topic": "部署推理",
-        "size": 2
-      },
-      {
-        "topic": "行业动态",
-        "size": 2
-      },
-      {
-        "topic": "模型发布 · 论文研究",
-        "size": 2
-      },
-      {
-        "topic": "MCP/工具 · 模型发布",
-        "size": 2
-      },
-      {
-        "topic": "模型发布",
-        "size": 2
-      },
-      {
-        "topic": "又有八种顶级域名现可通过 Pro 服务免费注册",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "您的开放 enrollment 季指南",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: 群聊中的AI应用",
-        "size": 1
-      },
-      {
-        "topic": "俄亥俄州售出一张价值200万美元的“强力球”彩票 - FOX 8 News",
-        "size": 1
-      },
-      {
-        "topic": "Jared Kushner 手机遭破解，秘密谈判与数百万美元交易浮出水面",
-        "size": 1
-      },
-      {
-        "topic": "Envato 推出 MonoDesk 创意工作管理平台",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      },
-      {
-        "topic": "Jane Street 和 HRT 正斥资数十亿以在人工智能时代赢得先机",
-        "size": 1
-      },
-      {
-        "topic": "人工智能数据中心遭遇的反对声浪威胁着澳大利亚700亿澳元的梦想",
-        "size": 1
-      },
-      {
-        "topic": "Ask HN: 如果这些模型这么好，OpenAI为什么不直接创办100家公司呢？",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "fal 发布后训练视频模型 FLUX 3 Max，10 秒视频生成仅需 12.4",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "论文研究 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "编码工具 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic 根本不存在的客户支持",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "法律专家表示:Meta 的 AI 仍可能抓取新闻网站内容",
-        "size": 1
-      },
-      {
-        "topic": "404 Media 报道后，得州环境质量委员会关闭自动审批系统并暂停 17 个数",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 部署推理",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic、OpenAI 与 Musk 的公益承诺总额已超盖茨基金会三倍",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "O''Leary Digital首席执行官表示，质疑者并未全面了解该公司庞大的A",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "SubQ Snap 1.1 登顶决策指数，与 d1-ultra 并列第一",
-        "size": 1
-      },
-      {
-        "topic": "助力女性投身人工智能热潮的社交团体",
-        "size": 1
-      },
-      {
-        "topic": "随着对伊朗战争的担忧与人工智能高额支出问题交织，市场抛售势头加剧 - NBC N",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "行啊，把 SpaceX 和特斯拉合并得了，谁在乎呢",
-        "size": 1
-      },
-      {
-        "topic": "The Verge 分析 SpaceX 与特斯拉成立特别委员会讨论合并背后的财务",
-        "size": 1
-      },
-      {
-        "topic": "多模态",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "路易斯安那州一家法院购置了人工智能服务器，以测试该技术如何简化工作量",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "Demis Hassabis 登上 WSJ 创新者特刊",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "Suno 邀你分享本月创作歌曲",
-        "size": 1
-      },
-      {
-        "topic": "Databricks 谈 AI 成本管理新经济学：从 tokenmaxxing ",
-        "size": 1
-      },
-      {
-        "topic": "完全绕过 eMudhra 的 1FA OTP 登录系统",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "如果人工智能取代了人类工人，他们失去的将不仅仅是工资",
-        "size": 1
-      },
-      {
-        "topic": "美国在发布关键警报后敦促对一款广泛使用的软件进行修复 - Bloomberg.c",
-        "size": 1
-      },
-      {
-        "topic": "HUD 推出 DataVendor 数据交易市场公测",
-        "size": 1
-      },
-      {
-        "topic": "多模态 · 部署推理",
-        "size": 1
-      },
-      {
-        "topic": "Discord 现已能正确格式化 Markdown 预览",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "可扩展 AI 的基础",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "Hedra 是我高中时从零开始编写的一款 3D 开放世界游戏",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "马克·扎克伯格曾威胁要离开加州，Meta董事会最终与其达成协议",
-        "size": 1
-      },
-      {
-        "topic": "Databricks 推出反欺诈分析师 AI Coworker，在单一平台实时检",
-        "size": 1
-      },
-      {
-        "topic": "屡获殊荣的AI文学作品",
-        "size": 1
-      },
-      {
-        "topic": "AI与科学公共领域的圈地运动",
-        "size": 1
-      },
-      {
-        "topic": "ChatGPT 为梅西推荐象棋开局",
-        "size": 1
-      },
-      {
-        "topic": "是时候从埃隆·马斯克手中收回星链了",
-        "size": 1
-      },
-      {
-        "topic": "155个App把豆包关在门外，豆包反手掏出第二把钥匙",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "“黑色十月”：OpenAI技术人员发现的漏洞为何引发网络紧急状况",
-        "size": 1
-      },
-      {
-        "topic": "如何分享人工智能带来的财富？阿拉斯加提供了借鉴",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic 提前预警 AI 网络攻击与谄媚风险",
-        "size": 1
-      },
-      {
-        "topic": "Iceye与诺基亚携手乌克兰发展卫星通信能力",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "AI 分析 CT 扫描结果显示，42.9% 的患者存在冠状动脉炎症",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic为何要拒绝部分用户",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "Birdbuddys 物种识别功能有多好用？我用我的珍奇鹦鹉测试了一下。",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 部署推理",
-        "size": 1
-      },
-      {
-        "topic": "油价触及五个月高点，因胡塞武装的袭击引发对供应的担忧",
-        "size": 1
-      },
-      {
-        "topic": "人工智能建设领域思潮的重大转变",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "皮查伊谈AI算力押注",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 行业动态",
-        "size": 1
-      },
-      {
-        "topic": "World Labs 演示 Atlas 单图生成 3D 环境",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "Ask HN: 人工智能应该负责做出决策，还是仅仅确保你能看到重要的内容？",
-        "size": 1
-      },
-      {
-        "topic": "AA-PersonalityBench 自定义人格套件",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "编码工具",
-        "size": 1
-      },
-      {
-        "topic": "论文研究 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "朋友用AGI代替“太棒了”",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "Meta Muse 修复共享 artifact 的 DNS 泄露漏洞",
-        "size": 1
-      },
-      {
-        "topic": "数学能在人工智能时代生存下来吗？菲尔兹奖得主陶哲轩呼吁构建“数学2.0”世界",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: Kino Transcode – 在浏览器中打开 Red 和 ",
-        "size": 1
-      },
-      {
-        "topic": "OpenAI 智能体自行关闭了安全护栏，随后却告诉研究人员这些护栏仍在工作——智",
-        "size": 1
-      },
-      {
-        "topic": "Maxinsights 推出 MaxGlove 采集手部力触数据",
-        "size": 1
-      },
-      {
-        "topic": "OpenAI首席执行官萨姆·阿尔特曼表示，数学家们已经从“我们完蛋了”转变为接受",
-        "size": 1
-      },
-      {
-        "topic": "Palantir表示无法关闭北约的人工智能系统，而欧洲各国则担心对美国技术的依赖",
-        "size": 1
-      },
-      {
-        "topic": "Cohere 发布 Rerank 5，新增段落级 Context Focus 与",
-        "size": 1
-      },
-      {
-        "topic": "a16z 公布首届 Ops Engineering Fellowship 50 ",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "你在学习时使用人工智能吗？以下是正确的使用方法",
-        "size": 1
-      },
-      {
-        "topic": "为何中国评论家认为法国骚乱可能重塑欧洲政局 - South China Morn",
-        "size": 1
-      },
-      {
-        "topic": "Ask HN: HN是否应该为与人工智能相关或由人工智能辅助的项目添加“Show",
-        "size": 1
-      },
-      {
-        "topic": "METR 称 OpenAI 监控系统试点发现漏洞，包括一种可让 AI 智能体隐藏",
-        "size": 1
-      },
-      {
-        "topic": "Victoria McClune 正在挑战 AI 行业对其用户的理解方式",
-        "size": 1
-      },
-      {
-        "topic": "微型类脑器官“读取”盲文，迈向生物混合计算的关键一步",
-        "size": 1
-      },
-      {
-        "topic": "Wildwood 导演称 AI “与我们工作室的一切理念背道而驰”",
-        "size": 1
-      },
-      {
-        "topic": "准备在德国运营 GNU Taler",
-        "size": 1
-      },
-      {
-        "topic": "Perplexity 用 AI 生成芯片制造科普视频",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 论文研究",
-        "size": 1
-      },
-      {
-        "topic": "开发者实测指南：用公开判定数据重建 Datalab OmniParseBench",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "美联航一架航班因遭遇气流颠簸导致空乘人员受伤，随后抵达洛杉矶国际机场（LAX） ",
-        "size": 1
-      },
-      {
-        "topic": "AI正在帮助程序员节省时间——但也导致比以往任何时候都更多的低质量内容",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "编码工具",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐 · 行业动态",
-        "size": 1
-      },
-      {
-        "topic": "Marathon Fusion 用聚变中子生产医用同位素",
-        "size": 1
-      },
-      {
-        "topic": "Perplexity 提供 Computer 额度查 PHP 漏洞",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 智能体",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 多模态",
-        "size": 1
-      },
-      {
-        "topic": "AI 聚合平台发生安全漏洞，超 1800 万份文件遭泄露，含部分尴尬聊天记录",
-        "size": 1
-      },
-      {
-        "topic": "Figure AI 公开内部全员大会",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: 在安卓设备上运行完整的 iOS 16.5 固件",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "大多数人工智能数据中心将永远无法建成。这都要归咎于“吹牛瓦特”。",
-        "size": 1
-      },
-      {
-        "topic": "伊朗威胁称，如果美国和以色列再次发动袭击，将袭击海湾地区七个国家的石油和人工智能",
-        "size": 1
-      },
-      {
-        "topic": "世卫组织称，未获知尼日利亚一名埃博拉患者曾前往刚果 - Reuters",
-        "size": 1
-      },
-      {
-        "topic": "招聘人员告诉我，人工智能筛选会漏掉最优秀的候选人。是真的吗？",
-        "size": 1
-      },
-      {
-        "topic": "人工智能及其风险已深入中期选举",
-        "size": 1
-      },
-      {
-        "topic": "Etsy 关于 AI 使用的重要更新",
-        "size": 1
-      },
-      {
-        "topic": "美国科技界领袖正紧急呼吁制定人工智能监管规则——而中国早已出台相关规定 - Fr",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "Dwarkesh 参观 Intel 先进工厂：2045 年的芯片与 AI 需求冲",
-        "size": 1
-      },
-      {
-        "topic": "自托管 LLM 与云 API 之间如何路由请求",
-        "size": 1
-      },
-      {
-        "topic": "Tripo Studio 重建绑定与动画功能，支持文本生成 1-10 秒动画",
-        "size": 1
-      },
-      {
-        "topic": "因与军方签订 AI 合同，谷歌员工发起抵制并辞职",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "ChatGPT 免费版和 Go 版中的广告",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "[服务器] 有需要英伟达 ai 服务器的大佬吗",
-        "size": 1
-      },
-      {
-        "topic": "Generalist CEO 谈机器人与物理世界",
-        "size": 1
-      },
-      {
-        "topic": "Quad9 DNS解析器将退出法国市场",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 智能体",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "加拿大议员正采取行动限制赌博广告",
-        "size": 1
-      },
-      {
-        "topic": "[OpenAI] 你们有赠送 credits 吗, 在哪查看 credits 额",
-        "size": 1
-      },
-      {
-        "topic": "ICRC 官员警告 AI 已在扩大战争破坏，呼吁禁止部分自主武器",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 部署推理",
-        "size": 1
-      },
-      {
-        "topic": "ByteByteGo 详解 LLM 两层缓存：Prompt Caching 复用",
-        "size": 1
-      },
-      {
-        "topic": "投资热潮是否扩大了美国的生产能力？",
-        "size": 1
-      },
-      {
-        "topic": "什么正在被“Pwned”",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "Kast CEO 谈用 AI 扩员后控编增收",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "总部位于明尼阿波利斯、利用 AI 帮助企业提供嵌入式保险的 Slingshot ",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "Cohere 发布 CulturalRiddles 基准",
-        "size": 1
-      },
-      {
-        "topic": "eMudhra 将退出全球 SSL/TLS 证书业务",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic 上市前亮出特殊治理架构：把控制权交给不持股的外部受托人",
-        "size": 1
-      },
-      {
-        "topic": "王兴兴给宇树画了三条线：量产、小模型、大算力",
-        "size": 1
-      },
-      {
-        "topic": "“翻译效果令人难以置信”，海外AI创业者上手千问AI硬件新品",
-        "size": 1
-      },
-      {
-        "topic": "AI日报：讯飞星火X2.6发布；红果短剧上线小果AI；宇树发布H2X人形机器人测",
-        "size": 1
-      },
-      {
-        "topic": "英伟达砸钱锁定供应链，拉 6 家伙伴扩 AI 产能",
-        "size": 1
-      },
-      {
-        "topic": "英伟达升级 Isaac 通用机器人平台并发布 Agile ONE SN 人形样机",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "潜伏 20 年没人能利用的 PHP 漏洞，AI 一周做成了武器",
-        "size": 1
-      },
-      {
-        "topic": "谁在给OpenAI供应具身数据？",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "Juniors AI 推出的 Concierge",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "第二十二届 CCF 全国高性能计算学术大会在深圳举办",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "Crystal 1.22",
-        "size": 1
-      },
-      {
-        "topic": "AI +实拍量产前夜，制片人怎么重算这套降本账？",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "巴克莱称因 AI 效率提升今年将裁员约 5000 人",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 论文研究",
-        "size": 1
-      },
-      {
-        "topic": "腾讯张军：超 10 万名老师申领 WorkBuddy 教育公益版，覆盖全国 14",
-        "size": 1
-      },
-      {
-        "topic": "OpenAI 纳维-斯托克斯证明引数学界分歧",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 行业动态",
-        "size": 1
-      },
-      {
-        "topic": "心锚｜让AI拼我用了12天完成的1000片“纯白地狱”，它五小时就崩溃了",
-        "size": 1
-      },
-      {
-        "topic": "SBD:我们在家有了一套文件系统",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 智能体",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "“科技圈‘斗士俱乐部’真的存在！”一部狂野的新剧将人工智能领域的巨头们搬上了荧屏",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 多模态",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "云端部署来袭:《使命召唤:现代战争 4》即将登陆 GeForce NOW",
-        "size": 1
-      },
-      {
-        "topic": "认识Mori:一只可爱但几乎不说话(也不做事)的机器人蘑菇",
-        "size": 1
-      },
-      {
-        "topic": "部署推理 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "Nathan Lambert 谈互联网规模压力测试",
-        "size": 1
-      },
-      {
-        "topic": "[推广] 晚间福利掉落，免费送家宽住宅 IP 流量，可当落地， AI",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "AI艺人扎堆出道，赚钱的却没几个？",
-        "size": 1
-      },
-      {
-        "topic": "最后的博物馆:对580万件来自各大博物馆的艺术品进行语义搜索",
-        "size": 1
-      },
-      {
-        "topic": "腾讯、阿里、恒科回调：市场开始按回报给AI投入定价",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "英国监管机构敦促养老金受托人对人工智能集中度风险进行压力测试",
-        "size": 1
-      },
-      {
-        "topic": "Fastlane 2.0 - 利用人工智能创建、投放并扩大成功广告的覆盖范围",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: Whybook，致力于弥合人工智能笔记本与人类理解之间的鸿沟",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-10-23T01:20:34.046532+00:00",
-    "clusters": [
-      {
-        "topic": "行业动态",
-        "size": 10
-      },
-      {
-        "topic": "模型发布 · 智能体",
-        "size": 7
-      },
-      {
-        "topic": "安全对齐",
-        "size": 7
-      },
-      {
-        "topic": "论文研究 · MCP/工具",
-        "size": 7
-      },
-      {
-        "topic": "模型发布",
-        "size": 7
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 7
-      },
-      {
-        "topic": "智能体",
-        "size": 6
-      },
-      {
-        "topic": "论文研究 · 智能体",
-        "size": 5
-      },
-      {
-        "topic": "模型发布 · 智能体",
-        "size": 5
-      },
-      {
-        "topic": "多模态 · MCP/工具",
-        "size": 5
-      },
-      {
-        "topic": "模型发布 · 开源",
-        "size": 4
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 4
-      },
-      {
-        "topic": "模型发布 · MCP/工具",
-        "size": 4
-      },
-      {
-        "topic": "编码工具 · 安全对齐",
-        "size": 4
-      },
-      {
-        "topic": "智能体 · 部署推理",
-        "size": 4
-      },
-      {
-        "topic": "模型发布 · MCP/工具",
-        "size": 3
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 3
-      },
-      {
-        "topic": "编码工具 · 开源",
-        "size": 3
-      },
-      {
-        "topic": "倒计时 2 个月：Arc 浏览器 12 月停运，曾被视为「Chrome 最强颠覆",
-        "size": 2
-      },
-      {
-        "topic": "Etsy 正严打 AI 劣质商品列表",
-        "size": 2
-      },
-      {
-        "topic": "论文研究",
-        "size": 2
-      },
-      {
-        "topic": "开源 · 多模态",
-        "size": 2
-      },
-      {
-        "topic": "模型发布 · 智能体",
-        "size": 2
-      },
-      {
-        "topic": "MCP/工具 · 论文研究",
-        "size": 2
-      },
-      {
-        "topic": "行业动态",
-        "size": 2
-      },
-      {
-        "topic": "伊朗威胁称，如果美国和以色列再次发动袭击，将打击波斯湾地区的石油和人工智能设施 ",
-        "size": 2
-      },
-      {
-        "topic": "模型发布 · 论文研究",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 2
-      },
-      {
-        "topic": "每一种人工智能模型对人类都持同样的“有争议”的看法",
-        "size": 2
-      },
-      {
-        "topic": "编码工具",
-        "size": 2
-      },
-      {
-        "topic": "模型发布",
-        "size": 2
-      },
-      {
-        "topic": "开源 · 部署推理",
-        "size": 2
-      },
-      {
-        "topic": "Arc 将于 2026 年 12 月 22 日停止服务",
-        "size": 2
-      },
-      {
-        "topic": "多数美国人认为人工智能对社会有害，反对新建更多数据中心",
-        "size": 2
-      },
-      {
-        "topic": "安全对齐 · 论文研究",
-        "size": 2
-      },
-      {
-        "topic": "安全对齐 · 智能体",
-        "size": 2
-      },
-      {
-        "topic": "行业动态",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · MCP/工具",
-        "size": 2
-      },
-      {
-        "topic": "行啊，把 SpaceX 和特斯拉合并得了，谁在乎呢",
-        "size": 2
-      },
-      {
-        "topic": "前 OpenAI 科学主管创立 Warp Science，旨在用机器人自动化湿实",
-        "size": 2
-      },
-      {
-        "topic": "AI 如何改变万圣节",
-        "size": 2
-      },
-      {
-        "topic": "亚马逊将其Kindle Unlimited订阅服务更名为Kindle+，并扩大有",
-        "size": 2
-      },
-      {
-        "topic": "智能体",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · 编码工具",
-        "size": 2
-      },
-      {
-        "topic": "英伟达推出 Minerva，用于检测巨型 AI 数据中心中的故障部件",
-        "size": 2
-      },
-      {
-        "topic": "乔恩·格雷驳斥了关于人工智能泡沫的警告，称需求呈“抛物线式”增长 - Bloom",
-        "size": 2
-      },
-      {
-        "topic": "智能体 · 论文研究",
-        "size": 2
-      },
-      {
-        "topic": "谷歌在芬兰清理了300公顷的森林",
-        "size": 2
-      },
-      {
-        "topic": "智能体",
-        "size": 2
-      },
-      {
-        "topic": "模型发布 · 部署推理",
-        "size": 1
-      },
-      {
-        "topic": "AI 到处挖漏洞一整年，终于给人类爆了个大的",
-        "size": 1
-      },
-      {
-        "topic": "中国AI开始攻占日本",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "中国算力开始赚全球的钱了：Token 出海，会是下一个「中国制造」吗？",
-        "size": 1
-      },
-      {
-        "topic": "OpenAI CEO：AI 对数学领域的冲击是史上最快的一次",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "人工智能代理有望实现“一人公司”。以下是实现这一目标所需的条件",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "比尔·盖茨最新访谈：AI 是有史以来最危险的技术，未来20年将是人类最动荡的转型",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "SK数据中心部门正就为3,500亿美元的人工智能建设项目提供资金进行谈判",
-        "size": 1
-      },
-      {
-        "topic": "中国人工智能概念股市值蒸发1500亿美元，且暂无缓解迹象",
-        "size": 1
-      },
-      {
-        "topic": "受人工智能担忧影响，股市遭遇数月来最大跌幅",
-        "size": 1
-      },
-      {
-        "topic": "论文研究 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "我好像陷入了某种，AI时代的虚无主义。",
-        "size": 1
-      },
-      {
-        "topic": "论文研究 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "对话Google Labs负责人：大团队正在拖垮AI产品创新",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "拿货了，包装好小一只",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "AI漫剧的老板们在给算力打工",
-        "size": 1
-      },
-      {
-        "topic": "编码工具 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "[推广] ChatGPT Plus 稳定充值 ，欢迎 v 友咨询",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "2026 年 PyTorch 北美会议:携手加速开放智能发展",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "Docker 挺奇怪的",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "AI 算力是新时代的石油——需要建立新市场",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "人工智能建设的高昂成本令Meta及其他热门科技股承压",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "AI短剧火疯了，赢家却没几个",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "苹果更新 iWork 生产力套件 15.4.1：引入 AI 智能助理，适配 iP",
-        "size": 1
-      },
-      {
-        "topic": "佛罗里达州总检察长提出一项法案，旨在限制该州青少年使用社交媒体和人工智能功能",
-        "size": 1
-      },
-      {
-        "topic": "Loom Record for agents - 点击“录制”，然后交由 AI ",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "特斯拉下调资本支出目标，引发对其人工智能和机器人技术目标的质疑 - Bloomb",
-        "size": 1
-      },
-      {
-        "topic": "Viggle AI 发布 JST-2 世界模型",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "又有八种顶级域名现可通过 Pro 服务免费注册",
-        "size": 1
-      },
-      {
-        "topic": "“这只是个开始”：新墨西哥州总检察长在Meta案250亿美元判决后向AI行业发出",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 智能体",
-        "size": 1
-      },
-      {
-        "topic": "编码工具 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "编码工具 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "FirstFT：Meta再次引发对AI支出增长的担忧",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: 通过 Stumble Upon 获取人工智能新闻",
-        "size": 1
-      },
-      {
-        "topic": "西部数据股价下跌，因人工智能方面的担忧盖过了其稳健的业绩前景",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "您的开放 enrollment 季指南",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: 群聊中的AI应用",
-        "size": 1
-      },
-      {
-        "topic": "Railpass",
-        "size": 1
-      },
-      {
-        "topic": "加拿大军官不愿再为美国效力",
-        "size": 1
-      },
-      {
-        "topic": "俄亥俄州售出一张价值200万美元的“强力球”彩票 - FOX 8 News",
-        "size": 1
-      },
-      {
-        "topic": "贾里德·库什纳遭黑客入侵的手机曝光了秘密谈判及数百万的交易",
-        "size": 1
-      },
-      {
-        "topic": "Envato 推出 MonoDesk 创意工作管理平台",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      },
-      {
-        "topic": "Jane Street 和 HRT 正斥资数十亿以在人工智能时代赢得先机",
-        "size": 1
-      },
-      {
-        "topic": "人工智能数据中心遭遇的反对声浪威胁着澳大利亚700亿澳元的梦想",
-        "size": 1
-      },
-      {
-        "topic": "Suno 的另类用法演示",
-        "size": 1
-      },
-      {
-        "topic": "Ask HN: 如果这些模型这么好，OpenAI为什么不直接创办100家公司呢？",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "论文研究 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "编码工具 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic 根本不存在的客户支持",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "法律专家表示:Meta 的 AI 仍可能抓取新闻网站内容",
-        "size": 1
-      },
-      {
-        "topic": "404 Media 报道后，得州环境质量委员会关闭自动审批系统并暂停 17 个数",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 部署推理",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic、OpenAI 与 Musk 的公益承诺总额已超盖茨基金会三倍",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "O''Leary Digital首席执行官表示，质疑者并未全面了解该公司庞大的A",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "SubQ Snap 1.1 登顶决策指数，与 d1-ultra 并列第一",
-        "size": 1
-      },
-      {
-        "topic": "助力女性投身人工智能热潮的社交团体",
-        "size": 1
-      },
-      {
-        "topic": "随着对伊朗战争的担忧与人工智能高额支出问题交织，市场抛售势头加剧 - NBC N",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "多模态",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "路易斯安那州一家法院购置了人工智能服务器，以测试该技术如何简化工作量",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "Demis Hassabis 登上 WSJ 创新者特刊",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "Suno 邀你分享本月创作歌曲",
-        "size": 1
-      },
-      {
-        "topic": "Databricks 谈 AI 成本管理新经济学：从 tokenmaxxing ",
-        "size": 1
-      },
-      {
-        "topic": "完全绕过 eMudhra 的 1FA OTP 登录系统",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "如果人工智能取代了人类工人，他们失去的将不仅仅是工资",
-        "size": 1
-      },
-      {
-        "topic": "美国在发布关键警报后敦促对一款广泛使用的软件进行修复 - Bloomberg.c",
-        "size": 1
-      },
-      {
-        "topic": "HUD 推出 DataVendor 数据交易市场公测",
-        "size": 1
-      },
-      {
-        "topic": "Discord 现已能正确格式化 Markdown 预览",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "可扩展 AI 的基础",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 开源",
-        "size": 1
-      },
-      {
-        "topic": "马克·扎克伯格曾威胁要离开加州，Meta董事会最终与其达成协议",
-        "size": 1
-      },
-      {
-        "topic": "美国联合航空CEO呼吁征收国家财富税",
-        "size": 1
-      },
-      {
-        "topic": "Databricks 推出反欺诈分析师 AI Coworker，在单一平台实时检",
-        "size": 1
-      },
-      {
-        "topic": "屡获殊荣的AI文学作品",
-        "size": 1
-      },
-      {
-        "topic": "ChatGPT 为梅西推荐象棋开局",
-        "size": 1
-      },
-      {
-        "topic": "犹他州一女子在数据中心抗议中被警察扑倒后发声",
-        "size": 1
-      },
-      {
-        "topic": "是时候从埃隆·马斯克手中收回星链了",
-        "size": 1
-      },
-      {
-        "topic": "155个App把豆包关在门外，豆包反手掏出第二把钥匙",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "“黑色十月”：OpenAI技术人员发现的漏洞为何引发网络紧急状况",
-        "size": 1
-      },
-      {
-        "topic": "如何分享人工智能带来的财富？阿拉斯加提供了借鉴",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic 提前预警 AI 网络攻击与谄媚风险",
-        "size": 1
-      },
-      {
-        "topic": "Iceye与诺基亚携手乌克兰发展卫星通信能力",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "AI 分析 CT 扫描结果显示，42.9% 的患者存在冠状动脉炎症",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "Anthropic为何要拒绝部分用户",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "Birdbuddys 物种识别功能有多好用？我用我的珍奇鹦鹉测试了一下。",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 部署推理",
-        "size": 1
-      },
-      {
-        "topic": "油价触及五个月高点，因胡塞武装的袭击引发对供应的担忧",
-        "size": 1
-      },
-      {
-        "topic": "人工智能建设领域思潮的重大转变",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "皮查伊谈AI算力押注",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 行业动态",
-        "size": 1
-      },
-      {
-        "topic": "World Labs 演示 Atlas 单图生成 3D 环境",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "Ask HN: 人工智能应该负责做出决策，还是仅仅确保你能看到重要的内容？",
-        "size": 1
-      },
-      {
-        "topic": "AA-PersonalityBench 自定义人格套件",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "编码工具",
-        "size": 1
-      },
-      {
-        "topic": "论文研究 · MCP/工具",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "朋友用AGI代替“太棒了”",
-        "size": 1
-      },
-      {
-        "topic": "数学能在人工智能时代生存下来吗？菲尔兹奖得主陶哲轩呼吁构建“数学2.0”世界",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: Kino Transcode – 在浏览器中打开 Red 和 ",
-        "size": 1
-      },
-      {
-        "topic": "OpenAI 智能体自行关闭了安全护栏，随后却告诉研究人员这些护栏仍在工作——智",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "Maxinsights 推出 MaxGlove 采集手部力触数据",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 智能体",
-        "size": 1
-      },
-      {
-        "topic": "Palantir表示无法关闭北约的人工智能系统，而欧洲各国则担心对美国技术的依赖",
-        "size": 1
-      },
-      {
-        "topic": "Cohere 发布 Rerank 5，新增段落级 Context Focus 与",
-        "size": 1
-      },
-      {
-        "topic": "a16z 公布首届 Ops Engineering Fellowship 50 ",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "你在学习时使用人工智能吗？以下是正确的使用方法",
-        "size": 1
-      },
-      {
-        "topic": "为何中国评论家认为法国骚乱可能重塑欧洲政局 - South China Morn",
-        "size": 1
-      },
-      {
-        "topic": "Ask HN: HN是否应该为与人工智能相关或由人工智能辅助的项目添加“Show",
-        "size": 1
-      },
-      {
-        "topic": "Victoria McClune 正在挑战 AI 行业对其用户的理解方式",
-        "size": 1
-      },
-      {
-        "topic": "2023 年美国财富流向何处",
-        "size": 1
-      },
-      {
-        "topic": "Gartner 调查显示仅 13% 的企业从 AI 获得实质回报",
-        "size": 1
-      },
-      {
-        "topic": "微型类脑器官“读取”盲文，迈向生物混合计算的关键一步",
-        "size": 1
-      },
-      {
-        "topic": "Wildwood 导演称 AI “与我们工作室的一切理念背道而驰”",
-        "size": 1
-      },
-      {
-        "topic": "准备在德国运营 GNU Taler",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 论文研究",
-        "size": 1
-      },
-      {
-        "topic": "开发者实测指南：用公开判定数据重建 Datalab OmniParseBench",
-        "size": 1
-      },
-      {
-        "topic": "开源",
-        "size": 1
-      },
-      {
-        "topic": "美联航一架航班因遭遇气流颠簸导致空乘人员受伤，随后抵达洛杉矶国际机场（LAX） ",
-        "size": 1
-      },
-      {
-        "topic": "AI正在帮助程序员节省时间——但也导致比以往任何时候都更多的低质量内容",
-        "size": 1
-      },
-      {
-        "topic": "编码工具",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      },
-      {
-        "topic": "智能体 · 模型发布",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐 · 行业动态",
-        "size": 1
-      },
-      {
-        "topic": "OpenAI、Anthropic和Nvidia的游说支出均创季度新高",
-        "size": 1
-      },
-      {
-        "topic": "Marathon Fusion 用聚变中子生产医用同位素",
-        "size": 1
-      },
-      {
-        "topic": "行业动态",
-        "size": 1
-      },
-      {
-        "topic": "Perplexity 提供 Computer 额度查 PHP 漏洞",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "开源 · 多模态",
-        "size": 1
-      },
-      {
-        "topic": "AI 聚合平台发生安全漏洞，超 1800 万份文件遭泄露，含部分尴尬聊天记录",
-        "size": 1
-      },
-      {
-        "topic": "Figure AI 公开内部全员大会",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "Show HN: 在安卓设备上运行完整的 iOS 16.5 固件",
-        "size": 1
-      },
-      {
-        "topic": "论文研究",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "世卫组织称，未获知尼日利亚一名埃博拉患者曾前往刚果 - Reuters",
-        "size": 1
-      },
-      {
-        "topic": "招聘人员告诉我，人工智能筛选会漏掉最优秀的候选人。是真的吗？",
-        "size": 1
-      },
-      {
-        "topic": "人工智能及其风险已深入中期选举",
-        "size": 1
-      },
-      {
-        "topic": "美国科技界领袖正紧急呼吁制定人工智能监管规则——而中国早已出台相关规定 - Fr",
-        "size": 1
-      },
-      {
-        "topic": "模型发布",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 编码工具",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 安全对齐",
-        "size": 1
-      },
-      {
-        "topic": "Dwarkesh 参观 Intel 先进工厂：2045 年的芯片与 AI 需求冲",
-        "size": 1
-      },
-      {
-        "topic": "自托管 LLM 与云 API 之间如何路由请求",
-        "size": 1
-      },
-      {
-        "topic": "Tripo Studio 重建绑定与动画功能，支持文本生成 1-10 秒动画",
-        "size": 1
-      },
-      {
-        "topic": "因与军方签订 AI 合同，谷歌员工发起抵制并辞职",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "部署推理",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "ChatGPT 免费版和 Go 版中的广告",
-        "size": 1
-      },
-      {
-        "topic": "智能体",
-        "size": 1
-      },
-      {
-        "topic": "[服务器] 有需要英伟达 ai 服务器的大佬吗",
-        "size": 1
-      },
-      {
-        "topic": "Generalist CEO 谈机器人与物理世界",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · 论文研究",
-        "size": 1
-      },
-      {
-        "topic": "Quad9 DNS解析器将退出法国市场",
-        "size": 1
-      },
-      {
-        "topic": "MCP/工具 · 智能体",
-        "size": 1
-      },
-      {
-        "topic": "模型发布 · MCP/工具",
-        "size": 1
-      }
-    ]
-  },
-  {
     "date": "2026-10-23T07:07:05.481095+00:00",
     "clusters": [
       {
@@ -45977,6 +43603,1127 @@
       },
       {
         "topic": "开源",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-10-30T01:41:35.067089+00:00",
+    "clusters": [
+      {
+        "topic": "模型发布 · 开源",
+        "size": 9
+      },
+      {
+        "topic": "编码工具",
+        "size": 7
+      },
+      {
+        "topic": "模型发布",
+        "size": 6
+      },
+      {
+        "topic": "行业动态 · 部署推理",
+        "size": 6
+      },
+      {
+        "topic": "模型发布 · MCP/工具",
+        "size": 6
+      },
+      {
+        "topic": "行业动态 · 智能体",
+        "size": 6
+      },
+      {
+        "topic": "智能体 · 模型发布",
+        "size": 5
+      },
+      {
+        "topic": "Alphabet股价创纪录暴跌，其人工智能相关资产规模突破1万亿美元",
+        "size": 5
+      },
+      {
+        "topic": "模型发布",
+        "size": 5
+      },
+      {
+        "topic": "谷歌AI搜索冲击广告业务，第三季度搜索广告收入不及预期",
+        "size": 4
+      },
+      {
+        "topic": "智能体 · MCP/工具",
+        "size": 4
+      },
+      {
+        "topic": "随着AI逐渐取代搜索功能，Reddit转向登录后体验",
+        "size": 4
+      },
+      {
+        "topic": "模型发布 · 智能体",
+        "size": 4
+      },
+      {
+        "topic": "模型发布",
+        "size": 4
+      },
+      {
+        "topic": "安全对齐",
+        "size": 4
+      },
+      {
+        "topic": "多模态",
+        "size": 3
+      },
+      {
+        "topic": "模型发布 · 智能体",
+        "size": 3
+      },
+      {
+        "topic": "模型发布 · 多模态",
+        "size": 3
+      },
+      {
+        "topic": "Binance-hacker-1029 – 币安遭盗窃56亿美元",
+        "size": 3
+      },
+      {
+        "topic": "安全对齐",
+        "size": 3
+      },
+      {
+        "topic": "智能体",
+        "size": 3
+      },
+      {
+        "topic": "智能体 · 论文研究",
+        "size": 3
+      },
+      {
+        "topic": "模型发布 · 开源",
+        "size": 3
+      },
+      {
+        "topic": "智能体 · 模型发布",
+        "size": 3
+      },
+      {
+        "topic": "模型发布 · 多模态",
+        "size": 3
+      },
+      {
+        "topic": "ElevenLabs 推出 SFX v3 音效模型",
+        "size": 3
+      },
+      {
+        "topic": "英特尔 2026 Q3 营收 165 亿美元超预期：数据中心业务暴增近 80% ",
+        "size": 2
+      },
+      {
+        "topic": "亚马逊支出激增、在线业务放缓，股价下跌",
+        "size": 2
+      },
+      {
+        "topic": "谷歌5000亿美元的“血洗”反映了其面临的人工智能带来的威胁",
+        "size": 2
+      },
+      {
+        "topic": "刚刚，ChatGPT Pro 额度官宣翻倍，但免费重置可能要没了",
+        "size": 2
+      },
+      {
+        "topic": "模型发布 · MCP/工具",
+        "size": 2
+      },
+      {
+        "topic": "论文研究",
+        "size": 2
+      },
+      {
+        "topic": "安全对齐",
+        "size": 2
+      },
+      {
+        "topic": "伊朗企图扰乱美国中期选举并干涉以色列大选 - The Telegraph",
+        "size": 2
+      },
+      {
+        "topic": "智能体",
+        "size": 2
+      },
+      {
+        "topic": "模型发布",
+        "size": 2
+      },
+      {
+        "topic": "模型发布 · 安全对齐",
+        "size": 2
+      },
+      {
+        "topic": "受Alphabet营收未达预期影响，市场对AI资本支出的担忧重燃，华尔街股指收低",
+        "size": 2
+      },
+      {
+        "topic": "模型发布",
+        "size": 2
+      },
+      {
+        "topic": "模型发布",
+        "size": 2
+      },
+      {
+        "topic": "黑客盗空账户后，Polymarket暂停国际交易",
+        "size": 2
+      },
+      {
+        "topic": "Reddit将要求用户必须拥有账户才能访问",
+        "size": 2
+      },
+      {
+        "topic": "安全对齐 · 行业动态",
+        "size": 2
+      },
+      {
+        "topic": "智能体 · MCP/工具",
+        "size": 2
+      },
+      {
+        "topic": "Proton CEO Andy Yen:“今年将是我们最后一次招聘工程师。”",
+        "size": 2
+      },
+      {
+        "topic": "行业动态",
+        "size": 2
+      },
+      {
+        "topic": "安全对齐 · 智能体",
+        "size": 2
+      },
+      {
+        "topic": "僵尸数据：AI引用的数字从何而来",
+        "size": 2
+      },
+      {
+        "topic": "安全对齐 · 行业动态",
+        "size": 2
+      },
+      {
+        "topic": "LLM 语音",
+        "size": 2
+      },
+      {
+        "topic": "Perplexity Computer 上线 /unbroker 技能，帮你从数",
+        "size": 2
+      },
+      {
+        "topic": "模型发布",
+        "size": 2
+      },
+      {
+        "topic": "Ask HN: 你在个人生活中是如何运用人工智能的？",
+        "size": 2
+      },
+      {
+        "topic": "智能体 · 编码工具",
+        "size": 2
+      },
+      {
+        "topic": "论文研究 · 智能体",
+        "size": 2
+      },
+      {
+        "topic": "部署推理",
+        "size": 2
+      },
+      {
+        "topic": "SuperMe 融资 2000 万美元(Ivan Mehta/TechCrunc",
+        "size": 2
+      },
+      {
+        "topic": "fal 上线 Ideogram v4.5 edit 模型",
+        "size": 2
+      },
+      {
+        "topic": "行业动态",
+        "size": 2
+      },
+      {
+        "topic": "PixVerse 上线可灵 4.0",
+        "size": 2
+      },
+      {
+        "topic": "智能体 · 论文研究",
+        "size": 2
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 模型发布",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 模型发布",
+        "size": 1
+      },
+      {
+        "topic": "部署推理",
+        "size": 1
+      },
+      {
+        "topic": "SpaceX 最大单一客户曝光：Anthropic 每月付款逾 30 亿美元，Q",
+        "size": 1
+      },
+      {
+        "topic": "开源",
+        "size": 1
+      },
+      {
+        "topic": "科技巨头财报引发亚洲芯片股新一轮担忧",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 编码工具",
+        "size": 1
+      },
+      {
+        "topic": "无需信奉神明，也能申请在工作场所不使用AI的宗教豁免",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "[OpenAI] 东 8 时间昨晚是不是重置过？难道我穿越了？",
+        "size": 1
+      },
+      {
+        "topic": "论文研究",
+        "size": 1
+      },
+      {
+        "topic": "Anthropic的Elvis诉讼案揭示了AI企业为何必须直面挑战",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "Omdia 预估 2027 年 AI PC 将占 60% 出货，69% 打工人愿",
+        "size": 1
+      },
+      {
+        "topic": "Google 与 Reddit 同日股价大跌，AI 搜索变现困境冲击开放网络",
+        "size": 1
+      },
+      {
+        "topic": "Nvidia将进一步加强与Meta略显诡异的Muse AI模型的合作，甚至投资3",
+        "size": 1
+      },
+      {
+        "topic": "焦点｜西班牙高铁惨剧给AI时代的警示：当机器失能时，人恰恰是最危险的“备份”",
+        "size": 1
+      },
+      {
+        "topic": "在亚马逊财报电话会议上，Andy Jassy表示，外部的AI购物代理“目前仍不够",
+        "size": 1
+      },
+      {
+        "topic": "亚马逊 CEO 贾西预计 AWS 未来 5 至 10 年年营收达 1 万亿美元",
+        "size": 1
+      },
+      {
+        "topic": "IT早报 1030：华为制药军团称不做药定位 AI 赋能药企；国产游戏《影之刃零",
+        "size": 1
+      },
+      {
+        "topic": "安全对齐",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "一集AI 爽剧只赚1块钱：为什么比尔盖茨错了两次？",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 模型发布",
+        "size": 1
+      },
+      {
+        "topic": "The Sources 播客近两月嘉宾阵容",
+        "size": 1
+      },
+      {
+        "topic": "Jassy称，AWS将成为万亿美元级业务。但在此之前，它将投入巨资。",
+        "size": 1
+      },
+      {
+        "topic": "Show HN: 我把《毁灭战士》改造成了变形金刚",
+        "size": 1
+      },
+      {
+        "topic": "部署推理 · 多模态",
+        "size": 1
+      },
+      {
+        "topic": "“这是培训和信任问题，而非AI问题”:几乎没有员工会核对其从AI处获取的信息",
+        "size": 1
+      },
+      {
+        "topic": "OpenAI 为 ChatGPT 订阅用户推出 API credits 权益",
+        "size": 1
+      },
+      {
+        "topic": "Databricks 宣布 Spark Declarative Pipeline",
+        "size": 1
+      },
+      {
+        "topic": "SpaceX最大的收入来源是一项与Anthropic达成的有限期协议 - Blo",
+        "size": 1
+      },
+      {
+        "topic": "Getac称其新款坚固型笔记本电脑的AI驱动处理速度比以往更快——且似乎瞄准了军",
+        "size": 1
+      },
+      {
+        "topic": "一头猪、一个国家与一场战争:《红猪》(1992)(2014)",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "伟大的美国顽童:《汤姆·索亚历险记》150周年",
+        "size": 1
+      },
+      {
+        "topic": "Epoch AI 数据：AI 芯片在用算力每年增长 3.4 倍，新增算力增速已放",
+        "size": 1
+      },
+      {
+        "topic": "Smartbird首席执行官谈将一家鞋业公司转型为人工智能基础设施提供商",
+        "size": 1
+      },
+      {
+        "topic": "巴里·迪勒计划在AI时代实现传统媒体的盈利",
+        "size": 1
+      },
+      {
+        "topic": "人类表面组：人工智能标记出主要数据库中被忽略的潜在细胞表面药物靶点",
+        "size": 1
+      },
+      {
+        "topic": "Proton全力押注AI",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "厄尔尼诺现象正以史上最高潮位淹没加利福尼亚海岸",
+        "size": 1
+      },
+      {
+        "topic": "论文研究",
+        "size": 1
+      },
+      {
+        "topic": "部署推理",
+        "size": 1
+      },
+      {
+        "topic": "博尔索纳罗的盟友将现已删除的“巴西当选总统”言论归咎于ChatGPT - Reu",
+        "size": 1
+      },
+      {
+        "topic": "Show HN: AI了解我们——看看ChatGPT和Perplexity会推荐",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "eve 营销团队",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "别再盯着 800 亿美元亏损了，Anthropic 的 AI 造 AI 已推进到",
+        "size": 1
+      },
+      {
+        "topic": "闪迪公布强劲利润，对不断增长的人工智能需求持乐观展望",
+        "size": 1
+      },
+      {
+        "topic": "微软发行250亿美元巨额债券，跻身人工智能赢家之列",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "论文研究",
+        "size": 1
+      },
+      {
+        "topic": "多模态 · 智能体",
+        "size": 1
+      },
+      {
+        "topic": "Sylphide OS:一款适用于微控制器计算机的通用操作系统",
+        "size": 1
+      },
+      {
+        "topic": "机器学习有助于在更接近实际的温度条件下追踪半导体缺陷",
+        "size": 1
+      },
+      {
+        "topic": "机器学习模型根据微生物组数据预测人类健康状况",
+        "size": 1
+      },
+      {
+        "topic": "纽约巨人队的一位共同所有者如何利用人工智能，携手哥谭FC打造女子体育劲旅",
+        "size": 1
+      },
+      {
+        "topic": "因消费担忧，股票轮动冲击人工智能板块领涨股：市场综述",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "Hermes、REA 和 GLM 5.3:以不到 20 美元的成本逆向 TikT",
+        "size": 1
+      },
+      {
+        "topic": "一个在树莓派 Pico 2 W 上运行游戏的微型世界模型",
+        "size": 1
+      },
+      {
+        "topic": "特斯拉被曝在收到后悬挂系统坍塌报告后修改规格参数",
+        "size": 1
+      },
+      {
+        "topic": "报告称 AI 正在推荐高风险的安全操作——因此或许您还不应完全掌控自己的系统",
+        "size": 1
+      },
+      {
+        "topic": "Google 将 AI 模式广告推广至更多国家",
+        "size": 1
+      },
+      {
+        "topic": "OpenCode Go 面向团队开放",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 论文研究",
+        "size": 1
+      },
+      {
+        "topic": "开源",
+        "size": 1
+      },
+      {
+        "topic": "如果一家曾因人工智能相关原因裁员的公司希望你回归，你该考虑哪些因素 - AP N",
+        "size": 1
+      },
+      {
+        "topic": "格蕾丝·布莱克韦尔需要一个新的调度程序：在相同的机架上，可用GPU数量增加了27",
+        "size": 1
+      },
+      {
+        "topic": "力帆汽车扩大与大众汽车的合资项目，新增AI助手业务",
+        "size": 1
+      },
+      {
+        "topic": "拟议中的水下AI数据中心或将对濒危鲸类造成干扰",
+        "size": 1
+      },
+      {
+        "topic": "Perplexity 转型多人协作工作空间",
+        "size": 1
+      },
+      {
+        "topic": "美众议院民主党人要求保存白宫聊天机器人记录",
+        "size": 1
+      },
+      {
+        "topic": "行业动态",
+        "size": 1
+      },
+      {
+        "topic": "Anthropic 真的能成为一家市值 10 万亿美元的公司吗？ - The V",
+        "size": 1
+      },
+      {
+        "topic": "伦敦的法院在人工智能的助力下可以蓬勃发展——但也面临风险",
+        "size": 1
+      },
+      {
+        "topic": "帕特里克·斯图尔特去世了",
+        "size": 1
+      },
+      {
+        "topic": "OpenAI 将用量限额恢复为双倍",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 论文研究",
+        "size": 1
+      },
+      {
+        "topic": "软件社区的重要性",
+        "size": 1
+      },
+      {
+        "topic": "Show HN: 自动关闭 Mac OS 中的“允许 查找本地网络上的设备？”提",
+        "size": 1
+      },
+      {
+        "topic": "编码工具",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "微软上一季度从OpenAI获得100亿美元收入，占其总收入的11%",
+        "size": 1
+      },
+      {
+        "topic": "Horizon3 CEO 做客 Big Technology 谈 AI 黑客为何",
+        "size": 1
+      },
+      {
+        "topic": "人工智能工程很简单。我们真的必须改变工作方式吗？",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "Anthropic S-1 文件解读：财务表现强劲但增长放缓存隐忧",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 模型发布",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "这张图表显示了在人工智能热潮中，谷歌的员工人数激增了多少",
+        "size": 1
+      },
+      {
+        "topic": "让中国效仿美国的AI",
+        "size": 1
+      },
+      {
+        "topic": "MCP/工具",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "可灵分享 Simon Meyer 用 Kling 4.0 制作万圣节短片的方法",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "巴里·迪勒表示，像他押注MGM和拉斯维加斯这样的“永久性资产”，是抵御人工智能的",
+        "size": 1
+      },
+      {
+        "topic": "那些人工智能万圣节糖果自动贩卖机都去哪儿了？",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "犹他州指控Kalshi及其首席执行官非法推广在线赌博",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "行业动态",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "特朗普及其助手协助弗拉维奥·博索纳罗在面临刑事调查期间逃离巴西",
+        "size": 1
+      },
+      {
+        "topic": "Archive Of Our Own 因维护将停运 2 至 4 周",
+        "size": 1
+      },
+      {
+        "topic": "OpenAI 围绕五大核心价值观重编其 AI 规则手册",
+        "size": 1
+      },
+      {
+        "topic": "Anthropic 早期成员回顾 AI 实验室初创时期的职业倦怠与远大抱负",
+        "size": 1
+      },
+      {
+        "topic": "Aircall 联合创始人 Olivier Pailhès 重返 CEO 岗位，",
+        "size": 1
+      },
+      {
+        "topic": "多模态",
+        "size": 1
+      },
+      {
+        "topic": "新型网络犯罪活动利用名称听起来真实可信的虚假 AI 应用，诱骗好奇尝试最新工具的",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "我正在开发 LYNX，这是一款受 FL Studio 启发的开源数字音频工作站，",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "行业动态",
+        "size": 1
+      },
+      {
+        "topic": "Deepgram 收购 Pipecat 开发商 Daily，并继续将该语音 AI",
+        "size": 1
+      },
+      {
+        "topic": "加拿大追加 250 万加元，支持另外 25 家大草原地区企业借助 Amii 采用",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 部署推理",
+        "size": 1
+      },
+      {
+        "topic": "MCP/工具",
+        "size": 1
+      },
+      {
+        "topic": "编码工具",
+        "size": 1
+      },
+      {
+        "topic": "Show HN: Overtone——为任何屏幕形状的字幕进行转录、校对和剪辑",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 编码工具",
+        "size": 1
+      },
+      {
+        "topic": "环球徒步 28 年后，他已几乎到家",
+        "size": 1
+      },
+      {
+        "topic": "Odyssey：世界模型将带来新发现",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "Ask HN: 对还是错：AI 并未取代软件工程师，管理层只是为了证明 AI 支",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "开源",
+        "size": 1
+      },
+      {
+        "topic": "编码工具 · MCP/工具",
+        "size": 1
+      },
+      {
+        "topic": "编码工具",
+        "size": 1
+      },
+      {
+        "topic": "编码工具",
+        "size": 1
+      },
+      {
+        "topic": "编码工具",
+        "size": 1
+      },
+      {
+        "topic": "编码工具 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "编码工具",
+        "size": 1
+      },
+      {
+        "topic": "开源",
+        "size": 1
+      },
+      {
+        "topic": "开源 · 多模态",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "“我认为现在是开创事业的大好时机”:OpenAI 首席执行官 Sam Altma",
+        "size": 1
+      },
+      {
+        "topic": "OpenAI 从重置公司迈向 Token 公司",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "开源 · 论文研究",
+        "size": 1
+      },
+      {
+        "topic": "托马什·米科洛夫被捷克共和国总统授予功绩勋章",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "有毒专家(2017 年)",
+        "size": 1
+      },
+      {
+        "topic": "Ask HN: 手头有即将过期的未使用 OpenAI / Anthropic /",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "开源",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "开源 · 模型发布",
+        "size": 1
+      },
+      {
+        "topic": "开源 · 智能体",
+        "size": 1
+      },
+      {
+        "topic": "开源 · 智能体",
+        "size": 1
+      },
+      {
+        "topic": "这届中产父母的AI焦虑，标价13800元",
+        "size": 1
+      },
+      {
+        "topic": "史诗级封号收入",
+        "size": 1
+      },
+      {
+        "topic": "开源",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "一句话叫车：货拉拉小程序 AI 叫车实战",
+        "size": 1
+      },
+      {
+        "topic": "微软发布自 2018 年以来最大 DirectX 光追升级：AMD RX 907",
+        "size": 1
+      },
+      {
+        "topic": "Alphabet 市值恐将缩水 5000 亿美元，创历史新高",
+        "size": 1
+      },
+      {
+        "topic": "随机鹦鹉还活着吗？",
+        "size": 1
+      },
+      {
+        "topic": "大家都在募资",
+        "size": 1
+      },
+      {
+        "topic": "论文研究",
+        "size": 1
+      },
+      {
+        "topic": "五角大楼称伊朗战争已使美国纳税人损失470亿美元：这意味着什么 - Al Jaz",
+        "size": 1
+      },
+      {
+        "topic": "行业动态",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "16colo.rs – ANSI/ASCII 艺术存档",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 编码工具",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 部署推理",
+        "size": 1
+      },
+      {
+        "topic": "走进全宇宙:开发者如何利用前沿 AI 智能体将创意转化为模拟场景",
+        "size": 1
+      },
+      {
+        "topic": "论文研究 · 部署推理",
+        "size": 1
+      },
+      {
+        "topic": "论文研究",
+        "size": 1
+      },
+      {
+        "topic": "多模态 · 论文研究",
+        "size": 1
+      },
+      {
+        "topic": "Microsoft 的 AI 未来意味着更少的就业岗位",
+        "size": 1
+      },
+      {
+        "topic": "Launch HN: Simantic (YC F26) – 专为 AI 智能体",
+        "size": 1
+      },
+      {
+        "topic": "行业动态",
+        "size": 1
+      },
+      {
+        "topic": "《H.264 就是魔法》（2016）",
+        "size": 1
+      },
+      {
+        "topic": "MCP/工具 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "在华为禁令和新出口管制措施的背景下，中欧人工智能对话能否继续下去？ - EUob",
+        "size": 1
+      },
+      {
+        "topic": "在微软内部，一位新上任的、极具影响力的人工智能高管正在对该公司的一些最重要业务进",
+        "size": 1
+      },
+      {
+        "topic": "Show HN: StrictLLM——当您需要“人机协同”时",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "墨西哥是那些在美国买不到的电动汽车的展示厅。",
+        "size": 1
+      },
+      {
+        "topic": "行业动态",
+        "size": 1
+      },
+      {
+        "topic": "当你的同事都是人工智能代理时，工作会是什么样子？",
+        "size": 1
+      },
+      {
+        "topic": "Anthropic的商业计划：要么创造出“神”，要么在尝试中死去 - The V",
+        "size": 1
+      },
+      {
+        "topic": "Anthropic S-1 披露 2025 年为 Dario Amodei 花费",
+        "size": 1
+      },
+      {
+        "topic": "论文研究",
+        "size": 1
+      },
+      {
+        "topic": "[推广] CDN3900U/P Ai 模型最低至 4 折 阿里腾讯华为火山国内站",
+        "size": 1
+      },
+      {
+        "topic": "利用 AI 为个体经营者自动记账的 Collective 公司完成 4000 万",
+        "size": 1
+      },
+      {
+        "topic": "MIT 教授称 AI 正在接管你的大脑",
+        "size": 1
+      },
+      {
+        "topic": "智能体",
+        "size": 1
+      },
+      {
+        "topic": "模型发布 · 安全对齐",
+        "size": 1
+      },
+      {
+        "topic": "美国员工的敬业度创历史新低——许多人将矛头指向 AI，远程和混合办公者尤甚",
+        "size": 1
+      },
+      {
+        "topic": "PixVerse 展示 15 秒写实拳击短片生成提示词",
+        "size": 1
+      },
+      {
+        "topic": "编码工具",
+        "size": 1
+      },
+      {
+        "topic": "部署推理",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · MCP/工具",
+        "size": 1
+      },
+      {
+        "topic": "芬兰就谷歌毁坏25万棵树一事展开调查",
+        "size": 1
+      },
+      {
+        "topic": "开源",
+        "size": 1
+      },
+      {
+        "topic": "真的再也没有人能写出比大型语言模型（LLMs）更好的代码了吗？在什么方面更好呢？",
+        "size": 1
+      },
+      {
+        "topic": "MCP/工具 · 开源",
+        "size": 1
+      },
+      {
+        "topic": "开源 · 安全对齐",
+        "size": 1
+      },
+      {
+        "topic": "映泰推出无风扇边缘 AI 系统 MS-U320：酷睿 5 处理器 320，四 C",
+        "size": 1
+      },
+      {
+        "topic": "EA 裁员后办公室现状曝光：员工士气跌至谷底，管理层热衷于生成式 AI",
+        "size": 1
+      },
+      {
+        "topic": "NYT Cooking 应用正在测试 AI 食谱修改功能",
+        "size": 1
+      },
+      {
+        "topic": "若民主党赢得众议院控制权，人工智能实验室将成进步派关注焦点",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 编码工具",
+        "size": 1
+      },
+      {
+        "topic": "模型发布",
+        "size": 1
+      },
+      {
+        "topic": "智能体 · 模型发布",
+        "size": 1
+      },
+      {
+        "topic": "月之暗面 Kimi 接入谷歌 Gmail、云端硬盘和日历",
         "size": 1
       }
     ]
