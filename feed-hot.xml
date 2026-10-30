@@ -5,23 +5,20 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 30 Oct 2026 15:37:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 20:27:54 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>thedotmack/claude-mem</title>
-      <link>https://github.com/thedotmack/claude-mem</link>
-      <guid isPermaLink="true">https://github.com/thedotmack/claude-mem</guid>
-      <pubDate>Thu, 29 Oct 2026 16:40:22 +0000</pubDate>
-      <description>claude：Persistent Context Across Sessions for Every Agent – Captu...，适合进一步验证代码、协议或社区采用情况。
+      <title>关于开放模型和网络风险，我错了吗？</title>
+      <link>https://www.interconnects.ai/p/was-i-wrong-about-open-models-and</link>
+      <guid isPermaLink="true">https://www.interconnects.ai/p/was-i-wrong-about-open-models-and</guid>
+      <pubDate>Fri, 30 Oct 2026 17:36:56 +0000</pubDate>
+      <description>关于开放模型和网络风险：Last week coined the term &amp;#8220，适合优先评估模型能力、价格和工具选型变化。
 
-Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More
+Last week coined the term &amp;#8220;Black October&amp;#8220; after an onslaught of critical vulnerability disclosures, including PHP2Shell and GitLab, signified the moment when the cyber risks of AI models...
 
-信号等级 B · 评分 67.8</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>智能体</category>
+信号等级 A · 评分 72.5</description>
+      <category>Official AI Updates</category>
       <category>模型发布</category>
-      <category>编码工具</category>
     </item>
     <item>
       <title>Fable 5.5测试曝光，Claude每次回答后，还会执行一条你看不到的指令</title>
@@ -37,30 +34,72 @@ Persistent Context Across Sessions for Every Agent – Captures everything your 
       <category>模型发布</category>
     </item>
     <item>
-      <title>Sam Altman 同情数学家，但表示 OpenAI 的“数学狂潮”不会停止</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview</guid>
-      <pubDate>Fri, 30 Oct 2026 13:01:14 +0000</pubDate>
-      <description>OpenAI CEO Sam Altman表示理解数学家们对AI连续输出研究结果的困惑，但强调其仍在持续推进相关工作，来自官方更新源，适合直接判断产品变化。
-
-OpenAI CEO Sam Altman表示理解数学家们对AI连续输出研究结果的困惑，但强调其仍在持续推进相关工作。
+      <title>nemotron-halloween</title>
+      <link>https://huggingface.co/blog/nvidia/nemotron-halloween</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/nvidia/nemotron-halloween</guid>
+      <pubDate>Fri, 30 Oct 2026 17:57:24 +0000</pubDate>
+      <description>nemotron-halloween，来自官方更新源，适合直接判断产品变化。
 
 信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>夜半惊鸣:智能体AI加入地外信号搜寻行列</title>
+      <link>https://blogs.nvidia.com/blog/ai-joins-the-search-for-extraterrestrial-signals</link>
+      <guid isPermaLink="true">https://blogs.nvidia.com/blog/ai-joins-the-search-for-extraterrestrial-signals</guid>
+      <pubDate>Fri, 30 Oct 2026 15:00:10 +0000</pubDate>
+      <description>夜半惊鸣：虽然科幻传说暗示人类会以小绿人的形式遇见外星生命，但今年万圣节应引起警惕的是：地外文明搜寻计划（SETI）正面临资金...，适合关注自动化任务和多 Agent 协作演进。
+
+虽然科幻传说暗示人类会以小绿人的形式遇见外星生命，但今年万圣节应引起警惕的是：地外文明搜寻计划（SETI）正面临资金短缺与公众兴趣下降的双重挑战。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>LRMoE:面向内存受限节点的高效MoE训练的需求侧负载重新校准方法</title>
+      <link>https://arxiv.org/abs/2610.37720</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.37720</guid>
+      <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
+      <description>LRMoE：The user wants a Chinese summary of the provided arXiv abs...，适合判断技术路线和后续产品化可能性。
+
+The user wants a Chinese summary of the provided arXiv abstract.
+Constraints:
+1. Professional tech news editor style.
+2. Concise (1-2 sentences, &lt; 100 chars).
+3. Retain key data/proper nouns.
+4. Natural flow.
+5. Output ONLY the translation.
+
+Input text: &quot;arXiv:2610.37720v1 Announce Type: new Abstract: Sparse Mixture-of-Experts (MoE) models offer scalable capacity for Web applications, but uneven routing creates computation and communication...&quot;
+
+The input cuts off. I need to summarize based on what is there.
+Key points: Sparse MoE models, scalable for Web apps, problem: uneven routing causes computation/communication issues (likely imbalance/overhead).
+Likely title/topic: Load balancing or routing optimization in MoE.
+
+Drafting summary:
+arXiv最新论文指出，稀疏混合专
+
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>人工智能数据中心能像汽车一样大规模生产吗？这家初创公司正试图寻找答案</title>
-      <link>https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out</guid>
-      <pubDate>Fri, 30 Oct 2026 13:00:00 +0000</pubDate>
-      <description>人工智能数据中心能像汽车一样大规模生产吗：Runware 正在建立一家工厂，通过流水线生产预制 AI 数据中心，其关键挑战在于能否实现大规模交付，适合判断资金、客户和生态格局的变化。
+      <title>SciGame:让智能体在真实与反事实世界中玩科学发现游戏</title>
+      <link>https://arxiv.org/abs/2610.37919</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.37919</guid>
+      <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
+      <description>SciGame：arXiv:2610.37919v1 Announce Type: new Abstract: Large lang...，适合判断技术路线和后续产品化可能性。
 
-Runware 正在建立一家工厂，通过流水线生产预制 AI 数据中心，其关键挑战在于能否实现大规模交付。
+arXiv:2610.37919v1 Announce Type: new Abstract: Large language model agents are increasingly used for scientific discovery. However, existing benchmarks mix law inference with programming, score data...
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
-      <category>行业动态</category>
+      <category>论文研究</category>
       <category>部署推理</category>
     </item>
     <item>
@@ -302,11 +341,11 @@ arXiv:2610.39518v1 Announce Type: new Abstract: Next point-of-interest (POI) rec
       <category>论文研究</category>
     </item>
     <item>
-      <title>The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases</title>
+      <title>上下文的真实成本:预测LLM预填充和解码阶段的计算时间与能耗</title>
       <link>https://arxiv.org/abs/2610.39621</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.39621</guid>
       <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
-      <description>The Real Cost of Con...：arXiv:2610.39621v1 Announce Type: new Abstract: The integr...，适合关注自动化任务和多 Agent 协作演进。
+      <description>上下文的真实成本：arXiv:2610.39621v1 Announce Type: new Abstract: The integr...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2610.39621v1 Announce Type: new Abstract: The integration of Large Language Models (LLMs) into agentic architectures has substantially increased token consumption, raising concerns about their...
 
@@ -316,7 +355,7 @@ arXiv:2610.39621v1 Announce Type: new Abstract: The integration of Large Languag
       <category>论文研究</category>
     </item>
     <item>
-      <title>EvoTeam: Multi-Agent Collaboration via Evolving Teams</title>
+      <title>EvoTeam:通过演化团队实现多智能体协作</title>
       <link>https://arxiv.org/abs/2610.39813</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.39813</guid>
       <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
@@ -330,7 +369,7 @@ arXiv:2610.39813v1 Announce Type: new Abstract: LLM-based multi-agent systems (M
       <category>论文研究</category>
     </item>
     <item>
-      <title>AegisFlow: Training-Free Non-Myopic Path-Safe Guided Flow Matching</title>
+      <title>AegisFlow:无需训练的、非短视的路径安全引导式流匹配</title>
       <link>https://arxiv.org/abs/2610.39825</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.39825</guid>
       <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
@@ -344,7 +383,7 @@ arXiv:2610.39825v1 Announce Type: new Abstract: Pretrained generative models, su
       <category>多模态</category>
     </item>
     <item>
-      <title>KARMA: Training-Free Knowledge-Atomic Harness Evolution for Industrial Advertising Agents</title>
+      <title>KARMA:无需训练的、面向工业广告智能体的知识原子级Harness演化</title>
       <link>https://arxiv.org/abs/2610.39884</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.39884</guid>
       <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
@@ -357,11 +396,11 @@ arXiv:2610.39884v1 Announce Type: new Abstract: Industrial advertising agents mu
       <category>论文研究</category>
     </item>
     <item>
-      <title>Hybrid AI Patterns: Thirteen Ways to Couple Language Models with Rules, and How to Choose Among Them</title>
+      <title>混合AI模式:将语言模型与规则相结合的十三种方式及其选择方法</title>
       <link>https://arxiv.org/abs/2610.40036</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.40036</guid>
       <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Hybrid AI Patterns：arXiv:2610.40036v1 Announce Type: new Abstract: Language m...，适合判断技术路线和后续产品化可能性。
+      <description>混合AI模式：arXiv:2610.40036v1 Announce Type: new Abstract: Language m...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.40036v1 Announce Type: new Abstract: Language models handle text well, and rule engines give conclusions with proofs. Systems that combine the two are usually described by example, and the...
 
@@ -652,33 +691,6 @@ arXiv:2610.38517v1 Announce Type: cross Abstract: Diffusion and flow matching mo
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
-    </item>
-    <item>
-      <title>When AI performs, what remains? An integrative review of generative AI and cognitive capital in individuals and organizations</title>
-      <link>https://arxiv.org/abs/2610.38647</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.38647</guid>
-      <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
-      <description>When AI performs：arXiv:2610.38647v1 Announce Type: cross Abstract: Generati...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.38647v1 Announce Type: cross Abstract: Generative artificial intelligence is rapidly entering knowledge work, and its short-term productivity benefits are increasingly documented. Less is...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Information-Theoretic Reliability--Safety Bounds and Finite-Alignment Dynamics in AI Knowledge Distillation</title>
-      <link>https://arxiv.org/abs/2610.38651</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.38651</guid>
-      <pubDate>Fri, 30 Oct 2026 04:00:00 +0000</pubDate>
-      <description>Information-Theoreti...：arXiv:2610.38651v1 Announce Type: cross Abstract: The reli...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.38651v1 Announce Type: cross Abstract: The reliability and safety of artificial intelligence (AI), together with their transfer and evolution through knowledge distillation, have attracted...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>安全对齐</category>
     </item>
   </channel>
 </rss>
