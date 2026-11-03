@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 02 Nov 2026 17:54:24 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 00:38:25 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>一夜之间，GPT-6.2 Astra 和 Fable 5.5 双双曝光，AI 圈疯狂 11 月要来了</title>
@@ -21,17 +21,58 @@
       <category>模型发布</category>
     </item>
     <item>
-      <title>D4Vinci/Scrapling</title>
-      <link>https://github.com/D4Vinci/Scrapling</link>
-      <guid isPermaLink="true">https://github.com/D4Vinci/Scrapling</guid>
-      <pubDate>Mon, 02 Nov 2026 17:54:24 +0000</pubDate>
-      <description>D4Vinci/Scrapling：🕷️ The BEST Web Scraping framework that handles everything...，适合进一步验证代码、协议或社区采用情况。
+      <title>Trajectory融资4500万美元，旨在让非技术专家也能使用AI模型训练</title>
+      <link>https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts</guid>
+      <pubDate>Mon, 02 Nov 2026 23:13:53 +0000</pubDate>
+      <description>Trajectory融资4500万美元：这家成立一年的初创公司目前估值为 3 亿美元，适合判断资金、客户和生态格局的变化。
 
-🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don&apos;t be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev
+这家成立一年的初创公司目前估值为 3 亿美元。
 
-信号等级 B · 评分 65.4</description>
-      <category>开源热榜</category>
-      <category>开源</category>
+信号等级 B · 评分 65.0</description>
+      <category>Official AI Updates</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>多模态语音情感识别在音频大语言模型中的不一致性感知评估</title>
+      <link>https://arxiv.org/abs/2610.40883</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.40883</guid>
+      <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
+      <description>多模态语音情感识别在音频大语言模型中的不...：arXiv:2610.40883v1 Announce Type: new Abstract: Voice-inte...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.40883v1 Announce Type: new Abstract: Voice-interactive large language models process both what a speaker says and how they say it, yet the two channels do not always agree. We ask whether...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>迈向可移植的智能体框架规范</title>
+      <link>https://arxiv.org/abs/2610.40917</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.40917</guid>
+      <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
+      <description>迈向可移植的智能体框架规范：arXiv:2610.40917v1 Announce Type: new Abstract: Large lang...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2610.40917v1 Announce Type: new Abstract: Large language models act only through the infrastructure that surrounds them. That infrastructure, the harness, determines what a model can accomplish...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>前几个词至关重要:理解思维链的可控性</title>
+      <link>https://arxiv.org/abs/2610.40939</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.40939</guid>
+      <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
+      <description>前几个词至关重要：arXiv:2610.40939v1 Announce Type: new Abstract: Chain-of-t...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2610.40939v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising way to oversee increasingly capable agents. It succeeds in part because current models appear limited...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>P-ContextBench:从个人事实回忆到个性化智能体行为</title>
@@ -316,11 +357,11 @@ arXiv:2610.41073v1 Announce Type: cross Abstract: Reinforcement learning (RL) po
       <category>部署推理</category>
     </item>
     <item>
-      <title>When Disclosure Is Compulsory: Evaluating Ride-Hailing Rebalancing Policies with Self-Interested LLM Driver Agents</title>
+      <title>当披露成为强制要求:利用逐利 LLM 司机智能体评估网约车调度平衡政策</title>
       <link>https://arxiv.org/abs/2610.41132</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.41132</guid>
       <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
-      <description>When Disclosure Is C...：arXiv:2610.41132v1 Announce Type: cross Abstract: The EU P...，适合判断技术路线和后续产品化可能性。
+      <description>当披露成为强制要求：arXiv:2610.41132v1 Announce Type: cross Abstract: The EU P...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.41132v1 Announce Type: cross Abstract: The EU Platform Work Directive, to be transposed by December 2026, requires ride-hailing platforms to state in plain language the main parameters of...
 
@@ -329,7 +370,7 @@ arXiv:2610.41132v1 Announce Type: cross Abstract: The EU Platform Work Directive
       <category>论文研究</category>
     </item>
     <item>
-      <title>ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference</title>
+      <title>ARK:在解耦式 LLM 推理中避免 KV 缓存传输的路由冲突</title>
       <link>https://arxiv.org/abs/2610.41160</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.41160</guid>
       <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
@@ -630,59 +671,17 @@ arXiv:2610.37826v2 Announce Type: replace-cross Abstract: Retrieval-augmented ge
       <category>论文研究</category>
     </item>
     <item>
-      <title>vercel-labs/agent-desktop</title>
-      <link>https://github.com/vercel-labs/agent-desktop</link>
-      <guid isPermaLink="true">https://github.com/vercel-labs/agent-desktop</guid>
-      <pubDate>Mon, 02 Nov 2026 17:54:24 +0000</pubDate>
-      <description>vercel-labs/agent-de...：Agent Desktop gives any agent reliable computer use on the...，适合关注自动化任务和多 Agent 协作演进。
+      <title>LifeVal</title>
+      <link>https://openai.com/index/lifeval</link>
+      <guid isPermaLink="true">https://openai.com/index/lifeval</guid>
+      <pubDate>Mon, 02 Nov 2026 09:00:00 +0000</pubDate>
+      <description>Introducing LifeVal, a benchmark measuring how well AI hel...，来自官方更新源，适合直接判断产品变化。
 
-Agent Desktop gives any agent reliable computer use on the desktop. Built with Rust, it sees any app&apos;s real UI structure through OS accessibility trees and operates it — refs stay stable and actions stay safe to retry, instead of guessing from pixels.
+Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.
 
-信号等级 B · 评分 62.3</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>LanG 2.0:面向大规模半自动化安全运营的高效能智能体 AI</title>
-      <link>https://arxiv.org/abs/2610.41072</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.41072</guid>
-      <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
-      <description>LanG 2.0：arXiv:2610.41072v1 Announce Type: new Abstract: Security o...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.41072v1 Announce Type: new Abstract: Security operations centers (SOCs) need to turn terabytes of alerts, logs and flows into trusted, affordable decisions to unveil hidden threats. We...
-
-信号等级 B · 评分 61.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Safin-1.5:用于递归式安全改进的安全原生架构与可验证推理</title>
-      <link>https://arxiv.org/abs/2610.40751</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.40751</guid>
-      <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Safin-1.5：arXiv:2610.40751v1 Announce Type: cross Abstract: Recursiv...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.40751v1 Announce Type: cross Abstract: Recursive self-improvement (RSI) enables large language models to advance their capabilities through successive updates, but these updates can also...
-
-信号等级 B · 评分 61.2</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>因成本“高得难以持续”，埃隆·马斯克限制 Grok Bot 使用额度</title>
-      <link>https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs</guid>
-      <pubDate>Mon, 02 Nov 2026 16:23:21 +0000</pubDate>
-      <description>因成本“高得难以持续”：Musk recently referred to Grok Bot as having &quot;the fastest...，适合优先评估模型能力、价格和工具选型变化。
-
-Musk recently referred to Grok Bot as having &quot;the fastest growth of a product that I&apos;ve ever seen in my life.&quot;
-
-信号等级 B · 评分 60.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
     </item>
   </channel>
 </rss>
