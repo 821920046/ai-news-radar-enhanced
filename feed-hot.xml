@@ -5,21 +5,20 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 04 Nov 2026 16:53:51 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 22:27:25 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>AI 推理初创公司 Fal 因需求激增，估值翻倍至 160 亿美元</title>
-      <link>https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges</guid>
-      <pubDate>Tue, 03 Nov 2026 19:34:43 +0000</pubDate>
-      <description>AI 推理初创公司 Fal 因需求激增：The five-year-old startup raised a $1.3 billion round led...，适合判断资金、客户和生态格局的变化。
+      <title>Gemini for Home 现已接入 AT&amp;T 智能安防系统</title>
+      <link>https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system</link>
+      <guid isPermaLink="true">https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system</guid>
+      <pubDate>Wed, 04 Nov 2026 20:23:24 +0000</pubDate>
+      <description>AT&amp;T智能家庭安防系统现已集成Gemini for Home，成为首款支持Google Home Premium的...，来自官方更新源，适合直接判断产品变化。
 
-The five-year-old startup raised a $1.3 billion round led by Bessemer.
+AT&amp;T智能家庭安防系统现已集成Gemini for Home，成为首款支持Google Home Premium的家用安防产品。
 
-信号等级 B · 评分 67.2</description>
+信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
-      <category>行业动态</category>
-      <category>部署推理</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>harry0703/MoneyPrinterTurbo</title>
@@ -40,9 +39,9 @@ The five-year-old startup raised a $1.3 billion round led by Bessemer.
       <link>https://github.com/garrytan/gstack</link>
       <guid isPermaLink="true">https://github.com/garrytan/gstack</guid>
       <pubDate>Wed, 04 Nov 2026 16:53:51 +0000</pubDate>
-      <description>garrytan/gstack：Garry Tan 的 Claude Code 配置包含23个专业工具，分别扮演CEO、设计师、工程经理、发布经理...，适合优先评估模型能力、价格和工具选型变化。
+      <description>garrytan/gstack：Y Combinator CEO Garry Tan 公开了其 Claude Code 专用配置：23 个具备强烈观...，适合优先评估模型能力、价格和工具选型变化。
 
-Garry Tan 的 Claude Code 配置包含23个专业工具，分别扮演CEO、设计师、工程经理、发布经理、文档工程师和QA角色，提升开发效率与协作质量。
+Y Combinator CEO Garry Tan 公开了其 Claude Code 专用配置：23 个具备强烈观点的工具，分别担任 CEO、设计师、工程经理、发布经理、文档工程师及 QA 等六大角色。
 
 信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
@@ -54,14 +53,122 @@ Garry Tan 的 Claude Code 配置包含23个专业工具，分别扮演CEO、设�
       <link>https://github.com/FareedKhan-dev/kimi-k3-in-c</link>
       <guid isPermaLink="true">https://github.com/FareedKhan-dev/kimi-k3-in-c</guid>
       <pubDate>Wed, 04 Nov 2026 16:53:51 +0000</pubDate>
-      <description>FareedKhan-dev/kimi-...：Kimi K3拥有2.78万亿参数，可在单核CPU上运行，仅需8.24GB内存，且采用无BLAS、无框架、无GPU的...，适合进一步验证代码、协议或社区采用情况。
+      <description>FareedKhan-dev/kimi-...：2.78 万亿参数的 Kimi K3 在 8.24 GB RAM 的单个 CPU 上运行推理，适合进一步验证代码、协议或社区采用情况。
 
-Kimi K3拥有2.78万亿参数，可在单核CPU上运行，仅需8.24GB内存，且采用无BLAS、无框架、无GPU的便携C99实现。
+2.78 万亿参数的 Kimi K3 在 8.24 GB RAM 的单个 CPU 上运行推理。便携式 C99：无 BLAS、无框架、无 GPU。
 
 信号等级 B · 评分 62.5</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>部署推理</category>
+    </item>
+    <item>
+      <title>智能体看板:面向机器的看板管理；实现超越会话周期的持久智能体协作</title>
+      <link>https://arxiv.org/abs/2611.04100</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04100</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>智能体看板：arXiv:2611.04100v1 Announce Type: new Abstract: Harnesses...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.04100v1 Announce Type: new Abstract: Harnesses for large language models have converged on a single-threaded shape: one agent, one history, one machine, one sitting. That shape fails work...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>美国联邦人工智能清单中的“重写本式”问责机制</title>
+      <link>https://arxiv.org/abs/2611.04153</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04153</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>美国联邦人工智能清单中的“重写本式”问责...：arXiv:2611.04153v1 Announce Type: new Abstract: An AI inve...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.04153v1 Announce Type: new Abstract: An AI inventory is a structured, often public record in which a government or organization lists and describes the AI systems it uses or plans to use....
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>层层嵌套的时钟:序列处理人工智能是否需要内生时间结构？</title>
+      <link>https://arxiv.org/abs/2611.04181</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04181</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>层层嵌套的时钟：arXiv:2611.04181v1 Announce Type: new Abstract: Mainstream...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.04181v1 Announce Type: new Abstract: Mainstream sequence-processing AI is temporally reactive: each update is driven by input and learned state transitions, rather than by an independently...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>DualWorldBench:智能体能否在符号世界与现实世界之间规划交付？</title>
+      <link>https://arxiv.org/abs/2611.04228</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04228</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>DualWorldBench：arXiv:2611.04228v1 Announce Type: new Abstract: Recent mul...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.04228v1 Announce Type: new Abstract: Recent multimodal agents have shown promising progress in embodied planning and web interaction. However, existing evaluations often rely on simplified...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>OSGR:用于地球观测问答的观察支持图推理</title>
+      <link>https://arxiv.org/abs/2611.04301</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04301</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>OSGR：arXiv:2611.04301v1 Announce Type: new Abstract: Answering...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.04301v1 Announce Type: new Abstract: Answering geographic queries over Earth observation (EO) archives requires solving a joint retrieval-and-derivation problem under strict spatiotemporal...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>无声的仪器误差导致智能体排行榜重新排序</title>
+      <link>https://arxiv.org/abs/2611.04399</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04399</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>无声的仪器误差导致智能体排行榜重新排序：arXiv:2611.04399v1 Announce Type: new Abstract: On a publi...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.04399v1 Announce Type: new Abstract: On a public agent leaderboard, a general-purpose agent trails a scaffold built for an airline customer-service benchmark by 13 points on the tasks that...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>CogniLife:面向已部署多专家智能体市场的持续认知蒸馏技术</title>
+      <link>https://arxiv.org/abs/2611.04483</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04483</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>CogniLife：arXiv:2611.04483v1 Announce Type: new Abstract: Multi-expe...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.04483v1 Announce Type: new Abstract: Multi-expert agent marketplaces -- where creators publish domain-specific AI experts for end users to consult -- are an emerging deployment pattern for...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Signals:AI 智能体的持续诊断</title>
+      <link>https://arxiv.org/abs/2611.04507</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.04507</guid>
+      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
+      <description>Signals：arXiv:2611.04507v1 Announce Type: new Abstract: AI agents...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.04507v1 Announce Type: new Abstract: AI agents can make incorrect decisions or waste resources even when their tools and infrastructure work normally. Their nondeterministic behavior makes...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>TactiNavi:通过明确的策略条件为 LLM 游戏教练提供服务与修订</title>
@@ -174,7 +281,7 @@ arXiv:2604.24693v2 Announce Type: cross Abstract: Linear activation steering is 
       <category>论文研究</category>
     </item>
     <item>
-      <title>rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment</title>
+      <title>rTaste:研究代理有品味吗？评估早期研究阶段的判断力</title>
       <link>https://arxiv.org/abs/2610.40488</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.40488</guid>
       <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
@@ -187,11 +294,11 @@ arXiv:2610.40488v1 Announce Type: cross Abstract: Do research agents have taste,
       <category>论文研究</category>
     </item>
     <item>
-      <title>A Compact Formula-Aware Spreadsheet Abstraction for Large Language Models</title>
+      <title>适用于大语言模型的紧凑型公式感知电子表格抽象方法</title>
       <link>https://arxiv.org/abs/2611.03705</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.03705</guid>
       <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>A Compact Formula-Aw...：arXiv:2611.03705v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
+      <description>适用于大语言模型的紧凑型公式感知电子表格...：arXiv:2611.03705v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.03705v1 Announce Type: cross Abstract: Large language models (LLMs) are increasingly used to assist spreadsheet users with tasks such as spreadsheet model construction, formula generation,...
 
@@ -582,115 +689,6 @@ arXiv:2601.16882v3 Announce Type: replace-cross Abstract: Group recommender syst
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
-    </item>
-    <item>
-      <title>VidVec: Unlocking Video MLLM Embeddings for Video-Text Retrieval</title>
-      <link>https://arxiv.org/abs/2602.08099</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.08099</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>VidVec：arXiv:2602.08099v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2602.08099v2 Announce Type: replace-cross Abstract: Recent studies have adapted generative Multimodal Large Language Models (MLLMs) into embedding extractors for text-vision tasks, typically by...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>A Cognitive Framework for Idea Diversity in Large Language Models</title>
-      <link>https://arxiv.org/abs/2602.20408</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.20408</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>A Cognitive Framewor...：arXiv:2602.20408v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2602.20408v2 Announce Type: replace-cross Abstract: Consumers, marketers, and new product developers increasingly rely on LLMs for ideation. Yet ideas generated by independent LLM sessions tend...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Truth as a Compression Artifact in Language Model Training</title>
-      <link>https://arxiv.org/abs/2603.11749</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.11749</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Truth as a Compressi...：arXiv:2603.11749v4 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2603.11749v4 Announce Type: replace-cross Abstract: When a transformer is trained from scratch on corpora that solve the same mathematical problem both correctly and incorrectly, which solution...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention</title>
-      <link>https://arxiv.org/abs/2603.28458</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.28458</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>HISA：arXiv:2603.28458v5 Announce Type: replace-cross Abstract:...，适合优先评估模型能力、价格和工具选型变化。
-
-arXiv:2603.28458v5 Announce Type: replace-cross Abstract: Token-level sparse attention mechanisms, exemplified by DeepSeek Sparse Attention (DSA), achieve fine-grained key selection by scoring every...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Query-Conditioned Evidential Keyframe Sampling for MLLM-Based Long-Form Video Understanding</title>
-      <link>https://arxiv.org/abs/2604.01002</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2604.01002</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Query-Conditioned Ev...：arXiv:2604.01002v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2604.01002v2 Announce Type: replace-cross Abstract: Multimodal Large Language Models (MLLMs) have shown strong performance on video question answering, but their application to long-form videos...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Alignment Dynamics in LLM Fine-Tuning</title>
-      <link>https://arxiv.org/abs/2605.18309</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.18309</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Alignment Dynamics i...：arXiv:2605.18309v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.18309v2 Announce Type: replace-cross Abstract: Although Large Language Models (LLMs) achieve strong alignment through supervised fine-tuning and reinforcement learning from human feedback,...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>安全对齐</category>
-    </item>
-    <item>
-      <title>Personalized to Persuade: The Effects of Contextualization and Warmth on Trust and Reliance in Conversational AI</title>
-      <link>https://arxiv.org/abs/2605.31275</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.31275</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Personalized to Pers...：arXiv:2605.31275v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.31275v2 Announce Type: replace-cross Abstract: Contextualization is a form of personalization in which the message is framed in a context meaningful to the recipient, using their interests...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Accounting for Purchased Artificial Intelligence Inference in Corporate Greenhouse Gas Inventories: A Token-Based Method</title>
-      <link>https://arxiv.org/abs/2606.10660</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2606.10660</guid>
-      <pubDate>Wed, 04 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Accounting for Purch...：arXiv:2606.10660v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2606.10660v3 Announce Type: replace-cross Abstract: Purchased artificial intelligence (AI) inference belongs in Scope 3 Category 1 of a corporate greenhouse gas inventory, yet practice omits it...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
     </item>
   </channel>
 </rss>
