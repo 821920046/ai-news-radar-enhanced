@@ -5,31 +5,86 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Nov 2026 15:43:45 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 21:19:51 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Gemini Omni 1.2 Flash:处理速度更快、成本更低，支持更长的视频片段</title>
-      <link>https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash</guid>
-      <pubDate>Thu, 05 Nov 2026 17:00:00 +0000</pubDate>
-      <description>Text &quot;Gemini Introducing Gemini Omni 1.2 Flash&quot; surroudned...，来自官方更新源，适合直接判断产品变化。
+      <title>GuidedWAM:无需训练的世界动作模型能量引导方法，应用于自动驾驶</title>
+      <link>https://arxiv.org/abs/2611.07912</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07912</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>GuidedWAM：arXiv:2611.07912v1 Announce Type: new Abstract: World acti...，适合关注自动化任务和多 Agent 协作演进。
 
-Text &quot;Gemini Introducing Gemini Omni 1.2 Flash&quot; surroudned by images of a beehive, animals in conversation, a squid, and a woman walking down a street
+arXiv:2611.07912v1 Announce Type: new Abstract: World action models (WAMs) for autonomous driving couple the driving policy and the visual world model in a single generative network whose objectives...
 
-信号等级 B · 评分 67.2</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
-      <category>模型发布</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>[AINews] Inkling 2 Small:在12T代币上训练68小时，性能超越Muse Spark</title>
-      <link>https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark</link>
-      <guid isPermaLink="true">https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark</guid>
-      <pubDate>Fri, 06 Nov 2026 10:35:21 +0000</pubDate>
-      <description>2026 年 11 月 5 日 — Inkling 2 Small 的训练运行和 METR 在 Anthropic...，来自官方更新源，适合直接判断产品变化。
+      <title>有限大脑如何实现无界泛化:作为通用计算机的空间记忆</title>
+      <link>https://arxiv.org/abs/2611.07920</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07920</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>有限大脑如何实现无界泛化：arXiv:2611.07920v1 Announce Type: new Abstract: A child wh...，适合判断技术路线和后续产品化可能性。
 
-2026 年 11 月 5 日 — Inkling 2 Small 的训练运行和 METR 在 Anthropic 的人工智能研究研究的内部。
+arXiv:2611.07920v1 Announce Type: new Abstract: A child who learns to add small numbers adds numbers of any length. LSTMs and Transformers trained on short sequences fail on longer ones. We trace the...
 
-信号等级 B · 评分 65.2</description>
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>ChemE-as-Code:一个用于化学工程智能体AI的开源平台</title>
+      <link>https://arxiv.org/abs/2611.07947</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07947</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>ChemE-as-Code：arXiv:2611.07947v1 Announce Type: new Abstract: ChemE-as-C...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.07947v1 Announce Type: new Abstract: ChemE-as-Code provides an open-source environment in which AI agents built on large language models (LLMs) can carry out chemical engineering work and...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>安全的形式化提升:通过可执行属性保护AI开发</title>
+      <link>https://arxiv.org/abs/2611.08042</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.08042</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>安全的形式化提升：arXiv:2611.08042v1 Announce Type: new Abstract: Model rais...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.08042v1 Announce Type: new Abstract: Model raising revisits Turing&apos;s developmental view of machine intelligence. Formal Raising (FR) has recently been proposed to complement this view with...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>用于多模态托卡马克任务的生成式基础模型</title>
+      <link>https://arxiv.org/abs/2611.08153</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.08153</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>用于多模态托卡马克任务的生成式基础模型：arXiv:2611.08153v1 Announce Type: new Abstract: Tokamak ex...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.08153v1 Announce Type: new Abstract: Tokamak experiments record diverse measurements, including waveforms, profiles, fields, and scalars, which are used to reconstruct the plasma, forecast...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>信号、证据与语境:真实世界 LLM 对话中用户的审视</title>
+      <link>https://arxiv.org/abs/2611.08232</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.08232</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>信号、证据与语境：arXiv:2611.08232v1 Announce Type: new Abstract: Large lang...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.08232v1 Announce Type: new Abstract: Large language models (LLMs) often present synthesized answers without making their supporting evidence easy to inspect. We study how features of these...
+
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -293,7 +348,7 @@ arXiv:2611.07892v1 Announce Type: cross Abstract: Machine unlearning aims to rem
       <category>论文研究</category>
     </item>
     <item>
-      <title>tok: a textual concrete syntax of BPMN and DMN for humans and AI agents</title>
+      <title>tok:面向人类与AI智能体的BPMN和DMN文本化具体语法</title>
       <link>https://arxiv.org/abs/2611.07945</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07945</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -632,59 +687,6 @@ arXiv:2605.06728v3 Announce Type: replace-cross Abstract: Large language models 
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
-    </item>
-    <item>
-      <title>EcoGEO: Trajectory-Aware Evidence Ecosystems for Web-Enabled LLM Search Agents</title>
-      <link>https://arxiv.org/abs/2605.12887</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.12887</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>EcoGEO：arXiv:2605.12887v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.12887v3 Announce Type: replace-cross Abstract: Web-enabled LLM agents are changing how online information influences search outcomes. Existing Generative Engine Optimization (GEO) studies...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Variable-aware representation, not relation typing, explains the performance of an event-graph model for ICU mortality prediction: temporal and external validation</title>
-      <link>https://arxiv.org/abs/2608.02663</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2608.02663</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Variable-aware repre...：arXiv:2608.02663v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2608.02663v2 Announce Type: replace-cross Abstract: Event-graph neural networks represent intensive care unit (ICU) records as typed entities linked by timestamped observations, and their gains...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Unified Hallucination Fuzzing for Multimodal Large Language Models</title>
-      <link>https://arxiv.org/abs/2608.07525</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2608.07525</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Unified Hallucinatio...：arXiv:2608.07525v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2608.07525v2 Announce Type: replace-cross Abstract: Hallucination remains a persistent challenge for Multimodal Large Language Models (MLLMs), severely limiting their reliability in high-stakes...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Can LLMs Reason in a Legally Meaningful Manner? A Small-scale Study on European Court of Human Rights Cases</title>
-      <link>https://arxiv.org/abs/2608.17168</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2608.17168</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Can LLMs Reason in a...：arXiv:2608.17168v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2608.17168v3 Announce Type: replace-cross Abstract: Reasoning has become a standard technique and feature for contemporary LLMs; however, its application and quality in the context of demanding...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>

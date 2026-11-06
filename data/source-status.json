@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-06T15:43:45.030012Z",
+  "generated_at": "2026-11-06T21:19:51.540214Z",
   "sites": [
-    {
-      "site_id": "followbuilders",
-      "site_name": "Follow Builders",
-      "ok": true,
-      "item_count": 30,
-      "duration_ms": 429,
-      "error": null
-    },
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
       "ok": true,
       "item_count": 9,
-      "duration_ms": 460,
+      "duration_ms": 508,
+      "error": null
+    },
+    {
+      "site_id": "followbuilders",
+      "site_name": "Follow Builders",
+      "ok": true,
+      "item_count": 30,
+      "duration_ms": 671,
       "error": null
     },
     {
@@ -22,7 +22,7 @@
       "site_name": "Zeli",
       "ok": true,
       "item_count": 77,
-      "duration_ms": 1206,
+      "duration_ms": 890,
       "error": null
     },
     {
@@ -30,23 +30,15 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 2607,
+      "duration_ms": 1353,
       "error": null
-    },
-    {
-      "site_id": "aihot",
-      "site_name": "AI HOT",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 2636,
-      "error": "404 Client Error: Not Found for url: https://aihot.news/api/public/items?mode=all&take=100"
     },
     {
       "site_id": "techurls",
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 3915,
+      "duration_ms": 1697,
       "error": null
     },
     {
@@ -54,7 +46,7 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 4588,
+      "duration_ms": 2311,
       "error": null
     },
     {
@@ -62,7 +54,31 @@
       "site_name": "开源热榜",
       "ok": true,
       "item_count": 30,
-      "duration_ms": 5283,
+      "duration_ms": 2780,
+      "error": null
+    },
+    {
+      "site_id": "aihot",
+      "site_name": "AI HOT",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 3863,
+      "error": "404 Client Error: Not Found for url: https://aihot.news/api/public/items?mode=all&take=100"
+    },
+    {
+      "site_id": "buzzing",
+      "site_name": "Buzzing",
+      "ok": true,
+      "item_count": 744,
+      "duration_ms": 4328,
+      "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 3031,
+      "duration_ms": 4449,
       "error": null
     },
     {
@@ -70,31 +86,15 @@
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 5907,
+      "duration_ms": 5912,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1018)')))"
-    },
-    {
-      "site_id": "buzzing",
-      "site_name": "Buzzing",
-      "ok": true,
-      "item_count": 744,
-      "duration_ms": 8682,
-      "error": null
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 3033,
-      "duration_ms": 10698,
-      "error": null
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 899,
-      "duration_ms": 14353,
+      "item_count": 902,
+      "duration_ms": 7165,
       "error": null
     },
     {
@@ -102,15 +102,15 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 128,
-      "duration_ms": 14535,
+      "duration_ms": 7617,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 432,
-      "duration_ms": 38137,
+      "item_count": 303,
+      "duration_ms": 32060,
       "error": null
     },
     {
@@ -119,7 +119,7 @@
       "ok": true,
       "partial_failures": 0,
       "item_count": 50,
-      "duration_ms": 2960,
+      "duration_ms": 1070,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -135,9 +135,9 @@
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5858,
-  "items_before_topic_filter": 5224,
-  "items_in_24h": 759,
+  "fetched_raw_items": 5730,
+  "items_before_topic_filter": 4645,
+  "items_in_24h": 690,
   "ai_processing": {
     "tldr_items": 0
   },
