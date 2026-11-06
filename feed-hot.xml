@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Nov 2026 07:43:40 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 15:43:45 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Gemini Omni 1.2 Flash:处理速度更快、成本更低，支持更长的视频片段</title>
@@ -21,18 +21,99 @@ Text &quot;Gemini Introducing Gemini Omni 1.2 Flash&quot; surroudned by images o
       <category>模型发布</category>
     </item>
     <item>
-      <title>CST-Bench:通过因果转移同策略自蒸馏，对反事实空间转移推理进行基准测试</title>
-      <link>https://arxiv.org/abs/2611.07541</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.07541</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>CST-Bench：实验显示，GPT-4o 等先进模型在该基准上准确率仅约 50%，远低于人类 90% 以上的表现，揭示了当前 MLLM...，适合判断技术路线和后续产品化可能性。
+      <title>[AINews] Inkling 2 Small:在12T代币上训练68小时，性能超越Muse Spark</title>
+      <link>https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark</link>
+      <guid isPermaLink="true">https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark</guid>
+      <pubDate>Fri, 06 Nov 2026 10:35:21 +0000</pubDate>
+      <description>2026 年 11 月 5 日 — Inkling 2 Small 的训练运行和 METR 在 Anthropic...，来自官方更新源，适合直接判断产品变化。
 
-arXiv:2611.07541v1 新论文指出，空间推理是多模态大语言模型（MLLMs）的核心能力，但现有基准多聚焦静态场景，难以评估动态空间理解。研究者提出 **DynaSpatial-Bench** 基准，包含 2000 个视频及 5000 个问答对，涵盖物体追踪、空间变换等 6 项动态任务。实验显示，GPT-4o 等先进模型在该基准上准确率仅约 50%，远低于人类 90% 以上的表现，揭示了当前 MLLMs 在动态空间推理上的显著短板。
+2026 年 11 月 5 日 — Inkling 2 Small 的训练运行和 METR 在 Anthropic 的人工智能研究研究的内部。
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 65.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
-      <category>多模态</category>
+    </item>
+    <item>
+      <title>提升压缩 AI 智能体记忆中的局部与全局结构</title>
+      <link>https://arxiv.org/abs/2611.08341</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.08341</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>提升压缩 AI 智能体记忆中的局部与全局...：arXiv:2611.08341v1 Announce Type: new Abstract: AI agents...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.08341v1 Announce Type: new Abstract: AI agents store text as embedding vectors and compress them at scale. A compression is accepted when each item&apos;s nearest neighbors survive, but agents...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>AI4Math 领域的淘金热(二):AI 辅助证明有何特征？</title>
+      <link>https://arxiv.org/abs/2611.08412</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.08412</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>AI4Math 领域的淘金热(二)：arXiv:2611.08412v1 Announce Type: new Abstract: The growin...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.08412v1 Announce Type: new Abstract: The growing use of AI in mathematics raises a question: can we detect AI involvement in proofs, separately from AI assistance with writing? Historical...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>未来软件中元访问的力量——以 LLM 聊天 UI 和聊天 AI 为例</title>
+      <link>https://arxiv.org/abs/2611.08428</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.08428</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>未来软件中元访问的力量——以 LLM 聊...：arXiv:2611.08428v1 Announce Type: new Abstract: Chat remai...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.08428v1 Announce Type: new Abstract: Chat remains the default surface for many large language model (LLM) tasks, even as agentic tools such as OpenCode excel at coding and automation. Yet...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>大模型，小增益:在 MONSTER 上作为分类器的冻结预测器</title>
+      <link>https://arxiv.org/abs/2611.06988</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.06988</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>大模型：arXiv:2611.06988v1 Announce Type: cross Abstract: Forecast...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.06988v1 Announce Type: cross Abstract: Forecasting foundation models are increasingly used as frozen feature extractors for time series classification, but it remains unclear whether their...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>POMDP 中神经强化学习的有限时间收敛性与遗憾保证</title>
+      <link>https://arxiv.org/abs/2611.07069</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07069</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>POMDP 中神经强化学习的有限时间收敛...：arXiv:2611.07069v1 Announce Type: cross Abstract: Reinforc...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.07069v1 Announce Type: cross Abstract: Reinforcement learning (RL) in Partially Observable Markov Decision Processes (POMDPs) is computationally challenging due to the curse of long-range...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>智能体越多越可靠吗？运营概况不确定性下多智能体大语言模型的系统级可靠性</title>
+      <link>https://arxiv.org/abs/2611.07140</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07140</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>智能体越多越可靠吗：arXiv:2611.07140v1 Announce Type: cross Abstract: Teams in...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.07140v1 Announce Type: cross Abstract: Teams increasingly build software from cooperating large language model (LLM) agents, often assuming more agents mean more reliability. Yet the usual...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>组合式不对齐:大型视觉-语言模型的安全性审计</title>
@@ -43,7 +124,7 @@ arXiv:2611.07541v1 新论文指出，空间推理是多模态大语言模型（M
 
 arXiv:2611.07216v1 Announce Type: cross Abstract: Large vision-language models (LVLMs) are vulnerable to compositional harm: an image and a prompt that are benign in isolation become harmful through...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -58,7 +139,7 @@ arXiv:2611.07216v1 Announce Type: cross Abstract: Large vision-language models (
 
 arXiv:2611.07222v1 Announce Type: cross Abstract: Tool-using agents act on email, files, and payments, so an instruction hidden in a web page or a shared document can make an agent send data or money...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -72,38 +153,38 @@ arXiv:2611.07222v1 Announce Type: cross Abstract: Tool-using agents act on email
 
 arXiv:2611.07270v1 Announce Type: cross Abstract: Animals and humans often do not maximize; they act relative to goals (aspiration levels) that are frequently not yet met. How can a goal that is not...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Permanent and Transient Representations for Continual Reinforcement Learning</title>
+      <title>持续强化学习中的永久性表示与暂时性表示</title>
       <link>https://arxiv.org/abs/2611.07327</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07327</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Permanent and Transi...：arXiv:2611.07327v1 Announce Type: cross Abstract: Continua...，适合判断技术路线和后续产品化可能性。
+      <description>持续强化学习中的永久性表示与暂时性表示：arXiv:2611.07327v1 Announce Type: cross Abstract: Continua...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.07327v1 Announce Type: cross Abstract: Continual Reinforcement Learning (CRL) agents struggle to adapt to new situations while retaining prior knowledge, leading to a stability-plasticity...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Selective Retrieval Routing for Multi-Violation Knowledge Graph Repair</title>
+      <title>面向多违规知识图谱修复的选择性检索路由方法</title>
       <link>https://arxiv.org/abs/2611.07342</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07342</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Selective Retrieval...：arXiv:2611.07342v1 Announce Type: cross Abstract: Knowledg...，适合判断技术路线和后续产品化可能性。
+      <description>面向多违规知识图谱修复的选择性检索路由方...：arXiv:2611.07342v1 Announce Type: cross Abstract: Knowledg...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.07342v1 Announce Type: cross Abstract: Knowledge graphs often contain missing or inconsistent facts that undermine the applications built on them. Schema validation detects such violations...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>FreePath: Neural Mean Free Path for Image Dehazing</title>
+      <title>FreePath:用于图像去雾的神经平均自由程模型</title>
       <link>https://arxiv.org/abs/2611.07398</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07398</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -111,13 +192,13 @@ arXiv:2611.07342v1 Announce Type: cross Abstract: Knowledge graphs often contain
 
 arXiv:2611.07398v1 Announce Type: cross Abstract: Single image dehazing requires recovering scene radiance from visual responses that are weakened and veiled by participating media. Existing methods...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
     </item>
     <item>
-      <title>PSGAgent: Enhancing MLLMs&apos; Dynamic Visual Perception for Panoptic Scene Graph Generation via Agentic Reasoning</title>
+      <title>PSGAgent:通过代理推理提升多模态大语言模型动态视觉感知能力以生成全景场景图</title>
       <link>https://arxiv.org/abs/2611.07408</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07408</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -125,14 +206,14 @@ arXiv:2611.07398v1 Announce Type: cross Abstract: Single image dehazing requires
 
 arXiv:2611.07408v1 Announce Type: cross Abstract: Panoptic Scene Graph generation (PSG) requires holistic yet fine-grained reasoning over complex relations among objects. However, current Multimodal...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
       <category>多模态</category>
     </item>
     <item>
-      <title>Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model</title>
+      <title>Concertina:将操作与认知融入单一扩散式视觉-语言模型</title>
       <link>https://arxiv.org/abs/2611.07513</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07513</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -140,13 +221,13 @@ arXiv:2611.07408v1 Announce Type: cross Abstract: Panoptic Scene Graph generatio
 
 arXiv:2611.07513v1 Announce Type: cross Abstract: Most vision-language-action (VLA) policies decouple manipulation from cognition by bolting an external action mechanism onto a vision-language model...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
     </item>
     <item>
-      <title>SKIM: Pruning Large Language Model Agents via Selective Knowledge Informed Masking</title>
+      <title>SKIM:通过选择性知识引导掩码对大语言模型智能体进行剪枝</title>
       <link>https://arxiv.org/abs/2611.07558</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07558</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -154,26 +235,26 @@ arXiv:2611.07513v1 Announce Type: cross Abstract: Most vision-language-action (V
 
 arXiv:2611.07558v1 Announce Type: cross Abstract: Large Language Model (LLM) agents are increasingly deployed under structured generation, where grammar constraints enforce output format at inference...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
     </item>
     <item>
-      <title>What the Middleman Delivers: Answer Behavior, Tool Permissions, and Billed Usage in LLM API Relays</title>
+      <title>中间人传递的内容:LLM API 中继中的回答行为、工具权限与计费用量</title>
       <link>https://arxiv.org/abs/2611.07650</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07650</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>What the Middleman D...：arXiv:2611.07650v1 Announce Type: cross Abstract: Third-pa...，适合判断技术路线和后续产品化可能性。
+      <description>中间人传递的内容：arXiv:2611.07650v1 Announce Type: cross Abstract: Third-pa...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.07650v1 Announce Type: cross Abstract: Third-party application programming interface (API) relays offer access to large language models (LLMs), often at lower prices. Users depend on these...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>CAMP: Context-Aware Mapping and Placement for LLMs on 3D-IMC Arrays</title>
+      <title>CAMP:面向 3D-IMC 阵列的 LLM 上下文感知映射与部署方案</title>
       <link>https://arxiv.org/abs/2611.07707</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07707</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -181,25 +262,25 @@ arXiv:2611.07650v1 Announce Type: cross Abstract: Third-party application progra
 
 arXiv:2611.07707v1 Announce Type: cross Abstract: Large Language Models (LLMs) incur severe memory-access overheads due to the cost of loading large weight matrices and key-value (KV) caches. Analog...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Evaluating Language Model Features for Zero-Shot Time-Series Anomaly Detection Under Isolation Assumption</title>
+      <title>在隔离假设下评估语言模型特征以进行零样本时间序列异常检测</title>
       <link>https://arxiv.org/abs/2611.07720</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07720</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Evaluating Language...：arXiv:2611.07720v1 Announce Type: cross Abstract: Time-Ser...，适合判断技术路线和后续产品化可能性。
+      <description>在隔离假设下评估语言模型特征以进行零样本...：arXiv:2611.07720v1 Announce Type: cross Abstract: Time-Ser...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.07720v1 Announce Type: cross Abstract: Time-Series Anomaly Detection (TSAD) is a fundamentally challenging task: it is unsupervised, requires high local precision capabilities, and suffers...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>DISCERN: Distributional Synthetic Replay for Retain-Free Incremental Machine Unlearning</title>
+      <title>DISCERN:用于无保留增量式机器遗忘的分布式合成重演</title>
       <link>https://arxiv.org/abs/2611.07892</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.07892</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -207,7 +288,7 @@ arXiv:2611.07720v1 Announce Type: cross Abstract: Time-Series Anomaly Detection 
 
 arXiv:2611.07892v1 Announce Type: cross Abstract: Machine unlearning aims to remove the influence of specific training data from a trained model without retraining from scratch. In real deployments,...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -220,7 +301,7 @@ arXiv:2611.07892v1 Announce Type: cross Abstract: Machine unlearning aims to rem
 
 arXiv:2611.07945v1 Announce Type: cross Abstract: tok is a plain-text notation for Business Process Model and Notation (BPMN) 2.0.2 process models and Decision Model and Notation (DMN) 1.5 decisions....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -233,7 +314,7 @@ arXiv:2611.07945v1 Announce Type: cross Abstract: tok is a plain-text notation f
 
 arXiv:2611.08438v1 Announce Type: cross Abstract: Neural networks are likely to be among the most consequential artefacts in human history. As these systems become more capable and autonomous, their...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -248,7 +329,7 @@ arXiv:2611.08438v1 Announce Type: cross Abstract: Neural networks are likely to 
 
 arXiv:2602.03478v2 Announce Type: replace Abstract: LLM routing aims to reduce inference costs by assigning easy queries to less expensive models and reserving stronger models for cases in which they...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
@@ -262,7 +343,7 @@ arXiv:2602.03478v2 Announce Type: replace Abstract: LLM routing aims to reduce i
 
 arXiv:2603.03761v2 Announce Type: replace Abstract: LLM agents are rapidly becoming the practical interface for task automation, yet the ecosystem lacks a principled way to choose among an exploding...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -276,7 +357,7 @@ arXiv:2603.03761v2 Announce Type: replace Abstract: LLM agents are rapidly becom
 
 arXiv:2605.06161v2 Announce Type: replace Abstract: LLM-as-a-Judge pipelines have become the de facto evaluator for agent safety, yet existing benchmarks treat their verdicts as ground-truth proxies...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -291,7 +372,7 @@ arXiv:2605.06161v2 Announce Type: replace Abstract: LLM-as-a-Judge pipelines hav
 
 arXiv:2605.22535v2 Announce Type: replace Abstract: We introduce TerminalWorld, a scalable data engine that automatically reverse-engineers high-fidelity evaluation tasks from &quot;in-the-wild&quot; terminal...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -304,7 +385,7 @@ arXiv:2605.22535v2 Announce Type: replace Abstract: We introduce TerminalWorld, 
 
 arXiv:2605.30621v2 Announce Type: replace Abstract: LLM agents are increasingly deployed as systems built around editable external harnesses, including prompts, skills, memories and tools, that shape...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -317,7 +398,7 @@ arXiv:2605.30621v2 Announce Type: replace Abstract: LLM agents are increasingly 
 
 arXiv:2606.05647v3 Announce Type: replace Abstract: AI coding agents are increasingly embedded in real-world software development, collaborating with human developers while gaining broader access to...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -332,7 +413,7 @@ arXiv:2606.05647v3 Announce Type: replace Abstract: AI coding agents are increas
 
 arXiv:2606.14571v3 Announce Type: replace Abstract: A central role of personal-agent memory is to turn stored information and prior interactions into future-oriented assistance. In daily use, useful...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -346,7 +427,7 @@ arXiv:2606.14571v3 Announce Type: replace Abstract: A central role of personal-a
 
 arXiv:2606.22911v2 Announce Type: replace Abstract: Multi-zone HVAC control is a spatial decision problem in which indoor thermal evolution and control decisions depend not only on outdoor conditions...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -359,7 +440,7 @@ arXiv:2606.22911v2 Announce Type: replace Abstract: Multi-zone HVAC control is a
 
 arXiv:2606.28733v2 Announce Type: replace Abstract: LLM agents are expected to act over multiple turns, using search, browsing interfaces, and tools to complete user goals. Yet not every goal is well...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -373,7 +454,7 @@ arXiv:2606.28733v2 Announce Type: replace Abstract: LLM agents are expected to a
 
 arXiv:2607.22599v2 Announce Type: replace Abstract: Diffusion models have become a widely used framework for probabilistic time series forecasting, modeling the distribution of future values given an...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -387,7 +468,7 @@ arXiv:2607.22599v2 Announce Type: replace Abstract: Diffusion models have become
 
 arXiv:2608.27969v2 Announce Type: replace Abstract: Long-horizon coding agents operate over evolving repository states while increasingly relying on heterogeneous capabilities, delegated agents, and...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>编码工具</category>
@@ -401,7 +482,7 @@ arXiv:2608.27969v2 Announce Type: replace Abstract: Long-horizon coding agents o
 
 arXiv:2609.00700v2 Announce Type: replace Abstract: LLMs have been rapidly adopted across writing tasks, prompting the development of tools for detecting LLM-generated text. Yet, these tools largely...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -414,7 +495,7 @@ arXiv:2609.00700v2 Announce Type: replace Abstract: LLMs have been rapidly adopt
 
 arXiv:2610.00685v2 Announce Type: replace Abstract: With the rapid adoption of large language models (LLMs) and parameter-efficient fine-tuning (PEFT) methods, the risk of backdoor attacks has become...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -427,7 +508,7 @@ arXiv:2610.00685v2 Announce Type: replace Abstract: With the rapid adoption of l
 
 arXiv:2610.02801v2 Announce Type: replace Abstract: Model-based reinforcement learning (MBRL) achieves strong sample efficiency by planning in learned latent dynamics but degrades substantially under...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -440,7 +521,7 @@ arXiv:2610.02801v2 Announce Type: replace Abstract: Model-based reinforcement le
 
 arXiv:2610.08327v4 Announce Type: replace Abstract: Large language models (LLMs) have shown promise in medical question answering and clinical reasoning, yet their improvement remains constrained by...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -453,7 +534,7 @@ arXiv:2610.08327v4 Announce Type: replace Abstract: Large language models (LLMs)
 
 arXiv:2610.33684v2 Announce Type: replace Abstract: Self-evolving training improves the performance of agents on difficult tasks through verifiable feedback, but it often applies costly deliberation...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -466,7 +547,7 @@ arXiv:2610.33684v2 Announce Type: replace Abstract: Self-evolving training impro
 
 arXiv:2610.36980v2 Announce Type: replace Abstract: Large language model (LLM) agents are extending agent-mediated commerce on the Web from shopping for consumers to operating businesses for sellers....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -480,7 +561,7 @@ arXiv:2610.36980v2 Announce Type: replace Abstract: Large language model (LLM) a
 
 arXiv:2610.38210v2 Announce Type: replace Abstract: Weight-only, lossy quantization substantially reduces the storage and memory requirements for serving large language models (LLMs), but the growing...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
@@ -494,7 +575,7 @@ arXiv:2610.38210v2 Announce Type: replace Abstract: Weight-only, lossy quantizat
 
 arXiv:2610.41697v2 Announce Type: replace Abstract: Terminal feedback in multi-turn agent training leaves both rollout allocation and local credit underdetermined. Dynamics-Predictive Sampling (DPS)...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -508,7 +589,7 @@ arXiv:2610.41697v2 Announce Type: replace Abstract: Terminal feedback in multi-t
 
 arXiv:2507.21931v3 Announce Type: replace-cross Abstract: Large Language Models (LLMs) often produce plausible but poorly-calibrated answers, limiting their reliability on reasoning-intensive tasks....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -521,7 +602,7 @@ arXiv:2507.21931v3 Announce Type: replace-cross Abstract: Large Language Models 
 
 arXiv:2511.18811v3 Announce Type: replace-cross Abstract: Long-tailed human-object interaction (HOI) detection remains challenging because rare interactions are sparsely represented in training data....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -534,7 +615,7 @@ arXiv:2511.18811v3 Announce Type: replace-cross Abstract: Long-tailed human-obje
 
 arXiv:2602.23409v4 Announce Type: replace-cross Abstract: Trainable-frequency quantum models train the prefactors of their encoding gates so that the circuit&apos;s frequencies can move onto the target&apos;s....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -547,7 +628,7 @@ arXiv:2602.23409v4 Announce Type: replace-cross Abstract: Trainable-frequency qu
 
 arXiv:2605.06728v3 Announce Type: replace-cross Abstract: Large language models can reason over biological knowledge, but they are not naturally equipped to work with quantitative omics measurements....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -561,7 +642,7 @@ arXiv:2605.06728v3 Announce Type: replace-cross Abstract: Large language models 
 
 arXiv:2605.12887v3 Announce Type: replace-cross Abstract: Web-enabled LLM agents are changing how online information influences search outcomes. Existing Generative Engine Optimization (GEO) studies...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -574,7 +655,7 @@ arXiv:2605.12887v3 Announce Type: replace-cross Abstract: Web-enabled LLM agents
 
 arXiv:2608.02663v2 Announce Type: replace-cross Abstract: Event-graph neural networks represent intensive care unit (ICU) records as typed entities linked by timestamped observations, and their gains...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -587,7 +668,7 @@ arXiv:2608.02663v2 Announce Type: replace-cross Abstract: Event-graph neural net
 
 arXiv:2608.07525v2 Announce Type: replace-cross Abstract: Hallucination remains a persistent challenge for Multimodal Large Language Models (MLLMs), severely limiting their reliability in high-stakes...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -601,88 +682,7 @@ arXiv:2608.07525v2 Announce Type: replace-cross Abstract: Hallucination remains 
 
 arXiv:2608.17168v3 Announce Type: replace-cross Abstract: Reasoning has become a standard technique and feature for contemporary LLMs; however, its application and quality in the context of demanding...
 
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>A Cyber Range Evaluation of Inductive Autonomous Network Incident Response Agents</title>
-      <link>https://arxiv.org/abs/2609.16541</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.16541</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>A Cyber Range Evalua...：arXiv:2609.16541v2 Announce Type: replace-cross Abstract:...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2609.16541v2 Announce Type: replace-cross Abstract: We have applied a novel combination of classic relational database modeling and modern reinforcement learning to automated intrusion response...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>RLVR$^{2}$: Reinforcement Learning with Verifiable Rubric-based Ranking</title>
-      <link>https://arxiv.org/abs/2609.23457</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.23457</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>RLVR$^{2}$：arXiv:2609.23457v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2609.23457v3 Announce Type: replace-cross Abstract: Reinforcement Learning with Verifiable Rewards (RLVR) is expanding from tasks with well-defined correctness signals, such as mathematics and...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>The Physical Cost of Context: Quality-Constrained Resource Accounting for Coding Agents</title>
-      <link>https://arxiv.org/abs/2610.34763</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.34763</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>The Physical Cost of...：arXiv:2610.34763v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.34763v2 Announce Type: replace-cross Abstract: Coding agents resend a growing context on every model call, and context policies are usually judged by the prompt tokens they save. Executed...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>V-LUMEN: Visual Lookup Memory for Embedding Scaling in Vision-Language Models</title>
-      <link>https://arxiv.org/abs/2610.37019</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.37019</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>V-LUMEN：arXiv:2610.37019v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2610.37019v2 Announce Type: replace-cross Abstract: Embedding-level scaling expands the capacity of language models through lookup-based memory rather than by increasing model depth, width, or...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Human-Centred, Risk-Constrained Evaluation of Financial Document Recognition: Evidence, Critical Errors, and Selective Automation</title>
-      <link>https://arxiv.org/abs/2611.02775</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.02775</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Human-Centred：arXiv:2611.02775v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2611.02775v2 Announce Type: replace-cross Abstract: Financial document recognition is often assessed using character and word error rates, although these metrics do not express whether a system...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Screen Before You Serve: Simulation for Production Customer Experience AI Agents at 140M Scale</title>
-      <link>https://arxiv.org/abs/2609.30137</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.30137</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Screen Before You Se...：arXiv:2609.30137v2 Announce Type: replace Abstract: Custom...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2609.30137v2 Announce Type: replace Abstract: Customer experience (CX) agents use tools and large language models to address customer requests and guide conversational interactions with an...
-
-信号等级 B · 评分 65.2</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
