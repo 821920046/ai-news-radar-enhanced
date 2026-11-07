@@ -5,8 +5,74 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Nov 2026 21:19:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 01:40:35 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>据报道，OpenAI 以 1.25 万亿美元的估值额外融资 110 亿美元</title>
+      <link>https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation</guid>
+      <pubDate>Fri, 06 Nov 2026 22:53:46 +0000</pubDate>
+      <description>OpenAI据报已在尚未结束的融资轮中额外筹集110亿美元，预计将于未来几周完成交割，来自官方更新源，适合直接判断产品变化。
+
+OpenAI据报已在尚未结束的融资轮中额外筹集110亿美元，预计将于未来几周完成交割。
+
+信号等级 B · 评分 65.0</description>
+      <category>Official AI Updates</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>FlashOffloading:面向长上下文大语言模型服务的低延迟 KV 缓存卸载方案</title>
+      <link>https://arxiv.org/abs/2611.07542</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07542</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>FlashOffloading：arXiv:2611.07542v1 Announce Type: new Abstract: In large l...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.07542v1 Announce Type: new Abstract: In large language model (LLM) serving systems, the key-value (KV) cache grows linearly with sequence length and concurrency, so long-context inference...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>LoRA 微调模型的嵌入空间指纹识别:仅凭模型即可反推其训练数据域</title>
+      <link>https://arxiv.org/abs/2611.07610</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07610</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>LoRA 微调模型的嵌入空间指纹识别：arXiv:2611.07610v1 Announce Type: new Abstract: When a bas...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.07610v1 Announce Type: new Abstract: When a base language model is fine-tuned with Low-Rank Adaptation (LoRA), how much of the training data domain leaks into the resulting artifact? This...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>先生成后排序:为具身智能体学习符号化目标解释</title>
+      <link>https://arxiv.org/abs/2611.07825</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07825</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>先生成后排序：arXiv:2611.07825v1 Announce Type: new Abstract: Goal inter...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.07825v1 Announce Type: new Abstract: Goal interpretation is to translate a natural language instruction into a formal symbolic goal that a planner can execute. It is critical for embodied...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>武装冲突期间负责任地使用生成式AI:来自苏丹应急指挥室的证据</title>
+      <link>https://arxiv.org/abs/2611.07874</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.07874</guid>
+      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
+      <description>武装冲突期间负责任地使用生成式AI：arXiv:2611.07874v1 Announce Type: new Abstract: Armed conf...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.07874v1 Announce Type: new Abstract: Armed conflict can increase the value of Generative AI (GenAI) while undermining the conditions required for its responsible use. Yet the perspectives...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
     <item>
       <title>GuidedWAM:无需训练的世界动作模型能量引导方法，应用于自动驾驶</title>
       <link>https://arxiv.org/abs/2611.07912</link>
@@ -361,11 +427,11 @@ arXiv:2611.07945v1 Announce Type: cross Abstract: tok is a plain-text notation f
       <category>论文研究</category>
     </item>
     <item>
-      <title>Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety</title>
+      <title>从内部理解人工智能:人工智能安全领域机制可解释性的现状</title>
       <link>https://arxiv.org/abs/2611.08438</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.08438</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Understanding AI fro...：arXiv:2611.08438v1 Announce Type: cross Abstract: Neural n...，适合关注自动化任务和多 Agent 协作演进。
+      <description>从内部理解人工智能：arXiv:2611.08438v1 Announce Type: cross Abstract: Neural n...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2611.08438v1 Announce Type: cross Abstract: Neural networks are likely to be among the most consequential artefacts in human history. As these systems become more capable and autonomous, their...
 
@@ -376,11 +442,11 @@ arXiv:2611.08438v1 Announce Type: cross Abstract: Neural networks are likely to 
       <category>安全对齐</category>
     </item>
     <item>
-      <title>When LLM Routers Overpay: The Cost of Strong-Model Preference</title>
+      <title>当大型语言模型路由器支付过高费用:偏好强模型所带来的成本</title>
       <link>https://arxiv.org/abs/2602.03478</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2602.03478</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>When LLM Routers Ove...：arXiv:2602.03478v2 Announce Type: replace Abstract: LLM ro...，适合判断技术路线和后续产品化可能性。
+      <description>当大型语言模型路由器支付过高费用：arXiv:2602.03478v2 Announce Type: replace Abstract: LLM ro...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2602.03478v2 Announce Type: replace Abstract: LLM routing aims to reduce inference costs by assigning easy queries to less expensive models and reserving stronger models for cases in which they...
 
@@ -390,7 +456,7 @@ arXiv:2602.03478v2 Announce Type: replace Abstract: LLM routing aims to reduce i
       <category>部署推理</category>
     </item>
     <item>
-      <title>AgentSelect: Benchmark for Narrative Query-to-Agent Recommendation</title>
+      <title>AgentSelect:面向叙事性查询到智能体推荐的基准测试</title>
       <link>https://arxiv.org/abs/2603.03761</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2603.03761</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -404,11 +470,11 @@ arXiv:2603.03761v2 Announce Type: replace Abstract: LLM agents are rapidly becom
       <category>论文研究</category>
     </item>
     <item>
-      <title>Are LLM Safety Judges Policy-Invariant? A Three-Principle Stress-Test</title>
+      <title>LLM 安全评估者是否具备政策不变性？一项基于三项原则的压力测试</title>
       <link>https://arxiv.org/abs/2605.06161</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2605.06161</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Are LLM Safety Judge...：arXiv:2605.06161v2 Announce Type: replace Abstract: LLM-as...，适合关注自动化任务和多 Agent 协作演进。
+      <description>LLM 安全评估者是否具备政策不变性：arXiv:2605.06161v2 Announce Type: replace Abstract: LLM-as...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2605.06161v2 Announce Type: replace Abstract: LLM-as-a-Judge pipelines have become the de facto evaluator for agent safety, yet existing benchmarks treat their verdicts as ground-truth proxies...
 
@@ -419,7 +485,7 @@ arXiv:2605.06161v2 Announce Type: replace Abstract: LLM-as-a-Judge pipelines hav
       <category>安全对齐</category>
     </item>
     <item>
-      <title>TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks</title>
+      <title>TerminalWorld:在真实终端任务上对智能体进行基准评估</title>
       <link>https://arxiv.org/abs/2605.22535</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2605.22535</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -432,11 +498,11 @@ arXiv:2605.22535v2 Announce Type: replace Abstract: We introduce TerminalWorld, 
       <category>论文研究</category>
     </item>
     <item>
-      <title>Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents</title>
+      <title>能力更新不等于能力增益:解构自演化 LLM 智能体中的演进能力</title>
       <link>https://arxiv.org/abs/2605.30621</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2605.30621</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Harness Updating Is...：arXiv:2605.30621v2 Announce Type: replace Abstract: LLM ag...，适合判断技术路线和后续产品化可能性。
+      <description>能力更新不等于能力增益：arXiv:2605.30621v2 Announce Type: replace Abstract: LLM ag...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2605.30621v2 Announce Type: replace Abstract: LLM agents are increasingly deployed as systems built around editable external harnesses, including prompts, skills, memories and tools, that shape...
 
@@ -445,11 +511,11 @@ arXiv:2605.30621v2 Announce Type: replace Abstract: LLM agents are increasingly 
       <category>论文研究</category>
     </item>
     <item>
-      <title>Coding with the Enemy: Can Human Developers Detect AI Agent Sabotage?</title>
+      <title>与“敌”共码:人类开发者能否识破 AI 智能体的破坏行为？</title>
       <link>https://arxiv.org/abs/2606.05647</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2606.05647</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Coding with the Enem...：arXiv:2606.05647v3 Announce Type: replace Abstract: AI cod...，适合关注自动化任务和多 Agent 协作演进。
+      <description>与“敌”共码：arXiv:2606.05647v3 Announce Type: replace Abstract: AI cod...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2606.05647v3 Announce Type: replace Abstract: AI coding agents are increasingly embedded in real-world software development, collaborating with human developers while gaining broader access to...
 
@@ -460,7 +526,7 @@ arXiv:2606.05647v3 Announce Type: replace Abstract: AI coding agents are increas
       <category>编码工具</category>
     </item>
     <item>
-      <title>StreamMemBench: Streaming Evaluation of Agent Memory for Future-Oriented Assistance</title>
+      <title>StreamMemBench:面向未来辅助的代理记忆流式评估</title>
       <link>https://arxiv.org/abs/2606.14571</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2606.14571</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -474,7 +540,7 @@ arXiv:2606.14571v3 Announce Type: replace Abstract: A central role of personal-a
       <category>论文研究</category>
     </item>
     <item>
-      <title>ThermoLLM: LLM-Based Multi-Zone HVAC Control with a Spatiotemporal Context</title>
+      <title>ThermoLLM:基于LLM、结合时空上下文的区域暖通空调控制</title>
       <link>https://arxiv.org/abs/2606.22911</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2606.22911</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -487,7 +553,7 @@ arXiv:2606.22911v2 Announce Type: replace Abstract: Multi-zone HVAC control is a
       <category>论文研究</category>
     </item>
     <item>
-      <title>Agentic Abstention: Do Agents Know When to Stop Instead of Act?</title>
+      <title>Agentic Abstention:代理是否知道何时该停止而非行动？</title>
       <link>https://arxiv.org/abs/2606.28733</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2606.28733</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -501,11 +567,11 @@ arXiv:2606.28733v2 Announce Type: replace Abstract: LLM agents are expected to a
       <category>论文研究</category>
     </item>
     <item>
-      <title>Differencing the Diffusion Trajectory toward Uncertain Components for Time Series Forecasting</title>
+      <title>针对时间序列预测中不确定成分的扩散轨迹差分法</title>
       <link>https://arxiv.org/abs/2607.22599</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2607.22599</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Differencing the Dif...：arXiv:2607.22599v2 Announce Type: replace Abstract: Diffus...，适合判断技术路线和后续产品化可能性。
+      <description>针对时间序列预测中不确定成分的扩散轨迹差...：arXiv:2607.22599v2 Announce Type: replace Abstract: Diffus...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2607.22599v2 Announce Type: replace Abstract: Diffusion models have become a widely used framework for probabilistic time series forecasting, modeling the distribution of future values given an...
 
@@ -515,7 +581,7 @@ arXiv:2607.22599v2 Announce Type: replace Abstract: Diffusion models have become
       <category>多模态</category>
     </item>
     <item>
-      <title>openJiuwen: Beyond Static Harnesses for Long-Horizon Coding Agents</title>
+      <title>openJiuwen:突破静态框架，面向长周期编码代理</title>
       <link>https://arxiv.org/abs/2608.27969</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2608.27969</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -529,11 +595,11 @@ arXiv:2608.27969v2 Announce Type: replace Abstract: Long-horizon coding agents o
       <category>编码工具</category>
     </item>
     <item>
-      <title>Value Over Language Model: Detecting Original Contribution in Writing</title>
+      <title>超越语言模型的价值:检测写作中的原创性贡献</title>
       <link>https://arxiv.org/abs/2609.00700</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2609.00700</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Value Over Language...：arXiv:2609.00700v2 Announce Type: replace Abstract: LLMs h...，适合判断技术路线和后续产品化可能性。
+      <description>超越语言模型的价值：arXiv:2609.00700v2 Announce Type: replace Abstract: LLMs h...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2609.00700v2 Announce Type: replace Abstract: LLMs have been rapidly adopted across writing tasks, prompting the development of tools for detecting LLM-generated text. Yet, these tools largely...
 
@@ -542,11 +608,11 @@ arXiv:2609.00700v2 Announce Type: replace Abstract: LLMs have been rapidly adopt
       <category>论文研究</category>
     </item>
     <item>
-      <title>Backdoor Purification for LoRA-Tuned LLMs via Null-Space Projection</title>
+      <title>通过零空间投影对LoRA微调的LLM进行后门净化</title>
       <link>https://arxiv.org/abs/2610.00685</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.00685</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Backdoor Purificatio...：arXiv:2610.00685v2 Announce Type: replace Abstract: With t...，适合判断技术路线和后续产品化可能性。
+      <description>通过零空间投影对LoRA微调的LLM进行...：arXiv:2610.00685v2 Announce Type: replace Abstract: With t...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.00685v2 Announce Type: replace Abstract: With the rapid adoption of large language models (LLMs) and parameter-efficient fine-tuning (PEFT) methods, the risk of backdoor attacks has become...
 
@@ -555,7 +621,7 @@ arXiv:2610.00685v2 Announce Type: replace Abstract: With the rapid adoption of l
       <category>论文研究</category>
     </item>
     <item>
-      <title>VIGOR: Zero-Shot Visual Generalization via Latent-Space Consistency in Model-Based Reinforcement Learning</title>
+      <title>VIGOR:基于模型强化学习中潜在空间一致性的零样本视觉泛化</title>
       <link>https://arxiv.org/abs/2610.02801</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.02801</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -568,7 +634,7 @@ arXiv:2610.02801v2 Announce Type: replace Abstract: Model-based reinforcement le
       <category>论文研究</category>
     </item>
     <item>
-      <title>MedZERO: Self-Evolving Agents for Open-Ended Medical Reasoning Through Controlled Knowledge Accumulation</title>
+      <title>MedZERO:通过可控知识积累实现开放式医学推理的自我进化智能体</title>
       <link>https://arxiv.org/abs/2610.08327</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.08327</guid>
       <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
@@ -620,73 +686,6 @@ arXiv:2610.38210v2 Announce Type: replace Abstract: Weight-only, lossy quantizat
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
-    </item>
-    <item>
-      <title>TSBPO: Tree-Structured Branching for Policy Optimization in Interactive Language Agents</title>
-      <link>https://arxiv.org/abs/2610.41697</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.41697</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>TSBPO：arXiv:2610.41697v2 Announce Type: replace Abstract: Termin...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2610.41697v2 Announce Type: replace Abstract: Terminal feedback in multi-turn agent training leaves both rollout allocation and local credit underdetermined. Dynamics-Predictive Sampling (DPS)...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Post-Training Large Language Models via Reinforcement Learning from Self-Feedback</title>
-      <link>https://arxiv.org/abs/2507.21931</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2507.21931</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Post-Training Large...：arXiv:2507.21931v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2507.21931v3 Announce Type: replace-cross Abstract: Large Language Models (LLMs) often produce plausible but poorly-calibrated answers, limiting their reliability on reasoning-intensive tasks....
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Adaptive Test-Time Memory Allocation for Long-Tailed Human-Object Interaction Detection</title>
-      <link>https://arxiv.org/abs/2511.18811</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2511.18811</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Adaptive Test-Time M...：arXiv:2511.18811v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2511.18811v3 Announce Type: replace-cross Abstract: Long-tailed human-object interaction (HOI) detection remains challenging because rare interactions are sparsely represented in training data....
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>How Far Can a Trainable Frequency Move? Resolution, Grids and Coupling in Trainable-FrequencyQuantum Models</title>
-      <link>https://arxiv.org/abs/2602.23409</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.23409</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>How Far Can a Traina...：arXiv:2602.23409v4 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2602.23409v4 Announce Type: replace-cross Abstract: Trainable-frequency quantum models train the prefactors of their encoding gates so that the circuit&apos;s frequencies can move onto the target&apos;s....
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Thalamus-Reasoning: A Multimodal Large Language Model for Multi-Sample Omics Reasoning</title>
-      <link>https://arxiv.org/abs/2605.06728</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.06728</guid>
-      <pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Thalamus-Reasoning：arXiv:2605.06728v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.06728v3 Announce Type: replace-cross Abstract: Large language models can reason over biological knowledge, but they are not naturally equipped to work with quantitative omics measurements....
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
     </item>
   </channel>
 </rss>
