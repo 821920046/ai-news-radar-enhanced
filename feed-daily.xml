@@ -5,30 +5,66 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 08 Nov 2026 11:44:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 17:41:33 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>猫王与埃米纳姆版权方起诉 Suno</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit</guid>
+      <pubDate>Sun, 08 Nov 2026 17:23:19 +0000</pubDate>
+      <description>猫王与埃米纳姆版权方起诉 Suno：Suno 还面临着另外两起诉讼，适合作为今日 AI/科技情报流里的重点线索。
+
+Suno 还面临着另外两起诉讼。一群埃尔维斯·普雷斯利 (Elvis Presley) 音乐的版权所有者和阿姆 (Eminem) 一些最大唱片的发行商正在起诉这家 AI 音乐公司，声称......
+
+信号等级 B · 评分 51.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>OpenAI 融资 110 亿美元，估值达 1.25 万亿美元</title>
+      <link>https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought</link>
+      <guid isPermaLink="true">https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought</guid>
+      <pubDate>Sun, 08 Nov 2026 14:49:23 +0000</pubDate>
+      <description>OpenAI 融资 110 亿美元，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
+
+信号等级 B · 评分 51.5</description>
+      <category>Zeli</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>关于起飞速度与 RSI 的笔记</title>
+      <link>https://www.alignmentforum.org/posts/ft9hzw82v7FRDKmpn/notes-on-take-off-speeds-and-rsi</link>
+      <guid isPermaLink="true">https://www.alignmentforum.org/posts/ft9hzw82v7FRDKmpn/notes-on-take-off-speeds-and-rsi</guid>
+      <pubDate>Sun, 08 Nov 2026 13:39:02 +0000</pubDate>
+      <description>关于起飞速度与 RSI 的笔记：我创建了这些笔记，供我在促进人工智能安全课程时使用，适合跟进 AI 风险、治理和可信边界。
+
+我创建了这些笔记，供我在促进人工智能安全课程时使用。我很早就分享这些笔记，因为这个问题是热门问题，我怀疑最好尽早提供不完美的版本......
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+      <category>安全对齐</category>
+    </item>
     <item>
       <title>anthropics/claude-quickstarts</title>
       <link>https://github.com/anthropics/claude-quickstarts</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-quickstarts</guid>
       <pubDate>Sun, 08 Nov 2026 11:44:26 +0000</pubDate>
-      <description>anthropic、claude：旨在帮助开发人员快速开始使用 Claude API 构建可部署应用程序的项目集合，适合优先评估模型能力、价格和工具选型变化。
+      <description>anthropic、claude：一组旨在帮助开发者快速上手、利用 Claude API 构建可部署应用的项目集合，适合进一步验证代码、协议或社区采用情况。
 
-旨在帮助开发人员快速开始使用 Claude API 构建可部署应用程序的项目集合
+一组旨在帮助开发者快速上手、利用 Claude API 构建可部署应用的项目集合。
 
-信号等级 B · 评分 63.3</description>
+信号等级 B · 评分 65.5</description>
       <category>开源热榜</category>
-      <category>模型发布</category>
       <category>开源</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>google-deepmind/mujoco</title>
       <link>https://github.com/google-deepmind/mujoco</link>
       <guid isPermaLink="true">https://github.com/google-deepmind/mujoco</guid>
       <pubDate>Sun, 08 Nov 2026 11:44:26 +0000</pubDate>
-      <description>google、deepmind：通用物理模拟器，支持多关节动力学与接触交互，适合进一步验证代码、协议或社区采用情况。
+      <description>google、deepmind：具有接触的多关节动力学，适合进一步验证代码、协议或社区采用情况。
 
-通用物理模拟器，支持多关节动力学与接触交互。
+具有接触的多关节动力学。通用物理模拟器。
 
 信号等级 B · 评分 56.9</description>
       <category>开源热榜</category>
@@ -44,162 +80,6 @@
 信号等级 B · 评分 51.8</description>
       <category>NewsNow</category>
       <category>模型发布</category>
-    </item>
-    <item>
-      <title>再见，克劳德；你好，π</title>
-      <link>https://caleb.software/posts/claude-to-pi.html</link>
-      <guid isPermaLink="true">https://caleb.software/posts/claude-to-pi.html</guid>
-      <pubDate>Sun, 08 Nov 2026 06:27:38 +0000</pubDate>
-      <description>再见：Goodbye Claude, Hello Pi，适合优先评估模型能力、价格和工具选型变化。
-
-Goodbye Claude, Hello Pi
-
-信号等级 B · 评分 52.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>被年轻人遗忘的磁带，正在 AI 时代闷声发大财 原</title>
-      <link>https://www.ifanr.com/1688364</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1688364</guid>
-      <pubDate>Sun, 08 Nov 2026 03:35:42 +0000</pubDate>
-      <description>被年轻人遗忘的磁带：磁带在 AI 时代迎来了第二春，适合作为今日 AI/科技情报流里的重点线索。
-
-磁带在 AI 时代迎来了第二春。#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>《纽约时报》美食频道的 AI 助手拯救了我的工作日晚餐鸡肉，却差点毁了我的蛋糕</title>
-      <link>https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review</guid>
-      <pubDate>Sat, 07 Nov 2026 15:50:00 +0000</pubDate>
-      <description>《纽约时报》美食频道的 AI 助手拯救了...：每个工作日晚上 7 点左右，我发现自己站在冰箱前，试图决定晚餐吃什么，以免让我丈夫抱怨，“又是鸡肉，适合作为今日 AI/科技情报流里的重点线索。
-
-每个工作日晚上 7 点左右，我发现自己站在冰箱前，试图决定晚餐吃什么，以免让我丈夫抱怨，“又是鸡肉？”是的，我应该多制定膳食计划，...
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>美国允许英伟达向中国的一间空办公室出售芯片</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government</guid>
-      <pubDate>Sat, 07 Nov 2026 15:43:45 +0000</pubDate>
-      <description>人们担心美国商务部和英伟达在审查获准处理该公司 H200 人工智能芯片的中国公司时都没有尽职调查，来自官方更新源，适合直接判断产品变化。
-
-人们担心美国商务部和英伟达在审查获准处理该公司 H200 人工智能芯片的中国公司时都没有尽职调查。根据...
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>sherlock-project/sherlock</title>
-      <link>https://github.com/sherlock-project/sherlock</link>
-      <guid isPermaLink="true">https://github.com/sherlock-project/sherlock</guid>
-      <pubDate>Sat, 07 Nov 2026 15:28:33 +0000</pubDate>
-      <description>sherlock-project/she...：通过社交网络上的用户名查找社交媒体帐户，适合进一步验证代码、协议或社区采用情况。
-
-通过社交网络上的用户名查找社交媒体帐户
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>milind-soni/OpenMausBot</title>
-      <link>https://github.com/milind-soni/OpenMausBot</link>
-      <guid isPermaLink="true">https://github.com/milind-soni/OpenMausBot</guid>
-      <pubDate>Sat, 07 Nov 2026 15:28:33 +0000</pubDate>
-      <description>milind-soni/OpenMaus...：开源 Grok Bot 替代品，带有机器人可以使用的虚拟机，适合优先评估模型能力、价格和工具选型变化。
-
-开源 Grok Bot 替代品，带有机器人可以使用的虚拟机
-
-信号等级 B · 评分 59.2</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>anthropics/skills</title>
-      <link>https://github.com/anthropics/skills</link>
-      <guid isPermaLink="true">https://github.com/anthropics/skills</guid>
-      <pubDate>Sat, 07 Nov 2026 15:28:33 +0000</pubDate>
-      <description>anthropic：Agent Skills的公开仓库已上线，提供标准化技能模块，助力AI代理快速集成与扩展功能，适合进一步验证代码、协议或社区采用情况。
-
-Agent Skills的公开仓库已上线，提供标准化技能模块，助力AI代理快速集成与扩展功能。
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>meta/astryx</title>
-      <link>https://github.com/meta/astryx</link>
-      <guid isPermaLink="true">https://github.com/meta/astryx</guid>
-      <pubDate>Sat, 07 Nov 2026 15:28:33 +0000</pubDate>
-      <description>meta：完全可定制且可供代理使用的开源设计系统，适合关注自动化任务和多 Agent 协作演进。
-
-完全可定制且可供代理使用的开源设计系统
-
-信号等级 B · 评分 52.7</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>tailwindlabs/tailwindcss</title>
-      <link>https://github.com/tailwindlabs/tailwindcss</link>
-      <guid isPermaLink="true">https://github.com/tailwindlabs/tailwindcss</guid>
-      <pubDate>Sat, 07 Nov 2026 15:28:33 +0000</pubDate>
-      <description>tailwindlabs/tailwin...：用于快速 UI 开发的实用程序优先 CSS 框架，适合进一步验证代码、协议或社区采用情况。
-
-用于快速 UI 开发的实用程序优先 CSS 框架。
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>ranxianglei/billion-context</title>
-      <link>https://github.com/ranxianglei/billion-context</link>
-      <guid isPermaLink="true">https://github.com/ranxianglei/billion-context</guid>
-      <pubDate>Sat, 07 Nov 2026 15:28:33 +0000</pubDate>
-      <description>ranxianglei/billion-...：A context-compression plugin for month-long single session...，适合关注 Agent 工具调用和工作流搭建。
-
-A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need
-
-信号等级 B · 评分 57.5</description>
-      <category>开源热榜</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>dsx-ai-factory/nvke</title>
-      <link>https://github.com/dsx-ai-factory/nvke</link>
-      <guid isPermaLink="true">https://github.com/dsx-ai-factory/nvke</guid>
-      <pubDate>Sat, 07 Nov 2026 15:28:33 +0000</pubDate>
-      <description>dsx-ai-factory/nvke：NVIDIA Kubernetes 引擎 (NVKE)，适合进一步验证代码、协议或社区采用情况。
-
-NVIDIA Kubernetes 引擎 (NVKE)。裸机上 GPU Kubernetes 的管理平面。
-
-信号等级 B · 评分 54.0</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>AI 颠覆了网络安全领域。下一步是什么？</title>
-      <link>https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos</link>
-      <guid isPermaLink="true">https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos</guid>
-      <pubDate>Sat, 07 Nov 2026 15:00:00 +0000</pubDate>
-      <description>AI 颠覆了网络安全领域：本期节目采访了Cognition首席安全官、资深网络安全专家Alex Stamos，探讨当前网络安全领域的混乱现状，适合作为今日 AI/科技情报流里的重点线索。
-
-本期节目采访了Cognition首席安全官、资深网络安全专家Alex Stamos，探讨当前网络安全领域的混乱现状。这是系列专题的第一部分。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
     </item>
   </channel>
 </rss>
