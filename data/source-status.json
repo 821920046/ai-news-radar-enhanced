@@ -1,44 +1,12 @@
 {
-  "generated_at": "2026-11-08T21:45:40.619304Z",
+  "generated_at": "2026-11-09T01:28:31.384545Z",
   "sites": [
     {
       "site_id": "followbuilders",
       "site_name": "Follow Builders",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 510,
-      "error": null
-    },
-    {
-      "site_id": "zeli",
-      "site_name": "Zeli",
-      "ok": true,
-      "item_count": 53,
-      "duration_ms": 1064,
-      "error": null
-    },
-    {
-      "site_id": "techurls",
-      "site_name": "TechURLs",
-      "ok": true,
-      "item_count": 405,
-      "duration_ms": 2538,
-      "error": null
-    },
-    {
-      "site_id": "bestblogs",
-      "site_name": "BestBlogs",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 2593,
-      "error": null
-    },
-    {
-      "site_id": "aibase",
-      "site_name": "AIbase",
-      "ok": true,
-      "item_count": 20,
-      "duration_ms": 3241,
+      "duration_ms": 257,
       "error": null
     },
     {
@@ -46,15 +14,39 @@
       "site_name": "AI Breakfast",
       "ok": true,
       "item_count": 9,
-      "duration_ms": 3351,
+      "duration_ms": 332,
       "error": null
     },
     {
-      "site_id": "oss_trending",
-      "site_name": "开源热榜",
+      "site_id": "zeli",
+      "site_name": "Zeli",
       "ok": true,
-      "item_count": 22,
-      "duration_ms": 3471,
+      "item_count": 54,
+      "duration_ms": 738,
+      "error": null
+    },
+    {
+      "site_id": "aibase",
+      "site_name": "AIbase",
+      "ok": true,
+      "item_count": 20,
+      "duration_ms": 2047,
+      "error": null
+    },
+    {
+      "site_id": "bestblogs",
+      "site_name": "BestBlogs",
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 2171,
+      "error": null
+    },
+    {
+      "site_id": "techurls",
+      "site_name": "TechURLs",
+      "ok": true,
+      "item_count": 405,
+      "duration_ms": 3199,
       "error": null
     },
     {
@@ -62,23 +54,31 @@
       "site_name": "AI HOT",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 3549,
+      "duration_ms": 3687,
       "error": "404 Client Error: Not Found for url: https://aihot.news/api/public/items?mode=all&take=100"
+    },
+    {
+      "site_id": "oss_trending",
+      "site_name": "开源热榜",
+      "ok": true,
+      "item_count": 22,
+      "duration_ms": 3830,
+      "error": null
     },
     {
       "site_id": "aihubtoday",
       "site_name": "AI HubToday",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 6276,
+      "duration_ms": 5768,
       "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1018)')))"
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 3003,
-      "duration_ms": 9493,
+      "item_count": 3025,
+      "duration_ms": 10808,
       "error": null
     },
     {
@@ -86,7 +86,7 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 14382,
+      "duration_ms": 14668,
       "error": null
     },
     {
@@ -94,23 +94,23 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 119,
-      "duration_ms": 14381,
-      "error": null
-    },
-    {
-      "site_id": "official_ai",
-      "site_name": "Official AI Updates",
-      "ok": true,
-      "item_count": 654,
-      "duration_ms": 14501,
+      "duration_ms": 14741,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 308,
-      "duration_ms": 60401,
+      "item_count": 334,
+      "duration_ms": 51996,
+      "error": null
+    },
+    {
+      "site_id": "official_ai",
+      "site_name": "Official AI Updates",
+      "ok": true,
+      "item_count": 647,
+      "duration_ms": 75792,
       "error": null
     },
     {
@@ -119,7 +119,7 @@
       "ok": true,
       "partial_failures": 0,
       "item_count": 50,
-      "duration_ms": 575,
+      "duration_ms": 1838,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -135,9 +135,9 @@
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5408,
-  "items_before_topic_filter": 3559,
-  "items_in_24h": 266,
+  "fetched_raw_items": 5450,
+  "items_before_topic_filter": 3904,
+  "items_in_24h": 297,
   "ai_processing": {
     "tldr_items": 0
   },
