@@ -5,21 +5,8 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Nov 2026 16:57:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 23:23:06 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>Anthropic 推出 Claude Meetings，可将工作讨论转化为计划与任务</title>
-      <link>https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks</guid>
-      <pubDate>Tue, 10 Nov 2026 17:30:00 +0000</pubDate>
-      <description>Anthropic、Claude：As participants talk, Claude can draft the plan being disc...，适合优先评估模型能力、价格和工具选型变化。
-
-As participants talk, Claude can draft the plan being discussed, map out a timeline on a whiteboard, answer questions in the meeting chat, and access connected work apps to retrieve information, such...
-
-信号等级 B · 评分 68.5</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
     <item>
       <title>F3-AGI v4.0:用于高效抽象推理的生物能门控主动推断、可塑性预条件化与残差程序合成</title>
       <link>https://arxiv.org/abs/2611.13325</link>
@@ -35,38 +22,43 @@ arXiv:2611.13325v1 Announce Type: new Abstract: Few-shot abstract reasoning on A
       <category>部署推理</category>
     </item>
     <item>
-      <title>据报道，OpenAI 季度收入首次突破 100 亿美元</title>
-      <link>https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time</guid>
-      <pubDate>Wed, 11 Nov 2026 16:14:44 +0000</pubDate>
-      <description>OpenAI：$10B 的销售额比该公司第二季度记录的 67 亿美元收入增长了近 50%，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Gemini Decisions API:快速、校准后的多模态决策</title>
+      <link>https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+      <description>了解 Gemini Decisions API，它由我们最先进的模型 Gemini Decision 提供支持，可实...，来自官方更新源，适合直接判断产品变化。
 
-$10B 的销售额比该公司第二季度记录的 67 亿美元收入增长了近 50%。
+了解 Gemini Decisions API，它由我们最先进的模型 Gemini Decision 提供支持，可实现快速、校准的多模式决策。
+
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>英国 Fractile 公司获 7.2 亿美元融资，在 AI 芯片竞赛中抢占先机</title>
+      <link>https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips</guid>
+      <pubDate>Wed, 11 Nov 2026 19:34:55 +0000</pubDate>
+      <description>英国 Fractile 公司获 7.2...：Fractile已成为AI芯片竞赛中资金最丰厚的玩家之一，适合作为今日 AI/科技情报流里的重点线索。
+
+Fractile已成为AI芯片竞赛中资金最丰厚的玩家之一。
 
 信号等级 B · 评分 65.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>shadcn/improve</title>
-      <link>https://github.com/shadcn/improve</link>
-      <guid isPermaLink="true">https://github.com/shadcn/improve</guid>
-      <pubDate>Wed, 11 Nov 2026 16:57:09 +0000</pubDate>
-      <description>shadcn/improve：作为一个语言模型，我无法直接访问或审计你的个人代码库，适合进一步验证代码、协议或社区采用情况。
+      <title>GRAP:用于分析大语言模型性别偏见的性别词库感知探测方法</title>
+      <link>https://arxiv.org/abs/2611.13024</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.13024</guid>
+      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
+      <description>GRAP：arXiv:2611.13024v1 Announce Type: new Abstract: As LLMs in...，适合判断技术路线和后续产品化可能性。
 
-作为一个语言模型，我无法直接访问或审计你的个人代码库。不过，我可以为你提供一套标准的**代码审计与优化方案**，帮助你为较小的模型准备数据和任务。
+arXiv:2611.13024v1 Announce Type: new Abstract: As LLMs increasingly mediate everyday interactions, subtle gender biases in open-ended responses pose growing societal risks. Existing probing methods...
 
-以下是基于专业编辑视角的翻译与方案：
-
-### 核心摘要（中文）
-利用最强大的模型进行代码库审计与策划，为成本更低的模型编写执行方案。该过程旨在通过高层级的分析和规划，降低后续执行阶段的计算成本，同时保证代质量与功能完整性。
-
-### 详细执行计划（供参考）
-
-**第一阶段：高级
-
-信号等级 B · 评分 62.6</description>
-      <category>开源热榜</category>
-      <category>开源</category>
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>ExpertCrowd-SWE:在陌生代码库中，由专家撰写的工程任务上衡量前沿编码智能体</title>
@@ -260,11 +252,11 @@ arXiv:2611.14418v1 Announce Type: new Abstract: Local decoding usually fixes one
       <category>论文研究</category>
     </item>
     <item>
-      <title>Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents</title>
+      <title>智能体评估框架的比较分析:企业分析智能体中的稳定性、检测与发现</title>
       <link>https://arxiv.org/abs/2611.14493</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.14493</guid>
       <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Comparative Analysis...：arXiv:2611.14493v1 Announce Type: new Abstract: Deploying...，适合关注自动化任务和多 Agent 协作演进。
+      <description>智能体评估框架的比较分析：arXiv:2611.14493v1 Announce Type: new Abstract: Deploying...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2611.14493v1 Announce Type: new Abstract: Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool...
 
@@ -274,11 +266,11 @@ arXiv:2611.14493v1 Announce Type: new Abstract: Deploying LLM-based analytics ag
       <category>论文研究</category>
     </item>
     <item>
-      <title>Textual Response-Aware Guidance for Zero-Shot Adversarial Robustness of Vision-Language Models</title>
+      <title>面向视觉-语言模型零样本对抗鲁棒性的文本响应感知引导</title>
       <link>https://arxiv.org/abs/2610.40309</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.40309</guid>
       <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Textual Response-Awa...：arXiv:2610.40309v2 Announce Type: cross Abstract: Vision-l...，适合判断技术路线和后续产品化可能性。
+      <description>面向视觉-语言模型零样本对抗鲁棒性的文本...：arXiv:2610.40309v2 Announce Type: cross Abstract: Vision-l...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.40309v2 Announce Type: cross Abstract: Vision-language models (VLMs) exhibit strong zero-shot generalization but remain vulnerable to adversarial attacks. Existing adversarial fine-tuning...
 
@@ -288,7 +280,7 @@ arXiv:2610.40309v2 Announce Type: cross Abstract: Vision-language models (VLMs) 
       <category>多模态</category>
     </item>
     <item>
-      <title>Brasilidade: Measuring Brazilian Identity for Large Language Models</title>
+      <title>Brasilidade:衡量大型语言模型对巴西身份的识别能力</title>
       <link>https://arxiv.org/abs/2611.12906</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.12906</guid>
       <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
@@ -301,11 +293,11 @@ arXiv:2611.12906v1 Announce Type: cross Abstract: This work presents a new bench
       <category>论文研究</category>
     </item>
     <item>
-      <title>Third Eye: Beyond Immediate Gains in Recursive Self-Improvement</title>
+      <title>第三只眼:递归自我改进中超越即时收益的探索</title>
       <link>https://arxiv.org/abs/2611.12988</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.12988</guid>
       <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Third Eye：arXiv:2611.12988v1 Announce Type: cross Abstract: Does a u...，适合判断技术路线和后续产品化可能性。
+      <description>第三只眼：arXiv:2611.12988v1 Announce Type: cross Abstract: Does a u...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.12988v1 Announce Type: cross Abstract: Does a useful self-update remain useful after the model updates again? Third Eye separates immediate performance from the outcome of a further native...
 
@@ -314,7 +306,7 @@ arXiv:2611.12988v1 Announce Type: cross Abstract: Does a useful self-update rema
       <category>论文研究</category>
     </item>
     <item>
-      <title>GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning</title>
+      <title>GTAGym:用于评估与强化学习的真实AAA级游戏任务环境</title>
       <link>https://arxiv.org/abs/2611.13028</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.13028</guid>
       <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
