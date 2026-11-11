@@ -5,7 +5,7 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Nov 2026 08:56:05 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 16:57:09 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Anthropic 推出 Claude Meetings，可将工作讨论转化为计划与任务</title>
@@ -21,6 +21,96 @@ As participants talk, Claude can draft the plan being discussed, map out a timel
       <category>模型发布</category>
     </item>
     <item>
+      <title>F3-AGI v4.0:用于高效抽象推理的生物能门控主动推断、可塑性预条件化与残差程序合成</title>
+      <link>https://arxiv.org/abs/2611.13325</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.13325</guid>
+      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
+      <description>F3-AGI v4.0：arXiv:2611.13325v1 Announce Type: new Abstract: Few-shot a...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.13325v1 Announce Type: new Abstract: Few-shot abstract reasoning on ARC-AGI requires inducing algorithmic transformations from 2 to 5 demonstration pairs without task-specific pretraining....
+
+信号等级 B · 评分 67.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>据报道，OpenAI 季度收入首次突破 100 亿美元</title>
+      <link>https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time</guid>
+      <pubDate>Wed, 11 Nov 2026 16:14:44 +0000</pubDate>
+      <description>OpenAI：$10B 的销售额比该公司第二季度记录的 67 亿美元收入增长了近 50%，适合作为今日 AI/科技情报流里的重点线索。
+
+$10B 的销售额比该公司第二季度记录的 67 亿美元收入增长了近 50%。
+
+信号等级 B · 评分 65.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>shadcn/improve</title>
+      <link>https://github.com/shadcn/improve</link>
+      <guid isPermaLink="true">https://github.com/shadcn/improve</guid>
+      <pubDate>Wed, 11 Nov 2026 16:57:09 +0000</pubDate>
+      <description>shadcn/improve：作为一个语言模型，我无法直接访问或审计你的个人代码库，适合进一步验证代码、协议或社区采用情况。
+
+作为一个语言模型，我无法直接访问或审计你的个人代码库。不过，我可以为你提供一套标准的**代码审计与优化方案**，帮助你为较小的模型准备数据和任务。
+
+以下是基于专业编辑视角的翻译与方案：
+
+### 核心摘要（中文）
+利用最强大的模型进行代码库审计与策划，为成本更低的模型编写执行方案。该过程旨在通过高层级的分析和规划，降低后续执行阶段的计算成本，同时保证代质量与功能完整性。
+
+### 详细执行计划（供参考）
+
+**第一阶段：高级
+
+信号等级 B · 评分 62.6</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>ExpertCrowd-SWE:在陌生代码库中，由专家撰写的工程任务上衡量前沿编码智能体</title>
+      <link>https://arxiv.org/abs/2611.13246</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.13246</guid>
+      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
+      <description>ExpertCrowd-SWE：arXiv:2611.13246v1 Announce Type: new Abstract: ExpertCrow...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.13246v1 Announce Type: new Abstract: ExpertCrowd-SWE (EC-SWE) is a benchmark of 100 expert-authored, multi-file software engineering tasks for evaluating autonomous coding agents in large,...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>基于物理验证、由智能体引导的交换关联泛函发现</title>
+      <link>https://arxiv.org/abs/2611.13329</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.13329</guid>
+      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
+      <description>基于物理验证、由智能体引导的交换关联泛函...：arXiv:2611.13329v1 Announce Type: new Abstract: Accurate...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.13329v1 Announce Type: new Abstract: Accurate, compact exchange--correlation functionals are central to predictive density functional theory. Symbolic search and language-model agents can...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>任何有限规则手册都无法为每个安全程序提供认证:AI 智能体守门机制的不可行性定理</title>
+      <link>https://arxiv.org/abs/2611.13367</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.13367</guid>
+      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
+      <description>任何有限规则手册都无法为每个安全程序提供...：arXiv:2611.13367v1 Announce Type: new Abstract: An AI assi...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.13367v1 Announce Type: new Abstract: An AI assistant writes small programs, and a gatekeeper must decide, from the code alone, whether each one may run. Suppose the rules are fixed: never...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
       <title>SteerDistill:通过闭环教师引导对 LLM 智能体进行量化</title>
       <link>https://arxiv.org/abs/2611.13410</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.13410</guid>
@@ -29,7 +119,7 @@ As participants talk, Claude can draft the plan being discussed, map out a timel
 
 arXiv:2611.13410v1 Announce Type: new Abstract: Low-bit quantization reduces the inference cost of LLM agents but can compromise task success. Examining failed rollouts, we find that quantized agents...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
@@ -43,7 +133,7 @@ arXiv:2611.13410v1 Announce Type: new Abstract: Low-bit quantization reduces the
 
 arXiv:2611.13456v1 Announce Type: new Abstract: As AI-based products permeate society, specifically systems using generative models, a belief system is emerging about what these products are and what...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -56,7 +146,7 @@ arXiv:2611.13456v1 Announce Type: new Abstract: As AI-based products permeate so
 
 arXiv:2611.13557v1 Announce Type: new Abstract: We present Darmok, the first automated system to reach superhuman performance on British cryptic crosswords. Unlike American-style crosswords, cryptic...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -69,7 +159,7 @@ arXiv:2611.13557v1 Announce Type: new Abstract: We present Darmok, the first aut
 
 arXiv:2611.13701v1 Announce Type: new Abstract: We investigate how the persistent topology of neuron- weight point clouds evolves under stable and non-stationary supervision. An identical multilayer...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -82,7 +172,7 @@ arXiv:2611.13701v1 Announce Type: new Abstract: We investigate how the persisten
 
 arXiv:2611.13705v1 Announce Type: new Abstract: As AI agents become increasingly capable of generating and optimizing hardware circuits, ensuring the correctness of AI-generated designs becomes more...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -96,7 +186,7 @@ arXiv:2611.13705v1 Announce Type: new Abstract: As AI agents become increasingly
 
 arXiv:2611.13782v1 Announce Type: new Abstract: Learning representations from multimodal observations is difficult in reinforcement learning with limited interaction data. Multimodal Joint Predictive...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -111,7 +201,7 @@ arXiv:2611.13782v1 Announce Type: new Abstract: Learning representations from mu
 
 arXiv:2611.13926v1 Announce Type: new Abstract: Explainable AI (XAI) has expanded into a broad and impactful research area, but the fundamental question of how best to evaluate explanation techniques...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -124,7 +214,7 @@ arXiv:2611.13926v1 Announce Type: new Abstract: Explainable AI (XAI) has expande
 
 arXiv:2611.13946v1 Announce Type: new Abstract: Practical Web applications increasingly require agents to interpret long conversations or documents. For inputs exceeding the context windows of large...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -138,7 +228,7 @@ arXiv:2611.13946v1 Announce Type: new Abstract: Practical Web applications incre
 
 arXiv:2611.13975v1 Announce Type: new Abstract: In Mixture-of-Experts (MoE) models, the nature of expert specialization remains controversial. Reports of domain-associated expert preferences contrast...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -151,21 +241,21 @@ arXiv:2611.13975v1 Announce Type: new Abstract: In Mixture-of-Experts (MoE) mode
 
 arXiv:2611.14122v1 Announce Type: new Abstract: Large language models (LLMs) achieve expert-level diagnostic accuracy in static evaluations, where the model receives a curated vignette or case report...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
     </item>
     <item>
-      <title>Precision on Demand: Escalating Weight Bits at Uncertain Decoding Steps in a Small Local Model</title>
+      <title>按需精度:在小规模本地模型的不确定解码步骤中提升权重比特数</title>
       <link>https://arxiv.org/abs/2611.14418</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.14418</guid>
       <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Precision on Demand：arXiv:2611.14418v1 Announce Type: new Abstract: Local deco...，适合判断技术路线和后续产品化可能性。
+      <description>按需精度：arXiv:2611.14418v1 Announce Type: new Abstract: Local deco...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.14418v1 Announce Type: new Abstract: Local decoding usually fixes one weight precision for the whole generation. We study a different allocation: store 8-bit weights, decode with their top...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -178,7 +268,7 @@ arXiv:2611.14418v1 Announce Type: new Abstract: Local decoding usually fixes one
 
 arXiv:2611.14493v1 Announce Type: new Abstract: Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -192,7 +282,7 @@ arXiv:2611.14493v1 Announce Type: new Abstract: Deploying LLM-based analytics ag
 
 arXiv:2610.40309v2 Announce Type: cross Abstract: Vision-language models (VLMs) exhibit strong zero-shot generalization but remain vulnerable to adversarial attacks. Existing adversarial fine-tuning...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -206,7 +296,7 @@ arXiv:2610.40309v2 Announce Type: cross Abstract: Vision-language models (VLMs) 
 
 arXiv:2611.12906v1 Announce Type: cross Abstract: This work presents a new benchmark that aims to address the limitations of current methods for evaluating LLMs in Brazilian Portuguese. We introduced...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -219,7 +309,7 @@ arXiv:2611.12906v1 Announce Type: cross Abstract: This work presents a new bench
 
 arXiv:2611.12988v1 Announce Type: cross Abstract: Does a useful self-update remain useful after the model updates again? Third Eye separates immediate performance from the outcome of a further native...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -232,7 +322,7 @@ arXiv:2611.12988v1 Announce Type: cross Abstract: Does a useful self-update rema
 
 arXiv:2611.13028v1 Announce Type: cross Abstract: AAA games offer a rich testbed for evaluating agent perception, reasoning, and control. However, evaluating whether agents can complete tasks in AAA...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -246,7 +336,7 @@ arXiv:2611.13028v1 Announce Type: cross Abstract: AAA games offer a rich testbed
 
 arXiv:2611.13055v1 Announce Type: cross Abstract: A document preserves the visible result of professional work but often discards the research, calculations, assumptions, evidence, and authorization...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -259,7 +349,7 @@ arXiv:2611.13055v1 Announce Type: cross Abstract: A document preserves the visib
 
 arXiv:2611.13192v1 Announce Type: cross Abstract: Accurate and timely identification of road closures is critical for large-scale navigation and logistics systems, yet remains challenging due to the...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -273,7 +363,7 @@ arXiv:2611.13192v1 Announce Type: cross Abstract: Accurate and timely identifica
 
 arXiv:2611.13412v1 Announce Type: cross Abstract: LLM agents drive inference engines with closed-loop sessions whose context grows every turn, and serving them economically depends on prefix caching:...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -288,7 +378,7 @@ arXiv:2611.13412v1 Announce Type: cross Abstract: LLM agents drive inference eng
 
 arXiv:2611.13414v1 Announce Type: cross Abstract: Quantifying uncertainty over an entire LLM completion is critical for selective prediction and adaptive compute. Zero-cost signals such as mean token...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -301,7 +391,7 @@ arXiv:2611.13414v1 Announce Type: cross Abstract: Quantifying uncertainty over a
 
 arXiv:2611.13441v1 Announce Type: cross Abstract: Most language models deployed outside the United States and China are fine-tuned descendants of a small number of pretrained families. We argue that...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -314,7 +404,7 @@ arXiv:2611.13441v1 Announce Type: cross Abstract: Most language models deployed 
 
 arXiv:2611.13480v1 Announce Type: cross Abstract: KL-regularized reinforcement learning, the objective behind maximum-entropy RL and RL from human feedback, is variational inference in the graphical...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
@@ -328,7 +418,7 @@ arXiv:2611.13480v1 Announce Type: cross Abstract: KL-regularized reinforcement l
 
 arXiv:2611.13922v1 Announce Type: cross Abstract: Acoustic side-channel attacks (ASCA) recover typed text from the sound of keystrokes, using only a commodity microphone and no access to the victim&apos;s...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -341,7 +431,7 @@ arXiv:2611.13922v1 Announce Type: cross Abstract: Acoustic side-channel attacks 
 
 arXiv:2611.13933v1 Announce Type: cross Abstract: Farm security in the UK rests on thinner evidence than its cost suggests. We ran a PRISMA guided review: twelve searches of Web of Science and Scopus...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -354,7 +444,7 @@ arXiv:2611.13933v1 Announce Type: cross Abstract: Farm security in the UK rests 
 
 arXiv:2611.13940v1 Announce Type: cross Abstract: The paper presents an Industry Process for Meta-heuristic Development (IPMD) schema, a systematic methodology for applying meta- and hyper-heuristic...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -367,7 +457,7 @@ arXiv:2611.13940v1 Announce Type: cross Abstract: The paper presents an Industry
 
 arXiv:2611.13997v1 Announce Type: cross Abstract: Large Vision-Language Models (LVLMs) have demonstrated remarkable capabilities but raise significant privacy concerns due to their abilities to infer...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
@@ -382,7 +472,7 @@ arXiv:2611.13997v1 Announce Type: cross Abstract: Large Vision-Language Models (
 
 arXiv:2611.14013v1 Announce Type: cross Abstract: The arteriolar-to-venular diameter ratio (AVR) is a clinically motivated marker of retinal vascular health. We present a five-stage pipeline for AVR...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -395,7 +485,7 @@ arXiv:2611.14013v1 Announce Type: cross Abstract: The arteriolar-to-venular diam
 
 arXiv:2611.14074v1 Announce Type: cross Abstract: In this paper, we propose a new paradigm in wildfire management for detecting both visible and obscured fire using Deep Learning (DL). The essence of...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -408,7 +498,7 @@ arXiv:2611.14074v1 Announce Type: cross Abstract: In this paper, we propose a ne
 
 arXiv:2611.14079v1 Announce Type: cross Abstract: Bias has become a default lens for understanding what machine learning systems do and how we should relate to them. Bias is at root a deviation from...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -421,7 +511,7 @@ arXiv:2611.14079v1 Announce Type: cross Abstract: Bias has become a default lens
 
 arXiv:2611.14113v1 Announce Type: cross Abstract: Understanding the progress of an activity requires tracking how the objects involved change over time. Object state readout provides this information...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -435,7 +525,7 @@ arXiv:2611.14113v1 Announce Type: cross Abstract: Understanding the progress of 
 
 arXiv:2611.14168v1 Announce Type: cross Abstract: Understanding the internal representations of neural networks and characterizing their relationship with human conceptual structure are two critical...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -448,7 +538,7 @@ arXiv:2611.14168v1 Announce Type: cross Abstract: Understanding the internal rep
 
 arXiv:2611.14260v1 Announce Type: cross Abstract: Children&apos;s peer conflicts increasingly play out in group chats, where tone and timing are stripped away, and a hurtful message is easier to send than...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -462,7 +552,7 @@ arXiv:2611.14260v1 Announce Type: cross Abstract: Children&apos;s peer conflicts
 
 arXiv:2611.14333v1 Announce Type: cross Abstract: Users often complain that AI assistants such as ChatGPT are getting worse. Some versions do change, but human evaluation leaves a second possibility...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -475,7 +565,7 @@ arXiv:2611.14333v1 Announce Type: cross Abstract: Users often complain that AI a
 
 arXiv:2611.14356v1 Announce Type: cross Abstract: Rapidly evolving LLM architectures and heterogeneous mobile hardware make supporting new models in on-device inference engines a recurring and costly...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>部署推理</category>
@@ -489,7 +579,7 @@ arXiv:2611.14356v1 Announce Type: cross Abstract: Rapidly evolving LLM architect
 
 arXiv:2611.14426v1 Announce Type: cross Abstract: Branch-and-Bound (B&amp;amp;B) and $A^*$ are popular exact search methods originating from Operations Research and Artificial Intelligence, respectively....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -502,7 +592,7 @@ arXiv:2611.14426v1 Announce Type: cross Abstract: Branch-and-Bound (B&amp;amp;B)
 
 arXiv:2611.14519v1 Announce Type: cross Abstract: Foundation models pretrained on large natural-image collections are increasingly adapted for medical image segmentation, in the expectation that they...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
@@ -516,7 +606,7 @@ arXiv:2611.14519v1 Announce Type: cross Abstract: Foundation models pretrained o
 
 arXiv:2605.24490v2 Announce Type: replace Abstract: Multi-agent LLM decision systems for portfolio management still lack a principled way to assign credit across specialist agents, remain vulnerable...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -530,7 +620,7 @@ arXiv:2605.24490v2 Announce Type: replace Abstract: Multi-agent LLM decision sys
 
 arXiv:2606.11337v2 Announce Type: replace Abstract: Scientific AI agents increasingly retrieve evidence, reason across sources, and synthesize conclusions used in consequential decisions. Yet, their...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -543,7 +633,7 @@ arXiv:2606.11337v2 Announce Type: replace Abstract: Scientific AI agents increas
 
 arXiv:2607.25891v3 Announce Type: replace Abstract: Comprehensively evaluating AI agents across interactive environments is difficult due to fragmented tasks, scaffolds, verifiers, and scoring rules....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -557,7 +647,7 @@ arXiv:2607.25891v3 Announce Type: replace Abstract: Comprehensively evaluating A
 
 arXiv:2608.30955v2 Announce Type: replace Abstract: Accurate action models are critical for effective planning. Existing action-model learning methods largely assume simple action representations or...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -570,7 +660,7 @@ arXiv:2608.30955v2 Announce Type: replace Abstract: Accurate action models are c
 
 arXiv:2610.04542v3 Announce Type: replace Abstract: Clinical LLMs must decide not only what diagnosis to produce, but also whether the available evidence is sufficient for autonomous decision making....
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
       <category>论文研究</category>
@@ -584,7 +674,7 @@ arXiv:2610.04542v3 Announce Type: replace Abstract: Clinical LLMs must decide no
 
 arXiv:2610.36298v2 Announce Type: replace Abstract: Machine learning models deployed on edge devices are vulnerable to model stealing attacks, in which an adversary replicates a model using only its...
 
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
@@ -597,90 +687,7 @@ arXiv:2610.36298v2 Announce Type: replace Abstract: Machine learning models depl
 
 arXiv:2611.07948v2 Announce Type: replace Abstract: As large language models (LLMs) are increasingly deployed in real-world applications, evaluating the correctness of their responses is crucial for...
 
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Multi-Agent Coordinated Rename Refactoring</title>
-      <link>https://arxiv.org/abs/2601.00482</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2601.00482</guid>
-      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Multi-Agent Coordina...：arXiv:2601.00482v2 Announce Type: replace-cross Abstract:...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2601.00482v2 Announce Type: replace-cross Abstract: The primary value of AI agents in software development lies in their ability to extend the developer&apos;s capacity for reasoning and action, not...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>BrainVista: Modeling Naturalistic Brain Dynamics as Multimodal Next-Token Prediction</title>
-      <link>https://arxiv.org/abs/2602.04512</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.04512</guid>
-      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>BrainVista：arXiv:2602.04512v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2602.04512v2 Announce Type: replace-cross Abstract: Naturalistic fMRI offers a time-resolved window into cortical dynamics during continuous multimodal experience, where future brain states are...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>OmniReview: A Large-scale Benchmark and LLM-enhanced Framework for Realistic Reviewer Recommendation</title>
-      <link>https://arxiv.org/abs/2602.08896</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.08896</guid>
-      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>OmniReview：arXiv:2602.08896v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2602.08896v2 Announce Type: replace-cross Abstract: Academic peer review remains the cornerstone of scholarly validation, yet the field faces some challenges in data and methods. From the data...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Explainable Iterative Data Visualization Refinement via an LLM Agent</title>
-      <link>https://arxiv.org/abs/2604.15319</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2604.15319</guid>
-      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Explainable Iterativ...：arXiv:2604.15319v3 Announce Type: replace-cross Abstract:...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2604.15319v3 Announce Type: replace-cross Abstract: Exploratory analysis of high-dimensional data relies on embedding the data into a low-dimensional space, based on which a visualization plot...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving</title>
-      <link>https://arxiv.org/abs/2604.16682</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2604.16682</guid>
-      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>KAIROS：arXiv:2604.16682v2 Announce Type: replace-cross Abstract:...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2604.16682v2 Announce Type: replace-cross Abstract: Power has become a central bottleneck for AI inference. This problem is becoming more urgent as agentic AI emerges as a major workload class,...
-
-信号等级 B · 评分 66.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces</title>
-      <link>https://arxiv.org/abs/2605.14786</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.14786</guid>
-      <pubDate>Wed, 11 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Known By Their Actio...：arXiv:2605.14786v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2605.14786v2 Announce Type: replace-cross Abstract: As LLM-based agents increasingly browse the web on users&apos; behalf, a natural question arises: can websites passively identify which underlying...
-
-信号等级 B · 评分 66.5</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
