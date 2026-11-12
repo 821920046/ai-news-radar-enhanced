@@ -5,582 +5,576 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>最近 24 小时全部内容，不筛不弃。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 12 Nov 2026 06:00:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 15:48:20 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-all.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Claude API 加了个&quot;挡位&quot;：聊着聊着，能给 AI 临时加力</title>
-      <link>https://www.aibase.com/news/32271</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32271</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Claude：聊着聊着，能给 AI 临时加力，适合优先评估模型能力、价格和工具选型变化。
+      <title>Alishahryar1/free-claude-code</title>
+      <link>https://github.com/Alishahryar1/free-claude-code</link>
+      <guid isPermaLink="true">https://github.com/Alishahryar1/free-claude-code</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>claude：从您的终端、应用程序、IDE 或手机免费使用 Claude Code、Codex、Antigravity、VSCod...，适合进一步验证代码、协议或社区采用情况。
+
+从您的终端、应用程序、IDE 或手机免费使用 Claude Code、Codex、Antigravity、VSCode、Pi 和 OpenCode（以及其他 6 个工具）（1.3B+ 免费代币），现在可以从具有本机浏览器会话（多工具 + 多模型）的浏览器（如 OpenClaw）（支持语音 + ToS 友好）使用
+
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>ggml-org/llama.cpp</title>
+      <link>https://github.com/ggml-org/llama.cpp</link>
+      <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>llama.cpp：大型语言模型（LLM）推理的C/C++优化指南，适合优先评估模型能力、价格和工具选型变化。
+
+大型语言模型（LLM）推理的C/C++优化指南。文章详细探讨了利用CPU指令集（如AVX-512、SIMD）和内存管理技术，以实现低延迟、高吞吐量的本地部署方案，特别针对资源受限环境进行了性能调优。
+
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>模型发布</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>pookjw/HermesEnabler</title>
+      <link>https://github.com/pookjw/HermesEnabler</link>
+      <guid isPermaLink="true">https://github.com/pookjw/HermesEnabler</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>pookjw/HermesEnabler：爱马仕表盘现已支持所有Apple Watch设备，用户无需搭配特定表带即可启用经典设计界面，适合进一步验证代码、协议或社区采用情况。
+
+爱马仕表盘现已支持所有Apple Watch设备，用户无需搭配特定表带即可启用经典设计界面。
+
+信号等级 B · 评分 53.7</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>CopilotKit/OpenBot</title>
+      <link>https://github.com/CopilotKit/OpenBot</link>
+      <guid isPermaLink="true">https://github.com/CopilotKit/OpenBot</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>CopilotKit/OpenBot：开源人工智能同事每人都有一台自己的计算机：浏览器、文件和工具，每一个动作在发生之前就决定并在发生之后记录，适合进一步验证代码、协议或社区采用情况。
+
+开源人工智能同事每人都有一台自己的计算机：浏览器、文件和工具，每一个动作在发生之前就决定并在发生之后记录。带上任何 AG-UI 代理。
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>智能体</category>
+    </item>
+    <item>
+      <title>nodejs/node</title>
+      <link>https://github.com/nodejs/node</link>
+      <guid isPermaLink="true">https://github.com/nodejs/node</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>nodejs/node：Node.js JavaScript 运行时✨🐢🚀✨，适合进一步验证代码、协议或社区采用情况。
+
+Node.js JavaScript 运行时✨🐢🚀✨
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>QwenLM/qwen-code</title>
+      <link>https://github.com/QwenLM/qwen-code</link>
+      <guid isPermaLink="true">https://github.com/QwenLM/qwen-code</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>QwenLM、qwen-code：一款驻留在终端中的开源 AI 编程智能体，适合关注自动化任务和多 Agent 协作演进。
+
+一款驻留在终端中的开源 AI 编程智能体。
+
+信号等级 B · 评分 63.9</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>模型发布</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>nvm-sh/nvm</title>
+      <link>https://github.com/nvm-sh/nvm</link>
+      <guid isPermaLink="true">https://github.com/nvm-sh/nvm</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>nvm-sh/nvm：Node Version Manager (NVM) 是一个符合 POSIX 标准的 Bash 脚本，用于管理多个活...，适合进一步验证代码、协议或社区采用情况。
+
+Node Version Manager (NVM) 是一个符合 POSIX 标准的 Bash 脚本，用于管理多个活跃的 Node.js 版本。
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>ashhart/TensorFold</title>
+      <link>https://github.com/ashhart/TensorFold</link>
+      <guid isPermaLink="true">https://github.com/ashhart/TensorFold</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>ashhart/TensorFold：支持 Metal、CUDA 及 Vulkan 架构的大语言模型（LLM）推理引擎，适合进一步验证代码、协议或社区采用情况。
+
+支持 Metal、CUDA 及 Vulkan 架构的大语言模型（LLM）推理引擎。
+
+信号等级 B · 评分 60.3</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>押注头部科技巨头赚麻了：迪拜富豪透露投资 OpenAI、SpaceX 和 Anthropic 狂揽数十亿美元</title>
+      <link>https://www.aibase.com/news/32286</link>
+      <guid isPermaLink="true">https://www.aibase.com/news/32286</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>OpenAI、Anthropic：迪拜富豪透露投资 OpenAI、SpaceX 和 Anthropic 狂揽数十亿美元，适合判断资金、客户和生态格局的变化。
+
+信号等级 C · 评分 23.0</description>
+      <category>AIbase</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>单张消费级显卡跑出 60FPS 游戏世界：Matrix-Game4.0 上线 Reactor，浏览器里「边玩边生成」</title>
+      <link>https://www.aibase.com/zh/news/32285</link>
+      <guid isPermaLink="true">https://www.aibase.com/zh/news/32285</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>单张消费级显卡跑出 60FPS 游戏世界：Matrix-Game4.0 上线 Reactor，浏览器里「边玩边生成」，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 22.5</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>微软松口允许关闭必应 AI 答案，但开门要收&quot;过路费&quot;</title>
+      <link>https://www.aibase.com/news/32284</link>
+      <guid isPermaLink="true">https://www.aibase.com/news/32284</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>微软松口允许关闭必应 AI 答案，但开门要收&quot;过路费&quot;，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 8.0</description>
+      <category>AIbase</category>
+    </item>
+    <item>
+      <title>冲刺 IPO 前夜，Claude 月访问量冲上 12.53 亿创纪录</title>
+      <link>https://www.aibase.com/news/32283</link>
+      <guid isPermaLink="true">https://www.aibase.com/news/32283</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Claude 月访问量冲上 12.53 亿创纪录，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 34.2</description>
+      <category>AIbase</category>
+      <category>模型发布</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>免费相册成引流入口？Win11 照片应用悄悄接入 Adobe</title>
+      <link>https://www.aibase.com/news/32281</link>
+      <guid isPermaLink="true">https://www.aibase.com/news/32281</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>免费相册成引流入口？Win11 照片应用悄悄接入 Adobe，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 8.0</description>
+      <category>AIbase</category>
+    </item>
+    <item>
+      <title>追赶国际AI第一梯队还需数年?张一鸣谈字节大模型研发目标</title>
+      <link>https://www.aibase.com/news/32280</link>
+      <guid isPermaLink="true">https://www.aibase.com/news/32280</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>追赶国际AI第一梯队还需数年?张一鸣谈字节大模型研发目标，适合优先评估模型能力、价格和工具选型变化。
 
 信号等级 C · 评分 29.2</description>
       <category>AIbase</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>Anthropic 发布 MAMUBench：多智能体团队协作为何常常「一盘散沙」？</title>
-      <link>https://www.aibase.com/zh/news/32270</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32270</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Anthropic：多智能体团队协作为何常常「一盘散沙」？，适合关注自动化任务和多 Agent 协作演进。
+      <title>Claude 交互式连接器升级：应用可在对话旁全屏打开并支持直接操作</title>
+      <link>https://www.aibase.com/news/32279</link>
+      <guid isPermaLink="true">https://www.aibase.com/news/32279</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Claude：应用可在对话旁全屏打开并支持直接操作，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 29.2</description>
+      <category>AIbase</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>AI屠杀短剧：一场没有讣告的寒冬</title>
+      <link>https://www.36kr.com/p/4065256076416135</link>
+      <guid isPermaLink="true">https://www.36kr.com/p/4065256076416135</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>AI屠杀短剧：一场没有讣告的寒冬，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 8.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>刚刚，谷歌发布首款决策模型 Gemini Decision 1：9 项测试拿下 7 项第一，准确率最高92.2%</title>
+      <link>https://www.36kr.com/p/4065770698331011</link>
+      <guid isPermaLink="true">https://www.36kr.com/p/4065770698331011</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Gemini：9 项测试拿下 7 项第一，准确率最高92.2%，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 34.2</description>
+      <category>TopHub</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Qwen4 被嘲笑了！国模被啥锁死了？</title>
+      <link>https://juejin.cn/post/7706826190912880680</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7706826190912880680</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Qwen4 被嘲笑了！国模被啥锁死了？，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 32.1</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>别再连线了：Coze、n8n、Dify 退潮，AI 正式终结工作流时代</title>
+      <link>https://juejin.cn/post/7706394247621443599</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7706394247621443599</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>别再连线了：Coze、n8n、Dify 退潮，AI 正式终结工作流时代，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 42.1</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>GitHub 热榜项目：日榜（2026-11-09）</title>
+      <link>https://juejin.cn/post/7705716341147713551</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7705716341147713551</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>GitHub：日榜（2026-11-09），适合进一步验证代码、协议或社区采用情况。
+
+信号等级 C · 评分 36.0</description>
+      <category>TopHub</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>多模态“源神”！MiniMax开源SOTA生图模型，原生4K，一张两毛</title>
+      <link>https://www.qbitai.com/2026/11/509440.html</link>
+      <guid isPermaLink="true">https://www.qbitai.com/2026/11/509440.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>多模态“源神”：原生4K，适合进一步验证代码、协议或社区采用情况。
+
+信号等级 C · 评分 28.0</description>
+      <category>TopHub</category>
+      <category>开源</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>从通用大模型到学习过程智能，AI如何真正进入课堂？</title>
+      <link>https://www.qbitai.com/2026/11/509404.html</link>
+      <guid isPermaLink="true">https://www.qbitai.com/2026/11/509404.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>从通用大模型到学习过程智能，AI如何真正进入课堂？，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 C · 评分 29.2</description>
+      <category>TopHub</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>Anthropic启动IPO路演，估值已缩水6000亿美元</title>
+      <link>https://www.qbitai.com/2026/11/509381.html</link>
+      <guid isPermaLink="true">https://www.qbitai.com/2026/11/509381.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Anthropic：估值已缩水6000亿美元，适合判断资金、客户和生态格局的变化。
+
+信号等级 C · 评分 23.0</description>
+      <category>TopHub</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>让AI真正懂业务：璇玑如何成为企业AI的语义基础设施</title>
+      <link>https://www.qbitai.com/2026/11/509349.html</link>
+      <guid isPermaLink="true">https://www.qbitai.com/2026/11/509349.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>让AI真正懂业务：璇玑如何成为企业AI的语义基础设施，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 8.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>Anthropic玻璃翼计划被质疑！近4万个候补漏洞，只修了217条</title>
+      <link>https://www.qbitai.com/2026/11/509291.html</link>
+      <guid isPermaLink="true">https://www.qbitai.com/2026/11/509291.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Anthropic：近4万个候补漏洞，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 8.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>DeepMind 发布新一代 DNA 模型 AlphaGenome 2：可预测基因变异影响哪种细胞</title>
+      <link>https://www.mittrchina.com/news/detail/17232</link>
+      <guid isPermaLink="true">https://www.mittrchina.com/news/detail/17232</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>DeepMind：可预测基因变异影响哪种细胞，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 17.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>清华等团队提出 AI 预测动态流场方法 DynaSolver</title>
+      <link>https://www.mittrchina.com/news/detail/17234</link>
+      <guid isPermaLink="true">https://www.mittrchina.com/news/detail/17234</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>清华等团队提出 AI 预测动态流场方法...：清华等团队提出 AI 预测动态流场方法 DynaSolver，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 8.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>姚期智杨植麟首次联手给 AI 出的博士级题目，Kimi 多画出了「关键一条边」</title>
+      <link>https://www.leiphone.com/category/ai/3vRqaeAILJdgRlhL.html</link>
+      <guid isPermaLink="true">https://www.leiphone.com/category/ai/3vRqaeAILJdgRlhL.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>姚期智杨植麟首次联手给 AI 出的博士级...：姚期智杨植麟首次联手给 AI 出的博士级题目，Kimi 多画出了「关键一条边」，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 11.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>火山引擎推出 Seedance2.5flash：生成速度翻倍，720P 约 0.99 元/秒、较旗舰降低 34%</title>
+      <link>https://www.aibase.com/zh/news/32277</link>
+      <guid isPermaLink="true">https://www.aibase.com/zh/news/32277</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>火山引擎推出 Seedance2.5fl...：生成速度翻倍，720P 约 0.99 元/秒、较旗舰降低 34%，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 26.5</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>中国攻击者利用自主AI攻破19家目标组织中的10家</title>
+      <link>https://daily.dev/posts/attackers-use-autonomous-ai-to-target-semiconductor-defense-and-civil-society-sectors-uej3vpz1n</link>
+      <guid isPermaLink="true">https://daily.dev/posts/attackers-use-autonomous-ai-to-target-semiconductor-defense-and-civil-society-sectors-uej3vpz1n</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>中国攻击者利用自主AI攻破19家目标组织...：中国攻击者利用自主AI攻破19家目标组织中的10家，适合关注自动化任务和多 Agent 协作演进。
+
+信号等级 C · 评分 23.0</description>
+      <category>TopHub</category>
+      <category>智能体</category>
+    </item>
+    <item>
+      <title>10个月融资20轮，第三方AI Infra为何越有争议越抢手？</title>
+      <link>https://www.leiphone.com/category/chips/ouA8GvSp9LIhZPmp.html</link>
+      <guid isPermaLink="true">https://www.leiphone.com/category/chips/ouA8GvSp9LIhZPmp.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>10个月融资20轮，第三方AI Infra为何越有争议越抢手？，适合判断资金、客户和生态格局的变化。
+
+信号等级 C · 评分 23.0</description>
+      <category>TopHub</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>OpenAI发现并修复了约1,000个Linux内核提权漏洞</title>
+      <link>https://daily.dev/posts/they-found-1000-vulnerabilities-in-the-linux-kernel--vaaymp79t</link>
+      <guid isPermaLink="true">https://daily.dev/posts/they-found-1000-vulnerabilities-in-the-linux-kernel--vaaymp79t</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>OpenAI发现并修复了约1,000个Linux内核提权漏洞，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 11.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>三星首款智能眼镜 Intelligent Eyewear 开启预售：搭载 Android XR 系统，395 美元起</title>
+      <link>https://www.ithome.com/1/026/422.htm</link>
+      <guid isPermaLink="true">https://www.ithome.com/1/026/422.htm</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>三星首款智能眼镜 Intelligent...：搭载 Android XR 系统，395 美元起，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 4.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>Didit MCP</title>
+      <link>https://www.producthunt.com/products/didit-3</link>
+      <guid isPermaLink="true">https://www.producthunt.com/products/didit-3</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Didit MCP，适合关注 Agent 工具调用和工作流搭建。
 
 信号等级 C · 评分 29.0</description>
       <category>TopHub</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>百度推出大模型Token交易平台“词元所”，日均调用Token超7000亿</title>
-      <link>https://www.aibase.com/news/32269</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32269</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>百度推出大模型Token交易平台“词元所...：日均调用Token超7000亿，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 34.2</description>
-      <category>AIbase</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>李彦宏:AI变革不只是技术革命，企业需要围绕智能体重构组织</title>
-      <link>https://www.aibase.com/news/32268</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32268</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>李彦宏：AI变革不只是技术革命，企业需要围绕智能体重构组织，适合关注自动化任务和多 Agent 协作演进。
-
-信号等级 C · 评分 23.0</description>
-      <category>AIbase</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>Runway 开源 27B 世界动作模型 Praxis-1：登顶机器人权威榜单，全面支持 Apache 2.0 商业开源</title>
-      <link>https://www.aibase.com/zh/news/32267</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32267</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Runway：登顶机器人权威榜单，全面支持 Apache 2.0 商业开源，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 C · 评分 34.0</description>
-      <category>TopHub</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>AI 作弊越来越难查，大学开始重新考虑如何给学生打分</title>
-      <link>https://www.aibase.com/zh/news/32266</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32266</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>AI 作弊越来越难查，大学开始重新考虑如何给学生打分，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 21.5</description>
-      <category>TopHub</category>
-    </item>
-    <item>
-      <title>​谷歌甩出决策 API：一张图一次扫千题，150 毫秒出判断</title>
-      <link>https://www.aibase.com/news/32265</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32265</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>​谷歌甩出决策 API：一张图一次扫千题，150 毫秒出判断，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 8.0</description>
-      <category>AIbase</category>
-    </item>
-    <item>
-      <title>灵光生态再扩容!新增微信 ClawBot、QQ机器人、瑞幸咖啡等六大连接器</title>
-      <link>https://www.aibase.com/news/32264</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32264</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>灵光生态再扩容!新增微信 ClawBot、QQ机器人、瑞幸咖啡等六大连接器，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 8.0</description>
-      <category>AIbase</category>
-    </item>
-    <item>
-      <title>AI初创公司Helix获620万美元融资，推出本地语音真人验证技术</title>
-      <link>https://www.aibase.com/news/32263</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32263</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>AI初创公司Helix获620万美元融资，适合判断资金、客户和生态格局的变化。
-
-信号等级 C · 评分 23.0</description>
-      <category>AIbase</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>​苹果把谷歌 AI 请进了车机：CarPlay 接通 Gemini，开车能自然唠嗑</title>
-      <link>https://www.aibase.com/news/32262</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32262</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>CarPlay 接通 Gemini，开车能自然唠嗑，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 29.2</description>
-      <category>AIbase</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>同一段 DNA，在不同细胞里命运不同：AlphaGenome 2 把预测拉到细胞级</title>
-      <link>https://www.aibase.com/zh/news/32261</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32261</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>同一段 DNA：AlphaGenome 2 把预测拉到细胞级，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 21.5</description>
-      <category>TopHub</category>
-    </item>
-    <item>
-      <title>马斯克 xAI 面临多起集体诉讼：Grok 被指卷入儿童色情图像风波</title>
-      <link>https://www.aibase.com/zh/news/32260</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32260</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>马斯克 xAI 面临多起集体诉讼：Grok 被指卷入儿童色情图像风波，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 35.2</description>
-      <category>TopHub</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>估值飙升至 70 亿美元！英国 AI 芯片新星 Fractile 获 7.2 亿美元融资，Anthropic 抢当首批客户</title>
-      <link>https://www.aibase.com/zh/news/32259</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32259</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Anthropic：估值飙升至 70 亿美元，适合判断资金、客户和生态格局的变化。
-
-信号等级 C · 评分 34.0</description>
-      <category>TopHub</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>OpenAI第三季度营收突破100亿美元，环比增长近50%</title>
-      <link>https://www.aibase.com/news/32258</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32258</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>OpenAI第三季度营收突破100亿美元，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 13.0</description>
-      <category>AIbase</category>
-    </item>
-    <item>
-      <title>谷歌 Gemini 语音助手正式接入苹果 CarPlay：全面拓展车载 AI 生态，支持免提对话与跨设备同步</title>
-      <link>https://www.aibase.com/news/32257</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32257</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Gemini：全面拓展车载 AI 生态，支持免提对话与跨设备同步，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 29.2</description>
-      <category>AIbase</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>字节跳动计划数周内推出新款AI助手，布局智能体赛道</title>
-      <link>https://www.aibase.com/news/32256</link>
-      <guid isPermaLink="true">https://www.aibase.com/news/32256</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>字节跳动计划数周内推出新款AI助手，布局智能体赛道，适合关注自动化任务和多 Agent 协作演进。
-
-信号等级 C · 评分 23.0</description>
-      <category>AIbase</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>谷歌发布 Gemini Decisions API：单次前向传递打分，端到端延迟压至 150 毫秒</title>
-      <link>https://www.aibase.com/zh/news/32255</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32255</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Gemini：单次前向传递打分，端到端延迟压至 150 毫秒，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 35.2</description>
-      <category>TopHub</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>8点1氪丨黄仁勋已回英伟达上班，就最近的风波向员工致歉；贾国龙质押西贝全部股份；Anthropic IPO获数倍超额认购</title>
-      <link>https://www.36kr.com/p/4066019497464960</link>
-      <guid isPermaLink="true">https://www.36kr.com/p/4066019497464960</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>英伟达、Anthropic：8点1氪丨黄仁勋已回英伟达上班，就最近的风波向员工致歉；贾国龙质押西贝全部股份；Anthropic IPO获数倍超额...，适合判断资金、客户和生态格局的变化。
-
-信号等级 C · 评分 23.0</description>
-      <category>TopHub</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>突发，Anthropic大清洗：Claude最严封号潮来了，11月12日全面生效</title>
-      <link>https://www.36kr.com/p/4065245506917251</link>
-      <guid isPermaLink="true">https://www.36kr.com/p/4065245506917251</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Anthropic、Claude：Claude最严封号潮来了，11月12日全面生效，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 35.2</description>
-      <category>TopHub</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>突发，「源神」 MiniMax 开源H3 Image，最强开源模型中国造</title>
-      <link>https://www.36kr.com/p/4064758500660099</link>
-      <guid isPermaLink="true">https://www.36kr.com/p/4064758500660099</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>突发，「源神」 MiniMax 开源H3 Image，最强开源模型中国造，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 29.2</description>
-      <category>TopHub</category>
-      <category>模型发布</category>
-      <category>开源</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>AI-SDLC 实践 04｜方案设计：把 Spec 转化为技术方案，并拆解为多 SubAgent 可执行的任务</title>
-      <link>https://juejin.cn/post/7705330413946060815</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7705330413946060815</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>AI-SDLC 实践 04：把 Spec 转化为技术方案，并拆解为多 SubAgent 可执行的任务，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 27.8</description>
-      <category>TopHub</category>
-    </item>
-    <item>
-      <title>低调追赶的文心，一口气打出了快、省、开源三张牌</title>
-      <link>https://www.leiphone.com/category/ai/b3ASOkGmqznTQWCH.html</link>
-      <guid isPermaLink="true">https://www.leiphone.com/category/ai/b3ASOkGmqznTQWCH.html</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>低调追赶的文心，一口气打出了快、省、开源三张牌，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 C · 评分 23.0</description>
-      <category>TopHub</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>Claude API 新增「挡位」：对话中可临时调节 AI 努力程度</title>
-      <link>https://www.aibase.com/zh/news/32271</link>
-      <guid isPermaLink="true">https://www.aibase.com/zh/news/32271</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Claude：对话中可临时调节 AI 努力程度，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 29.2</description>
-      <category>TopHub</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Skyeye 云企业级 AI + 零代码智能制造系统-消息通知 - v4.1.11 发布</title>
-      <link>https://www.oschina.net/news/503539</link>
-      <guid isPermaLink="true">https://www.oschina.net/news/503539</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>Skyeye 云企业级 AI + 零代码...：Skyeye 云企业级 AI + 零代码智能制造系统-消息通知 - v4.1.11 发布，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 C · 评分 28.0</description>
-      <category>TopHub</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>cc4g-AI 编程工具 Web 集成平台 v0.2.0 更新：增加 Codex CLI 集成</title>
-      <link>https://www.oschina.net/news/503538</link>
-      <guid isPermaLink="true">https://www.oschina.net/news/503538</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>增加 Codex CLI 集成，适合判断 AI 编程工作流会不会被改写。
-
-信号等级 C · 评分 28.0</description>
-      <category>TopHub</category>
-      <category>编码工具</category>
       <category>MCP/工具</category>
-      <category>开源</category>
     </item>
     <item>
-      <title>技术面试已死？AI 时代，真正拉开程序员差距的是什么？</title>
-      <link>https://juejin.cn/post/7706583027481018408</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7706583027481018408</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>技术面试已死？AI 时代，真正拉开程序员差距的是什么？，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Gemini Decisions API</title>
+      <link>https://www.producthunt.com/products/google</link>
+      <guid isPermaLink="true">https://www.producthunt.com/products/google</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Gemini Decisions API，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 C · 评分 31.5</description>
-      <category>NewsNow</category>
-    </item>
-    <item>
-      <title>AI短剧800集讲规矩，观众忘了是AI</title>
-      <link>https://juejin.cn/post/7706421364119093284</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7706421364119093284</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>AI短剧800集讲规矩，观众忘了是AI，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 31.5</description>
-      <category>NewsNow</category>
-    </item>
-    <item>
-      <title>2027 Android 开发者路线图：学习、面试与 AI</title>
-      <link>https://juejin.cn/post/7705961716425834511</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7705961716425834511</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>2027 Android 开发者路线图：学习、面试与 AI，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 27.5</description>
-      <category>NewsNow</category>
-    </item>
-    <item>
-      <title>你花大价钱买的那张 5090 可能跑不了本地 AI 模型</title>
-      <link>https://juejin.cn/post/7706090261218246719</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7706090261218246719</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:44 +0000</pubDate>
-      <description>你花大价钱买的那张 5090 可能跑不了...：你花大价钱买的那张 5090 可能跑不了本地 AI 模型，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 C · 评分 31.5</description>
-      <category>NewsNow</category>
-    </item>
-    <item>
-      <title>[问与答] 今天 claude 额度刚恢复，刚蹬了一下， KYC 了，怎么办？</title>
-      <link>https://www.v2ex.com/t/1256455</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256455</guid>
-      <pubDate>Thu, 12 Nov 2026 06:00:41 +0000</pubDate>
-      <description>[问与答] 今天 claude 额度刚恢复，刚蹬了一下， KYC 了，怎么办？，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 29.2</description>
-      <category>Info Flow</category>
+信号等级 C · 评分 35.2</description>
+      <category>TopHub</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>[Claude] 😓 又来 KYC...</title>
-      <link>https://www.v2ex.com/t/1256452</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256452</guid>
-      <pubDate>Thu, 12 Nov 2026 05:56:15 +0000</pubDate>
-      <description>Claude：两周前注册的刚使用 Google Play 付费就弹了 KYC ，用护照过了，适合优先评估模型能力、价格和工具选型变化。
+      <title>Insight7 语音AI智能体</title>
+      <link>https://www.producthunt.com/products/insight7</link>
+      <guid isPermaLink="true">https://www.producthunt.com/products/insight7</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Insight7 语音AI智能体，适合作为今日 AI/科技情报流里的重点线索。
 
-两周前注册的刚使用 Google Play 付费就弹了 KYC ，用护照过了。 今天上午用 Claude Code 开始弹： ⏺ API Error: Your account can&apos;t receive replies from Claude right now. You can find the next step in the Anthropic Verification Portal:...
+信号等级 C · 评分 23.0</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>Adobe AI 助手</title>
+      <link>https://www.producthunt.com/products/adobe-ai-assistant</link>
+      <guid isPermaLink="true">https://www.producthunt.com/products/adobe-ai-assistant</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Adobe AI 助手，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 21.5</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>Toki Matter</title>
+      <link>https://www.producthunt.com/products/toki-ai</link>
+      <guid isPermaLink="true">https://www.producthunt.com/products/toki-ai</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Toki Matter，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 21.5</description>
+      <category>TopHub</category>
+    </item>
+    <item>
+      <title>JeecgBoot 低代码 + 敲敲云零代码：开源 AI 低代码双平台一次打通</title>
+      <link>https://www.oschina.net/news/503547</link>
+      <guid isPermaLink="true">https://www.oschina.net/news/503547</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>JeecgBoot 低代码 + 敲敲云零...：开源 AI 低代码双平台一次打通，适合进一步验证代码、协议或社区采用情况。
+
+信号等级 C · 评分 23.0</description>
+      <category>TopHub</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>全球化筑基，AI 赋能新体验，openKylin 3.0 SP1 正式发布</title>
+      <link>https://www.oschina.net/news/503545</link>
+      <guid isPermaLink="true">https://www.oschina.net/news/503545</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>全球化筑基，AI 赋能新体验，openKylin 3.0 SP1 正式发布，适合进一步验证代码、协议或社区采用情况。
+
+信号等级 C · 评分 28.0</description>
+      <category>TopHub</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>AI 写的前端代码为什么总像 5 年前的？Chrome 官方出手了</title>
+      <link>https://juejin.cn/post/7706732586618306598</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7706732586618306598</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>AI 写的前端代码为什么总像 5 年前的？Chrome 官方出手了，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 31.5</description>
+      <category>NewsNow</category>
+    </item>
+    <item>
+      <title>IntelliJ IDEA 2026.3 发布：智能体住进 IDE</title>
+      <link>https://juejin.cn/post/7706584659240452115</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7706584659240452115</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>IntelliJ IDEA 2026.3...：智能体住进 IDE，适合关注自动化任务和多 Agent 协作演进。
+
+信号等级 C · 评分 45.5</description>
+      <category>NewsNow</category>
+      <category>智能体</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>用 Claude Fable 5.2 重构官网：85分钟烧52美元，撞上配额上限中断</title>
+      <link>https://juejin.cn/post/7706577325618921491</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7706577325618921491</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>Claude：85分钟烧52美元，撞上配额上限中断，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 B · 评分 51.8</description>
+      <category>NewsNow</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>AI 改完不敢上线？OpenSpec 规约驱动开发实战</title>
+      <link>https://juejin.cn/post/7706124316777742379</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7706124316777742379</guid>
+      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
+      <description>AI 改完不敢上线？OpenSpec 规约驱动开发实战，同时进入热榜视野，适合作为今日 AI/科技情报流里的重点线索。
+
+信号等级 C · 评分 31.5</description>
+      <category>NewsNow</category>
+    </item>
+    <item>
+      <title>[推广] 「官转直连」11 月福袋开放领取 Newape.AI 中转站 低价｜稳定｜防封</title>
+      <link>https://www.v2ex.com/t/1256623</link>
+      <guid isPermaLink="true">https://www.v2ex.com/t/1256623</guid>
+      <pubDate>Thu, 12 Nov 2026 15:46:43 +0000</pubDate>
+      <description>「官转直连」11 月福袋开放领取 New...：自建中转站，支持 OpenAI / Claude / Gemini ，注册随机送 $5~$10 体验套餐 「更高效...，适合优先评估模型能力、价格和工具选型变化。
+
+自建中转站，支持 OpenAI / Claude / Gemini ，注册随机送 $5~$10 体验套餐 「更高效、更低成本地使用企业级 AI 」 一站式接入自由调度写作、思考、编程，或把 AI 接入你的应用。 大家好 👋 新一批活动 Token 已开放领取，新用户通道同步开启。 Newape.AI 已全面支持 Claude Opus 5.5 、GPT-6.1 Grok 、Gm 、fab5.2...
 
 信号等级 C · 评分 35.5</description>
       <category>Info Flow</category>
       <category>模型发布</category>
+      <category>编码工具</category>
     </item>
     <item>
-      <title>别急，机器人：一些公司正在禁止使用AI代理。查看名单。</title>
-      <link>https://www.businessinsider.com/list-companies-banning-ai-agents-retail-travel-united-amazon-target-2026-11</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/list-companies-banning-ai-agents-retail-travel-united-amazon-target-2026-11</guid>
-      <pubDate>Thu, 12 Nov 2026 05:46:02 +0000</pubDate>
-      <description>别急：Not so fast, bot: Companies are banning AI agents. Read th...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>[推广] CDN3900U/P Ai 模型最低至 4 折 阿里腾讯华为火山国内站 7 折 阿里国际/GCP 可至 65 折 AWS 新号 65 折/老号无需迁移 85 折 腾讯国际 55 折 源头资源稳定安全</title>
+      <link>https://www.v2ex.com/t/1256622</link>
+      <guid isPermaLink="true">https://www.v2ex.com/t/1256622</guid>
+      <pubDate>Thu, 12 Nov 2026 15:42:39 +0000</pubDate>
+      <description>阿里云 7 折 腾讯云 7 折 华为云 7 折 阿里 CDN 3900U/P 腾讯 CDN 3900U/P 火山 C...，适合跟进 AI 风险、治理和可信边界。
 
-Not so fast, bot: Companies are banning AI agents. Read the list.
+阿里云 7 折 腾讯云 7 折 华为云 7 折 阿里 CDN 3900U/P 腾讯 CDN 3900U/P 火山 CDN 3900U/P 谷歌云 GCP65 折 亚马逊云 AWS 新号 65 折/老号无需迁移 85 折 腾讯云国际 55 折 阿里云国际 65 折 华为云国际 65 折 AWS 全球节点 CDN 加速 1 折 Ai 模型低至 4 折 火山国际 7 折 TG 详聊：@Tiangua7
 
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
+信号等级 C · 评分 19.0</description>
+      <category>Info Flow</category>
+      <category>安全对齐</category>
     </item>
     <item>
-      <title>[推广] [memeapi 中转站推广]gpt-pro20x 号池仅 0.1 倍率？!（非低价引流）</title>
-      <link>https://www.v2ex.com/t/1256451</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256451</guid>
-      <pubDate>Thu, 12 Nov 2026 05:41:56 +0000</pubDate>
-      <description>gpt-pro20x：gpt-不降智（ pro20x 号池，全模型不降） 0.1x claude-max （ 0...，适合优先评估模型能力、价格和工具选型变化。
+      <title>百度文心大模型再升级：ERNIE 5.5 Flash Preview 亮相，模型权重将于 11 月 25 日前正式开源</title>
+      <link>https://www.aibase.com/news/32278</link>
+      <guid isPermaLink="true">https://www.aibase.com/news/32278</guid>
+      <pubDate>Thu, 12 Nov 2026 15:40:20 +0000</pubDate>
+      <description>百度文心大模型再升级：8 分钟前 . AIbase，适合优先评估模型能力、价格和工具选型变化。
 
-佬们好，咱们中转站已经稳定运营半年有余啦，用户反馈良好，群内氛围友好，欢迎各位前来吹水~ 也欢迎各位企业前来合作！ 企鹅群:789868054 我们是源头中转，倍率优惠，价格稳定，且都是自有号池，质量有保障~站点 token 消耗每天都稳定在百 b 以上，欢迎各位前来体验~ 充值比例为 1:1 ！ gpt-不降智（ pro20x 号池，全模型不降） 0.1x claude-max （ 0...
+8 分钟前 . AIbase
 
 信号等级 C · 评分 34.2</description>
-      <category>Info Flow</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>印度新落成的超大型图书馆因“AI生成的书籍”丑闻而陷入风波</title>
-      <link>https://www.bbc.co.uk/news/articles/c54gne3plvrxo?at_medium=RSS&amp;at_campaign=rss</link>
-      <guid isPermaLink="true">https://www.bbc.co.uk/news/articles/c54gne3plvrxo?at_medium=RSS&amp;at_campaign=rss</guid>
-      <pubDate>Thu, 12 Nov 2026 05:29:55 +0000</pubDate>
-      <description>印度新落成的超大型图书馆因“AI生成的书...：New Indian mega library rocked by scandal over &apos;AI-generat...，适合作为今日 AI/科技情报流里的重点线索。
-
-New Indian mega library rocked by scandal over &apos;AI-generated books&apos;
-
-信号等级 C · 评分 46.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>有什么因素会阻碍Anthropic的IPO吗？</title>
-      <link>https://www.ft.com/content/b9ad2b19-4f2a-4f26-89b6-940985a0b9d4?syn-25a6b1a6=1</link>
-      <guid isPermaLink="true">https://www.ft.com/content/b9ad2b19-4f2a-4f26-89b6-940985a0b9d4?syn-25a6b1a6=1</guid>
-      <pubDate>Thu, 12 Nov 2026 05:29:55 +0000</pubDate>
-      <description>Can anything derail Anthropic’s IPO，同时进入热榜视野，适合判断资金、客户和生态格局的变化。
-
-Can anything derail Anthropic’s IPO?
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>随着投资者寻求人工智能领域的避风港，印度股市反弹</title>
-      <link>https://www.ft.com/content/99a27744-23bd-4cb9-92e4-7712dd658920?syn-25a6b1a6=1</link>
-      <guid isPermaLink="true">https://www.ft.com/content/99a27744-23bd-4cb9-92e4-7712dd658920?syn-25a6b1a6=1</guid>
-      <pubDate>Thu, 12 Nov 2026 05:29:54 +0000</pubDate>
-      <description>随着投资者寻求人工智能领域的避风港：Indian shares bounce back as investors seek AI shelter，适合判断资金、客户和生态格局的变化。
-
-Indian shares bounce back as investors seek AI shelter
-
-信号等级 C · 评分 40.5</description>
-      <category>Buzzing</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>[AINews] D-Day(决策模型日)</title>
-      <link>https://latent.space/p/ainews-d-day-decision-models-day</link>
-      <guid isPermaLink="true">https://latent.space/p/ainews-d-day-decision-models-day</guid>
-      <pubDate>Thu, 12 Nov 2026 05:26:54 +0000</pubDate>
-      <description>D-Day(决策模型日)：November 11, 2026 — Google enters the decision model marke...，适合作为今日 AI/科技情报流里的重点线索。
-
-November 11, 2026 — Google enters the decision model market. At AI Engineer, Cloudflare showed which parts of a build failure a classifier could handle. TypeSafe AI showed off their production...
-
-信号等级 C · 评分 48.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>[Claude] 喜提 KYC</title>
-      <link>https://www.v2ex.com/t/1256447</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256447</guid>
-      <pubDate>Thu, 12 Nov 2026 05:24:00 +0000</pubDate>
-      <description>[Claude] 喜提 KYC，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 C · 评分 29.2</description>
-      <category>Info Flow</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>AI、Anthropic：Claude 和 Muse 不会彻底改变你的财务状况</title>
-      <link>https://www.bloomberg.com/opinion/articles/2026-11-12/ai-anthropic-claude-and-muse-won-t-revolutionize-your-finances</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/opinion/articles/2026-11-12/ai-anthropic-claude-and-muse-won-t-revolutionize-your-finances</guid>
-      <pubDate>Thu, 12 Nov 2026 05:14:53 +0000</pubDate>
-      <description>Anthropic、Claude：AI, Anthropic: Claude And Muse Won&apos;t Revolutionize Your Fi...，适合优先评估模型能力、价格和工具选型变化。
-
-AI, Anthropic: Claude And Muse Won&apos;t Revolutionize Your Finances
-
-信号等级 C · 评分 46.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>人工智能在普选中落败——选民们否决了数据中心。新一届国会会对人工智能进行监管吗？</title>
-      <link>https://www.newyorker.com/podcast/political-scene/ai-loses-the-popular-vote</link>
-      <guid isPermaLink="true">https://www.newyorker.com/podcast/political-scene/ai-loses-the-popular-vote</guid>
-      <pubDate>Thu, 12 Nov 2026 05:14:53 +0000</pubDate>
-      <description>人工智能在普选中落败——选民们否决了数据...：A.I. Loses the Popular Vote - Voters rejected data centers...，适合作为今日 AI/科技情报流里的重点线索。
-
-A.I. Loses the Popular Vote - Voters rejected data centers. Will the new Congress regulate artificial intelligence?
-
-信号等级 C · 评分 33.0</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>提格雷地区的流离失所家庭担心战争重燃，返乡的希望日益渺茫 - Al Jazeera</title>
-      <link>https://news.google.com/rss/articles/CBMitwFBVV95cUxNZVRvVzBSaThURGcycGtZbUJYcHdkbzlVTWlzOG9fMDFvU1JTWFVOOU9HRTM2WFhUdFJadW1JVTJ3QTBYa3lJQm1pd2tpVlRGU1psZXM3Y2dkenpxMUgyU2g3Tl93UTgweS1uaFVINEN3dlBpNXlwREQzbmhpNVRLRTljcjNrOGcxcHRyM0NUYnVwY1BwUFhVYjIwQVpBc1c0Tkp6UFFUVHJOTElOOExjeUtxckk2R2vSAbwBQVVfeXFMTnAwN3g1SlpGWUZNODdlekkxS0V1c3IwZnBLWmRSanJ6QnIzeE5vUk5jX0c2QjVSZ3BKWGRuWnYzbnM5ZkI0VXh5YVpmOEQ1YWVRVkpBSTZJMkk5U2xOQ2k3eFFBTi11T2hZb0ZaWEdibnVGVG1hRmllMjlVdnVCLUVVRWtOVDh6SXIxVkFDSXFLTFhYcHB1cnM0eW9SWC1JbkhkTDQ3dHJVT2puNWVVa1BMTVJmRU1UZUtmQmI?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</link>
-      <guid isPermaLink="true">https://news.google.com/rss/articles/CBMitwFBVV95cUxNZVRvVzBSaThURGcycGtZbUJYcHdkbzlVTWlzOG9fMDFvU1JTWFVOOU9HRTM2WFhUdFJadW1JVTJ3QTBYa3lJQm1pd2tpVlRGU1psZXM3Y2dkenpxMUgyU2g3Tl93UTgweS1uaFVINEN3dlBpNXlwREQzbmhpNVRLRTljcjNrOGcxcHRyM0NUYnVwY1BwUFhVYjIwQVpBc1c0Tkp6UFFUVHJOTElOOExjeUtxckk2R2vSAbwBQVVfeXFMTnAwN3g1SlpGWUZNODdlekkxS0V1c3IwZnBLWmRSanJ6QnIzeE5vUk5jX0c2QjVSZ3BKWGRuWnYzbnM5ZkI0VXh5YVpmOEQ1YWVRVkpBSTZJMkk5U2xOQ2k3eFFBTi11T2hZb0ZaWEdibnVGVG1hRmllMjlVdnVCLUVVRWtOVDh6SXIxVkFDSXFLTFhYcHB1cnM0eW9SWC1JbkhkTDQ3dHJVT2puNWVVa1BMTVJmRU1UZUtmQmI?oc=5&amp;hl=en-US&amp;gl=US&amp;ceid=US%3Aen</guid>
-      <pubDate>Thu, 12 Nov 2026 05:14:53 +0000</pubDate>
-      <description>提格雷地区的流离失所家庭担心战争重燃：Tigray displaced families fear renewed war as hopes of ret...，适合作为今日 AI/科技情报流里的重点线索。
-
-Tigray displaced families fear renewed war as hopes of returning home fade
-
-信号等级 C · 评分 33.0</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Show HN: DeepSeek-Coder-V2-Lite 小于 5GB：在 6GB GPU 上实现 65 TPS，100% 数据驻留 VRAM 中</title>
-      <link>https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF</link>
-      <guid isPermaLink="true">https://huggingface.co/AmSach/DeepSeek-Coder-V2-Lite-Instruct-MAPLE-Sub5GB-GGUF</guid>
-      <pubDate>Thu, 12 Nov 2026 05:14:52 +0000</pubDate>
-      <description>DeepSeek-Coder-V2-Lite Under 5GB: 65 TPS 100% In-VRAM on 6...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-DeepSeek-Coder-V2-Lite Under 5GB: 65 TPS 100% In-VRAM on 6GB GPU
-
-信号等级 C · 评分 47.8</description>
-      <category>Buzzing</category>
+      <category>AIbase</category>
       <category>模型发布</category>
       <category>开源</category>
     </item>
     <item>
-      <title>[推广] Hello-Code 大模型中转站点上线</title>
-      <link>https://www.v2ex.com/t/1256446</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256446</guid>
-      <pubDate>Thu, 12 Nov 2026 05:11:08 +0000</pubDate>
-      <description>Hello-Code 大模型中转站点上线 站点地址： https://hello-code.cn ✨ 站点亮点 ✅...，适合优先评估模型能力、价格和工具选型变化。
+      <title>黄仁勋已离开英伟达——其临时继任者科莱特·克雷斯是何人？</title>
+      <link>https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement</guid>
+      <pubDate>Thu, 12 Nov 2026 15:37:29 +0000</pubDate>
+      <description>英伟达：Nvidia财务总监科特·克雷斯将接替陷入丑闻的黄仁勋，担任临时CEO，适合作为今日 AI/科技情报流里的重点线索。
 
-Hello-Code 大模型中转站点上线 站点地址： https://hello-code.cn ✨ 站点亮点 ✅ 倍率低至 0.04x，性价比拉满 ✅ 内置生图模型：gpt-image-2 / gpt-image-2.5 / gpt-image-2.6 ，0.03/张 ✅ 每日签到、幸运抽奖，白嫖额度 ✅ 邀请返利：10% 返利，好友消费你拿分成 ✅ 新人福利：注册后进群，领取免费测试额度 📌...
-
-信号等级 C · 评分 35.5</description>
-      <category>Info Flow</category>
-      <category>模型发布</category>
-      <category>多模态</category>
-    </item>
-    <item>
-      <title>Jev 革命:工程师已在使用 System One 模型构建哪些应用</title>
-      <link>https://latent.space/p/jev-revolution</link>
-      <guid isPermaLink="true">https://latent.space/p/jev-revolution</guid>
-      <pubDate>Thu, 12 Nov 2026 05:08:20 +0000</pubDate>
-      <description>Jev 革命：AI Engineer Code Summit上，Jev创始人Diogo Almeida呼吁开发者自动化一切，适合作为今日 AI/科技情报流里的重点线索。
-
-AI Engineer Code Summit上，Jev创始人Diogo Almeida呼吁开发者自动化一切。Glean等公司展示了其利用Jev的应用。
+Nvidia财务总监科特·克雷斯将接替陷入丑闻的黄仁勋，担任临时CEO。
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
-      <title>[程序员] [开源 skill]一个可在不同 AI 工具间传递上下文/开发任务，方便赛博领鸡蛋的 skill</title>
-      <link>https://www.v2ex.com/t/1256444</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256444</guid>
-      <pubDate>Thu, 12 Nov 2026 05:06:05 +0000</pubDate>
-      <description>[开源 skill]一个可在不同 AI...：https://github.com/Luqijian/continue-with-x.skill 在任意支持 sk...，适合优先评估模型能力、价格和工具选型变化。
+      <title>[程序员] Claude 和其他 AI 的区别好像是通一点点人性。</title>
+      <link>https://www.v2ex.com/t/1256619</link>
+      <guid isPermaLink="true">https://www.v2ex.com/t/1256619</guid>
+      <pubDate>Thu, 12 Nov 2026 15:36:32 +0000</pubDate>
+      <description>突发奇想问 Claude 一个问题，大意是先感慨现在 AI 写的代码简直完美，一次输出就能考虑到各种边界、性能以及优...，适合优先评估模型能力、价格和工具选型变化。
 
-https://github.com/Luqijian/continue-with-x.skill 在任意支持 skill 的 AI 工具中中将当前会话上下文、项目概况、当前进度、任务规划迁移到其它常见工具，并提供可在新的环境中一键继续工作的 command 。 目前已支持 zcode/opencode/dsh/claude/trae/qoder/workbuddy 等迁移目标。...
-
-信号等级 C · 评分 29.2</description>
-      <category>Info Flow</category>
-      <category>模型发布</category>
-      <category>MCP/工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>[问与答] 请问各位 GPT 的订阅是怎么付费的？我招行全币种 visa 直接或者通过 googlepay 支付都是失败</title>
-      <link>https://www.v2ex.com/t/1256443</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256443</guid>
-      <pubDate>Thu, 12 Nov 2026 05:03:53 +0000</pubDate>
-      <description>GPT、google：google paly 手机搜 gpt 换了几个 ip 一直显示不能下载，我就通过网页版 gpt 支付的，适合优先评估模型能力、价格和工具选型变化。
-
-google paly 手机搜 gpt 换了几个 ip 一直显示不能下载，我就通过网页版 gpt 支付的。但是网页版本的也一直显示支付失败，请问各位大佬都是什么姿势购买的订阅？
+突发奇想问 Claude 一个问题，大意是先感慨现在 AI 写的代码简直完美，一次输出就能考虑到各种边界、性能以及优雅地实现，然后问我能不能做到像 Claude 一样编写出完美代码，如何才能做到？ Claude 回答的感觉有人味，就像和一个真实的人类对话，也 get 到了问题的重心。 以下是 Claude 的回答： 能做到一部分，但&quot;像我一样一次写出完美代码&quot;这个目标本身值得拆开看。...
 
 信号等级 C · 评分 29.2</description>
       <category>Info Flow</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>Nebuly 完成 2100 万美元 A 轮融资，旨在衡量企业 AI 的投资回报率</title>
-      <link>https://thenextweb.com/news/nebuly-21m-series-a-enterprise-ai-roi</link>
-      <guid isPermaLink="true">https://thenextweb.com/news/nebuly-21m-series-a-enterprise-ai-roi</guid>
-      <pubDate>Thu, 12 Nov 2026 05:00:19 +0000</pubDate>
-      <description>Nebuly 完成 2100 万美元 A...：Nebuly 完成 2100 万美元 A 轮融资，适合作为今日 AI/科技情报流里的重点线索。
+      <title>为何在教授如何“合乎伦理”地在课堂上使用人工智能学习写作时，必须包含拒绝使用的权利</title>
+      <link>https://phys.org/news/2026-11-ethical-classroom-ai.html</link>
+      <guid isPermaLink="true">https://phys.org/news/2026-11-ethical-classroom-ai.html</guid>
+      <pubDate>Thu, 12 Nov 2026 15:36:02 +0000</pubDate>
+      <description>为何在教授如何“合乎伦理”地在课堂上使用...：Why teaching &apos;ethical&apos; classroom use of AI to learn writin...，适合作为今日 AI/科技情报流里的重点线索。
 
-信号等级 C · 评分 28.0</description>
-      <category>TechURLs</category>
-    </item>
-    <item>
-      <title>刚刚，豆包工作官宣接入 Kimi、DeepSeek，AI 模型自由来了</title>
-      <link>https://www.ifanr.com/1689176</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1689176</guid>
-      <pubDate>Thu, 12 Nov 2026 04:50:05 +0000</pubDate>
-      <description>DeepSeek：国产大模型开始组团办公#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合优先评估模型能力、价格和工具选型变化。
+Why teaching &apos;ethical&apos; classroom use of AI to learn writing must include the right to refuse
 
-国产大模型开始组团办公#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 60.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>[问与答] 还是想问一下大家是怎么 AI 编程的</title>
-      <link>https://www.v2ex.com/t/1256437</link>
-      <guid isPermaLink="true">https://www.v2ex.com/t/1256437</guid>
-      <pubDate>Thu, 12 Nov 2026 04:39:14 +0000</pubDate>
-      <description>还是想问一下大家是怎么 AI 编程的：（请不要不读正文就‘高谈阔论’，多谢，适合判断 AI 编程工作流会不会被改写。
-
-（请不要不读正文就‘高谈阔论’，多谢！）新进入一个项目组，组里氛围很好，大家都朝气蓬勃的，但是好像没有 landing 过程，说起来也加入组里 2 月了，做了一些功能改造、错误率优化，但现在如果问我其中两个主要功能的实现逻辑，我只能说个 50 字的大概抽象，对于时序图、系统拆分、API 和 MQ...
-
-信号等级 C · 评分 23.0</description>
-      <category>Info Flow</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>Show HN: Nova Buddy AI——一款用于处理日常事务的友好型免费AI助手</title>
-      <link>https://novabuddyai.com</link>
-      <guid isPermaLink="true">https://novabuddyai.com</guid>
-      <pubDate>Thu, 12 Nov 2026 04:27:50 +0000</pubDate>
-      <description>Show HN：Nova Buddy AI – a friendly free AI assistant for everyday...，适合作为今日 AI/科技情报流里的重点线索。
-
-Nova Buddy AI – a friendly free AI assistant for everyday jobs
-
-信号等级 C · 评分 40.5</description>
+信号等级 C · 评分 33.0</description>
       <category>Buzzing</category>
     </item>
   </channel>
