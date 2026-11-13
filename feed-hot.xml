@@ -5,48 +5,45 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 13 Nov 2026 11:55:13 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 19:17:45 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>研究发现:AI聊天机器人正在推荐虚假零售网站</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations</guid>
-      <pubDate>Thu, 12 Nov 2026 17:00:00 +0000</pubDate>
-      <description>研究发现：Shoppers using AI chatbots to research products or find pl...，适合判断技术路线和后续产品化可能性。
+      <title>llama.cpp v1.0.0:为本地人工智能生态奠定更坚实的基础</title>
+      <link>https://huggingface.co/blog/ggml-org/llama-cpp-v1</link>
+      <guid isPermaLink="true">https://huggingface.co/blog/ggml-org/llama-cpp-v1</guid>
+      <pubDate>Fri, 13 Nov 2026 14:05:22 +0000</pubDate>
+      <description>llama.cpp：为本地人工智能生态奠定更坚实的基础，适合进一步验证代码、协议或社区采用情况。
 
-Shoppers using AI chatbots to research products or find places to buy items could be directed to imposters and other risky websites, a new study found. The study conducted by IP protection firm Podqi...
+信号等级 A · 评分 71.2</description>
+      <category>Official AI Updates</category>
+      <category>开源</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>被禁运的英伟达芯片竟是中国最强 AI 模型的幕后推手——哎呀，Jensen！</title>
+      <link>https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen</guid>
+      <pubDate>Fri, 13 Nov 2026 18:40:30 +0000</pubDate>
+      <description>英伟达：最新研究显示，中国最先进的AI模型是使用被禁的Nvidia芯片训练的，适合判断技术路线和后续产品化可能性。
 
-信号等级 B · 评分 68.5</description>
+最新研究显示，中国最先进的AI模型是使用被禁的Nvidia芯片训练的。
+
+信号等级 B · 评分 66.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Alishahryar1/free-claude-code</title>
-      <link>https://github.com/Alishahryar1/free-claude-code</link>
-      <guid isPermaLink="true">https://github.com/Alishahryar1/free-claude-code</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>claude：Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenC...，适合进一步验证代码、协议或社区采用情况。
+      <title>Claude 的 Duet 智能体有点“神经质”，却出人意料地好用</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on</guid>
+      <pubDate>Fri, 13 Nov 2026 14:00:00 +0000</pubDate>
+      <description>Claude Duet是Anthropic面向消费者的AI代理，这是AI公司在这一领域的最新尝试，来自官方更新源，适合直接判断产品变化。
 
-Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)
+通常，我测试的产品不会主动帮我撰写体验报告，但Duet不同。Claude Duet是Anthropic面向消费者的AI代理，这是AI公司在这一领域的最新尝试。
 
-信号等级 B · 评分 67.8</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>tradermonty/claude-trading-skills</title>
-      <link>https://github.com/tradermonty/claude-trading-skills</link>
-      <guid isPermaLink="true">https://github.com/tradermonty/claude-trading-skills</guid>
-      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
-      <description>claude：克劳德代码为股票投资者和交易者提供的技能——市场分析、技术图表、经济日历、筛选器和交易策略开发，适合进一步验证代码、协议或社区采用情况。
-
-克劳德代码为股票投资者和交易者提供的技能——市场分析、技术图表、经济日历、筛选器和交易策略开发。
-
-信号等级 B · 评分 65.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
+信号等级 B · 评分 66.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
       <category>模型发布</category>
     </item>
     <item>
@@ -54,9 +51,9 @@ Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harne
       <link>https://arxiv.org/abs/2611.15831</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.15831</guid>
       <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
-      <description>NIBench：自主AI代理在生物医学研究中自动化任务的使用日益增多，迫切需要基于真实科学数据对其能力进行基准测试，适合关注自动化任务和多 Agent 协作演进。
+      <description>NIBench：arXiv:2611.15831v1 Announce Type: new Abstract: Autonomous...，适合关注自动化任务和多 Agent 协作演进。
 
-自主AI代理在生物医学研究中自动化任务的使用日益增多，迫切需要基于真实科学数据对其能力进行基准测试。arXiv:2611.15831v1 Announce Type: new Abstract: Autonomous AI agents are increasingly used to automate biomedical research, creating a growing need to benchmark their capabilities on real scientific...
+arXiv:2611.15831v1 Announce Type: new Abstract: Autonomous AI agents are increasingly used to automate biomedical research, creating a growing need to benchmark their capabilities on real scientific...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
@@ -64,11 +61,37 @@ Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harne
       <category>论文研究</category>
     </item>
     <item>
-      <title>Evidence-Governed Adoption of Self-Generated Updates in Autonomous AI Agents</title>
+      <title>在人工智能智能体为我们谈判之前:稀缺情境下基于规则、搜索、优化、学习与语言模型的谈判者竞技对决</title>
+      <link>https://arxiv.org/abs/2611.15838</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15838</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>在人工智能智能体为我们谈判之前：arXiv:2611.15838v1 Announce Type: new Abstract: Automated...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.15838v1 Announce Type: new Abstract: Automated bilateral negotiation underlies two-sided matching markets such as freight brokering, where many shippers and carriers negotiate price before...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>从Niti到Nyaya:一种以社会为中心的AI治理框架</title>
+      <link>https://arxiv.org/abs/2611.16173</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.16173</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>从Niti到Nyaya：arXiv:2611.16173v1 Announce Type: new Abstract: Government...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.16173v1 Announce Type: new Abstract: Governments are making decisions about AI before they can measure its public effects, and those decisions determine whether a person can learn that AI...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>自主智能体中自我生成更新的循证采纳机制</title>
       <link>https://arxiv.org/abs/2611.16378</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.16378</guid>
       <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Evidence-Governed Ad...：arXiv:2611.16378v1 Announce Type: new Abstract: Autonomous...，适合关注自动化任务和多 Agent 协作演进。
+      <description>自主智能体中自我生成更新的循证采纳机制：arXiv:2611.16378v1 Announce Type: new Abstract: Autonomous...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2611.16378v1 Announce Type: new Abstract: Autonomous agents modify prompts, memories, tools, workflows, and policies using interaction histories. Yet a plausible modification is not necessarily...
 
@@ -78,7 +101,7 @@ arXiv:2611.16378v1 Announce Type: new Abstract: Autonomous agents modify prompts
       <category>论文研究</category>
     </item>
     <item>
-      <title>FPSRG: Heterogeneous User Simulation First-Person Post-Training and Multidimensional Semantic Response Grids</title>
+      <title>FPSRG:异构用户模拟第一人称后训练与多维语义响应网格</title>
       <link>https://arxiv.org/abs/2611.16445</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.16445</guid>
       <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
@@ -91,11 +114,11 @@ arXiv:2611.16445v1 Announce Type: new Abstract: Simulating heterogeneous individ
       <category>论文研究</category>
     </item>
     <item>
-      <title>Fine-Tuned Small Language Model for Synthetic Clinical Data Generation and Predictive Healthcare Analytics</title>
+      <title>用于合成临床数据生成与预测性医疗分析的微调小语言模型</title>
       <link>https://arxiv.org/abs/2611.16460</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.16460</guid>
       <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Fine-Tuned Small Lan...：arXiv:2611.16460v1 Announce Type: new Abstract: The reduce...，适合判断技术路线和后续产品化可能性。
+      <description>用于合成临床数据生成与预测性医疗分析的微...：arXiv:2611.16460v1 Announce Type: new Abstract: The reduce...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.16460v1 Announce Type: new Abstract: The reduced availability of medical datasets represents an important challenge in the development of predictive models for remote healthcare solutions,...
 
@@ -104,11 +127,11 @@ arXiv:2611.16460v1 Announce Type: new Abstract: The reduced availability of medi
       <category>论文研究</category>
     </item>
     <item>
-      <title>How Should Planning Agents ReSHAPE Their Search Space?</title>
+      <title>规划智能体应如何重塑其搜索空间？</title>
       <link>https://arxiv.org/abs/2611.16466</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.16466</guid>
       <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
-      <description>How Should Planning...：arXiv:2611.16466v1 Announce Type: new Abstract: Planning a...，适合判断技术路线和后续产品化可能性。
+      <description>规划智能体应如何重塑其搜索空间：arXiv:2611.16466v1 Announce Type: new Abstract: Planning a...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.16466v1 Announce Type: new Abstract: Planning agents and benchmarks treat a user&apos;s initial specification as fixed. Yet the requests users write exclude plans they would gladly take, since...
 
@@ -655,35 +678,6 @@ arXiv:2603.22608v3 Announce Type: replace Abstract: Users often rely on Large La
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>GrandCode: Achieving Grandmaster Level in Competitive Programming via Agentic Reinforcement Learning</title>
-      <link>https://arxiv.org/abs/2604.02721</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2604.02721</guid>
-      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
-      <description>GrandCode：arXiv:2604.02721v4 Announce Type: replace Abstract: Compet...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2604.02721v4 Announce Type: replace Abstract: Competitive programming remains one of the last few human strongholds in coding against AI. The best AI system to date still underperforms the best...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation</title>
-      <link>https://arxiv.org/abs/2605.28655</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.28655</guid>
-      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
-      <description>AutoScientists：arXiv:2605.28655v2 Announce Type: replace Abstract: Scient...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2605.28655v2 Announce Type: replace Abstract: Scientific research proceeds through iterative cycles of hypothesis generation, experiment design, execution, and revision. AI agents can automate...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
       <category>论文研究</category>
     </item>
   </channel>
