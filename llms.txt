@@ -2,10 +2,10 @@
 
 > 24 小时 AI/科技情报雷达 — 多源聚合、智能评分、趋势检测。
 
-本站每小时自动更新，聚合 15 个信源 / 82 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
+本站每小时自动更新，聚合 15 个信源 / 101 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
 
-最后更新：2026-11-13T03:12:12.863716+00:00
-当前窗口内容数：543 条；累计去重归档：20004 条。
+最后更新：2026-11-13T11:55:13.515565+00:00
+当前窗口内容数：913 条；累计去重归档：20151 条。
 
 ## 数据出口
 
@@ -59,16 +59,16 @@
 
 当前热度榜（前 10）：
 
-1. [谷歌新款 Gemini 模型更擅长理解复杂问题（模型发布 · 部署推理）](https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen) — 热度 66.2，8 个独立来源，趋势 down
-2. [詹森·黄退出后，Hugging Face CEO 誓言将继续为开源 AI 而战（行业动态 · 开源）](https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit) — 热度 62.2，7 个独立来源，趋势 up
-3. [谷歌主打隐私卖点，搭载Gemini的智能眼镜首发，起售价395美元（模型发布）](https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395) — 热度 51.2，6 个独立来源，趋势 up
-4. [中国前沿AI模型中留有受出口管制的GPU的“指纹”（模型发布）](https://unemploymentlabs.com/checkpoint-forensics) — 热度 44.7，5 个独立来源，趋势 new
-5. [软银数十亿美元的亏损或已为AI的天然气雄心画上句号（行业动态）](https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions) — 热度 44.6，5 个独立来源，趋势 up
-6. [Google 搜索迎来重大升级，搭载 Gemini 4 Hydrogen（模型发布 · 智能体）](https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade) — 热度 43.0，5 个独立来源，趋势 up
-7. [人工智能正让苹果的应用审核流程成为合成器开发者的噩梦](https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html) — 热度 37.5，4 个独立来源，趋势 up
-8. [OpenAI、谷歌和Anthropic遭起诉，要求停止前沿人工智能研发（模型发布）](https://reut.rs/4zDlZRT) — 热度 36.9，4 个独立来源，趋势 up
-9. [Edge0-145B:在个人电脑上实现前沿 AI 能力（模型发布 · MCP/工具）](https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer) — 热度 34.3，4 个独立来源，趋势 up
-10. [美国联合航空以网络安全风险为由，禁止AI代理预订航班（美国联邦航空管理局（FAA）将人工智能建议的适用范围扩大至整个美国空域，以管理空）](https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks) — 热度 33.9，4 个独立来源，趋势 up
+1. [[AINews] 黄仁勋在执掌英伟达33年后辞职（行业动态 · 开源）](https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia) — 热度 55.7，6 个独立来源，趋势 up
+2. [claude.ai、Claude Code 和 platform.claude.com 上错误率升高（模型发布）](https://status.claude.com/incidents/nn11wk485zfn) — 热度 48.7，5 个独立来源，趋势 new
+3. [ChromeDevTools/chrome-devtools-mcp（MCP/工具 · 开源）](https://github.com/ChromeDevTools/chrome-devtools-mcp) — 热度 29.9，3 个独立来源，趋势 new
+4. [tradermonty/claude-trading-skills（开源 · 模型发布）](https://github.com/tradermonty/claude-trading-skills) — 热度 29.9，3 个独立来源，趋势 new
+5. [克劳德倒下了（模型发布）](https://status.claude.com/history) — 热度 29.6，3 个独立来源，趋势 new
+6. [腾讯混元发布实时语音模型 Hy Realtime，新增工具调用与唱歌能力（智能体 · MCP/工具）](https://aihot.news/items/qp41q77z9ge5hsyrh9kra0c7k) — 热度 29.0，3 个独立来源，趋势 new
+7. [Show HN: AgentRun——开源、自优化型托管代理（开源）](https://github.com/Parcha-ai/agentrun/blob/main/README.md) — 热度 27.6，3 个独立来源，趋势 new
+8. [证明步骤验证何时物有所值？开放权重数学推理中“验证或拒绝”机制的运行要求（模型发布 · 论文研究）](https://arxiv.org/abs/2611.14794) — 热度 27.2，3 个独立来源，趋势 up
+9. [Gemini Decisions API - 快速、经过校准的多模态决策（多模态 · 模型发布）](https://www.producthunt.com/r/SY4NPTW4AZGZGX) — 热度 26.8，3 个独立来源，趋势 new
+10. [Between Niti and Nyaya: A Society-Centered Framework for AI Governance（论文研究）](https://arxiv.org/abs/2611.16173) — 热度 26.2，3 个独立来源，趋势 up
 
 ## 引用要求
 

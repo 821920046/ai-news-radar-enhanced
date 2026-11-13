@@ -5,324 +5,295 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 13 Nov 2026 03:12:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 11:55:13 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>4 个 3D 游戏，总体积 3.82MB：拆解 Claude 的 one-shot 工程链路</title>
-      <link>https://juejin.cn/post/7706833656825004058</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7706833656825004058</guid>
-      <pubDate>Fri, 13 Nov 2026 03:12:12 +0000</pubDate>
-      <description>拆解 Claude 的 one-shot 工程链路，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>alibaba/open-code-review</title>
+      <link>https://github.com/alibaba/open-code-review</link>
+      <guid isPermaLink="true">https://github.com/alibaba/open-code-review</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>alibaba/open-code-re...：安全、快速、高效，经过阿里巴巴规模的实战考验，适合关注自动化任务和多 Agent 协作演进。
+
+安全、快速、高效，经过阿里巴巴规模的实战考验。混合架构代码审查工具：确定性管道+LLM代理，精确的行级注释，内置多语言规则集（NPE，线程安全，XSS，SQL注入），兼容OpenAI和Anthropic。
+
+信号等级 B · 评分 58.4</description>
+      <category>开源热榜</category>
+      <category>智能体</category>
+      <category>开源</category>
+      <category>安全对齐</category>
+    </item>
+    <item>
+      <title>Likely7/Veyra-NRVideo</title>
+      <link>https://github.com/Likely7/Veyra-NRVideo</link>
+      <guid isPermaLink="true">https://github.com/Likely7/Veyra-NRVideo</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>Likely7/Veyra-NRVide...：利用DLSS 5技术，将PS5版《GTA 6》提升至120帧每秒，适合进一步验证代码、协议或社区采用情况。
+
+利用DLSS 5技术，将PS5版《GTA 6》提升至120帧每秒。该Windows视频播放与捕获增强工具提供实时预览，结合AI超分辨率、DLSS 5图像增强与帧生成，交付下一代视觉体验。
+
+信号等级 B · 评分 53.7</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>tailscale/tailcat</title>
+      <link>https://github.com/tailscale/tailcat</link>
+      <guid isPermaLink="true">https://github.com/tailscale/tailcat</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>tailscale/tailcat：类似Netcat，但通过Tailscale的数据平面传输，不依赖其控制平面，适合进一步验证代码、协议或社区采用情况。
+
+类似Netcat，但通过Tailscale的数据平面传输，不依赖其控制平面。
+
+信号等级 B · 评分 56.1</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>block/buzz</title>
+      <link>https://github.com/block/buzz</link>
+      <guid isPermaLink="true">https://github.com/block/buzz</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>block/buzz：蜂巢思维交流平台，适合进一步验证代码、协议或社区采用情况。
+
+蜂巢思维交流平台
+
+信号等级 B · 评分 58.0</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>backnotprop/plannotator</title>
+      <link>https://github.com/backnotprop/plannotator</link>
+      <guid isPermaLink="true">https://github.com/backnotprop/plannotator</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>backnotprop/plannota...：一个用于跟进并掌控智能体的工作空间：塑造、决策、规划、标注、审查代码、与团队共享，并一键将所有反馈发送给智能体，适合进一步验证代码、协议或社区采用情况。
+
+一个用于跟进并掌控智能体的工作空间：塑造、决策、规划、标注、审查代码、与团队共享，并一键将所有反馈发送给智能体。
+
+信号等级 B · 评分 56.3</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>louislam/uptime-kuma</title>
+      <link>https://github.com/louislam/uptime-kuma</link>
+      <guid isPermaLink="true">https://github.com/louislam/uptime-kuma</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>louislam/uptime-kuma：一个精美的自托管监控工具，适合进一步验证代码、协议或社区采用情况。
+
+一个精美的自托管监控工具
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>ChromeDevTools/chrome-devtools-mcp</title>
+      <link>https://github.com/ChromeDevTools/chrome-devtools-mcp</link>
+      <guid isPermaLink="true">https://github.com/ChromeDevTools/chrome-devtools-mcp</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>ChromeDevTools/chrom...：用于编码代理的 Chrome DevTools，适合关注 Agent 工具调用和工作流搭建。
+
+用于编码代理的 Chrome DevTools
+
+信号等级 B · 评分 59.2</description>
+      <category>开源热榜</category>
+      <category>MCP/工具</category>
+      <category>开源</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>tradermonty/claude-trading-skills</title>
+      <link>https://github.com/tradermonty/claude-trading-skills</link>
+      <guid isPermaLink="true">https://github.com/tradermonty/claude-trading-skills</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>claude：克劳德代码为股票投资者和交易者提供的技能——市场分析、技术图表、经济日历、筛选器和交易策略开发，适合进一步验证代码、协议或社区采用情况。
+
+克劳德代码为股票投资者和交易者提供的技能——市场分析、技术图表、经济日历、筛选器和交易策略开发。
+
+信号等级 B · 评分 65.5</description>
+      <category>开源热榜</category>
+      <category>开源</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>用 Claude Fable 5.2 重构官网：85分钟烧52美元，撞上配额上限中断</title>
+      <link>https://juejin.cn/post/7706577325618921491</link>
+      <guid isPermaLink="true">https://juejin.cn/post/7706577325618921491</guid>
+      <pubDate>Fri, 13 Nov 2026 11:55:13 +0000</pubDate>
+      <description>Claude：85分钟烧52美元，撞上配额上限中断，适合优先评估模型能力、价格和工具选型变化。
 
 信号等级 B · 评分 53.0</description>
       <category>TopHub</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>Claude Fable 5.2 发布后，开发者该关注什么</title>
-      <link>https://juejin.cn/post/7706806274098528296</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7706806274098528296</guid>
-      <pubDate>Fri, 13 Nov 2026 03:12:12 +0000</pubDate>
-      <description>Claude Fable 5.2 发布后，开发者该关注什么，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+      <title>克劳德倒下了</title>
+      <link>https://status.claude.com/history</link>
+      <guid isPermaLink="true">https://status.claude.com/history</guid>
+      <pubDate>Fri, 13 Nov 2026 11:32:16 +0000</pubDate>
+      <description>克劳德倒下了：Claude Is Down，适合优先评估模型能力、价格和工具选型变化。
 
-信号等级 B · 评分 51.8</description>
-      <category>NewsNow</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>早报｜黄仁勋仍为英伟达最大个人股东/豆包工作接入多款第三方模型/微信「看一看」测试短剧入口</title>
-      <link>https://www.ifanr.com/1689292</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1689292</guid>
-      <pubDate>Fri, 13 Nov 2026 00:00:46 +0000</pubDate>
-      <description>英伟达：· 接近腾讯人士称「裁员 50%」传闻不实，管理层提出两条 AI 转型路线 · 张雪：今年已经挣到了「一个小目标」...，适合优先评估模型能力、价格和工具选型变化。
+Claude Is Down
 
-· 接近腾讯人士称「裁员 50%」传闻不实，管理层提出两条 AI 转型路线 · 张雪：今年已经挣到了「一个小目标」 · Claude 10 月网站访问量增近 24%，增幅超过 ChatGPT 和 Gemini#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 60.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>刚刚，Gemini 4 新模型叒来了，终于人人可用</title>
-      <link>https://www.ifanr.com/1689267</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1689267</guid>
-      <pubDate>Thu, 12 Nov 2026 23:11:11 +0000</pubDate>
-      <description>Gemini：更快更便宜还更聪明#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合优先评估模型能力、价格和工具选型变化。
-
-更快更便宜还更聪明#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 60.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Edge0-145B:在个人电脑上实现前沿 AI 能力</title>
-      <link>https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer</link>
-      <guid isPermaLink="true">https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer</guid>
-      <pubDate>Thu, 12 Nov 2026 23:06:17 +0000</pubDate>
-      <description>Edge0-145B：在个人电脑上实现前沿 AI 能力，适合作为今日 AI/科技情报流里的重点线索。
-
-信号等级 B · 评分 51.5</description>
-      <category>Zeli</category>
-    </item>
-    <item>
-      <title>一次构建，任意智能体运行:智能体技能实用指南</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills</link>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills</guid>
-      <pubDate>Thu, 12 Nov 2026 22:54:52 +0000</pubDate>
-      <description>一次构建：代理技能在团队可以审查和重用的文件中捕获可重复的工程工作，而工具、项目上下文和权限仍然特定于运行它们的主机，适合关注自动化任务和多 Agent 协作演进。
-
-代理技能在团队可以审查和重用的文件中捕获可重复的工程工作，而工具、项目上下文和权限仍然特定于运行它们的主机。帖子构建一次，...
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>民主党启动对英伟达的调查，就黄仁勋与特朗普的“计划”发出严厉信函</title>
-      <link>https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump</guid>
-      <pubDate>Thu, 12 Nov 2026 22:42:51 +0000</pubDate>
-      <description>英伟达：针对Nvidia中国业务及其与特朗普的交易关系的国会调查已是自间谍丑闻曝光以来的第二次，适合作为今日 AI/科技情报流里的重点线索。
-
-针对Nvidia中国业务及其与特朗普的交易关系的国会调查已是自间谍丑闻曝光以来的第二次。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Muse现可拨打美国企业电话——但需付费</title>
-      <link>https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay</guid>
-      <pubDate>Thu, 12 Nov 2026 22:22:28 +0000</pubDate>
-      <description>Muse现可拨打美国企业电话——但需付费：Muse的AI可拨打美国企业外呼电话，但服务非免费，适合作为今日 AI/科技情报流里的重点线索。
-
-Muse的AI可拨打美国企业外呼电话，但服务非免费。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>谷歌新款 Gemini 模型更擅长理解复杂问题</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen</guid>
-      <pubDate>Thu, 12 Nov 2026 21:55:32 +0000</pubDate>
-      <description>谷歌表示，其新款Gemini 4 Hydrogen模型能对复杂问题给出更有帮助的答案，包括“多部分问题、难以理解的拼...，来自官方更新源，适合直接判断产品变化。
-
-谷歌表示，其新款Gemini 4 Hydrogen模型能对复杂问题给出更有帮助的答案，包括“多部分问题、难以理解的拼写错误或高度具体的请求”。
-
-信号等级 B · 评分 66.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>Nebius 以 400 亿美元计划支出测试“新云”模式</title>
-      <link>https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending</guid>
-      <pubDate>Thu, 12 Nov 2026 21:27:10 +0000</pubDate>
-      <description>Nebius 以 400 亿美元计划支出...：Nebius计划通过客户预付款和贷款为其400亿美元的AI基础设施扩张提供资金，尽管微软数据中心的延迟引发对其融资模...，适合作为今日 AI/科技情报流里的重点线索。
-
-Nebius计划通过客户预付款和贷款为其400亿美元的AI基础设施扩张提供资金，尽管微软数据中心的延迟引发对其融资模式的质疑。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Amplitude 如何借助 OpenAI 在 1-2 天内推出产品改进</title>
-      <link>https://openai.com/business/customer-stories/amplitude</link>
-      <guid isPermaLink="true">https://openai.com/business/customer-stories/amplitude</guid>
-      <pubDate>Thu, 12 Nov 2026 20:00:00 +0000</pubDate>
-      <description>Amplitude 的主动产品代理 Wave 主要基于 OpenAI 模型构建，可确定要构建的内容、帮助团队通过编码...，来自官方更新源，适合直接判断产品变化。
-
-Amplitude 的主动产品代理 Wave 主要基于 OpenAI 模型构建，可确定要构建的内容、帮助团队通过编码代理交付变更并衡量影响。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>不，AI智能体并未发现一处此前未知的玛雅遗址</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery</guid>
-      <pubDate>Thu, 12 Nov 2026 19:42:40 +0000</pubDate>
-      <description>不：Google研究员Pietro Miotti称利用AI智能体团队在墨西哥发现一处潜在未标注玛雅遗址，但该遗址实际上并...，适合作为今日 AI/科技情报流里的重点线索。
-
-Google研究员Pietro Miotti称利用AI智能体团队在墨西哥发现一处潜在未标注玛雅遗址，但该遗址实际上并不存在。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>谷歌推出Gemini 4 Hydrogen，终于取代了3.8 Flash</title>
-      <link>https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash</link>
-      <guid isPermaLink="true">https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash</guid>
-      <pubDate>Thu, 12 Nov 2026 19:34:44 +0000</pubDate>
-      <description>Google rolls out Gemini 4 Hydrogen, finally replacing 3.8...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash
-
-信号等级 B · 评分 53.8</description>
+信号等级 B · 评分 52.8</description>
       <category>Buzzing</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>谷歌最新搜索升级承诺能更精准地回答你最复杂的问题</title>
-      <link>https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions</guid>
-      <pubDate>Thu, 12 Nov 2026 19:27:45 +0000</pubDate>
-      <description>谷歌最新搜索升级承诺能更精准地回答你最复...：谷歌AI模式由Gemini 4 Hydrogen驱动，正提升对复杂查询的理解能力，精准推送相关链接并生成更丰富的视觉...，适合优先评估模型能力、价格和工具选型变化。
+      <title>claude.ai、Claude Code 和 platform.claude.com 上错误率升高</title>
+      <link>https://status.claude.com/incidents/nn11wk485zfn</link>
+      <guid isPermaLink="true">https://status.claude.com/incidents/nn11wk485zfn</guid>
+      <pubDate>Fri, 13 Nov 2026 10:59:45 +0000</pubDate>
+      <description>Elevated errors on claude.ai, Claude Code, and platform.cl...，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
 
-谷歌AI模式由Gemini 4 Hydrogen驱动，正提升对复杂查询的理解能力，精准推送相关链接并生成更丰富的视觉回应。
+Elevated errors on claude.ai, Claude Code, and platform.claude.com
 
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
+信号等级 B · 评分 52.8</description>
+      <category>Buzzing</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>Nectar推出AI智能体，为品牌自动化发现创作者并开展 outreach</title>
-      <link>https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands</guid>
-      <pubDate>Thu, 12 Nov 2026 19:11:00 +0000</pubDate>
-      <description>Nectar推出AI智能体：Nectar 的新 AI 代理可自动执行影响力营销，帮助品牌发现创作者、管理外展和合作伙伴关系，并跟踪营销活动结果，适合关注自动化任务和多 Agent 协作演进。
+      <title>更多自主权，更少保密协议:志愿者对脑机植入试验提出新要求</title>
+      <link>https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials</link>
+      <guid isPermaLink="true">https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials</guid>
+      <pubDate>Fri, 13 Nov 2026 10:00:00 +0000</pubDate>
+      <description>更多自主权：几十年来，科学家们一直在研究解码大脑活动的方法，适合作为今日 AI/科技情报流里的重点线索。
 
-Nectar 的新 AI 代理可自动执行影响力营销，帮助品牌发现创作者、管理外展和合作伙伴关系，并跟踪营销活动结果。
+几十年来，科学家们一直在研究解码大脑活动的方法。团队已经开发出大脑植入物，可以用来控制机器人肢体和计算机，甚至可以“说话”。人们...
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
-      <category>智能体</category>
     </item>
     <item>
-      <title>LLMON:一种LLM原生标记语言，现已应用于Granite 4.1 3B和8B模型</title>
-      <link>https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite</guid>
-      <pubDate>Thu, 12 Nov 2026 19:07:35 +0000</pubDate>
-      <description>LLMON：一种LLM原生标记语言，现已应用于Granite 4.1 3B和8B模型，适合进一步验证代码、协议或社区采用情况。
+      <title>硅谷自诩能预知未来。那为何对中期选举的判断如此失准？</title>
+      <link>https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong</link>
+      <guid isPermaLink="true">https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong</guid>
+      <pubDate>Fri, 13 Nov 2026 10:00:00 +0000</pubDate>
+      <description>硅谷自诩能预知未来：硅谷自诩为远见卓识者，如OpenAI首席执行官Sam Altman和SpaceX老板Elon Musk，他们以预见未...，适合关注内容生产和交互形态的新变化。
 
-信号等级 B · 评分 61.0</description>
+硅谷自诩为远见卓识者，如OpenAI首席执行官Sam Altman和SpaceX老板Elon Musk，他们以预见未来为职业卖点。长远眼光是他们的资本：...
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>[AINews] 黄仁勋在执掌英伟达33年后辞职</title>
+      <link>https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia</link>
+      <guid isPermaLink="true">https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia</guid>
+      <pubDate>Fri, 13 Nov 2026 09:04:13 +0000</pubDate>
+      <description>英伟达：2026 年 11 月 12 日——Colette Kress 接任临时首席执行官，适合进一步验证代码、协议或社区采用情况。
+
+2026 年 11 月 12 日——Colette Kress 接任临时首席执行官。开源/美国人工智能领导地位会发生什么变化？
+
+信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
       <category>开源</category>
     </item>
     <item>
-      <title>哦，Palantir 现在“进步”了，是吗？</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video</guid>
-      <pubDate>Thu, 12 Nov 2026 18:06:54 +0000</pubDate>
-      <description>哦：Alex Karp的尴尬左倾转向迫使我搁置其他事务，适合作为今日 AI/科技情报流里的重点线索。
+      <title>Gemini Decisions API - 快速、经过校准的多模态决策</title>
+      <link>https://www.producthunt.com/r/SY4NPTW4AZGZGX</link>
+      <guid isPermaLink="true">https://www.producthunt.com/r/SY4NPTW4AZGZGX</guid>
+      <pubDate>Fri, 13 Nov 2026 08:05:04 +0000</pubDate>
+      <description>Gemini：Fast, calibrated multimodal decisions，适合关注内容生产和交互形态的新变化。
 
-Alex Karp的尴尬左倾转向迫使我搁置其他事务。上周选举对右翼而言是一场惨败，这暴露了一个关键问题。
+Fast, calibrated multimodal decisions
 
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>隆重推出 Gemini 4 Hydrogen</title>
-      <link>https://deepmind.google/blog/introducing-gemini-4-hydrogen</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/introducing-gemini-4-hydrogen</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:50 +0000</pubDate>
-      <description>隆重推出 Gemini 4 Hydrogen，来自官方更新源，适合直接判断产品变化。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
+信号等级 B · 评分 52.8</description>
+      <category>Buzzing</category>
+      <category>多模态</category>
       <category>模型发布</category>
     </item>
     <item>
-      <title>Google 搜索迎来重大升级，搭载 Gemini 4 Hydrogen</title>
-      <link>https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade</link>
-      <guid isPermaLink="true">https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-      <description>Google、Gemini：谷歌搜索现推出“Gemini 4 Hydrogen”功能，通过旋转卡片界面展示搜索示例，集成AI交互新体验，适合优先评估模型能力、价格和工具选型变化。
+      <title>AI 时代，公司的「新厂房」长什么样？</title>
+      <link>https://www.ifanr.com/1689182</link>
+      <guid isPermaLink="true">https://www.ifanr.com/1689182</guid>
+      <pubDate>Fri, 13 Nov 2026 06:34:19 +0000</pubDate>
+      <description>AI 时代：真正决定公司未来十年身位的，是谁先动手重建那座名叫「智能组织」的新厂房，适合作为今日 AI/科技情报流里的重点线索。
 
-谷歌搜索现推出“Gemini 4 Hydrogen”功能，通过旋转卡片界面展示搜索示例，集成AI交互新体验。
+真正决定公司未来十年身位的，是谁先动手重建那座名叫「智能组织」的新厂房。#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Zugwise:面向手写国际象棋记分表数字化的领域感知游戏重建方法</title>
+      <link>https://arxiv.org/abs/2611.14544</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14544</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>Zugwise：**摘要：** 本文将手写国际象棋记谱本数字化视为手写识别问题，旨在读取每个格子中的走法并验证其合法性，适合判断技术路线和后续产品化可能性。
+
+**摘要：**
+本文将手写国际象棋记谱本数字化视为手写识别问题，旨在读取每个格子中的走法并验证其合法性。该研究提出了一种利用深度学习模型处理棋谱图像的方法，有效解决了手写棋谱转电子数据的准确性与效率问题。
 
 信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>詹森·黄丑闻远未结束</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling</guid>
-      <pubDate>Thu, 12 Nov 2026 17:44:33 +0000</pubDate>
-      <description>詹森·黄丑闻远未结束：在黄仁勋第二次婚外情的故事曝光之前，我确信黄是刀枪不入的，适合作为今日 AI/科技情报流里的重点线索。
-
-在黄仁勋第二次婚外情的故事曝光之前，我确信黄是刀枪不入的。毕竟，他为什么不呢？他将自己置于人工智能行业不可或缺的中心，并且......
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>詹森·黄退出后，Hugging Face CEO 誓言将继续为开源 AI 而战</title>
-      <link>https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit</guid>
-      <pubDate>Thu, 12 Nov 2026 17:36:40 +0000</pubDate>
-      <description>Hugging Face 的首席执行官承诺在黄仁勋退出后继续为开源人工智能而奋斗，这引发了人们对英伟达 129 亿美...，来自官方更新源，适合直接判断产品变化。
-
-Hugging Face 的首席执行官承诺在黄仁勋退出后继续为开源人工智能而奋斗，这引发了人们对英伟达 129 亿美元收购的质疑。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>美国联合航空以网络安全风险为由，禁止AI代理预订航班</title>
-      <link>https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks</guid>
-      <pubDate>Thu, 12 Nov 2026 17:17:58 +0000</pubDate>
-      <description>美国联合航空以网络安全风险为由：航空公司表示，将不允许客户使用AI代理预订航班和管理预订，适合作为今日 AI/科技情报流里的重点线索。
-
-航空公司表示，将不允许客户使用AI代理预订航班和管理预订。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>软银数十亿美元的亏损或已为AI的天然气雄心画上句号</title>
-      <link>https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions</guid>
-      <pubDate>Thu, 12 Nov 2026 17:00:52 +0000</pubDate>
-      <description>软银数十亿美元的亏损或已为AI的天然气雄...：软银因预购为人工智能数据中心供电的天然气涡轮机而损失了超过 30 亿美元，适合作为今日 AI/科技情报流里的重点线索。
-
-软银因预购为人工智能数据中心供电的天然气涡轮机而损失了超过 30 亿美元。以下是损失对电力市场的影响。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>研究发现:AI聊天机器人正在推荐虚假零售网站</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations</guid>
-      <pubDate>Thu, 12 Nov 2026 17:00:00 +0000</pubDate>
-      <description>一项新研究发现，使用AI聊天机器人购物的消费者可能被引导至仿冒或高风险网站，来自官方更新源，适合直接判断产品变化。
-
-一项新研究发现，使用AI聊天机器人购物的消费者可能被引导至仿冒或高风险网站。研究由IP保护公司Podqi进行，揭示了AI助手在商品推荐中的安全漏洞。
-
-信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
     <item>
-      <title>Phota Labs利用AI将日常照片转化为专业级影像</title>
-      <link>https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots</guid>
-      <pubDate>Thu, 12 Nov 2026 17:00:00 +0000</pubDate>
-      <description>Phota Labs利用AI将日常照片转...：Phota Labs利用AI自动化照片编辑，让用户轻松将日常瞬间转化为精美回忆，适合作为今日 AI/科技情报流里的重点线索。
+      <title>当世界仍保留错误时，清理智能体历史反而会带来损害</title>
+      <link>https://arxiv.org/abs/2611.14654</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14654</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>当世界仍保留错误时：arXiv:2611.14654v1 研究指出，工具调用型语言模型智能体会累积自身错误历史，而通过压缩、修复或交接此...，适合关注自动化任务和多 Agent 协作演进。
 
-Phota Labs利用AI自动化照片编辑，让用户轻松将日常瞬间转化为精美回忆。
+arXiv:2611.14654v1 研究指出，工具调用型语言模型智能体会累积自身错误历史，而通过压缩、修复或交接此类历史的系统机制，可显著提升其任务执行效率与准确性。
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>越来越多游戏开发者开始使用生成式AI</title>
-      <link>https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs</link>
-      <guid isPermaLink="true">https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs</guid>
-      <pubDate>Thu, 12 Nov 2026 17:00:00 +0000</pubDate>
-      <description>越来越多游戏开发者开始使用生成式AI：根据GDC游戏节最新年度行业调查，使用生成式AI工具的游戏开发者比例较去年上升，40%的开发者表示正在使用，适合判断技术路线和后续产品化可能性。
+      <title>Together Compiler:用于AI推理的持续编译技术</title>
+      <link>https://arxiv.org/abs/2611.14681</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14681</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>Together Compiler：arXiv:2611.14681v1 公告类型：新 摘要：当今的人工智能工作负载正在迅速变化：新模型发布更加频繁，模...，适合判断技术路线和后续产品化可能性。
 
-根据GDC游戏节最新年度行业调查，使用生成式AI工具的游戏开发者比例较去年上升，40%的开发者表示正在使用。
+arXiv:2611.14681v1 公告类型：新 摘要：当今的人工智能工作负载正在迅速变化：新模型发布更加频繁，模型架构日益多样化，流量分布......
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>SynthCorp:一个为数据智能体创建基准测试的平台</title>
+      <link>https://arxiv.org/abs/2611.14765</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14765</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>SynthCorp：arXiv:2611.14765v1 公告类型：新 摘要：目前 LLM 驱动的数据代理的基准很快就会饱和，无法针对特...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.14765v1 公告类型：新 摘要：目前 LLM 驱动的数据代理的基准很快就会饱和，无法针对特定功能。我们推出 SynthCorp，一个创建...的平台
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>人类与AI在社会协作中的理性时间利用</title>
+      <link>https://arxiv.org/abs/2611.14766</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14766</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>人类与AI在社会协作中的理性时间利用：所有社交互动都植根于时间之中，适合判断技术路线和后续产品化可能性。
+
+所有社交互动都植根于时间之中。以往研究表明，人类能利用隐含的时间线索，如某段经历的持续时间……
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>基于预训练感知的鲁棒任务感知状态估计</title>
+      <link>https://arxiv.org/abs/2611.14781</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14781</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>基于预训练感知的鲁棒任务感知状态估计：arXiv：2611.14781v1 公告类型：新摘要：使用预训练感知模型（例如视觉语言模型（VLM））执行状态估计...，适合判断技术路线和后续产品化可能性。
+
+arXiv：2611.14781v1 公告类型：新摘要：使用预训练感知模型（例如视觉语言模型（VLM））执行状态估计的代理面临着根本挑战......
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -330,215 +301,388 @@ Phota Labs利用AI自动化照片编辑，让用户轻松将日常瞬间转化�
       <category>多模态</category>
     </item>
     <item>
-      <title>Jensen Huang 被逐出英伟达可能损害 AI 行业的五种方式</title>
-      <link>https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry</guid>
-      <pubDate>Thu, 12 Nov 2026 16:32:33 +0000</pubDate>
-      <description>英伟达被驱逐的首席执行官黄仁勋的垮台不仅仅是普通的亿万富翁性丑闻，来自官方更新源，适合直接判断产品变化。
+      <title>证明步骤验证何时物有所值？开放权重数学推理中“验证或拒绝”机制的运行要求</title>
+      <link>https://arxiv.org/abs/2611.14794</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14794</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>证明步骤验证何时物有所值：arXiv:2611.14794v1 研究证明步骤验证流程，将求解器答案重写为带类型步骤，并利用大语言模型法官进行认...，适合判断技术路线和后续产品化可能性。
 
-英伟达被驱逐的首席执行官黄仁勋的垮台不仅仅是普通的亿万富翁性丑闻。他利用自己的影响力以一些非常具体的方式推动人工智能行业的发展。
+arXiv:2611.14794v1 研究证明步骤验证流程，将求解器答案重写为带类型步骤，并利用大语言模型法官进行认证或拒绝。
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>Jensen Huang 下台了。中国曾希望从他身上得到什么？</title>
-      <link>https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump</link>
-      <guid isPermaLink="true">https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump</guid>
-      <pubDate>Thu, 12 Nov 2026 16:30:00 +0000</pubDate>
-      <description>Jensen Huang 下台了：今天，我们谈论的是 Nvidia 的黄仁勋丑闻，该丑闻发展得如此之快，以至于我们不得不在发布本集之前几分钟对本介绍进...，适合作为今日 AI/科技情报流里的重点线索。
+      <title>人与智能体系统中的开放挑战与机遇</title>
+      <link>https://arxiv.org/abs/2611.14846</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14846</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>人与智能体系统中的开放挑战与机遇：arXiv:2611.14846v1 宣布：新型智能体AI系统在执行长任务并代表人类行动时，人机交互成为其核心有效性...，适合关注自动化任务和多 Agent 协作演进。
 
-今天，我们谈论的是 Nvidia 的黄仁勋丑闻，该丑闻发展得如此之快，以至于我们不得不在发布本集之前几分钟对本介绍进行紧急更新。黄刚...
+arXiv:2611.14846v1 宣布：新型智能体AI系统在执行长任务并代表人类行动时，人机交互成为其核心有效性关键。
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>Alishahryar1/free-claude-code</title>
-      <link>https://github.com/Alishahryar1/free-claude-code</link>
-      <guid isPermaLink="true">https://github.com/Alishahryar1/free-claude-code</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>claude：通过终端、应用、IDE或手机，可免费使用Claude Code、Codex、Antigravity等12款工具（含1...，适合进一步验证代码、协议或社区采用情况。
+      <title>用于推理蒸馏的有效教师支持</title>
+      <link>https://arxiv.org/abs/2611.14850</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14850</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>用于推理蒸馏的有效教师支持：arXiv:2611.14850v1 公告类型：新论文 摘要：前向KL语言模型蒸馏通常在每个监督位置对完整词表计算密...，适合判断技术路线和后续产品化可能性。
 
-通过终端、应用、IDE或手机，可免费使用Claude Code、Codex、Antigravity等12款工具（含13亿+免费代币），现已支持浏览器原生会话，兼容多工具多模型，类似OpenClaw且支持语音与合规。
+arXiv:2611.14850v1 公告类型：新论文 摘要：前向KL语言模型蒸馏通常在每个监督位置对完整词表计算密集的教师和学生分数，使得……
 
-信号等级 B · 评分 61.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>模型发布</category>
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>AI智能体能否出现认知上的“意志薄弱”？高阶证据与自我修正的局限性</title>
+      <link>https://arxiv.org/abs/2611.14889</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14889</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>AI智能体能否出现认知上的“意志薄弱”：arXiv:2611.14889v1 公告类型：新 摘要：当我们判断我们的推理有缺陷时，似乎我们应该放弃它所得出的结...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.14889v1 公告类型：新 摘要：当我们判断我们的推理有缺陷时，似乎我们应该放弃它所得出的结论。这个想法有特殊的力量......
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MuEdit:一种旨在解决跨领域知识冲突的高效多任务编辑方法</title>
+      <link>https://arxiv.org/abs/2611.14910</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14910</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>MuEdit：arXiv:2611.14910v1 新公告：大型语言模型需跨异构领域频繁更新知识，但现有编辑方法在应用时失效，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.14910v1 新公告：大型语言模型需跨异构领域频繁更新知识，但现有编辑方法在应用时失效。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>边缘原生多模态RAG:面向消费级GPU的硬件感知量化与架构优化</title>
+      <link>https://arxiv.org/abs/2611.14924</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14924</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>边缘原生多模态RAG：标准7B参数模型...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.14924v1 公告类型：新 摘要：边缘 AI 的检索增强生成 (RAG) 的部署受到内存和带宽限制。标准7B参数模型...
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>通过多模态训练，纯文本推理中涌现出受视觉启发的思维</title>
+      <link>https://arxiv.org/abs/2611.14942</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14942</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>通过多模态训练：arXiv:2611.14942v1 公告类型：新 摘要：即使输入仅为文本，多模态训练是否会塑造语言模型的思维方式，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.14942v1 公告类型：新 摘要：即使输入仅为文本，多模态训练是否会塑造语言模型的思维方式？我们通过 10 个领域的有针对性的因果消融来测试这一点……
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>RSI-PDEbench:一个用于偏微分方程求解领域自优化智能体的基准测试</title>
+      <link>https://arxiv.org/abs/2611.14949</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14949</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>RSI-PDEbench：**摘要：** 该研究提出了一种方法，利用采样的解数据识别和求解偏微分方程（PDE），显著降低了传统方法对专家经验的...，适合判断技术路线和后续产品化可能性。
+
+**摘要：**
+该研究提出了一种方法，利用采样的解数据识别和求解偏微分方程（PDE），显著降低了传统方法对专家经验的依赖。该方法在处理复杂方程时展现出高效性和精确性，为自动化科学发现提供了新的可能性。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>终止延迟:编码智能体提前完成解题，却迟迟不终止</title>
+      <link>https://arxiv.org/abs/2611.14960</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14960</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>终止延迟：arXiv:2611.14960v1 指出，编码智能体常在任务完成后仍继续运行，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.14960v1 指出，编码智能体常在任务完成后仍继续运行。该文定义了“终止滞后”——即智能体停止工作前的多余步数，并对其进行了特征刻画。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
       <category>编码工具</category>
     </item>
     <item>
-      <title>ggml-org/llama.cpp</title>
-      <link>https://github.com/ggml-org/llama.cpp</link>
-      <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>llama.cpp：本文介绍如何在C/C++中实现大语言模型推理，涵盖内存管理、算子优化及与主流框架的集成方案，适合优先评估模型能力、价格和工具选型变化。
+      <title>任务相同，表述不同:重新表述在何时以及如何帮助LLM解决问题</title>
+      <link>https://arxiv.org/abs/2611.14997</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.14997</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>任务相同：arXiv:2611.14997v1 公告类型：新 摘要：当人们面临难题时，他们通常会在解决问题之前以更清晰的方式重...，适合判断技术路线和后续产品化可能性。
 
-本文介绍如何在C/C++中实现大语言模型推理，涵盖内存管理、算子优化及与主流框架的集成方案。
+arXiv:2611.14997v1 公告类型：新 摘要：当人们面临难题时，他们通常会在解决问题之前以更清晰的方式重述它。我们研究相同的习惯是否有助于大型语言模型......
 
-信号等级 B · 评分 61.5</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-      <category>开源</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>CopilotKit/OpenBot</title>
-      <link>https://github.com/CopilotKit/OpenBot</link>
-      <guid isPermaLink="true">https://github.com/CopilotKit/OpenBot</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>CopilotKit/OpenBot：开源AI同事各拥独立电脑（浏览器、文件及工具），所有操作均预先决策并记录，适合进一步验证代码、协议或社区采用情况。
-
-开源AI同事各拥独立电脑（浏览器、文件及工具），所有操作均预先决策并记录。支持任意AG-UI代理。
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>智能体</category>
-    </item>
-    <item>
-      <title>nodejs/node</title>
-      <link>https://github.com/nodejs/node</link>
-      <guid isPermaLink="true">https://github.com/nodejs/node</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>nodejs/node：Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，支持在服务器端高效执行 JS...，适合进一步验证代码、协议或社区采用情况。
-
-Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，支持在服务器端高效执行 JS 代码，广泛用于构建高性能网络应用。
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>QwenLM/qwen-code</title>
-      <link>https://github.com/QwenLM/qwen-code</link>
-      <guid isPermaLink="true">https://github.com/QwenLM/qwen-code</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>QwenLM、qwen-code：一款运行于终端的开源AI编程智能体，适合关注自动化任务和多 Agent 协作演进。
-
-一款运行于终端的开源AI编程智能体。
-
-信号等级 B · 评分 59.9</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>nvm-sh/nvm</title>
-      <link>https://github.com/nvm-sh/nvm</link>
-      <guid isPermaLink="true">https://github.com/nvm-sh/nvm</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>nvm-sh/nvm：Node版本管理器——兼容POSIX的bash脚本，用于管理多个活跃的node.js版本，适合进一步验证代码、协议或社区采用情况。
-
-Node版本管理器——兼容POSIX的bash脚本，用于管理多个活跃的node.js版本。
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>ashhart/TensorFold</title>
-      <link>https://github.com/ashhart/TensorFold</link>
-      <guid isPermaLink="true">https://github.com/ashhart/TensorFold</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:20 +0000</pubDate>
-      <description>ashhart/TensorFold：适用于 Metal、CUDA 和 Vulkan 的法学硕士推理引擎，适合进一步验证代码、协议或社区采用情况。
-
-适用于 Metal、CUDA 和 Vulkan 的法学硕士推理引擎。
-
-信号等级 B · 评分 56.3</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>阅读英伟达内部邮件，了解CEO变动之际的“异常艰难时期”</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang</guid>
-      <pubDate>Thu, 12 Nov 2026 15:48:12 +0000</pubDate>
-      <description>黄仁勋 (Jensen Huang) 今天上午辞去英伟达 (Nvidia) 首席执行官一职，该公司是他于 1993...，来自官方更新源，适合直接判断产品变化。
-
-黄仁勋 (Jensen Huang) 今天上午辞去英伟达 (Nvidia) 首席执行官一职，该公司是他于 1993 年与他人共同创立的公司。该决定是在该公司董事会对黄仁勋的多起婚外情展开调查之后做出的。
-
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>Norwest 设立 40 亿美元新基金，进一步加码 AI 领域</title>
-      <link>https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund</guid>
-      <pubDate>Thu, 12 Nov 2026 15:18:14 +0000</pubDate>
-      <description>Norwest 设立 40 亿美元新基金：这是该投资公司迄今为止最大的基金，适合作为今日 AI/科技情报流里的重点线索。
+      <title>EvoX:将智能体框架重新定义为运行时策略</title>
+      <link>https://arxiv.org/abs/2611.15006</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15006</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>EvoX：arXiv:2611.15006v1 新提交：大型语言模型（LLM）智能体日益频繁地与工具和环境交互，但看似合理的模...，适合关注自动化任务和多 Agent 协作演进。
 
-这是该投资公司迄今为止最大的基金。
+arXiv:2611.15006v1 新提交：大型语言模型（LLM）智能体日益频繁地与工具和环境交互，但看似合理的模型决策并不总能转化为……
 
-信号等级 B · 评分 61.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Fireworks AI 遭遇网络攻击，黑客得以访问 Notion 客户的聊天记录</title>
-      <link>https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts</guid>
-      <pubDate>Thu, 12 Nov 2026 15:02:28 +0000</pubDate>
-      <description>Fireworks AI 遭遇网络攻击：这是 Fireworks 在短短几个月内遭遇的第二次数据泄露，适合作为今日 AI/科技情报流里的重点线索。
-
-这是 Fireworks 在短短几个月内遭遇的第二次数据泄露。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>英伟达 CEO 黄仁勋深陷间谍与婚外情丑闻后辞职</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-nvidia-ceo-resigns</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-nvidia-ceo-resigns</guid>
-      <pubDate>Thu, 12 Nov 2026 13:53:16 +0000</pubDate>
-      <description>英伟达：Nvidia 董事会宣布，其长期联合创始人、总裁兼首席执行官黄仁勋 (Jensen Huang) 因两起婚外情报道而...，适合作为今日 AI/科技情报流里的重点线索。
-
-Nvidia 董事会宣布，其长期联合创始人、总裁兼首席执行官黄仁勋 (Jensen Huang) 因两起婚外情报道而辞职，其中一桩与一名涉嫌中国间谍的婚外情，另一桩与一名...
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>iPhone Siri AI 体验：距离真正的 AI Phone，苹果还有多远？| 附开通指南</title>
-      <link>https://www.ifanr.com/1688980</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1688980</guid>
-      <pubDate>Thu, 12 Nov 2026 10:47:53 +0000</pubDate>
-      <description>iPhone Siri AI 体验：这是一个更好的 Siri，但还不是一个合格的 Agent#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr）...，适合关注自动化任务和多 Agent 协作演进。
-
-这是一个更好的 Siri，但还不是一个合格的 Agent#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
-
-信号等级 B · 评分 62.2</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
-      <category>模型发布</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>Holiday Extras 正在重新思考它能用 Codex 构建什么</title>
-      <link>https://openai.com/business/customer-stories/holidays-extras-codex</link>
-      <guid isPermaLink="true">https://openai.com/business/customer-stories/holidays-extras-codex</guid>
-      <pubDate>Thu, 12 Nov 2026 09:30:00 +0000</pubDate>
-      <description>Holiday Extras利用Codex将客户专业知识转化为更优应用，提升预订转化率并开辟新增长机遇，来自官方更新源，适合直接判断产品变化。
+      <title>GuardianAgentFlow:用于网页隐私保护的多智能体协同机制</title>
+      <link>https://arxiv.org/abs/2611.15097</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15097</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>GuardianAgentFlow：网络代理需在不泄露私密上下文的情况下使用私有信息，适合关注自动化任务和多 Agent 协作演进。
 
-Holiday Extras利用Codex将客户专业知识转化为更优应用，提升预订转化率并开辟新增长机遇。
+网络代理需在不泄露私密上下文的情况下使用私有信息。有效的保护必须区分可能发送的请求，以防止敏感数据外泄。
 
-信号等级 B · 评分 56.0</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
-      <category>编码工具</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>刚刚，豆包工作官宣接入 Kimi、DeepSeek，AI 模型自由来了</title>
-      <link>https://www.ifanr.com/1689176</link>
-      <guid isPermaLink="true">https://www.ifanr.com/1689176</guid>
-      <pubDate>Thu, 12 Nov 2026 04:50:05 +0000</pubDate>
-      <description>DeepSeek：国产大模型开始组团办公#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上，适合优先评估模型能力、价格和工具选型变化。
+      <title>通过结构化重解码扩展预训练模型的决策空间</title>
+      <link>https://arxiv.org/abs/2611.15109</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15109</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>通过结构化重解码扩展预训练模型的决策空间：arXiv:2611.15109v1提出结构化解码重译（SRD）方法，旨在突破原生解码器在新结构约束下整合局部预测的...，适合判断技术路线和后续产品化可能性。
 
-国产大模型开始组团办公#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+arXiv:2611.15109v1提出结构化解码重译（SRD）方法，旨在突破原生解码器在新结构约束下整合局部预测的局限，提升预训练模型的组合泛化能力。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>HyperSkill:基于超图索引技能库演化的免训练全模态GRPO</title>
+      <link>https://arxiv.org/abs/2611.15178</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15178</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>HyperSkill：强化学习可提升大型语言模型推理能力，但参数更新成本高、易遗忘且不透明，适合判断技术路线和后续产品化可能性。
+
+强化学习可提升大型语言模型推理能力，但参数更新成本高、易遗忘且不透明。该研究提出一种训练-free的库，通过交换梯度而非更新参数，在保持模型稳定性的同时显著提升推理性能。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>WordInferBench:智能体能否从Word文档上下文中推断出编辑方法？</title>
+      <link>https://arxiv.org/abs/2611.15189</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15189</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>WordInferBench：arXiv:2611.15189v1 新公告：文档编辑是最常见的知识工作任务之一，但现有用于评估自主智能体在Word...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15189v1 新公告：文档编辑是最常见的知识工作任务之一，但现有用于评估自主智能体在Word文档编辑方面表现的基准……
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>guardscope:衡量LLM智能体系统中运行时控制检查了哪些行为</title>
+      <link>https://arxiv.org/abs/2611.15223</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15223</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>guardscope：arXiv:2611.15223v1 公告类型：新 摘要：大语言模型（LLM）代理通过工具调用在外部系统上执行操作...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15223v1 公告类型：新 摘要：大语言模型（LLM）代理通过工具调用在外部系统上执行操作，企业部署运行时控件，例如代理...
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MLLM能否基于环视驾驶视频进行推理？多视角自动驾驶问答基准测试</title>
+      <link>https://arxiv.org/abs/2611.15225</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15225</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>MLLM能否基于环视驾驶视频进行推理：arXiv:2611.15225v1 公告类型：新 摘要：自动驾驶中的环视视频理解是多模态大型语言模型 (MLLM)...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15225v1 公告类型：新 摘要：自动驾驶中的环视视频理解是多模态大型语言模型 (MLLM) 实现可靠的关键能力...
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>迈向稳健的视觉-语言推理:基于掩码扩散模型的多阶段优化流程</title>
+      <link>https://arxiv.org/abs/2611.15238</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15238</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>迈向稳健的视觉-语言推理：arXiv:2611.15238v1 新公告：离散扩散生成通过去噪整个token序列，正成为自回归生成的有力替代方案，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.15238v1 新公告：离散扩散生成通过去噪整个token序列，正成为自回归生成的有力替代方案。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>通过实践验证:无需外部反馈的代理执行与评估协同进化</title>
+      <link>https://arxiv.org/abs/2611.15276</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15276</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>通过实践验证：arXiv:2611.15276v1 公告类型：新 摘要：智能体自我改进需要有关任务成功的反馈，但在测试时可能无法获...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15276v1 公告类型：新 摘要：智能体自我改进需要有关任务成功的反馈，但在测试时可能无法获得外部反馈。然后，特工必须从以下方面推断成功：
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>自主权的归属:代理程序演化的权力分立机制</title>
+      <link>https://arxiv.org/abs/2611.15309</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15309</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>自主权的归属：arXiv:2611.15309v1 宣布 LLM 驱动程序演化依赖三项决策：Governing 从积累证据指导搜索...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15309v1 宣布 LLM 驱动程序演化依赖三项决策：Governing 从积累证据指导搜索，Propose 构建下一候选项。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MIGRO:一种解耦且可移植的语言模型长期记忆系统</title>
+      <link>https://arxiv.org/abs/2611.15315</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15315</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>MIGRO：arXiv:2611.15315v1 提出新模型应保留用户交互中积累的观察、修订与上下文，确保语言模型演进过程中历史...，适合优先评估模型能力、价格和工具选型变化。
+
+arXiv:2611.15315v1 提出新模型应保留用户交互中积累的观察、修订与上下文，确保语言模型演进过程中历史数据持续可用。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>一种用于泰坦号深空探测器自主任务规划的物理约束深度强化学习方法</title>
+      <link>https://arxiv.org/abs/2611.15389</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15389</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>一种用于泰坦号深空探测器自主任务规划的物...：arXiv:2611.15389v1 新论文指出，土卫六是深空探测的重要目标，但因地星距离极远且环境复杂，难以实现持...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15389v1 新论文指出，土卫六是深空探测的重要目标，但因地星距离极远且环境复杂，难以实现持续通信与导航，亟需新技术突破。
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>阅读与忽略:自驱式LLM代理在公共服务场景中的行为分析</title>
+      <link>https://arxiv.org/abs/2611.15460</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15460</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>阅读与忽略：arXiv:2611.15460v1 新公告：公共服务中，员工撰写的指令往往不够明确，LLM代理需自行决定行动，而其...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15460v1 新公告：公共服务中，员工撰写的指令往往不够明确，LLM代理需自行决定行动，而其决策会影响……
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>忠诚度捕获:前沿AI模型中的汇报关系与结构性迎合现象</title>
+      <link>https://arxiv.org/abs/2611.15475</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15475</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>arXiv：2611.15475v1 公告类型：新摘要：我们表明人工智能模型表现出忠诚度捕获，这是一种结构性阿谀奉承...，来自官方更新源，适合直接判断产品变化。
+
+arXiv：2611.15475v1 公告类型：新摘要：我们表明人工智能模型表现出忠诚度捕获，这是一种结构性阿谀奉承的形式，其中报告关系影响模型的建议......
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>SkillEarth:通过技能进化教授通用代理在现实世界中采取行动</title>
+      <link>https://arxiv.org/abs/2611.15481</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15481</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>SkillEarth：arXiv:2611.15481v1 公告类型：新论文 摘要：近期开发的遥感（RS）智能体通过多步骤工具调用执行具有...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.15481v1 公告类型：新论文 摘要：近期开发的遥感（RS）智能体通过多步骤工具调用执行具有复杂工作流的真实世界任务。这些智能体……
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>激励响应式代理:面向长效个人AI代理的委托-代理框架、度量套件与运行时架构</title>
+      <link>https://arxiv.org/abs/2611.15515</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15515</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>激励响应式代理：arXiv:2611.15515v1 公告类型：新摘要：个人人工智能代理现在持续存在：它们拥有帐户、邮箱、长期记忆和...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.15515v1 公告类型：新摘要：个人人工智能代理现在持续存在：它们拥有帐户、邮箱、长期记忆和开放式任务流，但改进它们的主要方式......
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>MemCredit:从相关性到实用性——面向长周期网络智能体决策时记忆的解决方案</title>
+      <link>https://arxiv.org/abs/2611.15600</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15600</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>MemCredit：arXiv:2611.15600v1 公告类型：新 摘要：大型语言模型 (LLM) 代理越来越多地在较长的 Web...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.15600v1 公告类型：新 摘要：大型语言模型 (LLM) 代理越来越多地在较长的 Web 交互历史中运行，使得内存管理对于可靠和...
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>一种用于货运模式分类的可解释人工智能可靠性研究</title>
+      <link>https://arxiv.org/abs/2611.15716</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.15716</guid>
+      <pubDate>Fri, 13 Nov 2026 05:00:00 +0000</pubDate>
+      <description>一种用于货运模式分类的可解释人工智能可靠...：arXiv:2611.15716v1 公告类型：新 摘要：机器学习模型越来越多地用于支持货运决策，但他们的预测很少附...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.15716v1 公告类型：新 摘要：机器学习模型越来越多地用于支持货运决策，但他们的预测很少附有证据......
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
   </channel>
 </rss>
