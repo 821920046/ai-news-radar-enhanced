@@ -5,47 +5,140 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 14 Nov 2026 14:49:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 19:45:18 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>通过两台配备vLLM的Nvidia DGX工作站，以607.8 tok/s的速度处理GLM-5.3</title>
+      <link>https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm</link>
+      <guid isPermaLink="true">https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm</guid>
+      <pubDate>Sat, 14 Nov 2026 19:38:56 +0000</pubDate>
+      <description>Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stati...，同时进入热榜视野，适合观察推理部署成本和落地门槛变化。
+
+Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM
+
+信号等级 B · 评分 53.8</description>
+      <category>Buzzing</category>
+      <category>部署推理</category>
+    </item>
+    <item>
+      <title>Claude 被要求重新编号页面后，删除了教授的授课计划及一年笔记</title>
+      <link>https://www.tomshardware.com/tech-industry/artificial-intelligence/rogue-claude-ai-tasked-with-renumbering-pages-accidentally-deletes-law-professors-entire-syllabus-one-year-of-lecture-notes-youre-right-to-be-angry-i-deleted-your-files-through-my-own-carelessness-humbled-agent-admits</link>
+      <guid isPermaLink="true">https://www.tomshardware.com/tech-industry/artificial-intelligence/rogue-claude-ai-tasked-with-renumbering-pages-accidentally-deletes-law-professors-entire-syllabus-one-year-of-lecture-notes-youre-right-to-be-angry-i-deleted-your-files-through-my-own-carelessness-humbled-agent-admits</guid>
+      <pubDate>Sat, 14 Nov 2026 17:51:13 +0000</pubDate>
+      <description>Claude 被要求重新编号页面后，删除了教授的授课计划及一年笔记，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 B · 评分 52.8</description>
+      <category>Zeli</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>AI 坟场:那些未能成功的项目与初创公司持续更新名单</title>
+      <link>https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it</guid>
+      <pubDate>Sat, 14 Nov 2026 17:30:00 +0000</pubDate>
+      <description>AI 坟场：苹果Siri AI屡次延期、OpenAI“超级应用”发布混乱，盘点那些关停或未达预期的AI项目，适合作为今日 AI/科技情报流里的重点线索。
+
+苹果Siri AI屡次延期、OpenAI“超级应用”发布混乱，盘点那些关停或未达预期的AI项目。
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>亚洲各国政府对英伟达首席执行官黄仁勋离任的反应</title>
+      <link>https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit</guid>
+      <pubDate>Sat, 14 Nov 2026 16:34:15 +0000</pubDate>
+      <description>英伟达：一些政府已着手确认芯片供应承诺，另一些则在监测对本地项目的影响或处理正在进行的调查，适合作为今日 AI/科技情报流里的重点线索。
+
+一些政府已着手确认芯片供应承诺，另一些则在监测对本地项目的影响或处理正在进行的调查。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Gemini Robotics 2.5 - Gemini Robotics 2.5：谷歌功能最强大的机器人模型</title>
+      <link>https://www.producthunt.com/r/7TJIY2TFO3PDX3</link>
+      <guid isPermaLink="true">https://www.producthunt.com/r/7TJIY2TFO3PDX3</guid>
+      <pubDate>Sat, 14 Nov 2026 15:24:55 +0000</pubDate>
+      <description>Gemini Robotics 2.5: Google’s most capable robot model，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+Gemini Robotics 2.5: Google’s most capable robot model
+
+信号等级 B · 评分 51.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>《克劳德的幻觉》</title>
+      <link>https://www.netmeister.org/blog/claude-delusion.html</link>
+      <guid isPermaLink="true">https://www.netmeister.org/blog/claude-delusion.html</guid>
+      <pubDate>Sat, 14 Nov 2026 15:08:44 +0000</pubDate>
+      <description>《克劳德的幻觉》：The Claude Delusion，适合优先评估模型能力、价格和工具选型变化。
+
+The Claude Delusion
+
+信号等级 B · 评分 52.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>在HN上展示:约200行纯Jax代码实现的DeepSeek V3</title>
+      <link>https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax</link>
+      <guid isPermaLink="true">https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax</guid>
+      <pubDate>Sat, 14 Nov 2026 15:04:15 +0000</pubDate>
+      <description>约200行纯Jax代码实现的DeepSeek V3，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+信号等级 B · 评分 57.8</description>
+      <category>Zeli</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>曾解雇萨姆·奥特曼的OpenAI董事会成员称:我们仍无法信任AI首席执行官</title>
+      <link>https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview</link>
+      <guid isPermaLink="true">https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview</guid>
+      <pubDate>Sat, 14 Nov 2026 15:00:00 +0000</pubDate>
+      <description>OpenAI：今天，我正在与乔治城大学安全与新兴技术中心执行主任海伦·托纳进行交谈，适合作为今日 AI/科技情报流里的重点线索。
+
+今天，我正在与乔治城大学安全与新兴技术中心执行主任海伦·托纳进行交谈。本集是我们现实生活中的人工智能系列的第二部分......
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+    </item>
     <item>
       <title>dream-num/univer</title>
       <link>https://github.com/dream-num/univer</link>
       <guid isPermaLink="true">https://github.com/dream-num/univer</guid>
       <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>dream-num/univer：Univer 开源 Office SDK 支持构建 AI 协作办公套件，适合进一步验证代码、协议或社区采用情况。
+      <description>dream-num/univer：Univer Office SDK 助你打造专属 AI 办公套件，将编辑、计算、协作与文件处理能力集成到产品中，服务...，适合进一步验证代码、协议或社区采用情况。
 
-Univer 开源 Office SDK 支持构建 AI 协作办公套件
+Univer Office SDK 助你打造专属 AI 办公套件，将编辑、计算、协作与文件处理能力集成到产品中，服务人类用户与 AI 智能体，其基础为可扩展的开源内核。
 
 信号等级 B · 评分 57.4</description>
       <category>开源热榜</category>
       <category>开源</category>
-      <category>办公软件</category>
-      <category>AI Agent</category>
     </item>
     <item>
       <title>JuliusBrussee/caveman</title>
       <link>https://github.com/JuliusBrussee/caveman</link>
       <guid isPermaLink="true">https://github.com/JuliusBrussee/caveman</guid>
       <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>JuliusBrussee/cavema...：研究发现AI使用简单语言可减少65% Token并降低成本，适合判断 AI 编程工作流会不会被改写。
+      <description>JuliusBrussee/cavema...：一款名为“Caveman”的代理工具通过模仿原始语言风格，可为编码智能体节省65%的token消耗，已因病毒式传播成...，适合判断 AI 编程工作流会不会被改写。
 
-研究发现AI使用简单语言可减少65% Token并降低成本。
+一款名为“Caveman”的代理工具通过模仿原始语言风格，可为编码智能体节省65%的token消耗，已因病毒式传播成为开发者新宠。
 
 信号等级 B · 评分 59.2</description>
       <category>开源热榜</category>
-      <category>LLM优化</category>
-      <category>成本降低</category>
-      <category>提示词工程</category>
       <category>编码工具</category>
+      <category>开源</category>
     </item>
     <item>
       <title>martin-olivier/airgorah</title>
       <link>https://github.com/martin-olivier/airgorah</link>
       <guid isPermaLink="true">https://github.com/martin-olivier/airgorah</guid>
       <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>martin-olivier/airgo...：一款WiFi安全审计软件，用于检测网络漏洞与潜在威胁，保障无线网络安全，适合进一步验证代码、协议或社区采用情况。
+      <description>martin-olivier/airgo...：WiFi安全检测软件，适合进一步验证代码、协议或社区采用情况。
 
-一款WiFi安全审计软件，用于检测网络漏洞与潜在威胁，保障无线网络安全。
+WiFi安全检测软件
 
 信号等级 B · 评分 55.5</description>
       <category>开源热榜</category>
@@ -56,9 +149,9 @@ Univer 开源 Office SDK 支持构建 AI 协作办公套件
       <link>https://github.com/Tencent/LoopForge</link>
       <guid isPermaLink="true">https://github.com/Tencent/LoopForge</guid>
       <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>Tencent/LoopForge：本地化工作流支持自托管编码助手交付，通过脚本与人工审批门禁控制 CodeBuddy、Codex、Claude Cod...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Tencent/LoopForge：本文介绍用于编程代理交付的自托管工作流，通过脚本和人工审批门来编排CodeBuddy、Codex和Claude Co...，适合关注自动化任务和多 Agent 协作演进。
 
-本地化工作流支持自托管编码助手交付，通过脚本与人工审批门禁控制 CodeBuddy、Codex、Claude Code，含本地工作流功能。
+本文介绍用于编程代理交付的自托管工作流，通过脚本和人工审批门来编排CodeBuddy、Codex和Claude Code，并包含适用于编程助手的本地工作流。
 
 信号等级 B · 评分 59.1</description>
       <category>开源热榜</category>
@@ -92,67 +185,6 @@ AG-UI：代理-用户交互协议。将代理引入前端应用程序。
       <category>部署推理</category>
     </item>
     <item>
-      <title>Claude 幻觉</title>
-      <link>https://www.netmeister.org/blog/claude-delusion.html</link>
-      <guid isPermaLink="true">https://www.netmeister.org/blog/claude-delusion.html</guid>
-      <pubDate>Sat, 14 Nov 2026 13:36:17 +0000</pubDate>
-      <description>Claude 幻觉，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 B · 评分 52.8</description>
-      <category>Zeli</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>没有黄仁勋的开源人工智能</title>
-      <link>https://www.interconnects.ai/p/open-source-ai-without-jensen</link>
-      <guid isPermaLink="true">https://www.interconnects.ai/p/open-source-ai-without-jensen</guid>
-      <pubDate>Sat, 14 Nov 2026 12:23:15 +0000</pubDate>
-      <description>没有黄仁勋的开源人工智能：斩首，适合作为今日 AI/科技情报流里的重点线索。
-
-斩首。是时候重建了。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>黄仁勋与“远见卓识型”明星创始人的时代落幕</title>
-      <link>https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo</guid>
-      <pubDate>Sat, 14 Nov 2026 12:00:00 +0000</pubDate>
-      <description>黄仁勋与“远见卓识型”明星创始人的时代落...：2025年1月6日，英伟达CEO黄仁勋在1.4万人的场馆中登台，发表主题演讲，宣布推出基于Blackwell架构的R...，适合作为今日 AI/科技情报流里的重点线索。
-
-2025年1月6日，英伟达CEO黄仁勋在1.4万人的场馆中登台，发表主题演讲，宣布推出基于Blackwell架构的RTX 50系列显卡及多项AI创新技术。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>克劳德会议</title>
-      <link>https://claude.com/resources/articles/claude-meetings</link>
-      <guid isPermaLink="true">https://claude.com/resources/articles/claude-meetings</guid>
-      <pubDate>Sat, 14 Nov 2026 10:44:27 +0000</pubDate>
-      <description>克劳德会议：Claude Meetings，适合优先评估模型能力、价格和工具选型变化。
-
-Claude Meetings
-
-信号等级 B · 评分 52.8</description>
-      <category>Buzzing</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>《生成式人工智能基础小书：直观的数学入门指南》</title>
-      <link>https://arxiv.org/abs/2605.29713</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2605.29713</guid>
-      <pubDate>Sat, 14 Nov 2026 10:32:46 +0000</pubDate>
-      <description>《生成式人工智能基础小书：The Little Book of Generative AI Foundations: An Intuitive...，适合判断技术路线和后续产品化可能性。
-
-The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer
-
-信号等级 B · 评分 52.8</description>
-      <category>Buzzing</category>
-      <category>论文研究</category>
-    </item>
-    <item>
       <title>Unsloth Qwen 3.8-27B 量化——Dynamic v3.1 更新</title>
       <link>https://unsloth.ai/docs/models/qwen3.8</link>
       <guid isPermaLink="true">https://unsloth.ai/docs/models/qwen3.8</guid>
@@ -161,7 +193,7 @@ The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer
 
 Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 Update
 
-信号等级 B · 评分 57.8</description>
+信号等级 B · 评分 53.8</description>
       <category>Buzzing</category>
       <category>模型发布</category>
     </item>
@@ -178,24 +210,13 @@ Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 Update
       <category>编码工具</category>
     </item>
     <item>
-      <title>Llama.cpp 发布 v1.0 版本，并推出 macOS 原生应用</title>
-      <link>https://huggingface.co/blog/ggml-org/llama-cpp-v1</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/ggml-org/llama-cpp-v1</guid>
-      <pubDate>Sat, 14 Nov 2026 02:05:37 +0000</pubDate>
-      <description>Llama.cpp 发布 v1.0 版本，并推出 macOS 原生应用，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 B · 评分 53.8</description>
-      <category>Zeli</category>
-      <category>模型发布</category>
-    </item>
-    <item>
       <title>亚马逊计划对全球在线购物数据进行索引</title>
       <link>https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search</guid>
       <pubDate>Fri, 13 Nov 2026 23:49:11 +0000</pubDate>
-      <description>亚马逊计划对全球在线购物数据进行索引：亚马逊计划建立一个数据库，收录互联网上销售的所有商品信息，即便非其自营商品，也将通过自家网站提供这些信息，适合作为今日 AI/科技情报流里的重点线索。
+      <description>亚马逊计划对全球在线购物数据进行索引：据报道，亚马逊计划为互联网上任何地方销售的每种产品（甚至亚马逊不销售的产品）建立一个数据库，并通过自己的网站提供这些...，适合作为今日 AI/科技情报流里的重点线索。
 
-亚马逊计划建立一个数据库，收录互联网上销售的所有商品信息，即便非其自营商品，也将通过自家网站提供这些信息。
+据报道，亚马逊计划为互联网上任何地方销售的每种产品（甚至亚马逊不销售的产品）建立一个数据库，并通过自己的网站提供这些信息。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -207,7 +228,7 @@ Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 Update
       <pubDate>Fri, 13 Nov 2026 22:43:00 +0000</pubDate>
       <description>多位风投与创始人称：英伟达向黄仁勋领导下的人工智能初创公司投入了数百亿美元，适合判断资金、客户和生态格局的变化。
 
-英伟达向黄仁勋领导下的人工智能初创公司投入了数百亿美元。没有他的掌舵，创始人和风险投资公司将面临较小的支票和较低的估值。
+英伟达向黄仁勋领导下的人工智能初创公司投入了数百亿美元。没有他的掌舵，创始人和风险投资家将面临较小的支票和较低的估值。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -224,121 +245,6 @@ Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 Update
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>AI 智能体初创公司 LangChain 估值达 30 亿美元</title>
-      <link>https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation</guid>
-      <pubDate>Fri, 13 Nov 2026 19:37:57 +0000</pubDate>
-      <description>AI 智能体初创公司 LangChain...：LangChain宣布其模型与平台无关的代理管理工具LangSmith已拥有7000家客户，适合关注自动化任务和多 Agent 协作演进。
-
-LangChain宣布其模型与平台无关的代理管理工具LangSmith已拥有7000家客户。
-
-信号等级 B · 评分 61.0</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>行业动态</category>
-    </item>
-    <item>
-      <title>在 NVIDIA Jetson AGX Orin 上使用 cuDLA 在 Python 中运行原生 DLA 推理</title>
-      <link>https://developer.nvidia.com/blog/run-native-dla-inference-in-python-on-nvidia-jetson-agx-orin-using-cudla</link>
-      <guid isPermaLink="true">https://developer.nvidia.com/blog/run-native-dla-inference-in-python-on-nvidia-jetson-agx-orin-using-cudla</guid>
-      <pubDate>Fri, 13 Nov 2026 18:57:10 +0000</pubDate>
-      <description>NVIDIA的Deep Learning Accelerator（DLA）旨在通过高效运行多个神经网络，在边缘设备上...，来自官方更新源，适合直接判断产品变化。
-
-NVIDIA的Deep Learning Accelerator（DLA）旨在通过高效运行多个神经网络，在边缘设备上在有限的计算和功耗预算内实现AI加速。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>被禁止出口的英伟达芯片，竟支撑着中国最强大的 AI 模型——哎呀，Jensen！</title>
-      <link>https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen</guid>
-      <pubDate>Fri, 13 Nov 2026 18:40:30 +0000</pubDate>
-      <description>新研究显示，中国最先进的AI模型是用被禁的英伟达芯片训练的，来自官方更新源，适合直接判断产品变化。
-
-新研究显示，中国最先进的AI模型是用被禁的英伟达芯片训练的。
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>GitHub Copilot 中的 Gemini 4 Hydrogen</title>
-      <link>https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot</guid>
-      <pubDate>Fri, 13 Nov 2026 18:23:48 +0000</pubDate>
-      <description>GitHub、Gemini：Gemini 4 Hydrogen 是 Google 最新的 Flash 模型，现已在 GitHub Copilot...，适合关注自动化任务和多 Agent 协作演进。
-
-Gemini 4 Hydrogen 是 Google 最新的 Flash 模型，现已在 GitHub Copilot 中全面发布。它专为快速、高效的代理编码、工具使用和多步骤工作流程而设计，并具有改进的...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>使用 SimReady 资产构建机器人抓取与放置模拟环境</title>
-      <link>https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:39 +0000</pubDate>
-      <description>使用 SimReady 资产构建机器人抓...：使用 SimReady 资产构建机器人抓取与放置模拟环境，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>XYBench:助力解决提问背后真正的问题</title>
-      <link>https://huggingface.co/blog/allenai/xybench</link>
-      <guid isPermaLink="true">https://huggingface.co/blog/allenai/xybench</guid>
-      <pubDate>Fri, 13 Nov 2026 17:02:35 +0000</pubDate>
-      <description>XYBench：助力解决提问背后真正的问题，适合进一步验证代码、协议或社区采用情况。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>当单块 GPU 力有不逮:使用 vLLM 在两台 NVIDIA DGX 服务器上部署 GLM-5.3</title>
-      <link>https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm</link>
-      <guid isPermaLink="true">https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm</guid>
-      <pubDate>Fri, 13 Nov 2026 17:00:00 +0000</pubDate>
-      <description>两台 NVIDIA DGX Station……，来自官方更新源，适合直接判断产品变化。
-
-在本地运行大规模模型意味着将所有权重存储在 GPU 内存中；最大的模型已无法再装入一台机器中。两台 NVIDIA DGX Station……
-
-信号等级 B · 评分 63.2</description>
-      <category>Official AI Updates</category>
-      <category>部署推理</category>
-    </item>
-    <item>
-      <title>ChatGPT 新推出的钱包功能可让 AI 代理为您购物并完成支付</title>
-      <link>https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you</guid>
-      <pubDate>Fri, 13 Nov 2026 16:00:12 +0000</pubDate>
-      <description>ChatGPT钱包允许AI代理代表用户进行购物和结账，首批面向美国Pro订阅用户限量推出，来自官方更新源，适合直接判断产品变化。
-
-ChatGPT钱包允许AI代理代表用户进行购物和结账，首批面向美国Pro订阅用户限量推出。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>隆重推出ChatGPT钱包</title>
-      <link>https://openai.com/index/introducing-chatgpt-wallet</link>
-      <guid isPermaLink="true">https://openai.com/index/introducing-chatgpt-wallet</guid>
-      <pubDate>Fri, 13 Nov 2026 15:00:00 +0000</pubDate>
-      <description>GPT钱包：推出 ChatGPT Wallet，这是一种安全的方式，让 ChatGPT Work、Codex 和 dots 中的...，适合判断 AI 编程工作流会不会被改写。
-
-推出 ChatGPT Wallet，这是一种安全的方式，让 ChatGPT Work、Codex 和 dots 中的代理可以在用户批准和现有卡保护措施下完成购买。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-      <category>编码工具</category>
     </item>
   </channel>
 </rss>

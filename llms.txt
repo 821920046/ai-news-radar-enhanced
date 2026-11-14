@@ -2,10 +2,10 @@
 
 > 24 小时 AI/科技情报雷达 — 多源聚合、智能评分、趋势检测。
 
-本站每小时自动更新，聚合 15 个信源 / 88 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
+本站每小时自动更新，聚合 15 个信源 / 75 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
 
-最后更新：2026-11-14T14:49:42.457616+00:00
-当前窗口内容数：414 条；累计去重归档：18589 条。
+最后更新：2026-11-14T19:45:18.394528+00:00
+当前窗口内容数：345 条；累计去重归档：18332 条。
 
 ## 数据出口
 
@@ -59,16 +59,16 @@
 
 当前热度榜（前 10）：
 
-1. [随着其通用模型开始操控机器人，OpenAI解散了其机器人团队（模型发布 · 论文研究）](https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots) — 热度 39.2，6 个独立来源，趋势 up
-2. [据称，英伟达通过资助人工智能初创企业购买其显卡，人为制造了供不应求的局面](https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus) — 热度 33.5，4 个独立来源，趋势 up
-3. [Show HN: Browserr——一款面向人工智能代理的、以MCP为核心的浏览器（一个Rust二进制文件）（开源 · 智能体）](https://browserr.dev) — 热度 32.5，4 个独立来源，趋势 up
-4. [据称，人工智能解锁了哥德尔的笔记，其中包含数百个已证明的定理（模型发布）](https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths) — 热度 32.1，5 个独立来源，趋势 up
-5. [美国联邦航空管理局（FAA）的SMART AI系统供应商和微软均表示，航班停飞并非他们的责任（MCP/工具）](https://www.businessinsider.com/smart-system-microsoft-faa-ground-stop-not-their-fault-2026-11) — 热度 30.1，4 个独立来源，趋势 flat
-6. [Claude 幻觉（模型发布）](https://www.netmeister.org/blog/claude-delusion.html) — 热度 28.9，3 个独立来源，趋势 up
-7. [多位风投与创始人称，黄仁勋的离职给 AI 初创企业融资造成巨大冲击（行业动态 · 模型发布）](https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say) — 热度 28.5，4 个独立来源，趋势 flat
-8. [ChatGPT Wallet 让 OpenAI 的 Dots 智能体为您代购物品（智能体 · 安全对齐）](https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet) — 热度 27.9，5 个独立来源，趋势 down
-9. [在 Claude Code 中，请将 Opus 5.5 设为编码默认模型。在 Claude Code 2.1.322 的 52 项编码任务中，Fable 5.2 解决的任务数量与之相当(82.7% 对比 84.6%)，但每项任务的成本却是其 2.80 倍。Opus 已能解决其中大部分任务……（模型发布 · 编码工具）](https://x.com/garrytan/status/2121464508225053153) — 热度 27.4，3 个独立来源，趋势 up
-10. [谷歌为何要切断“无AI学校”的搜索服务？以下是一些推测](https://text.npr.org/nx-s1-6029408) — 热度 27.4，5 个独立来源，趋势 down
+1. [多位风投与创始人称，黄仁勋的离职给 AI 初创企业融资造成巨大冲击（行业动态）](https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say) — 热度 40.4，6 个独立来源，趋势 up
+2. [通过两台配备vLLM的Nvidia DGX工作站，以607.8 tok/s的速度处理GLM-5.3（部署推理）](https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm) — 热度 38.4，4 个独立来源，趋势 new
+3. [美国联邦航空管理局（FAA）的SMART AI系统供应商和微软均表示，航班停飞并非他们的责任（安全对齐 · MCP/工具）](https://www.businessinsider.com/smart-system-microsoft-faa-ground-stop-not-their-fault-2026-11) — 热度 34.7，4 个独立来源，趋势 up
+4. [《克劳德的幻觉》（模型发布）](https://www.netmeister.org/blog/claude-delusion.html) — 热度 34.6，4 个独立来源，趋势 up
+5. [英伟达被指通过资助 AI 初创企业购买其 GPU 来制造供应短缺（行业动态）](https://news.ycombinator.com/item?id=50493251) — 热度 34.5，5 个独立来源，趋势 down
+6. [Gemini Robotics 2.5 - Gemini Robotics 2.5：谷歌功能最强大的机器人模型（模型发布 · 编码工具）](https://www.producthunt.com/r/7TJIY2TFO3PDX3) — 热度 32.6，4 个独立来源，趋势 up
+7. [Businesses in ChatGPT - 通过 ChatGPT 帮助客户发现您的业务（Businesses in ChatGPT - 通过 ChatGPT 帮助客户发）](https://www.producthunt.com/r/4GOWHK6UYKH5KX) — 热度 27.9，3 个独立来源，趋势 new
+8. [在HN上展示:约200行纯Jax代码实现的DeepSeek V3（模型发布）](https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax) — 热度 26.2，3 个独立来源，趋势 new
+9. [白宫呼吁放宽责任限制以鼓励人工智能信息披露（安全对齐）](https://www.bloomberg.com/news/articles/2026-11-14/white-house-urges-easing-liability-to-encourage-ai-disclosure) — 热度 23.1，3 个独立来源，趋势 up
+10. [Unsloth Qwen 3.8-27B 量化——Dynamic v3.1 更新（模型发布）](https://unsloth.ai/docs/models/qwen3.8) — 热度 23.0，3 个独立来源，趋势 down
 
 ## 引用要求
 
