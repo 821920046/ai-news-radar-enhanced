@@ -1,28 +1,36 @@
 {
-  "generated_at": "2026-11-14T00:46:05.827723Z",
+  "generated_at": "2026-11-14T07:25:10.159165Z",
   "sites": [
     {
       "site_id": "aibreakfast",
       "site_name": "AI Breakfast",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 187,
-      "error": "401 Client Error: Unauthorized for url: https://r.jina.ai/https://aibreakfast.beehiiv.com/"
+      "ok": true,
+      "item_count": 9,
+      "duration_ms": 392,
+      "error": null
     },
     {
       "site_id": "followbuilders",
       "site_name": "Follow Builders",
       "ok": true,
-      "item_count": 39,
-      "duration_ms": 215,
+      "item_count": 22,
+      "duration_ms": 414,
       "error": null
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 75,
-      "duration_ms": 765,
+      "item_count": 76,
+      "duration_ms": 910,
+      "error": null
+    },
+    {
+      "site_id": "bestblogs",
+      "site_name": "BestBlogs",
+      "ok": true,
+      "item_count": 1,
+      "duration_ms": 1150,
       "error": null
     },
     {
@@ -30,23 +38,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 1737,
-      "error": null
-    },
-    {
-      "site_id": "aihot",
-      "site_name": "AI HOT",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 1775,
-      "error": "404 Client Error: Not Found for url: https://aihot.news/api/public/items?mode=all&take=100"
-    },
-    {
-      "site_id": "bestblogs",
-      "site_name": "BestBlogs",
-      "ok": true,
-      "item_count": 1,
-      "duration_ms": 1881,
+      "duration_ms": 1410,
       "error": null
     },
     {
@@ -54,7 +46,7 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 1966,
+      "duration_ms": 2055,
       "error": null
     },
     {
@@ -62,31 +54,31 @@
       "site_name": "开源热榜",
       "ok": true,
       "item_count": 25,
-      "duration_ms": 2760,
+      "duration_ms": 2444,
       "error": null
     },
     {
-      "site_id": "aihubtoday",
-      "site_name": "AI HubToday",
+      "site_id": "aihot",
+      "site_name": "AI HOT",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 5400,
-      "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1018)')))"
-    },
-    {
-      "site_id": "tophub",
-      "site_name": "TopHub",
-      "ok": true,
-      "item_count": 3040,
-      "duration_ms": 6064,
-      "error": null
+      "duration_ms": 3432,
+      "error": "404 Client Error: Not Found for url: https://aihot.news/api/public/items?mode=all&take=100"
     },
     {
       "site_id": "buzzing",
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 6584,
+      "duration_ms": 4373,
+      "error": null
+    },
+    {
+      "site_id": "tophub",
+      "site_name": "TopHub",
+      "ok": true,
+      "item_count": 3041,
+      "duration_ms": 4533,
       "error": null
     },
     {
@@ -94,23 +86,31 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 122,
-      "duration_ms": 6614,
+      "duration_ms": 5861,
       "error": null
+    },
+    {
+      "site_id": "aihubtoday",
+      "site_name": "AI HubToday",
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 5996,
+      "error": "HTTPSConnectionPool(host='ai.hubtoday.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1018)')))"
     },
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 952,
-      "duration_ms": 8808,
+      "item_count": 618,
+      "duration_ms": 21377,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 317,
-      "duration_ms": 74147,
+      "item_count": 340,
+      "duration_ms": 49743,
       "error": null
     },
     {
@@ -119,7 +119,7 @@
       "ok": true,
       "partial_failures": 0,
       "item_count": 50,
-      "duration_ms": 192,
+      "duration_ms": 1669,
       "error": null,
       "feed_count": 1,
       "effective_feed_count": 1,
@@ -129,16 +129,15 @@
       "replaced_feed_count": 0
     }
   ],
-  "successful_sites": 12,
+  "successful_sites": 13,
   "failed_sites": [
-    "aibreakfast",
     "aihot",
     "aihubtoday"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5790,
-  "items_before_topic_filter": 5005,
-  "items_in_24h": 812,
+  "fetched_raw_items": 5473,
+  "items_before_topic_filter": 4747,
+  "items_in_24h": 494,
   "ai_processing": {
     "tldr_items": 0
   },
