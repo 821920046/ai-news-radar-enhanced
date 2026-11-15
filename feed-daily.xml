@@ -5,18 +5,30 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Nov 2026 13:32:32 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 19:35:26 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>英伟达间谍丑闻后，国会拟收紧AI芯片出口管制</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china</link>
+      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china</guid>
+      <pubDate>Sun, 15 Nov 2026 19:15:43 +0000</pubDate>
+      <description>不出所料，在涉及英伟达前首席执行官黄仁勋和一名涉嫌中国间谍的丑闻之后，国会正在寻求进一步限制人工智能芯片的出口，来自官方更新源，适合直接判断产品变化。
+
+不出所料，在涉及英伟达前首席执行官黄仁勋和一名涉嫌中国间谍的丑闻之后，国会正在寻求进一步限制人工智能芯片的出口。民主党和...
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+    </item>
     <item>
       <title>google-labs-code/stitch-skills</title>
       <link>https://github.com/google-labs-code/stitch-skills</link>
       <guid isPermaLink="true">https://github.com/google-labs-code/stitch-skills</guid>
       <pubDate>Sun, 15 Nov 2026 13:32:32 +0000</pubDate>
-      <description>google：每个技能都遵循 Agent Skills 开放标准，以便与 Antigravity、Gemini CLI、Claud...，适合关注自动化任务和多 Agent 协作演进。
+      <description>google：该Agent Skills库专为Stitch MCP服务器设计，遵循开放标准，兼容Antigravity、Gemin...，适合关注自动化任务和多 Agent 协作演进。
 
-旨在与 Stitch MCP 服务器配合使用的代理技能库。每个技能都遵循 Agent Skills 开放标准，以便与 Antigravity、Gemini CLI、Claude Code、Cursor 等编码代理兼容。
+该Agent Skills库专为Stitch MCP服务器设计，遵循开放标准，兼容Antigravity、Gemini CLI、Claude Code及Cursor等主流编码智能体。
 
-信号等级 B · 评分 62.4</description>
+信号等级 B · 评分 58.4</description>
       <category>开源热榜</category>
       <category>智能体</category>
       <category>模型发布</category>
@@ -27,11 +39,11 @@
       <link>https://github.com/ggml-org/ggml</link>
       <guid isPermaLink="true">https://github.com/ggml-org/ggml</guid>
       <pubDate>Sun, 15 Nov 2026 13:32:32 +0000</pubDate>
-      <description>ggml-org/ggml：这是一个专注于机器学习的张量库，适合进一步验证代码、协议或社区采用情况。
+      <description>ggml-org/ggml：用于机器学习的张量库，适合进一步验证代码、协议或社区采用情况。
 
-这是一个专注于机器学习的张量库。
+用于机器学习的张量库。
 
-信号等级 B · 评分 56.8</description>
+信号等级 B · 评分 52.8</description>
       <category>开源热榜</category>
       <category>开源</category>
     </item>
@@ -40,182 +52,14 @@
       <link>https://github.com/elementalsouls/Claude-BugHunter</link>
       <guid isPermaLink="true">https://github.com/elementalsouls/Claude-BugHunter</guid>
       <pubDate>Sun, 15 Nov 2026 13:32:32 +0000</pubDate>
-      <description>Claude：该工具包包含82项技能、15条斜杠命令，覆盖24类核心漏洞的681个已披露报告模式，并集成企业身份与基础设施攻击矩阵...，适合进一步验证代码、协议或社区采用情况。
+      <description>这是一个面向漏洞挖掘和外部红队工作的 Claude Code 技能包，包含82项技能、15个斜杠命令、覆盖24个核心...，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
 
-该工具包包含82项技能、15条斜杠命令，覆盖24类核心漏洞的681个已披露报告模式，并集成企业身份与基础设施攻击矩阵，适用于漏洞挖掘与外部红队测试。
+这是一个面向漏洞挖掘和外部红队工作的 Claude Code 技能包，包含82项技能、15个斜杠命令、覆盖24个核心漏洞类别的681个披露报告模式，以及企业身份与基础设施攻击矩阵。
 
-信号等级 B · 评分 65.5</description>
+信号等级 B · 评分 61.5</description>
       <category>开源热榜</category>
       <category>开源</category>
       <category>模型发布</category>
-    </item>
-    <item>
-      <title>NVIDIA/SkillEvaluator</title>
-      <link>https://github.com/NVIDIA/SkillEvaluator</link>
-      <guid isPermaLink="true">https://github.com/NVIDIA/SkillEvaluator</guid>
-      <pubDate>Sun, 15 Nov 2026 13:32:32 +0000</pubDate>
-      <description>NVIDIA：该多层框架通过质量门控、语义重叠检测、合成评估数据生成及实时代理行为影响评估，系统化衡量AI代理技能表现，适合关注自动化任务和多 Agent 协作演进。
-
-该多层框架通过质量门控、语义重叠检测、合成评估数据生成及实时代理行为影响评估，系统化衡量AI代理技能表现。
-
-信号等级 B · 评分 53.6</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>井道无信号、满手黑机油，我们如何用 DeepSeek V4 打造不“犯浑”的电梯维保 Agent？</title>
-      <link>https://juejin.cn/post/7707639689457582106</link>
-      <guid isPermaLink="true">https://juejin.cn/post/7707639689457582106</guid>
-      <pubDate>Sun, 15 Nov 2026 13:32:32 +0000</pubDate>
-      <description>井道无信号、满手黑机油，我们如何用 DeepSeek V4 打造不“犯浑”的电梯维保 Agent？，同时进入热榜视野，适合关注自动化任务和多 Agent 协作演进。
-
-信号等级 B · 评分 51.8</description>
-      <category>NewsNow</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>黄仁勋的混乱日常概览</title>
-      <link>https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation</link>
-      <guid isPermaLink="true">https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation</guid>
-      <pubDate>Sun, 15 Nov 2026 13:00:00 +0000</pubDate>
-      <description>黄仁勋的混乱日常概览：《Stepback》周刊聚焦科技界要闻，报道黄仁勋辞职及英伟达领导层危机引发的连锁反应，适合作为今日 AI/科技情报流里的重点线索。
-
-《Stepback》周刊聚焦科技界要闻，报道黄仁勋辞职及英伟达领导层危机引发的连锁反应。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>在这家公司，90%的代码都是由人工智能编写的。但公司仍然无法招聘到足够的工程师。</title>
-      <link>https://www.businessinsider.com/ai-coding-boom-fuels-demand-senior-engineers-not-junior-developers-2026-11</link>
-      <guid isPermaLink="true">https://www.businessinsider.com/ai-coding-boom-fuels-demand-senior-engineers-not-junior-developers-2026-11</guid>
-      <pubDate>Sun, 15 Nov 2026 10:45:40 +0000</pubDate>
-      <description>在这家公司：AI writes 90% of the code at this company. It still can&apos;t...，适合作为今日 AI/科技情报流里的重点线索。
-
-AI writes 90% of the code at this company. It still can&apos;t hire enough engineers.
-
-信号等级 B · 评分 51.5</description>
-      <category>Buzzing</category>
-    </item>
-    <item>
-      <title>Show HN: DeepSeek V3，约200行纯Jax代码</title>
-      <link>https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax</link>
-      <guid isPermaLink="true">https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax</guid>
-      <pubDate>Sat, 14 Nov 2026 21:13:58 +0000</pubDate>
-      <description>DeepSeek V3 in 200 lines of pure Jax，同时进入热榜视野，适合进一步验证代码、协议或社区采用情况。
-
-DeepSeek V3 in 200 lines of pure Jax
-
-信号等级 B · 评分 53.8</description>
-      <category>Buzzing</category>
-      <category>开源</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>AI 坟场:那些未能成功的项目与初创公司持续更新名单</title>
-      <link>https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it</guid>
-      <pubDate>Sat, 14 Nov 2026 17:30:00 +0000</pubDate>
-      <description>AI 坟场：从苹果屡次推迟的Siri AI到OpenAI混乱的“超级应用”发布，以下是那些关闭或未达预期的AI项目，适合作为今日 AI/科技情报流里的重点线索。
-
-从苹果屡次推迟的Siri AI到OpenAI混乱的“超级应用”发布，以下是那些关闭或未达预期的AI项目。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>两个值得尝试的Fable 5.2实用提示:&quot;/doctor prompt-audit&quot;:审计您的Claude Code配置(Claude md、技能、命令)并提出修复建议。&quot;/claude-api prompt-audit [技能名称]&quot;:深入审计某一特定技能……</title>
-      <link>https://x.com/petergyang/status/2121649295950762363</link>
-      <guid isPermaLink="true">https://x.com/petergyang/status/2121649295950762363</guid>
-      <pubDate>Sat, 14 Nov 2026 16:59:45 +0000</pubDate>
-      <description>&quot;/doctor prompt-audit&quot;:审计您的Claude Code配置(Claude md、技能、命令)并...，来自 Follow Builders 精选源，适合优先评估模型能力、价格和工具选型变化。
-
-信号等级 B · 评分 51.5</description>
-      <category>Follow Builders</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>曾解雇萨姆·奥特曼的OpenAI董事会成员称:我们仍无法信任AI首席执行官</title>
-      <link>https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview</link>
-      <guid isPermaLink="true">https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview</guid>
-      <pubDate>Sat, 14 Nov 2026 15:00:00 +0000</pubDate>
-      <description>OpenAI：今日，我与乔治城大学安全与新兴技术中心执行主任海伦·托纳对话，这是“AI在现实生活”系列的第二部分，适合作为今日 AI/科技情报流里的重点线索。
-
-今日，我与乔治城大学安全与新兴技术中心执行主任海伦·托纳对话，这是“AI在现实生活”系列的第二部分。
-
-信号等级 B · 评分 56.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>dream-num/univer</title>
-      <link>https://github.com/dream-num/univer</link>
-      <guid isPermaLink="true">https://github.com/dream-num/univer</guid>
-      <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>dream-num/univer：使用 Univer Office SDK 构建您自己的 AI 办公室，适合进一步验证代码、协议或社区采用情况。
-
-使用 Univer Office SDK 构建您自己的 AI 办公室。将编辑、计算、协作和文件处理引入您的产品中，供人员和 AI 代理使用。基于可扩展的开源核心构建。
-
-信号等级 B · 评分 53.4</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>JuliusBrussee/caveman</title>
-      <link>https://github.com/JuliusBrussee/caveman</link>
-      <guid isPermaLink="true">https://github.com/JuliusBrussee/caveman</guid>
-      <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>JuliusBrussee/cavema...：科技新闻编辑：通过“洞穴人式”表达技巧及代理，可将编码代理的令牌消耗量降低65%，适合判断 AI 编程工作流会不会被改写。
-
-科技新闻编辑：通过“洞穴人式”表达技巧及代理，可将编码代理的令牌消耗量降低65%。
-
-信号等级 B · 评分 55.2</description>
-      <category>开源热榜</category>
-      <category>编码工具</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>martin-olivier/airgorah</title>
-      <link>https://github.com/martin-olivier/airgorah</link>
-      <guid isPermaLink="true">https://github.com/martin-olivier/airgorah</guid>
-      <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>martin-olivier/airgo...：一款WiFi安全审计软件，适合进一步验证代码、协议或社区采用情况。
-
-一款WiFi安全审计软件。
-
-信号等级 B · 评分 51.5</description>
-      <category>开源热榜</category>
-      <category>开源</category>
-    </item>
-    <item>
-      <title>Tencent/LoopForge</title>
-      <link>https://github.com/Tencent/LoopForge</link>
-      <guid isPermaLink="true">https://github.com/Tencent/LoopForge</guid>
-      <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>Tencent/LoopForge：自托管工作流助力编码代理交付，通过脚本与人工审批环节协调CodeBuddy、Codex及Claude Code，内含...，适合关注自动化任务和多 Agent 协作演进。
-
-自托管工作流助力编码代理交付，通过脚本与人工审批环节协调CodeBuddy、Codex及Claude Code，内含编码助手本地工作流程。
-
-信号等级 B · 评分 55.1</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-    </item>
-    <item>
-      <title>ag-ui-protocol/ag-ui</title>
-      <link>https://github.com/ag-ui-protocol/ag-ui</link>
-      <guid isPermaLink="true">https://github.com/ag-ui-protocol/ag-ui</guid>
-      <pubDate>Sat, 14 Nov 2026 14:49:42 +0000</pubDate>
-      <description>ag-ui-protocol/ag-ui：AG-UI：代理-用户交互协议，将代理引入前端应用，适合关注自动化任务和多 Agent 协作演进。
-
-AG-UI：代理-用户交互协议，将代理引入前端应用。
-
-信号等级 B · 评分 53.0</description>
-      <category>开源热榜</category>
-      <category>智能体</category>
-      <category>开源</category>
     </item>
   </channel>
 </rss>
