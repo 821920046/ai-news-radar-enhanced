@@ -5,19 +5,88 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 16 Nov 2026 14:59:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 23:42:58 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Freshworks前员工融资5300万美元，以AI原生CRM挑战Salesforce与HubSpot</title>
-      <link>https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm</guid>
-      <pubDate>Mon, 16 Nov 2026 12:30:00 +0000</pubDate>
-      <description>Freshworks前员工融资5300万...：Dreamteam已签约13个国家超过100家客户，部分企业从成熟CRM系统迁移而来，适合作为今日 AI/科技情报流里的重点线索。
+      <title>推山下行:框架效应与内部状态干预对 LLM 智能体长期协作行为的影响</title>
+      <link>https://arxiv.org/abs/2611.17515</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.17515</guid>
+      <pubDate>Mon, 16 Nov 2026 05:00:00 +0000</pubDate>
+      <description>推山下行：We place Gemma 3 12B into the seat of a defendant in the L...，适合关注自动化任务和多 Agent 协作演进。
 
-Dreamteam已签约13个国家超过100家客户，部分企业从成熟CRM系统迁移而来。
+arXiv:2611.17515v1 Announce Type: new Abstract: Can sustained gain-loss (valence) framing sway an LLM agent toward market manipulation? We place Gemma 3 12B into the seat of a defendant in the London...
 
-信号等级 B · 评分 65.0</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>星形胶质细胞生物计算:星形胶质细胞对神经网络计算的贡献</title>
+      <link>https://arxiv.org/abs/2611.17532</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.17532</guid>
+      <pubDate>Mon, 16 Nov 2026 05:00:00 +0000</pubDate>
+      <description>星形胶质细胞生物计算：arXiv:2611.17532v1 Announce Type: new Abstract: Conductors...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.17532v1 Announce Type: new Abstract: Conductors are critical for the performance of an orchestra even though they do not emit sound. Basic research and clinical studies in the last decade...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>更多智能体、更多样本，还是更多思考？厘清多智能体 LLM 中的协同、集成与测试时计算</title>
+      <link>https://arxiv.org/abs/2611.17610</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.17610</guid>
+      <pubDate>Mon, 16 Nov 2026 05:00:00 +0000</pubDate>
+      <description>更多智能体、更多样本：arXiv:2611.17610v1 Announce Type: new Abstract: Evaluation...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.17610v1 Announce Type: new Abstract: Evaluations of multi-agent language models often compare communicating architectures against a single greedy pass. This practice confounds coordination...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>LLM 引导的集群生命周期管理:决定行为集群的演进时机与方式</title>
+      <link>https://arxiv.org/abs/2611.17616</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.17616</guid>
+      <pubDate>Mon, 16 Nov 2026 05:00:00 +0000</pubDate>
+      <description>LLM 引导的集群生命周期管理：arXiv:2611.17616v1 Announce Type: new Abstract: Behavioral...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.17616v1 Announce Type: new Abstract: Behavioral clusters learned over user or item interactions drift as behavior evolves: some fragment into sub-behaviors, some converge, some disappear,...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>LLM 智能体所见与用户所言</title>
+      <link>https://arxiv.org/abs/2611.17639</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.17639</guid>
+      <pubDate>Mon, 16 Nov 2026 05:00:00 +0000</pubDate>
+      <description>LLM 智能体所见与用户所言：arXiv:2611.17639v1 Announce Type: new Abstract: Before an...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.17639v1 Announce Type: new Abstract: Before an LLM agent cancels a reservation or deletes a folder for a user, what stops it from acting on a false assumption: what its tools show, or what...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Co-Sight 框架:面向长周期业务智能体的外部化控制资产与确定性执行机制</title>
+      <link>https://arxiv.org/abs/2611.17696</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.17696</guid>
+      <pubDate>Mon, 16 Nov 2026 05:00:00 +0000</pubDate>
+      <description>Co-Sight 框架：arXiv:2611.17696v1 Announce Type: new Abstract: Long-horiz...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.17696v1 Announce Type: new Abstract: Long-horizon business workflows fail in two ways: errors accumulate as a chain of activities lengthens, and the knowledge an activity needs is written...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>视觉即工具:用于多模态智能体编码的视觉驾驭方案</title>
@@ -613,72 +682,6 @@ arXiv:2611.13213v2 Announce Type: replace-cross Abstract: Children&apos;s earlie
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
-    </item>
-    <item>
-      <title>Apple’s new study looks to improve the effectiveness of AI health tools</title>
-      <link>https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools</link>
-      <guid isPermaLink="true">https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools</guid>
-      <pubDate>Mon, 16 Nov 2026 01:26:56 +0000</pubDate>
-      <description>Apple’s new study lo...：Apple announced a new study today with the goal of better...，适合作为今日 AI/科技情报流里的重点线索。
-
-Apple announced a new study today with the goal of better understanding how people interact with conversational AI health tools and how useful their responses actually are. The company is conducting...
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>AI Day Seoul Brings Together Korea’s Industry Leaders, Startups and Developer Communities</title>
-      <link>https://blogs.nvidia.com/blog/ai-day-seoul-wrapup</link>
-      <guid isPermaLink="true">https://blogs.nvidia.com/blog/ai-day-seoul-wrapup</guid>
-      <pubDate>Mon, 16 Nov 2026 00:00:28 +0000</pubDate>
-      <description>AI Day Seoul Brings...：Over two days at COEX, more than 2,000 attendees converged...，适合作为今日 AI/科技情报流里的重点线索。
-
-Over two days at COEX, more than 2,000 attendees converged for AI Day Seoul, bringing together Korea’s industry leaders, startups and developer communities advancing physical AI and AI agents. At the...
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>在格子上定义标准模型迈出一步</title>
-      <link>https://openai.com/index/step-toward-defining-the-standard-model</link>
-      <guid isPermaLink="true">https://openai.com/index/step-toward-defining-the-standard-model</guid>
-      <pubDate>Sun, 15 Nov 2026 22:00:01 +0000</pubDate>
-      <description>在格子上定义标准模型迈出一步：Explore a candidate nonperturbative lattice definition of...，适合优先评估模型能力、价格和工具选型变化。
-
-Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.
-
-信号等级 B · 评分 62.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-    </item>
-    <item>
-      <title>kajisho5/ffmpeg-skill</title>
-      <link>https://github.com/kajisho5/ffmpeg-skill</link>
-      <guid isPermaLink="true">https://github.com/kajisho5/ffmpeg-skill</guid>
-      <pubDate>Mon, 16 Nov 2026 14:59:31 +0000</pubDate>
-      <description>kajisho5/ffmpeg-skil...：用于编码代理的本地视频编辑器：42 个 FFmpeg 工具，带有机器可读合约和 MCP 服务器，用于 Claude...，适合优先评估模型能力、价格和工具选型变化。
-
-用于编码代理的本地视频编辑器：42 个 FFmpeg 工具，带有机器可读合约和 MCP 服务器，用于 Claude Code、Cursor 和 Codex。剪切、字幕、重构、响度、平台导出。没有云，没有 API 密钥。
-
-信号等级 B · 评分 61.9</description>
-      <category>开源热榜</category>
-      <category>模型发布</category>
-      <category>编码工具</category>
-      <category>MCP/工具</category>
-    </item>
-    <item>
-      <title>消融是否越来越难？并非一概而论:基于方向的消融与 ARA 在 Qwen3.8、Gemma 4、Olmo 3.1 和 Mistral Small 3.2 LLM 中移除拒绝行为，与其前代模型的对比</title>
-      <link>https://arxiv.org/abs/2611.17846</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.17846</guid>
-      <pubDate>Mon, 16 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Qwen3.8、Mistral：arXiv:2611.17846v1 Announce Type: new Abstract: Abliterati...，适合优先评估模型能力、价格和工具选型变化。
-
-arXiv:2611.17846v1 Announce Type: new Abstract: Abliteration, a fine-tuning-free weight edit, removes refusal from open-weight large language models (LLMs). The developer of Arbitrary-Rank Ablation...
-
-信号等级 B · 评分 61.2</description>
-      <category>Official AI Updates</category>
-      <category>模型发布</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
