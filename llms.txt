@@ -2,10 +2,10 @@
 
 > 24 小时 AI/科技情报雷达 — 多源聚合、智能评分、趋势检测。
 
-本站每小时自动更新，聚合 15 个信源 / 91 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
+本站每小时自动更新，聚合 15 个信源 / 83 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
 
-最后更新：2026-11-17T23:46:08.929356+00:00
-当前窗口内容数：946 条；累计去重归档：17045 条。
+最后更新：2026-11-18T06:13:22.290481+00:00
+当前窗口内容数：770 条；累计去重归档：17483 条。
 
 ## 数据出口
 
@@ -59,16 +59,16 @@
 
 当前热度榜（前 10）：
 
-1. [隆重推出 GPT-6.2 Astra 和 Sol（模型发布 · 编码工具）](https://openai.com/index/introducing-gpt-6-2-astra-sol) — 热度 71.7，8 个独立来源，趋势 up
-2. [OpenAI承认发生80起失控事件后，遭加利福尼亚州起诉（智能体 · 开源）](https://arstechnica.com/tech-policy/2026/11/california-sues-openai-to-stop-public-nuisance-of-out-of-control-ai-agents) — 热度 48.5，6 个独立来源，趋势 up
-3. [英伟达称黄仁勋离任后其开源AI战略保持不变（行业动态 · 开源）](https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit) — 热度 45.9，5 个独立来源，趋势 up
-4. [哈佛研究人员发现，AI 编码代理已将瓶颈转移至代码审查环节（编码工具）](https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review) — 热度 45.0，5 个独立来源，趋势 up
-5. [jingyaogong/minimind（开源）](https://github.com/jingyaogong/minimind) — 热度 43.0，5 个独立来源，趋势 up
-6. [Isomorphic Labs 融资 50 亿美元，旨在将其药物候选项目推进临床试验（行业动态 · 安全对齐）](https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials) — 热度 42.3，6 个独立来源，趋势 down
-7. [Claude Code 团队如何看待验证工作（模型发布 · MCP/工具）](https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification) — 热度 39.4，5 个独立来源，趋势 up
-8. [MAI Code 2 和 Code 2 Flash（开源 · 模型发布）](https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash) — 热度 37.9，4 个独立来源，趋势 up
-9. [MAI Code 2 与 MAI Code 2 Flash 登陆 GitHub Copilot（模型发布 · 编码工具）](https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot) — 热度 36.8，4 个独立来源，趋势 up
-10. [即使关闭历史记录，Google 也将 Gemini 聊天记录的保留时间从 72 小时延长至 2 个月（模型发布）](https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off) — 热度 35.3，4 个独立来源，趋势 up
+1. [英伟达称黄仁勋离任后其开源AI战略保持不变（开源 · 行业动态）](https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit) — 热度 44.6，5 个独立来源，趋势 up
+2. [Why is Gemini 4 Carbon taking so long?（模型发布）](https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long) — 热度 36.4，4 个独立来源，趋势 up
+3. [NEBench R1:用于评估大型语言模型核领域能力的推理基准测试（论文研究 · 智能体）](https://arxiv.org/abs/2611.21682) — 热度 36.2，4 个独立来源，趋势 new
+4. [谷歌的AI回答功能导致搜索流量减少了40%](https://revscope.co/blog/search-seo-geo-2026) — 热度 35.5，4 个独立来源，趋势 new
+5. [哈佛大学的研究人员发现，人工智能编码代理将瓶颈转移到了代码审查环节（编码工具 · 论文研究）](https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review) — 热度 28.8，3 个独立来源，趋势 new
+6. [全球第一修图 AI 模型：微软 MAI Image 2.7 登场，用 1/5 价格击败 GPT Image 2.6 登顶（模型发布 · 多模态）](https://www.ithome.com/1/028/582.htm) — 热度 28.2，3 个独立来源，趋势 up
+7. [微软在Ignite主题演讲中将Copilot称为“工作的新操作系统”（编码工具）](https://arstechnica.com/gadgets/2026/11/microsoft-calls-copilot-the-new-os-for-work-at-ignite-keynote) — 热度 26.8，3 个独立来源，趋势 new
+8. [多语言错误率直降 50%：微软升级医患对话 AI 转录引擎，已覆盖全美 1/3 医师（行业动态 · 编码工具）](https://www.ithome.com/1/028/590.htm) — 热度 26.5，3 个独立来源，趋势 up
+9. [微软给 AI 装上“决策脑”：Decision-1.1 跑赢 GPT-6 Luna，拿不准还能弃权（模型发布）](https://www.aibase.com/news/32369) — 热度 20.0，2 个独立来源，趋势 new
+10. [微软发布首款语音对语音模型 MAI Realtime 1：能被打断、会打电话干活，价格只有对手三分之一（微软发布首款语音对语音模型 MAI Realtime 1：能被打断、会打电话干活）](https://www.aibase.com/zh/news/32374) — 热度 20.0，2 个独立来源，趋势 new
 
 ## 引用要求
 
