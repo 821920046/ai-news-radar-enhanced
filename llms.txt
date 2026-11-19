@@ -2,10 +2,10 @@
 
 > 24 小时 AI/科技情报雷达 — 多源聚合、智能评分、趋势检测。
 
-本站每小时自动更新，聚合 15 个信源 / 97 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
+本站每小时自动更新，聚合 15 个信源 / 85 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
 
-最后更新：2026-11-18T23:17:56.490757+00:00
-当前窗口内容数：777 条；累计去重归档：18755 条。
+最后更新：2026-11-19T06:15:24.289659+00:00
+当前窗口内容数：699 条；累计去重归档：17468 条。
 
 ## 数据出口
 
@@ -59,16 +59,16 @@
 
 当前热度榜（前 10）：
 
-1. [隆重推出 Gemini 4 Neon（模型发布 · 智能体）](https://deepmind.google/blog/introducing-gemini-4-neon) — 热度 66.7，7 个独立来源，趋势 up
-2. [[AINews] GPT-6.2 Astra，这款排名第二的前沿模型性能更优且价格降低 20%-600%，但评价褒贬不一；6.2 Sol 或将成为主力模型（模型发布 · 论文研究）](https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol) — 热度 51.0，7 个独立来源，趋势 down
-3. [据称Anthropic将IPO定价为每股83美元，高于此前预期区间（行业动态 · 论文研究）](https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range) — 热度 48.8，5 个独立来源，趋势 up
-4. [OpenAI 团队成员 Tibo 评价 GPT-6.2 Astra 并转引 AMD 与 Jalapeño 芯片优化结果（部署推理 · 开源）](https://aihot.news/items/bnqsw7ispucfily4bdq9vz33j) — 热度 44.4，5 个独立来源，趋势 up
-5. [黄仁勋离职后，微软CEO萨蒂亚·纳德拉仍对英伟达保持信心（部署推理）](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit) — 热度 39.6，5 个独立来源，趋势 flat
-6. [腾讯把 Hy4 flash 开源了：224B 大模型放进 GitHub，人人可下载（开源 · 模型发布）](https://www.aibase.com/zh/news/32380) — 热度 38.2，5 个独立来源，趋势 down
-7. [在审计模拟中，人工智能代理提出的问题比毕马威会计师更切中要点](https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg) — 热度 34.4，4 个独立来源，趋势 up
-8. [Will Wright 的下一款游戏将利用 AI 绘制你的记忆图谱（威尔·赖特（Will Wright）的下一款模拟游戏将利用人工智能从你的记忆中提）](https://www.theverge.com/games/1036140/will-wright-mymems-ai-game-interview) — 热度 33.6，4 个独立来源，趋势 up
-9. [Sam Altman警告称，警惕一个由AI而非人类主导未来的到来（多模态）](https://techcrunch.com/2026/11/18/sam-altman-warns-against-a-future-where-ai-not-humans-calls-the-shots) — 热度 33.3，4 个独立来源，趋势 up
-10. [punkpeye/awesome-mcp-servers（MCP/工具 · 开源）](https://github.com/punkpeye/awesome-mcp-servers) — 热度 32.4，4 个独立来源，趋势 down
+1. [据称Anthropic将IPO定价为每股83美元，高于此前预期区间（行业动态 · 模型发布）](https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range) — 热度 60.5，7 个独立来源，趋势 flat
+2. [利用 OpenAI 模型推动芯片设计发展（部署推理 · 开源）](https://openai.com/index/advancing-chip-design-with-our-models) — 热度 59.6，7 个独立来源，趋势 up
+3. [隆重推出 Gemini 4 Neon（模型发布 · 编码工具）](https://deepmind.google/blog/introducing-gemini-4-neon) — 热度 58.5，7 个独立来源，趋势 flat
+4. [黄仁勋离职后，微软CEO萨蒂亚·纳德拉仍对英伟达保持信心（部署推理 · 行业动态）](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit) — 热度 35.8，4 个独立来源，趋势 up
+5. [学习协同:LLM 引导的工作流演进，实现高效的红队对抗（论文研究 · 安全对齐）](https://arxiv.org/abs/2611.24221) — 热度 35.7，4 个独立来源，趋势 new
+6. [Rethinking Fixed-Horizon Latent Reasoning（论文研究 · 部署推理）](https://arxiv.org/abs/2611.24001) — 热度 24.6，3 个独立来源，趋势 up
+7. [帕尔默·拉基警告称，人工智能驱动的网络攻击已超越防御速度:“是时候开始行动了”（安全对齐）](https://techcrunch.com/2026/11/18/palmer-luckey-warns-ai-powered-cyberattacks-are-outpacing-defenses-its-time-to-start-running) — 热度 24.4，3 个独立来源，趋势 up
+8. [LLM assisted reverse engineering](https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering) — 热度 23.9，3 个独立来源，趋势 down
+9. [Pitch Avatar HR Suite - 利用对话式AI虚拟形象进行入职引导、培训与沟通（Pitch Avatar HR Suite - 利用对话式AI虚拟形象进行入职引）](https://www.producthunt.com/r/LAAO4P46MHJORU) — 热度 23.1，3 个独立来源，趋势 down
+10. [Genie 4 现已上市](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie) — 热度 22.8，3 个独立来源，趋势 down
 
 ## 引用要求
 
