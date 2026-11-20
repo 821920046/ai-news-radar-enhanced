@@ -5,21 +5,47 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 20 Nov 2026 15:18:24 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 22:30:45 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Signal 正在阻止 Gemini 和 Siri AI 读取您的屏幕</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app</link>
-      <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app</guid>
-      <pubDate>Fri, 20 Nov 2026 12:30:47 +0000</pubDate>
-      <description>Gemini：Signal 将限制 Android 和 iOS 设备的截图功能，以防止 AI 代理读取用户消息及其他数据，适合关注自动化任务和多 Agent 协作演进。
+      <title>研究人员在AI供应链中植入200万份“金丝雀”数据，隐私灾难浮出水面</title>
+      <link>https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate</link>
+      <guid isPermaLink="true">https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate</guid>
+      <pubDate>Fri, 20 Nov 2026 20:59:08 +0000</pubDate>
+      <description>研究人员在AI供应链中植入200万份“金...：通过使用带有可追踪唯一密钥的提示词测试证明，数据并非始终保持私密，适合作为今日 AI/科技情报流里的重点线索。
 
-Signal 将限制 Android 和 iOS 设备的截图功能，以防止 AI 代理读取用户消息及其他数据。该举措针对内置的智能体 AI 功能，旨在保护用户隐私。
+通过使用带有可追踪唯一密钥的提示词测试证明，数据并非始终保持私密。
 
-信号等级 B · 评分 66.2</description>
+信号等级 B · 评分 65.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>SailSearch:组合优化中的智能体辅助发现</title>
+      <link>https://arxiv.org/abs/2611.25087</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.25087</guid>
+      <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
+      <description>SailSearch：arXiv:2611.25087v1 Announce Type: new Abstract: We present...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.25087v1 Announce Type: new Abstract: We present SailSearch, a human-guided workflow for algorithmic research with two language-model agents, and report results on Market Split and maximum...
+
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
-      <category>模型发布</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>Pro$^2$ Agent:用于自主AI研发的科研问题探测智能体</title>
+      <link>https://arxiv.org/abs/2611.25357</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.25357</guid>
+      <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
+      <description>Pro$^2$ Agent：arXiv:2611.25357v1 Announce Type: new Abstract: Large lang...，适合关注自动化任务和多 Agent 协作演进。
+
+arXiv:2611.25357v1 Announce Type: new Abstract: Large language model (LLM) agents can now autonomously conduct AI research by writing code and running experiments. They typically do so by iteratively...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+      <category>论文研究</category>
     </item>
     <item>
       <title>单一调度方案并非万能:扩散语言模型的自适应推理调度</title>
@@ -320,11 +346,11 @@ arXiv:2611.25418v1 Announce Type: cross Abstract: Medical vision--language model
       <category>多模态</category>
     </item>
     <item>
-      <title>Persona Lenses: What Makes a Vision-Language Model See Through Its Persona&apos;s Eyes?</title>
+      <title>人格透镜:是什么让视觉语言模型透过其人格的视角看世界？</title>
       <link>https://arxiv.org/abs/2611.25508</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25508</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Persona Lenses：arXiv:2611.25508v1 Announce Type: cross Abstract: Vision-l...，适合判断技术路线和后续产品化可能性。
+      <description>人格透镜：arXiv:2611.25508v1 Announce Type: cross Abstract: Vision-l...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25508v1 Announce Type: cross Abstract: Vision-language models have been used to simulate where a user looks on a web page. However, a persona in the prompt reaches the simulated gaze only...
 
@@ -334,11 +360,11 @@ arXiv:2611.25508v1 Announce Type: cross Abstract: Vision-language models have be
       <category>多模态</category>
     </item>
     <item>
-      <title>An Explainable and Scalable Hierarchical Tensor Framework for Integrating Multi-Omics and Digital Pathomics</title>
+      <title>用于整合多组学与数字病理组学的可解释、可扩展分层张量框架</title>
       <link>https://arxiv.org/abs/2611.25584</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25584</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>An Explainable and S...：arXiv:2611.25584v1 Announce Type: cross Abstract: Backgrou...，适合判断技术路线和后续产品化可能性。
+      <description>用于整合多组学与数字病理组学的可解释、可...：arXiv:2611.25584v1 Announce Type: cross Abstract: Backgrou...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25584v1 Announce Type: cross Abstract: Background: Precision oncology requires integration of heterogeneous molecular and pathology data, yet many fusion models offer limited biologically...
 
@@ -347,11 +373,11 @@ arXiv:2611.25584v1 Announce Type: cross Abstract: Background: Precision oncology
       <category>论文研究</category>
     </item>
     <item>
-      <title>From Geographic Memory to Spatial Generalization in Large Language Models</title>
+      <title>从地理记忆到空间泛化:大型语言模型的能力演进</title>
       <link>https://arxiv.org/abs/2611.25703</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25703</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>From Geographic Memo...：arXiv:2611.25703v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
+      <description>从地理记忆到空间泛化：arXiv:2611.25703v1 Announce Type: cross Abstract: Large la...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25703v1 Announce Type: cross Abstract: Large language models (LLMs) can associate places with geographic descriptions, but recovering an observed association does not establish an ability...
 
@@ -360,7 +386,7 @@ arXiv:2611.25703v1 Announce Type: cross Abstract: Large language models (LLMs) c
       <category>论文研究</category>
     </item>
     <item>
-      <title>PosteriorBench: Evaluating Behavior Posterior Sampling in Language Models</title>
+      <title>PosteriorBench:评估语言模型中的行为后验采样</title>
       <link>https://arxiv.org/abs/2611.25735</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25735</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
@@ -373,11 +399,11 @@ arXiv:2611.25735v1 Announce Type: cross Abstract: Rare language model behaviors 
       <category>论文研究</category>
     </item>
     <item>
-      <title>An LLM-Driven Traffic-Control xApp for Dynamic 5G RAN Intents</title>
+      <title>基于LLM的交通控制xApp，用于动态5G RAN意图管理</title>
       <link>https://arxiv.org/abs/2611.25736</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25736</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>An LLM-Driven Traffi...：arXiv:2611.25736v1 Announce Type: cross Abstract: Programm...，适合判断技术路线和后续产品化可能性。
+      <description>基于LLM的交通控制xApp：arXiv:2611.25736v1 Announce Type: cross Abstract: Programm...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25736v1 Announce Type: cross Abstract: Programmable Radio Access Networks (RANs) enable runtime deployment of traffic-control functions, but selecting the appropriate configuration remains...
 
@@ -386,11 +412,11 @@ arXiv:2611.25736v1 Announce Type: cross Abstract: Programmable Radio Access Netw
       <category>论文研究</category>
     </item>
     <item>
-      <title>Closing Performance Gap for Diffusion Language Models under Low Inference Budgets</title>
+      <title>在低推理预算下弥补扩散语言模型的性能差距</title>
       <link>https://arxiv.org/abs/2611.25763</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25763</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Closing Performance...：arXiv:2611.25763v1 Announce Type: cross Abstract: Diffusio...，适合判断技术路线和后续产品化可能性。
+      <description>在低推理预算下弥补扩散语言模型的性能差距：arXiv:2611.25763v1 Announce Type: cross Abstract: Diffusio...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25763v1 Announce Type: cross Abstract: Diffusion language models offer an architectural route to low-budget generation by updating multiple tokens in parallel, which can reduce the number...
 
@@ -401,11 +427,11 @@ arXiv:2611.25763v1 Announce Type: cross Abstract: Diffusion language models offe
       <category>多模态</category>
     </item>
     <item>
-      <title>Many Solutions, One Answer: Search Order Shapes the Default Solutions of Language Models</title>
+      <title>多种方案，一个答案:搜索顺序塑造了语言模型的默认解决方案</title>
       <link>https://arxiv.org/abs/2611.25916</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25916</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Many Solutions：arXiv:2611.25916v1 Announce Type: cross Abstract: When a c...，适合判断技术路线和后续产品化可能性。
+      <description>多种方案：arXiv:2611.25916v1 Announce Type: cross Abstract: When a c...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25916v1 Announce Type: cross Abstract: When a constraint puzzle has several correct answers, language models tend to give the same one.We study four open-weight models from three families...
 
@@ -414,11 +440,11 @@ arXiv:2611.25916v1 Announce Type: cross Abstract: When a constraint puzzle has s
       <category>论文研究</category>
     </item>
     <item>
-      <title>Web search in Latin America: language models use less local and diverse news than search engines</title>
+      <title>拉丁美洲的网络搜索:语言模型比搜索引擎更少使用本地化、多样化的新闻</title>
       <link>https://arxiv.org/abs/2611.25955</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25955</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Web search in Latin...：arXiv:2611.25955v1 Announce Type: cross Abstract: AI platf...，适合判断技术路线和后续产品化可能性。
+      <description>拉丁美洲的网络搜索：arXiv:2611.25955v1 Announce Type: cross Abstract: AI platf...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25955v1 Announce Type: cross Abstract: AI platforms are becoming a major gateway to news and current events. This shift risks amplifying existing geographical biases that favour narratives...
 
@@ -653,32 +679,6 @@ arXiv:2602.04417v2 Announce Type: replace-cross Abstract: Reinforcement Learning
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>Learning Object-Centric Spatial Reasoning for Sequential Manipulation in Cluttered Environments</title>
-      <link>https://arxiv.org/abs/2603.02511</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.02511</guid>
-      <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Learning Object-Cent...：arXiv:2603.02511v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2603.02511v2 Announce Type: replace-cross Abstract: Sequential manipulation in clutter requires selecting which objects to remove and determining how to manipulate them. Learning both decisions...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>xAppGen: LLM-driven Natural Language Programming for Agile xApp Development</title>
-      <link>https://arxiv.org/abs/2603.18604</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2603.18604</guid>
-      <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>xAppGen：arXiv:2603.18604v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2603.18604v2 Announce Type: replace-cross Abstract: Traditional RAN systems are closed and monolithic, stifling innovation. The openness and programmability enabled by Open Radio Access Network...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
       <category>论文研究</category>
     </item>
   </channel>
