@@ -5,28 +5,29 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>信号评分较高的一批 AI/科技情报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 20 Nov 2026 22:30:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 03:48:21 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-hot.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>研究人员在AI供应链中植入200万份“金丝雀”数据，隐私灾难浮出水面</title>
-      <link>https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate</link>
-      <guid isPermaLink="true">https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate</guid>
-      <pubDate>Fri, 20 Nov 2026 20:59:08 +0000</pubDate>
-      <description>研究人员在AI供应链中植入200万份“金...：通过使用带有可追踪唯一密钥的提示词测试证明，数据并非始终保持私密，适合作为今日 AI/科技情报流里的重点线索。
+      <title>大型语言模型在学术研究中的协同使用</title>
+      <link>https://arxiv.org/abs/2611.25502</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.25502</guid>
+      <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
+      <description>大型语言模型在学术研究中的协同使用：arXiv:2611.25502v1 Announce Type: new Abstract: This study...，适合判断技术路线和后续产品化可能性。
 
-通过使用带有可追踪唯一密钥的提示词测试证明，数据并非始终保持私密。
+arXiv:2611.25502v1 Announce Type: new Abstract: This study proposes a methodological framework for the coordinated use of multiple large language models in academic research. Its central argument is...
 
-信号等级 B · 评分 65.0</description>
+信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
+      <category>论文研究</category>
     </item>
     <item>
-      <title>SailSearch:组合优化中的智能体辅助发现</title>
-      <link>https://arxiv.org/abs/2611.25087</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.25087</guid>
+      <title>无反馈自我进化如何重塑智能体技能:一项系统性研究</title>
+      <link>https://arxiv.org/abs/2611.25534</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.25534</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>SailSearch：arXiv:2611.25087v1 Announce Type: new Abstract: We present...，适合关注自动化任务和多 Agent 协作演进。
+      <description>无反馈自我进化如何重塑智能体技能：arXiv:2611.25534v1 Announce Type: new Abstract: Agent skil...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2611.25087v1 Announce Type: new Abstract: We present SailSearch, a human-guided workflow for algorithmic research with two language-model agents, and report results on Market Split and maximum...
+arXiv:2611.25534v1 Announce Type: new Abstract: Agent skills are documents in which experts write down procedural knowledge, and models increasingly maintain them by rewriting them without feedback....
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
@@ -34,18 +35,32 @@ arXiv:2611.25087v1 Announce Type: new Abstract: We present SailSearch, a human-g
       <category>论文研究</category>
     </item>
     <item>
-      <title>Pro$^2$ Agent:用于自主AI研发的科研问题探测智能体</title>
-      <link>https://arxiv.org/abs/2611.25357</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.25357</guid>
+      <title>用于3D世界审计的高效多模态智能体</title>
+      <link>https://arxiv.org/abs/2611.25543</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.25543</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Pro$^2$ Agent：arXiv:2611.25357v1 Announce Type: new Abstract: Large lang...，适合关注自动化任务和多 Agent 协作演进。
+      <description>用于3D世界审计的高效多模态智能体：arXiv:2611.25543v1 Announce Type: new Abstract: Multimodal...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.25357v1 Announce Type: new Abstract: Large language model (LLM) agents can now autonomously conduct AI research by writing code and running experiments. They typically do so by iteratively...
+arXiv:2611.25543v1 Announce Type: new Abstract: Multimodal agents can now build interactive 3D worlds and games, yet these worlds, like those built by people, often contain glitches such as floating...
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
-      <category>智能体</category>
       <category>论文研究</category>
+      <category>多模态</category>
+    </item>
+    <item>
+      <title>众里寻“问”:通过占位符增强混排的差分隐私 LLM 推理方法</title>
+      <link>https://arxiv.org/abs/2611.25669</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.25669</guid>
+      <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
+      <description>众里寻“问”：arXiv:2611.25669v1 Announce Type: new Abstract: Large lang...，适合判断技术路线和后续产品化可能性。
+
+arXiv:2611.25669v1 Announce Type: new Abstract: Large language models are increasingly deployed as LLM-as-a-Service (LLMaaS), where user queries are sent to remote LLMs for inference, raising severe...
+
+信号等级 B · 评分 62.5</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>单一调度方案并非万能:扩散语言模型的自适应推理调度</title>
@@ -453,11 +468,11 @@ arXiv:2611.25955v1 Announce Type: cross Abstract: AI platforms are becoming a ma
       <category>论文研究</category>
     </item>
     <item>
-      <title>Multi-View Transformer with Geometry-Guided Multi-Modal ControlNet for 3D Virtual Try-On</title>
+      <title>用于3D虚拟试穿的具备几何引导多模态ControlNet的多视角变换器</title>
       <link>https://arxiv.org/abs/2611.25979</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25979</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Multi-View Transform...：arXiv:2611.25979v1 Announce Type: cross Abstract: Editing...，适合判断技术路线和后续产品化可能性。
+      <description>用于3D虚拟试穿的具备几何引导多模态Co...：arXiv:2611.25979v1 Announce Type: cross Abstract: Editing...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.25979v1 Announce Type: cross Abstract: Editing a 3D Gaussian Splatting (3DGS) capture of a person so that they wear a new garment requires every rendered view to agree on the same garment...
 
@@ -466,11 +481,11 @@ arXiv:2611.25979v1 Announce Type: cross Abstract: Editing a 3D Gaussian Splattin
       <category>论文研究</category>
     </item>
     <item>
-      <title>Law at the Speed of AI: Critical Legal Infrastructure for the Machine Age: Autonomy Under Law Architecture (AULA)</title>
+      <title>以人工智能速度运行的法律:机器时代的关键法律基础设施——“法律下的自主性架构”(AULA)</title>
       <link>https://arxiv.org/abs/2611.25985</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.25985</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Law at the Speed of...：arXiv:2611.25985v1 Announce Type: cross Abstract: The glob...，适合关注自动化任务和多 Agent 协作演进。
+      <description>以人工智能速度运行的法律：arXiv:2611.25985v1 Announce Type: cross Abstract: The glob...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2611.25985v1 Announce Type: cross Abstract: The global deployment of autonomous AI agents within and across organisations exceeds the governance infrastructure available to constrain it. Agent...
 
@@ -480,11 +495,11 @@ arXiv:2611.25985v1 Announce Type: cross Abstract: The global deployment of auton
       <category>论文研究</category>
     </item>
     <item>
-      <title>The Stability Gap in Continual Reinforcement Learning</title>
+      <title>持续强化学习中的稳定性差距</title>
       <link>https://arxiv.org/abs/2611.26252</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.26252</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>The Stability Gap in...：arXiv:2611.26252v1 Announce Type: cross Abstract: Continua...，适合判断技术路线和后续产品化可能性。
+      <description>持续强化学习中的稳定性差距：arXiv:2611.26252v1 Announce Type: cross Abstract: Continua...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.26252v1 Announce Type: cross Abstract: Continual reinforcement learning (CRL) aims to enable agents to adapt to changing tasks while preserving previously acquired capabilities. Evaluation...
 
@@ -493,7 +508,7 @@ arXiv:2611.26252v1 Announce Type: cross Abstract: Continual reinforcement learni
       <category>论文研究</category>
     </item>
     <item>
-      <title>SkillBridge: Cost-Aware Diagnosis and Repair of Cross-OS Compatibility Defects in Agent Skills</title>
+      <title>SkillBridge:面向智能体技能中跨操作系统兼容性缺陷的成本感知诊断与修复</title>
       <link>https://arxiv.org/abs/2611.26256</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.26256</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
@@ -507,11 +522,11 @@ arXiv:2611.26256v1 Announce Type: cross Abstract: LLM agents increasingly reuse 
       <category>论文研究</category>
     </item>
     <item>
-      <title>One Framework to Diagnose Them All: A Stratified Benchmark for Bengali LLM Hallucination</title>
+      <title>一框架诊断所有问题:孟加拉语LLM幻觉的分层基准测试</title>
       <link>https://arxiv.org/abs/2611.26336</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.26336</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>One Framework to Dia...：arXiv:2611.26336v1 Announce Type: cross Abstract: Hallucin...，适合判断技术路线和后续产品化可能性。
+      <description>一框架诊断所有问题：arXiv:2611.26336v1 Announce Type: cross Abstract: Hallucin...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.26336v1 Announce Type: cross Abstract: Hallucination research in low-resource languages fragments easily: each newly named failure mode prompts its own dataset, spending scarce annotators...
 
@@ -520,11 +535,11 @@ arXiv:2611.26336v1 Announce Type: cross Abstract: Hallucination research in low-
       <category>论文研究</category>
     </item>
     <item>
-      <title>Democratizing Cross-Project Knowledge for Transforming Water Governance and Climate Resilience: an Agentic AI Ecosystem</title>
+      <title>赋能水治理与气候韧性变革的跨项目知识普惠化:一个智能体AI生态系统</title>
       <link>https://arxiv.org/abs/2611.26398</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.26398</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Democratizing Cross-...：arXiv:2611.26398v1 Announce Type: cross Abstract: EU-funde...，适合关注自动化任务和多 Agent 协作演进。
+      <description>赋能水治理与气候韧性变革的跨项目知识普惠...：arXiv:2611.26398v1 Announce Type: cross Abstract: EU-funde...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2611.26398v1 Announce Type: cross Abstract: EU-funded projects produce extensive evidence in the form of deliverables, reports, and case studies. However, this knowledge is typically scattered...
 
@@ -534,7 +549,7 @@ arXiv:2611.26398v1 Announce Type: cross Abstract: EU-funded projects produce ext
       <category>论文研究</category>
     </item>
     <item>
-      <title>Asuka-FM: A System-Architectural Co-Design Framework for Efficient Text-to-Image Pretraining on Consumer Hardware</title>
+      <title>Asuka-FM:面向消费级硬件高效文本到图像预训练的系统架构协同设计框架</title>
       <link>https://arxiv.org/abs/2611.26437</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.26437</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
@@ -548,11 +563,11 @@ arXiv:2611.26437v1 Announce Type: cross Abstract: Frontier text-to-image (T2I) f
       <category>多模态</category>
     </item>
     <item>
-      <title>Backtracking Agent Applications Security Incidents</title>
+      <title>追踪智能体应用中的安全事件</title>
       <link>https://arxiv.org/abs/2611.26525</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.26525</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Backtracking Agent A...：arXiv:2611.26525v1 Announce Type: cross Abstract: Agent ap...，适合关注自动化任务和多 Agent 协作演进。
+      <description>追踪智能体应用中的安全事件：arXiv:2611.26525v1 Announce Type: cross Abstract: Agent ap...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2611.26525v1 Announce Type: cross Abstract: Agent applications are increasingly deployed, yet agent-specific attacks pose real threats to them. Upon a security incident, organizations backtrack...
 
@@ -562,11 +577,11 @@ arXiv:2611.26525v1 Announce Type: cross Abstract: Agent applications are increas
       <category>论文研究</category>
     </item>
     <item>
-      <title>Cost-Aware Agentic Feature Optimization System for Fleet-Scale Ranking Models</title>
+      <title>面向车队级排序模型的成本感知智能体特征优化系统</title>
       <link>https://arxiv.org/abs/2611.26531</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.26531</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Cost-Aware Agentic F...：arXiv:2611.26531v1 Announce Type: cross Abstract: Large We...，适合关注自动化任务和多 Agent 协作演进。
+      <description>面向车队级排序模型的成本感知智能体特征优...：arXiv:2611.26531v1 Announce Type: cross Abstract: Large We...，适合关注自动化任务和多 Agent 协作演进。
 
 arXiv:2611.26531v1 Announce Type: cross Abstract: Large Web platforms operate large fleets of ranking models, each selecting features from a shared pool of tens of thousands. We present an end-to-end...
 
@@ -576,11 +591,11 @@ arXiv:2611.26531v1 Announce Type: cross Abstract: Large Web platforms operate la
       <category>论文研究</category>
     </item>
     <item>
-      <title>AI-Assisted Hypothesis Generation for Hospital Quality Improvement</title>
+      <title>人工智能辅助假设生成，助力医院质量提升</title>
       <link>https://arxiv.org/abs/2604.20055</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2604.20055</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>AI-Assisted Hypothes...：arXiv:2604.20055v2 Announce Type: replace Abstract: Hospit...，适合判断技术路线和后续产品化可能性。
+      <description>人工智能辅助假设生成：arXiv:2604.20055v2 Announce Type: replace Abstract: Hospit...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2604.20055v2 Announce Type: replace Abstract: Hospital quality improvement (QI) programs generally proceed in two stages: (1) hypothesis generation, which identifies candidate factors that may...
 
@@ -589,7 +604,7 @@ arXiv:2604.20055v2 Announce Type: replace Abstract: Hospital quality improvement
       <category>论文研究</category>
     </item>
     <item>
-      <title>DeepEdu-F: A Framework for Efficient and Scalable Agentic LLMs in Vietnamese Education</title>
+      <title>DeepEdu-F:适用于越南教育领域的高效可扩展智能体LLM框架</title>
       <link>https://arxiv.org/abs/2609.31568</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2609.31568</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
@@ -603,11 +618,11 @@ arXiv:2609.31568v2 Announce Type: replace Abstract: Cloud AI assistants send stu
       <category>论文研究</category>
     </item>
     <item>
-      <title>Noise Steering: Exploiting Wake Steering and Acoustic Directivity for Noise-Constrained Wind Farm Control via Reinforcement Learning</title>
+      <title>噪声引导:通过强化学习利用唤醒引导与声学指向性实现噪声约束下的风电场控制</title>
       <link>https://arxiv.org/abs/2610.36888</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2610.36888</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Noise Steering：arXiv:2610.36888v3 Announce Type: replace Abstract: Existi...，适合判断技术路线和后续产品化可能性。
+      <description>噪声引导：arXiv:2610.36888v3 Announce Type: replace Abstract: Existi...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2610.36888v3 Announce Type: replace Abstract: Existing noise mitigation strategies for wind farms usually consist in reducing turbines power output, without accounting for the wake interactions...
 
@@ -616,11 +631,11 @@ arXiv:2610.36888v3 Announce Type: replace Abstract: Existing noise mitigation st
       <category>论文研究</category>
     </item>
     <item>
-      <title>An Augmented Lagrangian Approach to Lifted Bellman Linear Programming</title>
+      <title>一种用于提升型贝尔曼线性规划的增广拉格朗日方法</title>
       <link>https://arxiv.org/abs/2611.14183</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.14183</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>An Augmented Lagrang...：arXiv:2611.14183v2 Announce Type: replace Abstract: Tempor...，适合判断技术路线和后续产品化可能性。
+      <description>一种用于提升型贝尔曼线性规划的增广拉格朗...：arXiv:2611.14183v2 Announce Type: replace Abstract: Tempor...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2611.14183v2 Announce Type: replace Abstract: Temporal-difference critics regress onto a bootstrapped target and usually need a target network. Lifted Bellman Linear Programming (LBLP) instead...
 
@@ -629,11 +644,11 @@ arXiv:2611.14183v2 Announce Type: replace Abstract: Temporal-difference critics 
       <category>论文研究</category>
     </item>
     <item>
-      <title>LLM-Based Threat Detection and Prevention Framework for IoT Ecosystems</title>
+      <title>基于 LLM 的物联网生态系统威胁检测与预防框架</title>
       <link>https://arxiv.org/abs/2505.00240</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2505.00240</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>LLM-Based Threat Det...：arXiv:2505.00240v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+      <description>基于 LLM 的物联网生态系统威胁检测与...：arXiv:2505.00240v3 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2505.00240v3 Announce Type: replace-cross Abstract: The rapid expansion of the Internet of Things (IoT) has introduced complex and evolving cybersecurity challenges. This paper presents a Large...
 
@@ -642,11 +657,11 @@ arXiv:2505.00240v3 Announce Type: replace-cross Abstract: The rapid expansion of
       <category>论文研究</category>
     </item>
     <item>
-      <title>A Quasi-experimental Study of Conversational AI-supported Engagement in Large CS Courses</title>
+      <title>关于对话式 AI 支持大型 CS 课程学员参与度的准实验研究</title>
       <link>https://arxiv.org/abs/2506.18941</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2506.18941</guid>
       <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>A Quasi-experimental...：arXiv:2506.18941v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
+      <description>关于对话式 AI 支持大型 CS 课程学...：arXiv:2506.18941v2 Announce Type: replace-cross Abstract:...，适合判断技术路线和后续产品化可能性。
 
 arXiv:2506.18941v2 Announce Type: replace-cross Abstract: Lucrative career prospects and creative opportunities often attract students to enroll in computer science courses, resulting in large class...
 
@@ -665,20 +680,6 @@ arXiv:2512.23889v3 Announce Type: replace-cross Abstract: Large language models 
 
 信号等级 B · 评分 62.5</description>
       <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL</title>
-      <link>https://arxiv.org/abs/2602.04417</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2602.04417</guid>
-      <pubDate>Fri, 20 Nov 2026 05:00:00 +0000</pubDate>
-      <description>EMA Policy Gradient：arXiv:2602.04417v2 Announce Type: replace-cross Abstract:...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2602.04417v2 Announce Type: replace-cross Abstract: Reinforcement Learning (RL) has enabled Large Language Models (LLMs) to acquire increasingly complex reasoning and agentic behaviors. In this...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
       <category>论文研究</category>
     </item>
   </channel>
