@@ -2,10 +2,10 @@
 
 > 24 小时 AI/科技情报雷达 — 多源聚合、智能评分、趋势检测。
 
-本站每小时自动更新，聚合 15 个信源 / 77 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
+本站每小时自动更新，聚合 15 个信源 / 93 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
 
-最后更新：2026-11-25T03:30:17.980881+00:00
-当前窗口内容数：890 条；累计去重归档：16588 条。
+最后更新：2026-11-25T13:56:48.946109+00:00
+当前窗口内容数：720 条；累计去重归档：17423 条。
 
 ## 数据出口
 
@@ -59,16 +59,16 @@
 
 当前热度榜（前 10）：
 
-1. [GPT-6 模型展现出内在的蛋白质设计能力（模型发布 · MCP/工具）](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities) — 热度 64.9，9 个独立来源，趋势 up
-2. [Anthropic 股价跌破 IPO 发行价，AI 初创企业前景堪忧（行业动态 · 模型发布）](https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups) — 热度 60.9，8 个独立来源，趋势 down
-3. [Tidal 将封禁并移除数百万首 AI 生成歌曲，以应对 AI 劣质音乐对音乐流媒体平台的冲击（Tidal 宣布 12 月 9 日起封禁 AI 生成音乐，年底预计下架超 290）](https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming) — 热度 57.4，7 个独立来源，趋势 up
-4. [矩阵乘法的时间复杂度为 Θ(n2.25) [pdf]（开源）](https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf) — 热度 48.4，5 个独立来源，趋势 new
-5. [Anthropic 搭建 Siren 蜜罐诱测 AI 越狱：新 Claude 仍有 21%~32% 沙盒场景试图逃逸（模型发布 · 安全对齐）](https://www.aibase.com/zh/news/32508) — 热度 44.8，5 个独立来源，趋势 up
-6. [黎曼猜想到底是怎么回事？（模型发布 · 行业动态）](https://arstechnica.com/ai/2026/11/whats-going-on-with-the-riemann-hypothesis) — 热度 40.3，5 个独立来源，趋势 up
-7. [Claude 生成的应用可以「装」进桌面了：Artifacts 推出 Install as app，一句话写的工具变成独立软件（模型发布 · MCP/工具）](https://www.aibase.com/zh/news/32507) — 热度 37.3，4 个独立来源，趋势 up
-8. [即便处于沙箱环境中，模型仍可通过推理服务器进行通信（模型发布 · MCP/工具）](https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being) — 热度 37.2，5 个独立来源，趋势 up
-9. [Maple 融资 530 万美元，旨在打造能保护用户数据(甚至防范自身)的 AI 产品（行业动态 · 智能体）](https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself) — 热度 36.7，4 个独立来源，趋势 up
-10. [GPT 6.2 Astra 解开了历史之谜（模型发布 · 论文研究）](https://simonwillison.net/2026/Nov/24/astra-historical-mystery) — 热度 36.0，4 个独立来源，趋势 up
+1. [AGL-SKILL:将编码工具集作为智能体优化器（多模态 · 行业动态）](https://arxiv.org/abs/2611.31794) — 热度 35.0，4 个独立来源，趋势 up
+2. [人工智能可以进行计算。理论物理学家正在研究接下来会发生什么。（论文研究）](https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next) — 热度 28.5，3 个独立来源，趋势 new
+3. [泡沫破裂（美联储正在为AI资本泡沫破裂的可能做准备）](https://paulkrugman.substack.com/p/pop-goes-the-bubble) — 热度 24.1，3 个独立来源，趋势 up
+4. [谷歌为 Gemini 新增独立隐私开关：保留聊天记录的同时，可选择退出 AI 训练（模型发布）](https://www.aibase.com/zh/news/32532) — 热度 20.0，2 个独立来源，趋势 new
+5. [蚂蚁发布医疗AI安全防护模型LingSante MedGuard，开放风险评测数据集（安全对齐 · 开源）](https://www.aibase.com/news/32523) — 热度 20.0，2 个独立来源，趋势 new
+6. [Canva MCP（MCP/工具）](https://www.producthunt.com/products/canva) — 热度 20.0，2 个独立来源，趋势 new
+7. [腾讯混元开源 Hy4 flash GGUF 量化权重：224B 大模型塞进 64GB Mac mini，分数几乎没掉（开源 · 模型发布）](https://www.aibase.com/zh/news/32527) — 热度 20.0，2 个独立来源，趋势 new
+8. [亚马逊开源 5 款 Decider v2 决策模型，长程推理准确率飙升，重塑智能体决策基座（开源 · 智能体）](https://www.aibase.com/zh/news/32524) — 热度 20.0，2 个独立来源，趋势 new
+9. [PrismML 发布三值压缩 Bonsai 2.5 27B：九分之一体积保留 93.7% 编程能力（编码工具）](https://www.aibase.com/zh/news/32522) — 热度 20.0，2 个独立来源，趋势 new
+10. [App+1｜Yab：开源、AI 友好的双内核浏览器，给舍不得 Arc 的你（开源）](https://sspai.com/post/119310) — 热度 20.0，2 个独立来源，趋势 new
 
 ## 引用要求
 
