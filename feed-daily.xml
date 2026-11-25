@@ -5,69 +5,158 @@
     <link>https://news.my-tv.eu.cc</link>
     <description>每天一期：近 24 小时内信号等级 B 及以上的内容。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 24 Nov 2026 19:59:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 03:30:17 +0000</lastBuildDate>
     <atom:link href="https://news.my-tv.eu.cc/feed-daily.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>如何使用 Hugging Face Diffusers 在本地 AI 设备上运行 NVIDIA Cosmos 3</title>
-      <link>https://developer.nvidia.com/blog/how-to-run-nvidia-cosmos-3-on-local-ai-devices-using-hugging-face-diffusers</link>
-      <guid isPermaLink="true">https://developer.nvidia.com/blog/how-to-run-nvidia-cosmos-3-on-local-ai-devices-using-hugging-face-diffusers</guid>
-      <pubDate>Tue, 24 Nov 2026 18:44:05 +0000</pubDate>
-      <description>Hugging Face、NVIDIA：NVIDIA Cosmos 3 Nano 是一个世界...，适合进一步验证代码、协议或社区采用情况。
+      <title>矩阵乘法的时间复杂度为 Θ(n2.25) [pdf]</title>
+      <link>https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf</link>
+      <guid isPermaLink="true">https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf</guid>
+      <pubDate>Wed, 25 Nov 2026 02:45:04 +0000</pubDate>
+      <description>矩阵乘法的时间复杂度为 Θ(n2.25)...：Matrix Multiplication is Θ(n2.25) [pdf]，适合进一步验证代码、协议或社区采用情况。
 
-当模型权重和中间数据超出可用 GPU 内存时，在本地运行视频生成模型可能会具有挑战性。 NVIDIA Cosmos 3 Nano 是一个世界...
+Matrix Multiplication is Θ(n2.25) [pdf]
+
+信号等级 B · 评分 51.5</description>
+      <category>Buzzing</category>
+      <category>开源</category>
+    </item>
+    <item>
+      <title>GPT 6.2 Astra 解开了历史之谜</title>
+      <link>https://simonwillison.net/2026/Nov/24/astra-historical-mystery</link>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/24/astra-historical-mystery</guid>
+      <pubDate>Wed, 25 Nov 2026 01:08:57 +0000</pubDate>
+      <description>GPT 6.2 Astra Solves a Historical Mystery，同时进入热榜视野，适合优先评估模型能力、价格和工具选型变化。
+
+GPT 6.2 Astra Solves a Historical Mystery
+
+信号等级 B · 评分 57.8</description>
+      <category>Buzzing</category>
+      <category>模型发布</category>
+    </item>
+    <item>
+      <title>耶鲁大学的 Sonnenfeld:英伟达是美国工业实力的“损害者”，而非“捍卫者”</title>
+      <link>https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion</guid>
+      <pubDate>Wed, 25 Nov 2026 00:12:02 +0000</pubDate>
+      <description>英伟达：耶鲁大学的杰弗里·索南菲尔德 (Jeffrey Sonnenfeld) 警告说，周一市场欢呼雀跃的黄仁勋在白宫支持下...，适合作为今日 AI/科技情报流里的重点线索。
+
+耶鲁大学的杰弗里·索南菲尔德 (Jeffrey Sonnenfeld) 警告说，周一市场欢呼雀跃的黄仁勋在白宫支持下重新担任英伟达首席执行官和董事会成员，可能会被证明是一个巨大的错误，让董事们面临……
 
 信号等级 B · 评分 54.0</description>
       <category>Official AI Updates</category>
-      <category>开源</category>
-      <category>多模态</category>
+    </item>
+    <item>
+      <title>十二个月内，LLM 的三大转折点</title>
+      <link>https://simonwillison.net/2026/Nov/24/llm-inflection-points</link>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/24/llm-inflection-points</guid>
+      <pubDate>Tue, 24 Nov 2026 23:02:07 +0000</pubDate>
+      <description>十二个月内：我上周在AI工程师代码峰会上做了主题演讲，核心观点是大型语言模型和编码代理能力的三个关键转折点...，适合判断 AI 编程工作流会不会被改写。
+
+我上周在AI工程师代码峰会上做了主题演讲，核心观点是大型语言模型和编码代理能力的三个关键转折点...
+
+信号等级 B · 评分 60.0</description>
+      <category>Official AI Updates</category>
+      <category>编码工具</category>
+    </item>
+    <item>
+      <title>黄仁轩仍认为继任计划会制造不必要的层级结构</title>
+      <link>https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy</guid>
+      <pubDate>Tue, 24 Nov 2026 22:27:52 +0000</pubDate>
+      <description>黄仁轩仍认为继任计划会制造不必要的层级结...：对于一家在过去两周里寻找创始人不在的情况下会发生什么的公司来说，这是一个了不起的立场，适合作为今日 AI/科技情报流里的重点线索。
+
+对于一家在过去两周里寻找创始人不在的情况下会发生什么的公司来说，这是一个了不起的立场。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>Jensen Huang 在全体员工会议上感谢白宫，并透露自己正在接受心理治疗</title>
+      <link>https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy</guid>
+      <pubDate>Tue, 24 Nov 2026 21:48:27 +0000</pubDate>
+      <description>Jensen Huang 在全体员工会议...：这位英伟达创始人周二向他的员工道歉，并表示他很感激能有第二次领导公司的机会，适合作为今日 AI/科技情报流里的重点线索。
+
+这位英伟达创始人周二向他的员工道歉，并表示他很感激能有第二次领导公司的机会。
+
+信号等级 B · 评分 54.0</description>
+      <category>Official AI Updates</category>
+    </item>
+    <item>
+      <title>即便是顶尖的 AI 智能体，在面对日常生活时也会力不从心</title>
+      <link>https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life</guid>
+      <pubDate>Tue, 24 Nov 2026 21:33:29 +0000</pubDate>
+      <description>即便是顶尖的 AI 智能体：最新基准测试显示，尽管数百万用户拥抱个人AI助手，但即便最先进的模型也难以可靠、安全地完成日常任务，且可能引入新风险，适合判断技术路线和后续产品化可能性。
+
+最新基准测试显示，尽管数百万用户拥抱个人AI助手，但即便最先进的模型也难以可靠、安全地完成日常任务，且可能引入新风险。
+
+信号等级 B · 评分 62.2</description>
+      <category>Official AI Updates</category>
+      <category>论文研究</category>
+    </item>
+    <item>
+      <title>沃尔玛携手 Meta，通过 AI 助手 Muse 推出“黑色星期五”促销活动</title>
+      <link>https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse</guid>
+      <pubDate>Tue, 24 Nov 2026 21:32:38 +0000</pubDate>
+      <description>沃尔玛现在允许客户通过 Meta 的人工智能代理 Muse 购买黑色星期五优惠，来自官方更新源，适合直接判断产品变化。
+
+沃尔玛现在允许客户通过 Meta 的人工智能代理 Muse 购买黑色星期五优惠。
+
+信号等级 B · 评分 56.0</description>
+      <category>Official AI Updates</category>
+      <category>智能体</category>
+    </item>
+    <item>
+      <title>Maple 融资 530 万美元，旨在打造能保护用户数据(甚至防范自身)的 AI 产品</title>
+      <link>https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself</guid>
+      <pubDate>Tue, 24 Nov 2026 21:19:52 +0000</pubDate>
+      <description>Maple 融资 530 万美元：这家初创公司的加密AI架构旨在确保连公司自身也无法访问用户的私人数据，适合判断资金、客户和生态格局的变化。
+
+这家初创公司的加密AI架构旨在确保连公司自身也无法访问用户的私人数据。
+
+信号等级 B · 评分 61.0</description>
+      <category>Official AI Updates</category>
+      <category>行业动态</category>
+    </item>
+    <item>
+      <title>ExecuTorch-TensorRT:以NVIDIA TensorRT速度运行PyTorch机器人策略</title>
+      <link>https://pytorch.org/blog/executorch-tensorrt-pytorch-robot-policies-at-nvidia-tensorrt-speed</link>
+      <guid isPermaLink="true">https://pytorch.org/blog/executorch-tensorrt-pytorch-robot-policies-at-nvidia-tensorrt-speed</guid>
+      <pubDate>Tue, 24 Nov 2026 20:31:02 +0000</pubDate>
+      <description>NVIDIA：TL，适合观察推理部署成本和落地门槛变化。
+
+TL;DR 使用 Torch-TensorRT 2.15 和 ExecuTorch 1.6，您可以使用 TensorRT 编译 PyTorch 模型，将其另存为 ExecuTorch 程序，然后从 C++ 或 Python 运行它，而无需加载...帖子...
+
+信号等级 B · 评分 56.2</description>
+      <category>Official AI Updates</category>
+      <category>部署推理</category>
     </item>
     <item>
       <title>Anthropic 股价跌破 IPO 发行价，AI 初创企业前景堪忧</title>
       <link>https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups</guid>
       <pubDate>Tue, 24 Nov 2026 18:30:42 +0000</pubDate>
-      <description>Anthropic IPO后股价下跌可能给AI初创公司估值带来压力，来自官方更新源，适合直接判断产品变化。
+      <description>Anthropic 首次公开募股后的暴跌可能会给人工智能初创公司的估值带来压力，来自官方更新源，适合直接判断产品变化。
 
-Anthropic IPO后股价下跌可能给AI初创公司估值带来压力。
+Anthropic 首次公开募股后的暴跌可能会给人工智能初创公司的估值带来压力。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
-    </item>
-    <item>
-      <title>大卫·芬奇因被疑在其最新电影中使用人工智能而备受争议</title>
-      <link>https://www.theverge.com/entertainment/1041417/david-fincher-netflix-cliff-booth-ai-interpositive</link>
-      <guid isPermaLink="true">https://www.theverge.com/entertainment/1041417/david-fincher-netflix-cliff-booth-ai-interpositive</guid>
-      <pubDate>Tue, 24 Nov 2026 18:15:00 +0000</pubDate>
-      <description>大卫·芬奇因被疑在其最新电影中使用人工智...：由布拉德·皮特主演的《好莱坞往事》续作《Cliff Booth的进一步冒险》在早前试映中引发了争议，令大卫·芬奇的粉...，适合作为今日 AI/科技情报流里的重点线索。
-
-由布拉德·皮特主演的《好莱坞往事》续作《Cliff Booth的进一步冒险》在早前试映中引发了争议，令大卫·芬奇的粉丝们感到失望。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
     </item>
     <item>
       <title>英国警告称，由人工智能驱动的网络攻击正暴露出多年来薄弱的网络安全问题</title>
       <link>https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security</guid>
       <pubDate>Tue, 24 Nov 2026 18:02:59 +0000</pubDate>
-      <description>英国警告称：英国网络机构表示，随着AI黑客工具利用简单的安全漏洞，“打下坚实基础从未如此重要”，适合作为今日 AI/科技情报流里的重点线索。
+      <description>英国警告称：英国网络安全机构警告称，随着AI黑客工具利用简单的安全漏洞，“加固基础设施从未如此关键”，适合作为今日 AI/科技情报流里的重点线索。
 
-英国网络机构表示，随着AI黑客工具利用简单的安全漏洞，“打下坚实基础从未如此重要”。
+英国网络安全机构警告称，随着AI黑客工具利用简单的安全漏洞，“加固基础设施从未如此关键”。
 
-信号等级 B · 评分 60.0</description>
-      <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>Tidal 下月起将开始禁止 AI 生成音乐</title>
-      <link>https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban</link>
-      <guid isPermaLink="true">https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban</guid>
-      <pubDate>Tue, 24 Nov 2026 17:17:09 +0000</pubDate>
-      <description>Tidal 下月起将开始禁止 AI 生成...：由于这一变化，Tidal 将删除约 2900 万首人工智能生成的歌曲，并拒绝估计每首歌曲 80,000 至 85,0...，适合作为今日 AI/科技情报流里的重点线索。
-
-Tidal 将于 12 月 9 日正式禁止人工智能生成的音乐。由于这一变化，Tidal 将删除约 2900 万首人工智能生成的歌曲，并拒绝估计每首歌曲 80,000 至 85,000 首……
-
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -75,11 +164,11 @@ Tidal 将于 12 月 9 日正式禁止人工智能生成的音乐。由于这一�
       <link>https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms</guid>
       <pubDate>Tue, 24 Nov 2026 17:00:00 +0000</pubDate>
-      <description>Meta：新集成让用户无需在Instagram与Muse应用间切换，即可直接与AI代理交互，适合关注自动化任务和多 Agent 协作演进。
+      <description>Meta：新集成让用户无需在Instagram与Muse应用间切换，即可与AI智能体互动，适合关注自动化任务和多 Agent 协作演进。
 
-新集成让用户无需在Instagram与Muse应用间切换，即可直接与AI代理交互。
+新集成让用户无需在Instagram与Muse应用间切换，即可与AI智能体互动。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>智能体</category>
     </item>
@@ -88,25 +177,12 @@ Tidal 将于 12 月 9 日正式禁止人工智能生成的音乐。由于这一�
       <link>https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming</guid>
       <pubDate>Tue, 24 Nov 2026 16:46:00 +0000</pubDate>
-      <description>Tidal 将封禁并移除数百万首 AI...：该公司表示，仍会接受人工智能辅助制作但未完全生成的歌曲，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Tidal 将封禁并移除数百万首 AI...：该公司表示，将继续接受使用AI辅助创作的歌曲，但拒绝全由AI生成的作品，适合作为今日 AI/科技情报流里的重点线索。
 
-该公司表示，仍会接受人工智能辅助制作但未完全生成的歌曲。
+该公司表示，将继续接受使用AI辅助创作的歌曲，但拒绝全由AI生成的作品。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
-    </item>
-    <item>
-      <title>GitHub.com 上的通知将更加可预测</title>
-      <link>https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com</guid>
-      <pubDate>Tue, 24 Nov 2026 16:40:59 +0000</pubDate>
-      <description>从2026年12月1日起，GitHub.com将在一周内迁移通知功能，旨在使订阅更加可预测，修复异常行为，并支持不断...，来自官方更新源，适合直接判断产品变化。
-
-从2026年12月1日起，GitHub.com将在一周内迁移通知功能，旨在使订阅更加可预测，修复异常行为，并支持不断增长的用户需求。
-
-信号等级 B · 评分 54.0</description>
-      <category>Official AI Updates</category>
-      <category>开源</category>
     </item>
     <item>
       <title>Microduck 避障:基于 Isaac Lab 和 Newton 的 Sim2Real 工作流程</title>
@@ -115,7 +191,7 @@ Tidal 将于 12 月 9 日正式禁止人工智能生成的音乐。由于这一�
       <pubDate>Tue, 24 Nov 2026 16:34:13 +0000</pubDate>
       <description>Microduck 避障：基于 Isaac Lab 和 Newton 的 Sim2Real 工作流程，适合进一步验证代码、协议或社区采用情况。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>开源</category>
     </item>
@@ -124,11 +200,11 @@ Tidal 将于 12 月 9 日正式禁止人工智能生成的音乐。由于这一�
       <link>https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes</link>
       <guid isPermaLink="true">https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes</guid>
       <pubDate>Tue, 24 Nov 2026 16:30:00 +0000</pubDate>
-      <description>黄仁勋式深度伪造成最新AI垃圾内容热点：Jensen Huang在伊比萨狂欢，他在Instagram上一段近600万次观看的视频中，身穿标志性西装在拥挤夜店...，适合关注内容生产和交互形态的新变化。
+      <description>黄仁勋式深度伪造成最新AI垃圾内容热点：在 Instagram 上一段观看次数近 600 万次的视频中，英伟达前首席执行官在拥挤的俱乐部里跳舞，手里拿着香槟...，适合关注内容生产和交互形态的新变化。
 
-Jensen Huang在伊比萨狂欢，他在Instagram上一段近600万次观看的视频中，身穿标志性西装在拥挤夜店中翩翩起舞，手持香槟尽情庆祝。
+黄仁勋正在伊维萨岛举办派对。在 Instagram 上一段观看次数近 600 万次的视频中，英伟达前首席执行官在拥挤的俱乐部里跳舞，手里拿着香槟酒杯，身上还穿着他的...
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>多模态</category>
     </item>
@@ -137,11 +213,11 @@ Jensen Huang在伊比萨狂欢，他在Instagram上一段近600万次观看的�
       <link>https://techcrunch.com/2026/11/24/why-a-crusoe-investor-is-betting-on-solar-and-batteries-to-power-future-ai-data-centers</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/11/24/why-a-crusoe-investor-is-betting-on-solar-and-batteries-to-power-future-ai-data-centers</guid>
       <pubDate>Tue, 24 Nov 2026 16:10:00 +0000</pubDate>
-      <description>为何一位 Crusoe 投资者押注太阳能...：下一代数据中心每年将需要数十吉瓦的电力，适合作为今日 AI/科技情报流里的重点线索。
+      <description>为何一位 Crusoe 投资者押注太阳能...：下一代数据中心每年将需要数十吉瓦电力，Crusoe投资者认为太阳能与储能是显而易见的最佳选择，适合作为今日 AI/科技情报流里的重点线索。
 
-下一代数据中心每年将需要数十吉瓦的电力。克鲁索的一位投资者认为太阳能和储能是显而易见的选择。
+下一代数据中心每年将需要数十吉瓦电力，Crusoe投资者认为太阳能与储能是显而易见的最佳选择。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -149,11 +225,11 @@ Jensen Huang在伊比萨狂欢，他在Instagram上一段近600万次观看的�
       <link>https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features</link>
       <guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features</guid>
       <pubDate>Tue, 24 Nov 2026 16:09:23 +0000</pubDate>
-      <description>《纽约时报》提醒摄影师不要因 AI 功能...：《纽约时报》要求自由摄影师不要使用最新版本的 Adob​​e Photoshop，因为 2027 年更新中的功能“以...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>《纽约时报》提醒摄影师不要因 AI 功能...：纽约时报要求自由摄影师勿使用最新版Adobe Photoshop，因其2027版更新中隐蔽的AI功能引发争议，适合作为今日 AI/科技情报流里的重点线索。
 
-《纽约时报》要求自由摄影师不要使用最新版本的 Adob​​e Photoshop，因为 2027 年更新中的功能“以用户可能不明显的方式”使用人工智能。在一个...
+纽约时报要求自由摄影师勿使用最新版Adobe Photoshop，因其2027版更新中隐蔽的AI功能引发争议。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -161,11 +237,11 @@ Jensen Huang在伊比萨狂欢，他在Instagram上一段近600万次观看的�
       <link>https://techcrunch.com/2026/11/24/pinterest-will-now-let-parents-limit-the-ai-generated-content-their-teens-see</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/11/24/pinterest-will-now-let-parents-limit-the-ai-generated-content-their-teens-see</guid>
       <pubDate>Tue, 24 Nov 2026 16:02:37 +0000</pubDate>
-      <description>Pinterest 现允许家长限制青少年...：Pinterest 正致力于解决 AI 生成内容充斥用户信息流的问题，这与其他社交平台侧重限制青少年使用 AI 聊天...，适合作为今日 AI/科技情报流里的重点线索。
+      <description>Pinterest 现允许家长限制青少年...：虽然其他社交平台一直专注于限制青少年使用人工智能聊天机器人，但 Pinterest 正在解决他们的动态中填充人工智能...，适合作为今日 AI/科技情报流里的重点线索。
 
-Pinterest 正致力于解决 AI 生成内容充斥用户信息流的问题，这与其他社交平台侧重限制青少年使用 AI 聊天机器人形成对比。
+虽然其他社交平台一直专注于限制青少年使用人工智能聊天机器人，但 Pinterest 正在解决他们的动态中填充人工智能内容的问题。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
     </item>
     <item>
@@ -173,11 +249,11 @@ Pinterest 正致力于解决 AI 生成内容充斥用户信息流的问题，这
       <link>https://blog.google/products-and-platforms/products/gemini/gemini-golden-state</link>
       <guid isPermaLink="true">https://blog.google/products-and-platforms/products/gemini/gemini-golden-state</guid>
       <pubDate>Tue, 24 Nov 2026 16:00:00 +0000</pubDate>
-      <description>Google Gemini 与金州勇士队、女子冰球队Valkyries及 Chase Center 达成合作，利用...，来自官方更新源，适合直接判断产品变化。
+      <description>Google Gemini 与金州勇士队达成合作，将为勇士队、女篮瓦尔基里队及大通中心的粉丝体验及商业运营提供 AI...，来自官方更新源，适合直接判断产品变化。
 
-Google Gemini 与金州勇士队、女子冰球队Valkyries及 Chase Center 达成合作，利用 AI 提升球迷体验与业务运营效率。
+Google Gemini 与金州勇士队达成合作，将为勇士队、女篮瓦尔基里队及大通中心的粉丝体验及商业运营提供 AI 技术支持。
 
-信号等级 B · 评分 60.2</description>
+信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>模型发布</category>
     </item>
@@ -186,35 +262,35 @@ Google Gemini 与金州勇士队、女子冰球队Valkyries及 Chase Center 达�
       <link>https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race</guid>
       <pubDate>Tue, 24 Nov 2026 15:51:07 +0000</pubDate>
-      <description>英伟达：亚马逊以约7.5亿美元收购Decart，旨在提升其Trainium芯片的效率，适合判断资金、客户和生态格局的变化。
+      <description>英伟达：亚马逊以约7.5亿美元收购Decart，旨在提升Trainium芯片的效率，适合判断资金、客户和生态格局的变化。
 
-亚马逊以约7.5亿美元收购Decart，旨在提升其Trainium芯片的效率。
+亚马逊以约7.5亿美元收购Decart，旨在提升Trainium芯片的效率。
 
-信号等级 B · 评分 60.0</description>
+信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
       <category>行业动态</category>
     </item>
     <item>
-      <title>通过AI现代化提升企业网络竞争力</title>
-      <link>https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization</guid>
-      <pubDate>Tue, 24 Nov 2026 15:15:16 +0000</pubDate>
-      <description>通过AI现代化提升企业网络竞争力：企业网络承受着巨大的压力，适合关注自动化任务和多 Agent 协作演进。
+      <title>GPT-6 模型展现出内在的蛋白质设计能力</title>
+      <link>https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities</link>
+      <guid isPermaLink="true">https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities</guid>
+      <pubDate>Tue, 24 Nov 2026 13:00:00 +0000</pubDate>
+      <description>GPT-6模型利用推理和编码设计蛋白质结构与序列，实验验证显示其在五个靶点上均有结合证据，来自官方更新源，适合直接判断产品变化。
 
-企业网络承受着巨大的压力。随着企业争相部署人工智能，该技术正迅速成为网络上最大的需求来源。现在，代理人工智能...
+GPT-6模型利用推理和编码设计蛋白质结构与序列，实验验证显示其在五个靶点上均有结合证据。
 
-信号等级 B · 评分 54.0</description>
+信号等级 B · 评分 62.2</description>
       <category>Official AI Updates</category>
-      <category>智能体</category>
+      <category>模型发布</category>
     </item>
     <item>
       <title>亚马逊称黑客的 AI 智能体几乎无需人工干预，便发现并利用了一个 0-day 漏洞</title>
       <link>https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input</link>
       <guid isPermaLink="true">https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input</guid>
       <pubDate>Tue, 24 Nov 2026 12:30:05 +0000</pubDate>
-      <description>亚马逊称黑客的 AI 智能体几乎无需人工...：Cairn AI 框架正成为防御者和攻击者的双刃剑，适合作为今日 AI/科技情报流里的重点线索。
+      <description>亚马逊称黑客的 AI 智能体几乎无需人工...：Cairn AI框架正成为攻防双方的利器，适合作为今日 AI/科技情报流里的重点线索。
 
-Cairn AI 框架正成为防御者和攻击者的双刃剑。
+Cairn AI框架正成为攻防双方的利器。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -224,9 +300,9 @@ Cairn AI 框架正成为防御者和攻击者的双刃剑。
       <link>https://openai.com/index/searching-for-distant-planets-with-astra</link>
       <guid isPermaLink="true">https://openai.com/index/searching-for-distant-planets-with-astra</guid>
       <pubDate>Tue, 24 Nov 2026 11:00:00 +0000</pubDate>
-      <description>借助 Astra 搜寻遥远行星：了解两位业余天文学家如何使用 Codex 和 Astra 在 NASA 开普勒和 TESS 太空望远镜的公共数据中寻...，适合判断 AI 编程工作流会不会被改写。
+      <description>借助 Astra 搜寻遥远行星：两位业余天文学家利用Codex和Astra，在NASA开普勒和TESS空间望远镜的公开数据中发现了潜在的系外行星，适合判断 AI 编程工作流会不会被改写。
 
-了解两位业余天文学家如何使用 Codex 和 Astra 在 NASA 开普勒和 TESS 太空望远镜的公共数据中寻找潜在的系外行星。
+两位业余天文学家利用Codex和Astra，在NASA开普勒和TESS空间望远镜的公开数据中发现了潜在的系外行星。
 
 信号等级 B · 评分 56.0</description>
       <category>Official AI Updates</category>
@@ -237,9 +313,9 @@ Cairn AI 框架正成为防御者和攻击者的双刃剑。
       <link>https://arxiv.org/abs/2611.28185</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28185</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>SAMA：arXiv:2611.28185v1 研究指出，远程光容积脉搏波（rPPG）常用单一心率指标评估，掩盖了短时窗口内的...，适合判断技术路线和后续产品化可能性。
+      <description>SAMA：arXiv:2611.28185v1 指出，远程光容积脉搏波（rPPG）常以单一视频心率为基准，却掩盖了短时窗口内的...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28185v1 研究指出，远程光容积脉搏波（rPPG）常用单一心率指标评估，掩盖了短时窗口内的误差波动，论文提出新基准以更细致地评价算法在不同时间尺度上的鲁棒性。
+arXiv:2611.28185v1 指出，远程光容积脉搏波（rPPG）常以单一视频心率为基准，却掩盖了短时窗口内的误差波动。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -251,9 +327,10 @@ arXiv:2611.28185v1 研究指出，远程光容积脉搏波（rPPG）常用单一
       <link>https://arxiv.org/abs/2611.28197</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28197</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>从点云到工程模型：**科研人员开发了能够将3D测量转化为CAD几何模型的编码代理，但重建工程模型以适应建筑环境需要语义...**，适合关注自动化任务和多 Agent 协作演进。
+      <description>从点云到工程模型：**摘要：** 本文提出了一个用于从3D测量数据重构工程模型的编码系统，旨在解决建筑环境中语义重建的挑战，并展示了在...，适合关注自动化任务和多 Agent 协作演进。
 
-**科研人员开发了能够将3D测量转化为CAD几何模型的编码代理，但重建工程模型以适应建筑环境需要语义...**
+**摘要：**
+本文提出了一个用于从3D测量数据重构工程模型的编码系统，旨在解决建筑环境中语义重建的挑战，并展示了在精度和泛化能力上的显著提升。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -266,9 +343,9 @@ arXiv:2611.28185v1 研究指出，远程光容积脉搏波（rPPG）常用单一
       <link>https://arxiv.org/abs/2611.28202</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28202</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>AutoPILOT：arXiv:2611.28202v1 新论文指出，多模态基础模型在回合制游戏中表现优异，但在实时运行游戏中常失效，研...，适合关注自动化任务和多 Agent 协作演进。
+      <description>AutoPILOT：多模态基础模型在游戏等待其响应时表现良好，但在游戏持续运行时往往失败，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2611.28202v1 新论文指出，多模态基础模型在回合制游戏中表现优异，但在实时运行游戏中常失效，研究揭示了这一性能差
+多模态基础模型在游戏等待其响应时表现良好，但在游戏持续运行时往往失败。我们发现这一现象很大程度上源于……
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -281,9 +358,9 @@ arXiv:2611.28202v1 新论文指出，多模态基础模型在回合制游戏中�
       <link>https://arxiv.org/abs/2611.28244</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28244</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>揭秘 Autoresearch 框架：arXiv:2611.28244v1 公告类型：新 摘要：自动研究代理能够自主设计、运行和完善实验，正在加速科学进步...，适合判断技术路线和后续产品化可能性。
+      <description>揭秘 Autoresearch 框架：arXiv:2611.28244v1 新论文提出，自主设计、运行并优化实验的“自动研究智能体”正加速科学进展，尤其在...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28244v1 公告类型：新 摘要：自动研究代理能够自主设计、运行和完善实验，正在加速科学进步，特别是在人工智能研究方面......
+arXiv:2611.28244v1 新论文提出，自主设计、运行并优化实验的“自动研究智能体”正加速科学进展，尤其在AI领域表现突出。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -294,9 +371,9 @@ arXiv:2611.28244v1 公告类型：新 摘要：自动研究代理能够自主设
       <link>https://arxiv.org/abs/2611.28277</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28277</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>时序逻辑张量网络：arXiv:2611.28277v1 新论文提出针对动态场景（足球、交通、手术等）中多时间尺度动作的建模方法，旨在解...，适合判断技术路线和后续产品化可能性。
+      <description>时序逻辑张量网络：在动态场景（如足球比赛、交通流、手术或装配）中，动作在根本不同的时间尺度上展开：足球比赛中，球员的动作与球的运动速度...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28277v1 新论文提出针对动态场景（足球、交通、手术等）中多时间尺度动作的建模方法，旨在解决不同尺度动作同时展开的理解难题。
+在动态场景（如足球比赛、交通流、手术或装配）中，动作在根本不同的时间尺度上展开：足球比赛中，球员的动作与球的运动速度差异巨大；交通流中，车辆移动速度与行人步速形成对比；手术与装配则涉及微观精细操作与宏观系统协同。该研究旨在通过跨尺度建模捕捉这些多时间尺度动态，以提升复杂动态场景下的动作理解与预测能力。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -307,9 +384,9 @@ arXiv:2611.28277v1 新论文提出针对动态场景（足球、交通、手术�
       <link>https://arxiv.org/abs/2611.28285</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28285</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>用于马尔可夫推理的专业化大语言模型：标准的自回归大型语言模型在处理生成的历史token时，使得键值缓存成为核心内存瓶颈，适合判断技术路线和后续产品化可能性。
+      <description>用于马尔可夫推理的专业化大语言模型：arXiv:2611.28285v1 公告类型：新摘要：标准自回归大型语言模型关注生成令牌的不断增长的历史，使键值（...，适合判断技术路线和后续产品化可能性。
 
-标准的自回归大型语言模型在处理生成的历史token时，使得键值缓存成为核心内存瓶颈。该研究旨在通过优化KV cache机制，以提升长序列推理的效率与性能。
+arXiv:2611.28285v1 公告类型：新摘要：标准自回归大型语言模型关注生成令牌的不断增长的历史，使键值（KV）缓存成为中央内存并......
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -320,9 +397,9 @@ arXiv:2611.28277v1 新论文提出针对动态场景（足球、交通、手术�
       <link>https://arxiv.org/abs/2611.28293</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28293</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>反馈驱动的教育 AI 提示词优化：该研究表明，通过情感与认知反馈引导的共享提示优化流程，可显著提升模型性能，适合判断技术路线和后续产品化可能性。
+      <description>反馈驱动的教育 AI 提示词优化：该研究（arXiv:2611.28293v1）表明，一种由情感与认知反馈信号引导的共享提示词优化流程，能有效提升大语...，适合判断技术路线和后续产品化可能性。
 
-该研究表明，通过情感与认知反馈引导的共享提示优化流程，可显著提升模型性能。
+该研究（arXiv:2611.28293v1）表明，一种由情感与认知反馈信号引导的共享提示词优化流程，能有效提升大语言模型在复杂推理任务中的表现。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -333,9 +410,10 @@ arXiv:2611.28277v1 新论文提出针对动态场景（足球、交通、手术�
       <link>https://arxiv.org/abs/2611.28295</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28295</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>GERF：arXiv:2611.28295v1 公告类型：新 摘要：科学信息提取（IE）是科学人工智能的基本组成部分，它将实验...，适合判断技术路线和后续产品化可能性。
+      <description>GERF：**摘要：** 本文提出了一种基于大型语言模型的科学信息抽取框架，旨在从科研文献中提取实验知识，显著提升AI for...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28295v1 公告类型：新 摘要：科学信息提取（IE）是科学人工智能的基本组成部分，它将实验知识嵌入科学......
+**摘要：**
+本文提出了一种基于大型语言模型的科学信息抽取框架，旨在从科研文献中提取实验知识，显著提升AI for Science领域的信息处理效率与精度。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -347,9 +425,9 @@ arXiv:2611.28295v1 公告类型：新 摘要：科学信息提取（IE）是科�
       <link>https://arxiv.org/abs/2611.28314</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28314</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>INSEP：arXiv:2611.28314v1 新论文提出“Abliteration”是一种广泛使用的白盒攻击，通过估计并消融...，适合判断技术路线和后续产品化可能性。
+      <description>INSEP：arXiv:2611.28314v1 公告类型：新 摘要：消除是一种广泛使用的针对大型语言模型（LLM）安全对齐的白...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28314v1 新论文提出“Abliteration”是一种广泛使用的白盒攻击，通过估计并消融拒绝方向来诱导大语言模型（LLM）产生有害行为，威胁安全对齐机制。
+arXiv:2611.28314v1 公告类型：新 摘要：消除是一种广泛使用的针对大型语言模型（LLM）安全对齐的白盒攻击。它通过估计来引发有害行为...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -363,7 +441,7 @@ arXiv:2611.28314v1 新论文提出“Abliteration”是一种广泛使用的白�
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
       <description>小型语言模型等字节混合精度量化的选择策略：arXiv:2611.28318v1 探讨在不增加参数存储的前提下，通过为不同矩阵分配 2、4 或 8 位精度，能否...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28318v1 探讨在不增加参数存储的前提下，通过为不同矩阵分配 2、4 或 8 位精度，能否提升小型语言模型性能。研究对比了两种混合精度量化策略，发现将更高位宽分配给注意力投影矩阵而非前馈网络，可显著降低困惑度并提升下游任务准确率。
+arXiv:2611.28318v1 探讨在不增加参数存储的前提下，通过为不同矩阵分配 2、4 或 8 位精度，能否提升小语言模型性能。研究对比了两种混合精度量化策略，发现基于敏感度的非均匀量化优于均匀基线。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -374,9 +452,9 @@ arXiv:2611.28318v1 探讨在不增加参数存储的前提下，通过为不同�
       <link>https://arxiv.org/abs/2611.28341</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28341</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>当工具失灵：工具使用型LLM代理在工具调用失败后需通过重试、切换工具或重新规划来恢复，适合判断技术路线和后续产品化可能性。
+      <description>当工具失灵：工具使用型大型语言模型代理在工具调用失败时需通过重试、切换工具或修订计划来恢复，适合判断技术路线和后续产品化可能性。
 
-工具使用型LLM代理在工具调用失败后需通过重试、切换工具或重新规划来恢复。本研究探讨了代理在工具使用过程中失败的具体模式与原因。
+工具使用型大型语言模型代理在工具调用失败时需通过重试、切换工具或修订计划来恢复。本研究探究了代理在工具使用过程中出现的失效模式及其根本原因。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -401,9 +479,9 @@ arXiv:2611.28348v1 公告类型：新 摘要：时间序列异常检测 (TSAD) �
       <link>https://arxiv.org/abs/2611.28356</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28356</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Engram：arXiv：2611.28356v1 公告类型：新摘要：大型语言模型（LLM）代理现在可以调整神经网络，但没有跨会话...，适合关注自动化任务和多 Agent 协作演进。
+      <description>Engram：arXiv最新论文提出“记忆增强神经架构搜索”（MENAS）框架，通过跨会话记忆机制让LLM智能体在神经网络调优中复...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv：2611.28356v1 公告类型：新摘要：大型语言模型（LLM）代理现在可以调整神经网络，但没有跨会话内存，他们花费昂贵的试验来重新发现已知的教训......
+arXiv最新论文提出“记忆增强神经架构搜索”（MENAS）框架，通过跨会话记忆机制让LLM智能体在神经网络调优中复用历史经验，显著降低试错成本并提升搜索效率。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -415,9 +493,9 @@ arXiv：2611.28356v1 公告类型：新摘要：大型语言模型（LLM）代�
       <link>https://arxiv.org/abs/2611.28368</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28368</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>调度、排名、分析：arXiv:2611.28368v1 论文指出，游戏是测试大语言模型智能体的稳健平台，因其要求顺序决策、对抗或协作交...，适合判断技术路线和后续产品化可能性。
+      <description>调度、排名、分析：大型语言模型代理的游戏测试：该研究利用游戏作为强大的测试基准，要求模型进行顺序决策、状态追踪以及对抗或合作互动，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28368v1 论文指出，游戏是测试大语言模型智能体的稳健平台，因其要求顺序决策、对抗或协作交互及状态追踪等能力。
+大型语言模型代理的游戏测试：该研究利用游戏作为强大的测试基准，要求模型进行顺序决策、状态追踪以及对抗或合作互动。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -428,9 +506,9 @@ arXiv:2611.28368v1 论文指出，游戏是测试大语言模型智能体的稳�
       <link>https://arxiv.org/abs/2611.28369</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28369</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>CausalNTP：Transformer网络在使用梯度下降训练进行下一个token预测时，并未学会仅凭局部信息进行预测，适合判断技术路线和后续产品化可能性。
+      <description>CausalNTP：Transformer网络在使用梯度下降训练的下一标记预测任务中，并未学会仅凭...进行预测，适合判断技术路线和后续产品化可能性。
 
-Transformer网络在使用梯度下降训练进行下一个token预测时，并未学会仅凭局部信息进行预测。
+Transformer网络在使用梯度下降训练的下一标记预测任务中，并未学会仅凭...进行预测。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -441,9 +519,9 @@ Transformer网络在使用梯度下降训练进行下一个token预测时，并�
       <link>https://arxiv.org/abs/2611.28408</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28408</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>安全导向提示对报告结果的影响：arXiv:2611.28408v1 公告类型：新摘要：代理编码工具将规范转换为正在运行的 Web 应用程序，因此它...，适合关注自动化任务和多 Agent 协作演进。
+      <description>安全导向提示对报告结果的影响：arXiv最新论文指出，智能体编码工具虽能将规范转为运行中的Web应用，但其在认证、会话、输入验证等安全关键领域的默...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2611.28408v1 公告类型：新摘要：代理编码工具将规范转换为正在运行的 Web 应用程序，因此它们的默认身份验证、会话、输入验证和...
+arXiv最新论文指出，智能体编码工具虽能将规范转为运行中的Web应用，但其在认证、会话、输入验证等安全关键领域的默认配置往往不安全，研究呼吁建立安全默认标准以规避风险。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -456,9 +534,10 @@ arXiv:2611.28408v1 公告类型：新摘要：代理编码工具将规范转换�
       <link>https://arxiv.org/abs/2611.28441</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28441</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>借助智能体支持自动化实现人工在环运行手册...：arXiv:2611.28441v1 发布类型：新增 摘要：运营支持是生产软件服务的重要组成部分，适合关注自动化任务和多 Agent 协作演进。
+      <description>借助智能体支持自动化实现人工在环运行手册...：**摘要：** 本文探讨了生产软件服务中运营支持的重要性，重点分析了突发性支持请求的多样性及其对系统稳定性的影响，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2611.28441v1 发布类型：新增 摘要：运营支持是生产软件服务的重要组成部分。支持请求通常是紧急的，可以有多种形式，例如......
+**摘要：**
+本文探讨了生产软件服务中运营支持的重要性，重点分析了突发性支持请求的多样性及其对系统稳定性的影响。
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -470,9 +549,9 @@ arXiv:2611.28441v1 发布类型：新增 摘要：运营支持是生产软件服
       <link>https://arxiv.org/abs/2611.28477</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28477</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>ESM-Bench：arXiv最新论文（2611.28477v1）指出，修改地球系统模型（ESM）代码的AI编程代理，必须同时保留软件接...，适合判断技术路线和后续产品化可能性。
+      <description>ESM-Bench：arXiv:2611.28477v1 公告类型：新 摘要：修改地球系统模型 (ESM) 代码的人工智能编码代理必须保...，适合判断技术路线和后续产品化可能性。
 
-arXiv最新论文（2611.28477v1）指出，修改地球系统模型（ESM）代码的AI编程代理，必须同时保留软件接口及其编码的物理假设。
+arXiv:2611.28477v1 公告类型：新 摘要：修改地球系统模型 (ESM) 代码的人工智能编码代理必须保留软件接口和其中编码的物理假设。我们...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -484,9 +563,9 @@ arXiv最新论文（2611.28477v1）指出，修改地球系统模型（ESM）代
       <link>https://arxiv.org/abs/2611.28548</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28548</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>X-AQA：Action Quality Assessment (AQA) 旨在评估人类动作的质量，现有方法主要在有限的数据集上...，适合判断技术路线和后续产品化可能性。
+      <description>X-AQA：arXiv:2611.28548v1 Announce Type: new Abstract: Action Qua...，适合判断技术路线和后续产品化可能性。
 
-Action Quality Assessment (AQA) 旨在评估人类动作的质量，现有方法主要在有限的数据集上训练和评估，难以泛化。本文提出了一种新的基准数据集和评估协议，以解决数据稀缺和泛化能力不足的问题，展示了在跨数据集迁移学习方面的有效性。
+arXiv:2611.28548v1 Announce Type: new Abstract: Action Quality Assessment (AQA) aims to evaluate the quality of human actions, yet existing methods are predominantly developed and evaluated on...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -498,9 +577,9 @@ Action Quality Assessment (AQA) 旨在评估人类动作的质量，现有方法
       <link>https://arxiv.org/abs/2611.28565</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28565</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>超越单元测试：Jupyter笔记本支持开放式、多步评估，学生可在相互依赖的步骤中构建逻辑流，结合代码与其他元素进行综合性测试，适合判断技术路线和后续产品化可能性。
+      <description>超越单元测试：arXiv:2611.28565v1 Announce Type: new Abstract: Jupyter no...，适合判断技术路线和后续产品化可能性。
 
-Jupyter笔记本支持开放式、多步评估，学生可在相互依赖的步骤中构建逻辑流，结合代码与其他元素进行综合性测试。
+arXiv:2611.28565v1 Announce Type: new Abstract: Jupyter notebooks support open-ended, multi-step assessments in which students build one logical flow across interdependent steps, combining code,...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -511,10 +590,9 @@ Jupyter笔记本支持开放式、多步评估，学生可在相互依赖的步�
       <link>https://arxiv.org/abs/2611.28574</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28574</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>EvoViM：**摘要：** 本文探讨了多模态大语言模型（MLLM）代理在任务导向环境中面临的局限性，重点分析了其在复杂交互场景下...，适合判断技术路线和后续产品化可能性。
+      <description>EvoViM：arXiv:2611.28574v1 Announce Type: new Abstract: Multimodal...，适合判断技术路线和后续产品化可能性。
 
-**摘要：**
-本文探讨了多模态大语言模型（MLLM）代理在任务导向环境中面临的局限性，重点分析了其在复杂交互场景下的表现瓶颈与挑战。
+arXiv:2611.28574v1 Announce Type: new Abstract: Multimodal large language model (MLLM) agents have shown promising capabilities in task-oriented environments. However, they still struggle when...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -526,9 +604,9 @@ Jupyter笔记本支持开放式、多步评估，学生可在相互依赖的步�
       <link>https://arxiv.org/abs/2611.28610</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28610</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>Agent Money 基准测试：arXiv:2611.28610v1 公告类型：新 摘要：为人工智能代理提供钱包，使其可以代表客户购买数据和服务，适合关注自动化任务和多 Agent 协作演进。
+      <description>Agent Money 基准测试：arXiv:2611.28610v1 Announce Type: new Abstract: Giving an...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2611.28610v1 公告类型：新 摘要：为人工智能代理提供钱包，使其可以代表客户购买数据和服务。那么信任取决于它如何花钱以及花什么......
+arXiv:2611.28610v1 Announce Type: new Abstract: Giving an AI agent a wallet lets it buy data and services on a client&apos;s behalf. Trust then depends on how it spends money and what that spending...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -540,9 +618,9 @@ arXiv:2611.28610v1 公告类型：新 摘要：为人工智能代理提供钱包
       <link>https://arxiv.org/abs/2611.28613</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28613</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>内化经验：arXiv:2611.28613v1 研究发现，大语言模型（LLM）的参数化记忆在训练过程中呈现“先增后减”的非单调...，适合判断技术路线和后续产品化可能性。
+      <description>内化经验：arXiv:2611.28613v1 Announce Type: new Abstract: Parametric...，适合判断技术路线和后续产品化可能性。
 
-arXiv:2611.28613v1 研究发现，大语言模型（LLM）的参数化记忆在训练过程中呈现“先增后减”的非单调动态变化：记忆容量随训练步数先上升至峰值，随后因灾难性遗忘而下降，且峰值出现时间取决于模型规模与数据复杂度。
+arXiv:2611.28613v1 Announce Type: new Abstract: Parametric memory enables large language models (LLMs) to retain information from past experience and reuse it in subsequent tasks. Yet how training...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -553,9 +631,9 @@ arXiv:2611.28613v1 研究发现，大语言模型（LLM）的参数化记忆在�
       <link>https://arxiv.org/abs/2611.28617</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28617</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>VeriLadder：训练数据是AI的瓶颈，特别是针对编写Verilog的大型语言模型（LLMs），因为寄存器传输级（RTL）代码的可用性...，适合关注自动化任务和多 Agent 协作演进。
+      <description>VeriLadder：arXiv:2611.28617v1 Announce Type: new Abstract: Training d...，适合关注自动化任务和多 Agent 协作演进。
 
-训练数据是AI的瓶颈，特别是针对编写Verilog的大型语言模型（LLMs），因为寄存器传输级（RTL）代码的可用性有限。该研究提出了一种利用合成数据扩展RTL代码训练集的方法，以提升代码生成性能。
+arXiv:2611.28617v1 Announce Type: new Abstract: Training data is a bottleneck in AI, especially for large language models (LLMs) that write Verilog, because register-transfer-level (RTL) code is...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -567,9 +645,9 @@ arXiv:2611.28613v1 研究发现，大语言模型（LLM）的参数化记忆在�
       <link>https://arxiv.org/abs/2611.28618</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28618</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>从有限交互经验中蒸馏视觉智能体：arXiv:2611.28618v1 公告类型：新 摘要：需要多少交互经验才能提炼出一个有能力的视觉代理，适合关注自动化任务和多 Agent 协作演进。
+      <description>从有限交互经验中蒸馏视觉智能体：arXiv:2611.28618v1 Announce Type: new Abstract: How much i...，适合关注自动化任务和多 Agent 协作演进。
 
-arXiv:2611.28618v1 公告类型：新 摘要：需要多少交互经验才能提炼出一个有能力的视觉代理？我们研究从少量任务中学习并记录交互历史。我们的...
+arXiv:2611.28618v1 Announce Type: new Abstract: How much interaction experience is needed to distill a capable visual agent? We study learning from few tasks and recorded interaction histories. Our...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
@@ -582,94 +660,14 @@ arXiv:2611.28618v1 公告类型：新 摘要：需要多少交互经验才能提
       <link>https://arxiv.org/abs/2611.28640</link>
       <guid isPermaLink="true">https://arxiv.org/abs/2611.28640</guid>
       <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>缓解掩码扩散语言模型中的后门攻击：arXiv：2611.28640v1 公告类型：新摘要：掩码扩散语言模型（MDLM）已成为自回归模型的有前途的替代品...，适合判断技术路线和后续产品化可能性。
+      <description>缓解掩码扩散语言模型中的后门攻击：arXiv:2611.28640v1 Announce Type: new Abstract: Masked dif...，适合判断技术路线和后续产品化可能性。
 
-arXiv：2611.28640v1 公告类型：新摘要：掩码扩散语言模型（MDLM）已成为自回归模型的有前途的替代品，因为它们可以预测......
+arXiv:2611.28640v1 Announce Type: new Abstract: Masked diffusion language models (MDLMs) have emerged as a promising alternative to autoregressive models because they can predict multiple tokens in...
 
 信号等级 B · 评分 56.2</description>
       <category>Official AI Updates</category>
       <category>论文研究</category>
       <category>多模态</category>
-    </item>
-    <item>
-      <title>由内而外的说服:基于模型的多智能体 LLM 辩论与共识中的内部攻击</title>
-      <link>https://arxiv.org/abs/2611.28660</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.28660</guid>
-      <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>由内而外的说服：arXiv最新论文研究大语言模型（LLM）多智能体系统中的集体决策，提出“共识熵”指标量化智能体间一致性，实验发现该...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv最新论文研究大语言模型（LLM）多智能体系统中的集体决策，提出“共识熵”指标量化智能体间一致性，实验发现该指标能有效预测决策准确率，且适度的智能体异质性可显著提升群体决策质量。
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>改进“改进者”:用于医疗智能体自我提升的语义 PID 控制</title>
-      <link>https://arxiv.org/abs/2611.28680</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.28680</guid>
-      <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>改进“改进者”：arXiv:2611.28680v1 Announce Type: new Abstract: High-stake...，适合关注自动化任务和多 Agent 协作演进。
-
-arXiv:2611.28680v1 Announce Type: new Abstract: High-stakes vertical medical tasks, such as postoperative pathological staging and long-term survival prediction, demand multi-step clinical reasoning...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>智能体</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>你的 AI 分身能替你见人吗？它能进行对话，但要像你一样做出判断，还欠缺什么？</title>
-      <link>https://arxiv.org/abs/2611.28692</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.28692</guid>
-      <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>你的 AI 分身能替你见人吗：arXiv:2611.28692v1 Announce Type: new Abstract: Should you...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2611.28692v1 Announce Type: new Abstract: Should your AI twin go meet people on your behalf? We built LLM twins of 710 real people from their other conversations in the CANDOR corpus, sent them...
-
-信号等级 B · 评分 62.5</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>超越单次交互隐私:对话式 RAG 中的训练数据泄露问题</title>
-      <link>https://arxiv.org/abs/2611.28748</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.28748</guid>
-      <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>超越单次交互隐私：arXiv:2611.28748v1 Announce Type: new Abstract: Retrieval-...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2611.28748v1 Announce Type: new Abstract: Retrieval-augmented generation (RAG) is known to reduce training-data leakage in single-turn interactions, but whether this protection persists over...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>DiscernBench:评估 LLM 智能体在制度环境中的协作辨别能力</title>
-      <link>https://arxiv.org/abs/2611.28787</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.28787</guid>
-      <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>DiscernBench：arXiv:2611.28787v1 Announce Type: new Abstract: The deploy...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2611.28787v1 Announce Type: new Abstract: The deployment of large language models in operational settings demands evaluation of judgment under institutional constraint. We introduce...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
-    </item>
-    <item>
-      <title>循环 Transformer 中的存储事实何时变得可用？</title>
-      <link>https://arxiv.org/abs/2611.28808</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.28808</guid>
-      <pubDate>Tue, 24 Nov 2026 05:00:00 +0000</pubDate>
-      <description>循环 Transformer 中的存储事...：arXiv:2611.28808v1 Announce Type: new Abstract: Looped tra...，适合判断技术路线和后续产品化可能性。
-
-arXiv:2611.28808v1 Announce Type: new Abstract: Looped transformers do not acquire new knowledge during a forward pass. Prior work shows that they store as many bits in their weights as non-looped...
-
-信号等级 B · 评分 56.2</description>
-      <category>Official AI Updates</category>
-      <category>论文研究</category>
     </item>
   </channel>
 </rss>
