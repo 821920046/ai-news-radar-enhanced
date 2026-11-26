@@ -2,10 +2,10 @@
 
 > 24 小时 AI/科技情报雷达 — 多源聚合、智能评分、趋势检测。
 
-本站每小时自动更新，聚合 15 个信源 / 89 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
+本站每小时自动更新，聚合 15 个信源 / 70 个来源，默认输出最近 24 小时的 AI/科技资讯，每条内容经过多维信号评分（S/A/B/C 分级），并按事件计算跨来源热度。
 
-最后更新：2026-11-26T14:46:10.582510+00:00
-当前窗口内容数：648 条；累计去重归档：16560 条。
+最后更新：2026-11-26T23:30:51.095264+00:00
+当前窗口内容数：560 条；累计去重归档：15812 条。
 
 ## 数据出口
 
@@ -59,16 +59,16 @@
 
 当前热度榜（前 10）：
 
-1. [OpenAI 削减 GPT-6.2 的使用量：Astra 达到使用上限的速度加快了 40%，Sol 加快了 25%（模型发布）](https://twitter.com/thsottiaux/status/2125784147889393806) — 热度 35.1，4 个独立来源，趋势 up
-2. [QA.tech MCP - 请让质量保证人员审核您在 IDE 中进行的每一处更改（MCP/工具 · 编码工具）](https://www.producthunt.com/r/AAE5I2SEYZUMZR) — 热度 29.5，3 个独立来源，趋势 new
-3. [降幅约 20%~35%：报告称马斯克 SpaceX 降价出租 AI 算力（论文研究）](https://www.ithome.com/1/032/716.htm) — 热度 27.2，3 个独立来源，趋势 up
-4. [裸机 Qwen（开源 · 模型发布）](https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os) — 热度 22.9，3 个独立来源，趋势 down
-5. [OpenAI限制GPT-6.2使用:Astra模型40%更快触达上限，Sol模型25%更快（开源 · 行业动态）](https://news.ycombinator.com/item?id=50651117) — 热度 19.9，2 个独立来源，趋势 up
-6. [上海团队开源了首个国产记忆模型，554B！这也太狠了（开源 · 智能体）](https://juejin.cn/post/7711260888724963364) — 热度 19.9，2 个独立来源，趋势 new
-7. [点几下就能订，退订却得绕回原路：德国消保机构把 OpenAI 告上法庭](https://www.aibase.com/zh/news/32556) — 热度 19.9，2 个独立来源，趋势 new
-8. [不换模型也能吐字快 4.2 倍：腾讯混元开源草稿模型 DFly2，专给 Hy4 flash 提速（开源）](https://www.aibase.com/zh/news/32555) — 热度 19.9，2 个独立来源，趋势 new
-9. [上海 AI Lab 开源 Sage-Interaction，以 1.29 秒极致延迟重塑全双工交互新范式（开源）](https://www.aibase.com/zh/news/32551) — 热度 19.9，2 个独立来源，趋势 new
-10. [Superframes](https://www.producthunt.com/products/superframes-ai-video-editor) — 热度 19.9，2 个独立来源，趋势 new
+1. [OpenAI 削减 GPT-6.2 的使用量：Astra 达到使用上限的速度加快了 40%，Sol 加快了 25%（模型发布）](https://twitter.com/thsottiaux/status/2125784147889393806) — 热度 27.3，4 个独立来源，趋势 down
+2. [OpenAI 可能已进入成本控制模式](https://micjm.com/blog/openai-is-in-cost-control-mode) — 热度 25.0，3 个独立来源，趋势 up
+3. [谷歌将要求人工智能代理使用其MCP服务器。其中Gmail代理无法发送电子邮件（MCP/工具）](https://techstackups.com/articles/google-workspace-ai-agents-mcp) — 热度 24.4，3 个独立来源，趋势 up
+4. [QA.tech MCP - 请让质量保证人员审核您在 IDE 中进行的每一处更改（MCP/工具 · 编码工具）](https://www.producthunt.com/r/AAE5I2SEYZUMZR) — 热度 22.9，3 个独立来源，趋势 down
+5. [隆重推出适用于 AMD Ryzen 和 Radeon 的 llama.cpp 基准测试仪表盘（模型发布 · 开源）](https://huggingface.co/blog/ggml-org/llamacpp-amd-bench) — 热度 22.5，3 个独立来源，趋势 down
+6. [测试人员认为他们正通过 Opus 5.5 Extra 通道访问 Claude Opus 5.6（模型发布）](https://www.testingcatalog.com/testers-share-early-results-possible-claude-opus-5-6) — 热度 22.3，3 个独立来源，趋势 down
+7. [TASK Memory:超越纯文本记忆，通过激活引导与知识编辑对抗记忆幻觉（智能体 · 开源）](https://arxiv.org/abs/2611.34762) — 热度 21.3，3 个独立来源，趋势 down
+8. [AI 让自托管再次变得有趣](https://janlukas.blog/posts/ai-self-hosting) — 热度 19.0，2 个独立来源，趋势 new
+9. [TDK押注人工智能数据中心和机器人，以推动传感器业务增长（TDK 将斥资 6.35 亿美元，把用于机器人和 AI 数据中心传感器的产量翻倍）](https://www.bloomberg.com/news/articles/2026-11-26/tdk-bets-on-ai-data-centers-and-robots-to-fuel-sensor-growth) — 热度 18.8，2 个独立来源，趋势 new
+10. [四家美国企业引用率最高的AI科学家对比分析](https://topcitedscientists.com/figures/ai-at-four-us-companies) — 热度 17.9，2 个独立来源，趋势 new
 
 ## 引用要求
 
